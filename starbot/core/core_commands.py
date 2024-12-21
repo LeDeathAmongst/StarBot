@@ -462,32 +462,39 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         embed = discord.Embed(color=await ctx.embed_color())
         app_info = await self.bot.application_info()
         owner = f"Team {app_info.team.name}" if app_info.team else app_info.owner
-        embed.add_field(name="<:Sleep:1292311868722905118> Instance Owned by", value=owner)
+        embed.add_field(name="Instance Owned by", value=owner)
 
         python = sys.version_info[:3]  # This will return a tuple of (major, minor, micro)
         python_url = "https://www.python.org/downloads/release/python-{}{}{}".format(*python)
         dpy_repo = "https://github.com/Rapptz/discord.py"
-        bot_repo = "https://github.com/LeDeathAmongst/starbot"
+        bot_repo = "https://github.com/LeDeathAmongst/StarBot"
         python_version = "[`{}.{}.{}`]({})".format(*python, python_url)
         dpy_version = "[`{}`]({})".format(discord.__version__, dpy_repo)
         red_version = "[`{}`]({})".format(__version__, bot_repo)
-        dot = discord.PartialEmoji(name="dot", animated=False, id=1279795628335042600)
-        shiro = discord.PartialEmoji(name="Shiro", animated=True, id=1292312705692074106)
         bot_name = self.bot.user.name
+
+        user = await self.bot.fetch_user(USER_ID)
+        user_name = user.name
+
 
         embed = discord.Embed(title="Various Versions")
         embed.add_field(
             name="Python Version",
-            value=f"{dot} <a:Python:1292312029134192650> {python_version}",
+            value=f"<a:Python:1292312029134192650> {python_version}",
             inline=True,
         )
         embed.add_field(
-            name=f"{bot_name} Version", value=f"{dot} {shiro} {red_version}", inline=True
+            name=f"{bot_name} Version", value=f"{red_version}", inline=True
         )
         embed.add_field(
             name="Discord.py Version",
-            value=f"{dot} <:dpy:1292313742167511080> {dpy_version}",
+            value=f"<:dpy:1292313742167511080> {dpy_version}",
             inline=True,
+        )
+        embed.add_field(
+            name="Created for",
+            value=user_name,
+            Inline=True,
         )
 
         custom_info = (
@@ -495,7 +502,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         )
         if custom_info:
             embed.add_field(
-                name=f"<a:ShiroHeart:1292312320684327042> About {bot_name}",
+                name=f"About {bot_name}",
                 value=custom_info,
                 inline=False,
             )
@@ -504,19 +511,18 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         rosie = "https://github.com/LeDeathAmongst"
         fb_server = "https://discord.gg/HXdan6NnfJ"
         about = (
-            f"{bot_name} is the public, [open-source bot]({bot_repo}) "
-            f"created by [Star]({rosie}) and [improved by many]({contributors}).\n\n"
-            f"{bot_name} is backed by a passionate community who contributes and creates content for everyone to enjoy.\n"
-            f"[Join us today]({fb_server}) and help us improve!\n\n{bot_name} is not a allowed to be cloned/forked, per copyright (unless for issues/PRs(c) LeDeathAmongst"
+            f"{bot_name} is a purchased bot made by {rosie} for {username}! \n\n"
+            f"{bot_name} is a modified version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432),\n"
+            f" made for {user_name}. You can get your own version at [the shop]({fb_server})!"
         )
-        embed.add_field(name=f"{shiro} About {bot_name}", value=about, inline=False)
+        embed.add_field(name=f"About {bot_name}", value=about, inline=False)
 
         bot_install = await self.bot.get_install_url()
         server_invite = await self.bot.get_support_server_url()
         links = f"[Install {bot_name}]({bot_install})"
         if server_invite:
             links += f" | [Support Server]({server_invite})"
-        embed.add_field(name="<:Link:1292314973392998490> Links", value=links, inline=False)
+        embed.add_field(name="Links", value=links, inline=False)
 
         embed.set_image(
             url="https://i.pinimg.com/originals/62/29/9a/62299afcedd465b631f9baa9786bd83b.gif"
@@ -573,30 +579,6 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         )
         embeds.append(embed)
 
-        if repo_cog := self.bot.get_cog("Downloader"):
-            repos = {c.repo_name for c in await repo_cog.installed_cogs()}
-            command = f"*Use `{ctx.clean_prefix}findcog <command>` to find the author of the cog of a certain command.*\n"
-            cogs_credits = "\n" + "\n".join(
-                sorted(
-                    (
-                        f"**[{repo.url.split('/')[4]}]({repo.url})**: {', '.join(repo.author) or repo.url.split('/')[3]}"
-                        for repo in repo_cog._repo_manager.repos
-                        if repo.url.startswith("http") and repo.name in repos
-                    ),
-                    key=lambda k: k.title(),
-                )
-            )
-            for credit in pagify(cogs_credits, page_length=1024 - len(command)):
-                # Embed.copy() or copy.copy() will make all embeds link (edit one and all embeds will be edited)
-                # To prevent it, we should use deepcopy.
-                repos_embed = copy.deepcopy(embed)
-                repos_embed.clear_fields()
-                repos_embed.add_field(
-                    name="<:Cog:925401264395796481> Cogs & Their Creators",
-                    value=command + credit,
-                    inline=False,
-                )
-                embeds.append(repos_embed)
         await menu(ctx, embeds)
 
     @commands.hybrid_command()
@@ -6005,31 +5987,6 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         ).format(categories=cat_str, channels=chan_str, threads=thread_str)
         return msg
 
-    # Removing this command from forks is a violation of the GPLv3 under which it is licensed.
-    # Otherwise interfering with the ability for this command to be accessible is also a violation.
-    @commands.is_owner()
-    @commands.cooldown(1, 150000000, lambda ctx: (ctx.message.channel.id, ctx.message.author.id))
-    @commands.command(
-        cls=commands.commands._AlwaysAvailableCommand,
-        name="licenseinfo",
-        aliases=["licenceinfo"],
-        i18n=_,
-        hidden=True,
-    )
-    async def license_info_command(self, ctx):
-        """
-        Get info about Red's licenses.
-        """
-
-        message = (
-            "This bot is an instance of StarBot (hereinafter referred to as Red).\n"
-            "Red is a free and open source application made available to the public and "
-            "licensed under the GNU GPLv3. The full text of this license is available to you at "
-            "<https://github.com/Cog-Creators/StarBot/blob/V3/develop/LICENSE>."
-        )
-        await ctx.send(message)
-        # We need a link which contains a thank you to other projects which we use at some point.
-
     @commands.Cog.listener()
     async def on_message_without_command(self, message: discord.Message):
         if message.author.bot or message.content != self.bot.user.mention:
@@ -6038,7 +5995,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         prefixes = await self.bot.get_prefix(message.channel)
         embed = discord.Embed(
             color=await self.bot.get_embed_color(message.channel),
-            title="<:shy:1286134076721336402> Need help?",
+            title="Need help?",
             url=support,
             description=f"Use `{prefixes[0]}help` to get help!",
         )

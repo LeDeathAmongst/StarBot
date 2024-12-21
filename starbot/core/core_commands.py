@@ -459,7 +459,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         """Shows info about something"""
         pass
 
-    @commands.command(name="bot")
+    @info.command(name="bot")
     @commands.bot_has_permissions(embed_links=True)
     async def info_bot(self, ctx: commands.Context):
         """Shows info about me."""

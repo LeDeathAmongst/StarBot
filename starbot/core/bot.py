@@ -96,7 +96,7 @@ class DynamicShardedBot(commands.GroupMixin, RPCMixin, dpy_commands.AutoShardedB
 
     def __init__(self, *args, cli_flags=None, bot_dir: Path = Path.cwd(), **kwargs):
         # Calculate the shard count dynamically
-        shard_count = kwargs.pop("shard_count", 3)
+        shard_count = kwargs.pop("shard_count", 1)
         kwargs["shard_count"] = shard_count
 
         super().__init__(*args, **kwargs)

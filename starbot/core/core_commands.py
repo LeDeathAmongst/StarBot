@@ -609,9 +609,8 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         embed.set_thumbnail(url=self.bot.user.avatar.url)
         embed.set_footer(text=f"{bot_name} exists since {timestamp}")
         embed.add_field(
-            name=f"{bot_name}",
+            name=f"{bot_name} Info",
             value=(
-                f"{bot_name} is a custom version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432). \n"
                 f"{bot_name} was made for {user_name} by {rosie} as a monthly \n"
                 f"subscription for my services. Get your own by contacting {rosie} through Starfire!"
             ),

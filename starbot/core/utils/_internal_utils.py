@@ -37,13 +37,13 @@ from rich.progress import ProgressColumn
 from rich.progress_bar import ProgressBar
 from red_commons.logging import VERBOSE, TRACE
 
-from redbot import VersionInfo
-from redbot.core import data_manager
-from redbot.core.utils.chat_formatting import box
+from starbot import VersionInfo
+from starbot.core import data_manager
+from starbot.core.utils.chat_formatting import box
 
 if TYPE_CHECKING:
-    from redbot.core.bot import Red
-    from redbot.core.commands import Command, Context
+    from starbot.core.bot import Red
+    from starbot.core.commands import Command, Context
 
 main_log = logging.getLogger("red")
 
@@ -98,7 +98,7 @@ async def fuzzy_command_search(
 
     Parameters
     ----------
-    ctx : `commands.Context <redbot.core.commands.Context>`
+    ctx : `commands.Context <starbot.core.commands.Context>`
         The command invocation context.
     term : Optional[str]
         The name of the invoked command. If ``None``,
@@ -111,7 +111,7 @@ async def fuzzy_command_search(
 
     Returns
     -------
-    Optional[List[`commands.Command <redbot.core.commands.Command>`]]
+    Optional[List[`commands.Command <starbot.core.commands.Command>`]]
         A list of commands which were fuzzily matched with the invoked
         command.
 
@@ -182,9 +182,9 @@ async def format_fuzzy_results(
 
     Parameters
     ----------
-    ctx : `commands.Context <redbot.core.commands.Context>`
+    ctx : `commands.Context <starbot.core.commands.Context>`
         The context in which this result is being displayed.
-    matched_commands : List[`commands.Command <redbot.core.commands.Command>`]
+    matched_commands : List[`commands.Command <starbot.core.commands.Command>`]
         A list of commands which have been matched by the fuzzy search, sorted
         in order of decreasing similarity.
     embed : bool

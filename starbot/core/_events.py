@@ -49,21 +49,21 @@ log = logging.getLogger("red")
 
 INTRO = r"""
 
-       ...              s                                         .                                     ..                           ...              s                             
-   .x888888hx    :     :8                               oec :    @88>                             . uW8"        ..               .x888888hx    :     :8                             
-  d88888888888hxx     .88                   .u    .    @88888    %8P      .u    .                 `t888        @L               d88888888888hxx     .88                   .u    .   
- 8" ... `"*8888%`    :888ooo       u      .d88B :@8c   8"*88%     .     .d88B :@8c       .u        8888   .   9888i   .dL      8" ... `"*8888%`    :888ooo       u      .d88B :@8c  
-!  "   ` .xnxx.    -*8888888    us888u.  ="8888f8888r  8b.      .@88u  ="8888f8888r   ud8888.      9888.z88N  `Y888k:*888.    !  "   ` .xnxx.    -*8888888    us888u.  ="8888f8888r 
-X X   .H8888888%:    8888    .@88 "8888"   4888>'88"  u888888> ''888E`   4888>'88"  :888'8888.     9888  888E   888E  888I    X X   .H8888888%:    8888    .@88 "8888"   4888>'88"  
-X 'hn8888888*"   >   8888    9888  9888    4888> '     8888R     888E    4888> '    d888 '88%"     9888  888E   888E  888I    X 'hn8888888*"   >   8888    9888  9888    4888> '    
-X: `*88888%`     !   8888    9888  9888    4888>       8888P     888E    4888>      8888.+"        9888  888E   888E  888I    X: `*88888%`     !   8888    9888  9888    4888>      
-'8h.. ``     ..x8>  .8888Lu= 9888  9888   .d888L .+    *888>     888E   .d888L .+   8888L          9888  888E   888E  888I    '8h.. ``     ..x8>  .8888Lu= 9888  9888   .d888L .+   
- `88888888888888f   ^%888*   9888  9888   ^"8888*"     4888      888&   ^"8888*"    '8888c. .+    .8888  888"  x888N><888'     `88888888888888f   ^%888*   9888  9888   ^"8888*"    
-  '%8888888888*"      'Y"    "888*""888"     "Y"       '888      R888"     "Y"       "88888%       `%888*%"     "88"  888       '%8888888888*"      'Y"    "888*""888"     "Y"      
-     ^"****""`                ^Y"   ^Y'                 88R       ""                   "YP'           "`              88F          ^"****""`                ^Y"   ^Y'               
-                                                        88>                                                          98"                                                            
-                                                        48                                                         ./"                                                              
-                                                        '8                                                        ~`                                                                
+  sSSs  sdSS_SSSSSSbs   .S_SSSs     .S_sSSs     .S_SSSs      sSSs_sSSs    sdSS_SSSSSSbs  
+ d%%SP  YSSS~S%SSSSSP  .SS~SSSSS   .SS~YS%%b   .SS~SSSSS    d%%SP~YS%%b   YSSS~S%SSSSSP  
+d%S'         S%S       S%S   SSSS  S%S   `S%b  S%S   SSSS  d%S'     `S%b       S%S       
+S%|          S%S       S%S    S%S  S%S    S%S  S%S    S%S  S%S       S%S       S%S       
+S&S          S&S       S%S SSSS%S  S%S    d*S  S%S SSSS%P  S&S       S&S       S&S       
+Y&Ss         S&S       S&S  SSS%S  S&S   .S*S  S&S  SSSY   S&S       S&S       S&S       
+`S&&S        S&S       S&S    S&S  S&S_sdSSS   S&S    S&S  S&S       S&S       S&S       
+  `S*S       S&S       S&S    S&S  S&S~YSY%b   S&S    S&S  S&S       S&S       S&S       
+   l*S       S*S       S*S    S&S  S*S   `S%b  S*S    S&S  S*b       d*S       S*S       
+  .S*P       S*S       S*S    S*S  S*S    S%S  S*S    S*S  S*S.     .S*S       S*S       
+sSS*S        S*S       S*S    S*S  S*S    S&S  S*S SSSSP    SSSbs_sdSSS        S*S       
+YSS'         S*S       SSS    S*S  S*S    SSS  S*S  SSY      YSSP~YSSY         S*S       
+             SP               SP   SP          SP                              SP        
+             Y                Y    Y           Y                               Y         
+                                                                                         
 
 """
 
@@ -154,7 +154,7 @@ def init_events(bot, cli_flags):
         guilds = len(bot.guilds)
         users = len(set([m for m in bot.get_all_members()]))
 
-        invite_url = discord.utils.oauth_url(bot.application_id, scopes=("bot"))
+        invite_url = discord.utils.oauth_url(bot.application_id, scopes=("bot","application_commands"))
 
         prefixes = cli_flags.prefix or (await bot._config.prefix())
         lang = await bot._config.locale()

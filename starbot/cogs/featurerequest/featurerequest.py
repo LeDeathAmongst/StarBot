@@ -13,7 +13,7 @@ class FeatureRequest(Cog):
     def __init__(self, bot: Red):
         self.bot = bot
         self.config = Config.get_conf(self, identifier=1234567892, force_registration=True)
-        default_global = {'request_channel': None, 'requests': {}}
+        default_global = {'request_channels': {}, 'requests': {}}
         self.config.register_global(**default_global)
 
     async def save_to_json(self, request_data, file_name='feature_requests.json'):
@@ -58,7 +58,8 @@ class FeatureRequest(Cog):
     @frequest.command(name='submit', description="Submit a new feature request")
     async def submit(self, ctx: commands.Context, feature: str):
         """Request a new feature for the bot."""
-        request_channel_id = await self.config.request_channel()
+        request_channels = await self.config.request_channels()
+        request_channel_id = request_channels.get(str(ctx.guild.id))
         if not request_channel_id:
             await ctx.send('Request channel is not set. Please ask the bot owner to set it using the frequest channel command.', ephemeral=True)
             return
@@ -107,14 +108,21 @@ class FeatureRequest(Cog):
                 except discord.Forbidden:
                     pass
 
-            request_channel = self.bot.get_channel(await self.config.request_channel())
+            request_channels = await self.config.request_channels()
+            request_channel_id = request_channels.get(str(interaction.guild.id))
+            request_channel = self.bot.get_channel(request_channel_id)
             if request_channel:
                 try:
                     message = await request_channel.fetch_message(request_data['message_id'])
                     embed = message.embeds[0]
                     embed.set_field_at(1, name='Status', value=status.capitalize(), inline=True)
                     embed.color = color
-                    await message.edit(embed=embed, view=None)
+                    view = RequestButtonsView(request_id, self)
+                    if status in ['accepted', 'denied', 'deleted']:
+                        view.disable_all_buttons()
+                    elif status == 'considering':
+                        view.disable_consider_and_delete_buttons()
+                    await message.edit(embed=embed, view=view)
                 except discord.NotFound:
                     await interaction.followup.send(f"Message with ID {request_data['message_id']} not found in the request channel.", ephemeral=True)
                 except discord.Forbidden:
@@ -131,43 +139,31 @@ class FeatureRequest(Cog):
     @commands.is_owner()
     async def channel(self, ctx: commands.Context, channel: discord.TextChannel):
         """Set the channel for feature requests."""
-        await self.config.request_channel.set(channel.id)
+        async with self.config.request_channels() as channels:
+            channels[str(ctx.guild.id)] = channel.id
         await ctx.send(f'Request channel set to: {channel.mention}')
 
+    @frequest.command(name='sendembed', description="Send the feature request embed")
+    @commands.is_owner()
+    async def sendembed(self, ctx: commands.Context, for_bot_owner: bool = True):
+        """Send the feature request embed."""
+        bot_name = self.bot.user.name
+        if for_bot_owner:
+            description = (
+                f"Like my work, but wish for something extra? Click this button below and answer the question sent to your DM's about the feature you want! "
+                f"We also have options where you can buy your own version, through a different set of pre-configured bots!"
+            )
+        else:
+            description = (
+                f"Do you wish {bot_name} had a feature that it doesn't? Well, fear not! You can click this button to make a suggestion, and a developer on the team will determine if it's applicable! "
+                f"Clicking the button will then send you a message in DM's, simply reply with the feature you want!"
+            )
 
-class RequestButtonsView(discord.ui.View):
-    def __init__(self, request_id, cog):
-        super().__init__(timeout=None)
-        self.request_id = request_id
-        self.cog = cog
+        embed = discord.Embed(title="Feature Request", description=description, color=discord.Color.blue())
+        view = FeatureRequestButtonView(self)
 
-    @discord.ui.button(label="Consider", style=discord.ButtonStyle.primary, custom_id="consider")
-    async def consider_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.cog.update_status_and_respond(interaction, self.request_id, 'considering', discord.Color.blue())
-        self.disable_all_buttons()
-        await interaction.message.edit(view=self)
+        await ctx.send(embed=embed, view=view)
 
-    @discord.ui.button(label="Accept", style=discord.ButtonStyle.success, custom_id="accept")
-    async def accept_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.cog.update_status_and_respond(interaction, self.request_id, 'accepted', discord.Color.green())
-        self.disable_all_buttons()
-        await interaction.message.edit(view=self)
-
-    @discord.ui.button(label="Deny", style=discord.ButtonStyle.danger, custom_id="deny")
-    async def deny_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.cog.update_status_and_respond(interaction, self.request_id, 'denied', discord.Color.red())
-        self.disable_all_buttons()
-        await interaction.message.edit(view=self)
-
-    @discord.ui.button(label="Delete", style=discord.ButtonStyle.danger, custom_id="delete")
-    async def delete_button(self, interaction: discord.Interaction, button: discord.ui.Button):
-        await self.cog.update_status_and_respond(interaction, self.request_id, 'deleted', discord.Color.greyple())
-        self.disable_all_buttons()
-        await interaction.message.edit(view=self)
-
-    def disable_all_buttons(self):
-        for child in self.children:
-            child.disabled = True
 
 class SlashRequest(Cog):
     """Cog to handle slash command feature requests."""
@@ -175,7 +171,7 @@ class SlashRequest(Cog):
     def __init__(self, bot: Red):
         self.bot = bot
         self.config = Config.get_conf(self, identifier=1234567893, force_registration=True)
-        default_global = {'request_channel': None, 'requests': {}}
+        default_global = {'request_channels': {}, 'requests': {}}
         self.config.register_global(**default_global)
 
     async def save_to_json(self, request_data, file_name='slash_requests.json'):
@@ -220,7 +216,8 @@ class SlashRequest(Cog):
     @srequest.command(name='submit', description="Submit a new slash feature request")
     async def submit(self, ctx: commands.Context, feature: str):
         """Request a new slash feature for the bot."""
-        request_channel_id = await self.config.request_channel()
+        request_channels = await self.config.request_channels()
+        request_channel_id = request_channels.get(str(ctx.guild.id))
         if not request_channel_id:
             await ctx.send('Request channel is not set. Please ask the bot owner to set it using the srequest channel command.', ephemeral=True)
             return
@@ -269,14 +266,21 @@ class SlashRequest(Cog):
                 except discord.Forbidden:
                     pass
 
-            request_channel = self.bot.get_channel(await self.config.request_channel())
+            request_channels = await self.config.request_channels()
+            request_channel_id = request_channels.get(str(interaction.guild.id))
+            request_channel = self.bot.get_channel(request_channel_id)
             if request_channel:
                 try:
                     message = await request_channel.fetch_message(request_data['message_id'])
                     embed = message.embeds[0]
                     embed.set_field_at(1, name='Status', value=status.capitalize(), inline=True)
                     embed.color = color
-                    await message.edit(embed=embed, view=None)
+                    view = RequestButtonsView(request_id, self)
+                    if status in ['accepted', 'denied', 'deleted']:
+                        view.disable_all_buttons()
+                    elif status == 'considering':
+                        view.disable_consider_and_delete_buttons()
+                    await message.edit(embed=embed, view=view)
                 except discord.NotFound:
                     await interaction.followup.send(f"Message with ID {request_data['message_id']} not found in the request channel.", ephemeral=True)
                 except discord.Forbidden:
@@ -293,7 +297,8 @@ class SlashRequest(Cog):
     @commands.is_owner()
     async def channel(self, ctx: commands.Context, channel: discord.TextChannel):
         """Set the channel for slash feature requests."""
-        await self.config.request_channel.set(channel.id)
+        async with self.config.request_channels() as channels:
+            channels[str(ctx.guild.id)] = channel.id
         await ctx.send(f'Request channel set to: {channel.mention}')
 
 
@@ -306,7 +311,7 @@ class RequestButtonsView(discord.ui.View):
     @discord.ui.button(label="Consider", style=discord.ButtonStyle.primary, custom_id="consider")
     async def consider_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await self.cog.update_status_and_respond(interaction, self.request_id, 'considering', discord.Color.blue())
-        self.disable_all_buttons()
+        self.disable_consider_and_delete_buttons()
         await interaction.message.edit(view=self)
 
     @discord.ui.button(label="Accept", style=discord.ButtonStyle.success, custom_id="accept")
@@ -330,3 +335,39 @@ class RequestButtonsView(discord.ui.View):
     def disable_all_buttons(self):
         for child in self.children:
             child.disabled = True
+
+    def disable_consider_and_delete_buttons(self):
+        for child in self.children:
+            if child.custom_id in ["consider", "delete"]:
+                child.disabled = True
+
+
+class FeatureRequestButtonView(discord.ui.View):
+    def __init__(self, cog):
+        super().__init__(timeout=None)
+        self.cog = cog
+
+    @discord.ui.button(label="Submit Feature Request", style=discord.ButtonStyle.primary, custom_id="submit_request")
+    async def submit_request_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        user = interaction.user
+        try:
+            await user.send("What is the feature you wish to have?")
+            await interaction.followup.send("Please check your DM's to submit your feature request.", ephemeral=True)
+
+            def check(m):
+                return m.author == user and isinstance(m.channel, discord.DMChannel)
+
+            message = await self.cog.bot.wait_for('message', check=check)
+            feature = message.content
+            
+            # Simulate a context for the submit command
+            ctx = await self.cog.bot.get_context(message)
+            await self.cog.submit(ctx, feature)
+
+        except discord.Forbidden:
+            await interaction.followup.send("I couldn't send you a DM. Please make sure your DMs are open.", ephemeral=True)
+
+
+def setup(bot):
+    bot.add_cog(FeatureRequest(bot))
+    bot.add_cog(SlashRequest(bot))y

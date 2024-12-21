@@ -26,7 +26,7 @@ IMAGE_LINKS = re.compile(r"(http[s]?:\/\/[^\"\']*\.(?:png|jpg|jpeg|gif|png))", f
 # this is to prevent "empty" matches when parsing the full reason
 # This is also designed more to allow time interval at the beginning or the end of the mute
 # to account for those times when you think of adding time *after* already typing out the reason
-# https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/core/commands/converter.py#L55
+# https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/core/commands/converter.py#L55
 TIME_RE_STRING = r"|".join(
     [
         r"((?P<weeks>\d+?)\s?(weeks?|w))",

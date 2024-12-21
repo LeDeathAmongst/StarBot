@@ -68,10 +68,10 @@ msgstr "Não posso fazer mais de 25 url-buttons para uma mensagem."
 #: urlbuttons\urlbuttons.py:164
 #, docstring
 msgid "Add a url-button for a message.\n\n"
-"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/Red-DiscordBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
+"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/StarBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
 "        "
 msgstr "Adicionar um botão de url a uma mensagem.\n\n"
-"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/Red-DiscordBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
+"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/StarBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
 "        "
 
 #: urlbuttons\urlbuttons.py:170

@@ -1074,7 +1074,7 @@ class TriggerHandler(ReTriggerMixin):
     async def convert_parms(
         self, message: discord.Message, raw_response: str, trigger: Trigger, find: List[str]
     ) -> str:
-        # https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/customcom/customcom.py
+        # https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/customcom/customcom.py
         # ctx = await self.bot.get_context(message)
         ctx_results = RE_CTX.findall(raw_response)
         content = message.content

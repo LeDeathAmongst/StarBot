@@ -156,7 +156,7 @@ async def _cleanup(
     await ctx.message.delete(delay=10)
 
 
-# https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/cleanup/cleanup.py#L163
+# https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/cleanup/cleanup.py#L163
 async def get_message_from_reference(
     channel: Union[
         discord.TextChannel,
@@ -182,7 +182,7 @@ async def get_message_from_reference(
     return message
 
 
-# https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/cleanup/cleanup.py#L76
+# https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/cleanup/cleanup.py#L76
 async def get_messages_for_deletion(
     *,
     channel: Union[

@@ -1,6 +1,6 @@
 # Vouch Tracker
 
-Vouch Tracker is a cog for Red-DiscordBot that helps track user vouches in Discord servers.
+Vouch Tracker is a cog for StarBot that helps track user vouches in Discord servers.
 
 ## Features
 

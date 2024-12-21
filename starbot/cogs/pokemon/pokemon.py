@@ -296,7 +296,7 @@ class Pokemon(Cog):
             return await ctx.send("Failed to generate whosthatpokemon card image.")
 
         # Took this from Core's event file.
-        # https://github.com/Cog-Creators/Red-DiscordBot/blob/41d89c7b54a1f231a01f79655c20d4acf1799633/starbot/core/_events.py#L424-L426
+        # https://github.com/Cog-Creators/StarBot/blob/41d89c7b54a1f231a01f79655c20d4acf1799633/starbot/core/_events.py#L424-L426
         img_timeout = discord.utils.format_dt(
             datetime.now(timezone.utc) + timedelta(seconds=30.0), "R"
         )

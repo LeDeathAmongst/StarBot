@@ -94,7 +94,7 @@ class TimeChannel(Cog, TCLoop, metaclass=CompositeMetaClass):
             return await ctx.send("It looks like no time channels have been set up yet.")
 
         # partially from core at (what a tight fit with the link :aha:)
-        # https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/core/events.py#L355
+        # https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/core/events.py#L355
         sys_now = datetime.datetime.utcnow()
         aware_sys_now = datetime.datetime.now(datetime.timezone.utc)
         discord_now = ctx.message.created_at

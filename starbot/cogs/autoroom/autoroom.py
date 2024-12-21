@@ -1,5 +1,5 @@
 from Star_Utils import Cog, CogsUtils
-"""AutoRoom cog for Red-DiscordBot by PhasecoreX."""
+"""AutoRoom cog for StarBot by PhasecoreX."""
 
 from abc import ABC
 from contextlib import suppress

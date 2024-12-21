@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Cog-Creators/Red-DiscordBot/V3/develop/schema/red_cog.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Cog-Creators/StarBot/V3/develop/schema/red_cog.schema.json",
   "name": "Invasion",
   "short": "Fight off random monster encounters for currency",
   "description": "Monsters are invading and they want your currency! When they arrive, who will be brave enough to fight them off?",

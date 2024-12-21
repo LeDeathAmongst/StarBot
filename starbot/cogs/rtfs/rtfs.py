@@ -146,7 +146,7 @@ async def format_and_send(ctx: commands.Context, obj: Any, *, is_owner: bool = F
             else:
                 red_commit = starbot.__version__
             if is_installed:
-                header = f"https://github.com/Cog-Creators/Red-DiscordBot/blob/{red_commit}/{full_module.replace('.', '/')}.py{line_suffix}"
+                header = f"https://github.com/Cog-Creators/StarBot/blob/{red_commit}/{full_module.replace('.', '/')}.py{line_suffix}"
         elif dl:
             is_installed, installable = await dl.is_installed(full_module.split(".")[0])
             if is_installed:

@@ -68,10 +68,10 @@ msgstr "En voi tehdä yli 25 url-painiketta yhteen viestiin."
 #: urlbuttons\urlbuttons.py:164
 #, docstring
 msgid "Add a url-button for a message.\n\n"
-"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/Red-DiscordBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
+"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/StarBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
 "        "
 msgstr "Lisää viestin url-painike.\n\n"
-"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/Red-DiscordBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
+"        ```[p]urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/StarBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```\n"
 "        "
 
 #: urlbuttons\urlbuttons.py:170

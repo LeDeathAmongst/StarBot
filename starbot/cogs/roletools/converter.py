@@ -21,7 +21,7 @@ _mention_regex = re.compile(r"<@!?([0-9]{15,21})>$")
 
 
 class RawUserIds(Converter):
-    # https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/converters.py
+    # https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/converters.py
     async def convert(self, ctx: commands.Context, argument: str) -> int:
         # This is for the hackban and unban commands, where we receive IDs that
         # are most likely not in the guild.

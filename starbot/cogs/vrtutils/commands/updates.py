@@ -13,7 +13,7 @@ DEPRECATION_NOTICE = (
 )
 
 # Code pulled from core Downloader cog
-# https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/downloader/downloader.py
+# https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/downloader/downloader.py
 
 
 class Updates(MixinMeta):

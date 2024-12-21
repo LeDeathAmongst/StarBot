@@ -22,8 +22,8 @@ msgid "{name} Dashboard"
 msgstr "{name} Приладова панель"
 
 #: dashboard\rpc\__init__.py:113
-msgid "Hello, welcome to the **Red-DiscordBot Dashboard** for {name}! {name} is based off the popular bot **Red-DiscordBot**, an open source, multifunctional bot. It has *tons of features* including moderation, audio, economy, fun and more! Here, you can control and interact with {name}'s settings. **So what are you waiting for? Invite it now!**"
-msgstr "Привіт, ласкаво просимо до **Red-DiscordBot Dashboard** для {name}! {name} заснований на популярному боті **Red-DiscordBot**, багатофункціональному боті з відкритим вихідним кодом. Він має *тонни функцій*, включаючи модерацію, аудіо, економію, розваги та багато іншого! Тут ви можете керувати та взаємодіяти з налаштуваннями {name}. **Так чого ж ти чекаєш? Запросіть його зараз!**"
+msgid "Hello, welcome to the **StarBot Dashboard** for {name}! {name} is based off the popular bot **StarBot**, an open source, multifunctional bot. It has *tons of features* including moderation, audio, economy, fun and more! Here, you can control and interact with {name}'s settings. **So what are you waiting for? Invite it now!**"
+msgstr "Привіт, ласкаво просимо до **StarBot Dashboard** для {name}! {name} заснований на популярному боті **StarBot**, багатофункціональному боті з відкритим вихідним кодом. Він має *тонни функцій*, включаючи модерацію, аудіо, економію, розваги та багато іншого! Тут ви можете керувати та взаємодіяти з налаштуваннями {name}. **Так чого ж ти чекаєш? Запросіть його зараз!**"
 
 #: dashboard\rpc\__init__.py:125
 msgid "Interactive Dashboard to control and interact with {name}."

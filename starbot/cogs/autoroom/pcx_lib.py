@@ -11,7 +11,7 @@ from starbot.core import commands
 from starbot.core.utils import common_filters
 from starbot.core.utils.chat_formatting import box
 
-headers = {"user-agent": "Red-DiscordBot/" + starbot_version}
+headers = {"user-agent": "StarBot/" + starbot_version}
 
 MAX_EMBED_SIZE = 5900
 MAX_EMBED_FIELDS = 20

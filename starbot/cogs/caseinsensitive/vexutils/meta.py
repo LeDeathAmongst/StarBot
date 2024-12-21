@@ -219,7 +219,7 @@ async def _get_latest_vers(cogname: str) -> Vers:
             data = await r.json()
             latest_utils = data["utils"][:7]
             latest_cog = VersionInfo.from_str(data.get(cogname, "0.0.0"))
-        async with session.get("https://pypi.org/pypi/Red-DiscordBot/json", timeout=3) as r:
+        async with session.get("https://pypi.org/pypi/StarBot/json", timeout=3) as r:
             data = await r.json()
             latest_red = VersionInfo.from_str(data.get("info", {}).get("version", "0.0.0"))
 

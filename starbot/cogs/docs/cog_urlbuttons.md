@@ -18,7 +18,7 @@ Add a url-button for a message.<br/>
 ## s.urlbuttons bulk (Hybrid Command)
 Add a url-button for a message.<br/>
 
-```s.urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/Red-DiscordBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```
+```s.urlbuttons bulk <message> :red_circle:|<https://github.com/Cog-Creators/StarBot> :smiley:|<https://github.com/Cog-Creators/Red-SmileyBot> :green_circle:|<https://github.com/Cog-Creators/Green-DiscordBot>```
  - Usage: `s.urlbuttons bulk <message> <url_buttons>`
  - Slash Usage: `/urlbuttons bulk <message> <url_buttons>`
  - Checks: `server_only`

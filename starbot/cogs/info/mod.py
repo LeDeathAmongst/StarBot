@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-# https://github.com/commands.commands.Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/names.py
+# https://github.com/commands.commands.Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/names.py
 
 from typing import List, Optional, Tuple, cast
 

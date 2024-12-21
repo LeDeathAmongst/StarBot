@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Cog-Creators/Red-DiscordBot/V3/develop/schema/red_cog.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Cog-Creators/StarBot/V3/develop/schema/red_cog.schema.json",
   "name": "RepoList",
   "short": "List all installed repos and their available cogs in one command",
   "description": "List all installed repos and their available cogs in one command",

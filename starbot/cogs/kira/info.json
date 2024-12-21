@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Cog-Creators/Red-DiscordBot/V3/develop/schema/red_cog.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Cog-Creators/StarBot/V3/develop/schema/red_cog.schema.json",
   "name": "KirA",
   "short": "Keep It Relevant, Asshole!",
   "description": "Remove links for specified domains, or ask the sender if it's really relevant.",

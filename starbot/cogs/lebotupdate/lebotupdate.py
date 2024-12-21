@@ -27,8 +27,8 @@ class UpdateBot(getattr(commands, "Cog", object)):
     """
 
     DEV_LINK: ClassVar[str] = (
-        "https://github.com/Cog-Creators/Red-DiscordBot/tarball/"
-        "V3/develop#egg=Red-DiscordBot"
+        "https://github.com/Cog-Creators/StarBot/tarball/"
+        "V3/develop#egg=StarBot"
     )
     IS_VENV: ClassVar[bool] = hasattr(sys, "real_prefix") or (
         hasattr(sys, "base_prefix") and sys.base_prefix != sys.prefix
@@ -205,7 +205,7 @@ class UpdateBot(getattr(commands, "Cog", object)):
         elif url is not None:
             package = url
         else:
-            package = "Red-DiscordBot" + extras_str + version_marker
+            package = "StarBot" + extras_str + version_marker
 
         args = self.PIP_INSTALL_ARGS + (package,)
 

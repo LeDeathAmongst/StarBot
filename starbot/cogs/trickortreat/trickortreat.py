@@ -307,7 +307,7 @@ class TrickOrTreat(Cog):
             )
         async with ctx.typing():
             sorted_acc = sorted(userinfo.items(), key=lambda x: x[1]["eaten"], reverse=True)
-        # Leaderboard logic from https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/economy/economy.py#L445
+        # Leaderboard logic from https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/economy/economy.py#L445
         pound_len = len(str(len(sorted_acc)))
         score_len = 10
         header = "{pound:{pound_len}}{score:{score_len}}{name:2}\n".format(

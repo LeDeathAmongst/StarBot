@@ -89,7 +89,7 @@ class Base(BaseModel):
     ) -> None:
         dump = self.dumpjson(exclude_defaults=True, pretty=pretty)
         # We want to write the file as safely as possible
-        # https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/core/_drivers/json.py#L224
+        # https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/core/_drivers/json.py#L224
         tmp_path = path.parent / f"{path.stem}-{uuid4().fields[0]}.tmp"
         with tmp_path.open(encoding="utf-8", mode="w") as fs:
             fs.write(dump)

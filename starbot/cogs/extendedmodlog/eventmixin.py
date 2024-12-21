@@ -730,7 +730,7 @@ class EventMixin:
         # set guild level i18n
         time = datetime.datetime.now(datetime.timezone.utc)
         users = len(guild.members)
-        # https://github.com/Cog-Creators/Red-DiscordBot/blob/develop/cogs/general.py
+        # https://github.com/Cog-Creators/StarBot/blob/develop/cogs/general.py
         user_created = int(member.created_at.timestamp())
 
         created_on = "<t:{user_created}>\n(<t:{user_created}:R>)".format(user_created=user_created)

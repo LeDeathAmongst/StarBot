@@ -412,7 +412,7 @@ class ServerStats(commands.GroupCog):
             )
             em = discord.Embed(colour=await ctx.embed_colour(), timestamp=ctx.message.created_at)
             # https://github.com/Rapptz/RoboDanny/blob/f859a326d74e919b1b3042b0114a258cd6a531f4/cogs/stats.py#L716-L798
-            # The following code is inspired by RoboDanny linked above modified for Red-DiscordBot
+            # The following code is inspired by RoboDanny linked above modified for StarBot
             description = [msg]
             all_tasks = asyncio.all_tasks(loop=self.bot.loop)
             event_tasks = [t for t in all_tasks if "Client._run_event" in repr(t) and not t.done()]
@@ -1447,7 +1447,7 @@ class ServerStats(commands.GroupCog):
         to send the newly unbanned user
         :returns: :class:`Invite`
 
-        https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/mod.py#L771
+        https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/mod.py#L771
         """
         my_perms: discord.Permissions = guild.me.guild_permissions
         if my_perms.manage_guild or my_perms.administrator:

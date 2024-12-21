@@ -66,7 +66,7 @@ class RedUpdate(Cog):
     async def redupdateset_url(self, ctx: commands.Context):
         """Set your custom fork url of red.
 
-        Has to be a valid link such as `git+https://github.com/Cog-Creators/Red-DiscordBot` else it will not work.
+        Has to be a valid link such as `git+https://github.com/Cog-Creators/StarBot` else it will not work.
         """
         view = URLModal(ctx, self.config)
         view.message = await ctx.send(
@@ -90,7 +90,7 @@ class RedUpdate(Cog):
         embed.add_field(
             name="Example Link:",
             value=box(
-                "git+https://github.com/Cog-Creators/Red-DiscordBot",
+                "git+https://github.com/Cog-Creators/StarBot",
                 lang="yaml",
             ),
         )
@@ -177,9 +177,9 @@ class RedUpdate(Cog):
         - `[version]`: `dev` to update to latest dev changes. `stable` by default already.
         """
         package = (
-            "Red-DiscordBot"
+            "StarBot"
             if not version
-            else "git+https://github.com/Cog-Creators/Red-DiscordBot"
+            else "git+https://github.com/Cog-Creators/StarBot"
         )
         if not version:
             shell = self.bot.get_cog("Shell")
@@ -260,7 +260,7 @@ class RedUpdate(Cog):
         # When it's used for the first time, it will store the old url in the config.
         # This is to prevent the user from using the command without setting their own fork.
         # If they want to update to red's main repo to dev changes, they can use `updatered dev`.
-        elif package == "git+https://github.com/Cog-Creators/Red-DiscordBot":
+        elif package == "git+https://github.com/Cog-Creators/StarBot":
             return await ctx.send(
                 "You cannot use this command until you've set your fork. Please remember to set your fork url using `{prefix}redset url`.".format(
                     prefix=ctx.clean_prefix

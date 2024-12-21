@@ -137,7 +137,7 @@ html_context = {
     # Enable the "Edit in GitHub link within the header of each page.
     "display_github": True,
     "github_user": "Cog-Creators",
-    "github_repo": "Red-DiscordBot",
+    "github_repo": "StarBot",
     "github_version": "V3/develop",
 }
 
@@ -165,7 +165,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "Red-DiscordBotdoc"
+htmlhelp_basename = "StarBotdoc"
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -189,7 +189,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, "Red-DiscordBot.tex", "Red - Discord Bot Documentation", "Cog Creators", "manual")
+    (master_doc, "StarBot.tex", "Red - Discord Bot Documentation", "Cog Creators", "manual")
 ]
 
 
@@ -208,10 +208,10 @@ man_pages = [(master_doc, "red-discordbot", "Red - Discord Bot Documentation", [
 texinfo_documents = [
     (
         master_doc,
-        "Red-DiscordBot",
+        "StarBot",
         "Red - Discord Bot Documentation",
         author,
-        "Red-DiscordBot",
+        "StarBot",
         "One line description of project.",
         "Miscellaneous",
     )
@@ -249,7 +249,7 @@ intersphinx_mapping = {
 # :dpy_docs:`link text <site_name.html>`
 extlinks = {
     "dpy_docs": (f"{dpy_docs_url}%s", None),
-    "issue": ("https://github.com/Cog-Creators/Red-DiscordBot/issues/%s", "#%s"),
+    "issue": ("https://github.com/Cog-Creators/StarBot/issues/%s", "#%s"),
     # below URL redirects to user page, if they don't have GH Sponsors set up,
     # while allowing us to direct readers directly at a sponsorship opportunity,
     # if they do

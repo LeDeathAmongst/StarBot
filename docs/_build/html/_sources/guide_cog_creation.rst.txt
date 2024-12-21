@@ -26,11 +26,11 @@ Depending on what your goal is should help determine which version you need.
     If your goal is to support both versions, make sure you build compatibility layers or use separate branches to keep compatibility until the next Red release
 
 Open a terminal or command prompt and type one of the following
-    Stable Version: :code:`python3.8 -m pip install -U Red-DiscordBot`
+    Stable Version: :code:`python3.8 -m pip install -U StarBot`
 
 .. note::
 
-  To install the development version, replace ``Red-DiscordBot`` in the above commands with the
+  To install the development version, replace ``StarBot`` in the above commands with the
   value below. **The development version of the bot contains experimental changes. It is not
   intended for normal users.** We will not support anyone using the development version in any
   support channels. Using the development version may break third party cogs and not all core
@@ -40,7 +40,7 @@ Open a terminal or command prompt and type one of the following
 
   .. code-block:: none
 
-      Red-DiscordBot @ https://github.com/Cog-Creators/Red-DiscordBot/tarball/V3/develop
+      StarBot @ https://github.com/Cog-Creators/StarBot/tarball/V3/develop
 
 
 (Windows users may need to use :code:`py -3.8` or :code:`python` instead of :code:`python3.8`)

@@ -22,7 +22,7 @@ class GuildConverter(discord.app_commands.Transformer):
 
     Guidance code on how to do this from:
     https://github.com/Rapptz/discord.py/blob/rewrite/discord/ext/commands/converter.py#L85
-    https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/mod.py#L24
+    https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/mod.py#L24
     """
 
     @classmethod
@@ -76,7 +76,7 @@ class MultiGuildConverter(IDConverter):
 
     Guidance code on how to do this from:
     https://github.com/Rapptz/discord.py/blob/rewrite/discord/ext/commands/converter.py#L85
-    https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/mod.py#L24
+    https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/mod.py#L24
     """
 
     async def convert(self, ctx: commands.Context, argument: str) -> List[discord.Guild]:

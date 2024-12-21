@@ -135,7 +135,7 @@ Run **one** of the following set of commands, depending on what extras you want 
         :prompts: (redenv) C:\\>
 
         python -m pip install -U pip wheel
-        python -m pip install -U Red-DiscordBot
+        python -m pip install -U StarBot
 
   * With PostgreSQL support:
 
@@ -143,7 +143,7 @@ Run **one** of the following set of commands, depending on what extras you want 
         :prompts: (redenv) C:\\>
 
         python -m pip install -U pip wheel
-        python -m pip install -U Red-DiscordBot[postgres]
+        python -m pip install -U StarBot[postgres]
 
 --------------------------
 Setting Up and Running Red

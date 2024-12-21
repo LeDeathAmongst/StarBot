@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Cog-Creators/Red-DiscordBot/V3/develop/schema/red_cog.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Cog-Creators/StarBot/V3/develop/schema/red_cog.schema.json",
   "name": "TacoShack",
   "short": "TacoShack Classic for Red DiscordBot",
   "description": "You are in charge of running your taco shack! You will get hourly income to pay for things. You can increase your income by purchasing upgrades or hiring employees! You yourself can also work every 10 minutes, and collect tips every 5 minutes to make some cash. Become the most sucessful taco shack around by reaching the top of the leaderboard! Either top the Most Tacos Sold or the Richest leaderboard for bragging rights.",

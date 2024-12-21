@@ -1,6 +1,6 @@
 # LevelUp API Service
 
-This repository contains the code for the `LevelUp API`, a companion API for a leveling cog for the `Red-DiscordBot`. This guide will help you clone the repository and set up your own self-hosted API.
+This repository contains the code for the `LevelUp API`, a companion API for a leveling cog for the `StarBot`. This guide will help you clone the repository and set up your own self-hosted API.
 
 ## Prerequisites
 

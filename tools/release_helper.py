@@ -65,7 +65,7 @@ query getMilestoneContributors(
   $after: String,
   $states: [PullRequestState!],
 ) {
-  repository(owner: "Cog-Creators", name: "Red-DiscordBot") {
+  repository(owner: "Cog-Creators", name: "StarBot") {
     milestones(first: 1, query: $milestone) {
       nodes {
         title
@@ -97,7 +97,7 @@ query getMilestoneContributors(
 # technically not *all* but enough for what we use it for
 GET_ALL_TAG_COMMITS_QUERY = """
 query getAllTagCommits {
-  repository(owner: "Cog-Creators", name: "Red-DiscordBot") {
+  repository(owner: "Cog-Creators", name: "StarBot") {
     refs(
         refPrefix: "refs/tags/"
         orderBy: {direction: DESC, field: TAG_COMMIT_DATE}
@@ -115,7 +115,7 @@ query getAllTagCommits {
 """
 GET_COMMIT_HISTORY_QUERY = """
 query getCommitHistory($refQualifiedName: String!, $after: String) {
-  repository(owner: "Cog-Creators", name: "Red-DiscordBot") {
+  repository(owner: "Cog-Creators", name: "StarBot") {
     ref(qualifiedName: $refQualifiedName) {
       target {
         ... on Commit {
@@ -145,7 +145,7 @@ query getCommitHistory($refQualifiedName: String!, $after: String) {
 """
 GET_LAST_ISSUE_NUMBER_QUERY = """
 query getLastIssueNumber {
-  repository(owner: "Cog-Creators", name: "Red-DiscordBot") {
+  repository(owner: "Cog-Creators", name: "StarBot") {
     discussions(orderBy: {field: CREATED_AT, direction: DESC}, first: 1) {
       nodes {
         number
@@ -164,7 +164,7 @@ query getLastIssueNumber {
   }
 }
 """
-GH_URL = "https://github.com/Cog-Creators/Red-DiscordBot"
+GH_URL = "https://github.com/Cog-Creators/StarBot"
 LINKIFY_ISSUE_REFS_RE = re.compile(r"#(\d+)")
 
 
@@ -814,7 +814,7 @@ def create_short_lived_branch(release_type: ReleaseType, version: str) -> None:
             f"  git checkout -b V3/release/{version} PREVIOUS_VERSION\n"
             "  ```\n"
             "- Cherry-pick the relevant changes, the changelog, the automated PRs, and the version bump.\n"
-            "- Push the branch to upstream repository (Cog-Creators/Red-DiscordBot)\n"
+            "- Push the branch to upstream repository (Cog-Creators/StarBot)\n"
             "  This can be done with the command:\n"
             "  ```\n"
             f"  git push -u {GH_URL} V3/release/{version}\n"

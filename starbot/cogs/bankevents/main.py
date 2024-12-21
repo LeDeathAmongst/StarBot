@@ -28,7 +28,7 @@ class BankEvents(PaydayOverride, commands.Cog, metaclass=CompositeMetaClass):
 
     Shoutout to YamiKaitou for starting the work on this 2+ years ago with a PR.
     Maybe one day it will be merged into core.
-    https://github.com/Cog-Creators/Red-DiscordBot/pull/5325
+    https://github.com/Cog-Creators/StarBot/pull/5325
     """
 
     def __init__(self, bot: Red):

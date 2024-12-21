@@ -77,7 +77,7 @@ class FuzzyRole(RoleConverter):
 
     Guidance code on how to do this from:
     https://github.com/Rapptz/discord.py/blob/rewrite/discord/ext/commands/converter.py#L85
-    https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/mod.py#L24
+    https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/mod.py#L24
     """
 
     def __init__(self, response: bool = True):

@@ -19,7 +19,7 @@ def init(bot: Red):
 
 # Thanks to YamiKaitou for starting the work on this 2+ years ago
 # Maybe one day it will be merged
-# https://github.com/Cog-Creators/Red-DiscordBot/pull/5325
+# https://github.com/Cog-Creators/StarBot/pull/5325
 class BankSetBalanceInformation(NamedTuple):
     recipient: Union[discord.Member, discord.User]
     guild: Union[discord.Guild, None]

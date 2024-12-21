@@ -6,7 +6,7 @@ import discord
 from Star_Utils import Cog, CogsUtils
 
 class Praise(Cog):
-    """Praise Kink style cog for Red-DiscordBot"""
+    """Praise Kink style cog for StarBot"""
 
     def __init__(self, bot: Red):
         self.bot = bot

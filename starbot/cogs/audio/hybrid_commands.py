@@ -22,7 +22,7 @@ from pylav.type_hints.bot import DISCORD_COG_TYPE_MIXIN
 
 LOGGER = getLogger("PyLav.cog.Player.commands.hybrids")
 _ = Translator("PyLavPlayer", Path(__file__))
-# taken from https://github.com/Cog-Creators/Red-DiscordBot/blob/ec55622418810731e1ee2ede1569f81f9bddeeec/starbot/cogs/audio/core/utilities/miscellaneous.py#L28
+# taken from https://github.com/Cog-Creators/StarBot/blob/ec55622418810731e1ee2ede1569f81f9bddeeec/starbot/cogs/audio/core/utilities/miscellaneous.py#L28
 _RE_TIME_CONVERTER: Final[Pattern] = re.compile(r"(?:(\d+):)?(\d+):(\d+)")
 # The above was updated to allow for any `(\d+)?\d+:\d+` combination to include unusual time formats such as `1:75`
 
@@ -691,7 +691,7 @@ class HybridCommands(DISCORD_COG_TYPE_MIXIN):
                     return
                 seek_ms = await context.player.current.duration() * (seek / 100)
                 seek = -round(((await context.player.position()) - seek_ms) / 1000)
-            # Taken from https://github.com/Cog-Creators/Red-DiscordBot/blob/ec55622418810731e1ee2ede1569f81f9bddeeec/starbot/cogs/audio/core/utilities/miscellaneous.py#L28
+            # Taken from https://github.com/Cog-Creators/StarBot/blob/ec55622418810731e1ee2ede1569f81f9bddeeec/starbot/cogs/audio/core/utilities/miscellaneous.py#L28
             elif (match := _RE_TIME_CONVERTER.match(seek)) is not None:
                 hr = int(match.group(1)) if match.group(1) else 0
                 mn = int(match.group(2)) if match.group(2) else 0

@@ -658,7 +658,7 @@ class Chatter(Cog):
         for on_message recognition of @bot
 
         Credit to:
-        https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/customcom/customcom.py#L508
+        https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/customcom/customcom.py#L508
         for the message filtering
         """
         ###########

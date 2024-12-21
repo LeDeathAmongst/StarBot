@@ -18,7 +18,7 @@ class CompositeMetaClass(type(Cog), type(ABC)):
     coexist with discord.py's metaclass
 
     This is from
-    https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/mod.py#L23
+    https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/mod.py#L23
     """
 
     pass

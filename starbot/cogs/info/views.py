@@ -449,13 +449,13 @@ class CommandView(discord.ui.View):
             pkg: str = installable.name
         elif cog.__module__.startswith("starbot."):
             made_by: Optional[str] = "Cog Creators"
-            repo_url: Optional[str] = "https://github.com/Cog-Creators/Red-DiscordBot"
+            repo_url: Optional[str] = "https://github.com/Cog-Creators/StarBot"
             fragments: List[str] = cog.__module__.split(".")
             if fragments[1] == "core":
                 pkg: str = "N/A - Built-in commands."
             else:
                 pkg: str = fragments[2]
-            repo_name: Optional[str] = "Red-DiscordBot"
+            repo_name: Optional[str] = "StarBot"
         else:
             made_by: Optional[str] = "Unknown"
             repo_url: Optional[str] = "None - this cog wasn't installed via downloader."

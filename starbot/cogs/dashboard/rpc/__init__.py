@@ -111,8 +111,8 @@ class DashboardRPC:
             data["ui"]["meta"]["icon"] = self.bot.user.display_avatar.url
         if data["ui"]["meta"]["description"] is None:
             data["ui"]["meta"]["description"] = _(
-                "Hello, welcome to the **Red-DiscordBot Dashboard** for {name}! "
-                "{name} is based off the popular bot **Red-DiscordBot**, an open "
+                "Hello, welcome to the **StarBot Dashboard** for {name}! "
+                "{name} is based off the popular bot **StarBot**, an open "
                 "source, multifunctional bot. It has *tons of features* including moderation, "
                 "audio, economy, fun and more! Here, you can control and interact with "
                 "{name}'s settings. **So what are you waiting for? Invite it now!**"
@@ -323,7 +323,7 @@ class DashboardRPC:
                         repo = "Unknown (Removed from Downloader)"
                 elif cog.__module__.startswith("starbot."):
                     author = "Cog Creators"
-                    repo = "https://github.com/Cog-Creators/Red-DiscordBot"
+                    repo = "https://github.com/Cog-Creators/StarBot"
                 elif (
                     pathlib.Path(__import__(cog.__module__).__path__[0]).parent.name
                     == "StarCogs"

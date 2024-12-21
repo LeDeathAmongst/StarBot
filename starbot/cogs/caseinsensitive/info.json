@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Cog-Creators/Red-DiscordBot/V3/develop/schema/red_cog.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Cog-Creators/StarBot/V3/develop/schema/red_cog.schema.json",
   "author": "Rosie",
   "description": "Make all prefixes and commands case insensitive (so that something like !Ping works). This will have a negative performance impact.",
   "end_user_data_statement": "This cog does not persistently store data or metadata about users.",

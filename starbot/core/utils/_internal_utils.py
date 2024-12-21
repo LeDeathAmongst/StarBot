@@ -329,7 +329,7 @@ def expected_version(current: str, expected: str) -> bool:
 async def fetch_latest_red_version_info() -> Tuple[Optional[VersionInfo], Optional[str]]:
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get("https://pypi.org/pypi/Red-DiscordBot/json") as r:
+            async with session.get("https://pypi.org/pypi/StarBot/json") as r:
                 data = await r.json()
     except (aiohttp.ClientError, asyncio.TimeoutError):
         return None, None

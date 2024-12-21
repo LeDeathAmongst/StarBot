@@ -5,6 +5,6 @@ Pillow
 psutil
 python-decouple
 python-dotenv
-Red-DiscordBot
+StarBot
 requests
 uvicorn

@@ -8,9 +8,9 @@ The `Spamatron` cog provides a command to spam a message in a specified channel 
 
 To use the `Spamatron` cog, follow these steps:
 
-1. Ensure you have Red-DiscordBot installed and running.
+1. Ensure you have StarBot installed and running.
 
-2. Add the `Spamatron` cog to your Red-DiscordBot instance.
+2. Add the `Spamatron` cog to your StarBot instance.
    [p]repo add ben-cogs https://github.com/BenCos17/ben-cogs/
     [p]cog install ben-cogs spamatron
 
@@ -33,4 +33,4 @@ The `Spamatron` cog allows users with administrator permissions to spam a messag
 
 ## Note
 
-This cog is designed for Red-DiscordBot version 3.x.
+This cog is designed for StarBot version 3.x.

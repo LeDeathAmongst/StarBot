@@ -6,7 +6,7 @@ import asyncio
 from Star_Utils import Cog
 
 class AFK(Cog):
-    """AFK Cog for Red-DiscordBot"""
+    """AFK Cog for StarBot"""
 
     def __init__(self, bot: Red):
         self.bot = bot

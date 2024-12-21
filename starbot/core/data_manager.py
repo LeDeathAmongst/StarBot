@@ -36,7 +36,7 @@ basic_config_default: Dict[str, Any] = {
     "CORE_PATH_APPEND": "core",
 }
 
-appdir = platformdirs.PlatformDirs("Red-DiscordBot")
+appdir = platformdirs.PlatformDirs("StarBot")
 config_dir = appdir.user_config_path
 _system_user = sys.platform == "linux" and 0 < os.getuid() < 1000
 if _system_user:

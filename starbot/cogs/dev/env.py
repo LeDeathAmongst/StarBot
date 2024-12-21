@@ -65,7 +65,7 @@ def no_colour_rich_markup(
 ) -> str:
     """
     Slimmed down version of rich_markup which ensure no colours (/ANSI) can exist
-    https://github.com/Cog-Creators/Red-DiscordBot/pull/5538/files (Kowlin)
+    https://github.com/Cog-Creators/StarBot/pull/5538/files (Kowlin)
     """
     temp_console = Console(  # Prevent messing with STDOUT's console
         color_system=None,

@@ -11,7 +11,7 @@ class MixinMeta(ABC):
     Basically, to keep developers sane when not all attributes are defined in each mixin.
 
     This is modified from
-    https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/mod/abc.py
+    https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/mod/abc.py
     """
 
     def __init__(self, *_args):

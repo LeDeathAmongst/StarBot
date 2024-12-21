@@ -400,7 +400,7 @@ async def make_details(track: tekore.model.FullTrack, details: tekore.model.Audi
 def _draw_play(song: tekore.model.CurrentlyPlayingContext) -> str:
     """
     Courtesy of aikaterna from Audio in red and away cog
-    https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/audio/core/utilities/formatting.py#L358-L376
+    https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/audio/core/utilities/formatting.py#L358-L376
     """
     total_time = datetime.timedelta(seconds=song.item.duration_ms / 1000)
     elapsed_time = datetime.timedelta(seconds=song.progress_ms / 1000)

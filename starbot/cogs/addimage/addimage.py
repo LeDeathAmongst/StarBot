@@ -126,7 +126,7 @@ class AddImage(Cog):
 
     async def local_perms(self, message: discord.Message) -> bool:
         """Check the user is/isn't locally whitelisted/blacklisted.
-        https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/release/3.0.0/starbot/core/global_checks.py
+        https://github.com/Cog-Creators/StarBot/blob/V3/release/3.0.0/starbot/core/global_checks.py
         """
         if await self.bot.is_owner(message.author):
             return True
@@ -154,7 +154,7 @@ class AddImage(Cog):
 
     async def global_perms(self, message: discord.Message) -> bool:
         """Check the user is/isn't globally whitelisted/blacklisted.
-        https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/release/3.0.0/starbot/core/global_checks.py
+        https://github.com/Cog-Creators/StarBot/blob/V3/release/3.0.0/starbot/core/global_checks.py
         """
         if await self.bot.is_owner(message.author):
             return True
@@ -169,7 +169,7 @@ class AddImage(Cog):
 
     async def check_ignored_channel(self, message: discord.Message) -> bool:
         """
-        https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/release/3.0.0/starbot/cogs/mod/mod.py#L1273
+        https://github.com/Cog-Creators/StarBot/blob/V3/release/3.0.0/starbot/cogs/mod/mod.py#L1273
         """
         ctx = await self.bot.get_context(message)
         return await self.bot.ignored_channel_or_guild(ctx)

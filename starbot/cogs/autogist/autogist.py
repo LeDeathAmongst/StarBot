@@ -78,7 +78,7 @@ class AutoGist(Cog):
         self._session = aiohttp.ClientSession()
         self.gh = gidgethub.aiohttp.GitHubAPI(
             session=self._session,
-            requester="AutoGist cog for Red-DiscordBot",
+            requester="AutoGist cog for StarBot",
             oauth_token=await self._get_token(),
         )
 

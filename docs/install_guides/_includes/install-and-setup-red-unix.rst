@@ -10,7 +10,7 @@ To install without additional config backend support:
     :prompts: (redenv) $
 
     python -m pip install -U pip wheel
-    python -m pip install -U Red-DiscordBot
+    python -m pip install -U StarBot
 
 Or, to install with PostgreSQL support:
 
@@ -18,7 +18,7 @@ Or, to install with PostgreSQL support:
     :prompts: (redenv) $
 
     python -m pip install -U pip wheel
-    python -m pip install -U "Red-DiscordBot[postgres]"
+    python -m pip install -U "StarBot[postgres]"
 
 
 --------------------------

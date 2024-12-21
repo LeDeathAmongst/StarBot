@@ -100,7 +100,7 @@ class OnConnect(Events, Commands, Cog, metaclass=CompositeMetaClass):
         except discord.HTTPException:
             await ctx.send(message, embed=embed)
 
-    # Based on https://github.com/Cog-Creators/Red-DiscordBot/blob/9ab307c1efc391301fc6498391d2e403aeee2faa/starbot/core/bot.py#L925 # noqa
+    # Based on https://github.com/Cog-Creators/StarBot/blob/9ab307c1efc391301fc6498391d2e403aeee2faa/starbot/core/bot.py#L925 # noqa
     async def get_or_fetch_channel(self, channel_id: int):
         """Retrieves a channel based on its ID.
 

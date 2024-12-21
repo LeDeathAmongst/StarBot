@@ -22,7 +22,7 @@ from starbot.core.commands import GuildContext
 
 """
 Converters below are originally from permissions core cog:
-https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/permissions/converters.py
+https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/permissions/converters.py
 """
 MENTION_RE = re.compile(r"^<?(?:(?:@[!&]?)?|#)(\d{15,21})>?$")
 

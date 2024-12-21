@@ -292,7 +292,7 @@ class CCRole(Cog):
     async def on_message_without_command(self, message: discord.Message):
         """
         Credit to:
-        https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/customcom/customcom.py#L508
+        https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/customcom/customcom.py#L508
         for the message filtering
         """
         # This covers message.author.bot check

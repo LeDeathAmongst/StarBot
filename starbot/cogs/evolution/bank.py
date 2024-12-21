@@ -16,7 +16,7 @@ from starbot.core.utils.chat_formatting import humanize_number
 if TYPE_CHECKING:
     from starbot.core.bot import Red
 
-# Credits: https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/core/bank.py
+# Credits: https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/core/bank.py
 # This is a modified version of Red's Bank API that listen for the existance of the Adventure Cog.
 # If Cog is not loaded, then it will default to Red's Bank API
 

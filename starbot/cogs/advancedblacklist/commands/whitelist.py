@@ -147,7 +147,7 @@ class Whitelist(ABMixin):
         if not (ctx.guild.owner_id == ctx.author.id or await self.bot.is_owner(ctx.author)):
             # We need to make sure to not lock an admin out of the bot
             # This is a toned down version of the cog creator's method for this check
-            # https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/core/core_commands.py#L4521-#L4532
+            # https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/core/core_commands.py#L4521-#L4532
             current = set((await get_whitelist(self.bot, ctx.guild)).keys())
             maybe_new = current.union(members_or_roles)
             check = {ctx.author.id}

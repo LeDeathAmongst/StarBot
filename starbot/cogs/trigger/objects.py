@@ -77,7 +77,7 @@ class TriggerObject:
     def __repr__(self) -> str:
         return f"<TriggerObject trigger={self.trigger}>"
 
-    # https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/starbot/cogs/customcom/customcom.py#L824
+    # https://github.com/Cog-Creators/StarBot/blob/V3/develop/starbot/cogs/customcom/customcom.py#L824
     @staticmethod
     def transform_parameter(result, objects) -> str:
         """

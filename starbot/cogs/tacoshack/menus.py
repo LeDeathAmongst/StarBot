@@ -148,7 +148,7 @@ class ScoreboardSource(TacoLeaderboardSource):
         embed.set_footer(text=f"Page {menu.current_page + 1}/{self.get_max_pages()}")
         return {"embed": embed, "content": self._legend}
         
-## https://github.com/Drapersniper/Red-DiscordBot/blob/V3/edge/starbot/core/utils/_dpy_menus_utils.py - Files used in V3/Edge
+## https://github.com/Drapersniper/StarBot/blob/V3/edge/starbot/core/utils/_dpy_menus_utils.py - Files used in V3/Edge
 
 class CannotReadMessage(menus.MenuError):
     def __init__(self):

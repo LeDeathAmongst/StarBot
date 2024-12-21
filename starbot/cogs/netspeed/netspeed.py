@@ -1,5 +1,5 @@
 from Star_Utils import Cog, CogsUtils
-"""NetSpeed cog for Red-DiscordBot by PhasecoreX."""
+"""NetSpeed cog for StarBot by PhasecoreX."""
 
 import asyncio
 from concurrent.futures import ThreadPoolExecutor

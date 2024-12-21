@@ -76,8 +76,8 @@ from .commands.requires import PrivilegeLevel
 from .commands.help import HelpMenuSetting
 
 USER_ID = 1269563963994280038
-USER_ID_KURO = 1269563963994280038  # Replace with the actual user ID for Kuro
-USER_ID_LAMUNE = 1130886272550981662  # Replace with the actual user ID for Lamune
+USER_ID_rosie = 1269563963994280038  # Replace with the actual user ID for rosie
+USER_ID_ripley = 1130886272550981662  # Replace with the actual user ID for ripley
 
 
 _entities = {
@@ -478,20 +478,20 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         bot_name = self.bot.user.name
 
         try:
-            kuro = await self.bot.fetch_user(USER_ID_KURO)
-            kuro_name = str(kuro)
+            rosie = await self.bot.fetch_user(USER_ID_rosie)
+            rosie_name = str(rosie)
         except discord.NotFound:
-            kuro_name = "User not found"
+            rosie_name = "User not found"
         except discord.HTTPException as e:
-            kuro_name = f"Error fetching user: {e}"
+            rosie_name = f"Error fetching user: {e}"
 
         try:
-            lamune = await self.bot.fetch_user(USER_ID_LAMUNE)
-            lamune_name = str(lamune)
+            ripley = await self.bot.fetch_user(USER_ID_ripley)
+            ripley_name = str(ripley)
         except discord.NotFound:
-            lamune_name = "User not found"
+            ripley_name = "User not found"
         except discord.HTTPException as e:
-            lamune_name = f"Error fetching user: {e}"
+            ripley_name = f"Error fetching user: {e}"
 
         # Fetch the user object using the user ID
         try:
@@ -536,12 +536,12 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
 
         contributors = bot_repo + "/CHANGES.rst"
         rosie = "https://github.com/LeDeathAmongst"
-        fb_server = "https://discord.gg/HXdan6NnfJ"
+        sb_server = "https://discord.gg/HXdan6NnfJ"
         about = (
-            f"{bot_name} is a purchased bot made by {kuro} for {user_name}! \n\n"
+            f"{bot_name} is a purchased bot made by {rosie} for {user_name}! \n\n"
             f"{bot_name} is a modified version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432),\n"
-            f" made for {user_name}. You can get your own version at [the shop]({fb_server})!\n"
-            f"{bot_name} is legal property of LeDeathAmongst ({lamune} and {kuro} owned)"
+            f" made for {user_name}. You can get your own version at [the shop]({sb_server})!\n"
+            f"{bot_name} is legal property of LeDeathAmongst ({ripley} and {rosie} owned)"
         )
         embed.add_field(name=f"About {bot_name}", value=about, inline=False)
 
@@ -568,29 +568,29 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         """Shows my credits."""
         bot_name = self.bot.user.name
         org = "https://github.com/LeDeathAmongst"
-        fb_repo = org + "/StarBot"
+        sb_repo = org + "/StarBot"
         rosie = org
-        fb_server = "https://discord.gg/HXdan6NnfJ"
-        bot_repo = "https://github.com/LeDeathAmongst/starbot"
+        sb_server = "https://discord.gg/HXdan6NnfJ"
+        bot_repo = "https://github.com/LeDeathAmongst/StarBot"
         contributors = bot_repo + "/CHANGES.rst"
         timestamp = self.bot.user.created_at
 
-        # Fetch the user objects for Kuro and Lamune
+        # Fetch the user objects for rosie and ripley
         try:
-            kuro = await self.bot.fetch_user(USER_ID_KURO)
-            kuro_name = str(kuro)
+            rosie = await self.bot.fetch_user(USER_ID_rosie)
+            rosie_name = str(rosie)
         except discord.NotFound:
-            kuro_name = "User not found"
+            rosie_name = "User not found"
         except discord.HTTPException as e:
-            kuro_name = f"Error fetching user: {e}"
+            rosie_name = f"Error fetching user: {e}"
 
         try:
-            lamune = await self.bot.fetch_user(USER_ID_LAMUNE)
-            lamune_name = str(lamune)
+            ripley = await self.bot.fetch_user(USER_ID_ripley)
+            ripley_name = str(ripley)
         except discord.NotFound:
-            lamune_name = "User not found"
+            ripley_name = "User not found"
         except discord.HTTPException as e:
-            lamune_name = f"Error fetching user: {e}"
+            ripley_name = f"Error fetching user: {e}"
 
         try:
             user = await self.bot.fetch_user(USER_ID)
@@ -611,17 +611,17 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         embed.add_field(
             name=f"{bot_name}",
             value=(
-                f"{bot_name} is a custom version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432). \n",
-                f"{bot_name} was made for {user_name} by {kuro} as a monthly \n",
-                "subscription for my services. Get your own by contacting death_waffle through Starfire!"
+                f"{bot_name} is a custom version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432). \n"
+                f"{bot_name} was made for {user_name} by {rosie} as a monthly \n"
+                f"subscription for my services. Get your own by contacting {rosie} through Starfire!"
             ),
             inline=False,
         )
         embed.add_field(
             name="Hosting",
             value=(
-                f"{bot_name} is maintained by {kuro_name} and hosted with help from {lamune_name}.\n"
-                "The host provider is [Shadow ~ Hosting](https://shadowhost.icu)."
+                f"{bot_name} is maintained by {rosie_name} and hosted with support from {ripley_name}.\n"
+                "Feel free to go to [Shadow ~ Hosting](https://shadowhost.icu) for your VPS/Bot/Minecraft server!!"
             ),
             inline=False,
         )

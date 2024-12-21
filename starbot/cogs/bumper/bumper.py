@@ -9,7 +9,7 @@ import string
 import logging
 from datetime import datetime, timezone, timedelta
 import humanize
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 _ = Translator("Bumper", __file__)
 log = logging.getLogger("fb.Bumper")

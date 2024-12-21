@@ -14,7 +14,7 @@
   "requirements": [
     "psutil>=5.8.0",
     "tabulate",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Check system metrics on the host device.",
   "tags": [

@@ -11,7 +11,7 @@ import functools
 import time
 from collections import Counter
 from random import randint
-from Star_Utils import Cog
+from Star-Utils import Cog
 from starbot.core import bank
 from starbot.core.errors import BalanceTooHigh
 

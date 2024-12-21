@@ -8,7 +8,7 @@ from typing import List, Optional, Union
 import discord
 from red_commons.logging import getLogger
 from starbot.core import Config, commands
-from Star_Utils import Cog
+from Star-Utils import Cog
 from .dashboard_integration import DashboardIntegration
 from starbot.core.utils.views import SimpleMenu
 

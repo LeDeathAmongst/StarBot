@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 # Post random doujin pics by Eslyium#1949 & Yukirin#0048
 
 # Discord

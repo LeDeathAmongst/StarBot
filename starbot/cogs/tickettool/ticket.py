@@ -10,7 +10,7 @@ import io
 import chat_exporter
 
 from .utils import utils
-from Star_Utils import Cog
+from Star-Utils import Cog
 _: Translator = Translator("TicketTool", __file__)
 
 

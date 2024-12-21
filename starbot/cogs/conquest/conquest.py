@@ -6,7 +6,7 @@ import pathlib
 from abc import ABC
 from shutil import copyfile
 from typing import Optional
-from Star_Utils import Cog
+from Star-Utils import Cog
 import discord
 from PIL import Image, ImageChops, ImageColor, ImageOps
 from discord.ext.commands import Greedy

@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 """Smartreact, for all your autoreact needs.
 
 This cog was originally from flapjax/FlapJack-Cogs in v2.

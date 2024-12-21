@@ -2,7 +2,7 @@ import functools
 import time
 from typing import TYPE_CHECKING, List, Union
 from copy import deepcopy
-from Star_Utils import Cog
+from Star-Utils import Cog
 import discord
 from discord.ui import Button, Modal, Select, TextInput, View, button, select
 from starbot.core import commands

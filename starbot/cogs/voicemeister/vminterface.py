@@ -4,7 +4,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 import discord
 from starbot.core.bot import Red
-from Star_Utils import Buttons, Dropdown
+from Star-Utils import Buttons, Dropdown
 
 MAX_CHANNEL_NAME_LENGTH = 100
 

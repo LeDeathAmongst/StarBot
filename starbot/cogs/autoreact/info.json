@@ -7,7 +7,7 @@
   "required_cogs": {},
   "requirements": [
     "emoji",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Reacts to specific messages with emojis.",
   "end_user_data_statement": "This cog does not store any user data.",

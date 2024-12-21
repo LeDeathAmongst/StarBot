@@ -5,7 +5,7 @@
   "install_msg": "Thank you for installing the Vouch tracker cog. Use `[p]help` to get started, don't forget to enable the slash commands!",
   "short": "Vouch tracking/management",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "vouches",

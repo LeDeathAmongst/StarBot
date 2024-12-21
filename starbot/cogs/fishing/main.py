@@ -1,7 +1,7 @@
 import asyncio
 import random
 import time
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 from starbot.core import Config, commands
 from starbot.core.bot import Red
 

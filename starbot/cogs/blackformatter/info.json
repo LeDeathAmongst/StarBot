@@ -9,7 +9,7 @@
   "required_cogs": {},
   "requirements": [
     "black",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Run black on files with custom line lengths.",
   "tags": [

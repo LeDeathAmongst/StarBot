@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 # Standard Imports
 import asyncio
 import re

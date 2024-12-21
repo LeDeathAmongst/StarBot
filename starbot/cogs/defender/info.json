@@ -13,7 +13,7 @@
     "emoji~=1.6.3",
     "pydantic~=2.7.2",
     "regex==2022.4.24",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "min_bot_version": "3.5.0.dev317",
   "type": "COG",

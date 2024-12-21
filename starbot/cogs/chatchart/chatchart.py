@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 #  This cog is influenced heavily by cacobot's stats module:
 #  https://github.com/Orangestar12/cacobot/blob/master/cacobot/stats.py
 #  Big thanks to Redjumpman for changing the beta version from

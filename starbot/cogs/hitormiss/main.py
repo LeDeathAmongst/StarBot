@@ -22,7 +22,7 @@ from .exceptions import ItemOnCooldown
 from .models import BaseItem, Player
 from .utils import is_lt, no_special_characters
 from .views import PaginationView
-from Star_Utils import Cog
+from Star-Utils import Cog
 log = logging.getLogger("red.craycogs.HitOrMiss")
 
 

@@ -1,6 +1,6 @@
 import logging
 import re
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import aiohttp
 from starbot.core import Config, commands

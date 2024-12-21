@@ -5,7 +5,7 @@ from datetime import datetime
 from discord.ext import tasks
 from starbot.core.i18n import Translator, cog_i18n
 import logging
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 log = logging.getLogger("red.dav-cogs.nicknamer")
 

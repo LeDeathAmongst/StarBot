@@ -2,7 +2,7 @@ from starbot.core import checks, commands
 from starbot.core.bot import Red
 from starbot.core.utils.chat_formatting import bold
 import discord
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 
 class SlowMode(Cog):

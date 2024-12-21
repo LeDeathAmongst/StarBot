@@ -3,7 +3,7 @@ import uuid
 from starbot.core import commands
 from starbot.core.bot import Red
 import discord
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class Praise(Cog):
     """Praise Kink style cog for StarBot"""

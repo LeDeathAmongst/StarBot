@@ -19,7 +19,7 @@
   ],
   "requirements": [
     "AdvancedTagScriptEngine==3.2.2",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "type": "COG",
   "end_user_data_statement": "This cog does not store End User Data."

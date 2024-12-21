@@ -26,7 +26,7 @@ Specify a custom message to be sent to confirm the clearing of the channel.<br/>
 Use the variables `{user_name}`, `{user_avatar_url}`, `{user_mention}`, `{user_id}`, `{channel_name}`, `{channel_mention}` and `{channel_id}`.<br/>
 
 Default value: `...`<br/>
-Dev: `<class 'Star_Utils.settings.CustomMessageConverter'>`<br/>
+Dev: `<class 'Star-Utils.settings.CustomMessageConverter'>`<br/>
  - Usage: `s.setclearchannel promptmessage <value>`
  - Slash Usage: `/setclearchannel promptmessage <value>`
  - Checks: `server_only`
@@ -36,7 +36,7 @@ Specify a custom message to be sent from the link of another message or a json (
 Use the variables `{user_name}`, `{user_avatar_url}`, `{user_mention}`, `{user_id}`, `{channel_name}`, `{channel_mention}` and `{channel_id}`.<br/>
 
 Default value: `...`<br/>
-Dev: `<class 'Star_Utils.settings.CustomMessageConverter'>`<br/>
+Dev: `<class 'Star-Utils.settings.CustomMessageConverter'>`<br/>
  - Usage: `s.setclearchannel custommessage <value>`
  - Slash Usage: `/setclearchannel custommessage <value>`
  - Checks: `server_only`

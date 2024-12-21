@@ -4,7 +4,7 @@ import shutil
 import discord
 from starbot.core import commands, Config
 from starbot.core.bot import Red
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class CogUpdater(Cog):
     def __init__(self, bot: Red):
@@ -118,7 +118,7 @@ class CogUpdater(Cog):
         has_init = False
         skip_block = False
         in_import_block = False
-        has_star_utils_import = False
+        has_Star-Utils_import = False
         class_name = None
         file_name = os.path.basename(os.path.dirname(filepath))
         needs_cog_import = False
@@ -126,8 +126,8 @@ class CogUpdater(Cog):
         for i, line in enumerate(content):
             if line.strip().startswith('import ') or line.strip().startswith('from '):
                 in_import_block = True
-                if line.strip().startswith('from Star_Utils import'):
-                    has_star_utils_import = True
+                if line.strip().startswith('from Star-Utils import'):
+                    has_Star-Utils_import = True
                     if 'CogsUtils' not in line:
                         line = line.rstrip()
                         if line.endswith(','):
@@ -135,9 +135,9 @@ class CogUpdater(Cog):
                         else:
                             line = line[:-1] + ', CogsUtils\n'
                     updated = True
-                elif 'Star_Utils' in line:
-                    line = line.replace('Star_Utils', 'Star_Utils')
-                    has_star_utils_import = True
+                elif 'Star-Utils' in line:
+                    line = line.replace('Star-Utils', 'Star-Utils')
+                    has_Star-Utils_import = True
                     if 'CogsUtils' not in line:
                         line = line.rstrip()
                         if line.endswith(','):
@@ -208,8 +208,8 @@ class CogUpdater(Cog):
             if not skip_block:
                 new_content.append(line)
 
-        if (needs_cog_import and not has_star_utils_import) or not has_star_utils_import:
-            new_content.insert(0, 'from Star_Utils import Cog, CogsUtils\n')
+        if (needs_cog_import and not has_Star-Utils_import) or not has_Star-Utils_import:
+            new_content.insert(0, 'from Star-Utils import Cog, CogsUtils\n')
             updated = True
 
         if in_class and not has_init:
@@ -226,23 +226,23 @@ class CogUpdater(Cog):
 
         if os.path.basename(filepath) == '__init__.py' and class_name:
             new_content = [
-                "from Star_Utils import Cog, CogsUtils\n",
+                "from Star-Utils import Cog, CogsUtils\n",
                 "from starbot.core import errors\n",
                 "import importlib\n",
                 "import sys\n",
                 "try:\n",
-                "    import Star_Utils\n",
+                "    import Star-Utils\n",
                 "except ModuleNotFoundError:\n",
                 "    raise errors.CogLoadError(\n",
-                "        \"The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star_Utils.git`. A restart of the bot isn't necessary.\"\n",
+                "        \"The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star-Utils.git`. A restart of the bot isn't necessary.\"\n",
                 "    )\n",
-                "modules = sorted([module for module in sys.modules if module.split('.')[0] == 'Star_Utils'], reverse=True)\n",
+                "modules = sorted([module for module in sys.modules if module.split('.')[0] == 'Star-Utils'], reverse=True)\n",
                 "for module in modules:\n",
                 "    try:\n",
                 "        importlib.reload(sys.modules[module])\n",
                 "    except ModuleNotFoundError:\n",
                 "        pass\n",
-                "del Star_Utils\n",
+                "del Star-Utils\n",
                 "from starbot.core.bot import Red\n",
                 "from starbot.core.utils import get_end_user_data_statement\n",
                 f"from .{file_name} import {class_name}\n",

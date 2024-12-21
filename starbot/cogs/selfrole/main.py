@@ -7,7 +7,7 @@ import discord
 from starbot.core import commands, Config, app_commands
 from starbot.core.bot import Red
 from starbot.core.utils.chat_formatting import box
-from Star_Utils import Cog
+from Star-Utils import Cog
 log = logging.getLogger("red.unknown.selfrole")
 
 

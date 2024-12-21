@@ -4,7 +4,7 @@
   "name": "TellMe",
   "short": "Create custom commands with DMs and server messages.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Create custom commands that will DM members and post messages in servers.",
   "tags": [

@@ -14,7 +14,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
-from Star_Utils import Cog, CogsUtils  # isort:skip
+from Star-Utils import Cog, CogsUtils  # isort:skip
 from starbot.core import commands  # isort:skip
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.i18n import Translator, cog_i18n  # isort:skip

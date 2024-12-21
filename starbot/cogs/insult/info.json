@@ -6,7 +6,7 @@
   "install_msg": "Includes bundled nsfw insults! Also makes API calls to insult APIs",
   "requirements": [
     "aiohttp",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "ready": true
 }

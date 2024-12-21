@@ -9,7 +9,7 @@
   ],
   "requirements": [
     "speedtest-cli",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "end_user_data_statement": "This cog does not store any End User Data."
 }

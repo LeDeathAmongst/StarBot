@@ -18,7 +18,7 @@
   "requirements": [
     "pydantic[email]",
     "aiosmtplib",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Send emails through your Gmail account!",
   "tags": [

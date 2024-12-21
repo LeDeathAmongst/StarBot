@@ -4,7 +4,7 @@ from random import randint
 from starbot.core import commands
 from starbot.core.utils.chat_formatting import box
 from starbot.core.utils.predicates import MessagePredicate
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 
 log = logging.getLogger("red.aikaterna.luigipoker")

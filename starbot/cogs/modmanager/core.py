@@ -38,7 +38,7 @@ from starbot.core.utils import AsyncIter
 from .abc import CompositeMetaClass
 from .commands import Commands
 from .manager import PunishmentManager
-from Star_Utils import Cog
+from Star-Utils import Cog
 log: logging.Logger = logging.getLogger("red.seina.modmanager")
 
 

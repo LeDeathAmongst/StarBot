@@ -3,7 +3,7 @@ from starbot.core import commands, Config
 from starbot.core.bot import Red
 from datetime import datetime
 import traceback
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 class GlobalLogger(Cog):
     """A cog for global logging of commands and errors"""

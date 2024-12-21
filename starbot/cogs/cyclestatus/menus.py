@@ -9,7 +9,7 @@ from contextlib import suppress
 import discord
 import datetime
 from starbot.core import commands
-from Star_Utils import Cog
+from Star-Utils import Cog
 from .dashboard_integration import DashboardIntegration
 from starbot.core.bot import Red
 from starbot.core.utils.chat_formatting import box

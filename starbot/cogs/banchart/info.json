@@ -7,7 +7,7 @@
   "author": "Rosie",
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [],
   "min_bot_version": "3.3.10",

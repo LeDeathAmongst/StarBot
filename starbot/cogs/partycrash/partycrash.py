@@ -2,7 +2,7 @@ import discord
 from starbot.core import commands, checks
 from starbot.core.utils.chat_formatting import box, pagify
 import asyncio
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 
 class PartyCrash(Cog):

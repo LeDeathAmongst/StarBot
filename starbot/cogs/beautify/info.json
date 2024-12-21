@@ -12,7 +12,7 @@
   ],
   "name": "Beautify",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Beautify and minify JSON. Supports attachments, codeblocks and replies.",
   "tags": [

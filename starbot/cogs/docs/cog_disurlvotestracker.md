@@ -51,7 +51,7 @@ Extended Arg Info
 Custom vote reminder message. You can specify the ID or the link of an existing message, or provide an embed payload. Use the variables `{member_name}`, `{member_avatar_url}`, `{member_mention}`, `{member_id}`, `{server_name}`, `{server_icon_url}`, `{server_id}`, `{votes_channel_name}`, `{votes_channel_mention}`, `{votes_channel_id}`, `{voters_role_name}`, `{voters_role_mention}`, `{voters_role_id}`, `{number_member_votes}`, `{number_member_monthly_votes}`, `{s_1}` (`number_member_votes` plural) and `{s_2}` (`number_member_monthly_votes` plural).<br/>
 
 Default value: `None`<br/>
-Dev: `<class 'Star_Utils.settings.CustomMessageConverter'>`<br/>
+Dev: `<class 'Star-Utils.settings.CustomMessageConverter'>`<br/>
  - Usage: `s.setdisurlvotestracker customvoteremindermessage <value>`
  - Slash Usage: `/setdisurlvotestracker customvoteremindermessage <value>`
  - Checks: `server_only`
@@ -131,7 +131,7 @@ Extended Arg Info
 Custom vote message. You can specify the ID or the link of an existing message, or provide an embed payload. Use the variables `{member_name}`, `{member_avatar_url}`, `{member_mention}`, `{member_id}`, `{server_name}`, `{server_icon_url}`, `{server_id}`, `{votes_channel_name}`, `{votes_channel_mention}`, `{votes_channel_id}`, `{voters_role_name}`, `{voters_role_mention}`, `{voters_role_id}`, `{number_member_votes}`, `{number_member_monthly_votes}`, `{s_1}` (`number_member_votes` plural) and `{s_2}` (`number_member_monthly_votes` plural).<br/>
 
 Default value: `None`<br/>
-Dev: `<class 'Star_Utils.settings.CustomMessageConverter'>`<br/>
+Dev: `<class 'Star-Utils.settings.CustomMessageConverter'>`<br/>
  - Usage: `s.setdisurlvotestracker customvotemessage <value>`
  - Slash Usage: `/setdisurlvotestracker customvotemessage <value>`
  - Checks: `server_only`

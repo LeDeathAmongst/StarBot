@@ -4,7 +4,7 @@
   "install_msg": "Thank you for installing the LockUnlock cog!\nDo `[p]help LockUnlock` to get the list of commands and their description. If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>)\nIf you like my work, [donate me!](<https://ko-fi.com/starcogs>)\n\nThis cog provides a powerful lock and unlock for ALL channels",
   "requirements": [
     "Starry_Utils",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "min_bot_version": "3.5.9",
   "end_user_data_statement": "",

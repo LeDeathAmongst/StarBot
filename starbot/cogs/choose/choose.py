@@ -1,7 +1,7 @@
 import logging
 import random
 from re import split
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from starbot.core import commands

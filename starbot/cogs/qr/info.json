@@ -9,7 +9,7 @@
   "required_cogs": {},
   "requirements": [
     "qrcode",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "[Beta] Generate QR codes.",
   "tags": [

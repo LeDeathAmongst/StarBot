@@ -8,8 +8,8 @@
   "required_cogs": {},
   "requirements": [
     "akinator.py",
-    "git+https://github.com/LeDeathAmongst/Star_Utils",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "git+https://github.com/LeDeathAmongst/Star-Utils",
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "fun"

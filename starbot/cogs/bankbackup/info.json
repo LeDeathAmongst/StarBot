@@ -16,7 +16,7 @@
   ],
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Backup and restore bank balances for all members in a server",
   "tags": [

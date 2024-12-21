@@ -18,7 +18,7 @@
   "requirements": [
     "pydantic",
     "tenacity",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Discord Server Backup/Restore",
   "tags": [

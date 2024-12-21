@@ -6,7 +6,7 @@ from starbot.core import Config, commands
 from starbot.core.utils.chat_formatting import box
 from starbot.core.utils.views import ConfirmView
 
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from .view import RestartButton, URLModal
 

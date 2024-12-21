@@ -5,7 +5,7 @@
   "hidden": false,
   "install_msg": "Thank you for installing RPSLS. Get started with `[p]load rpsls`, then `[p]rpsls`",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Play Rock Papers Scissor Lizard Spock in Discord!",
   "end_user_data_statement": "This cog does not store any End User Data",

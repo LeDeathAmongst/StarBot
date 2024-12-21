@@ -27,7 +27,7 @@ from typing import Any, Final, List, Union
 import discord
 from starbot.core import commands
 from starbot.core.bot import Red
-from Star_Utils import Cog
+from Star-Utils import Cog
 from starbot.core.utils.chat_formatting import humanize_list
 
 from .enums import Activity

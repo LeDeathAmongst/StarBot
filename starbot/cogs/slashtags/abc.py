@@ -24,7 +24,7 @@ SOFTWARE.
 """
 
 from abc import ABC
-from Star_Utils import Cog
+from Star-Utils import Cog
 from starbot.core import Config, commands
 from starbot.core.bot import Red
 

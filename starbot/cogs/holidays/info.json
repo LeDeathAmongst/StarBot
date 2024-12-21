@@ -6,7 +6,7 @@
   "requirements": [
     "aiohttp",
     "asyncio",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "permissions": [
     "embed_links"

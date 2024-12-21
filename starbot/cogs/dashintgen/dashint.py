@@ -13,8 +13,8 @@ from starbot.core.utils.chat_formatting import humanize_list, box, inline
 from starbot.core.utils.menus import start_adding_reactions
 from starbot.core.utils.predicates import ReactionPredicate, MessagePredicate
 
-from Star_Utils import Cog, CogsUtils
-from Star_Utils.menus import Menu, Reactions
+from Star-Utils import Cog, CogsUtils
+from Star-Utils.menus import Menu, Reactions
 
 _ = Translator("DashIntGen", __file__)
 
@@ -124,7 +124,7 @@ class DashIntGen(Cog):
         Use the following template structure and expand upon it:
 
         ```python
-        from Star_Utils import CogsUtils  # isort:skip
+        from Star-Utils import CogsUtils  # isort:skip
         from starbot.core import commands  # isort:skip
         from starbot.core.bot import Red  # isort:skip
         from starbot.core.i18n import Translator  # isort:skip
@@ -264,8 +264,8 @@ class DashIntGen(Cog):
     def modify_main_file(self, file_path, cogname):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-        if "from Star_Utils import Cog, CogsUtils" not in content:
-            import_statement = "from Star_Utils import Cog, CogsUtils\n"
+        if "from Star-Utils import Cog, CogsUtils" not in content:
+            import_statement = "from Star-Utils import Cog, CogsUtils\n"
             content = import_statement + content
         content = re.sub(r"from starbot\.core import commands.*?\n", "", content)
         content = re.sub(r"from starbot\.core\.commands import Cog.*?\n", "", content)
@@ -320,8 +320,8 @@ class DashIntGen(Cog):
         info_content['author'] = ["Star"]
         if 'requirements' not in info_content:
             info_content['requirements'] = []
-        if "git+https://github.com/LeDeathAmongst/Star_Utils.git" not in info_content['requirements']:
-            info_content['requirements'].append("git+https://github.com/LeDeathAmongst/Star_Utils.git")
+        if "git+https://github.com/LeDeathAmongst/Star-Utils.git" not in info_content['requirements']:
+            info_content['requirements'].append("git+https://github.com/LeDeathAmongst/Star-Utils.git")
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(info_content, f, indent=4)
 
@@ -363,7 +363,7 @@ class DashIntGen(Cog):
                 self.remove_dashboard_integration(cog_path / main_file, cogname)
             info_file_path = cog_path / 'info.json'
             if info_file_path.exists():
-                self.remove_star_utils_requirement(info_file_path)
+                self.remove_Star-Utils_requirement(info_file_path)
             await ctx.send(f"Dashboard integration for `{cogname}` has been removed. Reloading cog...")
             await self._reload(ctx, cogname)
         else:
@@ -382,11 +382,11 @@ class DashIntGen(Cog):
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
 
-    def remove_star_utils_requirement(self, file_path):
+    def remove_Star-Utils_requirement(self, file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             info_content = json.load(f)
         if 'requirements' in info_content:
-            info_content['requirements'] = [req for req in info_content['requirements'] if "Star_Utils" not in req]
+            info_content['requirements'] = [req for req in info_content['requirements'] if "Star-Utils" not in req]
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(info_content, f, indent=4)
 

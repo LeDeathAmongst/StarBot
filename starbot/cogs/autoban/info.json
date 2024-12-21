@@ -12,7 +12,7 @@
   ],
   "install_msg": "Thank you for installing the auto-ban cog. Add items for each server with `[p]autoban term` and remove with `[p]autoban remove term`",
   "requirements": [
-    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "git+https://github.com/LeDeathAmongst/Star-Utils.git",
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ]
 }

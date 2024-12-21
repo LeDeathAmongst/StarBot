@@ -8,7 +8,7 @@
   "name": "Cocktail",
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Get information about different cocktails and their ingredients.",
   "tags": [

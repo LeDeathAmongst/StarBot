@@ -6,7 +6,7 @@
   "description": "Get words related to the specified arguments",
   "tags": [],
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "hidden": false
 }

@@ -18,7 +18,7 @@
   "required_cogs": {},
   "requirements": [
     "tabulate",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "type": "COG",
   "end_user_data_statement": "This cog stores users data in form of << member : role >> Discord IDs pairings.\nThis cog supports data removal requests."

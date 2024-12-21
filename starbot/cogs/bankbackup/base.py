@@ -6,7 +6,7 @@ from starbot.core import bank, commands
 from starbot.core.bot import Red
 from starbot.core.errors import BalanceTooHigh
 from starbot.core.utils.chat_formatting import box, text_to_file
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class BankBackup(Cog):
     """

@@ -9,7 +9,7 @@
     "requests",
     "discord-py-interactions",
     "stripe",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "stripe",

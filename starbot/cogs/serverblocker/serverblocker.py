@@ -1,6 +1,6 @@
 import discord
 from starbot.core import commands, Config
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class ServerBlocker(Cog):
     def __init__(self, bot):

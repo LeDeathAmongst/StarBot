@@ -21,7 +21,7 @@
   "requirements": [
     "python-dateutil",
     "pytz",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Admin approved announcments/events",
   "tags": [

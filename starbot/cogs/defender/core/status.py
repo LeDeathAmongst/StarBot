@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 """
 Defender - Protects your community with automod features and
            empowers the staff and users you trust with

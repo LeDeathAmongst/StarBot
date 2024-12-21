@@ -7,7 +7,7 @@
   "required_cogs": {},
   "requirements": [
     "aiosqlite",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Simulates messages from your friend group.",
   "end_user_data_statement": "This cog will locally store and analyze past and future messages sent by participating users, in order to generate new messages in an owner-configured output channel.\nYou may opt out completely and delete your simulator data with the [p]dontsimulateme command.",

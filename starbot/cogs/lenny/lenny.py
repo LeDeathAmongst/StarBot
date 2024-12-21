@@ -2,7 +2,7 @@ import asyncio
 import logging
 import random
 from typing import Dict, List
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import aiohttp
 import discord

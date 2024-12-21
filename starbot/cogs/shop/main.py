@@ -1,5 +1,5 @@
 from typing import Dict, Optional, Union, overload
-from Star_Utils import Cog
+from Star-Utils import Cog
 import discord
 from starbot.core import Config, bank, commands
 from starbot.core.bot import Red

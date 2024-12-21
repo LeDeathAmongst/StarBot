@@ -6,6 +6,6 @@
   "install_msg": "Requires a new role called 'snek color' to be created that's above the bot's normal color",
   "ready": true,
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ]
 }

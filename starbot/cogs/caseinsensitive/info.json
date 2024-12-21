@@ -12,7 +12,7 @@
   ],
   "name": "CaseInsensitive",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Make all commands case insensitive.",
   "tags": [

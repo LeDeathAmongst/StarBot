@@ -4,7 +4,7 @@
   "short": "Store avatars and their decos.",
   "requirements": [
     "aiofiles",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "type": "COG",
   "author": "Rosie"

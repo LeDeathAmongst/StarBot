@@ -12,7 +12,7 @@
   ],
   "name": "System",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Create an anonymous role play in your sever.",
   "tags": [

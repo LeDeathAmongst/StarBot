@@ -3,7 +3,7 @@ from operator import attrgetter
 import discord
 from starbot.core import Config, commands
 from starbot.core.bot import Red
-from Star_Utils import Cog
+from Star-Utils import Cog
 from .views import GuildSelectView
 
 

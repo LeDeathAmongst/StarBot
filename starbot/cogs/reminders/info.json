@@ -15,7 +15,7 @@
     "say"
   ],
   "requirements": [
-    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
+    "git+https://github.com/LeDeathAmongst/Star-Utils.git",
     "pytz",
     "python-dateutil",
     "dateparser",
@@ -24,7 +24,7 @@
     "apscheduler",
     "cron-descriptor",
     "recurrent",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "min_bot_version": "3.5.0",
   "end_user_data_statement": "This cog does store users reminders, who are deleted when triggered. The content of the 5 next user's reminders can be communicated to OpenAI if the user requests information on their own existing reminders using the Vert's Assistant cog."

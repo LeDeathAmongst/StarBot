@@ -31,7 +31,7 @@ import discord
 from starbot.core import commands
 from starbot.core.bot import Red
 from starbot.core.utils.views import SetApiView
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class DiffusionError(discord.errors.DiscordException):
     pass

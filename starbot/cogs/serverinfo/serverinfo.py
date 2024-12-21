@@ -13,7 +13,7 @@ from starbot.core.bot import Red
 from starbot.core.i18n import Translator, cog_i18n
 from starbot.core.utils.menus import menu
 from starbot.core.utils.chat_formatting import (
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
     bold,
     escape,
     italics,

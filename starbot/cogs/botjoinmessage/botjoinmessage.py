@@ -2,7 +2,7 @@ import discord
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from typing import Optional
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class BotJoinMessage(Cog):
     """Cog to send a configurable message to the server owner when the bot joins a server."""

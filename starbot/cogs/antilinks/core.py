@@ -25,7 +25,7 @@ SOFTWARE.
 
 import re
 from typing import Dict, Final, List, Literal, Match, Optional, Pattern, Union
-from Star_Utils import Cog
+from Star-Utils import Cog
 import discord
 from red_commons.logging import RedTraceLogger, getLogger
 from starbot.core import Config, commands

@@ -1,7 +1,7 @@
 import discord
 from starbot.core import commands, Config
 from starbot.core.bot import Red
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class LinkStorage(Cog):
     """A cog to store and retrieve links by name."""

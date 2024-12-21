@@ -18,7 +18,7 @@
   ],
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Block or Allow invite links based on guild ID. Accepts invite links to extract guild ID's.",
   "tags": [],

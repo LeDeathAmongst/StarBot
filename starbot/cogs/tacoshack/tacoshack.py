@@ -6,7 +6,7 @@ import math
 import random
 from typing import Literal, List, Optional
 import asyncio
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 # import aioschedule as schedule
 import time
 import datetime

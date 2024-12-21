@@ -8,7 +8,7 @@
   "required_cogs": {},
   "requirements": [
     "emoji",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "max_bot_version": "3.4.14",
   "tags": [

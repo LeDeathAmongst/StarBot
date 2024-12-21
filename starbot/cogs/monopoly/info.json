@@ -5,7 +5,7 @@
   "short": "Play a game of monopoly.",
   "requirements": [
     "pillow",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Play a game of monopoly with members of your server, or against AI opponents. Generates an image to represent the board state. Many house rules can be configured to match any ruleset. Run [p]monopoly to play!",
   "tags": [

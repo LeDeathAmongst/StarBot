@@ -22,7 +22,7 @@
     "Pillow",
     "aiocache",
     "tabulate",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Image guessing game!",
   "tags": [

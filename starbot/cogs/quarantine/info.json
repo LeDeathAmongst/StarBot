@@ -4,7 +4,7 @@
   "name": "quarantine",
   "short": "Quarantine a user",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Quarantine a user easily. Set a muterole and mod log channel, and any users specified will have their roles removed and replaced with the muterole.",
   "permissions": [],

@@ -1,6 +1,6 @@
 from typing import Tuple
 from starbot.core import Config, commands, checks
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class BannedCount(Cog):
     def __init__(self, bot):

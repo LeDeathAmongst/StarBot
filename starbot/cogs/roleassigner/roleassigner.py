@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 """Role Assigner cog.
 
 Randomly assigns roles to users.

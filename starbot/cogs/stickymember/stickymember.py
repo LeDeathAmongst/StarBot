@@ -1,6 +1,6 @@
 from starbot.core import commands, Config
 from discord import Member, Forbidden
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from starbot.core.i18n import cog_i18n, Translator
 from logging import getLogger

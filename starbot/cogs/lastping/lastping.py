@@ -3,7 +3,7 @@ from starbot.core import commands
 from starbot.core import Config
 from starbot.core import checks
 import time
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 
 class LastPing(Cog):

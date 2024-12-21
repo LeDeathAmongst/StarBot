@@ -9,7 +9,7 @@ import time
 import random
 import re
 from collections import OrderedDict
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import logging
 logger = logging.getLogger(__name__)

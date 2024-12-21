@@ -7,7 +7,7 @@
   "install_msg": "Thanks for installing RoleAssigner. Please run [p]roleassigner or [p]ra to see all the relevant commands.",
   "min_bot_version": "3.5.0",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "roles"

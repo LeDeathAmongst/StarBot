@@ -12,7 +12,7 @@
   ],
   "requirements": [
     "dateparser",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "min_bot_version": "3.5.0",
   "hidden": false

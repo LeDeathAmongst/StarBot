@@ -4,7 +4,7 @@
   "name": "Clara",
   "short": "See info about the servers your bot is in.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "See basic server info. Show bot info about the Discord servers your bot is in, including approximate total user count/member count and server count. Guild info, such as guild ID and guild names are also shown.",
   "permissions": [],

@@ -10,7 +10,7 @@ import tarfile
 import time
 from typing import ClassVar, Iterable, List, Optional, Pattern, Tuple
 
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 import discord
 from starbot.core import checks, commands, Config

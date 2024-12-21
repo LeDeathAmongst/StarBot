@@ -5,8 +5,8 @@
   "requirements": [
     "Pillow",
     "aiohttp",
-    "git+https://github.com/LeDeathAmongst/Star_Utils",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "git+https://github.com/LeDeathAmongst/Star-Utils",
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "min_bot_version": "3.5.9",
   "end_user_data_statement": "This cog stores user preferences for Wordle games, including word length, number of tries, colorblind mode, and hard mode settings. It also stores game statistics and leaderboard data.",

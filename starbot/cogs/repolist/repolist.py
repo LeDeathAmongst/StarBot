@@ -3,7 +3,7 @@ from starbot.core import checks, commands
 from starbot.core.bot import Red
 from starbot.core.i18n import Translator
 from starbot.core.utils.chat_formatting import box, pagify
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class RepoList(Cog):
 	"""List all installed repos and their available cogs in one command."""

@@ -14,7 +14,7 @@
   "requirements": [
     "stringcase",
     "unidecode",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "required_cogs": {},
   "short": "Decancer users names removing special and accented chars. `[p]decancerset` to get started if you're already using starbot core modlog",

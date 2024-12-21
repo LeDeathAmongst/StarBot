@@ -8,8 +8,8 @@
     "add_reactions"
   ],
   "requirements": [
-    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "git+https://github.com/LeDeathAmongst/Star-Utils.git",
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "end_user_data_statement": "",
   "tags": [

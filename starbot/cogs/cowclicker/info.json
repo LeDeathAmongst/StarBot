@@ -15,7 +15,7 @@
   "required_cogs": {},
   "requirements": [
     "piccolo>=1.0.0",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Click the cow!",
   "tags": [

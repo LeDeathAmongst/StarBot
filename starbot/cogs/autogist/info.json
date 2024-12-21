@@ -10,7 +10,7 @@
     "cachetools~=5.0",
     "charset_normalizer~=3.1",
     "gidgethub~=5.0",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "autogist",

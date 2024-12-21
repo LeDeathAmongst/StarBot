@@ -3,7 +3,7 @@ A replica of +f seen in another bot, except smarter..
 """
 
 from starbot.core import commands
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 from .commandHandlers import CommandHandlers
 
 

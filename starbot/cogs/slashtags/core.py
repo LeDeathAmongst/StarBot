@@ -28,7 +28,7 @@ import logging
 from collections import defaultdict
 from functools import partial
 from typing import Coroutine, Dict, Optional, TYPE_CHECKING
-from Star_Utils import Cog
+from Star-Utils import Cog
 import aiohttp
 import discord
 import TagScriptEngine as tse

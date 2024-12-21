@@ -5,7 +5,7 @@ import TagScriptEngine as tse
 from starbot.core import Config, commands
 from starbot.core.bot import Red
 from starbot.core.utils.chat_formatting import box, humanize_list
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 log = logging.getLogger("red.craycogs.joinping")
 
 guild_defaults = {

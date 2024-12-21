@@ -1,6 +1,6 @@
 from starbot.core import commands
 import asyncio
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class MultiCommands(Cog):
     """Cog to execute multiple commands separated by &&"""

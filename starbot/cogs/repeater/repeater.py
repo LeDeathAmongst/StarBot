@@ -1,6 +1,6 @@
 from starbot.core import commands
 from collections import deque, defaultdict
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class Repeater(Cog):
     def __init__(self, bot):

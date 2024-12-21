@@ -7,7 +7,7 @@
   "required_cogs": {},
   "requirements": [
     "openai",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Generate anime images with NovelAI v3.",
   "end_user_data_statement": "This cog does not store user data.",

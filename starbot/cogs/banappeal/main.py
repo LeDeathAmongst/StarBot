@@ -11,7 +11,7 @@ from .views import BannedGuildsSelect, AcceptRejectButton, ViewDisableOnTimeout
 from discord.utils import maybe_coroutine
 from starbot.core.utils import chat_formatting as cf
 import logging
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 log = logging.getLogger("star.banappeal")
 

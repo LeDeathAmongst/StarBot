@@ -12,7 +12,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle  # type: ig
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle  # type: ignore
 from starbot.core import commands, Config  # type: ignore
 from discord.ui import Button, View  # type: ignore
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class ReviewButton(discord.ui.Button):
     def __init__(self, label, review_id, style=discord.ButtonStyle.primary):

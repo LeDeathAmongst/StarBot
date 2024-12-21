@@ -2,7 +2,7 @@ import json
 import os
 import discord
 import uuid
-from Star_Utils import Cog
+from Star-Utils import Cog
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from discord.ext import commands as ext_commands
@@ -370,4 +370,4 @@ class FeatureRequestButtonView(discord.ui.View):
 
 def setup(bot):
     bot.add_cog(FeatureRequest(bot))
-    bot.add_cog(SlashRequest(bot))y
+    bot.add_cog(SlashRequest(bot))

@@ -15,7 +15,7 @@
   "required_cogs": {},
   "requirements": [
     "pydantic",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Anti-Nuke Cog",
   "tags": [

@@ -4,7 +4,7 @@ import discord
 from datetime import datetime
 from starbot.core import commands, Config
 from typing import Optional
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 log = logging.getLogger("red.crab-cogs.imagelog")
 

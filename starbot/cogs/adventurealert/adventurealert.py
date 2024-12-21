@@ -1,6 +1,6 @@
 from abc import ABC
 from typing import Literal, Optional
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from starbot.core import Config, checks, commands

@@ -3,7 +3,7 @@ from starbot.core import commands, Config
 from starbot.core.bot import Red
 import asyncio
 from datetime import datetime
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class RequestGB(Cog):
     """Cog for handling global ban requests."""

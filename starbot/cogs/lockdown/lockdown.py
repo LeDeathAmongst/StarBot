@@ -3,7 +3,7 @@ import discord
 import asyncio
 from starbot.core import Config, checks, commands
 from starbot.core.utils.chat_formatting import box
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from itertools import zip_longest
 

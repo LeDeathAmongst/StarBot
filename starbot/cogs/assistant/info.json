@@ -31,7 +31,7 @@
     "tenacity",
     "tiktoken",
     "ujson",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Advanced AI assistant (or chat) cog for your server with OpenAI's ChatGPT language models",
   "tags": [

@@ -2,7 +2,7 @@ from starbot.core import commands, app_commands, Config, checks
 from starbot.core.bot import Red
 import discord
 from discord.utils import utcnow
-from Star_Utils import Cog, CogsUtils, Settings
+from Star-Utils import Cog, CogsUtils, Settings
 import typing
 
 @app_commands.context_menu(name="Add Owner")

@@ -6,7 +6,7 @@
 import datetime
 from enum import Enum
 from typing import Union
-from Star_Utils import CogsUtils
+from Star-Utils import CogsUtils
 __all__ = ["TimestampFormats", "timestamp_format"]
 
 

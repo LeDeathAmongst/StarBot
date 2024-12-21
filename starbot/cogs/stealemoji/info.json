@@ -5,7 +5,7 @@
   "hidden": false,
   "install_msg": "Thank you for installing StealEmoji",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Steals custom emojis",
   "end_user_data_statement": "This cog gathers custom emojis from all sources, but stores no End User Data",

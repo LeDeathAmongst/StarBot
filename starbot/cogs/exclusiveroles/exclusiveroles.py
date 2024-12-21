@@ -4,7 +4,7 @@ from starbot.core import commands, Config
 from starbot.core.i18n import Translator, cog_i18n
 from starbot.core.utils.chat_formatting import pagify
 from starbot.core.utils.menus import menu, DEFAULT_CONTROLS
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 _ = Translator("ExclusiveRoles", __file__)
 

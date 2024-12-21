@@ -10,7 +10,7 @@
   },
   "requirements": [
     "emoji",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Give custom roles to server boosters",
   "tags": [

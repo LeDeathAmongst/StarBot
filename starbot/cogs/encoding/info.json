@@ -16,7 +16,7 @@
   "permissions": [],
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Encode messages into various types of encoding.",
   "tags": [

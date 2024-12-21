@@ -17,7 +17,7 @@
     "ujson",
     "msgpack",
     "pandas",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "EZ Cog Doc Generation",
   "tags": [

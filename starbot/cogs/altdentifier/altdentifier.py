@@ -1,4 +1,4 @@
-from Star_Utils import Cog
+from Star-Utils import Cog
 """
 MIT License
 

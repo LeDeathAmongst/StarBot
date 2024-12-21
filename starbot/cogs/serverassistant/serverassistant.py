@@ -1,6 +1,6 @@
 from starbot.core import commands, Config
 import discord
-from Star_Utils import Cog, CogsUtils, Dropdown
+from Star-Utils import Cog, CogsUtils, Dropdown
 from .dashboard_integration import DashboardIntegration
 import asyncio
 

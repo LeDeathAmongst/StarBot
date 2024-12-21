@@ -6,7 +6,7 @@
   "requirements": [
     "pygithub",
     "requests",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "git",

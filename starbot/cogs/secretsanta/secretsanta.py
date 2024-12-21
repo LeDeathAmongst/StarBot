@@ -5,7 +5,7 @@ import io
 import discord
 from starbot.core import commands, bot, checks, data_manager, Config
 from starbot.core.utils import embed
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 class SecretSanta(Cog):
     def __init__(self, bot_instance: bot):

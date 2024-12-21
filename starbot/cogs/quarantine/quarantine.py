@@ -7,7 +7,7 @@ import re
 import time
 from starbot.core.utils.predicates import ReactionPredicate
 from starbot.core.utils.menus import start_adding_reactions
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class Quarantine(Cog):
     """Quarantine a user"""

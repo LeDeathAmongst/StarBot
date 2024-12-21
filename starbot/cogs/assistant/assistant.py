@@ -28,7 +28,7 @@ from .common.models import DB, Embedding, EmbeddingEntryExists, NoAPIKey
 from .common.utils import json_schema_invalid
 from .listener import AssistantListener
 import logging
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 # redgettext -D views.py commands/admin.py commands/base.py common/api.py common/chat.py common/utils.py --command-docstring
 

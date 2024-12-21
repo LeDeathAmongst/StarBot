@@ -10,8 +10,8 @@
   "required_cogs": {},
   "requirements": [
     "tabulate",
-    "git+https://github.com/LeDeathAmongst/Star_Utils",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "git+https://github.com/LeDeathAmongst/Star-Utils",
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Perform Actions like kiss, cuddle etc.",
   "tags": [

@@ -20,7 +20,7 @@ from .commands.utils import (add_to_blacklist, add_to_whitelist, clear_blacklist
                              in_blacklist, in_whitelist, remove_from_blacklist,
                              remove_from_whitelist, startup)
 from .patch import destroy, init
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 log = logging.getLogger("red.jojocogs.advancedblacklist")
 

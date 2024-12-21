@@ -1,7 +1,7 @@
 import discord
 import logging
 import re
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from contextlib import suppress
 from starbot.core import Config, checks, commands

@@ -1,5 +1,5 @@
 from typing import Optional
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from discord import AppCommandType

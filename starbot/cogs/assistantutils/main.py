@@ -2,7 +2,7 @@ import logging
 
 from starbot.core import commands
 from starbot.core.bot import Red
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 from .abc import CompositeMetaClass
 from .common import schemas
 from .common.functions import Functions

@@ -9,7 +9,7 @@
   "required_cogs": {},
   "requirements": [
     "pytz",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "time",

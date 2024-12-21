@@ -1,5 +1,5 @@
 from typing import Dict, List, TypedDict, Union
-from Star_Utils import Cog
+from Star-Utils import Cog
 import discord
 from starbot.core.bot import Red
 

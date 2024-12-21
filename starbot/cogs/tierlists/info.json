@@ -17,7 +17,7 @@
     "numpy",
     "git+https://github.com/astanin/python-tabulate.git@master",
     "fuzzywuzzy",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "",
   "tags": [

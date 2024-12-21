@@ -3,7 +3,7 @@ from abc import ABC
 from multiprocessing.pool import Pool
 from pathlib import Path
 from typing import Dict, List, Optional, Union
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from discord.ext import tasks

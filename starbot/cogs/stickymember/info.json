@@ -15,6 +15,6 @@
   "end_user_data_statement": "This cog stores roles that have been assigned to a member so that these roles can be reassigned on rejoin. This data is only stored on members that have been added via command. You may delete this information by making a data deletion request.",
   "min_bot_version": "3.5.0",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ]
 }

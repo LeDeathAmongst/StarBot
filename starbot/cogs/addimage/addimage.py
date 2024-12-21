@@ -4,7 +4,7 @@ import random
 import string
 from pathlib import Path
 from typing import Literal, Optional, cast
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from red_commons.logging import getLogger

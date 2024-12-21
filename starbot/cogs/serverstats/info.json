@@ -23,7 +23,7 @@
     "pytz",
     "python-dateutil",
     "rapidfuzz",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "A plethora of potentially useful commands for any bot owner.",
   "tags": [

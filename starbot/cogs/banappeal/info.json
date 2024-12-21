@@ -9,7 +9,7 @@
     "Mod": "https://github.com/cog-creators/red-discordbot"
   },
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "A user installable slash command to be able to appeal bans on servers that have appeals enabled",
   "tags": [

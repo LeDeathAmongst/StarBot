@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 """NetSpeed cog for StarBot by PhasecoreX."""
 
 import asyncio

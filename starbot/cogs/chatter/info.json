@@ -7,10 +7,10 @@
   "requirements": [
     "git+https://github.com/lifeismana/ChatterBot@fox#egg=ChatterBot>=1.1.0.dev6",
     "kaggle",
-    "git+https://github.com/LeDeathAmongst/Star_Utils",
+    "git+https://github.com/LeDeathAmongst/Star-Utils",
     "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.1/en_core_web_sm-3.4.1.tar.gz#egg=en_core_web_sm",
     "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.4.1/en_core_web_md-3.4.1.tar.gz#egg=en_core_web_md",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Local Chatbot run on machine learning",
   "end_user_data_statement": "This cog only stores anonymous conversations data; no End User Data is stored.",

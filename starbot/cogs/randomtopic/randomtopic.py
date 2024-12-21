@@ -4,7 +4,7 @@ import asyncio
 import random
 from starbot.core import commands, Config, checks
 from starbot.core.bot import Red
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class RandomTopic(Cog):
     """A cog to send random topics at configurable intervals."""

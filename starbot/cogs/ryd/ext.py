@@ -9,7 +9,7 @@ from typing import Optional, Literal
 import discord
 from humanize import intcomma
 from starbot.core.i18n import Translator, cog_i18n
-from Star_Utils import Cog
+from Star-Utils import Cog
 _ = Translator("RYDCog", __file__)
 
 votes_tuple = namedtuple("Votes", ['video_id', 'likes', 'dislikes'])

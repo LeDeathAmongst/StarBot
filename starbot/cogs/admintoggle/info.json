@@ -4,7 +4,7 @@
   "short": "Toggle on/off admin permissions!",
   "description": "Do you need to hide channels from admins for game purposes? This cog allows an admin to toggle off his admin permissions and toggle it back on.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "min_bot_version": "3.5.0",
   "tags": [

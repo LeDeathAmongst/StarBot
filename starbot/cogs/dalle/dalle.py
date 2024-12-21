@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from starbot.core import commands, app_commands, Config
 from starbot.core.bot import Red
 from typing import Optional
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from openai import AsyncOpenAI, APIError, APIStatusError
 from dalle.imageview import ImageView

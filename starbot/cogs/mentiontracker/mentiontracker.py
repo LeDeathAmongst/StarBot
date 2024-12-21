@@ -3,7 +3,7 @@ from starbot.core import commands, Config
 from datetime import datetime
 import sqlite3
 import asyncio
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class MentionTracker(Cog):
     """Tracks and displays mentions a user has received."""

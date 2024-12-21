@@ -16,7 +16,7 @@
   "requirements": [
     "git+https://github.com/cswimr/pydactyl",
     "websockets",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "pterodactyl",

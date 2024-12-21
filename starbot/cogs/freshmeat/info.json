@@ -11,6 +11,6 @@
   "install_msg": "Thanks for installing freshmeat, Don't forget that ``[P]help Freshmeat`` is your friend!",
   "min_bot_version": "3.5.1",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ]
 }

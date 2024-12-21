@@ -4,7 +4,7 @@ import datetime
 import asyncio
 import random
 import string
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class Sesh(Cog):
     """Coordinate smoking sessions with your friends."""

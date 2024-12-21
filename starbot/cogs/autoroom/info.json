@@ -6,7 +6,7 @@
   "install_msg": "Thanks for installing AutoRoom! For a quick rundown on how to get started with this cog, check out [the readme](https://github.com/PhasecoreX/PCXCogs/tree/master/autoroom/README.md)",
   "requirements": [
     "pyparsing",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "audio",

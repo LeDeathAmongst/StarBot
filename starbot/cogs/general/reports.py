@@ -4,7 +4,7 @@ import logging
 from copy import copy
 from datetime import timedelta
 from typing import List, Literal, Union
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from starbot.core import Config, commands

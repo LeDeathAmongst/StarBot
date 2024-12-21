@@ -19,7 +19,7 @@
   "required_cogs": {},
   "requirements": [
     "Py-Lav[all]>=1.15.14,<1.16",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Commands to configure Pylav's managed node.",
   "tags": [

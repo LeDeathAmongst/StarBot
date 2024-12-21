@@ -5,7 +5,7 @@
   "short": "Automatically send replies to Spotify links with the embed preview, for mobile users",
   "requirements": [
     "requests",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Automatically send a reply to Spotify links with a link to the embed preview. Convenient for mobile users who can finally listen to music samples from Discord, without needing an account.",
   "permissions": [],

@@ -15,7 +15,7 @@ from .common.formatting import humanize_size
 from .common.models import DB
 from .common.serializers import GuildBackup
 from .common.views import BackupMenu
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 log = logging.getLogger("red.vrt.cartographer")
 _ = Translator("Cartographer", __file__)

@@ -19,7 +19,7 @@
     "tekore",
     "tabulate",
     "httpx>=0.15,<0.25",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Control Spotify through Discord!",
   "tags": [

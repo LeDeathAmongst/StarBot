@@ -2,7 +2,7 @@ import discord
 from starbot.core import commands, checks
 from starbot.core.bot import Red
 from starbot.core.config import Config
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from discord.ui import View, Select
 

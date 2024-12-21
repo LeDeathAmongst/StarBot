@@ -3,7 +3,7 @@ import discord
 from discord import utils
 from starbot.core import commands, data_manager, Config, checks, Config
 from starbot.core.utils import embed
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from typing import List, Union, Optional
 

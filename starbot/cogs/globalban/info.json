@@ -4,7 +4,7 @@
   "name": "GlobalBan",
   "short": "Execute a ban across all of the bot's servers.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Execute a ban across all of the bot's servers.",
   "tags": [

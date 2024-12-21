@@ -4,7 +4,7 @@
   "name": "Search",
   "requirements": [
     "aiohttp",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Search the internet!",
   "ready": true

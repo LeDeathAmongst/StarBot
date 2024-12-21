@@ -11,7 +11,7 @@
   "permissions": [],
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Take actions on users who ping",
   "tags": [

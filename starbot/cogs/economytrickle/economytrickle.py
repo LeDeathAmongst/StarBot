@@ -1,7 +1,7 @@
 import logging
 import math
 from typing import Union
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from discord.ext import tasks

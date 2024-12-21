@@ -19,7 +19,7 @@
     "ujson",
     "msgpack",
     "aiocache",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Host and manage events in your server",
   "tags": [

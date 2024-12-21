@@ -3,7 +3,7 @@ from ..abc import MixinMeta
 import discord
 from starbot.core import commands
 from starbot.core.utils import chat_formatting as cf
-from Star_Utils import CogsUtils
+from Star-Utils import CogsUtils
 from ..common.models import GuildMessageable
 from ..views import VoteSelect, Paginator, CategoryPageSource
 

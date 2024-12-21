@@ -11,7 +11,7 @@
     "beautifulsoup4",
     "js2py",
     "git+https://github.com/npc203/starbot-ext-menus-views",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "fun",

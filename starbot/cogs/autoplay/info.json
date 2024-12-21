@@ -13,7 +13,7 @@
   ],
   "requirements": [
     "Py-Lav>=1.10.10",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "min_bot_version": "3.5.0.dev306",
   "max_bot_version": "3.5.99",

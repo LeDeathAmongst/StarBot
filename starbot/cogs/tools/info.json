@@ -11,7 +11,7 @@
   "requirements": [
     "tabulate",
     "unidecode",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Mod and admin tools.",
   "tags": [

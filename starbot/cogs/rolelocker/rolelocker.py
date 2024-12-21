@@ -1,4 +1,4 @@
-from Star_Utils import Cog, Settings, views
+from Star-Utils import Cog, Settings, views
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from discord import Role, Embed
@@ -24,7 +24,7 @@ class RoleLocker(Cog):
             role_tiers={}
         )
 
-        # Use Star_Utils.settings
+        # Use Star-Utils.settings
         _settings: typing.Dict[str, typing.Dict[str, typing.Any]] = {
             "locked_cogs": {
                 "converter": dict,

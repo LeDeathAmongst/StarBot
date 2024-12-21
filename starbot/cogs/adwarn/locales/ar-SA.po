@@ -1,5 +1,5 @@
 import discord
-from Star_Utils import Cog
+from Star-Utils import Cog
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from datetime import timedelta, datetime

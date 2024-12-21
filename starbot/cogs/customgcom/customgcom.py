@@ -3,7 +3,7 @@ from starbot.core.utils.chat_formatting import pagify, box
 import asyncio
 import os
 import re
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 # Define the path for your data
 PATH = 'data/customgcom/'

@@ -1,11 +1,11 @@
-from Star_Utils import Cog
+from Star-Utils import Cog
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from starbot.core.i18n import Translator, cog_i18n
 import discord
 import typing
 import asyncio
-from Star_Utils.settings import Settings
+from Star-Utils.settings import Settings
 from .dashboard_integration import DashboardIntegration
 _: Translator = Translator('EventLogger', __file__)
 

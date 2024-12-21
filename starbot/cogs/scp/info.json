@@ -5,7 +5,7 @@
   "hidden": false,
   "install_msg": "You are now connected to the SCP database. You may now proceed to access the data using `[p]load scp`, then `[p]help SCP`",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Look up SCP articles.",
   "end_user_data_statement": "This cog does not store any End User Data",

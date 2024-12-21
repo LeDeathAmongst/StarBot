@@ -5,7 +5,7 @@
   "short": "Play battleship with a friend.",
   "requirements": [
     "pillow",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Play battleship against a friend or an AI opponent. Generates an image to represent the board state. Run [p]battleship to play!",
   "tags": [

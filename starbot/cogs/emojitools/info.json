@@ -19,7 +19,7 @@
   "requirements": [
     "aiofiles>=0.7.0",
     "aiozipstream",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Tools for Managing Custom Emojis",
   "tags": [

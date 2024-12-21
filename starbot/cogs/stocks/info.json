@@ -4,7 +4,7 @@
   "name": "Stocks",
   "short": "Buy and sell stocks with bot currency.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Buy and sell real world stocks at live prices Red currency. Stocks are bought at a ratio of 100 credits per $1, and change in value with the real world stock price. This cog requires an API integration to fetch the current stock prices. Use [p]stocks to buy!",
   "tags": [

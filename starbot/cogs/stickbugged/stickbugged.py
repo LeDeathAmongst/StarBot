@@ -4,7 +4,7 @@ import logging
 import os
 from io import BytesIO
 from typing import Optional
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import aiohttp
 import discord

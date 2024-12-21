@@ -26,7 +26,7 @@
     "utils",
     "tabulate",
     "httpx",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Get Xbox Live Info and Player Stats.",
   "tags": [

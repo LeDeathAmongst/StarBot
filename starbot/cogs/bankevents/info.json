@@ -14,7 +14,7 @@
   "permissions": [],
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Bank transaction listener events for 3rd party cogs",
   "tags": [

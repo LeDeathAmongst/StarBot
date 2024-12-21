@@ -6,7 +6,7 @@ from io import BytesIO
 from itertools import starmap
 from traceback import walk_tb
 from types import SimpleNamespace
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 from typing import (
     TYPE_CHECKING,
     Any,

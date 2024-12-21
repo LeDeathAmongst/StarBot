@@ -12,7 +12,7 @@
   ],
   "requirements": [
     "rapidfuzz",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "end_user_data_statement": "This cog does not persistently store any data or metadata about users."
 }

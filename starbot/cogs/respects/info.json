@@ -6,7 +6,7 @@
   "install_msg": "Thanks for installing Respects. Use `[p]f` to pay respects, and `[p]setf` to configure other settings.",
   "min_bot_version": "3.5.0",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [],
   "permissions": [],

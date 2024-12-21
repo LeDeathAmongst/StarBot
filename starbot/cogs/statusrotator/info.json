@@ -5,7 +5,7 @@
   "short": "Rotates bot status",
   "requirements": [
     "aiohttp",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "status",

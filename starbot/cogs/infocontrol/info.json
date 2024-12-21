@@ -5,7 +5,7 @@
   "short": "Automatically delete sensitive information.",
   "install_msg": "Thank you for installing InfoControl. Use `[p]infocontrol` to manage settings.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "moderation",

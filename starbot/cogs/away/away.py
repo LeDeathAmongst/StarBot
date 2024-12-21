@@ -3,7 +3,7 @@ from starbot.core import Config, commands, checks
 from typing import Optional, Literal
 import re
 from datetime import datetime
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 IMAGE_LINKS = re.compile(r"(http[s]?:\/\/[^\"\']*\.(?:png|jpg|jpeg|gif|png))")
 

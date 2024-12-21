@@ -4,7 +4,7 @@
   "name": "DynamicChannelList",
   "short": "Create dynamically updating channel lists.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Create dynamically updating channel lists.",
   "tags": [

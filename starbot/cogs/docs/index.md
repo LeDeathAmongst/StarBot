@@ -259,7 +259,7 @@ This documentation is here for support. Everything you need *should* be here. If
 - [Snipe](cog_snipe.md)
 - [SplitOrStealGame](cog_splitorstealgame.md)
 - [Staffer](cog_staffer.md)
-- [Star_Utils](cog_star_utils.md)
+- [Star-Utils](cog_Star-Utils.md)
 - [Status](cog_status.md)
 - [StickyMember](cog_stickymember.md)
 - [StickBugged](cog_stickbugged.md)

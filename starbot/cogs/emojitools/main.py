@@ -34,7 +34,7 @@ from zipstream.aiozipstream import AioZipStream
 
 import discord
 from starbot.core import commands, data_manager
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 # Error messages
 TIME_OUT = "The request timed out or we are being ratelimited, please try again after a few moments."
 INVOKE_ERROR = (

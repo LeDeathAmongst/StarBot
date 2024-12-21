@@ -18,7 +18,7 @@
     "assistant": "https://github.com/vertyco/vrt-cogs"
   },
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Extended functionality for Assistant",
   "tags": [

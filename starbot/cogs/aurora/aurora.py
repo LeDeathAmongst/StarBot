@@ -33,7 +33,7 @@ from aurora.utilities.factory import addrole_embed, case_factory, changes_factor
 from aurora.utilities.logger import logger
 from aurora.utilities.utils import check_moddable, check_permissions, convert_timedelta_to_str, fetch_channel_dict, fetch_user_dict, generate_dict, get_footer_image, log, send_evidenceformat, timedelta_from_relativedelta
 
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class Aurora(Cog):
     """Aurora is a fully-featured moderation system.

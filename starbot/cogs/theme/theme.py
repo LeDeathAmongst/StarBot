@@ -1,6 +1,6 @@
 from io import BytesIO
 from random import choice
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from starbot.core import Config, commands

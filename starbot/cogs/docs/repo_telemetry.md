@@ -6,7 +6,7 @@ Thanks to Vexed for this documentation and a part of the code to use Telemetry w
 
 I have **opt-in** telemetry and error reporting built into all of my [github.com/LeDeathAmongst/StarCogs](https://github.com/LeDeathAmongst/StarCogs) cogs.
 
-Enabling or disabling it affects all of my cogs. If this command `[p]Star_Utils telemetrywithsentry` doesn't exist, then no data is being sent.
+Enabling or disabling it affects all of my cogs. If this command `[p]Star-Utils telemetrywithsentry` doesn't exist, then no data is being sent.
 This is likely because you haven't updated yet.
 
 I use a platform called Sentry [sentry.io](https://sentry.io) to collect this.
@@ -92,18 +92,18 @@ if they occur in different places. It's sort of like hashing but worse but easie
 to implement with regex. This 4
 digit ID is prefixed with `SHORTENED-ID-`
 
-The exact functions can be seen at https://github.com/LeDeathAmongst/Star_Utils/blob/main/Star_Utils/sentry.py
+The exact functions can be seen at https://github.com/LeDeathAmongst/Star-Utils/blob/main/Star-Utils/sentry.py
 
 ### SentryHelper
 
-In Star_Utils, as part of the client-side Sentry set up, the SentryHelper class is used by the utils and initialize with
-the cog `Star_Utils` (cog automatically loaded with all my cogs).
+In Star-Utils, as part of the client-side Sentry set up, the SentryHelper class is used by the utils and initialize with
+the cog `Star-Utils` (cog automatically loaded with all my cogs).
 
 This utils has various things to reduce boilerplate in each cog.
 
 ### Config
 
-Setup data is stored in Red's config under the fictional cog name `Star_Utils` (cog added by all cog to add slash commands and other functionalities)
+Setup data is stored in Red's config under the fictional cog name `Star-Utils` (cog added by all cog to add slash commands and other functionalities)
 
 ### Owner notifications
 

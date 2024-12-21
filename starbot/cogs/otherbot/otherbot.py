@@ -1,5 +1,5 @@
 from typing import Literal
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 from starbot.core.bot import Red

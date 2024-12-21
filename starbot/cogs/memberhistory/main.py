@@ -17,7 +17,7 @@ from .views import Paginator
 from starbot.vendored.discord.ext import menus
 from starbot.core.utils.views import ConfirmView
 from discord.ext import tasks
-from Star_Utils import Cog
+from Star-Utils import Cog
 import math
 
 log = logging.getLogger("red.bounty.MemberHistory")

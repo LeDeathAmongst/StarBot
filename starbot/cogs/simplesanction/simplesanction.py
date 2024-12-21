@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils, Settings  # isort:skip
+from Star-Utils import Cog, CogsUtils, Settings  # isort:skip
 from starbot.core import commands, app_commands, Config  # isort:skip
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.i18n import Translator, cog_i18n  # isort:skip

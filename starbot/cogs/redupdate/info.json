@@ -14,7 +14,7 @@
     "embed_links"
   ],
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "required_cogs": {
     "shell": "https://github.com/Jackenmen/JackCogs"

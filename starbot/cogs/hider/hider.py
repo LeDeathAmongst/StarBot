@@ -2,7 +2,7 @@ import discord
 from starbot.core import commands
 from starbot.core import Config
 from starbot.core import checks
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 
 class Hider(Cog):

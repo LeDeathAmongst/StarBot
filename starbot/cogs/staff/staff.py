@@ -6,7 +6,7 @@ from typing import Dict, List, Optional, Union, Tuple
 import asyncio
 import datetime
 import traceback
-from Star_Utils import Cog, Buttons, Dropdown, Modal, Loop, CogsUtils
+from Star-Utils import Cog, Buttons, Dropdown, Modal, Loop, CogsUtils
 
 class StaffMember:
     def __init__(self, user_id: int, hierarchy: str, level: str):

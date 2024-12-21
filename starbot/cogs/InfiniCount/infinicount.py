@@ -1,6 +1,6 @@
 import discord
 from starbot.core import commands, checks, Config
-from Star_Utils import Cog
+from Star-Utils import Cog
 class InfiniCount(Cog):
     """Cog for creating a counting channel where only +1 increments are allowed."""
 

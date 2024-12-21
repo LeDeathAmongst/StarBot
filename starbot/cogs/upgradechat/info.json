@@ -14,7 +14,7 @@
   "permissions": [],
   "required_cogs": {},
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Upgrade.Chat API Economy Integration",
   "tags": [

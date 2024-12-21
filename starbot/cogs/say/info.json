@@ -5,7 +5,7 @@
   "short": "Send messages as the bot",
   "requirements": [
     "fuzzywuzzy",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "ready": true
 }

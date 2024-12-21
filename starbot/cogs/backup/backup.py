@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 #   _____                         _
 #  / ____|                       (_)
 # | (___   ___  __ _ _____      ___ _ __ ___  _ __ ___   ___ _ __

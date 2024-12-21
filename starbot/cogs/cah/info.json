@@ -17,7 +17,7 @@
   "required_cogs": {},
   "requirements": [
     "pillow",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Cards Against Humanity®",
   "tags": [

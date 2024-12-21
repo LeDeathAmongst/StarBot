@@ -1,6 +1,6 @@
 from starbot.core import commands  # isort:skip
 from starbot.core.bot import Red  # isort:skip
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 class DashboardIntegration:
     bot: Red

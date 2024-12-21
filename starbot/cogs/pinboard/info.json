@@ -4,8 +4,8 @@
   "name": "pinboard",
   "short": "Make bulletin board style pinned messages! Let people add/remove their own blurbs in a pinned message.",
   "requirements": [
-    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "git+https://github.com/LeDeathAmongst/Star-Utils.git",
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "Make a bulletin board pinned message! Users can add/remove their own content to/from a shared, \"bulletin board\" style pinned message.",
   "permissions": [],

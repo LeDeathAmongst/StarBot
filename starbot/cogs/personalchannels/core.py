@@ -23,7 +23,7 @@ SOFTWARE.
 """
 
 # The idea of this whole cog is taken from https://github.com/fixator10/Fixator10-Cogs/tree/V3/personalroles
-from Star_Utils import Cog
+from Star-Utils import Cog
 import asyncio
 import contextlib
 import io

@@ -6,7 +6,7 @@ import random
 import aiohttp
 import asyncio
 from datetime import datetime, timedelta
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class WordScramble(Cog):
     def __init__(self, bot):

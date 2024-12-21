@@ -4,7 +4,7 @@ from akinator_python import Akinator, AkinatorError
 from starbot.core import commands
 from starbot.core.bot import Red
 from starbot.core.config import Config
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 log = logging.getLogger("red.star.aki")
 

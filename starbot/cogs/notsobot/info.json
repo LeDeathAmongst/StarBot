@@ -24,7 +24,7 @@
     "git+https://github.com/Kareeeeem/jpglitch",
     "wand",
     "unidecode",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Some working commands from NotSoBot",
   "tags": [

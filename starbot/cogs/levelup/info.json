@@ -36,7 +36,7 @@
     "tenacity",
     "ujson",
     "uvicorn",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Discord leveling system",
   "tags": [

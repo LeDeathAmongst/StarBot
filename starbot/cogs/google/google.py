@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from textwrap import shorten
 from typing import Optional
 from urllib.parse import quote_plus, urlencode
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import aiohttp
 import discord

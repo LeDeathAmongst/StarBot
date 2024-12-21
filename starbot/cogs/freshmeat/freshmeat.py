@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 """
   This Source Code Form is subject to the terms of the Mozilla Public
   License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -10,7 +10,7 @@ import discord
 from starbot.core import commands, checks
 from starbot.core.utils.chat_formatting import pagify, escape
 from starbot.core.utils.menus import menu, DEFAULT_CONTROLS
-from Star_Utils import Cog
+from Star-Utils import Cog
 import datetime
 
 class Freshmeat(Cog):

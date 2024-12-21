@@ -21,7 +21,7 @@
     "googletrans-py",
     "msgpack",
     "ujson",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Auto translation between two languages.",
   "tags": [

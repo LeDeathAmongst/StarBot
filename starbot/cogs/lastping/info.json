@@ -4,7 +4,7 @@
   "name": "LastPing",
   "short": "View how long servers have lasted without a mass mention.",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "description": "View how long servers have lasted without a mass mention.",
   "tags": [

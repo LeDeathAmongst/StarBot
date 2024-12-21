@@ -1,6 +1,6 @@
 import aiohttp
 from starbot.core import commands
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 from .menus import ArticleFormat, GenericMenu
 

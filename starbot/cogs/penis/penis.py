@@ -2,7 +2,7 @@ import discord
 import random
 from starbot.core import commands
 from starbot.core.utils.chat_formatting import pagify
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 
 class Penis(Cog):

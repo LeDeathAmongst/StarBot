@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils, Menu
+from Star-Utils import Cog, CogsUtils, Menu
 from starbot.core import commands
 from starbot.core.bot import Red
 from starbot.core.i18n import Translator, cog_i18n

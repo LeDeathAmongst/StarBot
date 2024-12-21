@@ -22,7 +22,7 @@ from typing import Any, Final, List, Dict, Optional, TYPE_CHECKING
 import discord
 from discord.ext import tasks
 from starbot.core import Config, commands
-from Star_Utils import Cog
+from Star-Utils import Cog
 from .dashboard_integration import DashboardIntegration
 from starbot.core.bot import Red
 from starbot.core.utils.chat_formatting import humanize_list, humanize_number, pagify

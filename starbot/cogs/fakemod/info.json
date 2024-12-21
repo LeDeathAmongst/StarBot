@@ -9,7 +9,7 @@
   "name": "FakeMod",
   "requirements": [
     "git+https://github.com/Kuro-Rui/Kuro-Utils",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Fake moderation commands.",
   "tags": [

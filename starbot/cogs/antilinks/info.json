@@ -13,7 +13,7 @@
   "type": "COG",
   "end_user_data_statement": "This cog does not persistently store data or metadata about users.",
   "requirements": [
-    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "git+https://github.com/LeDeathAmongst/Star-Utils.git",
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ]
 }

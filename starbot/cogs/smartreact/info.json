@@ -6,7 +6,7 @@
   "install_msg": "Thanks for installing SmartReact. Run [p]smartreact to configure.",
   "min_bot_version": "3.5.0",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "reactions"

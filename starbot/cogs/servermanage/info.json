@@ -6,7 +6,7 @@
   "install_msg": "Thanks for installing the ServerManage cog. Please see `[p]servermanage` or visit https://u.sfuani.me/renservermanage for details.",
   "min_bot_version": "3.5.0",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "server",

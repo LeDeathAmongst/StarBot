@@ -45,7 +45,7 @@ from .ansi import EightBitANSI
 from .api import APIClient
 from .utils import CRATES_IO_LOGO, NPM_LOGO, RUBY_GEMS_LOGO, Emoji, EmojiConverter
 from .views import SpotifyView
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 log: logging.Logger = logging.getLogger("red.seinacogs.tools")
 

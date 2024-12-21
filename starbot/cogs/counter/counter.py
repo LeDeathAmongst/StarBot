@@ -3,7 +3,7 @@ from starbot.core import commands, Config
 import discord
 from starbot.core.bot import Red
 from starbot.core.commands import is_owner
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class Counter(Cog):
     """A cog to track various statistics for FuturoBot"""

@@ -11,7 +11,7 @@
   "type": "COG",
   "requirements": [
     "jokeapi",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "hidden": false,
   "disabled": false,

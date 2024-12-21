@@ -1,4 +1,4 @@
-from Star_Utils import Co, CogsUtils
+from Star-Utils import Co, CogsUtils
 import discord
 from typing import Optional, Union, Literal
 from starbot.core import app_commands, commands, Config

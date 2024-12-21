@@ -4,7 +4,7 @@ import discord
 from discord.ui import Button, Select, View
 from starbot.core import commands
 from starbot.vendored.discord.ext import menus
-from Star_Utils import Cog
+from Star-Utils import Cog
 
 __all__ = [
     "Paginator",

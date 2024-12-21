@@ -9,6 +9,6 @@
   "end_user_data_statement": "This cog uses a single command to send a message a certain number times to a channel, no data is stored.",
   "type": "COG",
   "requirements": [
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ]
 }

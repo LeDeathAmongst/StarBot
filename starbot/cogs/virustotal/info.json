@@ -9,7 +9,7 @@
     "requests",
     "asyncio",
     "matplotlib",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "tags": [
     "file scanning",

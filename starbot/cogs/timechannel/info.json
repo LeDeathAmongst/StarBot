@@ -13,7 +13,7 @@
   "name": "TimeChannel",
   "requirements": [
     "rapidfuzz",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Get the time in different timezones in voice channels.",
   "tags": [

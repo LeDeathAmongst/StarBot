@@ -1,7 +1,7 @@
 import discord
 from starbot.core import commands, Config, checks
 from starbot.core.bot import Red
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 class IntroCog(Cog):
     def __init__(self, bot: Red):

@@ -11,7 +11,7 @@
 #            await self.settings.commands_added.wait()
 #        dashboard_cog.rpc.third_parties_handler.add_third_party(self)
 
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from starbot.core.i18n import Translator

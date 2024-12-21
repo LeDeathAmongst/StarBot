@@ -9,7 +9,7 @@
   "required_cogs": {},
   "requirements": [
     "dateparser",
-    "https://github.com/LeDeathAmongst/Star_Utils"
+    "https://github.com/LeDeathAmongst/Star-Utils"
   ],
   "short": "Produce Discord timestamps.",
   "tags": [

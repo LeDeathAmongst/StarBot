@@ -4,7 +4,7 @@ import time
 from abc import ABC
 from contextlib import asynccontextmanager
 from typing import Dict, Literal, Mapping, Optional, Tuple
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 
 import discord
 import tekore

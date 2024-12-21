@@ -1,4 +1,4 @@
-from Star_Utils import Cog, CogsUtils
+from Star-Utils import Cog, CogsUtils
 # Ported from https://github.com/hizkifw/discord-tictactoe
 # This cog is licensed under Apache-2.0, which is bundled with the cog file under LICENSE.
 

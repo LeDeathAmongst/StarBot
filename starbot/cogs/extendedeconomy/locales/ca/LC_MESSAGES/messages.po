@@ -1,0 +1,855 @@
+# Catalan translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:09+0100\n"
+"PO-Revision-Date: 2024-10-14 04:12+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ca\n"
+"Language-Team: ca <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:46
+msgid "**Global Bank:** `{}`\n"
+msgstr "**Global Bank:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "**Economy Cog:** `{}`\n"
+msgstr "**Economy Cog:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Loaded"
+msgstr "Carregat"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Not Loaded"
+msgstr "No carregat"
+msgstr ""
+
+#: commands/admin.py:48
+msgid "**Auto Paydays:** `{}`\n"
+msgstr "**Dies de pagament automàtics:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:52
+msgid "**Auto Payday Roles:** {}\n"
+msgstr "**Rols de dia de pagament automàtic:** {}\n"
+msgstr ""
+
+#: commands/admin.py:53 common/utils.py:110 common/utils.py:113
+#: common/utils.py:130 common/utils.py:136
+msgid "None"
+msgstr "Cap"
+msgstr ""
+
+#: commands/admin.py:79
+msgid "- {} has not used the bank yet.\n"
+msgstr "- {} encara no ha utilitzat el banc.\n"
+msgstr ""
+
+#: commands/admin.py:82
+msgid "- {} has not used the economy commands yet.\n"
+msgstr "- {} encara no ha utilitzat les ordres d'economia.\n"
+msgstr ""
+
+#: commands/admin.py:87
+msgid "- {} has {} seconds left until their next payday.\n"
+msgstr "- A {} li queden {} segons per al seu proper dia de pagament.\n"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "- {} is ready for their next payday.\n"
+msgstr "- {} està preparat per al seu proper dia de pagament.\n"
+msgstr ""
+
+#: commands/admin.py:100
+msgid ""
+msgstr ""
+"You must be a bot owner to view these settings when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:109
+msgid "Economy cog is not loaded."
+msgstr "L'engranatge econòmic no està carregat."
+msgstr ""
+
+#: commands/admin.py:111
+msgid "You must be a bot owner to reset cooldowns when global bank is enabled!"
+msgstr "Heu de ser propietari d'un bot per restablir els temps de reutilització quan el banc global estigui habilitat!"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "Payday cooldown reset for **{}**."
+msgstr "Restableix el temps de reutilització del dia de pagament per **{}**."
+msgstr ""
+
+#: commands/admin.py:128 commands/admin.py:143 commands/admin.py:170
+msgid "This setting is not available when global bank is enabled."
+msgstr "Aquesta configuració no està disponible quan el banc global està activat."
+msgstr ""
+
+#: commands/admin.py:132
+msgid "Payday role amounts will now stack."
+msgstr "Els imports de les funcions del dia de pagament ara s'apilaran."
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Payday role amounts will no longer stack."
+msgstr "Els imports de les funcions del dia de pagament ja no s'apilaran."
+msgstr ""
+
+#: commands/admin.py:145
+msgid ""
+msgstr ""
+"\n"
+"Use {} to allow auto-claiming for for all users."
+msgstr ""
+
+#: commands/admin.py:152
+msgid "This role will no longer recieve paydays automatically."
+msgstr "Aquesta funció ja no rebrà els dies de pagament automàticament."
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This role will now receive paydays automatically."
+msgstr "Aquesta funció rebrà ara els dies de pagament automàticament."
+msgstr ""
+
+#: commands/admin.py:175
+msgid "Role bonus removed."
+msgstr "S'ha eliminat la bonificació de rol."
+msgstr ""
+
+#: commands/admin.py:178
+msgid "That role does not have a bonus."
+msgstr "Aquest paper no té cap bonificació."
+msgstr ""
+
+#: commands/admin.py:183
+msgid "That role already has that bonus."
+msgstr "Aquest paper ja té aquest bonus."
+msgstr ""
+
+#: commands/admin.py:184
+msgid "Role bonus updated."
+msgstr "S'ha actualitzat la bonificació de rol."
+msgstr ""
+
+#: commands/admin.py:186
+msgid "Role bonus added."
+msgstr "Bonificació de rol afegit."
+msgstr ""
+
+#: commands/admin.py:199
+msgid "Paydays will now be claimed automatically for all users."
+msgstr "Ara els dies de pagament es reclamaran automàticament per a tots els usuaris."
+msgstr ""
+
+#: commands/admin.py:201
+msgid "Paydays will now be claimed automatically for set roles."
+msgstr "Ara els dies de pagament es reclamaran automàticament per als rols definits."
+msgstr ""
+
+#: commands/admin.py:203
+msgid "Paydays will no longer be claimed automatically."
+msgstr "Els dies de pagament ja no es reclamaran automàticament."
+msgstr ""
+
+#: commands/admin.py:212
+msgid "There is no auto claim channel when global bank is enabled!"
+msgstr "No hi ha cap canal de reclamació automàtica quan el banc global està activat!"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel set to {}"
+msgstr "S'ha definit el canal de reclamació automàtica a {}"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel removed."
+msgstr "S'ha eliminat el canal de reclamació automàtica."
+msgstr ""
+
+#: commands/admin.py:234
+msgid ""
+msgstr ""
+"You must be a bot owner to set the transfer tax when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Invalid tax percentage. Must be between 0 and 1."
+msgstr "Percentatge fiscal no vàlid. Ha d'estar entre 0 i 1."
+msgstr ""
+
+#: commands/admin.py:243
+msgid "Transfer tax set to {}%"
+msgstr "Impost de transferència establert en {}%"
+msgstr ""
+
+#: commands/admin.py:253
+msgid ""
+msgstr ""
+"You must be a bot owner to set the main log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:260
+msgid "Removing the main log channel."
+msgstr "Eliminació del canal de registre principal."
+msgstr ""
+
+#: commands/admin.py:265
+msgid "That is already the main log channel."
+msgstr "Aquest ja és el canal de registre principal."
+msgstr ""
+
+#: commands/admin.py:266
+msgid "Main log channel changed to {}"
+msgstr "El canal de registre principal ha canviat a {}"
+msgstr ""
+
+#: commands/admin.py:268
+msgid "Main log channel set to {}"
+msgstr "Canal de registre principal establert a {}"
+msgstr ""
+
+#: commands/admin.py:298
+msgid ""
+msgstr ""
+"You must be a bot owner to set an event log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Invalid event. Must be one of: {}"
+msgstr "Esdeveniment no vàlid. Ha de ser un de: {}"
+msgstr ""
+
+#: commands/admin.py:316
+msgid "No channel set for this event."
+msgstr "No s'ha definit cap canal per a aquest esdeveniment."
+msgstr ""
+
+#: commands/admin.py:318
+msgid "Event log channel for {} removed."
+msgstr "S'ha eliminat el canal del registre d'esdeveniments per a {}."
+msgstr ""
+
+#: commands/admin.py:321
+msgid "That is already the event log channel for {}."
+msgstr "Aquest ja és el canal de registre d'esdeveniments per a {}."
+msgstr ""
+
+#: commands/admin.py:322
+msgid "Event log channel for {} changed to {}"
+msgstr "El canal del registre d'esdeveniments per a {} s'ha canviat a {}"
+msgstr ""
+
+#: commands/admin.py:324
+msgid "Event log channel for {} set to {}"
+msgstr "Canal de registre d'esdeveniments per a {} establert en {}"
+msgstr ""
+
+#: commands/admin.py:344
+msgid "Delete after time disabled."
+msgstr "Suprimeix després d'haver desactivat el temps."
+msgstr ""
+
+#: commands/admin.py:347
+msgid "Delete after time set to {} seconds."
+msgstr "Suprimeix després del temps establert en {} segons."
+msgstr ""
+
+#: commands/admin.py:380
+msgid ""
+msgstr ""
+"- **cost**: The amount of currency to charge\n"
+"- **duration**(`default: 3600`): The time in seconds before the cost "
+"resets\n"
+"- **level**(`default: all`): The minimum permission level to apply the "
+"cost\n"
+" - admin: Admins and above can use the command for free\n"
+" - mod: Mods and above can use the command for free\n"
+" - all: Everyone must pay the cost to use the command\n"
+" - user: All users must pay the cost to use the command unless they are "
+"mod or admin\n"
+" - global: The cost is applied to all users globally\n"
+"- **prompt**(`default: notify`): How the user will be prompted to confirm"
+" the cost\n"
+" - text: The bot will send a text message asking the user to confirm the "
+"cost with yes or no\n"
+" - reaction: The bot will send a message with emoji reactions to confirm "
+"the cost\n"
+" - button: The bot will send a message with buttons to confirm the cost\n"
+" - silent: The bot will not prompt the user to confirm the cost\n"
+" - notify: The bot will simply notify the user of the cost without asking"
+" for confirmation\n"
+"- **modifier**(`default: static`): The type of cost modifier\n"
+" - static: The cost is a fixed amount\n"
+" - percent: The cost is a percentage of the user's balance on top of the "
+"base cost\n"
+" - exponential: The cost increases exponentially based on how frequently "
+"the command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration^2)`\n"
+" - linear: The cost increases linearly based on how frequently the "
+"command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration)`\n"
+"- **value**(`default: 0.0`): The value of the cost modifier depends on "
+"the modifier type\n"
+" - static: This will be 0 and does nothing\n"
+" - percent: Value will be the percentage of the user's balance to add to "
+"the base cost\n"
+" - exponential: Value will be the base cost multiplier\n"
+" - linear: Value will be multiplied by the number of uses in the last "
+"hour to get the cost increase\n"
+msgstr ""
+
+#: commands/admin.py:412
+msgid "You can't add a cost to the addcost command."
+msgstr "No podeu afegir un cost a l'ordre addcost."
+msgstr ""
+
+#: commands/admin.py:417
+msgid "You must be a bot owner to use this command while global bank is active."
+msgstr "Heu de ser propietari d'un bot per utilitzar aquesta ordre mentre el banc global està actiu."
+msgstr ""
+
+#: commands/admin.py:419
+msgid "Global bank is active, you must use the global level."
+msgstr "El banc global està actiu, heu d'utilitzar el nivell global."
+msgstr ""
+
+#: commands/admin.py:423
+msgid "You must be a bot owner to use the global level."
+msgstr "Heu de ser propietari d'un bot per utilitzar el nivell global."
+msgstr ""
+
+#: commands/admin.py:424
+msgid "You must enable global bank to use the global level."
+msgstr "Heu d'habilitar el banc global per utilitzar el nivell global."
+msgstr ""
+
+#: commands/admin.py:430
+msgid "Command not found."
+msgstr "No s'ha trobat l'ordre."
+msgstr ""
+
+#: commands/admin.py:432
+msgid "That is not a valid app command"
+msgstr "Aquesta no és una ordre d'aplicació vàlida"
+msgstr ""
+
+#: commands/admin.py:435
+msgid "You can't add costs to commands that are always available!"
+msgstr "No podeu afegir costos a les ordres que sempre estan disponibles!"
+msgstr ""
+
+#: commands/admin.py:438 views/cost_menu.py:289
+msgid "You can't add costs to commands you don't have permission to run!"
+msgstr "No podeu afegir costos a les ordres que no teniu permís per executar!"
+msgstr ""
+
+#: commands/admin.py:448
+msgid "This will overwrite the existing cost for this command. Continue?"
+msgstr "Això sobreescriurà el cost existent per a aquesta ordre. Continuar?"
+msgstr ""
+
+#: commands/admin.py:455
+msgid "Not adding cost."
+msgstr "Sense afegir cost."
+msgstr ""
+
+#: commands/admin.py:456
+msgid "{} cost updated."
+msgstr "{} cost actualitzat."
+msgstr ""
+
+#: commands/admin.py:458
+msgid "{} cost added."
+msgstr "{} cost afegit."
+msgstr ""
+
+#: commands/admin.py:499
+msgid "No users found with that role."
+msgstr "No s'ha trobat cap usuari amb aquesta funció."
+msgstr ""
+
+#: commands/admin.py:525
+msgid "No users were affected."
+msgstr "Cap usuari es va veure afectat."
+msgstr ""
+
+#: commands/admin.py:527
+msgid "No balances were changed."
+msgstr "No es van canviar els saldos."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "user was"
+msgstr "l'usuari era"
+msgstr ""
+
+#: commands/admin.py:528
+msgid "users were"
+msgstr "els usuaris eren"
+msgstr ""
+
+#: commands/admin.py:529
+msgid "Balances for {} updated, total change was {}."
+msgstr "Els saldos de {} s'han actualitzat, el canvi total va ser de {}."
+msgstr ""
+
+#: commands/user.py:34
+msgid "No users found."
+msgstr "No s'han trobat usuaris."
+msgstr ""
+
+#: commands/user.py:52
+msgid "Bank Balances for {}"
+msgstr "Saldos bancaris de {}"
+msgstr ""
+
+#: common/checks.py:68
+msgid "You do not have enough {} to run that command! (Need {})"
+msgstr "No teniu prou {} per executar aquesta ordre! (Necessita {})"
+msgstr ""
+
+#: common/checks.py:69
+msgid "{}, you spent {} to run this command"
+msgstr "{}, heu gastat {} per executar aquesta ordre"
+msgstr ""
+
+#: common/checks.py:81
+msgid "Do you want to spend {} {} to run this command?"
+msgstr "Voleu gastar {} {} per executar aquesta ordre?"
+msgstr ""
+
+#: common/checks.py:96
+msgid "Not running `{}`."
+msgstr "No s'executa `{}`."
+msgstr ""
+
+#: common/checks.py:140
+msgid "{}% transfer tax applied, {} deducted from transfer"
+msgstr "{}% d'impost sobre transferència aplicat, {} deduït de la transferència"
+msgstr ""
+
+#: common/listeners.py:41
+msgid "You have been refunded since this command failed."
+msgstr "Heu rebut un reemborsament perquè aquesta ordre ha fallat."
+msgstr ""
+
+#: common/listeners.py:90
+msgid "Set Balance"
+msgstr "Estableix l'equilibri"
+msgstr ""
+
+#: common/listeners.py:91
+msgid "Transfer Credits"
+msgstr "Transferència de crèdits"
+msgstr ""
+
+#: common/listeners.py:92 common/listeners.py:186
+msgid "Bank Wipe"
+msgstr "Neteja bancària"
+msgstr ""
+
+#: common/listeners.py:93
+msgid "Prune Accounts"
+msgstr "Prune Accounts"
+msgstr ""
+
+#: common/listeners.py:94
+msgid "Set Global"
+msgstr "Estableix Global"
+msgstr ""
+
+#: common/listeners.py:95
+msgid "Payday Claim"
+msgstr "Reclamació del dia de pagament"
+msgstr ""
+
+#: common/listeners.py:98
+msgid "Bank Event: {}"
+msgstr "Esdeveniment bancari: {}"
+msgstr ""
+
+#: common/listeners.py:102 common/listeners.py:109 common/listeners.py:121
+msgid "Recipient"
+msgstr "Destinatari"
+msgstr ""
+
+#: common/listeners.py:103 common/listeners.py:123
+msgid "Old Balance"
+msgstr "Balanç Vell"
+msgstr ""
+
+#: common/listeners.py:104 common/listeners.py:124
+msgid "New Balance"
+msgstr "New Balance"
+msgstr ""
+
+#: common/listeners.py:106 common/listeners.py:112 common/listeners.py:119
+#: common/listeners.py:126
+msgid "Guild"
+msgstr "Gremi"
+msgstr ""
+
+#: common/listeners.py:108
+msgid "Sender"
+msgstr "Remitent"
+msgstr ""
+
+#: common/listeners.py:110
+msgid "Transfer Amount"
+msgstr "Import de la transferència"
+msgstr ""
+
+#: common/listeners.py:115
+msgid "User ID"
+msgstr "ID d'usuari"
+msgstr ""
+
+#: common/listeners.py:117
+msgid "Pruned Users"
+msgstr "Usuaris podats"
+msgstr ""
+
+#: common/listeners.py:122
+msgid "Amount"
+msgstr "Import"
+msgstr ""
+
+#: common/listeners.py:126
+msgid "Unknown"
+msgstr "Desconegut"
+msgstr ""
+
+#: common/listeners.py:128
+msgid "Channel"
+msgstr "Canal"
+msgstr ""
+
+#: common/listeners.py:130
+msgid "Message"
+msgstr "Missatge"
+msgstr ""
+
+#: common/listeners.py:166
+msgid "Global bank has been wiped!"
+msgstr "El banc global ha estat esborrat!"
+msgstr ""
+
+#: common/listeners.py:169
+msgid "All bank accounts for all guilds have been wiped!"
+msgstr "S'han esborrat tots els comptes bancaris de tots els gremis!"
+msgstr ""
+
+#: common/listeners.py:177
+msgid "Bank accounts have been wiped!"
+msgstr "Els comptes bancaris s'han esborrat!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to Global!"
+msgstr "El banc s'ha establert a Global!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to per-server!"
+msgstr "El banc s'ha configurat per servidor!"
+msgstr ""
+
+#: common/listeners.py:214
+msgid "Set Global Bank"
+msgstr "Estableix Global Bank"
+msgstr ""
+
+#: common/parser.py:14
+msgid ""
+msgstr ""
+"Invalid value, the argument must be an integer, optionally preceded with "
+"a `+` or `-` sign."
+msgstr ""
+
+#: common/parser.py:23
+msgid ""
+msgstr ""
+"Invalid value, the amount of currency to increase or decrease must be an "
+"integer different from zero."
+msgstr ""
+
+#: common/utils.py:107
+msgid "Not Set"
+msgstr "No establert"
+msgstr ""
+
+#: common/utils.py:109
+msgid "# Extended Economy Settings\n"
+msgstr "# Configuració d'economia ampliada\n"
+msgstr ""
+
+#: common/utils.py:111
+msgid "`Transfer Tax:      `{}\n"
+msgstr "`Impost de transferència: `{}\n"
+msgstr ""
+
+#: common/utils.py:113
+msgid "`Command Costs:     `{}\n"
+msgstr "`Costos de comandament: `{}\n"
+msgstr ""
+
+#: common/utils.py:114
+msgid "`Global Bank:       `{}\n"
+msgstr "`Banc global: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "`Delete After:      `{}\n"
+msgstr "`Suprimeix després de: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "Disabled"
+msgstr "Inhabilitat"
+msgstr ""
+
+#: common/utils.py:123
+msgid "`Set Global:        `{}\n"
+msgstr "`Estableix global: `{}\n"
+msgstr ""
+
+#: common/utils.py:128
+msgid "`Stack Roles:       `{}\n"
+msgstr "`Rols de pila: `{}\n"
+msgstr ""
+
+#: common/utils.py:131
+msgid "`Role Bonuses:      `{}\n"
+msgstr "`Bonus de rol: `{}\n"
+msgstr ""
+
+#: common/utils.py:132
+msgid "`Payday Autoclaim:  `{}\n"
+msgstr "`Reclamació automàtica del dia de pagament: `{}\n"
+msgstr ""
+
+#: common/utils.py:135
+msgid "`Autoclaim Channel: `{}\n"
+msgstr "`Canal de reclamació automàtica: `{}\n"
+msgstr ""
+
+#: common/utils.py:137
+msgid "`Autoclaim Roles:   `{}\n"
+msgstr "`Rols de reclamació automàtica: `{}\n"
+msgstr ""
+
+#: common/utils.py:139
+msgid ""
+msgstr ""
+"## Event Log Channels\n"
+"`Default Log Channel: `{}\n"
+"`Set Balance:         `{}\n"
+"`Transfer Credits:    `{}\n"
+"`Bank Wipe:           `{}\n"
+"`Prune Accounts:      `{}\n"
+msgstr ""
+
+#: common/utils.py:156
+msgid "`Payday AutoClaim:    `{}\n"
+msgstr "`Reclamació automàtica del dia de pagament: `{}\n"
+msgstr ""
+
+#: common/utils.py:160
+msgid "Showing settings for global bank"
+msgstr "Es mostra la configuració del banc global"
+msgstr ""
+
+#: common/utils.py:162
+msgid "Showing settings for this server"
+msgstr "Es mostra la configuració d'aquest servidor"
+msgstr ""
+
+#: common/utils.py:169
+msgid ""
+msgstr ""
+"`Cost:        `{}\n"
+"`Duration:    `{}\n"
+"`Level:       `{}\n"
+"`Prompt:      `{}\n"
+"`Modifier:    `{}\n"
+"`Value:       `{}\n"
+"`Cached Uses: `{}\n"
+msgstr ""
+
+#: overrides/payday.py:40 overrides/payday.py:105
+msgid ""
+msgstr ""
+"You've reached the maximum amount of {currency}! Please spend some more 😬"
+"\n"
+"\n"
+"You currently have {new_balance} {currency}."
+msgstr ""
+
+#: overrides/payday.py:56 overrides/payday.py:123
+msgid ""
+msgstr ""
+"{author.mention} Here, take some {currency}. Enjoy! (+{amount} "
+"{currency}!)\n"
+"\n"
+"You currently have {new_balance} {currency}.\n"
+"\n"
+"You are currently #{pos} on the global leaderboard!"
+msgstr ""
+
+#: overrides/payday.py:78 overrides/payday.py:145
+msgid "{author.mention} Too soon. Your next payday is {relative_time}."
+msgstr "{author.mention} Massa aviat. El vostre proper dia de pagament és {relative_time}."
+msgstr ""
+
+#: views/confirm.py:12
+msgid "Yes"
+msgstr "Sí"
+msgstr ""
+
+#: views/confirm.py:13
+msgid "No"
+msgstr "No"
+msgstr ""
+
+#: views/confirm.py:19 views/cost_menu.py:179
+msgid "This isn't your menu!"
+msgstr "Aquest no és el teu menú!"
+msgstr ""
+
+#: views/cost_menu.py:39
+msgid "Command Name"
+msgstr "Nom de l'ordre"
+msgstr ""
+
+#: views/cost_menu.py:45
+msgid "Cost"
+msgstr "Cost"
+msgstr ""
+
+#: views/cost_menu.py:51
+msgid "Duration (Seconds)"
+msgstr "Durada (segons)"
+msgstr ""
+
+#: views/cost_menu.py:57
+msgid "level, prompt, modifier (Comma separated)"
+msgstr "nivell, indicador, modificador (separat per comes)"
+msgstr ""
+
+#: views/cost_menu.py:63
+msgid "Value (Decimal)[Optional]"
+msgstr "Valor (decimal)[Opcional]"
+msgstr ""
+
+#: views/cost_menu.py:82
+msgid "Cost must be an integer!"
+msgstr "El cost ha de ser un nombre enter!"
+msgstr ""
+
+#: views/cost_menu.py:86
+msgid "Duration must be an integer!"
+msgstr "La durada ha de ser un nombre enter!"
+msgstr ""
+
+#: views/cost_menu.py:90
+msgid "Value must be a decimal!"
+msgstr "El valor ha de ser un decimal!"
+msgstr ""
+
+#: views/cost_menu.py:97
+msgid "Invalid details! Must be 3 values separated by commas."
+msgstr "Detalls no vàlids! Han de tenir 3 valors separats per comes."
+msgstr ""
+
+#: views/cost_menu.py:98
+msgid ""
+msgstr ""
+"\n"
+"Example: `user, notify, static`"
+msgstr ""
+
+#: views/cost_menu.py:103
+msgid "Invalid level! You must use one of: admin, mod, all, user, global"
+msgstr "Nivell no vàlid! Heu d'utilitzar un dels següents: admin, mod, all, user, global"
+msgstr ""
+
+#: views/cost_menu.py:107
+msgid ""
+msgstr ""
+"Invalid prompt! You must use one of: text, reaction, button, silent, "
+"notify"
+msgstr ""
+
+#: views/cost_menu.py:111
+msgid ""
+msgstr ""
+"Invalid modifier! You must use one of: static, percent, exponential, "
+"linear"
+msgstr ""
+
+#: views/cost_menu.py:254
+msgid "Page {}/{}"
+msgstr "Pàgina {}/{}"
+msgstr ""
+
+#: views/cost_menu.py:271
+msgid "Add Command Cost"
+msgstr "Afegeix el cost de l'ordre"
+msgstr ""
+
+#: views/cost_menu.py:278
+msgid "Command already has a cost!"
+msgstr "El comandament ja té un cost!"
+msgstr ""
+
+#: views/cost_menu.py:283 views/cost_menu.py:323 views/cost_menu.py:344
+msgid "Command not found!"
+msgstr "No s'ha trobat l'ordre!"
+msgstr ""
+
+#: views/cost_menu.py:285
+msgid "You can't add a cost to a command that is always available!"
+msgstr "No podeu afegir un cost a una ordre que sempre està disponible!"
+msgstr ""
+
+#: views/cost_menu.py:305
+msgid "Command cost added!"
+msgstr "Cost de comandament afegit!"
+msgstr ""
+
+#: views/cost_menu.py:329
+msgid "Command cost removed!"
+msgstr "S'ha eliminat el cost de comandament!"
+msgstr ""
+
+#: views/cost_menu.py:351
+msgid "Edit Cost: {}"
+msgstr "Edita el cost: {}"
+msgstr ""
+
+#: views/cost_menu.py:369
+msgid "Command cost updated!"
+msgstr "Cost de comandament actualitzat!"
+msgstr ""
+

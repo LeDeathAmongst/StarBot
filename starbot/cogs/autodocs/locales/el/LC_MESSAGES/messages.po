@@ -1,0 +1,227 @@
+# Greek translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:28+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: el\n"
+"Language-Team: el <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "όνομα"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "κείμενο"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Δημιουργήστε έγγραφα για ένα γρανάζι"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Το όνομα του οδοντωτού τροχού για το οποίο θέλετε να δημιουργήσετε έγγραφα (με διάκριση πεζών-κεφαλαίων)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Αντικαταστήστε όλες τις εμφανίσεις του [p] με το πρόθεμα bots"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Αντικαταστήστε όλες τις εμφανίσεις του [botname] με το όνομα bots"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Συμπεριλάβετε επιπλέον πληροφορίες όπως μετατροπείς και τις συμβολοσειρές εγγράφων τους"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Συμπεριλάβετε κρυφές εντολές"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Συμπεριλάβετε ένα csv με κάθε εντολή απομονωμένη ανά σειρά"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Εδώ είναι τα έγγραφα για όλα τα γρανάζια που έχετε φορτώσει αυτήν τη στιγμή!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Δεν μπόρεσα να βρω αυτό το γρανάζι, μήπως δεν είναι φορτωμένο;"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Εδώ είναι τα έγγραφά σας για το {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Ένας αριθμός χωρίς δεκαδικά ψηφία."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Ένας αριθμός με ή χωρίς δεκαδικά ψηφία."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Μπορεί να είναι 1, 0, true, false, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "ανά"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "δευτερόλεπτα"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "δεύτερος"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Εγκοπή"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Εντολή"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Υβρίδιο"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Χρήση"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Έλεγχοι"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Υποχρεούμαι"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Προαιρετικός"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Μόνο διακομιστής"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Περιορίζεται σε"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Ψευδώνυμα"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Cooldown"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Δεν ήταν δυνατή η λήψη συμβολοσειράς εγγράφων ή κλάσης για τον μετατροπέα {}"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Δεν ήταν δυνατή η λήψη συμβολοσειράς εγγράφων για τον μετατροπέα {}"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Δεν ήταν δυνατή η λήψη τάξης για τον μετατροπέα {}"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Αυτόματη συμπλήρωση"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Αθέτηση"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Επιλογές"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Δεν ήταν δυνατή η εύρεση του {} για το όρισμα {} της εντολής {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Εκτεταμένες πληροφορίες Arg\n"
+msgstr ""
+

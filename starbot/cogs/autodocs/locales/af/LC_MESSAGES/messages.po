@@ -1,0 +1,227 @@
+# Afrikaans translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:26+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: af\n"
+"Language-Team: af <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "naam"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "teks"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Skep dokumente vir 'n rat"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Die naam van die rat waarvoor jy dokumente wil maak (hooflettergevoelig)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Vervang alle voorkomste van [p] met die bots-voorvoegsel"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Vervang alle voorkomste van [botname] met die bots-naam"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Sluit ekstra inligting soos omskakelaars en hul docstrings in"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Sluit verborge opdragte in"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Sluit 'n csv in met elke opdrag wat per ry geïsoleer is"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Hier is die dokumente vir al jou tans gelaaide ratte!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Ek kon nie daardie rat kry nie, is dit dalk nie gelaai nie?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Hier is jou dokumente vir {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "'n Getal sonder desimale plekke."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "'n Getal met of sonder desimale plekke."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Kan 1, 0, waar, onwaar, t, f wees"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "per"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "sekondes"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "tweede"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Slash"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Bevel"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Hibried"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Gebruik"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Tjeks"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Vereis"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Opsioneel"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Slegs bediener"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Beperk tot"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Aliases"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Afkoeling"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Kon nie docstring of klas vir {}-omskakelaar kry nie"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Kon nie docstring vir {}-omskakelaar kry nie"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Kon nie klas vir {}-omskakelaar kry nie"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Outovoltooi"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Verstek"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Keuses"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Kon nie {} vir die {}-argument van die {}-opdrag vind nie"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Uitgebreide Arg-inligting\n"
+msgstr ""
+

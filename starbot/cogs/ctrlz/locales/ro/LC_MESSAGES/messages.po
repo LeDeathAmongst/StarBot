@@ -1,0 +1,369 @@
+# Romanian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:35+0100\n"
+"PO-Revision-Date: 2024-10-14 05:44+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ro\n"
+"Language-Team: ro <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
+" < 20)) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: converters.py:15
+msgid "Invalid action."
+msgstr "Acțiune nevalidă."
+msgstr ""
+
+#: converters.py:24
+msgid "Invalid datetime format. Expected format is ISO (`YYYY-MM-DDTHH:MM:SS`)."
+msgstr "Format de dată și oră nevalid. Formatul așteptat este ISO (`AAAA-LL-ZZA:MM:SS`)."
+msgstr ""
+
+#: converters.py:26
+msgid "The date must be within the last 7 days."
+msgstr "Data trebuie să fie în ultimele 7 zile."
+msgstr ""
+
+#: ctrlz.py:25 ctrlz.py:29 ctrlz.py:42 ctrlz.py:46 ctrlz.py:50 ctrlz.py:58
+msgid "The target of the audit log was not found."
+msgstr "Ținta jurnalului de audit nu a fost găsită."
+msgstr ""
+
+#: ctrlz.py:193
+msgid "Channel Create"
+msgstr "Creare canal"
+msgstr ""
+
+#: ctrlz.py:194
+msgid "Overwrite Create"
+msgstr "Suprascrie Creare"
+msgstr ""
+
+#: ctrlz.py:195
+msgid "Ban"
+msgstr "Interzice"
+msgstr ""
+
+#: ctrlz.py:196
+msgid "Bot Add"
+msgstr "Adăugați bot"
+msgstr ""
+
+#: ctrlz.py:197
+msgid "Role Create"
+msgstr "Creare rol"
+msgstr ""
+
+#: ctrlz.py:198
+msgid "Invite Create"
+msgstr "Invită la Creare"
+msgstr ""
+
+#: ctrlz.py:199
+msgid "Webhook Create"
+msgstr "Creați webhook"
+msgstr ""
+
+#: ctrlz.py:200
+msgid "Emoji Create"
+msgstr "Creați emoji"
+msgstr ""
+
+#: ctrlz.py:201
+msgid "Message Pin"
+msgstr "Pin mesaj"
+msgstr ""
+
+#: ctrlz.py:202
+msgid "Integration Create"
+msgstr "Creare integrare"
+msgstr ""
+
+#: ctrlz.py:203
+msgid "Stage Instance Create"
+msgstr "Etapa Creare instanță"
+msgstr ""
+
+#: ctrlz.py:204
+msgid "Sticker Create"
+msgstr "Creați autocolant"
+msgstr ""
+
+#: ctrlz.py:205
+msgid "Scheduled Event Create"
+msgstr "Creare eveniment programat"
+msgstr ""
+
+#: ctrlz.py:206
+msgid "Thread Create"
+msgstr "Creare thread"
+msgstr ""
+
+#: ctrlz.py:207
+msgid "Automod Rule Create"
+msgstr "Automod Rule Create"
+msgstr ""
+
+#: ctrlz.py:210
+msgid "Guild Update"
+msgstr "Actualizarea breslei"
+msgstr ""
+
+#: ctrlz.py:211
+msgid "Channel Update"
+msgstr "Actualizare canal"
+msgstr ""
+
+#: ctrlz.py:212
+msgid "Overwrite Update"
+msgstr "Suprascrie actualizare"
+msgstr ""
+
+#: ctrlz.py:213
+msgid "Member Update"
+msgstr "Actualizare pentru membri"
+msgstr ""
+
+#: ctrlz.py:214
+msgid "Member Role Update"
+msgstr "Actualizare rol membru"
+msgstr ""
+
+#: ctrlz.py:215
+msgid "Role Update"
+msgstr "Actualizare rol"
+msgstr ""
+
+#: ctrlz.py:216
+msgid "Webhook Update"
+msgstr "Actualizare webhook"
+msgstr ""
+
+#: ctrlz.py:217
+msgid "Emoji Update"
+msgstr "Actualizare emoji"
+msgstr ""
+
+#: ctrlz.py:218
+msgid "Stage Instance Update"
+msgstr "Actualizare a instanței de etapă"
+msgstr ""
+
+#: ctrlz.py:219
+msgid "Sticker Update"
+msgstr "Actualizare autocolant"
+msgstr ""
+
+#: ctrlz.py:220
+msgid "Scheduled Event Update"
+msgstr "Actualizarea evenimentului programat"
+msgstr ""
+
+#: ctrlz.py:221
+msgid "Thread Update"
+msgstr "Actualizare subiect"
+msgstr ""
+
+#: ctrlz.py:222
+msgid "Automod Rule Update"
+msgstr "Actualizare a regulilor Automod"
+msgstr ""
+
+#: ctrlz.py:225
+msgid "Channel Delete"
+msgstr "Ștergerea canalului"
+msgstr ""
+
+#: ctrlz.py:226
+msgid "Overwrite Delete"
+msgstr "Suprascrie Șterge"
+msgstr ""
+
+#: ctrlz.py:227
+msgid "Unban"
+msgstr "Humban"
+msgstr ""
+
+#: ctrlz.py:228
+msgid "Role Delete"
+msgstr "Rol Delete"
+msgstr ""
+
+#: ctrlz.py:229
+msgid "Invite Delete"
+msgstr "Invitați Ștergeți"
+msgstr ""
+
+#: ctrlz.py:230
+msgid "Webhook Delete"
+msgstr "Webhook Delete"
+msgstr ""
+
+#: ctrlz.py:231
+msgid "Message Unpin"
+msgstr "Anulați fixarea mesajului"
+msgstr ""
+
+#: ctrlz.py:232
+msgid "Scheduled Event Delete"
+msgstr "Ștergerea evenimentului programat"
+msgstr ""
+
+#: ctrlz.py:233
+msgid "Automod Rule Delete"
+msgstr "Automod Rule Delete"
+msgstr ""
+
+#: ctrlz.py:254 ctrlz.py:329
+msgid "Unknown audit log action."
+msgstr "Acțiune necunoscută în jurnalul de audit."
+msgstr ""
+
+#: ctrlz.py:256
+msgid "Audit Log — {label}"
+msgstr "Jurnal de audit — {label}"
+msgstr ""
+
+#: ctrlz.py:266
+msgid "Target:"
+msgstr "Ţintă:"
+msgstr ""
+
+#: ctrlz.py:275
+msgid "Reason:"
+msgstr "Motiv:"
+msgstr ""
+
+#: ctrlz.py:294
+msgid "Before:"
+msgstr "Înainte:"
+msgstr ""
+
+#: ctrlz.py:310
+msgid "After:"
+msgstr "După:"
+msgstr ""
+
+#: ctrlz.py:331
+msgid "The audit log has already been reverted."
+msgstr "Jurnalul de audit a fost deja inversat."
+msgstr ""
+
+#: ctrlz.py:337
+msgid ""
+msgstr ""
+"I don't have the necessary permissions or the target of the audit log is "
+"higher than me."
+msgstr ""
+
+#: ctrlz.py:339
+msgid "An error occurred while reverting the audit log:\n"
+msgstr "A apărut o eroare la revenirea jurnalului de audit:\n"
+msgstr ""
+
+#: ctrlz.py:380 ctrlz.py:404
+msgid "No audit logs found."
+msgstr "Nu au fost găsite jurnalele de audit."
+msgstr ""
+
+#: views.py:21
+msgid "Create Actions"
+msgstr "Creați acțiuni"
+msgstr ""
+
+#: views.py:22
+msgid "Update Actions"
+msgstr "Acțiuni de actualizare"
+msgstr ""
+
+#: views.py:23
+msgid "Delete Actions"
+msgstr "Șterge acțiuni"
+msgstr ""
+
+#: views.py:24 views.py:233
+msgid "Revert"
+msgstr "Reveni"
+msgstr ""
+
+#: views.py:29
+msgid "You are not allowed to use this interaction."
+msgstr "Nu aveți voie să utilizați această interacțiune."
+msgstr ""
+
+#: views.py:225
+msgid "✅ This Audit Log has been reverted successfully."
+msgstr "✅ Acest jurnal de audit a fost inversat cu succes."
+msgstr ""
+
+#: views.py:253
+msgid "Already Reverted"
+msgstr "S-a revenit deja"
+msgstr ""
+
+#: views.py:267
+msgid "Ignore"
+msgstr "Ignora"
+msgstr ""
+
+#: views.py:270
+msgid "Unignore"
+msgstr "Nu ignora"
+msgstr ""
+
+#: views.py:293
+msgid "Are you sure you want to revert all these audit logs?"
+msgstr "Sigur doriți să anulați toate aceste jurnale de audit?"
+msgstr ""
+
+#: views.py:306
+msgid "❌ There are no audit logs to revert."
+msgstr "❌ Nu există jurnalele de audit de revenit."
+msgstr ""
+
+#: views.py:309
+msgid "Reverting Audit Logs..."
+msgstr "Se inversează jurnalele de audit..."
+msgstr ""
+
+#: views.py:310
+msgid "This may take a while."
+msgstr "Acest lucru poate dura ceva timp."
+msgstr ""
+
+#: views.py:314 views.py:348
+msgid "Progression:"
+msgstr "Progresie:"
+msgstr ""
+
+#: views.py:318 views.py:354
+msgid "Errors:"
+msgstr "Erori:"
+msgstr ""
+
+#: views.py:319
+msgid "No errors yet."
+msgstr "Încă nu există erori."
+msgstr ""
+
+#: views.py:363
+msgid "❌ Errors..."
+msgstr "❌ Erori..."
+msgstr ""
+
+#: views.py:371
+msgid "✅ All Audit Logs have been reverted successfully."
+msgstr "✅ Toate jurnalele de audit au fost inversate cu succes."
+msgstr ""
+

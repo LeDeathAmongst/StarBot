@@ -1,0 +1,117 @@
+# Bangla translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:55+0100\n"
+"PO-Revision-Date: 2024-10-14 06:56+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dashboard.py:32
+msgid "This is not a valid URL."
+msgstr "এটি একটি বৈধ URL নয়৷"
+msgstr ""
+
+#: dashboard.py:35
+msgid "This is not a valid Dashboard redirect URI: it must end with `/callback`."
+msgstr "এটি একটি বৈধ ড্যাশবোর্ড পুনঃনির্দেশ URI নয়: এটি অবশ্যই `/কলব্যাক` দিয়ে শেষ হবে৷"
+msgstr ""
+
+#: dashboard.py:44
+msgid "This third party is not available."
+msgstr "এই তৃতীয় পক্ষ উপলব্ধ নয়."
+msgstr ""
+
+#: dashboard.py:341
+msgid ""
+msgstr ""
+"Starfire's Dashboard is not installed. Check <https://starfire-"
+"dashboard.readthedocs.io>."
+msgstr ""
+
+#: dashboard.py:346
+msgid "You can't access the Dashboard."
+msgstr "আপনি ড্যাশবোর্ড অ্যাক্সেস করতে পারবেন না।"
+msgstr ""
+
+#: dashboard.py:348
+msgid "Dashboard"
+msgstr "ড্যাশবোর্ড"
+msgstr ""
+
+#: dashboard.py:377
+msgid "Discord Secret"
+msgstr "ডিসকর্ড সিক্রেট"
+msgstr ""
+
+#: dashboard.py:385
+msgid "Discord OAuth secret set."
+msgstr "ডিসকর্ড OAuth গোপন সেট।"
+msgstr ""
+
+#: dashboard.py:408
+msgid "You are not allowed to use this interaction."
+msgstr "আপনি এই মিথস্ক্রিয়া ব্যবহার করার অনুমতি দেওয়া হয় না."
+msgstr ""
+
+#: dashboard.py:413
+msgid "Set Discord OAuth Secret"
+msgstr "ডিসকর্ড OAuth সিক্রেট সেট করুন"
+msgstr ""
+
+#: dashboard.py:421
+msgid "Click on the button below to set a secret for Discord OAuth."
+msgstr "Discord OAuth এর জন্য একটি গোপন সেট করতে নীচের বোতামে ক্লিক করুন৷"
+msgstr ""
+
+#: rpc/__init__.py:105
+msgid "{name} Dashboard"
+msgstr "{name} ড্যাশবোর্ড"
+msgstr ""
+
+#: rpc/__init__.py:113
+msgid ""
+msgstr ""
+"Hello, welcome to the **Red-DiscordBot Dashboard** for {name}! {name} is "
+"based off the popular bot **Red-DiscordBot**, an open source, "
+"multifunctional bot. It has *tons of features* including moderation, "
+"audio, economy, fun and more! Here, you can control and interact with "
+"{name}'s settings. **So what are you waiting for? Invite it now!**"
+msgstr ""
+
+#: rpc/__init__.py:125
+msgid "Interactive Dashboard to control and interact with {name}."
+msgstr "ইন্টারেক্টিভ ড্যাশবোর্ড নিয়ন্ত্রণ এবং {name} এর সাথে ইন্টারঅ্যাক্ট করতে।"
+msgstr ""
+
+#: rpc/default_cogs.py:101
+msgid ""
+msgstr ""
+"You attempted to create a new alias with the name {name}, but that name "
+"is already a command on this bot."
+msgstr ""
+
+#: rpc/default_cogs.py:108
+msgid ""
+msgstr ""
+"You attempted to create a new alias with the name {name}, but the command"
+" {command} does not exist."
+msgstr ""
+
+#: rpc/default_cogs.py:182
+msgid "`{command}`: "
+msgstr "`{command}`:"
+msgstr ""
+

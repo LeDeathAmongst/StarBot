@@ -1,0 +1,227 @@
+# Bangla translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:27+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "নাম"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "পাঠ্য"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "একটি কগ জন্য ডক্স তৈরি করুন"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "আপনি যে কগের জন্য ডক্স তৈরি করতে চান তার নাম (কেস সংবেদনশীল)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "বট উপসর্গ দিয়ে [p] এর সমস্ত ঘটনা প্রতিস্থাপন করুন"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "বট নামের সাথে [botname] এর সমস্ত ঘটনা প্রতিস্থাপন করুন"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "কনভার্টার এবং তাদের ডকস্ট্রিং এর মত অতিরিক্ত তথ্য অন্তর্ভুক্ত করুন"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "লুকানো কমান্ড অন্তর্ভুক্ত করুন"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "প্রতি সারি বিচ্ছিন্ন প্রতিটি কমান্ড সহ একটি csv অন্তর্ভুক্ত করুন"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "আপনার বর্তমানে লোড করা সমস্ত কগগুলির জন্য এখানে ডক্স রয়েছে!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "আমি যে কগ খুঁজে পাচ্ছি না, সম্ভবত এটি লোড হয় না?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "এখানে {} এর জন্য আপনার নথি রয়েছে!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "দশমিক স্থান ছাড়া একটি সংখ্যা।"
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "দশমিক স্থান সহ বা ছাড়া একটি সংখ্যা।"
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "1, 0, true, false, t, f হতে পারে"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "প্রতি"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "সেকেন্ড"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "দ্বিতীয়"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "স্ল্যাশ"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "আদেশ"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "হাইব্রিড"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "ব্যবহার"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "চেক করে"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "প্রয়োজন"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "ঐচ্ছিক"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "শুধুমাত্র সার্ভার"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "সীমাবদ্ধ"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "উপনাম"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "কুলডাউন"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "{} কনভার্টারের জন্য ডকস্ট্রিং বা ক্লাস পাওয়া যায়নি"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "{} রূপান্তরকারীর জন্য ডকস্ট্রিং পাওয়া যায়নি"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "{} রূপান্তরকারীর জন্য ক্লাস পাওয়া যায়নি"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "স্বয়ংসম্পূর্ণ"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "ডিফল্ট"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "পছন্দ"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "{} কমান্ডের {} আর্গুমেন্টের জন্য {} খুঁজে পাওয়া যায়নি"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "বর্ধিত Arg তথ্য\n"
+msgstr ""
+

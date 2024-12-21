@@ -1,0 +1,228 @@
+# Lithuanian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:30+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: lt\n"
+"Language-Team: lt <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "pavadinimas"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "tekstą"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Sukurkite dokumentus, skirtus krumpliaračiui"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Krumpliaračio, kurio dokumentus norite sukurti, pavadinimas (skiriamos didžiosios ir mažosios raidės)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Pakeiskite visus [p] atvejus robotų priešdėliu"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Pakeiskite visus [botname] atvejus roboto pavadinimu"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Įtraukite papildomos informacijos, pvz., keitiklius ir jų dokumentų eilutes"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Įtraukite paslėptas komandas"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Įtraukite csv, kiekviena komanda atskirta eilutėje"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Štai visų šiuo metu įkeltų krumpliaračių dokumentai!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Neradau to krumpliaračio, gal jis nepakrautas?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Štai jūsų dokumentai, skirti {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Skaičius be kablelio."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Skaičius su arba be kablelio."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Gali būti 1, 0, tiesa, klaidinga, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "per"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "sekundžių"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "antra"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Pasvirasis brūkšnys"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "komandą"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Hibridinis"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Naudojimas"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Patikros"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Privaloma"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Neprivaloma"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Tik serveris"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Apribota iki"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Pseudonimai"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Atšalimas"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Nepavyko gauti dokumentų eilutės arba klasės, skirtos {} konverteriui"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Nepavyko gauti {} konverterio dokumentų eilutės"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Nepavyko gauti kurso {} konverteriui"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Automatinis užbaigimas"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Numatytoji"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Pasirinkimai"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Nepavyko rasti {} komandos {} argumentui {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Išplėstinė Arg informacija\n"
+msgstr ""
+

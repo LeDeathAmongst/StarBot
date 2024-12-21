@@ -1,0 +1,12 @@
+{
+  "author": ["Star"],
+  "description": "UpdateBot (starbotUpdate) is a cog for updating your bot from within discord. When combined with the ability to restart the bot, updating starbot becomes a easier than ever!\n\nYou can choose from multiple automatic versions, or specify a particular version you'd like to install.",
+  "install_msg": "Thanks for installing `starbotupdate`. See `[p]help UpdateBot` and `[p]help update` for details.",
+  "short": "A command to update your bot!!",
+  "hidden": false,
+  "disabled": false,
+  "required_cogs": {},
+  "requirements": [],
+  "tags": ["update"],
+  "type": "COG"
+}

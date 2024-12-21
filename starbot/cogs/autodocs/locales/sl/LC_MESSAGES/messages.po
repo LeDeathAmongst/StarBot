@@ -1,0 +1,228 @@
+# Slovenian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:32+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sl\n"
+"Language-Team: sl <LL@li.org>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "ime"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "besedilo"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Ustvarite dokumente za zobnik"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Ime zobnika, za katerega želite izdelati dokumente (razlikuje med velikimi in malimi črkami)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Zamenjajte vse pojavitve [p] s predpono botov"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Zamenjaj vse pojavitve [ime bota] z imenom botov"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Vključite dodatne informacije, kot so pretvorniki in njihovi nizi dokumentov"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Vključite skrite ukaze"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Vključite csv z vsakim ukazom, ločenim na vrstico"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Tukaj so dokumenti za vse vaše trenutno naložene zobnike!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Tega zobnika nisem našel, morda ni naložen?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Tukaj so vaši dokumenti za {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Število brez decimalnih mest."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Število z decimalnimi mesti ali brez njih."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Lahko je 1, 0, true, false, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "per"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "sekund"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "drugo"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Poševnica"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Ukaz"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Hibrid"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Uporaba"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Čeki"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Obvezno"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Neobvezno"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Samo strežnik"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Omejeno na"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Vzdevki"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Ohladitev"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Ni bilo mogoče pridobiti niza dokumenta ali razreda za pretvornik {}"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Za pretvornik {} ni bilo mogoče pridobiti niza dokumentov"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Ni bilo mogoče dobiti razreda za pretvornik {}"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Samodokončanje"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Privzeto"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Izbire"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Ni bilo mogoče najti {} za argument {} ukaza {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Razširjene informacije Arg\n"
+msgstr ""
+

@@ -1,0 +1,128 @@
+:root {
+    --hypixel-blue: #4FAFEF;
+    --hypixel-dark-blue: #2E86C1;
+    --hypixel-gold: #FFD700;
+    --hypixel-dark: #1E1E1E;
+    --hypixel-light: #F0F0F0;
+}
+
+body {
+    font-family: 'Minecraft', Arial, sans-serif;
+    background-color: var(--hypixel-dark);
+    color: var(--hypixel-light);
+}
+
+/* PyData-style navigation */
+.bd-sidebar {
+    background-color: var(--hypixel-dark-blue);
+    border-right: 1px solid var(--hypixel-blue);
+}
+
+.bd-sidebar .nav > li > a {
+    color: var(--hypixel-light);
+}
+
+.bd-sidebar .nav > li > a:hover,
+.bd-sidebar .nav > li.active > a {
+    background-color: var(--hypixel-blue);
+    color: var(--hypixel-dark);
+}
+
+/* Main content area */
+.bd-content {
+    background-color: var(--hypixel-dark);
+    padding: 2rem;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--hypixel-gold);
+    border-bottom: 1px solid var(--hypixel-blue);
+    padding-bottom: 0.3em;
+}
+
+/* Links */
+a {
+    color: var(--hypixel-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hypixel-gold);
+    text-decoration: underline;
+}
+
+/* Code blocks */
+pre {
+    background-color: #2C2F33;
+    border: 1px solid var(--hypixel-blue);
+    border-radius: 4px;
+    padding: 1em;
+}
+
+code {
+    color: var(--hypixel-gold);
+    background-color: #2C2F33;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+th, td {
+    border: 1px solid var(--hypixel-blue);
+    padding: 0.5em;
+}
+
+th {
+    background-color: var(--hypixel-dark-blue);
+    color: var(--hypixel-light);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--hypixel-blue);
+    border-color: var(--hypixel-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--hypixel-dark-blue);
+    border-color: var(--hypixel-dark-blue);
+}
+
+/* Search box */
+.form-control {
+    background-color: var(--hypixel-dark);
+    color: var(--hypixel-light);
+    border: 1px solid var(--hypixel-blue);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--hypixel-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hypixel-blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hypixel-dark-blue);
+}
+
+/* Footer */
+footer {
+    background-color: var(--hypixel-dark-blue);
+    color: var(--hypixel-light);
+    padding: 1em;
+    text-align: center;
+}

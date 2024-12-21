@@ -1,0 +1,1108 @@
+# Romanian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:52+0100\n"
+"PO-Revision-Date: 2024-10-14 05:14+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ro\n"
+"Language-Team: ro <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
+" < 20)) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:41
+msgid ""
+msgstr ""
+"`Approved Channel:   `{}\n"
+"`Rejected Channel:   `{}\n"
+"`Pending Channel:    `{}\n"
+"`Anonymous:          `{}\n"
+"`Reveal Complete:    `{}\n"
+"`DM Result:          `{}\n"
+"`Discussion Threads: `{}\n"
+"`Delete Threads:     `{}\n"
+"`Upvote Emoji:       `{}\n"
+"`Downvote Emoji:     `{}\n"
+"`Show Vote Counts:   `{}\n"
+"`Suggestions:        `{}\n"
+"`Suggestion #:       `{}\n"
+msgstr ""
+
+#: commands/admin.py:56 commands/admin.py:57 commands/admin.py:58
+msgid "Not set"
+msgstr "Nu setat"
+msgstr ""
+
+#: commands/admin.py:74
+msgid "Ideaboard Settings"
+msgstr "Setări Ideaboard"
+msgstr ""
+
+#: commands/admin.py:76
+msgid "Cooldowns"
+msgstr "Cooldown-uri"
+msgstr ""
+
+#: commands/admin.py:77
+msgid ""
+msgstr ""
+"Base: {} seconds\n"
+"Role Cooldowns: {}"
+msgstr ""
+
+#: commands/admin.py:79 commands/admin.py:99 commands/admin.py:108
+#: commands/admin.py:116
+msgid "None Set"
+msgstr "Niciunul Set"
+msgstr ""
+
+#: commands/admin.py:83
+msgid "Account Age"
+msgstr "Vârsta contului"
+msgstr ""
+
+#: commands/admin.py:84
+msgid ""
+msgstr ""
+"Minimum age of account to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "Join Time"
+msgstr "Join Time"
+msgstr ""
+
+#: commands/admin.py:90
+msgid ""
+msgstr ""
+"Minimum time in server to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:95
+msgid "Vote Roles"
+msgstr "Roluri de vot"
+msgstr ""
+
+#: commands/admin.py:97
+msgid ""
+msgstr ""
+"Roles required to vote\n"
+"If no roles are set, anyone can vote.\n"
+msgstr ""
+
+#: commands/admin.py:103
+msgid "Suggest Roles"
+msgstr "Sugerați roluri"
+msgstr ""
+
+#: commands/admin.py:105
+msgid ""
+msgstr ""
+"Roles required to suggest\n"
+"If no roles are set, anyone can make suggestions.\n"
+msgstr ""
+
+#: commands/admin.py:112
+msgid "Approvers"
+msgstr "Aprobatori"
+msgstr ""
+
+#: commands/admin.py:114
+msgid "Roles required to approve suggestions\n"
+msgstr "Roluri necesare pentru aprobarea sugestiilor\n"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "LevelUp Integration"
+msgstr "Integrare LevelUp"
+msgstr ""
+
+#: commands/admin.py:122
+msgid ""
+msgstr ""
+"Minimum level required to vote or make suggestions.\n"
+"Vote: {}\n"
+"Suggest: {}"
+msgstr ""
+
+#: commands/admin.py:127
+msgid "Ark Playtime Integration"
+msgstr "Integrare Ark Playtime"
+msgstr ""
+
+#: commands/admin.py:128
+msgid ""
+msgstr ""
+"Minimum playtime to vote or make suggestions\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Role Blacklist"
+msgstr "Lista neagră de roluri"
+msgstr ""
+
+#: commands/admin.py:138
+msgid "User Blacklist"
+msgstr "Lista neagră a utilizatorilor"
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This channel is already set as the {} channel!"
+msgstr "Acest canal este deja setat ca canal {}!"
+msgstr ""
+
+#: commands/admin.py:157
+msgid "I don't have permission to send messages in {}!"
+msgstr "Nu am permisiunea de a trimite mesaje în {}!"
+msgstr ""
+
+#: commands/admin.py:159
+msgid "I don't have permission to send embeds in {}!"
+msgstr "Nu am permisiunea de a trimite încorporari în {}!"
+msgstr ""
+
+#: commands/admin.py:163
+msgid ""
+msgstr ""
+"Changing the pending channel will move all pending suggestions to the new"
+" channel.\n"
+msgstr ""
+
+#: commands/admin.py:164
+msgid "Are you sure you want to continue? (y/n)"
+msgstr "Ești sigur că vrei să continui? (da/nu)"
+msgstr ""
+
+#: commands/admin.py:169
+msgid "Change cancelled."
+msgstr "Modificare anulată."
+msgstr ""
+
+#: commands/admin.py:186 commands/adminbase.py:117 commands/adminbase.py:250
+#: commands/adminbase.py:329 commands/user.py:160
+msgid "Suggestion #{}"
+msgstr "Sugestia #{}"
+msgstr ""
+
+#: commands/admin.py:189 commands/adminbase.py:332 commands/user.py:164
+msgid "Posted anonymously"
+msgstr "Postat anonim"
+msgstr ""
+
+#: commands/admin.py:194 commands/adminbase.py:337 commands/user.py:166
+msgid "Posted by {}"
+msgstr "Postat de {}"
+msgstr ""
+
+#: commands/admin.py:200 commands/user.py:181
+msgid "Suggestion #{} Discussion"
+msgstr "Sugestia #{} Discuție"
+msgstr ""
+
+#: commands/admin.py:201 commands/user.py:182
+msgid "Discussion thread for suggestion #{}"
+msgstr "Fir de discuții pentru sugestia #{}"
+msgstr ""
+
+#: commands/admin.py:206
+msgid "Faile to create discussion thread in {} for suggestion #{}: {}"
+msgstr "Nu s-a putut crea firul de discuții în {} pentru sugestia nr.{}: {}"
+msgstr ""
+
+#: commands/admin.py:221
+msgid "The {} channel has been changed from {} to {}"
+msgstr "Canalul {} a fost schimbat din {} în {}"
+msgstr ""
+
+#: commands/admin.py:225
+msgid "Set {} channel to {}"
+msgstr "Setați canalul {} la {}"
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Anonymous suggestions are now {}."
+msgstr "Sugestiile anonime sunt acum {}."
+msgstr ""
+
+#: commands/admin.py:249
+msgid "Revealing of authors on rejection is now {}."
+msgstr "Dezvăluirea autorilor în cazul respingerii este acum {}."
+msgstr ""
+
+#: commands/admin.py:258
+msgid "Showing vote counts on suggestions is now {}."
+msgstr "Afișarea numărului de voturi pentru sugestii este acum {}."
+msgstr ""
+
+#: commands/admin.py:267
+msgid "DMing users about suggestion results is now {}."
+msgstr "Trimiterea prin DM utilizatorilor despre rezultatele sugestiilor este acum {}."
+msgstr ""
+
+#: commands/admin.py:276
+msgid "Discussion threads are now {}."
+msgstr "Firele de discuții sunt acum {}."
+msgstr ""
+
+#: commands/admin.py:284
+msgid "Threads will now be locked/archived when a suggestion is approved/denied."
+msgstr "Subiectele vor fi acum blocate/arhivate atunci când o sugestie este aprobată/respinsă."
+msgstr ""
+
+#: commands/admin.py:286
+msgid "Threads will now be deleted when a suggestion is approved/denied."
+msgstr "Subiectele vor fi acum șterse atunci când o sugestie este aprobată/respinsă."
+msgstr ""
+
+#: commands/admin.py:296
+msgid "Upvote emoji set to {}"
+msgstr "Emoji pentru vot favorabil setat la {}"
+msgstr ""
+
+#: commands/admin.py:304
+msgid "Downvote emoji set to {}"
+msgstr "Emoji de vot negativ setat la {}"
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Base cooldown set to {} seconds."
+msgstr "Timpul de răcire de bază setat la {} secunde."
+msgstr ""
+
+#: commands/admin.py:315
+msgid "Base cooldown disabled."
+msgstr "Cooldown de bază dezactivat."
+msgstr ""
+
+#: commands/admin.py:328
+msgid "Cooldown for role {} updated to {} seconds."
+msgstr "Temporizarea pentru rolul {} a fost actualizată la {} secunde."
+msgstr ""
+
+#: commands/admin.py:331
+msgid "Cooldown for role {} removed."
+msgstr "Timpul de răcire pentru rolul {} a fost eliminat."
+msgstr ""
+
+#: commands/admin.py:335
+msgid "Cooldown for role {} set to {} seconds."
+msgstr "Timpul de răcire pentru rolul {} este setat la {} secunde."
+msgstr ""
+
+#: commands/admin.py:337
+msgid "Cooldown for role {} already disabled."
+msgstr "Temporizarea pentru rolul {} a fost deja dezactivată."
+msgstr ""
+
+#: commands/admin.py:350
+msgid "Role {} `{}` voting whitelist."
+msgstr "Lista albă de vot pentru rolul {} `{}`."
+msgstr ""
+
+#: commands/admin.py:363
+msgid "Role {} `{}` suggest whitelist."
+msgstr "Rolul {} `{}` sugerează lista albă."
+msgstr ""
+
+#: commands/admin.py:376
+msgid "Role {} `{}` approvers list."
+msgstr "Lista aprobatorilor rol {} `{}`."
+msgstr ""
+
+#: commands/admin.py:386
+msgid "Role `{}` removed from blacklist."
+msgstr "Rolul „{}” a fost eliminat din lista neagră."
+msgstr ""
+
+#: commands/admin.py:389
+msgid "Role `{}` added to blacklist."
+msgstr "Rolul `{}` a fost adăugat la lista neagră."
+msgstr ""
+
+#: commands/admin.py:393
+msgid "Role with ID `{}` removed from blacklist."
+msgstr "Rol cu ​​ID `{}` eliminat din lista neagră."
+msgstr ""
+
+#: commands/admin.py:395
+msgid "Role with ID `{}` not found in blacklist."
+msgstr "Rolul cu ID `{}` nu a fost găsit în lista neagră."
+msgstr ""
+
+#: commands/admin.py:405
+msgid "User `{}` removed from blacklist."
+msgstr "Utilizatorul „{}” a fost eliminat din lista neagră."
+msgstr ""
+
+#: commands/admin.py:408
+msgid "User `{}` added to blacklist."
+msgstr "Utilizatorul `{}` a fost adăugat la lista neagră."
+msgstr ""
+
+#: commands/admin.py:412
+msgid "User with ID `{}` removed from blacklist."
+msgstr "Utilizatorul cu ID `{}` a fost eliminat din lista neagră."
+msgstr ""
+
+#: commands/admin.py:414
+msgid "User with ID `{}` not found in blacklist."
+msgstr "Utilizatorul cu ID `{}` nu a fost găsit în lista neagră."
+msgstr ""
+
+#: commands/admin.py:430
+msgid ""
+msgstr ""
+"Minimum account age to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:449
+msgid ""
+msgstr ""
+"Minimum join time to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:465
+msgid "LevelUp is not loaded. Please load it and try again."
+msgstr "LevelUp nu este încărcat. Încărcați-l și încercați din nou."
+msgstr ""
+
+#: commands/admin.py:472
+msgid "Minimum level to vote is set to {0} and to suggest is set to {1}."
+msgstr "Nivelul minim pentru vot este setat la {0} și pentru sugerare este setat la {1}."
+msgstr ""
+
+#: commands/admin.py:490
+msgid "This command is only available to Vertyco and Arkon."
+msgstr "Această comandă este disponibilă numai pentru Vertyco și Arkon."
+msgstr ""
+
+#: commands/admin.py:493
+msgid "ArkTools is not loaded. Please load it and try again."
+msgstr "ArkTools nu este încărcat. Încărcați-l și încercați din nou."
+msgstr ""
+
+#: commands/admin.py:500
+msgid ""
+msgstr ""
+"Minimum playtime to vote is set to {0} hours and to suggest is set to {1}"
+" hours."
+msgstr ""
+
+#: commands/admin.py:511
+msgid "This user has no stats to reset."
+msgstr "Acest utilizator nu are statistici de resetat."
+msgstr ""
+
+#: commands/admin.py:513
+msgid "Stats for {} have been reset."
+msgstr "Statisticile pentru {} au fost resetate."
+msgstr ""
+
+#: commands/admin.py:521
+msgid "No user stats to reset."
+msgstr "Nicio statistică utilizator de resetat."
+msgstr ""
+
+#: commands/admin.py:522
+msgid "Are you sure you want to reset all user stats?"
+msgstr "Sigur doriți să resetați toate statisticile utilizatorilor?"
+msgstr ""
+
+#: commands/admin.py:526
+msgid "Reset cancelled."
+msgstr "Resetarea a fost anulată."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "All user stats have been reset."
+msgstr "Toate statisticile utilizatorilor au fost resetate."
+msgstr ""
+
+#: commands/admin.py:536 commands/admin.py:629
+msgid "No suggestions have been made yet."
+msgstr "Nu au fost făcute sugestii încă."
+msgstr ""
+
+#: commands/admin.py:539
+msgid "The pending channel is not set."
+msgstr "Canalul în așteptare nu este setat."
+msgstr ""
+
+#: commands/admin.py:547
+msgid "All suggestions are accounted for."
+msgstr "Toate sugestiile sunt luate în considerare."
+msgstr ""
+
+#: commands/admin.py:548
+msgid "The following suggestions are missing their message:\n"
+msgstr "Următoarele sugestii lipsesc mesajul lor:\n"
+msgstr ""
+
+#: commands/admin.py:550
+msgid ""
+msgstr ""
+"\n"
+"- To prune these suggestions, use {}"
+msgstr ""
+
+#: commands/admin.py:551
+msgid ""
+msgstr ""
+"\n"
+"- To view the content of a suggestion, use {}"
+msgstr ""
+
+#: commands/admin.py:570
+msgid "- Removed {} profiles of users who have left the server.\n"
+msgstr "- S-au eliminat {} profiluri ale utilizatorilor care au părăsit serverul.\n"
+msgstr ""
+
+#: commands/admin.py:573
+msgid "- No profiles were removed.\n"
+msgstr "- Niciun profil nu a fost eliminat.\n"
+msgstr ""
+
+#: commands/admin.py:584
+msgid "- Removed upvote from user {} on suggestion #{}.\n"
+msgstr "- A fost eliminat votul pozitiv de la utilizatorul {} la sugestia #{}.\n"
+msgstr ""
+
+#: commands/admin.py:588
+msgid "- Removed downvote from user {} on suggestion #{}.\n"
+msgstr "- A fost eliminat votul negativ de la utilizatorul {} la sugestia #{}.\n"
+msgstr ""
+
+#: commands/admin.py:606
+msgid "- Removed suggestion #{} as the message no longer exists.\n"
+msgstr "- S-a eliminat sugestia #{}, deoarece mesajul nu mai există.\n"
+msgstr ""
+
+#: commands/admin.py:612
+msgid "- Failed to delete discussion thread for suggestion #{}: {}.\n"
+msgstr "- Nu s-a șters firul de discuții pentru sugestia #{}: {}.\n"
+msgstr ""
+
+#: commands/admin.py:689
+msgid "Server Insights"
+msgstr "Informații despre server"
+msgstr ""
+
+#: commands/admin.py:691
+msgid "Average Suggestions Made Per User"
+msgstr "Sugestii medii făcute per utilizator"
+msgstr ""
+
+#: commands/admin.py:696
+msgid "Most Suggestions Made"
+msgstr "Cele mai multe sugestii făcute"
+msgstr ""
+
+#: commands/admin.py:701
+msgid "Most Successful Users"
+msgstr "Cei mai de succes utilizatori"
+msgstr ""
+
+#: commands/admin.py:703
+msgid "These users have the most suggestions approved.\n"
+msgstr "Acești utilizatori au cele mai multe sugestii aprobate.\n"
+msgstr ""
+
+#: commands/admin.py:709
+msgid "Least Successful Users"
+msgstr "Utilizatori cel mai puțin de succes"
+msgstr ""
+
+#: commands/admin.py:711
+msgid "These users have the most suggestions denied.\n"
+msgstr "Acești utilizatori au cele mai multe sugestii refuzate.\n"
+msgstr ""
+
+#: commands/admin.py:717
+msgid "Highest Approval Ratio"
+msgstr "Cel mai mare raport de aprobare"
+msgstr ""
+
+#: commands/admin.py:719
+msgid "These users have the highest approval to rejection ratio.\n"
+msgstr "Acești utilizatori au cel mai mare raport de aprobare/respingere.\n"
+msgstr ""
+
+#: commands/admin.py:725
+msgid "Lowest Approval Ratio"
+msgstr "Cel mai mic raport de aprobare"
+msgstr ""
+
+#: commands/admin.py:727
+msgid "These users have the lowest approval to rejection ratio.\n"
+msgstr "Acești utilizatori au cel mai mic raport de aprobare/respingere.\n"
+msgstr ""
+
+#: commands/admin.py:733
+msgid "Most Wins"
+msgstr "Cele mai multe victorii"
+msgstr ""
+
+#: commands/admin.py:735
+msgid "These users have the most votes that ended in their favor.\n"
+msgstr "Acești utilizatori au cele mai multe voturi care s-au încheiat în favoarea lor.\n"
+msgstr ""
+
+#: commands/admin.py:740
+msgid "Most Losses"
+msgstr "Cele mai multe pierderi"
+msgstr ""
+
+#: commands/admin.py:742
+msgid "These users have the most votes that ended against their favor.\n"
+msgstr "Acești utilizatori au cele mai multe voturi care s-au încheiat împotriva favoării lor.\n"
+msgstr ""
+
+#: commands/admin.py:748
+msgid "Most Optimistic Users"
+msgstr "Cei mai optimisti utilizatori"
+msgstr ""
+
+#: commands/admin.py:750
+msgid "These users have the highest upvote to downvote ratio.\n"
+msgstr "Acești utilizatori au cel mai mare raport dintre voturi pozitive și voturi negative.\n"
+msgstr ""
+
+#: commands/admin.py:756
+msgid "Most Negative Users"
+msgstr "Cei mai mulți utilizatori negativi"
+msgstr ""
+
+#: commands/admin.py:758
+msgid "These users have the highest downvote to upvote ratio.\n"
+msgstr "Acești utilizatori au cel mai mare raport dintre votul negativ și votul pozitiv.\n"
+msgstr ""
+
+#: commands/admin.py:764
+msgid "Highest Karma"
+msgstr "Karma cea mai înaltă"
+msgstr ""
+
+#: commands/admin.py:766
+msgid "These users have the highest received upvote to downvote ratio.\n"
+msgstr "Acești utilizatori au cea mai mare proporție de vot pozitiv/negativ primit.\n"
+msgstr ""
+
+#: commands/admin.py:772
+msgid "Lowest Karma"
+msgstr "Karma cea mai scăzută"
+msgstr ""
+
+#: commands/admin.py:774
+msgid "These users have the lowest received upvote to downvote ratio.\n"
+msgstr "Acești utilizatori au cel mai mic raport dintre vot pozitiv și vot negativ primit.\n"
+msgstr ""
+
+#: commands/adminbase.py:21
+msgid "Approve a suggestion."
+msgstr "Aprobați o sugestie."
+msgstr ""
+
+#: commands/adminbase.py:22 commands/adminbase.py:156
+msgid "Suggestion number"
+msgstr "Numărul de sugestie"
+msgstr ""
+
+#: commands/adminbase.py:30 commands/adminbase.py:164 commands/adminbase.py:303
+#: commands/adminbase.py:419
+msgid "No approvers have been set! Use the {} command to add one."
+msgstr "Nu au fost setati aprobatori! Utilizați comanda {} pentru a adăuga una."
+msgstr ""
+
+#: commands/adminbase.py:35
+msgid "You do not have the required roles to approve suggestions."
+msgstr "Nu aveți rolurile necesare pentru a aproba sugestii."
+msgstr ""
+
+#: commands/adminbase.py:39 commands/adminbase.py:173 commands/user.py:46
+msgid "The pending suggestions channel has not been set!"
+msgstr "Canalul de sugestii în așteptare nu a fost setat!"
+msgstr ""
+
+#: commands/adminbase.py:42
+msgid "The approved suggestions channel has not been set!"
+msgstr "Canalul de sugestii aprobat nu a fost setat!"
+msgstr ""
+
+#: commands/adminbase.py:47 commands/adminbase.py:181 commands/adminbase.py:435
+#: commands/user.py:51
+msgid "The pending suggestions channel no longer exists!"
+msgstr "Canalul de sugestii în așteptare nu mai există!"
+msgstr ""
+
+#: commands/adminbase.py:51 commands/adminbase.py:123
+msgid "The approved suggestions channel no longer exists!"
+msgstr "Canalul de sugestii aprobat nu mai există!"
+msgstr ""
+
+#: commands/adminbase.py:61 commands/adminbase.py:195
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the suggestion"
+" channels."
+msgstr ""
+
+#: commands/adminbase.py:66 commands/adminbase.py:200 commands/adminbase.py:314
+#: commands/adminbase.py:430
+msgid "That suggestion does not exist!"
+msgstr "Acea sugestie nu există!"
+msgstr ""
+
+#: commands/adminbase.py:73 commands/adminbase.py:207
+msgid "I couldn't delete the pending message: {}"
+msgstr "Nu am putut șterge mesajul în așteptare: {}"
+msgstr ""
+
+#: commands/adminbase.py:85
+msgid " [Approved]"
+msgstr "[Aprobat]"
+msgstr ""
+
+#: commands/adminbase.py:89 commands/adminbase.py:98
+msgid "Approved Suggestion"
+msgstr "Sugestie aprobată"
+msgstr ""
+
+#: commands/adminbase.py:101 commands/adminbase.py:236
+#: commands/adminbase.py:398
+msgid "Suggested by {}"
+msgstr "Sugerat de {}"
+msgstr ""
+
+#: commands/adminbase.py:104
+msgid "Suggested by a user who is no longer in the server."
+msgstr "Sugerat de un utilizator care nu se mai află pe server."
+msgstr ""
+
+#: commands/adminbase.py:107
+msgid "Reason"
+msgstr "Motiv"
+msgstr ""
+
+#: commands/adminbase.py:111 commands/adminbase.py:244
+msgid "Results"
+msgstr "Rezultate"
+msgstr ""
+
+#: commands/adminbase.py:120
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the approved "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:140
+msgid "Your [suggestion #{}]({}) has been approved!"
+msgstr "[Sugestia dvs. #{}]({}) a fost aprobată!"
+msgstr ""
+
+#: commands/adminbase.py:142 commands/adminbase.py:275
+msgid ""
+msgstr ""
+"\n"
+"Reason: {}"
+msgstr ""
+
+#: commands/adminbase.py:151
+msgid "Suggestion #{} has been approved."
+msgstr "Sugestia #{} a fost aprobată."
+msgstr ""
+
+#: commands/adminbase.py:155
+msgid "Reject a suggestion."
+msgstr "Respinge o sugestie."
+msgstr ""
+
+#: commands/adminbase.py:169
+msgid "You do not have the required roles to reject suggestions."
+msgstr "Nu aveți rolurile necesare pentru a respinge sugestiile."
+msgstr ""
+
+#: commands/adminbase.py:176
+msgid "The rejected suggestions channel has not been set!"
+msgstr "Canalul de sugestii respinse nu a fost setat!"
+msgstr ""
+
+#: commands/adminbase.py:185
+msgid "The rejected suggestions channel no longer exists!"
+msgstr "Canalul de sugestii respins nu mai există!"
+msgstr ""
+
+#: commands/adminbase.py:219
+msgid " [Rejected]"
+msgstr "[Respins]"
+msgstr ""
+
+#: commands/adminbase.py:223 commands/adminbase.py:231
+msgid "Rejected Suggestion"
+msgstr "Sugestie respinsă"
+msgstr ""
+
+#: commands/adminbase.py:234
+msgid "Suggested anonymously"
+msgstr "Sugerat anonim"
+msgstr ""
+
+#: commands/adminbase.py:240
+msgid "Reason for Rejection"
+msgstr "Motivul respingerii"
+msgstr ""
+
+#: commands/adminbase.py:253
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the denied "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:256
+msgid "The denied suggestions channel no longer exists!"
+msgstr "Canalul de sugestii refuzate nu mai există!"
+msgstr ""
+
+#: commands/adminbase.py:273
+msgid "Your [suggestion #{}]({}) has been rejected!"
+msgstr "[Sugestia dvs. #{}]({}) a fost respinsă!"
+msgstr ""
+
+#: commands/adminbase.py:284
+msgid "Suggestion #{} has been rejected."
+msgstr "Sugestia #{} a fost respinsă."
+msgstr ""
+
+#: commands/adminbase.py:290
+msgid "View the current upvoters and downvoters of a suggestion."
+msgstr "Vizualizați votanții actuali pozitivi și negativi ai unei sugestii."
+msgstr ""
+
+#: commands/adminbase.py:292 commands/adminbase.py:410
+msgid "Suggestion number to view votes for"
+msgstr "Număr de sugestie pentru a vedea voturile"
+msgstr ""
+
+#: commands/adminbase.py:309
+msgid "You do not have the required roles to inspect suggestions."
+msgstr "Nu aveți rolurile necesare pentru a inspecta sugestiile."
+msgstr ""
+
+#: commands/adminbase.py:322
+msgid ""
+msgstr ""
+"I cannot find the message associated with this suggestion, would you like"
+" me to repost it? (y/n)"
+msgstr ""
+
+#: commands/adminbase.py:343
+msgid "Suggestion #{} has been reposted."
+msgstr "Sugestia #{} a fost repostată."
+msgstr ""
+
+#: commands/adminbase.py:345
+msgid "Not reposting Suggestion #{}.\n"
+msgstr "Nu repostează sugestia #{}.\n"
+msgstr ""
+
+#: commands/adminbase.py:346
+msgid "You can remove it from the config by typing {}"
+msgstr "Îl puteți elimina din configurare tastând {}"
+msgstr ""
+
+#: commands/adminbase.py:353
+msgid "Votes for Suggestion #{}"
+msgstr "Voturi pentru sugestia #{}"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "Upvoters ({})"
+msgstr "Au votat favorabil ({})"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "No upvotes yet"
+msgstr "Încă nu există voturi pozitive"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "Downvoters ({})"
+msgstr "Avocatori negativi ({})"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "No downvotes yet"
+msgstr "Încă nu există voturi negative"
+msgstr ""
+
+#: commands/adminbase.py:369 commands/adminbase.py:370
+#: commands/adminbase.py:392 commands/adminbase.py:393
+msgid "N/A"
+msgstr "N / A"
+msgstr ""
+
+#: commands/adminbase.py:373
+msgid "Upvoters ({}):\n"
+msgstr "Avocați favorabil ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:381
+msgid ""
+msgstr ""
+"\n"
+"Downvoters ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:402
+msgid "Suggested by {} [No longer in server]"
+msgstr "Sugerat de {} [Nu mai este pe server]"
+msgstr ""
+
+#: commands/adminbase.py:408
+msgid "Refresh the buttons on a suggestion if it gets stuck."
+msgstr "Actualizează butoanele unei sugestii dacă se blochează."
+msgstr ""
+
+#: commands/adminbase.py:425
+msgid "You do not have the required roles to refresh suggestions."
+msgstr "Nu aveți rolurile necesare pentru a reîmprospăta sugestiile."
+msgstr ""
+
+#: commands/adminbase.py:441
+msgid "I cannot find the message associated with this suggestion."
+msgstr "Nu pot găsi mesajul asociat cu această sugestie."
+msgstr ""
+
+#: commands/adminbase.py:446
+msgid "Suggestion #{} has been refreshed."
+msgstr "Sugestia #{} a fost actualizată."
+msgstr ""
+
+#: commands/user.py:23
+msgid "Share an idea/make a suggestion."
+msgstr "Împărtășește o idee/fă o sugestie."
+msgstr ""
+
+#: commands/user.py:59
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the pending "
+"suggestions channel."
+msgstr ""
+
+#: commands/user.py:66
+msgid "You do not have the required roles to make suggestions."
+msgstr "Nu aveți rolurile necesare pentru a face sugestii."
+msgstr ""
+
+#: commands/user.py:72
+msgid "Your account is too young to make suggestions."
+msgstr "Contul dvs. este prea tânăr pentru a face sugestii."
+msgstr ""
+
+#: commands/user.py:78
+msgid "You haven't been in the server long enough to make suggestions."
+msgstr "Nu ați fost suficient de mult timp pe server pentru a face sugestii."
+msgstr ""
+
+#: commands/user.py:82
+msgid "You are not allowed to make suggestions due to a blacklisted role."
+msgstr "Nu aveți voie să faceți sugestii din cauza unui rol pe lista neagră."
+msgstr ""
+
+#: commands/user.py:86
+msgid "You are blacklisted from making suggestions."
+msgstr "Sunteți pe lista neagră pentru a face sugestii."
+msgstr ""
+
+#: commands/user.py:89
+msgid "No approvers have been set! Admins needs to use the {} command to add one."
+msgstr "Nu au fost setati aprobatori! Administratorii trebuie să folosească comanda {} pentru a adăuga una."
+msgstr ""
+
+#: commands/user.py:96
+msgid ""
+msgstr ""
+"You must be level {} or higher to make suggestions.\n"
+"Use the {} command to check your level."
+msgstr ""
+
+#: commands/user.py:113
+msgid "You must be registered in the ArkTools database to make suggestions."
+msgstr "Trebuie să fiți înregistrat în baza de date ArkTools pentru a face sugestii."
+msgstr ""
+
+#: commands/user.py:119
+msgid "You must have at least {} hours of playtime to make suggestions."
+msgstr "Trebuie să aveți cel puțin {} ore de joc pentru a face sugestii."
+msgstr ""
+
+#: commands/user.py:148
+msgid "You must wait `{}` before making another suggestion."
+msgstr "Trebuie să așteptați `{}` înainte de a face o altă sugestie."
+msgstr ""
+
+#: commands/user.py:197
+msgid "Your [{}]({}) has been posted!"
+msgstr "[{}]({}) dvs. a fost postat!"
+msgstr ""
+
+#: commands/user.py:199
+msgid "Your {} has been posted!"
+msgstr "{} dvs. a fost postat!"
+msgstr ""
+
+#: commands/user.py:222
+msgid "View your profile stats regarding suggestions and votes."
+msgstr "Vizualizați statisticile profilului dvs. referitoare la sugestii și voturi."
+msgstr ""
+
+#: commands/user.py:234
+msgid "Stats for {}"
+msgstr "Statistici pentru {}"
+msgstr ""
+
+#: commands/user.py:238
+msgid "Suggestion Summary"
+msgstr "Rezumatul sugestiilor"
+msgstr ""
+
+#: commands/user.py:239
+msgid ""
+msgstr ""
+"Suggestions Made: {}\n"
+"Suggestions Approved: {}\n"
+"Suggestions Denied: {}\n"
+"Karma: {}"
+msgstr ""
+
+#: commands/user.py:248
+msgid "Voting Summary"
+msgstr "Rezumatul votului"
+msgstr ""
+
+#: commands/user.py:249
+msgid ""
+msgstr ""
+"Total Upvotes: {}\n"
+"Total Downvotes: {}\n"
+"Successful Votes (Wins): {}\n"
+"Unsuccessful Votes (Losses): {}"
+msgstr ""
+
+#: common/listener.py:74
+msgid " [Deleted]"
+msgstr "[Șters]"
+msgstr ""
+
+#: common/listener.py:78
+msgid "Deleted Suggestion"
+msgstr "Sugestie ștearsă"
+msgstr ""
+
+#: views/voteview.py:64
+msgid "This suggestion no longer exists in the config!"
+msgstr "Această sugestie nu mai există în configurație!"
+msgstr ""
+
+#: views/voteview.py:77
+msgid "You are blacklisted from voting."
+msgstr "Sunteți pe lista neagră de la vot."
+msgstr ""
+
+#: views/voteview.py:84
+msgid "You have {grammar} and cannot vote."
+msgstr "Ai {gramatica} și nu poți vota."
+msgstr ""
+
+#: views/voteview.py:92
+msgid "You do not have any of the required roles to vote."
+msgstr "Nu aveți niciunul dintre rolurile necesare pentru a vota."
+msgstr ""
+
+#: views/voteview.py:102
+msgid "Your account is too new! You must wait `{tleft}` before you can vote."
+msgstr "Contul dvs. este prea nou! Trebuie să așteptați `{left}` înainte de a putea vota."
+msgstr ""
+
+#: views/voteview.py:111
+msgid ""
+msgstr ""
+"You joined the server too recently! You must wait `{tleft}` before you "
+"can vote."
+msgstr ""
+
+#: views/voteview.py:125
+msgid "You must be level {level} or higher to vote."
+msgstr "Trebuie să fii de nivelul {level} sau mai mare pentru a vota."
+msgstr ""
+
+#: views/voteview.py:140
+msgid "Your in-game profile must be registered in order to vote on suggestions.\n"
+msgstr "Profilul dvs. din joc trebuie să fie înregistrat pentru a vota sugestii.\n"
+msgstr ""
+
+#: views/voteview.py:141
+msgid "Use the {} command to link your discord account."
+msgstr "Utilizați comanda {} pentru a vă conecta contul Discord."
+msgstr ""
+
+#: views/voteview.py:147
+msgid "You must have at least {} hours of playtime to vote."
+msgstr "Trebuie să aveți cel puțin {} ore de joacă pentru a vota."
+msgstr ""
+
+#: views/voteview.py:170 views/voteview.py:213
+msgid "You cannot vote on your own suggestion."
+msgstr "Nu puteți vota pe propria sugestie."
+msgstr ""
+
+#: views/voteview.py:173
+msgid "You have switched your downvote to an upvote."
+msgstr "Ți-ai schimbat votul negativ cu un vot pozitiv."
+msgstr ""
+
+#: views/voteview.py:181
+msgid "You have removed your upvote."
+msgstr "Ți-ai eliminat votul pozitiv."
+msgstr ""
+
+#: views/voteview.py:186
+msgid "You have upvoted this suggestion."
+msgstr "Ați votat pozitiv această sugestie."
+msgstr ""
+
+#: views/voteview.py:216
+msgid "You have switched your upvote to a downvote."
+msgstr "Ți-ai schimbat votul pozitiv cu un vot negativ."
+msgstr ""
+
+#: views/voteview.py:224
+msgid "You have removed your downvote."
+msgstr "Ți-ai eliminat votul negativ."
+msgstr ""
+
+#: views/voteview.py:229
+msgid "You have downvoted this suggestion."
+msgstr "Ați votat negativ această sugestie."
+msgstr ""
+

@@ -1,0 +1,228 @@
+# Latvian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:31+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: lv\n"
+"Language-Team: lv <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
+" 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "nosaukums"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "tekstu"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Izveidojiet dokumentus zobratam"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Tā zobrata nosaukums, kuram vēlaties izveidot dokumentus (reģistrjutīgs)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Aizstāt visus [p] gadījumus ar botu prefiksu"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Aizstāt visus [botname] gadījumus ar robota nosaukumu"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Iekļaujiet papildu informāciju, piemēram, pārveidotājus un to dokumentu virknes"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Iekļaut slēptās komandas"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Iekļaujiet csv failu ar katru komandu, kas ir izolēta katrā rindā"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Šeit ir visu jūsu pašlaik ielādēto zobratu dokumenti!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Es nevarēju atrast to zobratu, varbūt tas nav ielādēts?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Šeit ir jūsu dokumenti par {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Skaitlis bez zīmēm aiz komata."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Skaitlis ar vai bez zīmēm aiz komata."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Var būt 1, 0, patiess, nepatiess, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "per"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "sekundes"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "otrais"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Slīpsvītra"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Pavēli"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Hibrīds"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Lietošana"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Pārbaudes"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Obligāti"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Pēc izvēles"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Tikai serveris"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Ierobežots līdz"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Pseidonīmi"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Atdzesēšana"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Nevarēja iegūt dokumentu virkni vai klasi {} pārveidotājam"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Nevarēja iegūt dokumentu virkni {} pārveidotājam"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Nevarēja iegūt klasi {} pārveidotājam"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Automātiskā pabeigšana"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Noklusējums"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Izvēles"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Nevarēja atrast {} komandas {} argumentam {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Paplašināta Arg informācija\n"
+msgstr ""
+

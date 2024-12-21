@@ -1,0 +1,1107 @@
+# Bulgarian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:52+0100\n"
+"PO-Revision-Date: 2024-10-14 04:54+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bg\n"
+"Language-Team: bg <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:41
+msgid ""
+msgstr ""
+"`Approved Channel:   `{}\n"
+"`Rejected Channel:   `{}\n"
+"`Pending Channel:    `{}\n"
+"`Anonymous:          `{}\n"
+"`Reveal Complete:    `{}\n"
+"`DM Result:          `{}\n"
+"`Discussion Threads: `{}\n"
+"`Delete Threads:     `{}\n"
+"`Upvote Emoji:       `{}\n"
+"`Downvote Emoji:     `{}\n"
+"`Show Vote Counts:   `{}\n"
+"`Suggestions:        `{}\n"
+"`Suggestion #:       `{}\n"
+msgstr ""
+
+#: commands/admin.py:56 commands/admin.py:57 commands/admin.py:58
+msgid "Not set"
+msgstr "Не е зададено"
+msgstr ""
+
+#: commands/admin.py:74
+msgid "Ideaboard Settings"
+msgstr "Настройки на таблото за идеи"
+msgstr ""
+
+#: commands/admin.py:76
+msgid "Cooldowns"
+msgstr "Охлаждания"
+msgstr ""
+
+#: commands/admin.py:77
+msgid ""
+msgstr ""
+"Base: {} seconds\n"
+"Role Cooldowns: {}"
+msgstr ""
+
+#: commands/admin.py:79 commands/admin.py:99 commands/admin.py:108
+#: commands/admin.py:116
+msgid "None Set"
+msgstr "Няма зададено"
+msgstr ""
+
+#: commands/admin.py:83
+msgid "Account Age"
+msgstr "Възраст на акаунта"
+msgstr ""
+
+#: commands/admin.py:84
+msgid ""
+msgstr ""
+"Minimum age of account to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "Join Time"
+msgstr "Време за присъединяване"
+msgstr ""
+
+#: commands/admin.py:90
+msgid ""
+msgstr ""
+"Minimum time in server to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:95
+msgid "Vote Roles"
+msgstr "Роли за гласуване"
+msgstr ""
+
+#: commands/admin.py:97
+msgid ""
+msgstr ""
+"Roles required to vote\n"
+"If no roles are set, anyone can vote.\n"
+msgstr ""
+
+#: commands/admin.py:103
+msgid "Suggest Roles"
+msgstr "Предложете роли"
+msgstr ""
+
+#: commands/admin.py:105
+msgid ""
+msgstr ""
+"Roles required to suggest\n"
+"If no roles are set, anyone can make suggestions.\n"
+msgstr ""
+
+#: commands/admin.py:112
+msgid "Approvers"
+msgstr "Одобряващи"
+msgstr ""
+
+#: commands/admin.py:114
+msgid "Roles required to approve suggestions\n"
+msgstr "Необходими роли за одобряване на предложения\n"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "LevelUp Integration"
+msgstr "LevelUp интеграция"
+msgstr ""
+
+#: commands/admin.py:122
+msgid ""
+msgstr ""
+"Minimum level required to vote or make suggestions.\n"
+"Vote: {}\n"
+"Suggest: {}"
+msgstr ""
+
+#: commands/admin.py:127
+msgid "Ark Playtime Integration"
+msgstr "Интегриране на Ark Playtime"
+msgstr ""
+
+#: commands/admin.py:128
+msgid ""
+msgstr ""
+"Minimum playtime to vote or make suggestions\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Role Blacklist"
+msgstr "Черен списък на ролите"
+msgstr ""
+
+#: commands/admin.py:138
+msgid "User Blacklist"
+msgstr "Черен списък на потребителите"
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This channel is already set as the {} channel!"
+msgstr "Този канал вече е зададен като {} канал!"
+msgstr ""
+
+#: commands/admin.py:157
+msgid "I don't have permission to send messages in {}!"
+msgstr "Нямам разрешение да изпращам съобщения в {}!"
+msgstr ""
+
+#: commands/admin.py:159
+msgid "I don't have permission to send embeds in {}!"
+msgstr "Нямам разрешение да изпращам вграждания в {}!"
+msgstr ""
+
+#: commands/admin.py:163
+msgid ""
+msgstr ""
+"Changing the pending channel will move all pending suggestions to the new"
+" channel.\n"
+msgstr ""
+
+#: commands/admin.py:164
+msgid "Are you sure you want to continue? (y/n)"
+msgstr "Сигурни ли сте, че искате да продължите? (да/не)"
+msgstr ""
+
+#: commands/admin.py:169
+msgid "Change cancelled."
+msgstr "Промяната е отменена."
+msgstr ""
+
+#: commands/admin.py:186 commands/adminbase.py:117 commands/adminbase.py:250
+#: commands/adminbase.py:329 commands/user.py:160
+msgid "Suggestion #{}"
+msgstr "Предложение #{}"
+msgstr ""
+
+#: commands/admin.py:189 commands/adminbase.py:332 commands/user.py:164
+msgid "Posted anonymously"
+msgstr "Публикувано анонимно"
+msgstr ""
+
+#: commands/admin.py:194 commands/adminbase.py:337 commands/user.py:166
+msgid "Posted by {}"
+msgstr "Публикувано от {}"
+msgstr ""
+
+#: commands/admin.py:200 commands/user.py:181
+msgid "Suggestion #{} Discussion"
+msgstr "Предложение #{} Дискусия"
+msgstr ""
+
+#: commands/admin.py:201 commands/user.py:182
+msgid "Discussion thread for suggestion #{}"
+msgstr "Дискусионна нишка за предложение #{}"
+msgstr ""
+
+#: commands/admin.py:206
+msgid "Faile to create discussion thread in {} for suggestion #{}: {}"
+msgstr "Неуспешно създаване на дискусионна нишка в {} за предложение #{}: {}"
+msgstr ""
+
+#: commands/admin.py:221
+msgid "The {} channel has been changed from {} to {}"
+msgstr "Каналът {} е променен от {} на {}"
+msgstr ""
+
+#: commands/admin.py:225
+msgid "Set {} channel to {}"
+msgstr "Задайте {} канал на {}"
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Anonymous suggestions are now {}."
+msgstr "Анонимните предложения вече са {}."
+msgstr ""
+
+#: commands/admin.py:249
+msgid "Revealing of authors on rejection is now {}."
+msgstr "Разкриването на автори при отхвърляне вече е {}."
+msgstr ""
+
+#: commands/admin.py:258
+msgid "Showing vote counts on suggestions is now {}."
+msgstr "Показването на броя на гласовете за предложения вече е {}."
+msgstr ""
+
+#: commands/admin.py:267
+msgid "DMing users about suggestion results is now {}."
+msgstr "Изпращането на DM на потребителите относно резултатите от предложения вече е {}."
+msgstr ""
+
+#: commands/admin.py:276
+msgid "Discussion threads are now {}."
+msgstr "Дискусионните нишки вече са {}."
+msgstr ""
+
+#: commands/admin.py:284
+msgid "Threads will now be locked/archived when a suggestion is approved/denied."
+msgstr "Нишките вече ще бъдат заключени/архивирани, когато дадено предложение бъде одобрено/отказано."
+msgstr ""
+
+#: commands/admin.py:286
+msgid "Threads will now be deleted when a suggestion is approved/denied."
+msgstr "Нишките вече ще бъдат изтрити, когато дадено предложение бъде одобрено/отказано."
+msgstr ""
+
+#: commands/admin.py:296
+msgid "Upvote emoji set to {}"
+msgstr "Emoji с гласуване „за“ е зададено на {}"
+msgstr ""
+
+#: commands/admin.py:304
+msgid "Downvote emoji set to {}"
+msgstr "Гласуване против емотикони, зададено на {}"
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Base cooldown set to {} seconds."
+msgstr "Основното изчакване е зададено на {} секунди."
+msgstr ""
+
+#: commands/admin.py:315
+msgid "Base cooldown disabled."
+msgstr "Основното изчакване е деактивирано."
+msgstr ""
+
+#: commands/admin.py:328
+msgid "Cooldown for role {} updated to {} seconds."
+msgstr "Времето за изчакване за роля {} е актуализирано до {} секунди."
+msgstr ""
+
+#: commands/admin.py:331
+msgid "Cooldown for role {} removed."
+msgstr "Премахнато изчакване за роля {}."
+msgstr ""
+
+#: commands/admin.py:335
+msgid "Cooldown for role {} set to {} seconds."
+msgstr "Времето за изчакване за роля {} е зададено на {} секунди."
+msgstr ""
+
+#: commands/admin.py:337
+msgid "Cooldown for role {} already disabled."
+msgstr "Времето за изчакване за роля {} вече е деактивирано."
+msgstr ""
+
+#: commands/admin.py:350
+msgid "Role {} `{}` voting whitelist."
+msgstr "Роля {} `{}` гласуване в бял списък."
+msgstr ""
+
+#: commands/admin.py:363
+msgid "Role {} `{}` suggest whitelist."
+msgstr "Роля {} `{}` предлага бял списък."
+msgstr ""
+
+#: commands/admin.py:376
+msgid "Role {} `{}` approvers list."
+msgstr "Списък на одобряващите роля {} `{}`."
+msgstr ""
+
+#: commands/admin.py:386
+msgid "Role `{}` removed from blacklist."
+msgstr "Ролята „{}“ е премахната от черния списък."
+msgstr ""
+
+#: commands/admin.py:389
+msgid "Role `{}` added to blacklist."
+msgstr "Ролята „{}“ е добавена към черния списък."
+msgstr ""
+
+#: commands/admin.py:393
+msgid "Role with ID `{}` removed from blacklist."
+msgstr "Роля с ID `{}` премахната от черния списък."
+msgstr ""
+
+#: commands/admin.py:395
+msgid "Role with ID `{}` not found in blacklist."
+msgstr "Роля с ID `{}` не е намерена в черния списък."
+msgstr ""
+
+#: commands/admin.py:405
+msgid "User `{}` removed from blacklist."
+msgstr "Потребителят `{}` е премахнат от черния списък."
+msgstr ""
+
+#: commands/admin.py:408
+msgid "User `{}` added to blacklist."
+msgstr "Потребителят `{}` е добавен към черния списък."
+msgstr ""
+
+#: commands/admin.py:412
+msgid "User with ID `{}` removed from blacklist."
+msgstr "Потребител с ID `{}` премахнат от черния списък."
+msgstr ""
+
+#: commands/admin.py:414
+msgid "User with ID `{}` not found in blacklist."
+msgstr "Потребител с ID `{}` не е намерен в черния списък."
+msgstr ""
+
+#: commands/admin.py:430
+msgid ""
+msgstr ""
+"Minimum account age to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:449
+msgid ""
+msgstr ""
+"Minimum join time to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:465
+msgid "LevelUp is not loaded. Please load it and try again."
+msgstr "LevelUp не е зареден. Моля, заредете го и опитайте отново."
+msgstr ""
+
+#: commands/admin.py:472
+msgid "Minimum level to vote is set to {0} and to suggest is set to {1}."
+msgstr "Минималното ниво за гласуване е зададено на {0}, а за предлагане е зададено на {1}."
+msgstr ""
+
+#: commands/admin.py:490
+msgid "This command is only available to Vertyco and Arkon."
+msgstr "Тази команда е достъпна само за Vertyco и Arkon."
+msgstr ""
+
+#: commands/admin.py:493
+msgid "ArkTools is not loaded. Please load it and try again."
+msgstr "ArkTools не е зареден. Моля, заредете го и опитайте отново."
+msgstr ""
+
+#: commands/admin.py:500
+msgid ""
+msgstr ""
+"Minimum playtime to vote is set to {0} hours and to suggest is set to {1}"
+" hours."
+msgstr ""
+
+#: commands/admin.py:511
+msgid "This user has no stats to reset."
+msgstr "Този потребител няма статистика за нулиране."
+msgstr ""
+
+#: commands/admin.py:513
+msgid "Stats for {} have been reset."
+msgstr "Статистическите данни за {} бяха нулирани."
+msgstr ""
+
+#: commands/admin.py:521
+msgid "No user stats to reset."
+msgstr "Няма потребителски статистики за нулиране."
+msgstr ""
+
+#: commands/admin.py:522
+msgid "Are you sure you want to reset all user stats?"
+msgstr "Сигурни ли сте, че искате да нулирате всички потребителски статистики?"
+msgstr ""
+
+#: commands/admin.py:526
+msgid "Reset cancelled."
+msgstr "Нулирането е отменено."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "All user stats have been reset."
+msgstr "Всички потребителски статистики са нулирани."
+msgstr ""
+
+#: commands/admin.py:536 commands/admin.py:629
+msgid "No suggestions have been made yet."
+msgstr "Все още няма направени предложения."
+msgstr ""
+
+#: commands/admin.py:539
+msgid "The pending channel is not set."
+msgstr "Чакащият канал не е зададен."
+msgstr ""
+
+#: commands/admin.py:547
+msgid "All suggestions are accounted for."
+msgstr "Всички предложения се вземат предвид."
+msgstr ""
+
+#: commands/admin.py:548
+msgid "The following suggestions are missing their message:\n"
+msgstr "Следните предложения нямат съобщение:\n"
+msgstr ""
+
+#: commands/admin.py:550
+msgid ""
+msgstr ""
+"\n"
+"- To prune these suggestions, use {}"
+msgstr ""
+
+#: commands/admin.py:551
+msgid ""
+msgstr ""
+"\n"
+"- To view the content of a suggestion, use {}"
+msgstr ""
+
+#: commands/admin.py:570
+msgid "- Removed {} profiles of users who have left the server.\n"
+msgstr "- Премахнати {} профили на потребители, които са напуснали сървъра.\n"
+msgstr ""
+
+#: commands/admin.py:573
+msgid "- No profiles were removed.\n"
+msgstr "- Няма премахнати профили.\n"
+msgstr ""
+
+#: commands/admin.py:584
+msgid "- Removed upvote from user {} on suggestion #{}.\n"
+msgstr "- Премахнато гласуване за потребител {} за предложение #{}.\n"
+msgstr ""
+
+#: commands/admin.py:588
+msgid "- Removed downvote from user {} on suggestion #{}.\n"
+msgstr "- Премахнато отрицателно гласуване от потребител {} на предложение #{}.\n"
+msgstr ""
+
+#: commands/admin.py:606
+msgid "- Removed suggestion #{} as the message no longer exists.\n"
+msgstr "- Премахнато предложение #{}, тъй като съобщението вече не съществува.\n"
+msgstr ""
+
+#: commands/admin.py:612
+msgid "- Failed to delete discussion thread for suggestion #{}: {}.\n"
+msgstr "- Неуспешно изтриване на дискусионна нишка за предложение #{}: {}.\n"
+msgstr ""
+
+#: commands/admin.py:689
+msgid "Server Insights"
+msgstr "Прозрения за сървъра"
+msgstr ""
+
+#: commands/admin.py:691
+msgid "Average Suggestions Made Per User"
+msgstr "Среден брой предложения, направени на потребител"
+msgstr ""
+
+#: commands/admin.py:696
+msgid "Most Suggestions Made"
+msgstr "Повечето направени предложения"
+msgstr ""
+
+#: commands/admin.py:701
+msgid "Most Successful Users"
+msgstr "Най-успешните потребители"
+msgstr ""
+
+#: commands/admin.py:703
+msgid "These users have the most suggestions approved.\n"
+msgstr "Тези потребители имат най-много одобрени предложения.\n"
+msgstr ""
+
+#: commands/admin.py:709
+msgid "Least Successful Users"
+msgstr "Най-малко успешни потребители"
+msgstr ""
+
+#: commands/admin.py:711
+msgid "These users have the most suggestions denied.\n"
+msgstr "Тези потребители имат най-много отказани предложения.\n"
+msgstr ""
+
+#: commands/admin.py:717
+msgid "Highest Approval Ratio"
+msgstr "Най-висок коефициент на одобрение"
+msgstr ""
+
+#: commands/admin.py:719
+msgid "These users have the highest approval to rejection ratio.\n"
+msgstr "Тези потребители имат най-високото съотношение на одобрение към отхвърляне.\n"
+msgstr ""
+
+#: commands/admin.py:725
+msgid "Lowest Approval Ratio"
+msgstr "Най-нисък коефициент на одобрение"
+msgstr ""
+
+#: commands/admin.py:727
+msgid "These users have the lowest approval to rejection ratio.\n"
+msgstr "Тези потребители имат най-ниското съотношение на одобрение към отхвърляне.\n"
+msgstr ""
+
+#: commands/admin.py:733
+msgid "Most Wins"
+msgstr "Повечето победи"
+msgstr ""
+
+#: commands/admin.py:735
+msgid "These users have the most votes that ended in their favor.\n"
+msgstr "Тези потребители имат най-много гласове, завършили в тяхна полза.\n"
+msgstr ""
+
+#: commands/admin.py:740
+msgid "Most Losses"
+msgstr "Повечето загуби"
+msgstr ""
+
+#: commands/admin.py:742
+msgid "These users have the most votes that ended against their favor.\n"
+msgstr "Тези потребители имат най-много гласове, завършили против тях.\n"
+msgstr ""
+
+#: commands/admin.py:748
+msgid "Most Optimistic Users"
+msgstr "Най-оптимистичните потребители"
+msgstr ""
+
+#: commands/admin.py:750
+msgid "These users have the highest upvote to downvote ratio.\n"
+msgstr "Тези потребители имат най-високото съотношение на гласуване „за“ към гласуване „против“.\n"
+msgstr ""
+
+#: commands/admin.py:756
+msgid "Most Negative Users"
+msgstr "Най-негативните потребители"
+msgstr ""
+
+#: commands/admin.py:758
+msgid "These users have the highest downvote to upvote ratio.\n"
+msgstr "Тези потребители имат най-високото съотношение на гласуване против гласуване.\n"
+msgstr ""
+
+#: commands/admin.py:764
+msgid "Highest Karma"
+msgstr "Най-висока карма"
+msgstr ""
+
+#: commands/admin.py:766
+msgid "These users have the highest received upvote to downvote ratio.\n"
+msgstr "Тези потребители имат най-високото съотношение на получените гласове „за“ към гласуване „против“.\n"
+msgstr ""
+
+#: commands/admin.py:772
+msgid "Lowest Karma"
+msgstr "Най-ниската карма"
+msgstr ""
+
+#: commands/admin.py:774
+msgid "These users have the lowest received upvote to downvote ratio.\n"
+msgstr "Тези потребители имат най-ниското съотношение на получените гласове „за“ към гласуване „против“.\n"
+msgstr ""
+
+#: commands/adminbase.py:21
+msgid "Approve a suggestion."
+msgstr "Одобрете предложение."
+msgstr ""
+
+#: commands/adminbase.py:22 commands/adminbase.py:156
+msgid "Suggestion number"
+msgstr "Номер на предложението"
+msgstr ""
+
+#: commands/adminbase.py:30 commands/adminbase.py:164 commands/adminbase.py:303
+#: commands/adminbase.py:419
+msgid "No approvers have been set! Use the {} command to add one."
+msgstr "Няма зададени одобряващи! Използвайте командата {}, за да добавите такъв."
+msgstr ""
+
+#: commands/adminbase.py:35
+msgid "You do not have the required roles to approve suggestions."
+msgstr "Нямате необходимите роли, за да одобрявате предложения."
+msgstr ""
+
+#: commands/adminbase.py:39 commands/adminbase.py:173 commands/user.py:46
+msgid "The pending suggestions channel has not been set!"
+msgstr "Каналът за чакащи предложения не е зададен!"
+msgstr ""
+
+#: commands/adminbase.py:42
+msgid "The approved suggestions channel has not been set!"
+msgstr "Одобреният канал за предложения не е зададен!"
+msgstr ""
+
+#: commands/adminbase.py:47 commands/adminbase.py:181 commands/adminbase.py:435
+#: commands/user.py:51
+msgid "The pending suggestions channel no longer exists!"
+msgstr "Каналът за чакащи предложения вече не съществува!"
+msgstr ""
+
+#: commands/adminbase.py:51 commands/adminbase.py:123
+msgid "The approved suggestions channel no longer exists!"
+msgstr "Одобреният канал за предложения вече не съществува!"
+msgstr ""
+
+#: commands/adminbase.py:61 commands/adminbase.py:195
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the suggestion"
+" channels."
+msgstr ""
+
+#: commands/adminbase.py:66 commands/adminbase.py:200 commands/adminbase.py:314
+#: commands/adminbase.py:430
+msgid "That suggestion does not exist!"
+msgstr "Това предложение не съществува!"
+msgstr ""
+
+#: commands/adminbase.py:73 commands/adminbase.py:207
+msgid "I couldn't delete the pending message: {}"
+msgstr "Не можах да изтрия чакащото съобщение: {}"
+msgstr ""
+
+#: commands/adminbase.py:85
+msgid " [Approved]"
+msgstr "[Одобрен]"
+msgstr ""
+
+#: commands/adminbase.py:89 commands/adminbase.py:98
+msgid "Approved Suggestion"
+msgstr "Одобрено предложение"
+msgstr ""
+
+#: commands/adminbase.py:101 commands/adminbase.py:236
+#: commands/adminbase.py:398
+msgid "Suggested by {}"
+msgstr "Предложено от {}"
+msgstr ""
+
+#: commands/adminbase.py:104
+msgid "Suggested by a user who is no longer in the server."
+msgstr "Предложено от потребител, който вече не е в сървъра."
+msgstr ""
+
+#: commands/adminbase.py:107
+msgid "Reason"
+msgstr "Причина"
+msgstr ""
+
+#: commands/adminbase.py:111 commands/adminbase.py:244
+msgid "Results"
+msgstr "Резултати"
+msgstr ""
+
+#: commands/adminbase.py:120
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the approved "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:140
+msgid "Your [suggestion #{}]({}) has been approved!"
+msgstr "Вашето [предложение #{}]({}) е одобрено!"
+msgstr ""
+
+#: commands/adminbase.py:142 commands/adminbase.py:275
+msgid ""
+msgstr ""
+"\n"
+"Reason: {}"
+msgstr ""
+
+#: commands/adminbase.py:151
+msgid "Suggestion #{} has been approved."
+msgstr "Предложение #{} е одобрено."
+msgstr ""
+
+#: commands/adminbase.py:155
+msgid "Reject a suggestion."
+msgstr "Отхвърляне на предложение."
+msgstr ""
+
+#: commands/adminbase.py:169
+msgid "You do not have the required roles to reject suggestions."
+msgstr "Нямате необходимите роли, за да отхвърляте предложения."
+msgstr ""
+
+#: commands/adminbase.py:176
+msgid "The rejected suggestions channel has not been set!"
+msgstr "Каналът за отхвърлени предложения не е зададен!"
+msgstr ""
+
+#: commands/adminbase.py:185
+msgid "The rejected suggestions channel no longer exists!"
+msgstr "Каналът за отхвърлени предложения вече не съществува!"
+msgstr ""
+
+#: commands/adminbase.py:219
+msgid " [Rejected]"
+msgstr "[Отхвърлено]"
+msgstr ""
+
+#: commands/adminbase.py:223 commands/adminbase.py:231
+msgid "Rejected Suggestion"
+msgstr "Отхвърлено предложение"
+msgstr ""
+
+#: commands/adminbase.py:234
+msgid "Suggested anonymously"
+msgstr "Предложено анонимно"
+msgstr ""
+
+#: commands/adminbase.py:240
+msgid "Reason for Rejection"
+msgstr "Причина за отхвърляне"
+msgstr ""
+
+#: commands/adminbase.py:253
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the denied "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:256
+msgid "The denied suggestions channel no longer exists!"
+msgstr "Каналът за отказани предложения вече не съществува!"
+msgstr ""
+
+#: commands/adminbase.py:273
+msgid "Your [suggestion #{}]({}) has been rejected!"
+msgstr "Вашето [предложение #{}]({}) беше отхвърлено!"
+msgstr ""
+
+#: commands/adminbase.py:284
+msgid "Suggestion #{} has been rejected."
+msgstr "Предложение #{} беше отхвърлено."
+msgstr ""
+
+#: commands/adminbase.py:290
+msgid "View the current upvoters and downvoters of a suggestion."
+msgstr "Преглед на текущите гласували за и против предложение."
+msgstr ""
+
+#: commands/adminbase.py:292 commands/adminbase.py:410
+msgid "Suggestion number to view votes for"
+msgstr "Номер на предложението, за което да видите гласовете"
+msgstr ""
+
+#: commands/adminbase.py:309
+msgid "You do not have the required roles to inspect suggestions."
+msgstr "Нямате необходимите роли, за да проверявате предложенията."
+msgstr ""
+
+#: commands/adminbase.py:322
+msgid ""
+msgstr ""
+"I cannot find the message associated with this suggestion, would you like"
+" me to repost it? (y/n)"
+msgstr ""
+
+#: commands/adminbase.py:343
+msgid "Suggestion #{} has been reposted."
+msgstr "Предложение #{} беше публикувано повторно."
+msgstr ""
+
+#: commands/adminbase.py:345
+msgid "Not reposting Suggestion #{}.\n"
+msgstr "Без повторно публикуване на предложение #{}.\n"
+msgstr ""
+
+#: commands/adminbase.py:346
+msgid "You can remove it from the config by typing {}"
+msgstr "Можете да го премахнете от конфигурацията, като напишете {}"
+msgstr ""
+
+#: commands/adminbase.py:353
+msgid "Votes for Suggestion #{}"
+msgstr "Гласове за предложение №{}"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "Upvoters ({})"
+msgstr "Гласували за ({})"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "No upvotes yet"
+msgstr "Все още няма гласове за"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "Downvoters ({})"
+msgstr "Гласували против ({})"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "No downvotes yet"
+msgstr "Все още няма отрицателни гласове"
+msgstr ""
+
+#: commands/adminbase.py:369 commands/adminbase.py:370
+#: commands/adminbase.py:392 commands/adminbase.py:393
+msgid "N/A"
+msgstr "N/A"
+msgstr ""
+
+#: commands/adminbase.py:373
+msgid "Upvoters ({}):\n"
+msgstr "Гласували за ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:381
+msgid ""
+msgstr ""
+"\n"
+"Downvoters ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:402
+msgid "Suggested by {} [No longer in server]"
+msgstr "Предложено от {} [Вече не е в сървъра]"
+msgstr ""
+
+#: commands/adminbase.py:408
+msgid "Refresh the buttons on a suggestion if it gets stuck."
+msgstr "Обновете бутоните по предложение, ако се забие."
+msgstr ""
+
+#: commands/adminbase.py:425
+msgid "You do not have the required roles to refresh suggestions."
+msgstr "Нямате необходимите роли за опресняване на предложения."
+msgstr ""
+
+#: commands/adminbase.py:441
+msgid "I cannot find the message associated with this suggestion."
+msgstr "Не мога да намеря съобщението, свързано с това предложение."
+msgstr ""
+
+#: commands/adminbase.py:446
+msgid "Suggestion #{} has been refreshed."
+msgstr "Предложение #{} беше опреснено."
+msgstr ""
+
+#: commands/user.py:23
+msgid "Share an idea/make a suggestion."
+msgstr "Споделете идея/направете предложение."
+msgstr ""
+
+#: commands/user.py:59
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the pending "
+"suggestions channel."
+msgstr ""
+
+#: commands/user.py:66
+msgid "You do not have the required roles to make suggestions."
+msgstr "Нямате необходимите роли, за да правите предложения."
+msgstr ""
+
+#: commands/user.py:72
+msgid "Your account is too young to make suggestions."
+msgstr "Вашият акаунт е твърде млад, за да правите предложения."
+msgstr ""
+
+#: commands/user.py:78
+msgid "You haven't been in the server long enough to make suggestions."
+msgstr "Не сте били достатъчно дълго в сървъра, за да правите предложения."
+msgstr ""
+
+#: commands/user.py:82
+msgid "You are not allowed to make suggestions due to a blacklisted role."
+msgstr "Нямате право да правите предложения поради роля в черния списък."
+msgstr ""
+
+#: commands/user.py:86
+msgid "You are blacklisted from making suggestions."
+msgstr "Вие сте в черния списък за правене на предложения."
+msgstr ""
+
+#: commands/user.py:89
+msgid "No approvers have been set! Admins needs to use the {} command to add one."
+msgstr "Няма зададени одобряващи! Администраторите трябва да използват командата {}, за да добавят такъв."
+msgstr ""
+
+#: commands/user.py:96
+msgid ""
+msgstr ""
+"You must be level {} or higher to make suggestions.\n"
+"Use the {} command to check your level."
+msgstr ""
+
+#: commands/user.py:113
+msgid "You must be registered in the ArkTools database to make suggestions."
+msgstr "Трябва да сте регистриран в базата данни на ArkTools, за да правите предложения."
+msgstr ""
+
+#: commands/user.py:119
+msgid "You must have at least {} hours of playtime to make suggestions."
+msgstr "Трябва да имате поне {} часа време за игра, за да правите предложения."
+msgstr ""
+
+#: commands/user.py:148
+msgid "You must wait `{}` before making another suggestion."
+msgstr "Трябва да изчакате `{}` преди да направите друго предложение."
+msgstr ""
+
+#: commands/user.py:197
+msgid "Your [{}]({}) has been posted!"
+msgstr "Вашите [{}]({}) са публикувани!"
+msgstr ""
+
+#: commands/user.py:199
+msgid "Your {} has been posted!"
+msgstr "Вашият {} е публикуван!"
+msgstr ""
+
+#: commands/user.py:222
+msgid "View your profile stats regarding suggestions and votes."
+msgstr "Вижте статистиката на вашия профил относно предложения и гласове."
+msgstr ""
+
+#: commands/user.py:234
+msgid "Stats for {}"
+msgstr "Статистика за {}"
+msgstr ""
+
+#: commands/user.py:238
+msgid "Suggestion Summary"
+msgstr "Резюме на предложението"
+msgstr ""
+
+#: commands/user.py:239
+msgid ""
+msgstr ""
+"Suggestions Made: {}\n"
+"Suggestions Approved: {}\n"
+"Suggestions Denied: {}\n"
+"Karma: {}"
+msgstr ""
+
+#: commands/user.py:248
+msgid "Voting Summary"
+msgstr "Резюме на гласуването"
+msgstr ""
+
+#: commands/user.py:249
+msgid ""
+msgstr ""
+"Total Upvotes: {}\n"
+"Total Downvotes: {}\n"
+"Successful Votes (Wins): {}\n"
+"Unsuccessful Votes (Losses): {}"
+msgstr ""
+
+#: common/listener.py:74
+msgid " [Deleted]"
+msgstr "[Изтрито]"
+msgstr ""
+
+#: common/listener.py:78
+msgid "Deleted Suggestion"
+msgstr "Изтрито предложение"
+msgstr ""
+
+#: views/voteview.py:64
+msgid "This suggestion no longer exists in the config!"
+msgstr "Това предложение вече не съществува в конфигурацията!"
+msgstr ""
+
+#: views/voteview.py:77
+msgid "You are blacklisted from voting."
+msgstr "Вие сте в черния списък за гласуване."
+msgstr ""
+
+#: views/voteview.py:84
+msgid "You have {grammar} and cannot vote."
+msgstr "Имате {grammar} и не можете да гласувате."
+msgstr ""
+
+#: views/voteview.py:92
+msgid "You do not have any of the required roles to vote."
+msgstr "Нямате нито една от необходимите роли за гласуване."
+msgstr ""
+
+#: views/voteview.py:102
+msgid "Your account is too new! You must wait `{tleft}` before you can vote."
+msgstr "Вашият акаунт е твърде нов! Трябва да изчакате `{tleft}` преди да можете да гласувате."
+msgstr ""
+
+#: views/voteview.py:111
+msgid ""
+msgstr ""
+"You joined the server too recently! You must wait `{tleft}` before you "
+"can vote."
+msgstr ""
+
+#: views/voteview.py:125
+msgid "You must be level {level} or higher to vote."
+msgstr "Трябва да сте ниво {level} или по-високо, за да гласувате."
+msgstr ""
+
+#: views/voteview.py:140
+msgid "Your in-game profile must be registered in order to vote on suggestions.\n"
+msgstr "Вашият профил в играта трябва да бъде регистриран, за да гласувате за предложения.\n"
+msgstr ""
+
+#: views/voteview.py:141
+msgid "Use the {} command to link your discord account."
+msgstr "Използвайте командата {}, за да свържете своя Discord акаунт."
+msgstr ""
+
+#: views/voteview.py:147
+msgid "You must have at least {} hours of playtime to vote."
+msgstr "Трябва да имате поне {} часа време за игра, за да гласувате."
+msgstr ""
+
+#: views/voteview.py:170 views/voteview.py:213
+msgid "You cannot vote on your own suggestion."
+msgstr "Не можете да гласувате за собственото си предложение."
+msgstr ""
+
+#: views/voteview.py:173
+msgid "You have switched your downvote to an upvote."
+msgstr "Превключихте гласуването си против на гласуване за."
+msgstr ""
+
+#: views/voteview.py:181
+msgid "You have removed your upvote."
+msgstr "Премахнахте гласуването си за."
+msgstr ""
+
+#: views/voteview.py:186
+msgid "You have upvoted this suggestion."
+msgstr "Вие гласувахте за това предложение."
+msgstr ""
+
+#: views/voteview.py:216
+msgid "You have switched your upvote to a downvote."
+msgstr "Превключихте гласуването си „за“ на гласуване „против“."
+msgstr ""
+
+#: views/voteview.py:224
+msgid "You have removed your downvote."
+msgstr "Премахнахте гласа си против."
+msgstr ""
+
+#: views/voteview.py:229
+msgid "You have downvoted this suggestion."
+msgstr "Гласувахте против това предложение."
+msgstr ""
+

@@ -1,0 +1,69 @@
+# Arabic translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:32+0100\n"
+"PO-Revision-Date: 2024-10-14 04:33+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: onlyallow.py:53
+msgid ""
+msgstr ""
+"Only specific cogs and commands are allowed in this server. Ask to a bot "
+"owner to add the cog(s) or the command(s) you want to use."
+msgstr ""
+
+#: onlyallow.py:114
+msgid "This cog is already in the allowed cogs list."
+msgstr "هذا الترس موجود بالفعل في قائمة التروس المسموح بها."
+msgstr ""
+
+#: onlyallow.py:130
+msgid "This command is already in the allowed commands list."
+msgstr "هذا الأمر موجود بالفعل في قائمة الأوامر المسموح بها."
+msgstr ""
+
+#: onlyallow.py:146
+msgid "This cog isn't in the allowed cogs list."
+msgstr "هذا الترس غير موجود في قائمة التروس المسموح بها."
+msgstr ""
+
+#: onlyallow.py:164
+msgid "This command isn't in the allowed commands list."
+msgstr "هذا الأمر غير موجود في قائمة الأوامر المسموح بها."
+msgstr ""
+
+#: onlyallow.py:183
+msgid "All cogs and commands are allowed in this server."
+msgstr "جميع التروس والأوامر مسموح بها في هذا الخادم."
+msgstr ""
+
+#: onlyallow.py:187
+msgid "Only Allow"
+msgstr "السماح فقط"
+msgstr ""
+
+#: onlyallow.py:195
+msgid "Allowed Cogs"
+msgstr "التروس المسموح بها"
+msgstr ""
+
+#: onlyallow.py:196
+msgid "Allowed Commands"
+msgstr "الأوامر المسموح بها"
+msgstr ""
+

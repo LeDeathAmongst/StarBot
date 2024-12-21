@@ -1,0 +1,1107 @@
+# Danish translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:52+0100\n"
+"PO-Revision-Date: 2024-10-14 04:57+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: da\n"
+"Language-Team: da <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:41
+msgid ""
+msgstr ""
+"`Approved Channel:   `{}\n"
+"`Rejected Channel:   `{}\n"
+"`Pending Channel:    `{}\n"
+"`Anonymous:          `{}\n"
+"`Reveal Complete:    `{}\n"
+"`DM Result:          `{}\n"
+"`Discussion Threads: `{}\n"
+"`Delete Threads:     `{}\n"
+"`Upvote Emoji:       `{}\n"
+"`Downvote Emoji:     `{}\n"
+"`Show Vote Counts:   `{}\n"
+"`Suggestions:        `{}\n"
+"`Suggestion #:       `{}\n"
+msgstr ""
+
+#: commands/admin.py:56 commands/admin.py:57 commands/admin.py:58
+msgid "Not set"
+msgstr "Ikke indstillet"
+msgstr ""
+
+#: commands/admin.py:74
+msgid "Ideaboard Settings"
+msgstr "Ideaboard-indstillinger"
+msgstr ""
+
+#: commands/admin.py:76
+msgid "Cooldowns"
+msgstr "Nedkøling"
+msgstr ""
+
+#: commands/admin.py:77
+msgid ""
+msgstr ""
+"Base: {} seconds\n"
+"Role Cooldowns: {}"
+msgstr ""
+
+#: commands/admin.py:79 commands/admin.py:99 commands/admin.py:108
+#: commands/admin.py:116
+msgid "None Set"
+msgstr "Ingen sæt"
+msgstr ""
+
+#: commands/admin.py:83
+msgid "Account Age"
+msgstr "Kontoens alder"
+msgstr ""
+
+#: commands/admin.py:84
+msgid ""
+msgstr ""
+"Minimum age of account to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "Join Time"
+msgstr "Deltag Tid"
+msgstr ""
+
+#: commands/admin.py:90
+msgid ""
+msgstr ""
+"Minimum time in server to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:95
+msgid "Vote Roles"
+msgstr "Stemmeroller"
+msgstr ""
+
+#: commands/admin.py:97
+msgid ""
+msgstr ""
+"Roles required to vote\n"
+"If no roles are set, anyone can vote.\n"
+msgstr ""
+
+#: commands/admin.py:103
+msgid "Suggest Roles"
+msgstr "Foreslå roller"
+msgstr ""
+
+#: commands/admin.py:105
+msgid ""
+msgstr ""
+"Roles required to suggest\n"
+"If no roles are set, anyone can make suggestions.\n"
+msgstr ""
+
+#: commands/admin.py:112
+msgid "Approvers"
+msgstr "Godkendere"
+msgstr ""
+
+#: commands/admin.py:114
+msgid "Roles required to approve suggestions\n"
+msgstr "Roller påkrævet for at godkende forslag\n"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "LevelUp Integration"
+msgstr "LevelUp-integration"
+msgstr ""
+
+#: commands/admin.py:122
+msgid ""
+msgstr ""
+"Minimum level required to vote or make suggestions.\n"
+"Vote: {}\n"
+"Suggest: {}"
+msgstr ""
+
+#: commands/admin.py:127
+msgid "Ark Playtime Integration"
+msgstr "Ark Playtime Integration"
+msgstr ""
+
+#: commands/admin.py:128
+msgid ""
+msgstr ""
+"Minimum playtime to vote or make suggestions\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Role Blacklist"
+msgstr "Rollesortliste"
+msgstr ""
+
+#: commands/admin.py:138
+msgid "User Blacklist"
+msgstr "Bruger sortliste"
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This channel is already set as the {} channel!"
+msgstr "Denne kanal er allerede indstillet som {}-kanalen!"
+msgstr ""
+
+#: commands/admin.py:157
+msgid "I don't have permission to send messages in {}!"
+msgstr "Jeg har ikke tilladelse til at sende beskeder i {}!"
+msgstr ""
+
+#: commands/admin.py:159
+msgid "I don't have permission to send embeds in {}!"
+msgstr "Jeg har ikke tilladelse til at sende indlejringer i {}!"
+msgstr ""
+
+#: commands/admin.py:163
+msgid ""
+msgstr ""
+"Changing the pending channel will move all pending suggestions to the new"
+" channel.\n"
+msgstr ""
+
+#: commands/admin.py:164
+msgid "Are you sure you want to continue? (y/n)"
+msgstr "Er du sikker på, at du vil fortsætte? (å/n)"
+msgstr ""
+
+#: commands/admin.py:169
+msgid "Change cancelled."
+msgstr "Ændring annulleret."
+msgstr ""
+
+#: commands/admin.py:186 commands/adminbase.py:117 commands/adminbase.py:250
+#: commands/adminbase.py:329 commands/user.py:160
+msgid "Suggestion #{}"
+msgstr "Forslag #{}"
+msgstr ""
+
+#: commands/admin.py:189 commands/adminbase.py:332 commands/user.py:164
+msgid "Posted anonymously"
+msgstr "Skrevet anonymt"
+msgstr ""
+
+#: commands/admin.py:194 commands/adminbase.py:337 commands/user.py:166
+msgid "Posted by {}"
+msgstr "Indsendt af {}"
+msgstr ""
+
+#: commands/admin.py:200 commands/user.py:181
+msgid "Suggestion #{} Discussion"
+msgstr "Forslag #{} Diskussion"
+msgstr ""
+
+#: commands/admin.py:201 commands/user.py:182
+msgid "Discussion thread for suggestion #{}"
+msgstr "Diskussionstråd for forslag #{}"
+msgstr ""
+
+#: commands/admin.py:206
+msgid "Faile to create discussion thread in {} for suggestion #{}: {}"
+msgstr "Kunne ikke oprette diskussionstråd i {} for forslag #{}: {}"
+msgstr ""
+
+#: commands/admin.py:221
+msgid "The {} channel has been changed from {} to {}"
+msgstr "{}-kanalen er blevet ændret fra {} til {}"
+msgstr ""
+
+#: commands/admin.py:225
+msgid "Set {} channel to {}"
+msgstr "Indstil {} kanal til {}"
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Anonymous suggestions are now {}."
+msgstr "Anonyme forslag er nu {}."
+msgstr ""
+
+#: commands/admin.py:249
+msgid "Revealing of authors on rejection is now {}."
+msgstr "Afsløring af forfattere ved afvisning er nu {}."
+msgstr ""
+
+#: commands/admin.py:258
+msgid "Showing vote counts on suggestions is now {}."
+msgstr "Visning af stemmetæller på forslag er nu {}."
+msgstr ""
+
+#: commands/admin.py:267
+msgid "DMing users about suggestion results is now {}."
+msgstr "DMing til brugere om forslagsresultater er nu {}."
+msgstr ""
+
+#: commands/admin.py:276
+msgid "Discussion threads are now {}."
+msgstr "Diskussionstråde er nu {}."
+msgstr ""
+
+#: commands/admin.py:284
+msgid "Threads will now be locked/archived when a suggestion is approved/denied."
+msgstr "Tråde vil nu blive låst/arkiveret, når et forslag er godkendt/afvist."
+msgstr ""
+
+#: commands/admin.py:286
+msgid "Threads will now be deleted when a suggestion is approved/denied."
+msgstr "Tråde vil nu blive slettet, når et forslag er godkendt/afvist."
+msgstr ""
+
+#: commands/admin.py:296
+msgid "Upvote emoji set to {}"
+msgstr "Stem op-emoji indstillet til {}"
+msgstr ""
+
+#: commands/admin.py:304
+msgid "Downvote emoji set to {}"
+msgstr "Nedstem emoji indstillet til {}"
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Base cooldown set to {} seconds."
+msgstr "Grundafkøling indstillet til {} sekunder."
+msgstr ""
+
+#: commands/admin.py:315
+msgid "Base cooldown disabled."
+msgstr "Grundafkøling deaktiveret."
+msgstr ""
+
+#: commands/admin.py:328
+msgid "Cooldown for role {} updated to {} seconds."
+msgstr "Nedkøling for rolle {} opdateret til {} sekunder."
+msgstr ""
+
+#: commands/admin.py:331
+msgid "Cooldown for role {} removed."
+msgstr "Nedkøling for rollen {} fjernet."
+msgstr ""
+
+#: commands/admin.py:335
+msgid "Cooldown for role {} set to {} seconds."
+msgstr "Nedkøling for rolle {} indstillet til {} sekunder."
+msgstr ""
+
+#: commands/admin.py:337
+msgid "Cooldown for role {} already disabled."
+msgstr "Nedkøling for rolle {} er allerede deaktiveret."
+msgstr ""
+
+#: commands/admin.py:350
+msgid "Role {} `{}` voting whitelist."
+msgstr "Rolle {} `{}` stemmehvidliste."
+msgstr ""
+
+#: commands/admin.py:363
+msgid "Role {} `{}` suggest whitelist."
+msgstr "Rolle {} `{}` foreslå hvidliste."
+msgstr ""
+
+#: commands/admin.py:376
+msgid "Role {} `{}` approvers list."
+msgstr "Rolle {} `{}` godkenderliste."
+msgstr ""
+
+#: commands/admin.py:386
+msgid "Role `{}` removed from blacklist."
+msgstr "Rollen "{}" fjernet fra sortlisten."
+msgstr ""
+
+#: commands/admin.py:389
+msgid "Role `{}` added to blacklist."
+msgstr "Rollen "{}" tilføjet til sortlisten."
+msgstr ""
+
+#: commands/admin.py:393
+msgid "Role with ID `{}` removed from blacklist."
+msgstr "Rolle med id '{}' fjernet fra sortlisten."
+msgstr ""
+
+#: commands/admin.py:395
+msgid "Role with ID `{}` not found in blacklist."
+msgstr "Rolle med ID '{}' findes ikke på sortlisten."
+msgstr ""
+
+#: commands/admin.py:405
+msgid "User `{}` removed from blacklist."
+msgstr "Brugeren `{}` fjernet fra sortlisten."
+msgstr ""
+
+#: commands/admin.py:408
+msgid "User `{}` added to blacklist."
+msgstr "Bruger `{}` tilføjet til sortliste."
+msgstr ""
+
+#: commands/admin.py:412
+msgid "User with ID `{}` removed from blacklist."
+msgstr "Bruger med ID '{}' fjernet fra sortlisten."
+msgstr ""
+
+#: commands/admin.py:414
+msgid "User with ID `{}` not found in blacklist."
+msgstr "Bruger med ID '{}' findes ikke på sortlisten."
+msgstr ""
+
+#: commands/admin.py:430
+msgid ""
+msgstr ""
+"Minimum account age to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:449
+msgid ""
+msgstr ""
+"Minimum join time to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:465
+msgid "LevelUp is not loaded. Please load it and try again."
+msgstr "LevelUp er ikke indlæst. Indlæs den og prøv igen."
+msgstr ""
+
+#: commands/admin.py:472
+msgid "Minimum level to vote is set to {0} and to suggest is set to {1}."
+msgstr "Minimumsniveauet for at stemme er sat til {0} og at foreslå er sat til {1}."
+msgstr ""
+
+#: commands/admin.py:490
+msgid "This command is only available to Vertyco and Arkon."
+msgstr "Denne kommando er kun tilgængelig for Vertyco og Arkon."
+msgstr ""
+
+#: commands/admin.py:493
+msgid "ArkTools is not loaded. Please load it and try again."
+msgstr "ArkTools er ikke indlæst. Indlæs den og prøv igen."
+msgstr ""
+
+#: commands/admin.py:500
+msgid ""
+msgstr ""
+"Minimum playtime to vote is set to {0} hours and to suggest is set to {1}"
+" hours."
+msgstr ""
+
+#: commands/admin.py:511
+msgid "This user has no stats to reset."
+msgstr "Denne bruger har ingen statistik at nulstille."
+msgstr ""
+
+#: commands/admin.py:513
+msgid "Stats for {} have been reset."
+msgstr "Statistik for {} er blevet nulstillet."
+msgstr ""
+
+#: commands/admin.py:521
+msgid "No user stats to reset."
+msgstr "Ingen brugerstatistik at nulstille."
+msgstr ""
+
+#: commands/admin.py:522
+msgid "Are you sure you want to reset all user stats?"
+msgstr "Er du sikker på, at du vil nulstille alle brugerstatistikker?"
+msgstr ""
+
+#: commands/admin.py:526
+msgid "Reset cancelled."
+msgstr "Nulstilling annulleret."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "All user stats have been reset."
+msgstr "Alle brugerstatistikker er blevet nulstillet."
+msgstr ""
+
+#: commands/admin.py:536 commands/admin.py:629
+msgid "No suggestions have been made yet."
+msgstr "Der er endnu ikke kommet forslag."
+msgstr ""
+
+#: commands/admin.py:539
+msgid "The pending channel is not set."
+msgstr "Den afventende kanal er ikke indstillet."
+msgstr ""
+
+#: commands/admin.py:547
+msgid "All suggestions are accounted for."
+msgstr "Der tages højde for alle forslag."
+msgstr ""
+
+#: commands/admin.py:548
+msgid "The following suggestions are missing their message:\n"
+msgstr "Følgende forslag mangler deres besked:\n"
+msgstr ""
+
+#: commands/admin.py:550
+msgid ""
+msgstr ""
+"\n"
+"- To prune these suggestions, use {}"
+msgstr ""
+
+#: commands/admin.py:551
+msgid ""
+msgstr ""
+"\n"
+"- To view the content of a suggestion, use {}"
+msgstr ""
+
+#: commands/admin.py:570
+msgid "- Removed {} profiles of users who have left the server.\n"
+msgstr "- Fjernet {} profiler for brugere, der har forladt serveren.\n"
+msgstr ""
+
+#: commands/admin.py:573
+msgid "- No profiles were removed.\n"
+msgstr "- Ingen profiler blev fjernet.\n"
+msgstr ""
+
+#: commands/admin.py:584
+msgid "- Removed upvote from user {} on suggestion #{}.\n"
+msgstr "- Fjernede opstemme fra bruger {} på forslag #{}.\n"
+msgstr ""
+
+#: commands/admin.py:588
+msgid "- Removed downvote from user {} on suggestion #{}.\n"
+msgstr "- Fjernede nedstemme fra bruger {} på forslag #{}.\n"
+msgstr ""
+
+#: commands/admin.py:606
+msgid "- Removed suggestion #{} as the message no longer exists.\n"
+msgstr "- Fjernede forslag #{}, da beskeden ikke længere eksisterer.\n"
+msgstr ""
+
+#: commands/admin.py:612
+msgid "- Failed to delete discussion thread for suggestion #{}: {}.\n"
+msgstr "- Kunne ikke slette diskussionstråd for forslag #{}: {}.\n"
+msgstr ""
+
+#: commands/admin.py:689
+msgid "Server Insights"
+msgstr "Serverindsigt"
+msgstr ""
+
+#: commands/admin.py:691
+msgid "Average Suggestions Made Per User"
+msgstr "Gennemsnitlige forslag lavet pr. bruger"
+msgstr ""
+
+#: commands/admin.py:696
+msgid "Most Suggestions Made"
+msgstr "De fleste forslag fremsat"
+msgstr ""
+
+#: commands/admin.py:701
+msgid "Most Successful Users"
+msgstr "Mest succesrige brugere"
+msgstr ""
+
+#: commands/admin.py:703
+msgid "These users have the most suggestions approved.\n"
+msgstr "Disse brugere har de fleste forslag godkendt.\n"
+msgstr ""
+
+#: commands/admin.py:709
+msgid "Least Successful Users"
+msgstr "Mindst succesfulde brugere"
+msgstr ""
+
+#: commands/admin.py:711
+msgid "These users have the most suggestions denied.\n"
+msgstr "Disse brugere har afvist flest forslag.\n"
+msgstr ""
+
+#: commands/admin.py:717
+msgid "Highest Approval Ratio"
+msgstr "Højeste godkendelsesforhold"
+msgstr ""
+
+#: commands/admin.py:719
+msgid "These users have the highest approval to rejection ratio.\n"
+msgstr "Disse brugere har det højeste forhold mellem godkendelse og afvisning.\n"
+msgstr ""
+
+#: commands/admin.py:725
+msgid "Lowest Approval Ratio"
+msgstr "Laveste godkendelsesforhold"
+msgstr ""
+
+#: commands/admin.py:727
+msgid "These users have the lowest approval to rejection ratio.\n"
+msgstr "Disse brugere har det laveste forhold mellem godkendelse og afvisning.\n"
+msgstr ""
+
+#: commands/admin.py:733
+msgid "Most Wins"
+msgstr "Flest sejre"
+msgstr ""
+
+#: commands/admin.py:735
+msgid "These users have the most votes that ended in their favor.\n"
+msgstr "Disse brugere har flest stemmer, der endte til deres fordel.\n"
+msgstr ""
+
+#: commands/admin.py:740
+msgid "Most Losses"
+msgstr "Flest tab"
+msgstr ""
+
+#: commands/admin.py:742
+msgid "These users have the most votes that ended against their favor.\n"
+msgstr "Disse brugere har flest stemmer, der endte imod deres fordel.\n"
+msgstr ""
+
+#: commands/admin.py:748
+msgid "Most Optimistic Users"
+msgstr "Mest optimistiske brugere"
+msgstr ""
+
+#: commands/admin.py:750
+msgid "These users have the highest upvote to downvote ratio.\n"
+msgstr "Disse brugere har det højeste forhold mellem op- og nedstemning.\n"
+msgstr ""
+
+#: commands/admin.py:756
+msgid "Most Negative Users"
+msgstr "Mest negative brugere"
+msgstr ""
+
+#: commands/admin.py:758
+msgid "These users have the highest downvote to upvote ratio.\n"
+msgstr "Disse brugere har det højeste forhold mellem ned og op.\n"
+msgstr ""
+
+#: commands/admin.py:764
+msgid "Highest Karma"
+msgstr "Højeste Karma"
+msgstr ""
+
+#: commands/admin.py:766
+msgid "These users have the highest received upvote to downvote ratio.\n"
+msgstr "Disse brugere har det højeste modtagne forhold mellem op- og nedstemthed.\n"
+msgstr ""
+
+#: commands/admin.py:772
+msgid "Lowest Karma"
+msgstr "Laveste karma"
+msgstr ""
+
+#: commands/admin.py:774
+msgid "These users have the lowest received upvote to downvote ratio.\n"
+msgstr "Disse brugere har det laveste forhold mellem op- og ned-stemme.\n"
+msgstr ""
+
+#: commands/adminbase.py:21
+msgid "Approve a suggestion."
+msgstr "Godkend et forslag."
+msgstr ""
+
+#: commands/adminbase.py:22 commands/adminbase.py:156
+msgid "Suggestion number"
+msgstr "Forslagsnummer"
+msgstr ""
+
+#: commands/adminbase.py:30 commands/adminbase.py:164 commands/adminbase.py:303
+#: commands/adminbase.py:419
+msgid "No approvers have been set! Use the {} command to add one."
+msgstr "Der er ikke angivet nogen godkendere! Brug kommandoen {} til at tilføje en."
+msgstr ""
+
+#: commands/adminbase.py:35
+msgid "You do not have the required roles to approve suggestions."
+msgstr "Du har ikke de nødvendige roller til at godkende forslag."
+msgstr ""
+
+#: commands/adminbase.py:39 commands/adminbase.py:173 commands/user.py:46
+msgid "The pending suggestions channel has not been set!"
+msgstr "Kanalen for afventende forslag er ikke indstillet!"
+msgstr ""
+
+#: commands/adminbase.py:42
+msgid "The approved suggestions channel has not been set!"
+msgstr "Den godkendte forslagskanal er ikke indstillet!"
+msgstr ""
+
+#: commands/adminbase.py:47 commands/adminbase.py:181 commands/adminbase.py:435
+#: commands/user.py:51
+msgid "The pending suggestions channel no longer exists!"
+msgstr "Kanalen med afventende forslag eksisterer ikke længere!"
+msgstr ""
+
+#: commands/adminbase.py:51 commands/adminbase.py:123
+msgid "The approved suggestions channel no longer exists!"
+msgstr "Den godkendte forslagskanal eksisterer ikke længere!"
+msgstr ""
+
+#: commands/adminbase.py:61 commands/adminbase.py:195
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the suggestion"
+" channels."
+msgstr ""
+
+#: commands/adminbase.py:66 commands/adminbase.py:200 commands/adminbase.py:314
+#: commands/adminbase.py:430
+msgid "That suggestion does not exist!"
+msgstr "Det forslag findes ikke!"
+msgstr ""
+
+#: commands/adminbase.py:73 commands/adminbase.py:207
+msgid "I couldn't delete the pending message: {}"
+msgstr "Jeg kunne ikke slette den afventende meddelelse: {}"
+msgstr ""
+
+#: commands/adminbase.py:85
+msgid " [Approved]"
+msgstr "[Godkendt]"
+msgstr ""
+
+#: commands/adminbase.py:89 commands/adminbase.py:98
+msgid "Approved Suggestion"
+msgstr "Godkendt forslag"
+msgstr ""
+
+#: commands/adminbase.py:101 commands/adminbase.py:236
+#: commands/adminbase.py:398
+msgid "Suggested by {}"
+msgstr "Foreslået af {}"
+msgstr ""
+
+#: commands/adminbase.py:104
+msgid "Suggested by a user who is no longer in the server."
+msgstr "Foreslået af en bruger, der ikke længere er på serveren."
+msgstr ""
+
+#: commands/adminbase.py:107
+msgid "Reason"
+msgstr "Årsag"
+msgstr ""
+
+#: commands/adminbase.py:111 commands/adminbase.py:244
+msgid "Results"
+msgstr "Resultater"
+msgstr ""
+
+#: commands/adminbase.py:120
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the approved "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:140
+msgid "Your [suggestion #{}]({}) has been approved!"
+msgstr "Dit [forslag #{}]({}) er blevet godkendt!"
+msgstr ""
+
+#: commands/adminbase.py:142 commands/adminbase.py:275
+msgid ""
+msgstr ""
+"\n"
+"Reason: {}"
+msgstr ""
+
+#: commands/adminbase.py:151
+msgid "Suggestion #{} has been approved."
+msgstr "Forslag #{} er blevet godkendt."
+msgstr ""
+
+#: commands/adminbase.py:155
+msgid "Reject a suggestion."
+msgstr "Afvis et forslag."
+msgstr ""
+
+#: commands/adminbase.py:169
+msgid "You do not have the required roles to reject suggestions."
+msgstr "Du har ikke de nødvendige roller til at afvise forslag."
+msgstr ""
+
+#: commands/adminbase.py:176
+msgid "The rejected suggestions channel has not been set!"
+msgstr "Kanalen for afviste forslag er ikke indstillet!"
+msgstr ""
+
+#: commands/adminbase.py:185
+msgid "The rejected suggestions channel no longer exists!"
+msgstr "Kanalen for afviste forslag eksisterer ikke længere!"
+msgstr ""
+
+#: commands/adminbase.py:219
+msgid " [Rejected]"
+msgstr "[Afvist]"
+msgstr ""
+
+#: commands/adminbase.py:223 commands/adminbase.py:231
+msgid "Rejected Suggestion"
+msgstr "Afvist forslag"
+msgstr ""
+
+#: commands/adminbase.py:234
+msgid "Suggested anonymously"
+msgstr "Foreslået anonymt"
+msgstr ""
+
+#: commands/adminbase.py:240
+msgid "Reason for Rejection"
+msgstr "Årsag til afvisning"
+msgstr ""
+
+#: commands/adminbase.py:253
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the denied "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:256
+msgid "The denied suggestions channel no longer exists!"
+msgstr "Kanalen afviste forslag eksisterer ikke længere!"
+msgstr ""
+
+#: commands/adminbase.py:273
+msgid "Your [suggestion #{}]({}) has been rejected!"
+msgstr "Dit [forslag #{}]({}) er blevet afvist!"
+msgstr ""
+
+#: commands/adminbase.py:284
+msgid "Suggestion #{} has been rejected."
+msgstr "Forslag #{} er blevet afvist."
+msgstr ""
+
+#: commands/adminbase.py:290
+msgid "View the current upvoters and downvoters of a suggestion."
+msgstr "Se de aktuelle op- og nedstemmere af et forslag."
+msgstr ""
+
+#: commands/adminbase.py:292 commands/adminbase.py:410
+msgid "Suggestion number to view votes for"
+msgstr "Forslagsnummer til at se stemmer på"
+msgstr ""
+
+#: commands/adminbase.py:309
+msgid "You do not have the required roles to inspect suggestions."
+msgstr "Du har ikke de nødvendige roller til at inspicere forslag."
+msgstr ""
+
+#: commands/adminbase.py:322
+msgid ""
+msgstr ""
+"I cannot find the message associated with this suggestion, would you like"
+" me to repost it? (y/n)"
+msgstr ""
+
+#: commands/adminbase.py:343
+msgid "Suggestion #{} has been reposted."
+msgstr "Forslag #{} er blevet genindsendt."
+msgstr ""
+
+#: commands/adminbase.py:345
+msgid "Not reposting Suggestion #{}.\n"
+msgstr "Genposter ikke forslag #{}.\n"
+msgstr ""
+
+#: commands/adminbase.py:346
+msgid "You can remove it from the config by typing {}"
+msgstr "Du kan fjerne det fra konfigurationen ved at skrive {}"
+msgstr ""
+
+#: commands/adminbase.py:353
+msgid "Votes for Suggestion #{}"
+msgstr "Stemmer på forslag #{}"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "Upvoters ({})"
+msgstr "Opstemmere ({})"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "No upvotes yet"
+msgstr "Ingen opstemmer endnu"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "Downvoters ({})"
+msgstr "Nedstemmere ({})"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "No downvotes yet"
+msgstr "Ingen nedstemmer endnu"
+msgstr ""
+
+#: commands/adminbase.py:369 commands/adminbase.py:370
+#: commands/adminbase.py:392 commands/adminbase.py:393
+msgid "N/A"
+msgstr "N/A"
+msgstr ""
+
+#: commands/adminbase.py:373
+msgid "Upvoters ({}):\n"
+msgstr "Opstemmere ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:381
+msgid ""
+msgstr ""
+"\n"
+"Downvoters ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:402
+msgid "Suggested by {} [No longer in server]"
+msgstr "Foreslået af {} [Ikke længere på serveren]"
+msgstr ""
+
+#: commands/adminbase.py:408
+msgid "Refresh the buttons on a suggestion if it gets stuck."
+msgstr "Opdater knapperne på et forslag, hvis det sætter sig fast."
+msgstr ""
+
+#: commands/adminbase.py:425
+msgid "You do not have the required roles to refresh suggestions."
+msgstr "Du har ikke de nødvendige roller til at opdatere forslag."
+msgstr ""
+
+#: commands/adminbase.py:441
+msgid "I cannot find the message associated with this suggestion."
+msgstr "Jeg kan ikke finde den besked, der er knyttet til dette forslag."
+msgstr ""
+
+#: commands/adminbase.py:446
+msgid "Suggestion #{} has been refreshed."
+msgstr "Forslag #{} er blevet opdateret."
+msgstr ""
+
+#: commands/user.py:23
+msgid "Share an idea/make a suggestion."
+msgstr "Del en idé/kom med et forslag."
+msgstr ""
+
+#: commands/user.py:59
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the pending "
+"suggestions channel."
+msgstr ""
+
+#: commands/user.py:66
+msgid "You do not have the required roles to make suggestions."
+msgstr "Du har ikke de nødvendige roller til at komme med forslag."
+msgstr ""
+
+#: commands/user.py:72
+msgid "Your account is too young to make suggestions."
+msgstr "Din konto er for ung til at komme med forslag."
+msgstr ""
+
+#: commands/user.py:78
+msgid "You haven't been in the server long enough to make suggestions."
+msgstr "Du har ikke været længe nok på serveren til at komme med forslag."
+msgstr ""
+
+#: commands/user.py:82
+msgid "You are not allowed to make suggestions due to a blacklisted role."
+msgstr "Du må ikke komme med forslag på grund af en sortlistet rolle."
+msgstr ""
+
+#: commands/user.py:86
+msgid "You are blacklisted from making suggestions."
+msgstr "Du er sortlistet for at komme med forslag."
+msgstr ""
+
+#: commands/user.py:89
+msgid "No approvers have been set! Admins needs to use the {} command to add one."
+msgstr "Der er ikke angivet nogen godkendere! Administratorer skal bruge kommandoen {} for at tilføje en."
+msgstr ""
+
+#: commands/user.py:96
+msgid ""
+msgstr ""
+"You must be level {} or higher to make suggestions.\n"
+"Use the {} command to check your level."
+msgstr ""
+
+#: commands/user.py:113
+msgid "You must be registered in the ArkTools database to make suggestions."
+msgstr "Du skal være registreret i ArkTools database for at komme med forslag."
+msgstr ""
+
+#: commands/user.py:119
+msgid "You must have at least {} hours of playtime to make suggestions."
+msgstr "Du skal have mindst {} timers spilletid for at komme med forslag."
+msgstr ""
+
+#: commands/user.py:148
+msgid "You must wait `{}` before making another suggestion."
+msgstr "Du skal vente "{}", før du kommer med et nyt forslag."
+msgstr ""
+
+#: commands/user.py:197
+msgid "Your [{}]({}) has been posted!"
+msgstr "Din [{}]({}) er blevet sendt!"
+msgstr ""
+
+#: commands/user.py:199
+msgid "Your {} has been posted!"
+msgstr "Din {} er blevet sendt!"
+msgstr ""
+
+#: commands/user.py:222
+msgid "View your profile stats regarding suggestions and votes."
+msgstr "Se din profilstatistik vedrørende forslag og stemmer."
+msgstr ""
+
+#: commands/user.py:234
+msgid "Stats for {}"
+msgstr "Statistik for {}"
+msgstr ""
+
+#: commands/user.py:238
+msgid "Suggestion Summary"
+msgstr "Opsummering af forslag"
+msgstr ""
+
+#: commands/user.py:239
+msgid ""
+msgstr ""
+"Suggestions Made: {}\n"
+"Suggestions Approved: {}\n"
+"Suggestions Denied: {}\n"
+"Karma: {}"
+msgstr ""
+
+#: commands/user.py:248
+msgid "Voting Summary"
+msgstr "Afstemningsoversigt"
+msgstr ""
+
+#: commands/user.py:249
+msgid ""
+msgstr ""
+"Total Upvotes: {}\n"
+"Total Downvotes: {}\n"
+"Successful Votes (Wins): {}\n"
+"Unsuccessful Votes (Losses): {}"
+msgstr ""
+
+#: common/listener.py:74
+msgid " [Deleted]"
+msgstr "[Slettet]"
+msgstr ""
+
+#: common/listener.py:78
+msgid "Deleted Suggestion"
+msgstr "Slettet forslag"
+msgstr ""
+
+#: views/voteview.py:64
+msgid "This suggestion no longer exists in the config!"
+msgstr "Dette forslag findes ikke længere i konfigurationen!"
+msgstr ""
+
+#: views/voteview.py:77
+msgid "You are blacklisted from voting."
+msgstr "Du er sortlistet fra at stemme."
+msgstr ""
+
+#: views/voteview.py:84
+msgid "You have {grammar} and cannot vote."
+msgstr "Du har {grammar} og kan ikke stemme."
+msgstr ""
+
+#: views/voteview.py:92
+msgid "You do not have any of the required roles to vote."
+msgstr "Du har ikke nogen af ​​de påkrævede roller for at stemme."
+msgstr ""
+
+#: views/voteview.py:102
+msgid "Your account is too new! You must wait `{tleft}` before you can vote."
+msgstr "Din konto er for ny! Du skal vente `{left}`, før du kan stemme."
+msgstr ""
+
+#: views/voteview.py:111
+msgid ""
+msgstr ""
+"You joined the server too recently! You must wait `{tleft}` before you "
+"can vote."
+msgstr ""
+
+#: views/voteview.py:125
+msgid "You must be level {level} or higher to vote."
+msgstr "Du skal være niveau {level} eller højere for at stemme."
+msgstr ""
+
+#: views/voteview.py:140
+msgid "Your in-game profile must be registered in order to vote on suggestions.\n"
+msgstr "Din profil i spillet skal være registreret for at kunne stemme på forslag.\n"
+msgstr ""
+
+#: views/voteview.py:141
+msgid "Use the {} command to link your discord account."
+msgstr "Brug kommandoen {} til at linke din discord-konto."
+msgstr ""
+
+#: views/voteview.py:147
+msgid "You must have at least {} hours of playtime to vote."
+msgstr "Du skal have mindst {} timers spilletid for at stemme."
+msgstr ""
+
+#: views/voteview.py:170 views/voteview.py:213
+msgid "You cannot vote on your own suggestion."
+msgstr "Du kan ikke stemme på dit eget forslag."
+msgstr ""
+
+#: views/voteview.py:173
+msgid "You have switched your downvote to an upvote."
+msgstr "Du har skiftet din nedstemme til en opstemme."
+msgstr ""
+
+#: views/voteview.py:181
+msgid "You have removed your upvote."
+msgstr "Du har fjernet din stemme."
+msgstr ""
+
+#: views/voteview.py:186
+msgid "You have upvoted this suggestion."
+msgstr "Du har stemt op for dette forslag."
+msgstr ""
+
+#: views/voteview.py:216
+msgid "You have switched your upvote to a downvote."
+msgstr "Du har skiftet din op-stemme til en ned-stemme."
+msgstr ""
+
+#: views/voteview.py:224
+msgid "You have removed your downvote."
+msgstr "Du har fjernet din nedstemme."
+msgstr ""
+
+#: views/voteview.py:229
+msgid "You have downvoted this suggestion."
+msgstr "Du har nedstemt dette forslag."
+msgstr ""
+

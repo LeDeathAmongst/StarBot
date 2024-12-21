@@ -1,0 +1,61 @@
+# Portuguese translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:53+0100\n"
+"PO-Revision-Date: 2024-10-14 06:55+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: getdocs.py:226 getdocs.py:347 getdocs.py:410
+msgid "Please provide a valid documentations source."
+msgstr "Forneça uma fonte de documentação válida."
+msgstr ""
+
+#: getdocs.py:366 getdocs.py:1739
+msgid "RTFM caching isn't finished."
+msgstr "O cache RTFM não foi concluído."
+msgstr ""
+
+#: getdocs.py:421 view.py:54 view.py:93
+msgid "No results found."
+msgstr "Nenhum resultado encontrado."
+msgstr ""
+
+#: getdocs.py:580
+msgid "The source `{source}` is already enabled."
+msgstr "A fonte `{source}` já está habilitada."
+msgstr ""
+
+#: getdocs.py:584 getdocs.py:614
+msgid "The source `{source}` doesn't exist."
+msgstr "A fonte `{source}` não existe."
+msgstr ""
+
+#: getdocs.py:610
+msgid "The source `{source}` is already disabled."
+msgstr "A fonte `{source}` já está desativada."
+msgstr ""
+
+#: view.py:21
+msgid "Select an option."
+msgstr "Selecione uma opção."
+msgstr ""
+
+#: view.py:67
+msgid "You are not allowed to use this interaction."
+msgstr "Você não tem permissão para usar esta interação."
+msgstr ""
+

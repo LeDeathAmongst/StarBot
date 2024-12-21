@@ -1,0 +1,855 @@
+# Czech translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:09+0100\n"
+"PO-Revision-Date: 2024-10-14 04:12+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: cs\n"
+"Language-Team: cs <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:46
+msgid "**Global Bank:** `{}`\n"
+msgstr "**Globální banka:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "**Economy Cog:** `{}`\n"
+msgstr "**Economy Cog:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Loaded"
+msgstr "Nabito"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Not Loaded"
+msgstr "Nenačteno"
+msgstr ""
+
+#: commands/admin.py:48
+msgid "**Auto Paydays:** `{}`\n"
+msgstr "**Automatické výplatní dny:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:52
+msgid "**Auto Payday Roles:** {}\n"
+msgstr "**Automatické výplatní role:** {}\n"
+msgstr ""
+
+#: commands/admin.py:53 common/utils.py:110 common/utils.py:113
+#: common/utils.py:130 common/utils.py:136
+msgid "None"
+msgstr "Žádný"
+msgstr ""
+
+#: commands/admin.py:79
+msgid "- {} has not used the bank yet.\n"
+msgstr "- {} ještě nepoužil banku.\n"
+msgstr ""
+
+#: commands/admin.py:82
+msgid "- {} has not used the economy commands yet.\n"
+msgstr "- {} ještě nepoužil ekonomické příkazy.\n"
+msgstr ""
+
+#: commands/admin.py:87
+msgid "- {} has {} seconds left until their next payday.\n"
+msgstr "- {} zbývá {} sekund do další výplaty.\n"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "- {} is ready for their next payday.\n"
+msgstr "- {} je připraven na příští výplatní den.\n"
+msgstr ""
+
+#: commands/admin.py:100
+msgid ""
+msgstr ""
+"You must be a bot owner to view these settings when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:109
+msgid "Economy cog is not loaded."
+msgstr "Úsporné ozubené kolečko není naloženo."
+msgstr ""
+
+#: commands/admin.py:111
+msgid "You must be a bot owner to reset cooldowns when global bank is enabled!"
+msgstr "Chcete-li resetovat cooldowny, když je povolena globální banka, musíte být vlastníkem robota!"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "Payday cooldown reset for **{}**."
+msgstr "Resetování cooldownu pro výplatu na **{}**."
+msgstr ""
+
+#: commands/admin.py:128 commands/admin.py:143 commands/admin.py:170
+msgid "This setting is not available when global bank is enabled."
+msgstr "Toto nastavení není dostupné, když je povolena globální banka."
+msgstr ""
+
+#: commands/admin.py:132
+msgid "Payday role amounts will now stack."
+msgstr "Částky výplatních rolí se nyní budou sčítat."
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Payday role amounts will no longer stack."
+msgstr "Částky výplatních rolí se již nebudou skládat."
+msgstr ""
+
+#: commands/admin.py:145
+msgid ""
+msgstr ""
+"\n"
+"Use {} to allow auto-claiming for for all users."
+msgstr ""
+
+#: commands/admin.py:152
+msgid "This role will no longer recieve paydays automatically."
+msgstr "Tato role již nebude dostávat výplatní dny automaticky."
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This role will now receive paydays automatically."
+msgstr "Tato role nyní bude dostávat výplatní dny automaticky."
+msgstr ""
+
+#: commands/admin.py:175
+msgid "Role bonus removed."
+msgstr "Role bonus odstraněn."
+msgstr ""
+
+#: commands/admin.py:178
+msgid "That role does not have a bonus."
+msgstr "Ta role nemá bonus."
+msgstr ""
+
+#: commands/admin.py:183
+msgid "That role already has that bonus."
+msgstr "Ta role už má ten bonus."
+msgstr ""
+
+#: commands/admin.py:184
+msgid "Role bonus updated."
+msgstr "Role bonus aktualizován."
+msgstr ""
+
+#: commands/admin.py:186
+msgid "Role bonus added."
+msgstr "Přidán bonus za roli."
+msgstr ""
+
+#: commands/admin.py:199
+msgid "Paydays will now be claimed automatically for all users."
+msgstr "Výplatní dny budou nyní nárokovány automaticky pro všechny uživatele."
+msgstr ""
+
+#: commands/admin.py:201
+msgid "Paydays will now be claimed automatically for set roles."
+msgstr "Výplatní dny budou nyní automaticky nárokovány pro nastavené role."
+msgstr ""
+
+#: commands/admin.py:203
+msgid "Paydays will no longer be claimed automatically."
+msgstr "Výplatní dny již nebudou automaticky nárokovány."
+msgstr ""
+
+#: commands/admin.py:212
+msgid "There is no auto claim channel when global bank is enabled!"
+msgstr "Pokud je povolena globální banka, neexistuje žádný kanál automatického nároku!"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel set to {}"
+msgstr "Kanál automatického nárokování byl nastaven na {}"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel removed."
+msgstr "Kanál automatického nároku byl odstraněn."
+msgstr ""
+
+#: commands/admin.py:234
+msgid ""
+msgstr ""
+"You must be a bot owner to set the transfer tax when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Invalid tax percentage. Must be between 0 and 1."
+msgstr "Neplatné procento daně. Musí být mezi 0 a 1."
+msgstr ""
+
+#: commands/admin.py:243
+msgid "Transfer tax set to {}%"
+msgstr "Daň z převodu nastavena na {} %"
+msgstr ""
+
+#: commands/admin.py:253
+msgid ""
+msgstr ""
+"You must be a bot owner to set the main log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:260
+msgid "Removing the main log channel."
+msgstr "Odstranění hlavního kanálu protokolu."
+msgstr ""
+
+#: commands/admin.py:265
+msgid "That is already the main log channel."
+msgstr "To je již hlavní kanál protokolu."
+msgstr ""
+
+#: commands/admin.py:266
+msgid "Main log channel changed to {}"
+msgstr "Kanál hlavního protokolu změněn na {}"
+msgstr ""
+
+#: commands/admin.py:268
+msgid "Main log channel set to {}"
+msgstr "Kanál hlavního protokolu nastaven na {}"
+msgstr ""
+
+#: commands/admin.py:298
+msgid ""
+msgstr ""
+"You must be a bot owner to set an event log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Invalid event. Must be one of: {}"
+msgstr "Neplatná událost. Musí být jeden z: {}"
+msgstr ""
+
+#: commands/admin.py:316
+msgid "No channel set for this event."
+msgstr "Pro tuto událost není nastaven žádný kanál."
+msgstr ""
+
+#: commands/admin.py:318
+msgid "Event log channel for {} removed."
+msgstr "Kanál protokolu událostí pro {} byl odstraněn."
+msgstr ""
+
+#: commands/admin.py:321
+msgid "That is already the event log channel for {}."
+msgstr "Toto je již kanál protokolu událostí pro {}."
+msgstr ""
+
+#: commands/admin.py:322
+msgid "Event log channel for {} changed to {}"
+msgstr "Kanál protokolu událostí pro {} změněn na {}"
+msgstr ""
+
+#: commands/admin.py:324
+msgid "Event log channel for {} set to {}"
+msgstr "Kanál protokolu událostí pro {} byl nastaven na {}"
+msgstr ""
+
+#: commands/admin.py:344
+msgid "Delete after time disabled."
+msgstr "Smazat po uplynutí času zakázáno."
+msgstr ""
+
+#: commands/admin.py:347
+msgid "Delete after time set to {} seconds."
+msgstr "Smazat po čase nastaveném na {} sekund."
+msgstr ""
+
+#: commands/admin.py:380
+msgid ""
+msgstr ""
+"- **cost**: The amount of currency to charge\n"
+"- **duration**(`default: 3600`): The time in seconds before the cost "
+"resets\n"
+"- **level**(`default: all`): The minimum permission level to apply the "
+"cost\n"
+" - admin: Admins and above can use the command for free\n"
+" - mod: Mods and above can use the command for free\n"
+" - all: Everyone must pay the cost to use the command\n"
+" - user: All users must pay the cost to use the command unless they are "
+"mod or admin\n"
+" - global: The cost is applied to all users globally\n"
+"- **prompt**(`default: notify`): How the user will be prompted to confirm"
+" the cost\n"
+" - text: The bot will send a text message asking the user to confirm the "
+"cost with yes or no\n"
+" - reaction: The bot will send a message with emoji reactions to confirm "
+"the cost\n"
+" - button: The bot will send a message with buttons to confirm the cost\n"
+" - silent: The bot will not prompt the user to confirm the cost\n"
+" - notify: The bot will simply notify the user of the cost without asking"
+" for confirmation\n"
+"- **modifier**(`default: static`): The type of cost modifier\n"
+" - static: The cost is a fixed amount\n"
+" - percent: The cost is a percentage of the user's balance on top of the "
+"base cost\n"
+" - exponential: The cost increases exponentially based on how frequently "
+"the command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration^2)`\n"
+" - linear: The cost increases linearly based on how frequently the "
+"command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration)`\n"
+"- **value**(`default: 0.0`): The value of the cost modifier depends on "
+"the modifier type\n"
+" - static: This will be 0 and does nothing\n"
+" - percent: Value will be the percentage of the user's balance to add to "
+"the base cost\n"
+" - exponential: Value will be the base cost multiplier\n"
+" - linear: Value will be multiplied by the number of uses in the last "
+"hour to get the cost increase\n"
+msgstr ""
+
+#: commands/admin.py:412
+msgid "You can't add a cost to the addcost command."
+msgstr "K příkazu addcost nelze přidat náklady."
+msgstr ""
+
+#: commands/admin.py:417
+msgid "You must be a bot owner to use this command while global bank is active."
+msgstr "Abyste mohli tento příkaz používat, když je aktivní globální banka, musíte být vlastníkem bota."
+msgstr ""
+
+#: commands/admin.py:419
+msgid "Global bank is active, you must use the global level."
+msgstr "Globální banka je aktivní, musíte použít globální úroveň."
+msgstr ""
+
+#: commands/admin.py:423
+msgid "You must be a bot owner to use the global level."
+msgstr "Abyste mohli používat globální úroveň, musíte být vlastníkem robota."
+msgstr ""
+
+#: commands/admin.py:424
+msgid "You must enable global bank to use the global level."
+msgstr "Musíte povolit globální bance, aby mohla používat globální úroveň."
+msgstr ""
+
+#: commands/admin.py:430
+msgid "Command not found."
+msgstr "Příkaz nenalezen."
+msgstr ""
+
+#: commands/admin.py:432
+msgid "That is not a valid app command"
+msgstr "Toto není platný příkaz aplikace"
+msgstr ""
+
+#: commands/admin.py:435
+msgid "You can't add costs to commands that are always available!"
+msgstr "Nemůžete přidávat náklady k příkazům, které jsou vždy k dispozici!"
+msgstr ""
+
+#: commands/admin.py:438 views/cost_menu.py:289
+msgid "You can't add costs to commands you don't have permission to run!"
+msgstr "Nemůžete přidávat náklady k příkazům, ke kterým nemáte oprávnění!"
+msgstr ""
+
+#: commands/admin.py:448
+msgid "This will overwrite the existing cost for this command. Continue?"
+msgstr "Tím se přepíší stávající náklady na tento příkaz. Pokračovat?"
+msgstr ""
+
+#: commands/admin.py:455
+msgid "Not adding cost."
+msgstr "Bez přidání nákladů."
+msgstr ""
+
+#: commands/admin.py:456
+msgid "{} cost updated."
+msgstr "Cena {} aktualizována."
+msgstr ""
+
+#: commands/admin.py:458
+msgid "{} cost added."
+msgstr "Cena {} přidána."
+msgstr ""
+
+#: commands/admin.py:499
+msgid "No users found with that role."
+msgstr "Nebyli nalezeni žádní uživatelé s touto rolí."
+msgstr ""
+
+#: commands/admin.py:525
+msgid "No users were affected."
+msgstr "Nebyli ovlivněni žádní uživatelé."
+msgstr ""
+
+#: commands/admin.py:527
+msgid "No balances were changed."
+msgstr "Nebyly změněny žádné zůstatky."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "user was"
+msgstr "uživatel byl"
+msgstr ""
+
+#: commands/admin.py:528
+msgid "users were"
+msgstr "uživatelé byli"
+msgstr ""
+
+#: commands/admin.py:529
+msgid "Balances for {} updated, total change was {}."
+msgstr "Zůstatky za {} aktualizovány, celková změna byla {}."
+msgstr ""
+
+#: commands/user.py:34
+msgid "No users found."
+msgstr "Nebyli nalezeni žádní uživatelé."
+msgstr ""
+
+#: commands/user.py:52
+msgid "Bank Balances for {}"
+msgstr "Bankovní zůstatky za {}"
+msgstr ""
+
+#: common/checks.py:68
+msgid "You do not have enough {} to run that command! (Need {})"
+msgstr "Nemáte dostatek {} ke spuštění tohoto příkazu! (Potřebuji {})"
+msgstr ""
+
+#: common/checks.py:69
+msgid "{}, you spent {} to run this command"
+msgstr "{}, vynaložili jste {} na spuštění tohoto příkazu"
+msgstr ""
+
+#: common/checks.py:81
+msgid "Do you want to spend {} {} to run this command?"
+msgstr "Chcete za spuštění tohoto příkazu utratit {} {}?"
+msgstr ""
+
+#: common/checks.py:96
+msgid "Not running `{}`."
+msgstr "Neběží `{}`."
+msgstr ""
+
+#: common/checks.py:140
+msgid "{}% transfer tax applied, {} deducted from transfer"
+msgstr "Byla použita {}% daň z převodu, {} odečteno z převodu"
+msgstr ""
+
+#: common/listeners.py:41
+msgid "You have been refunded since this command failed."
+msgstr "Protože tento příkaz selhal, byly vám vráceny peníze."
+msgstr ""
+
+#: common/listeners.py:90
+msgid "Set Balance"
+msgstr "Nastavit rovnováhu"
+msgstr ""
+
+#: common/listeners.py:91
+msgid "Transfer Credits"
+msgstr "Převod kreditů"
+msgstr ""
+
+#: common/listeners.py:92 common/listeners.py:186
+msgid "Bank Wipe"
+msgstr "Bank Wipe"
+msgstr ""
+
+#: common/listeners.py:93
+msgid "Prune Accounts"
+msgstr "Prořezat účty"
+msgstr ""
+
+#: common/listeners.py:94
+msgid "Set Global"
+msgstr "Nastavit globální"
+msgstr ""
+
+#: common/listeners.py:95
+msgid "Payday Claim"
+msgstr "Nárok na výplatu"
+msgstr ""
+
+#: common/listeners.py:98
+msgid "Bank Event: {}"
+msgstr "Bankovní událost: {}"
+msgstr ""
+
+#: common/listeners.py:102 common/listeners.py:109 common/listeners.py:121
+msgid "Recipient"
+msgstr "Příjemce"
+msgstr ""
+
+#: common/listeners.py:103 common/listeners.py:123
+msgid "Old Balance"
+msgstr "Stará bilance"
+msgstr ""
+
+#: common/listeners.py:104 common/listeners.py:124
+msgid "New Balance"
+msgstr "Nová rovnováha"
+msgstr ""
+
+#: common/listeners.py:106 common/listeners.py:112 common/listeners.py:119
+#: common/listeners.py:126
+msgid "Guild"
+msgstr "Cech"
+msgstr ""
+
+#: common/listeners.py:108
+msgid "Sender"
+msgstr "Odesílatel"
+msgstr ""
+
+#: common/listeners.py:110
+msgid "Transfer Amount"
+msgstr "Částka převodu"
+msgstr ""
+
+#: common/listeners.py:115
+msgid "User ID"
+msgstr "ID uživatele"
+msgstr ""
+
+#: common/listeners.py:117
+msgid "Pruned Users"
+msgstr "Oříznutí uživatelé"
+msgstr ""
+
+#: common/listeners.py:122
+msgid "Amount"
+msgstr "Množství"
+msgstr ""
+
+#: common/listeners.py:126
+msgid "Unknown"
+msgstr "Neznámý"
+msgstr ""
+
+#: common/listeners.py:128
+msgid "Channel"
+msgstr "Kanál"
+msgstr ""
+
+#: common/listeners.py:130
+msgid "Message"
+msgstr "Zpráva"
+msgstr ""
+
+#: common/listeners.py:166
+msgid "Global bank has been wiped!"
+msgstr "Globální banka byla vymazána!"
+msgstr ""
+
+#: common/listeners.py:169
+msgid "All bank accounts for all guilds have been wiped!"
+msgstr "Všechny bankovní účty pro všechny cechy byly vymazány!"
+msgstr ""
+
+#: common/listeners.py:177
+msgid "Bank accounts have been wiped!"
+msgstr "Bankovní účty byly vymazány!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to Global!"
+msgstr "Banka byla nastavena na Globální!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to per-server!"
+msgstr "Banka byla nastavena na server!"
+msgstr ""
+
+#: common/listeners.py:214
+msgid "Set Global Bank"
+msgstr "Nastavte globální banku"
+msgstr ""
+
+#: common/parser.py:14
+msgid ""
+msgstr ""
+"Invalid value, the argument must be an integer, optionally preceded with "
+"a `+` or `-` sign."
+msgstr ""
+
+#: common/parser.py:23
+msgid ""
+msgstr ""
+"Invalid value, the amount of currency to increase or decrease must be an "
+"integer different from zero."
+msgstr ""
+
+#: common/utils.py:107
+msgid "Not Set"
+msgstr "Nenastaveno"
+msgstr ""
+
+#: common/utils.py:109
+msgid "# Extended Economy Settings\n"
+msgstr "# Rozšířené ekonomické nastavení\n"
+msgstr ""
+
+#: common/utils.py:111
+msgid "`Transfer Tax:      `{}\n"
+msgstr "`Daň z převodu: `{}\n"
+msgstr ""
+
+#: common/utils.py:113
+msgid "`Command Costs:     `{}\n"
+msgstr "`Náklady na příkaz: `{}\n"
+msgstr ""
+
+#: common/utils.py:114
+msgid "`Global Bank:       `{}\n"
+msgstr "`Globální banka: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "`Delete After:      `{}\n"
+msgstr "`Smazat po: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "Disabled"
+msgstr "Zakázáno"
+msgstr ""
+
+#: common/utils.py:123
+msgid "`Set Global:        `{}\n"
+msgstr "`Nastavit globální: `{}\n"
+msgstr ""
+
+#: common/utils.py:128
+msgid "`Stack Roles:       `{}\n"
+msgstr "`Zásobník rolí: `{}\n"
+msgstr ""
+
+#: common/utils.py:131
+msgid "`Role Bonuses:      `{}\n"
+msgstr "`Role bonusy: `{}\n"
+msgstr ""
+
+#: common/utils.py:132
+msgid "`Payday Autoclaim:  `{}\n"
+msgstr "`Automatický nárok na výplatu: `{}\n"
+msgstr ""
+
+#: common/utils.py:135
+msgid "`Autoclaim Channel: `{}\n"
+msgstr "`Automatický nárok na kanál: `{}\n"
+msgstr ""
+
+#: common/utils.py:137
+msgid "`Autoclaim Roles:   `{}\n"
+msgstr "`Automatické nárokování rolí: `{}\n"
+msgstr ""
+
+#: common/utils.py:139
+msgid ""
+msgstr ""
+"## Event Log Channels\n"
+"`Default Log Channel: `{}\n"
+"`Set Balance:         `{}\n"
+"`Transfer Credits:    `{}\n"
+"`Bank Wipe:           `{}\n"
+"`Prune Accounts:      `{}\n"
+msgstr ""
+
+#: common/utils.py:156
+msgid "`Payday AutoClaim:    `{}\n"
+msgstr "`Automatický nárok na výplatu: `{}\n"
+msgstr ""
+
+#: common/utils.py:160
+msgid "Showing settings for global bank"
+msgstr "Zobrazuje se nastavení pro globální banku"
+msgstr ""
+
+#: common/utils.py:162
+msgid "Showing settings for this server"
+msgstr "Zobrazují se nastavení pro tento server"
+msgstr ""
+
+#: common/utils.py:169
+msgid ""
+msgstr ""
+"`Cost:        `{}\n"
+"`Duration:    `{}\n"
+"`Level:       `{}\n"
+"`Prompt:      `{}\n"
+"`Modifier:    `{}\n"
+"`Value:       `{}\n"
+"`Cached Uses: `{}\n"
+msgstr ""
+
+#: overrides/payday.py:40 overrides/payday.py:105
+msgid ""
+msgstr ""
+"You've reached the maximum amount of {currency}! Please spend some more 😬"
+"\n"
+"\n"
+"You currently have {new_balance} {currency}."
+msgstr ""
+
+#: overrides/payday.py:56 overrides/payday.py:123
+msgid ""
+msgstr ""
+"{author.mention} Here, take some {currency}. Enjoy! (+{amount} "
+"{currency}!)\n"
+"\n"
+"You currently have {new_balance} {currency}.\n"
+"\n"
+"You are currently #{pos} on the global leaderboard!"
+msgstr ""
+
+#: overrides/payday.py:78 overrides/payday.py:145
+msgid "{author.mention} Too soon. Your next payday is {relative_time}."
+msgstr "{author.mention} Příliš brzy. Vaše další výplata je {relative_time}."
+msgstr ""
+
+#: views/confirm.py:12
+msgid "Yes"
+msgstr "Ano"
+msgstr ""
+
+#: views/confirm.py:13
+msgid "No"
+msgstr "Žádný"
+msgstr ""
+
+#: views/confirm.py:19 views/cost_menu.py:179
+msgid "This isn't your menu!"
+msgstr "Toto není vaše menu!"
+msgstr ""
+
+#: views/cost_menu.py:39
+msgid "Command Name"
+msgstr "Název příkazu"
+msgstr ""
+
+#: views/cost_menu.py:45
+msgid "Cost"
+msgstr "Náklady"
+msgstr ""
+
+#: views/cost_menu.py:51
+msgid "Duration (Seconds)"
+msgstr "Doba trvání (sekundy)"
+msgstr ""
+
+#: views/cost_menu.py:57
+msgid "level, prompt, modifier (Comma separated)"
+msgstr "úroveň, výzva, modifikátor (oddělené čárkou)"
+msgstr ""
+
+#: views/cost_menu.py:63
+msgid "Value (Decimal)[Optional]"
+msgstr "Hodnota (desítková)[Volitelné]"
+msgstr ""
+
+#: views/cost_menu.py:82
+msgid "Cost must be an integer!"
+msgstr "Cena musí být celé číslo!"
+msgstr ""
+
+#: views/cost_menu.py:86
+msgid "Duration must be an integer!"
+msgstr "Doba trvání musí být celé číslo!"
+msgstr ""
+
+#: views/cost_menu.py:90
+msgid "Value must be a decimal!"
+msgstr "Hodnota musí být desetinná!"
+msgstr ""
+
+#: views/cost_menu.py:97
+msgid "Invalid details! Must be 3 values separated by commas."
+msgstr "Neplatné údaje! Musí být 3 hodnoty oddělené čárkami."
+msgstr ""
+
+#: views/cost_menu.py:98
+msgid ""
+msgstr ""
+"\n"
+"Example: `user, notify, static`"
+msgstr ""
+
+#: views/cost_menu.py:103
+msgid "Invalid level! You must use one of: admin, mod, all, user, global"
+msgstr "Neplatná úroveň! Musíte použít jednu z následujících možností: admin, mod, all, user, global"
+msgstr ""
+
+#: views/cost_menu.py:107
+msgid ""
+msgstr ""
+"Invalid prompt! You must use one of: text, reaction, button, silent, "
+"notify"
+msgstr ""
+
+#: views/cost_menu.py:111
+msgid ""
+msgstr ""
+"Invalid modifier! You must use one of: static, percent, exponential, "
+"linear"
+msgstr ""
+
+#: views/cost_menu.py:254
+msgid "Page {}/{}"
+msgstr "Strana {}/{}"
+msgstr ""
+
+#: views/cost_menu.py:271
+msgid "Add Command Cost"
+msgstr "Přidejte náklady na příkaz"
+msgstr ""
+
+#: views/cost_menu.py:278
+msgid "Command already has a cost!"
+msgstr "Příkaz už stojí!"
+msgstr ""
+
+#: views/cost_menu.py:283 views/cost_menu.py:323 views/cost_menu.py:344
+msgid "Command not found!"
+msgstr "Příkaz nenalezen!"
+msgstr ""
+
+#: views/cost_menu.py:285
+msgid "You can't add a cost to a command that is always available!"
+msgstr "Nemůžete přidat cenu k příkazu, který je vždy k dispozici!"
+msgstr ""
+
+#: views/cost_menu.py:305
+msgid "Command cost added!"
+msgstr "Příplatek za příkaz přidán!"
+msgstr ""
+
+#: views/cost_menu.py:329
+msgid "Command cost removed!"
+msgstr "Náklady na příkaz odstraněny!"
+msgstr ""
+
+#: views/cost_menu.py:351
+msgid "Edit Cost: {}"
+msgstr "Upravit cenu: {}"
+msgstr ""
+
+#: views/cost_menu.py:369
+msgid "Command cost updated!"
+msgstr "Cena příkazu aktualizována!"
+msgstr ""
+

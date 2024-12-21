@@ -1,0 +1,227 @@
+# Persian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:29+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fa\n"
+"Language-Team: fa <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "نام"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "متن"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "ایجاد اسناد برای یک چرخ دنده"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "نام چرخ دنده ای که می خواهید برای آن اسناد بسازید (حساس به حروف بزرگ)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "همه موارد [p] را با پیشوند ربات جایگزین کنید"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "همه موارد [botname] را با نام ربات جایگزین کنید"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "اطلاعات اضافی مانند مبدل ها و رشته های اسناد آنها را اضافه کنید"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "شامل دستورات مخفی"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "یک CSV با هر دستور ایزوله در هر سطر اضافه کنید"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "در اینجا اسناد مربوط به تمام چرخ دنده های بارگیری شده شما در حال حاضر وجود دارد!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "من نتوانستم آن چرخ را پیدا کنم، شاید بارگذاری نشده باشد؟"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "در اینجا اسناد شما برای {} است!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "عددی بدون اعشار"
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "عددی با اعشار یا بدون اعشار."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "می تواند 1، 0، درست، نادرست، t، f باشد"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "در هر"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "ثانیه"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "دوم"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "اسلش"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "فرمان"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "هیبرید"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "استفاده"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "چک ها"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "مورد نیاز"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "اختیاری"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "فقط سرور"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "محدود به"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "نام مستعار"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "خنک شدن"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "نمی توان رشته مستند یا کلاس برای مبدل {} دریافت کرد"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "نمی توان رشته اسناد را برای مبدل {} دریافت کرد"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "کلاس برای مبدل {} دریافت نشد"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "تکمیل خودکار"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "پیش فرض"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "انتخاب ها"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "{} برای آرگومان {} فرمان {} یافت نشد"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "اطلاعات Arg توسعه یافته\n"
+msgstr ""
+

@@ -1,0 +1,227 @@
+# Hebrew translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:29+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: he\n"
+"Language-Team: he <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "שֵׁם"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "טֶקסט"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "צור מסמכים עבור גלגל שיניים"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "שם גלגל השיניים שברצונך ליצור עבורו מסמכים (רגיש לאותיות גדולות)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "החלף את כל המופעים של [p] בקידומת הבוטים"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "החלף את כל המופעים של [שם הבוט] בשם הבוטים"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "כלול מידע נוסף כמו ממירים ו-docstrings שלהם"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "כלול פקודות נסתרות"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "כלול CSV עם כל פקודה מבודדת בכל שורה"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "להלן המסמכים עבור כל גלגלי השיניים הטעונים כעת!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "לא הצלחתי למצוא את גלגל השיניים הזה, אולי הוא לא נטען?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "הנה המסמכים שלך עבור {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "מספר ללא מקומות עשרוניים."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "מספר עם או בלי מקומות עשרוניים."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "יכול להיות 1, 0, נכון, לא נכון, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "לְכָל"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "שניות"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "שְׁנִיָה"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "לַחתוֹך"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "פְּקוּדָה"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "היברידי"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "נוֹהָג"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "צ'קים"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "דָרוּשׁ"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "אופציונלי"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "שרת בלבד"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "מוגבל ל"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "כינויים"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "התקררות"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "לא ניתן היה להשיג מחרוזת doc או מחלקה עבור ממיר {}"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "לא ניתן היה לקבל מחרוזת דוק עבור ממיר {}"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "לא ניתן היה לקבל מחלקה עבור ממיר {}"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "השלמה אוטומטית"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "בְּרִירַת מֶחדָל"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "בחירות"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "לא ניתן למצוא את {} עבור הארגומנט {} של הפקודה {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "מידע ארגומנט מורחב\n"
+msgstr ""
+

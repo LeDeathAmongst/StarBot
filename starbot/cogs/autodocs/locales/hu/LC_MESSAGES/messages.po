@@ -1,0 +1,227 @@
+# Hungarian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:30+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: hu\n"
+"Language-Team: hu <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "név"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "szöveg"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Hozzon létre dokumentumokat egy fogaskerékhez"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Annak a fogaskeréknek a neve, amelyhez dokumentumokat szeretne készíteni (a kis- és nagybetűk megkülönböztetése)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Cserélje le a [p] minden előfordulását a bots előtaggal"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Cserélje le a [botnév] minden előfordulását a botnévvel"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Adjon meg további információkat, például konvertereket és azok dokumentumkaraktereit"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Tartalmazzon rejtett parancsokat"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Minden egyes parancs soronként elkülönítve tartalmazzon csv-t"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Itt vannak az összes jelenleg betöltött fogaskereke dokumentumai!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Nem találtam azt a fogaskereket, lehet, hogy nincs betöltve?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Itt vannak a(z) {} dokumentumai!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Tizedesjegyek nélküli szám."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Egy szám tizedesjegyekkel vagy anélkül."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Lehet 1, 0, igaz, hamis, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "per"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "másodpercig"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "második"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Vágás"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Parancs"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Hibrid"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Használat"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Ellenőrzések"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Kívánt"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Választható"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Csak szerver"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Korlátozva"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Álnevek"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Lehűlés"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Nem sikerült lekérni a dokumentumot vagy az osztályt a {} konverterhez"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Nem sikerült lekérni a dokumentumot a(z) {} konverterhez"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Nem sikerült lekérni az osztályt a {} konverterhez"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Automatikus kiegészítés"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Alapértelmezett"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Választások"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Nem található {} a {} parancs {} argumentumához"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Bővített Arg Info\n"
+msgstr ""
+

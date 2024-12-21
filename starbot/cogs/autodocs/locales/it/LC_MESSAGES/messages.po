@@ -1,0 +1,227 @@
+# Italian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:30+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "nome"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "testo"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Crea documenti per un ingranaggio"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Il nome dell'ingranaggio per il quale desideri creare documenti (con distinzione tra maiuscole e minuscole)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Sostituisci tutte le occorrenze di [p] con il prefisso bot"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Sostituisci tutte le occorrenze di [botname] con il nome del bot"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Includi informazioni extra come i convertitori e le relative docstring"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Includi comandi nascosti"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Includi un CSV con ogni comando isolato per riga"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Ecco i documenti per tutti i tuoi ingranaggi attualmente caricati!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Non sono riuscito a trovare l'ingranaggio, forse non è caricato?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Ecco i tuoi documenti per {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Un numero senza cifre decimali."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Un numero con o senza cifre decimali."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Può essere 1, 0, vero, falso, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "per"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "secondi"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "secondo"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Barra"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Comando"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Ibrido"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Utilizzo"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Controlli"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Necessario"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Opzionale"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Solo server"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Limitato a"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Alias"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Raffreddare"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Impossibile ottenere la stringa di documenti o la classe per il convertitore {}"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Impossibile ottenere la stringa di documentazione per il convertitore {}"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Impossibile ottenere la classe per il convertitore {}"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Completamento automatico"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Predefinito"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Scelte"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Impossibile trovare {} per l'argomento {} del comando {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Informazioni argomento estese\n"
+msgstr ""
+

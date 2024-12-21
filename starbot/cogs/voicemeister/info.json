@@ -1,0 +1,11 @@
+{
+    "author": ["Star"],
+    "name": "VoiceMeister",
+    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>)\nIf you like my work, [donate me!](<https://ko-fi.com/starcogs>)\n\nVoiceMeister is a cog like Astro, but for Red-DiscordBot",
+    "requirements": [
+        "git+https://github.com/LeDeathAmongst/Star_Utils.git"
+    ],
+    "min_bot_version": "3.5.9",
+    "end_user_data_statement": "",
+    "hidden": false
+}

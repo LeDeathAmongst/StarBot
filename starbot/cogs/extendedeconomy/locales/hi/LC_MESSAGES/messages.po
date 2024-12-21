@@ -1,0 +1,855 @@
+# Hindi translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:09+0100\n"
+"PO-Revision-Date: 2024-10-14 04:18+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: hi\n"
+"Language-Team: hi <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:46
+msgid "**Global Bank:** `{}`\n"
+msgstr "**ग्लोबल बैंक:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "**Economy Cog:** `{}`\n"
+msgstr "**अर्थव्यवस्था कोग:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Loaded"
+msgstr "लदा हुआ"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Not Loaded"
+msgstr "लोड नहीं"
+msgstr ""
+
+#: commands/admin.py:48
+msgid "**Auto Paydays:** `{}`\n"
+msgstr "**ऑटो भुगतान दिवस:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:52
+msgid "**Auto Payday Roles:** {}\n"
+msgstr "**ऑटो पे-डे भूमिकाएँ:** {}\n"
+msgstr ""
+
+#: commands/admin.py:53 common/utils.py:110 common/utils.py:113
+#: common/utils.py:130 common/utils.py:136
+msgid "None"
+msgstr "कोई नहीं"
+msgstr ""
+
+#: commands/admin.py:79
+msgid "- {} has not used the bank yet.\n"
+msgstr "- {} ने अभी तक बैंक का उपयोग नहीं किया है।\n"
+msgstr ""
+
+#: commands/admin.py:82
+msgid "- {} has not used the economy commands yet.\n"
+msgstr "- {} ने अभी तक इकोनॉमी कमांड का उपयोग नहीं किया है।\n"
+msgstr ""
+
+#: commands/admin.py:87
+msgid "- {} has {} seconds left until their next payday.\n"
+msgstr "- उनके अगले भुगतान दिवस तक {} सेकंड बचे हैं।\n"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "- {} is ready for their next payday.\n"
+msgstr "- {} अपने अगले वेतन दिवस के लिए तैयार है।\n"
+msgstr ""
+
+#: commands/admin.py:100
+msgid ""
+msgstr ""
+"You must be a bot owner to view these settings when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:109
+msgid "Economy cog is not loaded."
+msgstr "इकोनॉमी कॉग लोड नहीं किया गया है।"
+msgstr ""
+
+#: commands/admin.py:111
+msgid "You must be a bot owner to reset cooldowns when global bank is enabled!"
+msgstr "वैश्विक बैंक सक्षम होने पर कूलडाउन रीसेट करने के लिए आपको एक बॉट स्वामी होना चाहिए!"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "Payday cooldown reset for **{}**."
+msgstr "**{}** के लिए पे-डे कूलडाउन रीसेट।"
+msgstr ""
+
+#: commands/admin.py:128 commands/admin.py:143 commands/admin.py:170
+msgid "This setting is not available when global bank is enabled."
+msgstr "वैश्विक बैंक सक्षम होने पर यह सेटिंग उपलब्ध नहीं है."
+msgstr ""
+
+#: commands/admin.py:132
+msgid "Payday role amounts will now stack."
+msgstr "वेतन-दिवस भूमिका राशियाँ अब ढेर हो जाएंगी।"
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Payday role amounts will no longer stack."
+msgstr "वेतन-दिवस भूमिका राशियाँ अब एकत्रित नहीं होंगी।"
+msgstr ""
+
+#: commands/admin.py:145
+msgid ""
+msgstr ""
+"\n"
+"Use {} to allow auto-claiming for for all users."
+msgstr ""
+
+#: commands/admin.py:152
+msgid "This role will no longer recieve paydays automatically."
+msgstr "इस भूमिका को अब स्वचालित रूप से वेतन-दिवस प्राप्त नहीं होंगे।"
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This role will now receive paydays automatically."
+msgstr "इस भूमिका को अब स्वचालित रूप से वेतन दिवस प्राप्त होंगे।"
+msgstr ""
+
+#: commands/admin.py:175
+msgid "Role bonus removed."
+msgstr "रोल बोनस हटा दिया गया."
+msgstr ""
+
+#: commands/admin.py:178
+msgid "That role does not have a bonus."
+msgstr "उस भूमिका में कोई बोनस नहीं है."
+msgstr ""
+
+#: commands/admin.py:183
+msgid "That role already has that bonus."
+msgstr "उस भूमिका में पहले से ही वह बोनस है।"
+msgstr ""
+
+#: commands/admin.py:184
+msgid "Role bonus updated."
+msgstr "भूमिका बोनस अद्यतन किया गया."
+msgstr ""
+
+#: commands/admin.py:186
+msgid "Role bonus added."
+msgstr "भूमिका बोनस जोड़ा गया."
+msgstr ""
+
+#: commands/admin.py:199
+msgid "Paydays will now be claimed automatically for all users."
+msgstr "अब सभी उपयोगकर्ताओं के लिए भुगतान दिवस का दावा स्वचालित रूप से किया जाएगा।"
+msgstr ""
+
+#: commands/admin.py:201
+msgid "Paydays will now be claimed automatically for set roles."
+msgstr "अब निर्धारित भूमिकाओं के लिए भुगतान दिवसों का दावा स्वचालित रूप से किया जाएगा।"
+msgstr ""
+
+#: commands/admin.py:203
+msgid "Paydays will no longer be claimed automatically."
+msgstr "भुगतान दिवसों का अब स्वचालित रूप से दावा नहीं किया जाएगा।"
+msgstr ""
+
+#: commands/admin.py:212
+msgid "There is no auto claim channel when global bank is enabled!"
+msgstr "वैश्विक बैंक सक्षम होने पर कोई ऑटो दावा चैनल नहीं है!"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel set to {}"
+msgstr "स्वचालित दावा चैनल {} पर सेट है"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel removed."
+msgstr "स्वचालित दावा चैनल हटा दिया गया."
+msgstr ""
+
+#: commands/admin.py:234
+msgid ""
+msgstr ""
+"You must be a bot owner to set the transfer tax when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Invalid tax percentage. Must be between 0 and 1."
+msgstr "अमान्य कर प्रतिशत. 0 और 1 के बीच होना चाहिए."
+msgstr ""
+
+#: commands/admin.py:243
+msgid "Transfer tax set to {}%"
+msgstr "स्थानांतरण कर को {}% पर सेट किया गया"
+msgstr ""
+
+#: commands/admin.py:253
+msgid ""
+msgstr ""
+"You must be a bot owner to set the main log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:260
+msgid "Removing the main log channel."
+msgstr "मुख्य लॉग चैनल को हटाना."
+msgstr ""
+
+#: commands/admin.py:265
+msgid "That is already the main log channel."
+msgstr "वह पहले से ही मुख्य लॉग चैनल है।"
+msgstr ""
+
+#: commands/admin.py:266
+msgid "Main log channel changed to {}"
+msgstr "मुख्य लॉग चैनल को {} में बदल दिया गया"
+msgstr ""
+
+#: commands/admin.py:268
+msgid "Main log channel set to {}"
+msgstr "मुख्य लॉग चैनल {} पर सेट है"
+msgstr ""
+
+#: commands/admin.py:298
+msgid ""
+msgstr ""
+"You must be a bot owner to set an event log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Invalid event. Must be one of: {}"
+msgstr "अमान्य घटना. इनमें से एक होना चाहिए: {}"
+msgstr ""
+
+#: commands/admin.py:316
+msgid "No channel set for this event."
+msgstr "इस इवेंट के लिए कोई चैनल सेट नहीं है."
+msgstr ""
+
+#: commands/admin.py:318
+msgid "Event log channel for {} removed."
+msgstr "{} के लिए इवेंट लॉग चैनल हटा दिया गया।"
+msgstr ""
+
+#: commands/admin.py:321
+msgid "That is already the event log channel for {}."
+msgstr "वह पहले से ही {} के लिए इवेंट लॉग चैनल है।"
+msgstr ""
+
+#: commands/admin.py:322
+msgid "Event log channel for {} changed to {}"
+msgstr "{} के लिए इवेंट लॉग चैनल को {} में बदल दिया गया"
+msgstr ""
+
+#: commands/admin.py:324
+msgid "Event log channel for {} set to {}"
+msgstr "{} के लिए इवेंट लॉग चैनल {} पर सेट है"
+msgstr ""
+
+#: commands/admin.py:344
+msgid "Delete after time disabled."
+msgstr "समय अक्षम होने के बाद हटाएँ."
+msgstr ""
+
+#: commands/admin.py:347
+msgid "Delete after time set to {} seconds."
+msgstr "समय को {} सेकंड पर सेट करने के बाद हटाएँ।"
+msgstr ""
+
+#: commands/admin.py:380
+msgid ""
+msgstr ""
+"- **cost**: The amount of currency to charge\n"
+"- **duration**(`default: 3600`): The time in seconds before the cost "
+"resets\n"
+"- **level**(`default: all`): The minimum permission level to apply the "
+"cost\n"
+" - admin: Admins and above can use the command for free\n"
+" - mod: Mods and above can use the command for free\n"
+" - all: Everyone must pay the cost to use the command\n"
+" - user: All users must pay the cost to use the command unless they are "
+"mod or admin\n"
+" - global: The cost is applied to all users globally\n"
+"- **prompt**(`default: notify`): How the user will be prompted to confirm"
+" the cost\n"
+" - text: The bot will send a text message asking the user to confirm the "
+"cost with yes or no\n"
+" - reaction: The bot will send a message with emoji reactions to confirm "
+"the cost\n"
+" - button: The bot will send a message with buttons to confirm the cost\n"
+" - silent: The bot will not prompt the user to confirm the cost\n"
+" - notify: The bot will simply notify the user of the cost without asking"
+" for confirmation\n"
+"- **modifier**(`default: static`): The type of cost modifier\n"
+" - static: The cost is a fixed amount\n"
+" - percent: The cost is a percentage of the user's balance on top of the "
+"base cost\n"
+" - exponential: The cost increases exponentially based on how frequently "
+"the command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration^2)`\n"
+" - linear: The cost increases linearly based on how frequently the "
+"command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration)`\n"
+"- **value**(`default: 0.0`): The value of the cost modifier depends on "
+"the modifier type\n"
+" - static: This will be 0 and does nothing\n"
+" - percent: Value will be the percentage of the user's balance to add to "
+"the base cost\n"
+" - exponential: Value will be the base cost multiplier\n"
+" - linear: Value will be multiplied by the number of uses in the last "
+"hour to get the cost increase\n"
+msgstr ""
+
+#: commands/admin.py:412
+msgid "You can't add a cost to the addcost command."
+msgstr "आप ऐडकॉस्ट कमांड में कोई लागत नहीं जोड़ सकते।"
+msgstr ""
+
+#: commands/admin.py:417
+msgid "You must be a bot owner to use this command while global bank is active."
+msgstr "वैश्विक बैंक के सक्रिय रहने के दौरान इस कमांड का उपयोग करने के लिए आपको एक बॉट स्वामी होना चाहिए।"
+msgstr ""
+
+#: commands/admin.py:419
+msgid "Global bank is active, you must use the global level."
+msgstr "वैश्विक बैंक सक्रिय है, आपको वैश्विक स्तर का उपयोग करना चाहिए।"
+msgstr ""
+
+#: commands/admin.py:423
+msgid "You must be a bot owner to use the global level."
+msgstr "वैश्विक स्तर का उपयोग करने के लिए आपको एक बॉट स्वामी होना चाहिए।"
+msgstr ""
+
+#: commands/admin.py:424
+msgid "You must enable global bank to use the global level."
+msgstr "आपको वैश्विक बैंक को वैश्विक स्तर का उपयोग करने में सक्षम बनाना होगा।"
+msgstr ""
+
+#: commands/admin.py:430
+msgid "Command not found."
+msgstr "यह कमांड नहीं मिला।"
+msgstr ""
+
+#: commands/admin.py:432
+msgid "That is not a valid app command"
+msgstr "वह मान्य ऐप कमांड नहीं है"
+msgstr ""
+
+#: commands/admin.py:435
+msgid "You can't add costs to commands that are always available!"
+msgstr "आप उन आदेशों में लागत नहीं जोड़ सकते जो हमेशा उपलब्ध होते हैं!"
+msgstr ""
+
+#: commands/admin.py:438 views/cost_menu.py:289
+msgid "You can't add costs to commands you don't have permission to run!"
+msgstr "आप उन आदेशों में लागत नहीं जोड़ सकते जिन्हें चलाने की आपके पास अनुमति नहीं है!"
+msgstr ""
+
+#: commands/admin.py:448
+msgid "This will overwrite the existing cost for this command. Continue?"
+msgstr "यह इस आदेश की मौजूदा लागत को अधिलेखित कर देगा। जारी रखना?"
+msgstr ""
+
+#: commands/admin.py:455
+msgid "Not adding cost."
+msgstr "लागत नहीं जोड़ रहा."
+msgstr ""
+
+#: commands/admin.py:456
+msgid "{} cost updated."
+msgstr "{} लागत अद्यतन की गई।"
+msgstr ""
+
+#: commands/admin.py:458
+msgid "{} cost added."
+msgstr "{} लागत जोड़ी गई."
+msgstr ""
+
+#: commands/admin.py:499
+msgid "No users found with that role."
+msgstr "उस भूमिका वाला कोई उपयोगकर्ता नहीं मिला."
+msgstr ""
+
+#: commands/admin.py:525
+msgid "No users were affected."
+msgstr "कोई भी उपयोगकर्ता प्रभावित नहीं हुआ."
+msgstr ""
+
+#: commands/admin.py:527
+msgid "No balances were changed."
+msgstr "कोई शेष नहीं बदला गया."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "user was"
+msgstr "उपयोगकर्ता था"
+msgstr ""
+
+#: commands/admin.py:528
+msgid "users were"
+msgstr "उपयोगकर्ता थे"
+msgstr ""
+
+#: commands/admin.py:529
+msgid "Balances for {} updated, total change was {}."
+msgstr "{} के लिए शेष राशि अद्यतन की गई, कुल परिवर्तन {} था।"
+msgstr ""
+
+#: commands/user.py:34
+msgid "No users found."
+msgstr "कोई उपयोगकर्ता नहीं मिला."
+msgstr ""
+
+#: commands/user.py:52
+msgid "Bank Balances for {}"
+msgstr "{} के लिए बैंक शेष"
+msgstr ""
+
+#: common/checks.py:68
+msgid "You do not have enough {} to run that command! (Need {})"
+msgstr "उस आदेश को चलाने के लिए आपके पास पर्याप्त {} नहीं है! (ज़रूरत {})"
+msgstr ""
+
+#: common/checks.py:69
+msgid "{}, you spent {} to run this command"
+msgstr "{}, आपने इस आदेश को चलाने के लिए {} खर्च किया"
+msgstr ""
+
+#: common/checks.py:81
+msgid "Do you want to spend {} {} to run this command?"
+msgstr "क्या आप इस कमांड को चलाने के लिए {} {} खर्च करना चाहते हैं?"
+msgstr ""
+
+#: common/checks.py:96
+msgid "Not running `{}`."
+msgstr "`{}` नहीं चल रहा है।"
+msgstr ""
+
+#: common/checks.py:140
+msgid "{}% transfer tax applied, {} deducted from transfer"
+msgstr "{}% स्थानांतरण कर लागू, {} स्थानांतरण से काटा गया"
+msgstr ""
+
+#: common/listeners.py:41
+msgid "You have been refunded since this command failed."
+msgstr "यह आदेश विफल होने के बाद से आपको धनवापसी कर दी गई है।"
+msgstr ""
+
+#: common/listeners.py:90
+msgid "Set Balance"
+msgstr "संतुलन स्थापित करें"
+msgstr ""
+
+#: common/listeners.py:91
+msgid "Transfer Credits"
+msgstr "क्रेडिट स्थानांतरित करें"
+msgstr ""
+
+#: common/listeners.py:92 common/listeners.py:186
+msgid "Bank Wipe"
+msgstr "बैंक वाइप"
+msgstr ""
+
+#: common/listeners.py:93
+msgid "Prune Accounts"
+msgstr "प्रून खाते"
+msgstr ""
+
+#: common/listeners.py:94
+msgid "Set Global"
+msgstr "वैश्विक सेट करें"
+msgstr ""
+
+#: common/listeners.py:95
+msgid "Payday Claim"
+msgstr "वेतन-दिवस दावा"
+msgstr ""
+
+#: common/listeners.py:98
+msgid "Bank Event: {}"
+msgstr "बैंक इवेंट: {}"
+msgstr ""
+
+#: common/listeners.py:102 common/listeners.py:109 common/listeners.py:121
+msgid "Recipient"
+msgstr "प्राप्तकर्ता"
+msgstr ""
+
+#: common/listeners.py:103 common/listeners.py:123
+msgid "Old Balance"
+msgstr "पुराना शेष"
+msgstr ""
+
+#: common/listeners.py:104 common/listeners.py:124
+msgid "New Balance"
+msgstr "नया शेष"
+msgstr ""
+
+#: common/listeners.py:106 common/listeners.py:112 common/listeners.py:119
+#: common/listeners.py:126
+msgid "Guild"
+msgstr "समाज"
+msgstr ""
+
+#: common/listeners.py:108
+msgid "Sender"
+msgstr "प्रेषक"
+msgstr ""
+
+#: common/listeners.py:110
+msgid "Transfer Amount"
+msgstr "स्थानांतरण राशि"
+msgstr ""
+
+#: common/listeners.py:115
+msgid "User ID"
+msgstr "उपयोगकर्ता पहचान"
+msgstr ""
+
+#: common/listeners.py:117
+msgid "Pruned Users"
+msgstr "काटे गए उपयोगकर्ता"
+msgstr ""
+
+#: common/listeners.py:122
+msgid "Amount"
+msgstr "मात्रा"
+msgstr ""
+
+#: common/listeners.py:126
+msgid "Unknown"
+msgstr "अज्ञात"
+msgstr ""
+
+#: common/listeners.py:128
+msgid "Channel"
+msgstr "चैनल"
+msgstr ""
+
+#: common/listeners.py:130
+msgid "Message"
+msgstr "संदेश"
+msgstr ""
+
+#: common/listeners.py:166
+msgid "Global bank has been wiped!"
+msgstr "वैश्विक बैंक का सफाया हो गया!"
+msgstr ""
+
+#: common/listeners.py:169
+msgid "All bank accounts for all guilds have been wiped!"
+msgstr "सभी गिल्डों के सभी बैंक खाते मिटा दिए गए हैं!"
+msgstr ""
+
+#: common/listeners.py:177
+msgid "Bank accounts have been wiped!"
+msgstr "बैंक खाते मिटा दिए गए!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to Global!"
+msgstr "बैंक को ग्लोबल पर सेट कर दिया गया है!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to per-server!"
+msgstr "बैंक को प्रति-सर्वर पर सेट कर दिया गया है!"
+msgstr ""
+
+#: common/listeners.py:214
+msgid "Set Global Bank"
+msgstr "ग्लोबल बैंक सेट करें"
+msgstr ""
+
+#: common/parser.py:14
+msgid ""
+msgstr ""
+"Invalid value, the argument must be an integer, optionally preceded with "
+"a `+` or `-` sign."
+msgstr ""
+
+#: common/parser.py:23
+msgid ""
+msgstr ""
+"Invalid value, the amount of currency to increase or decrease must be an "
+"integer different from zero."
+msgstr ""
+
+#: common/utils.py:107
+msgid "Not Set"
+msgstr "सेट नहीं"
+msgstr ""
+
+#: common/utils.py:109
+msgid "# Extended Economy Settings\n"
+msgstr "#विस्तारित अर्थव्यवस्था सेटिंग्स\n"
+msgstr ""
+
+#: common/utils.py:111
+msgid "`Transfer Tax:      `{}\n"
+msgstr "`ट्रांसफर टैक्स: `{}\n"
+msgstr ""
+
+#: common/utils.py:113
+msgid "`Command Costs:     `{}\n"
+msgstr "`कमांड लागत: `{}\n"
+msgstr ""
+
+#: common/utils.py:114
+msgid "`Global Bank:       `{}\n"
+msgstr "`ग्लोबल बैंक: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "`Delete After:      `{}\n"
+msgstr "`बाद में हटाएं:`{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "Disabled"
+msgstr "अक्षम"
+msgstr ""
+
+#: common/utils.py:123
+msgid "`Set Global:        `{}\n"
+msgstr "`ग्लोबल सेट करें: `{}\n"
+msgstr ""
+
+#: common/utils.py:128
+msgid "`Stack Roles:       `{}\n"
+msgstr "`स्टैक भूमिकाएँ: `{}\n"
+msgstr ""
+
+#: common/utils.py:131
+msgid "`Role Bonuses:      `{}\n"
+msgstr "`भूमिका बोनस:`{}\n"
+msgstr ""
+
+#: common/utils.py:132
+msgid "`Payday Autoclaim:  `{}\n"
+msgstr "`पेडे ऑटोक्लेम: `{}\n"
+msgstr ""
+
+#: common/utils.py:135
+msgid "`Autoclaim Channel: `{}\n"
+msgstr "`ऑटोक्लेम चैनल: `{}\n"
+msgstr ""
+
+#: common/utils.py:137
+msgid "`Autoclaim Roles:   `{}\n"
+msgstr "`स्वतः दावा भूमिकाएँ: `{}\n"
+msgstr ""
+
+#: common/utils.py:139
+msgid ""
+msgstr ""
+"## Event Log Channels\n"
+"`Default Log Channel: `{}\n"
+"`Set Balance:         `{}\n"
+"`Transfer Credits:    `{}\n"
+"`Bank Wipe:           `{}\n"
+"`Prune Accounts:      `{}\n"
+msgstr ""
+
+#: common/utils.py:156
+msgid "`Payday AutoClaim:    `{}\n"
+msgstr "`Payday ऑटोक्लेम: `{}\n"
+msgstr ""
+
+#: common/utils.py:160
+msgid "Showing settings for global bank"
+msgstr "वैश्विक बैंक के लिए सेटिंग दिखाई जा रही है"
+msgstr ""
+
+#: common/utils.py:162
+msgid "Showing settings for this server"
+msgstr "इस सर्वर के लिए सेटिंग्स दिखाई जा रही हैं"
+msgstr ""
+
+#: common/utils.py:169
+msgid ""
+msgstr ""
+"`Cost:        `{}\n"
+"`Duration:    `{}\n"
+"`Level:       `{}\n"
+"`Prompt:      `{}\n"
+"`Modifier:    `{}\n"
+"`Value:       `{}\n"
+"`Cached Uses: `{}\n"
+msgstr ""
+
+#: overrides/payday.py:40 overrides/payday.py:105
+msgid ""
+msgstr ""
+"You've reached the maximum amount of {currency}! Please spend some more 😬"
+"\n"
+"\n"
+"You currently have {new_balance} {currency}."
+msgstr ""
+
+#: overrides/payday.py:56 overrides/payday.py:123
+msgid ""
+msgstr ""
+"{author.mention} Here, take some {currency}. Enjoy! (+{amount} "
+"{currency}!)\n"
+"\n"
+"You currently have {new_balance} {currency}.\n"
+"\n"
+"You are currently #{pos} on the global leaderboard!"
+msgstr ""
+
+#: overrides/payday.py:78 overrides/payday.py:145
+msgid "{author.mention} Too soon. Your next payday is {relative_time}."
+msgstr "{author.mention} बहुत जल्दी. आपका अगला वेतनदिवस {relative_time} है।"
+msgstr ""
+
+#: views/confirm.py:12
+msgid "Yes"
+msgstr "हाँ"
+msgstr ""
+
+#: views/confirm.py:13
+msgid "No"
+msgstr "नहीं"
+msgstr ""
+
+#: views/confirm.py:19 views/cost_menu.py:179
+msgid "This isn't your menu!"
+msgstr "यह आपका मेनू नहीं है!"
+msgstr ""
+
+#: views/cost_menu.py:39
+msgid "Command Name"
+msgstr "आदेश का नाम"
+msgstr ""
+
+#: views/cost_menu.py:45
+msgid "Cost"
+msgstr "लागत"
+msgstr ""
+
+#: views/cost_menu.py:51
+msgid "Duration (Seconds)"
+msgstr "अवधि (सेकंड)"
+msgstr ""
+
+#: views/cost_menu.py:57
+msgid "level, prompt, modifier (Comma separated)"
+msgstr "लेवल, प्रॉम्प्ट, संशोधक (अल्पविराम से अलग)"
+msgstr ""
+
+#: views/cost_menu.py:63
+msgid "Value (Decimal)[Optional]"
+msgstr "मान (दशमलव)[वैकल्पिक]"
+msgstr ""
+
+#: views/cost_menu.py:82
+msgid "Cost must be an integer!"
+msgstr "लागत पूर्णांक होनी चाहिए!"
+msgstr ""
+
+#: views/cost_menu.py:86
+msgid "Duration must be an integer!"
+msgstr "अवधि पूर्णांक होनी चाहिए!"
+msgstr ""
+
+#: views/cost_menu.py:90
+msgid "Value must be a decimal!"
+msgstr "मान दशमलव होना चाहिए!"
+msgstr ""
+
+#: views/cost_menu.py:97
+msgid "Invalid details! Must be 3 values separated by commas."
+msgstr "अमान्य विवरण! अल्पविराम से अलग किए गए 3 मान होने चाहिए."
+msgstr ""
+
+#: views/cost_menu.py:98
+msgid ""
+msgstr ""
+"\n"
+"Example: `user, notify, static`"
+msgstr ""
+
+#: views/cost_menu.py:103
+msgid "Invalid level! You must use one of: admin, mod, all, user, global"
+msgstr "अमान्य स्तर! आपको इनमें से किसी एक का उपयोग करना होगा: व्यवस्थापक, मॉड, सभी, उपयोगकर्ता, वैश्विक"
+msgstr ""
+
+#: views/cost_menu.py:107
+msgid ""
+msgstr ""
+"Invalid prompt! You must use one of: text, reaction, button, silent, "
+"notify"
+msgstr ""
+
+#: views/cost_menu.py:111
+msgid ""
+msgstr ""
+"Invalid modifier! You must use one of: static, percent, exponential, "
+"linear"
+msgstr ""
+
+#: views/cost_menu.py:254
+msgid "Page {}/{}"
+msgstr "पेज {}/{}"
+msgstr ""
+
+#: views/cost_menu.py:271
+msgid "Add Command Cost"
+msgstr "कमांड लागत जोड़ें"
+msgstr ""
+
+#: views/cost_menu.py:278
+msgid "Command already has a cost!"
+msgstr "कमांड की पहले से ही एक लागत होती है!"
+msgstr ""
+
+#: views/cost_menu.py:283 views/cost_menu.py:323 views/cost_menu.py:344
+msgid "Command not found!"
+msgstr "यह कमांड नहीं मिला!"
+msgstr ""
+
+#: views/cost_menu.py:285
+msgid "You can't add a cost to a command that is always available!"
+msgstr "आप उस कमांड में कोई लागत नहीं जोड़ सकते जो हमेशा उपलब्ध है!"
+msgstr ""
+
+#: views/cost_menu.py:305
+msgid "Command cost added!"
+msgstr "कमांड लागत जोड़ी गई!"
+msgstr ""
+
+#: views/cost_menu.py:329
+msgid "Command cost removed!"
+msgstr "कमांड लागत हटा दी गई!"
+msgstr ""
+
+#: views/cost_menu.py:351
+msgid "Edit Cost: {}"
+msgstr "लागत संपादित करें: {}"
+msgstr ""
+
+#: views/cost_menu.py:369
+msgid "Command cost updated!"
+msgstr "कमांड लागत अपडेट की गई!"
+msgstr ""
+

@@ -1,0 +1,227 @@
+# Korean translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:30+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "이름"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "텍스트"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "톱니바퀴용 문서 만들기"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "문서를 만들려는 톱니바퀴의 이름(대소문자 구분)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "모든 [p] 항목을 봇 접두사로 바꿉니다."
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "모든 [botname] 항목을 봇 이름으로 바꿉니다."
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "변환기 및 해당 문서 문자열과 같은 추가 정보를 포함합니다."
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "숨겨진 명령 포함"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "행마다 격리된 각 명령에 CSV를 포함합니다."
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "현재 로드된 모든 톱니바퀴에 대한 문서는 다음과 같습니다!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "해당 톱니바퀴를 찾을 수 없습니다. 로드되지 않은 것 같습니다."
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "다음은 {}에 대한 문서입니다!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "소수점 이하 자릿수가 없는 숫자입니다."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "소수점 이하 자릿수가 있거나 없는 숫자입니다."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "1, 0, 참, 거짓, t, f일 수 있습니다."
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "당"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "초"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "두번째"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "삭감"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "명령"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "잡종"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "용법"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "체크 무늬"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "필수의"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "선택 과목"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "서버만"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "다음으로 제한됨"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "별칭"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "쿨타임"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "{} 변환기에 대한 독스트링이나 클래스를 가져올 수 없습니다."
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "{} 변환기에 대한 독스트링을 가져올 수 없습니다."
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "{} 변환기에 대한 클래스를 가져올 수 없습니다."
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "자동완성"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "기본"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "선택"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "{} 명령의 {} 인수에 대한 {}를 찾을 수 없습니다."
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "확장된 인수 정보\n"
+msgstr ""
+

@@ -1,0 +1,1107 @@
+# Bangla translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:52+0100\n"
+"PO-Revision-Date: 2024-10-14 04:54+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:41
+msgid ""
+msgstr ""
+"`Approved Channel:   `{}\n"
+"`Rejected Channel:   `{}\n"
+"`Pending Channel:    `{}\n"
+"`Anonymous:          `{}\n"
+"`Reveal Complete:    `{}\n"
+"`DM Result:          `{}\n"
+"`Discussion Threads: `{}\n"
+"`Delete Threads:     `{}\n"
+"`Upvote Emoji:       `{}\n"
+"`Downvote Emoji:     `{}\n"
+"`Show Vote Counts:   `{}\n"
+"`Suggestions:        `{}\n"
+"`Suggestion #:       `{}\n"
+msgstr ""
+
+#: commands/admin.py:56 commands/admin.py:57 commands/admin.py:58
+msgid "Not set"
+msgstr "সেট করা হয়নি"
+msgstr ""
+
+#: commands/admin.py:74
+msgid "Ideaboard Settings"
+msgstr "আইডিয়াবোর্ড সেটিংস"
+msgstr ""
+
+#: commands/admin.py:76
+msgid "Cooldowns"
+msgstr "কুলডাউনস"
+msgstr ""
+
+#: commands/admin.py:77
+msgid ""
+msgstr ""
+"Base: {} seconds\n"
+"Role Cooldowns: {}"
+msgstr ""
+
+#: commands/admin.py:79 commands/admin.py:99 commands/admin.py:108
+#: commands/admin.py:116
+msgid "None Set"
+msgstr "কোনটি সেট নয়"
+msgstr ""
+
+#: commands/admin.py:83
+msgid "Account Age"
+msgstr "অ্যাকাউন্টের বয়স"
+msgstr ""
+
+#: commands/admin.py:84
+msgid ""
+msgstr ""
+"Minimum age of account to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "Join Time"
+msgstr "সময় যোগদান"
+msgstr ""
+
+#: commands/admin.py:90
+msgid ""
+msgstr ""
+"Minimum time in server to vote or suggest\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:95
+msgid "Vote Roles"
+msgstr "ভোটের ভূমিকা"
+msgstr ""
+
+#: commands/admin.py:97
+msgid ""
+msgstr ""
+"Roles required to vote\n"
+"If no roles are set, anyone can vote.\n"
+msgstr ""
+
+#: commands/admin.py:103
+msgid "Suggest Roles"
+msgstr "ভূমিকা প্রস্তাব করুন"
+msgstr ""
+
+#: commands/admin.py:105
+msgid ""
+msgstr ""
+"Roles required to suggest\n"
+"If no roles are set, anyone can make suggestions.\n"
+msgstr ""
+
+#: commands/admin.py:112
+msgid "Approvers"
+msgstr "অনুমোদনকারী"
+msgstr ""
+
+#: commands/admin.py:114
+msgid "Roles required to approve suggestions\n"
+msgstr "প্রস্তাবনা অনুমোদনের জন্য প্রয়োজনীয় ভূমিকা\n"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "LevelUp Integration"
+msgstr "লেভেলআপ ইন্টিগ্রেশন"
+msgstr ""
+
+#: commands/admin.py:122
+msgid ""
+msgstr ""
+"Minimum level required to vote or make suggestions.\n"
+"Vote: {}\n"
+"Suggest: {}"
+msgstr ""
+
+#: commands/admin.py:127
+msgid "Ark Playtime Integration"
+msgstr "আর্ক প্লেটাইম ইন্টিগ্রেশন"
+msgstr ""
+
+#: commands/admin.py:128
+msgid ""
+msgstr ""
+"Minimum playtime to vote or make suggestions\n"
+"Vote: {} hours\n"
+"Suggest: {} hours"
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Role Blacklist"
+msgstr "ভূমিকা কালো তালিকা"
+msgstr ""
+
+#: commands/admin.py:138
+msgid "User Blacklist"
+msgstr "ব্যবহারকারী কালো তালিকা"
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This channel is already set as the {} channel!"
+msgstr "এই চ্যানেলটি ইতিমধ্যেই {} চ্যানেল হিসেবে সেট করা আছে!"
+msgstr ""
+
+#: commands/admin.py:157
+msgid "I don't have permission to send messages in {}!"
+msgstr "আমার কাছে {} এ বার্তা পাঠানোর অনুমতি নেই!"
+msgstr ""
+
+#: commands/admin.py:159
+msgid "I don't have permission to send embeds in {}!"
+msgstr "আমার কাছে {} এ এম্বেড পাঠানোর অনুমতি নেই!"
+msgstr ""
+
+#: commands/admin.py:163
+msgid ""
+msgstr ""
+"Changing the pending channel will move all pending suggestions to the new"
+" channel.\n"
+msgstr ""
+
+#: commands/admin.py:164
+msgid "Are you sure you want to continue? (y/n)"
+msgstr "আপনি কি চালিয়ে যেতে চান? (y/n)"
+msgstr ""
+
+#: commands/admin.py:169
+msgid "Change cancelled."
+msgstr "পরিবর্তন বাতিল করা হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:186 commands/adminbase.py:117 commands/adminbase.py:250
+#: commands/adminbase.py:329 commands/user.py:160
+msgid "Suggestion #{}"
+msgstr "সাজেশন #{}"
+msgstr ""
+
+#: commands/admin.py:189 commands/adminbase.py:332 commands/user.py:164
+msgid "Posted anonymously"
+msgstr "বেনামে পোস্ট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:194 commands/adminbase.py:337 commands/user.py:166
+msgid "Posted by {}"
+msgstr "পোস্ট করেছেন {}"
+msgstr ""
+
+#: commands/admin.py:200 commands/user.py:181
+msgid "Suggestion #{} Discussion"
+msgstr "সাজেশন #{} আলোচনা"
+msgstr ""
+
+#: commands/admin.py:201 commands/user.py:182
+msgid "Discussion thread for suggestion #{}"
+msgstr "পরামর্শ #{} জন্য আলোচনা থ্রেড"
+msgstr ""
+
+#: commands/admin.py:206
+msgid "Faile to create discussion thread in {} for suggestion #{}: {}"
+msgstr "#{} পরামর্শের জন্য {} এ আলোচনার থ্রেড তৈরি করতে ব্যর্থ হয়েছে: {}"
+msgstr ""
+
+#: commands/admin.py:221
+msgid "The {} channel has been changed from {} to {}"
+msgstr "{} চ্যানেলটি {} থেকে {} এ পরিবর্তিত হয়েছে"
+msgstr ""
+
+#: commands/admin.py:225
+msgid "Set {} channel to {}"
+msgstr "{} চ্যানেলকে {} এ সেট করুন"
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Anonymous suggestions are now {}."
+msgstr "বেনামী পরামর্শ এখন {}."
+msgstr ""
+
+#: commands/admin.py:249
+msgid "Revealing of authors on rejection is now {}."
+msgstr "প্রত্যাখ্যানের লেখকদের প্রকাশ এখন {}।"
+msgstr ""
+
+#: commands/admin.py:258
+msgid "Showing vote counts on suggestions is now {}."
+msgstr "পরামর্শের উপর ভোটের সংখ্যা দেখানো হচ্ছে এখন {}।"
+msgstr ""
+
+#: commands/admin.py:267
+msgid "DMing users about suggestion results is now {}."
+msgstr "পরামর্শের ফলাফল সম্পর্কে ব্যবহারকারীদের DM করা এখন {}"
+msgstr ""
+
+#: commands/admin.py:276
+msgid "Discussion threads are now {}."
+msgstr "আলোচনার থ্রেড এখন {}।"
+msgstr ""
+
+#: commands/admin.py:284
+msgid "Threads will now be locked/archived when a suggestion is approved/denied."
+msgstr "একটি পরামর্শ অনুমোদিত/অস্বীকৃত হলে থ্রেডগুলি এখন লক/আর্কাইভ করা হবে।"
+msgstr ""
+
+#: commands/admin.py:286
+msgid "Threads will now be deleted when a suggestion is approved/denied."
+msgstr "একটি পরামর্শ অনুমোদিত/অস্বীকৃত হলে থ্রেডগুলি এখন মুছে ফেলা হবে।"
+msgstr ""
+
+#: commands/admin.py:296
+msgid "Upvote emoji set to {}"
+msgstr "আপভোট ইমোজি {} এ সেট করুন"
+msgstr ""
+
+#: commands/admin.py:304
+msgid "Downvote emoji set to {}"
+msgstr "ডাউনভোট ইমোজি {} এ সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Base cooldown set to {} seconds."
+msgstr "বেস কুলডাউন {} সেকেন্ডে সেট করা হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:315
+msgid "Base cooldown disabled."
+msgstr "বেস কুলডাউন অক্ষম।"
+msgstr ""
+
+#: commands/admin.py:328
+msgid "Cooldown for role {} updated to {} seconds."
+msgstr "ভূমিকার জন্য কুলডাউন {} সেকেন্ডে আপডেট করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:331
+msgid "Cooldown for role {} removed."
+msgstr "{} ভূমিকার জন্য কুলডাউন সরানো হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:335
+msgid "Cooldown for role {} set to {} seconds."
+msgstr "ভূমিকার জন্য কুলডাউন {} সেকেন্ডে সেট করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:337
+msgid "Cooldown for role {} already disabled."
+msgstr "ভূমিকা {} এর জন্য কুলডাউন ইতিমধ্যে অক্ষম করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:350
+msgid "Role {} `{}` voting whitelist."
+msgstr "ভূমিকা {} `{}` ভোটিং সাদাতালিকা৷"
+msgstr ""
+
+#: commands/admin.py:363
+msgid "Role {} `{}` suggest whitelist."
+msgstr "ভূমিকা {} `{}` সুপারিশ সাদা তালিকা."
+msgstr ""
+
+#: commands/admin.py:376
+msgid "Role {} `{}` approvers list."
+msgstr "ভূমিকা {} `{}` অনুমোদনকারীদের তালিকা।"
+msgstr ""
+
+#: commands/admin.py:386
+msgid "Role `{}` removed from blacklist."
+msgstr "ভূমিকা `{}` কালো তালিকা থেকে সরানো হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:389
+msgid "Role `{}` added to blacklist."
+msgstr "ভূমিকা `{}` কালো তালিকায় যোগ করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:393
+msgid "Role with ID `{}` removed from blacklist."
+msgstr "আইডি `{}` সহ ভূমিকা কালো তালিকা থেকে সরানো হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:395
+msgid "Role with ID `{}` not found in blacklist."
+msgstr "আইডি `{}` এর ভূমিকা কালো তালিকায় পাওয়া যায়নি।"
+msgstr ""
+
+#: commands/admin.py:405
+msgid "User `{}` removed from blacklist."
+msgstr "ব্যবহারকারী `{}` কালো তালিকা থেকে সরানো হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:408
+msgid "User `{}` added to blacklist."
+msgstr "ব্যবহারকারী `{}` কালো তালিকায় যোগ করা হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:412
+msgid "User with ID `{}` removed from blacklist."
+msgstr "আইডি `{}` সহ ব্যবহারকারীকে কালো তালিকা থেকে সরিয়ে দেওয়া হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:414
+msgid "User with ID `{}` not found in blacklist."
+msgstr "আইডি `{}` সহ ব্যবহারকারীকে কালো তালিকায় পাওয়া যায়নি।"
+msgstr ""
+
+#: commands/admin.py:430
+msgid ""
+msgstr ""
+"Minimum account age to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:449
+msgid ""
+msgstr ""
+"Minimum join time to vote is set to {0} hours and to suggest is set to "
+"{1} hours."
+msgstr ""
+
+#: commands/admin.py:465
+msgid "LevelUp is not loaded. Please load it and try again."
+msgstr "LevelUp লোড হয় না. দয়া করে এটি লোড করুন এবং আবার চেষ্টা করুন৷"
+msgstr ""
+
+#: commands/admin.py:472
+msgid "Minimum level to vote is set to {0} and to suggest is set to {1}."
+msgstr "ভোট দেওয়ার সর্বনিম্ন স্তর {0} এ সেট করা হয়েছে এবং প্রস্তাব করার জন্য {1} সেট করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:490
+msgid "This command is only available to Vertyco and Arkon."
+msgstr "এই কমান্ডটি শুধুমাত্র ভার্টিকো এবং আরকনের জন্য উপলব্ধ।"
+msgstr ""
+
+#: commands/admin.py:493
+msgid "ArkTools is not loaded. Please load it and try again."
+msgstr "ArkTools লোড করা হয় না. দয়া করে এটি লোড করুন এবং আবার চেষ্টা করুন৷"
+msgstr ""
+
+#: commands/admin.py:500
+msgid ""
+msgstr ""
+"Minimum playtime to vote is set to {0} hours and to suggest is set to {1}"
+" hours."
+msgstr ""
+
+#: commands/admin.py:511
+msgid "This user has no stats to reset."
+msgstr "এই ব্যবহারকারীর রিসেট করার কোন পরিসংখ্যান নেই।"
+msgstr ""
+
+#: commands/admin.py:513
+msgid "Stats for {} have been reset."
+msgstr "{} এর পরিসংখ্যান পুনরায় সেট করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:521
+msgid "No user stats to reset."
+msgstr "রিসেট করার জন্য কোনো ব্যবহারকারীর পরিসংখ্যান নেই।"
+msgstr ""
+
+#: commands/admin.py:522
+msgid "Are you sure you want to reset all user stats?"
+msgstr "আপনি কি নিশ্চিত যে আপনি সমস্ত ব্যবহারকারীর পরিসংখ্যান পুনরায় সেট করতে চান?"
+msgstr ""
+
+#: commands/admin.py:526
+msgid "Reset cancelled."
+msgstr "রিসেট বাতিল করা হয়েছে।"
+msgstr ""
+
+#: commands/admin.py:528
+msgid "All user stats have been reset."
+msgstr "সমস্ত ব্যবহারকারীর পরিসংখ্যান রিসেট করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:536 commands/admin.py:629
+msgid "No suggestions have been made yet."
+msgstr "কোন পরামর্শ এখনও করা হয়নি."
+msgstr ""
+
+#: commands/admin.py:539
+msgid "The pending channel is not set."
+msgstr "মুলতুবি চ্যানেল সেট করা নেই."
+msgstr ""
+
+#: commands/admin.py:547
+msgid "All suggestions are accounted for."
+msgstr "সমস্ত পরামর্শ জন্য অ্যাকাউন্ট করা হয়."
+msgstr ""
+
+#: commands/admin.py:548
+msgid "The following suggestions are missing their message:\n"
+msgstr "নিম্নলিখিত পরামর্শ তাদের বার্তা অনুপস্থিত:\n"
+msgstr ""
+
+#: commands/admin.py:550
+msgid ""
+msgstr ""
+"\n"
+"- To prune these suggestions, use {}"
+msgstr ""
+
+#: commands/admin.py:551
+msgid ""
+msgstr ""
+"\n"
+"- To view the content of a suggestion, use {}"
+msgstr ""
+
+#: commands/admin.py:570
+msgid "- Removed {} profiles of users who have left the server.\n"
+msgstr "- সার্ভার ছেড়ে যাওয়া ব্যবহারকারীদের {} প্রোফাইল সরানো হয়েছে৷\n৷"
+msgstr ""
+
+#: commands/admin.py:573
+msgid "- No profiles were removed.\n"
+msgstr "- কোনো প্রোফাইল সরানো হয়নি৷\n৷"
+msgstr ""
+
+#: commands/admin.py:584
+msgid "- Removed upvote from user {} on suggestion #{}.\n"
+msgstr "- প্রস্তাবনা #{}-এ ব্যবহারকারী {} থেকে আপভোট সরানো হয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:588
+msgid "- Removed downvote from user {} on suggestion #{}.\n"
+msgstr "- প্রস্তাবনা #{}-এ ব্যবহারকারী {} থেকে ডাউনভোট সরানো হয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:606
+msgid "- Removed suggestion #{} as the message no longer exists.\n"
+msgstr "- বার্তাটি আর বিদ্যমান নেই বলে সাজেশন #{} সরানো হয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:612
+msgid "- Failed to delete discussion thread for suggestion #{}: {}.\n"
+msgstr "- পরামর্শ #{}: {} এর জন্য আলোচনার থ্রেড মুছে ফেলতে ব্যর্থ।\n"
+msgstr ""
+
+#: commands/admin.py:689
+msgid "Server Insights"
+msgstr "সার্ভার অন্তর্দৃষ্টি"
+msgstr ""
+
+#: commands/admin.py:691
+msgid "Average Suggestions Made Per User"
+msgstr "ব্যবহারকারী প্রতি তৈরি গড় পরামর্শ"
+msgstr ""
+
+#: commands/admin.py:696
+msgid "Most Suggestions Made"
+msgstr "সর্বাধিক প্রস্তাবনা তৈরি"
+msgstr ""
+
+#: commands/admin.py:701
+msgid "Most Successful Users"
+msgstr "সর্বাধিক সফল ব্যবহারকারী"
+msgstr ""
+
+#: commands/admin.py:703
+msgid "These users have the most suggestions approved.\n"
+msgstr "এই ব্যবহারকারীদের সর্বাধিক প্রস্তাবনা অনুমোদিত হয়েছে৷\n৷"
+msgstr ""
+
+#: commands/admin.py:709
+msgid "Least Successful Users"
+msgstr "সবচেয়ে কম সফল ব্যবহারকারী"
+msgstr ""
+
+#: commands/admin.py:711
+msgid "These users have the most suggestions denied.\n"
+msgstr "এই ব্যবহারকারীদের সর্বাধিক প্রস্তাবনা অস্বীকার করা হয়েছে৷\n"
+msgstr ""
+
+#: commands/admin.py:717
+msgid "Highest Approval Ratio"
+msgstr "সর্বোচ্চ অনুমোদনের অনুপাত"
+msgstr ""
+
+#: commands/admin.py:719
+msgid "These users have the highest approval to rejection ratio.\n"
+msgstr "এই ব্যবহারকারীদের প্রত্যাখ্যান অনুপাতের সর্বোচ্চ অনুমোদন রয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:725
+msgid "Lowest Approval Ratio"
+msgstr "সর্বনিম্ন অনুমোদন অনুপাত"
+msgstr ""
+
+#: commands/admin.py:727
+msgid "These users have the lowest approval to rejection ratio.\n"
+msgstr "এই ব্যবহারকারীদের প্রত্যাখ্যান অনুপাতের সর্বনিম্ন অনুমোদন রয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:733
+msgid "Most Wins"
+msgstr "সর্বাধিক জয়"
+msgstr ""
+
+#: commands/admin.py:735
+msgid "These users have the most votes that ended in their favor.\n"
+msgstr "এই ব্যবহারকারীদের সর্বাধিক ভোট রয়েছে যা তাদের পক্ষে শেষ হয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:740
+msgid "Most Losses"
+msgstr "সর্বাধিক লোকসান"
+msgstr ""
+
+#: commands/admin.py:742
+msgid "These users have the most votes that ended against their favor.\n"
+msgstr "এই ব্যবহারকারীদের সর্বাধিক ভোট রয়েছে যা তাদের পক্ষে শেষ হয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:748
+msgid "Most Optimistic Users"
+msgstr "সর্বাধিক আশাবাদী ব্যবহারকারী"
+msgstr ""
+
+#: commands/admin.py:750
+msgid "These users have the highest upvote to downvote ratio.\n"
+msgstr "এই ব্যবহারকারীদের আপভোট থেকে ডাউনভোট অনুপাত সবচেয়ে বেশি।\n"
+msgstr ""
+
+#: commands/admin.py:756
+msgid "Most Negative Users"
+msgstr "সবচেয়ে নেতিবাচক ব্যবহারকারী"
+msgstr ""
+
+#: commands/admin.py:758
+msgid "These users have the highest downvote to upvote ratio.\n"
+msgstr "এই ব্যবহারকারীদের আপভোট অনুপাত সর্বোচ্চ ডাউনভোট রয়েছে।\n"
+msgstr ""
+
+#: commands/admin.py:764
+msgid "Highest Karma"
+msgstr "সর্বোচ্চ কর্মফল"
+msgstr ""
+
+#: commands/admin.py:766
+msgid "These users have the highest received upvote to downvote ratio.\n"
+msgstr "এই ব্যবহারকারীদের আপভোট থেকে ডাউনভোট অনুপাত সবচেয়ে বেশি।\n"
+msgstr ""
+
+#: commands/admin.py:772
+msgid "Lowest Karma"
+msgstr "সর্বনিম্ন কর্ম"
+msgstr ""
+
+#: commands/admin.py:774
+msgid "These users have the lowest received upvote to downvote ratio.\n"
+msgstr "এই ব্যবহারকারীরা সর্বনিম্ন আপভোট থেকে ডাউনভোট অনুপাত পেয়েছেন।\n"
+msgstr ""
+
+#: commands/adminbase.py:21
+msgid "Approve a suggestion."
+msgstr "একটি প্রস্তাব অনুমোদন করুন."
+msgstr ""
+
+#: commands/adminbase.py:22 commands/adminbase.py:156
+msgid "Suggestion number"
+msgstr "সাজেশন নম্বর"
+msgstr ""
+
+#: commands/adminbase.py:30 commands/adminbase.py:164 commands/adminbase.py:303
+#: commands/adminbase.py:419
+msgid "No approvers have been set! Use the {} command to add one."
+msgstr "কোন অনুমোদনকারী সেট করা হয়েছে! একটি যোগ করতে {} কমান্ড ব্যবহার করুন।"
+msgstr ""
+
+#: commands/adminbase.py:35
+msgid "You do not have the required roles to approve suggestions."
+msgstr "পরামর্শ অনুমোদন করার জন্য আপনার প্রয়োজনীয় ভূমিকা নেই।"
+msgstr ""
+
+#: commands/adminbase.py:39 commands/adminbase.py:173 commands/user.py:46
+msgid "The pending suggestions channel has not been set!"
+msgstr "মুলতুবি পরামর্শ চ্যানেল সেট করা হয়নি!"
+msgstr ""
+
+#: commands/adminbase.py:42
+msgid "The approved suggestions channel has not been set!"
+msgstr "অনুমোদিত পরামর্শ চ্যানেল সেট করা হয়নি!"
+msgstr ""
+
+#: commands/adminbase.py:47 commands/adminbase.py:181 commands/adminbase.py:435
+#: commands/user.py:51
+msgid "The pending suggestions channel no longer exists!"
+msgstr "মুলতুবি প্রস্তাবনা চ্যানেলটি আর বিদ্যমান নেই!"
+msgstr ""
+
+#: commands/adminbase.py:51 commands/adminbase.py:123
+msgid "The approved suggestions channel no longer exists!"
+msgstr "অনুমোদিত পরামর্শ চ্যানেল আর বিদ্যমান নেই!"
+msgstr ""
+
+#: commands/adminbase.py:61 commands/adminbase.py:195
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the suggestion"
+" channels."
+msgstr ""
+
+#: commands/adminbase.py:66 commands/adminbase.py:200 commands/adminbase.py:314
+#: commands/adminbase.py:430
+msgid "That suggestion does not exist!"
+msgstr "সেই পরামর্শের অস্তিত্ব নেই!"
+msgstr ""
+
+#: commands/adminbase.py:73 commands/adminbase.py:207
+msgid "I couldn't delete the pending message: {}"
+msgstr "আমি মুলতুবি থাকা বার্তাটি মুছতে পারিনি: {}"
+msgstr ""
+
+#: commands/adminbase.py:85
+msgid " [Approved]"
+msgstr "[অনুমোদিত]"
+msgstr ""
+
+#: commands/adminbase.py:89 commands/adminbase.py:98
+msgid "Approved Suggestion"
+msgstr "অনুমোদিত প্রস্তাবনা"
+msgstr ""
+
+#: commands/adminbase.py:101 commands/adminbase.py:236
+#: commands/adminbase.py:398
+msgid "Suggested by {}"
+msgstr "{} দ্বারা প্রস্তাবিত"
+msgstr ""
+
+#: commands/adminbase.py:104
+msgid "Suggested by a user who is no longer in the server."
+msgstr "সার্ভারে আর নেই এমন একজন ব্যবহারকারীর দ্বারা প্রস্তাবিত৷"
+msgstr ""
+
+#: commands/adminbase.py:107
+msgid "Reason"
+msgstr "কারণ"
+msgstr ""
+
+#: commands/adminbase.py:111 commands/adminbase.py:244
+msgid "Results"
+msgstr "ফলাফল"
+msgstr ""
+
+#: commands/adminbase.py:120
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the approved "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:140
+msgid "Your [suggestion #{}]({}) has been approved!"
+msgstr "আপনার [পরামর্শ #{}]({}) অনুমোদিত হয়েছে!"
+msgstr ""
+
+#: commands/adminbase.py:142 commands/adminbase.py:275
+msgid ""
+msgstr ""
+"\n"
+"Reason: {}"
+msgstr ""
+
+#: commands/adminbase.py:151
+msgid "Suggestion #{} has been approved."
+msgstr "প্রস্তাবনা #{} অনুমোদিত হয়েছে।"
+msgstr ""
+
+#: commands/adminbase.py:155
+msgid "Reject a suggestion."
+msgstr "একটি পরামর্শ প্রত্যাখ্যান করুন."
+msgstr ""
+
+#: commands/adminbase.py:169
+msgid "You do not have the required roles to reject suggestions."
+msgstr "পরামর্শ প্রত্যাখ্যান করার জন্য আপনার কাছে প্রয়োজনীয় ভূমিকা নেই।"
+msgstr ""
+
+#: commands/adminbase.py:176
+msgid "The rejected suggestions channel has not been set!"
+msgstr "প্রত্যাখ্যান পরামর্শ চ্যানেল সেট করা হয়নি!"
+msgstr ""
+
+#: commands/adminbase.py:185
+msgid "The rejected suggestions channel no longer exists!"
+msgstr "প্রত্যাখ্যান করা প্রস্তাবনা চ্যানেলটি আর বিদ্যমান নেই!"
+msgstr ""
+
+#: commands/adminbase.py:219
+msgid " [Rejected]"
+msgstr "[প্রত্যাখ্যান]"
+msgstr ""
+
+#: commands/adminbase.py:223 commands/adminbase.py:231
+msgid "Rejected Suggestion"
+msgstr "প্রত্যাখ্যান প্রস্তাব"
+msgstr ""
+
+#: commands/adminbase.py:234
+msgid "Suggested anonymously"
+msgstr "বেনামে প্রস্তাবিত"
+msgstr ""
+
+#: commands/adminbase.py:240
+msgid "Reason for Rejection"
+msgstr "প্রত্যাখ্যানের কারণ"
+msgstr ""
+
+#: commands/adminbase.py:253
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the denied "
+"suggestions channel."
+msgstr ""
+
+#: commands/adminbase.py:256
+msgid "The denied suggestions channel no longer exists!"
+msgstr "অস্বীকৃত প্রস্তাবনা চ্যানেলটি আর বিদ্যমান নেই!"
+msgstr ""
+
+#: commands/adminbase.py:273
+msgid "Your [suggestion #{}]({}) has been rejected!"
+msgstr "আপনার [পরামর্শ #{}]({}) প্রত্যাখ্যান করা হয়েছে!"
+msgstr ""
+
+#: commands/adminbase.py:284
+msgid "Suggestion #{} has been rejected."
+msgstr "প্রস্তাবনা #{} প্রত্যাখ্যান করা হয়েছে।"
+msgstr ""
+
+#: commands/adminbase.py:290
+msgid "View the current upvoters and downvoters of a suggestion."
+msgstr "একটি পরামর্শের বর্তমান আপভোটার এবং ডাউনভোটার দেখুন।"
+msgstr ""
+
+#: commands/adminbase.py:292 commands/adminbase.py:410
+msgid "Suggestion number to view votes for"
+msgstr "জন্য ভোট দেখতে সাজেশন নম্বর"
+msgstr ""
+
+#: commands/adminbase.py:309
+msgid "You do not have the required roles to inspect suggestions."
+msgstr "পরামর্শ পরিদর্শন করার জন্য আপনার কাছে প্রয়োজনীয় ভূমিকা নেই।"
+msgstr ""
+
+#: commands/adminbase.py:322
+msgid ""
+msgstr ""
+"I cannot find the message associated with this suggestion, would you like"
+" me to repost it? (y/n)"
+msgstr ""
+
+#: commands/adminbase.py:343
+msgid "Suggestion #{} has been reposted."
+msgstr "সাজেশন #{} পুনরায় পোস্ট করা হয়েছে।"
+msgstr ""
+
+#: commands/adminbase.py:345
+msgid "Not reposting Suggestion #{}.\n"
+msgstr "সাজেশন #{} পুনরায় পোস্ট করা হচ্ছে না।\n"
+msgstr ""
+
+#: commands/adminbase.py:346
+msgid "You can remove it from the config by typing {}"
+msgstr "আপনি {} টাইপ করে কনফিগারেশন থেকে এটি সরাতে পারেন"
+msgstr ""
+
+#: commands/adminbase.py:353
+msgid "Votes for Suggestion #{}"
+msgstr "#{} প্রস্তাবনার জন্য ভোট"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "Upvoters ({})"
+msgstr "আপভোটার ({})"
+msgstr ""
+
+#: commands/adminbase.py:364
+msgid "No upvotes yet"
+msgstr "এখনো কোনো আপভোট নেই"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "Downvoters ({})"
+msgstr "ডাউনভোটার ({})"
+msgstr ""
+
+#: commands/adminbase.py:365
+msgid "No downvotes yet"
+msgstr "এখনো কোনো ডাউনভোট নেই"
+msgstr ""
+
+#: commands/adminbase.py:369 commands/adminbase.py:370
+#: commands/adminbase.py:392 commands/adminbase.py:393
+msgid "N/A"
+msgstr "N/A"
+msgstr ""
+
+#: commands/adminbase.py:373
+msgid "Upvoters ({}):\n"
+msgstr "আপভোটার ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:381
+msgid ""
+msgstr ""
+"\n"
+"Downvoters ({}):\n"
+msgstr ""
+
+#: commands/adminbase.py:402
+msgid "Suggested by {} [No longer in server]"
+msgstr "{} দ্বারা প্রস্তাবিত [আর সার্ভারে নেই]"
+msgstr ""
+
+#: commands/adminbase.py:408
+msgid "Refresh the buttons on a suggestion if it gets stuck."
+msgstr "যদি এটি আটকে যায় তবে পরামর্শের বোতামগুলি রিফ্রেশ করুন।"
+msgstr ""
+
+#: commands/adminbase.py:425
+msgid "You do not have the required roles to refresh suggestions."
+msgstr "প্রস্তাবনা রিফ্রেশ করার জন্য আপনার কাছে প্রয়োজনীয় ভূমিকা নেই।"
+msgstr ""
+
+#: commands/adminbase.py:441
+msgid "I cannot find the message associated with this suggestion."
+msgstr "আমি এই পরামর্শের সাথে যুক্ত বার্তা খুঁজে পাচ্ছি না।"
+msgstr ""
+
+#: commands/adminbase.py:446
+msgid "Suggestion #{} has been refreshed."
+msgstr "সাজেশন #{} রিফ্রেশ করা হয়েছে।"
+msgstr ""
+
+#: commands/user.py:23
+msgid "Share an idea/make a suggestion."
+msgstr "একটি ধারণা শেয়ার করুন/একটি পরামর্শ করুন।"
+msgstr ""
+
+#: commands/user.py:59
+msgid ""
+msgstr ""
+"I do not have the required permissions to send messages in the pending "
+"suggestions channel."
+msgstr ""
+
+#: commands/user.py:66
+msgid "You do not have the required roles to make suggestions."
+msgstr "পরামর্শ দেওয়ার জন্য আপনার কাছে প্রয়োজনীয় ভূমিকা নেই।"
+msgstr ""
+
+#: commands/user.py:72
+msgid "Your account is too young to make suggestions."
+msgstr "পরামর্শ দেওয়ার জন্য আপনার অ্যাকাউন্টটি খুবই কম।"
+msgstr ""
+
+#: commands/user.py:78
+msgid "You haven't been in the server long enough to make suggestions."
+msgstr "আপনি পরামর্শ দেওয়ার জন্য যথেষ্ট সময় ধরে সার্ভারে ছিলেন না৷"
+msgstr ""
+
+#: commands/user.py:82
+msgid "You are not allowed to make suggestions due to a blacklisted role."
+msgstr "একটি কালো তালিকাভুক্ত ভূমিকার কারণে আপনাকে পরামর্শ দেওয়ার অনুমতি নেই৷"
+msgstr ""
+
+#: commands/user.py:86
+msgid "You are blacklisted from making suggestions."
+msgstr "আপনাকে পরামর্শ দেওয়া থেকে কালো তালিকাভুক্ত করা হয়েছে৷"
+msgstr ""
+
+#: commands/user.py:89
+msgid "No approvers have been set! Admins needs to use the {} command to add one."
+msgstr "কোন অনুমোদনকারী সেট করা হয়েছে! অ্যাডমিনদের একটি যোগ করার জন্য {} কমান্ড ব্যবহার করতে হবে।"
+msgstr ""
+
+#: commands/user.py:96
+msgid ""
+msgstr ""
+"You must be level {} or higher to make suggestions.\n"
+"Use the {} command to check your level."
+msgstr ""
+
+#: commands/user.py:113
+msgid "You must be registered in the ArkTools database to make suggestions."
+msgstr "পরামর্শ দেওয়ার জন্য আপনাকে অবশ্যই ArkTools ডাটাবেসে নিবন্ধিত হতে হবে।"
+msgstr ""
+
+#: commands/user.py:119
+msgid "You must have at least {} hours of playtime to make suggestions."
+msgstr "পরামর্শ দেওয়ার জন্য আপনার অবশ্যই কমপক্ষে {} ঘন্টা খেলার সময় থাকতে হবে৷"
+msgstr ""
+
+#: commands/user.py:148
+msgid "You must wait `{}` before making another suggestion."
+msgstr "অন্য পরামর্শ দেওয়ার আগে আপনাকে অবশ্যই `{}` অপেক্ষা করতে হবে৷"
+msgstr ""
+
+#: commands/user.py:197
+msgid "Your [{}]({}) has been posted!"
+msgstr "আপনার [{}]({}) পোস্ট করা হয়েছে!"
+msgstr ""
+
+#: commands/user.py:199
+msgid "Your {} has been posted!"
+msgstr "আপনার {} পোস্ট করা হয়েছে!"
+msgstr ""
+
+#: commands/user.py:222
+msgid "View your profile stats regarding suggestions and votes."
+msgstr "পরামর্শ এবং ভোট সম্পর্কিত আপনার প্রোফাইল পরিসংখ্যান দেখুন।"
+msgstr ""
+
+#: commands/user.py:234
+msgid "Stats for {}"
+msgstr "পরিসংখ্যান {}"
+msgstr ""
+
+#: commands/user.py:238
+msgid "Suggestion Summary"
+msgstr "পরামর্শ সারাংশ"
+msgstr ""
+
+#: commands/user.py:239
+msgid ""
+msgstr ""
+"Suggestions Made: {}\n"
+"Suggestions Approved: {}\n"
+"Suggestions Denied: {}\n"
+"Karma: {}"
+msgstr ""
+
+#: commands/user.py:248
+msgid "Voting Summary"
+msgstr "ভোটের সারাংশ"
+msgstr ""
+
+#: commands/user.py:249
+msgid ""
+msgstr ""
+"Total Upvotes: {}\n"
+"Total Downvotes: {}\n"
+"Successful Votes (Wins): {}\n"
+"Unsuccessful Votes (Losses): {}"
+msgstr ""
+
+#: common/listener.py:74
+msgid " [Deleted]"
+msgstr "[মোছা হয়েছে]"
+msgstr ""
+
+#: common/listener.py:78
+msgid "Deleted Suggestion"
+msgstr "মোছা প্রস্তাবনা"
+msgstr ""
+
+#: views/voteview.py:64
+msgid "This suggestion no longer exists in the config!"
+msgstr "এই পরামর্শটি আর কনফিগারে বিদ্যমান নেই!"
+msgstr ""
+
+#: views/voteview.py:77
+msgid "You are blacklisted from voting."
+msgstr "আপনি ভোট থেকে কালো তালিকাভুক্ত করা হয়."
+msgstr ""
+
+#: views/voteview.py:84
+msgid "You have {grammar} and cannot vote."
+msgstr "আপনার {grammar} আছে এবং ভোট দিতে পারবেন না।"
+msgstr ""
+
+#: views/voteview.py:92
+msgid "You do not have any of the required roles to vote."
+msgstr "ভোট দেওয়ার জন্য আপনার কাছে প্রয়োজনীয় কোনো ভূমিকা নেই।"
+msgstr ""
+
+#: views/voteview.py:102
+msgid "Your account is too new! You must wait `{tleft}` before you can vote."
+msgstr "আপনার অ্যাকাউন্ট খুব নতুন! ভোট দেওয়ার আগে আপনাকে অবশ্যই `{left}` অপেক্ষা করতে হবে।"
+msgstr ""
+
+#: views/voteview.py:111
+msgid ""
+msgstr ""
+"You joined the server too recently! You must wait `{tleft}` before you "
+"can vote."
+msgstr ""
+
+#: views/voteview.py:125
+msgid "You must be level {level} or higher to vote."
+msgstr "ভোট দেওয়ার জন্য আপনাকে অবশ্যই লেভেল {level} বা উচ্চতর হতে হবে।"
+msgstr ""
+
+#: views/voteview.py:140
+msgid "Your in-game profile must be registered in order to vote on suggestions.\n"
+msgstr "সাজেশনে ভোট দেওয়ার জন্য আপনার ইন-গেম প্রোফাইল অবশ্যই নিবন্ধিত হতে হবে।\n"
+msgstr ""
+
+#: views/voteview.py:141
+msgid "Use the {} command to link your discord account."
+msgstr "আপনার ডিসকর্ড অ্যাকাউন্ট লিঙ্ক করতে {} কমান্ড ব্যবহার করুন।"
+msgstr ""
+
+#: views/voteview.py:147
+msgid "You must have at least {} hours of playtime to vote."
+msgstr "ভোট দেওয়ার জন্য আপনার অবশ্যই কমপক্ষে {} ঘন্টা খেলার সময় থাকতে হবে৷"
+msgstr ""
+
+#: views/voteview.py:170 views/voteview.py:213
+msgid "You cannot vote on your own suggestion."
+msgstr "আপনি নিজের পরামর্শে ভোট দিতে পারবেন না।"
+msgstr ""
+
+#: views/voteview.py:173
+msgid "You have switched your downvote to an upvote."
+msgstr "আপনি আপনার ডাউনভোটকে আপভোটে পরিবর্তন করেছেন।"
+msgstr ""
+
+#: views/voteview.py:181
+msgid "You have removed your upvote."
+msgstr "আপনি আপনার আপভোট সরিয়ে দিয়েছেন।"
+msgstr ""
+
+#: views/voteview.py:186
+msgid "You have upvoted this suggestion."
+msgstr "আপনি এই পরামর্শ আপভোট করেছেন."
+msgstr ""
+
+#: views/voteview.py:216
+msgid "You have switched your upvote to a downvote."
+msgstr "আপনি আপনার আপভোটকে ডাউনভোটে পরিবর্তন করেছেন।"
+msgstr ""
+
+#: views/voteview.py:224
+msgid "You have removed your downvote."
+msgstr "আপনি আপনার ডাউনভোট মুছে ফেলেছেন।"
+msgstr ""
+
+#: views/voteview.py:229
+msgid "You have downvoted this suggestion."
+msgstr "আপনি এই পরামর্শ ডাউনভোট করেছেন."
+msgstr ""
+

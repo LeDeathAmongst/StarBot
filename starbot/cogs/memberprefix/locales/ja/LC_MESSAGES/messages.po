@@ -1,0 +1,63 @@
+
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 03:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: memberprefix.py:160
+msgid "You now use this server or global prefixes."
+msgstr "これで、このサーバーまたはグローバル プレフィックスが使用されます。"
+msgstr ""
+
+#: memberprefix.py:164
+msgid ""
+msgstr ""
+"A prefix is above the maximal length (25 characters).\n"
+"This is possible for global or per-server prefixes, but not for per-"
+"member prefixes."
+msgstr ""
+
+#: memberprefix.py:170
+msgid ""
+msgstr ""
+"Prefixes cannot start with `/`, as it conflicts with Discord's slash "
+"commands."
+msgstr ""
+
+#: memberprefix.py:175
+msgid ""
+msgstr ""
+"Prefix for you only set. You can use current prefixes or mention the bot "
+"to invoke a command, or reset your prefixes with the same command if you "
+"forget them."
+msgstr ""
+
+#: memberprefix.py:181
+msgid ""
+msgstr ""
+"Prefixes for you only set. You can use current prefixes or mention the "
+"bot to invoke a command, or reset your prefixes with the same command if "
+"you forget them."
+msgstr ""
+
+#: memberprefix.py:198
+msgid "Prefixes cleared for this member in this guild."
+msgstr "このギルドのこのメンバーのプレフィックスがクリアされました。"
+msgstr ""
+
+#: memberprefix.py:204
+msgid "All members prefixes purged in this guild."
+msgstr "このギルドではすべてのメンバーのプレフィックスがパージされました。"
+msgstr ""
+

@@ -1,0 +1,227 @@
+# Slovak translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:32+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sk\n"
+"Language-Team: sk <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "meno"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "text"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Vytvorte dokumenty pre ozubené koleso"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Názov ozubeného kolieska, pre ktoré chcete vytvoriť dokumenty (rozlišovať malé a veľké písmená)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Nahraďte všetky výskyty [p] predponou robotov"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Nahraďte všetky výskyty [botname] názvom robota"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Zahrňte ďalšie informácie, ako sú konvertory a ich dokumentačné reťazce"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Zahrňte skryté príkazy"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Zahrňte csv s každým príkazom izolovaným na riadok"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Tu sú dokumenty pre všetky vaše aktuálne naložené ozubené kolieska!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Nepodarilo sa mi nájsť to ozubené koleso, možno nie je nabité?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Toto sú vaše dokumenty pre {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Číslo bez desatinných miest."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Číslo s desatinnými miestami alebo bez nich."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Môže byť 1, 0, pravda, nepravda, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "za"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "sekúnd"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "druhý"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Slash"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Príkaz"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Hybridný"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Použitie"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Kontroly"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Povinné"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Voliteľné"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Iba server"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Obmedzené na"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Aliasy"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Cooldown"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Nepodarilo sa získať reťazec dokumentu alebo triedu pre konvertor {}"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Nepodarilo sa získať reťazec dokumentu pre konvertor {}"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Nepodarilo sa získať triedu pre konvertor {}"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Automatické dopĺňanie"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Predvolené"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Voľby"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Nepodarilo sa nájsť {} pre argument {} príkazu {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Informácie o rozšírenom argumente\n"
+msgstr ""
+

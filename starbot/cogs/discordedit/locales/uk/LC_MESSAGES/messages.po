@@ -1,0 +1,365 @@
+# Ukrainian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:49+0100\n"
+"PO-Revision-Date: 2024-10-14 05:56+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: uk\n"
+"Language-Team: uk <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: editautomod.py:18 editguild.py:27 editrole.py:25 edittextchannel.py:27
+#: editthread.py:32 editvoicechannel.py:27 view.py:18
+msgid ""
+msgstr ""
+"I attempted to do something that Discord denied me permissions for. Your "
+"command failed to successfully complete.\n"
+"{error}"
+msgstr ""
+
+#: editautomod.py:30
+msgid "Invalid rule ID."
+msgstr "Недійсний ідентифікатор правила."
+msgstr ""
+
+#: editautomod.py:34
+msgid "Rule not found."
+msgstr "Правило не знайдено."
+msgstr ""
+
+#: editautomod.py:43 editautomod.py:72
+msgid "Invalid JSON."
+msgstr "Недійсний JSON."
+msgstr ""
+
+#: editautomod.py:50
+msgid ""
+msgstr ""
+"Invalid data. Must be a dict with `trigger_type` and `trigger_metadara` "
+"keys."
+msgstr ""
+
+#: editautomod.py:55
+msgid "Invalid trigger type."
+msgstr "Недійсний тип тригера."
+msgstr ""
+
+#: editautomod.py:61
+msgid "Invalid trigger metadata."
+msgstr "Недійсні метадані тригера."
+msgstr ""
+
+#: editautomod.py:75 editautomod.py:85
+msgid "Invalid data. Must be a list of dicts with `type` and `data` keys."
+msgstr "Недійсні дані. Має бути список диктовок із ключами `type` і `data`."
+msgstr ""
+
+#: editautomod.py:90
+msgid "Invalid action type."
+msgstr "Недійсний тип дії."
+msgstr ""
+
+#: editautomod.py:97
+msgid "Invalid action metadata."
+msgstr "Недійсні метадані дії."
+msgstr ""
+
+#: editautomod.py:152
+msgid "AutoMod rule {rule.name} ({rule.id}) created."
+msgstr "Створено правило AutoMod {rule.name} ({rule.id})."
+msgstr ""
+
+#: editautomod.py:166
+msgid "List of AutoMod rules in {guild.name} ({guild.id})"
+msgstr "Список правил AutoMod у {guild.name} ({guild.id})"
+msgstr ""
+
+#: editautomod.py:325
+msgid "⚠️ - Delete AutoMod rule"
+msgstr "⚠️ - Видалити правило AutoMod"
+msgstr ""
+
+#: editautomod.py:326 editautomod.py:333
+msgid ""
+msgstr ""
+"Do you really want to delete the AutoMod rule {rule.name} ({rule.id}) in "
+"{guild.name} ({guild.id})?"
+msgstr ""
+
+#: editautomod.py:409 editautomod.py:432
+msgid "Rule `{rule.name} ({rule.id})` edited."
+msgstr "Правило {rule.name} ({rule.id}) відредаговано."
+msgstr ""
+
+#: editautomod.py:467 view.py:88
+msgid "You are not allowed to use this interaction."
+msgstr "Ви не можете використовувати цю взаємодію."
+msgstr ""
+
+#: editautomod.py:623
+msgid ""
+msgstr ""
+"Select channels/roles to exempt for the AutoMod rule `{rule.name} "
+"({rule.id})`."
+msgstr ""
+
+#: editautomod.py:645
+msgid "Rule `{rule.name} ({rule.id})` enabled."
+msgstr "Правило {rule.name} ({rule.id}) увімкнено."
+msgstr ""
+
+#: editautomod.py:647
+msgid "Rule {rule.name} `{rule.id}` disabled."
+msgstr "Правило {rule.name} `{rule.id}` вимкнено."
+msgstr ""
+
+#: editautomod.py:665
+msgid "Rule `{rule.name} ({rule.id})` deleted."
+msgstr "Правило {rule.name} ({rule.id}) видалено."
+msgstr ""
+
+#: editguild.py:47
+msgid "Converting to `Locale` failed for parameter `preferred_locale`."
+msgstr "Перетворення на `Locale` не вдалося для параметра `preferred_locale`."
+msgstr ""
+
+#: editguild.py:59 editguild.py:67
+msgid ""
+msgstr ""
+"The verification level must be `none`, `low`, `medium`, `high`, "
+"`highest`, `0`, `1`, `2`, `3` or `4`."
+msgstr ""
+
+#: editguild.py:78 editguild.py:82 editguild.py:90
+msgid "The video quality mode must be `0` or `1`."
+msgstr "Режим якості відео має бути «0» або «1»."
+msgstr ""
+
+#: editguild.py:235
+msgid ""
+msgstr ""
+"This server doesn't have the `BANNER` feature. This server needs more "
+"boosts to perform this action."
+msgstr ""
+
+#: editguild.py:276
+msgid ""
+msgstr ""
+"This server doesn't have the `INVITE_SPLASH` feature. This server needs "
+"more boosts to perform this action."
+msgstr ""
+
+#: editguild.py:317
+msgid ""
+msgstr ""
+"This server doesn't have the `DISCOVERABLE` feature. This server needs "
+"more boosts to perform this action."
+msgstr ""
+
+#: editguild.py:404
+msgid ":⚠️ - Change Guild Owner"
+msgstr ":⚠️ - Змінити власника гільдії"
+msgstr ""
+
+#: editguild.py:405 editguild.py:412
+msgid ""
+msgstr ""
+"Do you really want to change guild owner of the guild {guild.name} "
+"({guild.id})?"
+msgstr ""
+
+#: editguild.py:736
+msgid "⚠️ - Delete Guild"
+msgstr "⚠️ - Видалити Гільдію"
+msgstr ""
+
+#: editguild.py:737 editguild.py:744
+msgid "Do you really want to delete the guild {guild.name} ({guild.id})?"
+msgstr "Ви справді хочете видалити гільдію {guild.name} ({guild.id})?"
+msgstr ""
+
+#: editrole.py:50
+msgid "The position must be an integer."
+msgstr "Позиція має бути цілим числом."
+msgstr ""
+
+#: editrole.py:54
+msgid "The indicated position must be between 1 and {max_guild_roles_position}."
+msgstr "Вказана позиція має бути від 1 до {max_guild_roles_position}."
+msgstr ""
+
+#: editrole.py:69 edittextchannel.py:57 editvoicechannel.py:57
+msgid "This permission is invalid."
+msgstr "Цей дозвіл недійсний."
+msgstr ""
+
+#: editrole.py:104
+msgid ""
+msgstr ""
+"I can not let you edit @{role.name} ({role.id}) because that role is "
+"higher than or equal to your highest role in the Discord hierarchy."
+msgstr ""
+
+#: editrole.py:110
+msgid ""
+msgstr ""
+"I can not edit @{role.name} ({role.id}) because that role is higher than "
+"or equal to my highest role in the Discord hierarchy."
+msgstr ""
+
+#: editrole.py:156
+msgid "List of roles in {guild.name} ({guild.id})"
+msgstr "Список ролей у {guild.name} ({guild.id})"
+msgstr ""
+
+#: editrole.py:228
+msgid ""
+msgstr ""
+"This server doesn't have the `ROLE_ICONS` feature. This server needs more"
+" boosts to perform this action."
+msgstr ""
+
+#: editrole.py:350 edittextchannel.py:564 editvoicechannel.py:464
+msgid "You need to provide at least one permission."
+msgstr "Потрібно надати принаймні один дозвіл."
+msgstr ""
+
+#: editrole.py:356
+msgid "You don't have the permission {permission_name} in this guild."
+msgstr "У вас немає дозволу {permission_name} у цій гільдії."
+msgstr ""
+
+#: editrole.py:383
+msgid "⚠️ - Delete role"
+msgstr "⚠️ - Видалити роль"
+msgstr ""
+
+#: editrole.py:384 editrole.py:391
+msgid "Do you really want to delete the role {role.mention} ({role.id})?"
+msgstr "Ви справді хочете видалити роль {role.mention} ({role.id})?"
+msgstr ""
+
+#: edittextchannel.py:68 edittextchannel.py:72
+msgid "The channel type must be `text`, `news`, `0` or `5`."
+msgstr "Тип каналу має бути «текст», «новини», «0» або «5»."
+msgstr ""
+
+#: edittextchannel.py:97
+msgid ""
+msgstr ""
+"I can not edit the text channel {channel.mention} ({channel.id}) because "
+"I don't have the `manage_channel` permission."
+msgstr ""
+
+#: edittextchannel.py:143
+msgid "List of text channels in {guild.name} ({guild.id})"
+msgstr "Список текстових каналів у {guild.name} ({guild.id})"
+msgstr ""
+
+#: edittextchannel.py:549 editvoicechannel.py:449
+msgid "You need to provide a role or user you want to edit permissions for."
+msgstr "Вам потрібно вказати роль або користувача, для якого ви хочете змінити дозволи."
+msgstr ""
+
+#: edittextchannel.py:570 editvoicechannel.py:470
+msgid "You don't have the permission {permission_name} in this channel."
+msgstr "У вас немає дозволу {permission_name} на цьому каналі."
+msgstr ""
+
+#: edittextchannel.py:595 editvoicechannel.py:495
+msgid "You cannot remove permissions from you in this channel."
+msgstr "Ви не можете позбавити своїх дозволів на цьому каналі."
+msgstr ""
+
+#: edittextchannel.py:605 editvoicechannel.py:505
+msgid "You cannot remove permissions from the bot in this channel."
+msgstr "Ви не можете видалити дозволи для бота в цьому каналі."
+msgstr ""
+
+#: edittextchannel.py:634
+msgid "⚠️ - Delete text channel"
+msgstr "⚠️ - Видалити текстовий канал"
+msgstr ""
+
+#: edittextchannel.py:635 edittextchannel.py:642
+msgid ""
+msgstr ""
+"Do you really want to delete the text channel {channel.mention} "
+"({channel.id})?"
+msgstr ""
+
+#: editthread.py:91
+msgid ""
+msgstr ""
+"Emoji Role must be an emoji followed by a role separated by either `;`, "
+"`,`, `|`, or `-`."
+msgstr ""
+
+#: editthread.py:122
+msgid ""
+msgstr ""
+"I can not edit the thread {thread.mention} ({thread.id}) because you "
+"don't have the `manage_channel` permission."
+msgstr ""
+
+#: editthread.py:178
+msgid "List of threads in {guild.name} ({guild.id})"
+msgstr "Список тем у {guild.name} ({guild.id})"
+msgstr ""
+
+#: editthread.py:444
+msgid "⚠️ - Delete thread"
+msgstr "⚠️ - Видалити тему"
+msgstr ""
+
+#: editthread.py:445 editthread.py:452
+msgid "Do you really want to delete the thread {thread.mention} ({thread.id})?"
+msgstr "Ви справді хочете видалити ланцюжок {thread.mention} ({thread.id})?"
+msgstr ""
+
+#: editvoicechannel.py:66 editvoicechannel.py:70
+msgid "The video quality mode must be `1` or `2`."
+msgstr "Режим якості відео має бути «1» або «2»."
+msgstr ""
+
+#: editvoicechannel.py:95
+msgid ""
+msgstr ""
+"I can not edit the voice channel {channel.mention} ({channel.id}) because"
+" I don't have the `manage_channel` permission."
+msgstr ""
+
+#: editvoicechannel.py:141
+msgid "List of voice channels in {guild.name} ({guild.id})"
+msgstr "Список голосових каналів у {guild.name} ({guild.id})"
+msgstr ""
+
+#: editvoicechannel.py:529
+msgid "⚠️ - Delete voice channel"
+msgstr "⚠️ - Видалити голосовий канал"
+msgstr ""
+
+#: editvoicechannel.py:530 editvoicechannel.py:537
+msgid ""
+msgstr ""
+"Do you really want to delete the voice channel {channel.mention} "
+"({channel.id})?"
+msgstr ""
+
+#: view.py:120
+msgid "You are not allowed to execute this command."
+msgstr "Ви не маєте права виконувати цю команду."
+msgstr ""
+

@@ -1,0 +1,368 @@
+# Hungarian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:35+0100\n"
+"PO-Revision-Date: 2024-10-14 05:40+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: hu\n"
+"Language-Team: hu <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: converters.py:15
+msgid "Invalid action."
+msgstr "Érvénytelen művelet."
+msgstr ""
+
+#: converters.py:24
+msgid "Invalid datetime format. Expected format is ISO (`YYYY-MM-DDTHH:MM:SS`)."
+msgstr "Érvénytelen dátum és idő formátum. A várt formátum ISO (`ÉÉÉÉ-HH-NNTHH:PP:SS`)."
+msgstr ""
+
+#: converters.py:26
+msgid "The date must be within the last 7 days."
+msgstr "A dátumnak az utolsó 7 napon belül kell lennie."
+msgstr ""
+
+#: ctrlz.py:25 ctrlz.py:29 ctrlz.py:42 ctrlz.py:46 ctrlz.py:50 ctrlz.py:58
+msgid "The target of the audit log was not found."
+msgstr "Az ellenőrzési napló célpontja nem található."
+msgstr ""
+
+#: ctrlz.py:193
+msgid "Channel Create"
+msgstr "Csatorna létrehozása"
+msgstr ""
+
+#: ctrlz.py:194
+msgid "Overwrite Create"
+msgstr "Létrehozás felülírása"
+msgstr ""
+
+#: ctrlz.py:195
+msgid "Ban"
+msgstr "Ban"
+msgstr ""
+
+#: ctrlz.py:196
+msgid "Bot Add"
+msgstr "Bot hozzáadása"
+msgstr ""
+
+#: ctrlz.py:197
+msgid "Role Create"
+msgstr "Szerep létrehozása"
+msgstr ""
+
+#: ctrlz.py:198
+msgid "Invite Create"
+msgstr "Meghívás létrehozása"
+msgstr ""
+
+#: ctrlz.py:199
+msgid "Webhook Create"
+msgstr "Webhook létrehozása"
+msgstr ""
+
+#: ctrlz.py:200
+msgid "Emoji Create"
+msgstr "Emoji létrehozása"
+msgstr ""
+
+#: ctrlz.py:201
+msgid "Message Pin"
+msgstr "Üzenet Pin"
+msgstr ""
+
+#: ctrlz.py:202
+msgid "Integration Create"
+msgstr "Integráció létrehozása"
+msgstr ""
+
+#: ctrlz.py:203
+msgid "Stage Instance Create"
+msgstr "Stage Példány létrehozása"
+msgstr ""
+
+#: ctrlz.py:204
+msgid "Sticker Create"
+msgstr "Matrica létrehozása"
+msgstr ""
+
+#: ctrlz.py:205
+msgid "Scheduled Event Create"
+msgstr "Ütemezett esemény létrehozása"
+msgstr ""
+
+#: ctrlz.py:206
+msgid "Thread Create"
+msgstr "Szál létrehozása"
+msgstr ""
+
+#: ctrlz.py:207
+msgid "Automod Rule Create"
+msgstr "Automod szabály létrehozása"
+msgstr ""
+
+#: ctrlz.py:210
+msgid "Guild Update"
+msgstr "Guild frissítés"
+msgstr ""
+
+#: ctrlz.py:211
+msgid "Channel Update"
+msgstr "Csatorna frissítése"
+msgstr ""
+
+#: ctrlz.py:212
+msgid "Overwrite Update"
+msgstr "Frissítés felülírása"
+msgstr ""
+
+#: ctrlz.py:213
+msgid "Member Update"
+msgstr "Tag frissítése"
+msgstr ""
+
+#: ctrlz.py:214
+msgid "Member Role Update"
+msgstr "Tagi szerepkör frissítése"
+msgstr ""
+
+#: ctrlz.py:215
+msgid "Role Update"
+msgstr "Szerepfrissítés"
+msgstr ""
+
+#: ctrlz.py:216
+msgid "Webhook Update"
+msgstr "Webhook frissítés"
+msgstr ""
+
+#: ctrlz.py:217
+msgid "Emoji Update"
+msgstr "Emoji frissítés"
+msgstr ""
+
+#: ctrlz.py:218
+msgid "Stage Instance Update"
+msgstr "Stage Példány frissítés"
+msgstr ""
+
+#: ctrlz.py:219
+msgid "Sticker Update"
+msgstr "Matrica frissítése"
+msgstr ""
+
+#: ctrlz.py:220
+msgid "Scheduled Event Update"
+msgstr "Ütemezett eseményfrissítés"
+msgstr ""
+
+#: ctrlz.py:221
+msgid "Thread Update"
+msgstr "Szál frissítése"
+msgstr ""
+
+#: ctrlz.py:222
+msgid "Automod Rule Update"
+msgstr "Automod szabály frissítése"
+msgstr ""
+
+#: ctrlz.py:225
+msgid "Channel Delete"
+msgstr "Csatorna törlése"
+msgstr ""
+
+#: ctrlz.py:226
+msgid "Overwrite Delete"
+msgstr "Felülírás Törlés"
+msgstr ""
+
+#: ctrlz.py:227
+msgid "Unban"
+msgstr "Humban"
+msgstr ""
+
+#: ctrlz.py:228
+msgid "Role Delete"
+msgstr "Szerep törlése"
+msgstr ""
+
+#: ctrlz.py:229
+msgid "Invite Delete"
+msgstr "Meghívás Törlés"
+msgstr ""
+
+#: ctrlz.py:230
+msgid "Webhook Delete"
+msgstr "Webhook törlése"
+msgstr ""
+
+#: ctrlz.py:231
+msgid "Message Unpin"
+msgstr "Üzenet rögzítésének feloldása"
+msgstr ""
+
+#: ctrlz.py:232
+msgid "Scheduled Event Delete"
+msgstr "Ütemezett esemény törlése"
+msgstr ""
+
+#: ctrlz.py:233
+msgid "Automod Rule Delete"
+msgstr "Automod szabály törlése"
+msgstr ""
+
+#: ctrlz.py:254 ctrlz.py:329
+msgid "Unknown audit log action."
+msgstr "Ismeretlen naplóművelet."
+msgstr ""
+
+#: ctrlz.py:256
+msgid "Audit Log — {label}"
+msgstr "Ellenőrzési napló – {label}"
+msgstr ""
+
+#: ctrlz.py:266
+msgid "Target:"
+msgstr "Cél:"
+msgstr ""
+
+#: ctrlz.py:275
+msgid "Reason:"
+msgstr "Ok:"
+msgstr ""
+
+#: ctrlz.py:294
+msgid "Before:"
+msgstr "Előtt:"
+msgstr ""
+
+#: ctrlz.py:310
+msgid "After:"
+msgstr "Után:"
+msgstr ""
+
+#: ctrlz.py:331
+msgid "The audit log has already been reverted."
+msgstr "Az ellenőrzési napló már vissza lett állítva."
+msgstr ""
+
+#: ctrlz.py:337
+msgid ""
+msgstr ""
+"I don't have the necessary permissions or the target of the audit log is "
+"higher than me."
+msgstr ""
+
+#: ctrlz.py:339
+msgid "An error occurred while reverting the audit log:\n"
+msgstr "Hiba történt a napló visszaállítása közben:\n"
+msgstr ""
+
+#: ctrlz.py:380 ctrlz.py:404
+msgid "No audit logs found."
+msgstr "Nem található auditnapló."
+msgstr ""
+
+#: views.py:21
+msgid "Create Actions"
+msgstr "Műveletek létrehozása"
+msgstr ""
+
+#: views.py:22
+msgid "Update Actions"
+msgstr "Frissítési műveletek"
+msgstr ""
+
+#: views.py:23
+msgid "Delete Actions"
+msgstr "Műveletek törlése"
+msgstr ""
+
+#: views.py:24 views.py:233
+msgid "Revert"
+msgstr "Vissza"
+msgstr ""
+
+#: views.py:29
+msgid "You are not allowed to use this interaction."
+msgstr "Nem használhatja ezt az interakciót."
+msgstr ""
+
+#: views.py:225
+msgid "✅ This Audit Log has been reverted successfully."
+msgstr "✅ Ezt az ellenőrzési naplót sikeresen visszaállítottuk."
+msgstr ""
+
+#: views.py:253
+msgid "Already Reverted"
+msgstr "Már visszaállítva"
+msgstr ""
+
+#: views.py:267
+msgid "Ignore"
+msgstr "Figyelmen kívül hagyni"
+msgstr ""
+
+#: views.py:270
+msgid "Unignore"
+msgstr "Figyelmen kívül hagyás"
+msgstr ""
+
+#: views.py:293
+msgid "Are you sure you want to revert all these audit logs?"
+msgstr "Biztosan vissza szeretné állítani ezeket a naplókat?"
+msgstr ""
+
+#: views.py:306
+msgid "❌ There are no audit logs to revert."
+msgstr "❌ Nincsenek visszaállítandó auditnaplók."
+msgstr ""
+
+#: views.py:309
+msgid "Reverting Audit Logs..."
+msgstr "Ellenőrzési naplók visszaállítása..."
+msgstr ""
+
+#: views.py:310
+msgid "This may take a while."
+msgstr "Ez eltarthat egy ideig."
+msgstr ""
+
+#: views.py:314 views.py:348
+msgid "Progression:"
+msgstr "Előrehaladás:"
+msgstr ""
+
+#: views.py:318 views.py:354
+msgid "Errors:"
+msgstr "Hibák:"
+msgstr ""
+
+#: views.py:319
+msgid "No errors yet."
+msgstr "Még nincs hiba."
+msgstr ""
+
+#: views.py:363
+msgid "❌ Errors..."
+msgstr "❌ Hibák..."
+msgstr ""
+
+#: views.py:371
+msgid "✅ All Audit Logs have been reverted successfully."
+msgstr "✅ Az összes auditnaplót sikeresen visszaállítottuk."
+msgstr ""
+

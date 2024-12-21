@@ -1,0 +1,113 @@
+# Latvian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:58+0100\n"
+"PO-Revision-Date: 2024-10-14 07:00+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: lv\n"
+"Language-Team: lv <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
+" 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dev.py:745 dev.py:807 dev.py:1014
+msgid "Unreadable attachment with `utf-8`."
+msgstr "Nelasāms pielikums ar "utf-8"."
+msgstr ""
+
+#: dev.py:762
+msgid "This message isn't reachable."
+msgstr "Šis ziņojums nav sasniedzams."
+msgstr ""
+
+#: dev.py:868
+msgid "Already running a REPL session in this channel. Exit it with `quit`."
+msgstr "Šajā kanālā jau notiek REPL sesija. Izejiet no tā, izmantojot taustiņu "quit"."
+msgstr ""
+
+#: dev.py:872
+msgid ""
+msgstr ""
+"Already running a REPL session in this channel. Resume the REPL with "
+"`{prefix}replresume`."
+msgstr ""
+
+#: dev.py:884
+msgid ""
+msgstr ""
+"Enter code to execute or evaluate. `exit()` or `quit` to exit. "
+"`{prefix}replpause` to pause."
+msgstr ""
+
+#: dev.py:929
+msgid "Exiting."
+msgstr "Iziet."
+msgstr ""
+
+#: dev.py:937
+msgid "There is no currently running REPL session in this channel."
+msgstr "Šajā kanālā pašlaik nenotiek neviena REPL sesija."
+msgstr ""
+
+#: dev.py:943
+msgid "The REPL session in this channel has been resumed."
+msgstr "REPL sesija šajā kanālā ir atsākta."
+msgstr ""
+
+#: dev.py:945
+msgid "The REPL session in this channel is now paused."
+msgstr "REPL sesija šajā kanālā tagad ir apturēta."
+msgstr ""
+
+#: dev.py:967
+msgid "Bot owners will now bypass all commands with cooldowns{optional_duration}."
+msgstr "Botu īpašnieki tagad apies visas komandas ar atdzišanu{optional_duration}."
+msgstr ""
+
+#: dev.py:977
+msgid ""
+msgstr ""
+"Bot owners will no longer bypass all commands with "
+"cooldowns{optional_duration}."
+msgstr ""
+
+#: view.py:42
+msgid "Execute"
+msgstr "Izpildīt"
+msgstr ""
+
+#: view.py:44
+msgid "Code to Execute"
+msgstr "Izpildāmais kods"
+msgstr ""
+
+#: view.py:46
+msgid "Write your code here..."
+msgstr "Ierakstiet savu kodu šeit..."
+msgstr ""
+
+#: view.py:84
+msgid "You are not allowed to use this interaction."
+msgstr "Jums nav atļauts izmantot šo mijiedarbību."
+msgstr ""
+
+#: view.py:102
+msgid "Execute Debug"
+msgstr "Izpildīt atkļūdošanu"
+msgstr ""
+
+#: view.py:110
+msgid "Execute Eval"
+msgstr "Izpildi Eval"
+msgstr ""
+

@@ -1,0 +1,855 @@
+# Estonian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:09+0100\n"
+"PO-Revision-Date: 2024-10-14 04:16+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: et\n"
+"Language-Team: et <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:46
+msgid "**Global Bank:** `{}`\n"
+msgstr "**Globaalne pank:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "**Economy Cog:** `{}`\n"
+msgstr "**Economy Cog:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Loaded"
+msgstr "Laaditud"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Not Loaded"
+msgstr "Pole laaditud"
+msgstr ""
+
+#: commands/admin.py:48
+msgid "**Auto Paydays:** `{}`\n"
+msgstr "**Automaatsed palgapäevad:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:52
+msgid "**Auto Payday Roles:** {}\n"
+msgstr "**Automaatse palgapäeva rollid:** {}\n"
+msgstr ""
+
+#: commands/admin.py:53 common/utils.py:110 common/utils.py:113
+#: common/utils.py:130 common/utils.py:136
+msgid "None"
+msgstr "Mitte ühtegi"
+msgstr ""
+
+#: commands/admin.py:79
+msgid "- {} has not used the bank yet.\n"
+msgstr "- {} pole veel panka kasutanud.\n"
+msgstr ""
+
+#: commands/admin.py:82
+msgid "- {} has not used the economy commands yet.\n"
+msgstr "- {} pole veel säästukäske kasutanud.\n"
+msgstr ""
+
+#: commands/admin.py:87
+msgid "- {} has {} seconds left until their next payday.\n"
+msgstr "- {}-l on järgmise palgapäevani jäänud {} sekundit.\n"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "- {} is ready for their next payday.\n"
+msgstr "- {} on järgmiseks palgapäevaks valmis.\n"
+msgstr ""
+
+#: commands/admin.py:100
+msgid ""
+msgstr ""
+"You must be a bot owner to view these settings when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:109
+msgid "Economy cog is not loaded."
+msgstr "Economy hammasratas ei ole koormatud."
+msgstr ""
+
+#: commands/admin.py:111
+msgid "You must be a bot owner to reset cooldowns when global bank is enabled!"
+msgstr "Kui globaalne pank on lubatud, peate jahtumise lähtestamiseks olema roboti omanik!"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "Payday cooldown reset for **{}**."
+msgstr "Palgapäeva jahtumine lähtestati **{}**."
+msgstr ""
+
+#: commands/admin.py:128 commands/admin.py:143 commands/admin.py:170
+msgid "This setting is not available when global bank is enabled."
+msgstr "See seade pole saadaval, kui globaalne pank on lubatud."
+msgstr ""
+
+#: commands/admin.py:132
+msgid "Payday role amounts will now stack."
+msgstr "Palgapäeva rollide summad kuhjuvad nüüd."
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Payday role amounts will no longer stack."
+msgstr "Palgapäeva rollide summad ei kuhju enam."
+msgstr ""
+
+#: commands/admin.py:145
+msgid ""
+msgstr ""
+"\n"
+"Use {} to allow auto-claiming for for all users."
+msgstr ""
+
+#: commands/admin.py:152
+msgid "This role will no longer recieve paydays automatically."
+msgstr "See roll ei saa enam automaatselt palgapäevi."
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This role will now receive paydays automatically."
+msgstr "See roll saab nüüd automaatselt palgapäevad."
+msgstr ""
+
+#: commands/admin.py:175
+msgid "Role bonus removed."
+msgstr "Rolli boonus eemaldatud."
+msgstr ""
+
+#: commands/admin.py:178
+msgid "That role does not have a bonus."
+msgstr "Sellel rollil pole boonust."
+msgstr ""
+
+#: commands/admin.py:183
+msgid "That role already has that bonus."
+msgstr "Sellel rollil on see boonus juba olemas."
+msgstr ""
+
+#: commands/admin.py:184
+msgid "Role bonus updated."
+msgstr "Rolliboonust värskendati."
+msgstr ""
+
+#: commands/admin.py:186
+msgid "Role bonus added."
+msgstr "Lisatud rolliboonus."
+msgstr ""
+
+#: commands/admin.py:199
+msgid "Paydays will now be claimed automatically for all users."
+msgstr "Palgapäevad taotletakse nüüd kõikide kasutajate jaoks automaatselt."
+msgstr ""
+
+#: commands/admin.py:201
+msgid "Paydays will now be claimed automatically for set roles."
+msgstr "Määratud rollide eest nõutakse nüüd palgapäevi automaatselt."
+msgstr ""
+
+#: commands/admin.py:203
+msgid "Paydays will no longer be claimed automatically."
+msgstr "Palgapäevi enam automaatselt ei nõuta."
+msgstr ""
+
+#: commands/admin.py:212
+msgid "There is no auto claim channel when global bank is enabled!"
+msgstr "Kui globaalne pank on lubatud, automaatse nõude kanalit pole!"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel set to {}"
+msgstr "Kanali automaatseks nõudeks määrati {}"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel removed."
+msgstr "Automaatse nõude kanal eemaldati."
+msgstr ""
+
+#: commands/admin.py:234
+msgid ""
+msgstr ""
+"You must be a bot owner to set the transfer tax when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Invalid tax percentage. Must be between 0 and 1."
+msgstr "Kehtetu maksuprotsent. Peab olema vahemikus 0 kuni 1."
+msgstr ""
+
+#: commands/admin.py:243
+msgid "Transfer tax set to {}%"
+msgstr "Ülekandemaks on määratud {}%"
+msgstr ""
+
+#: commands/admin.py:253
+msgid ""
+msgstr ""
+"You must be a bot owner to set the main log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:260
+msgid "Removing the main log channel."
+msgstr "Peamise logikanali eemaldamine."
+msgstr ""
+
+#: commands/admin.py:265
+msgid "That is already the main log channel."
+msgstr "See on juba peamine logikanal."
+msgstr ""
+
+#: commands/admin.py:266
+msgid "Main log channel changed to {}"
+msgstr "Logi põhikanaliks muudeti {}"
+msgstr ""
+
+#: commands/admin.py:268
+msgid "Main log channel set to {}"
+msgstr "Põhilogi kanaliks on määratud {}"
+msgstr ""
+
+#: commands/admin.py:298
+msgid ""
+msgstr ""
+"You must be a bot owner to set an event log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Invalid event. Must be one of: {}"
+msgstr "Kehtetu sündmus. Peab olema üks järgmistest: {}"
+msgstr ""
+
+#: commands/admin.py:316
+msgid "No channel set for this event."
+msgstr "Selle sündmuse jaoks pole kanalit määratud."
+msgstr ""
+
+#: commands/admin.py:318
+msgid "Event log channel for {} removed."
+msgstr "Sündmuste logi kanal {} jaoks eemaldati."
+msgstr ""
+
+#: commands/admin.py:321
+msgid "That is already the event log channel for {}."
+msgstr "See on juba {} sündmuste logi kanal."
+msgstr ""
+
+#: commands/admin.py:322
+msgid "Event log channel for {} changed to {}"
+msgstr "Sündmuste logi kanal {} jaoks muudeti kanaliks {}"
+msgstr ""
+
+#: commands/admin.py:324
+msgid "Event log channel for {} set to {}"
+msgstr "Sündmuste logi kanal {} jaoks on seatud väärtusele {}"
+msgstr ""
+
+#: commands/admin.py:344
+msgid "Delete after time disabled."
+msgstr "Kustuta pärast aja keelamist."
+msgstr ""
+
+#: commands/admin.py:347
+msgid "Delete after time set to {} seconds."
+msgstr "Kustuta pärast aja määramist {} sekundile."
+msgstr ""
+
+#: commands/admin.py:380
+msgid ""
+msgstr ""
+"- **cost**: The amount of currency to charge\n"
+"- **duration**(`default: 3600`): The time in seconds before the cost "
+"resets\n"
+"- **level**(`default: all`): The minimum permission level to apply the "
+"cost\n"
+" - admin: Admins and above can use the command for free\n"
+" - mod: Mods and above can use the command for free\n"
+" - all: Everyone must pay the cost to use the command\n"
+" - user: All users must pay the cost to use the command unless they are "
+"mod or admin\n"
+" - global: The cost is applied to all users globally\n"
+"- **prompt**(`default: notify`): How the user will be prompted to confirm"
+" the cost\n"
+" - text: The bot will send a text message asking the user to confirm the "
+"cost with yes or no\n"
+" - reaction: The bot will send a message with emoji reactions to confirm "
+"the cost\n"
+" - button: The bot will send a message with buttons to confirm the cost\n"
+" - silent: The bot will not prompt the user to confirm the cost\n"
+" - notify: The bot will simply notify the user of the cost without asking"
+" for confirmation\n"
+"- **modifier**(`default: static`): The type of cost modifier\n"
+" - static: The cost is a fixed amount\n"
+" - percent: The cost is a percentage of the user's balance on top of the "
+"base cost\n"
+" - exponential: The cost increases exponentially based on how frequently "
+"the command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration^2)`\n"
+" - linear: The cost increases linearly based on how frequently the "
+"command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration)`\n"
+"- **value**(`default: 0.0`): The value of the cost modifier depends on "
+"the modifier type\n"
+" - static: This will be 0 and does nothing\n"
+" - percent: Value will be the percentage of the user's balance to add to "
+"the base cost\n"
+" - exponential: Value will be the base cost multiplier\n"
+" - linear: Value will be multiplied by the number of uses in the last "
+"hour to get the cost increase\n"
+msgstr ""
+
+#: commands/admin.py:412
+msgid "You can't add a cost to the addcost command."
+msgstr "Käsule addcost ei saa kulu lisada."
+msgstr ""
+
+#: commands/admin.py:417
+msgid "You must be a bot owner to use this command while global bank is active."
+msgstr "Kui globaalne pank on aktiivne, peate selle käsu kasutamiseks olema roboti omanik."
+msgstr ""
+
+#: commands/admin.py:419
+msgid "Global bank is active, you must use the global level."
+msgstr "Globaalne pank on aktiivne, peate kasutama globaalset taset."
+msgstr ""
+
+#: commands/admin.py:423
+msgid "You must be a bot owner to use the global level."
+msgstr "Globaalse taseme kasutamiseks peate olema roboti omanik."
+msgstr ""
+
+#: commands/admin.py:424
+msgid "You must enable global bank to use the global level."
+msgstr "Peate lubama globaalsel pangal globaalse taseme kasutamiseks."
+msgstr ""
+
+#: commands/admin.py:430
+msgid "Command not found."
+msgstr "Käsku ei leitud."
+msgstr ""
+
+#: commands/admin.py:432
+msgid "That is not a valid app command"
+msgstr "See ei ole kehtiv rakenduse käsk"
+msgstr ""
+
+#: commands/admin.py:435
+msgid "You can't add costs to commands that are always available!"
+msgstr "Alati saadaolevatele käskudele ei saa kulusid lisada!"
+msgstr ""
+
+#: commands/admin.py:438 views/cost_menu.py:289
+msgid "You can't add costs to commands you don't have permission to run!"
+msgstr "Te ei saa lisada kulusid käskudele, mille käitamiseks teil pole luba!"
+msgstr ""
+
+#: commands/admin.py:448
+msgid "This will overwrite the existing cost for this command. Continue?"
+msgstr "See kirjutab üle selle käsu olemasolevad kulud. Kas jätkata?"
+msgstr ""
+
+#: commands/admin.py:455
+msgid "Not adding cost."
+msgstr "Ei lisa kulusid."
+msgstr ""
+
+#: commands/admin.py:456
+msgid "{} cost updated."
+msgstr "{} kulu värskendatud."
+msgstr ""
+
+#: commands/admin.py:458
+msgid "{} cost added."
+msgstr "Lisatud on {} kulu."
+msgstr ""
+
+#: commands/admin.py:499
+msgid "No users found with that role."
+msgstr "Selle rolliga kasutajaid ei leitud."
+msgstr ""
+
+#: commands/admin.py:525
+msgid "No users were affected."
+msgstr "Ühtegi kasutajat see ei mõjutanud."
+msgstr ""
+
+#: commands/admin.py:527
+msgid "No balances were changed."
+msgstr "Saldosid ei muudetud."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "user was"
+msgstr "kasutaja oli"
+msgstr ""
+
+#: commands/admin.py:528
+msgid "users were"
+msgstr "kasutajad olid"
+msgstr ""
+
+#: commands/admin.py:529
+msgid "Balances for {} updated, total change was {}."
+msgstr "Konto {} saldot värskendati, muutus kokku oli {}."
+msgstr ""
+
+#: commands/user.py:34
+msgid "No users found."
+msgstr "Ühtegi kasutajat ei leitud."
+msgstr ""
+
+#: commands/user.py:52
+msgid "Bank Balances for {}"
+msgstr "Panga saldod summas {}"
+msgstr ""
+
+#: common/checks.py:68
+msgid "You do not have enough {} to run that command! (Need {})"
+msgstr "Teil ei ole selle käsu käivitamiseks piisavalt {}! (Vaja on {})"
+msgstr ""
+
+#: common/checks.py:69
+msgid "{}, you spent {} to run this command"
+msgstr "{}, kulutasite selle käsu käivitamiseks {}"
+msgstr ""
+
+#: common/checks.py:81
+msgid "Do you want to spend {} {} to run this command?"
+msgstr "Kas soovite selle käsu käivitamiseks kulutada {} {}?"
+msgstr ""
+
+#: common/checks.py:96
+msgid "Not running `{}`."
+msgstr "Ei tööta `{}`."
+msgstr ""
+
+#: common/checks.py:140
+msgid "{}% transfer tax applied, {} deducted from transfer"
+msgstr "Rakendatud on ülekandemaks {}%, ülekandest arvati maha {}"
+msgstr ""
+
+#: common/listeners.py:41
+msgid "You have been refunded since this command failed."
+msgstr "Teile on raha tagasi tehtud, kuna see käsk ebaõnnestus."
+msgstr ""
+
+#: common/listeners.py:90
+msgid "Set Balance"
+msgstr "Määra tasakaal"
+msgstr ""
+
+#: common/listeners.py:91
+msgid "Transfer Credits"
+msgstr "Krediidi ülekandmine"
+msgstr ""
+
+#: common/listeners.py:92 common/listeners.py:186
+msgid "Bank Wipe"
+msgstr "Panga pühkimine"
+msgstr ""
+
+#: common/listeners.py:93
+msgid "Prune Accounts"
+msgstr "Prune kontod"
+msgstr ""
+
+#: common/listeners.py:94
+msgid "Set Global"
+msgstr "Määra globaalne"
+msgstr ""
+
+#: common/listeners.py:95
+msgid "Payday Claim"
+msgstr "Palgapäeva nõue"
+msgstr ""
+
+#: common/listeners.py:98
+msgid "Bank Event: {}"
+msgstr "Pangasündmus: {}"
+msgstr ""
+
+#: common/listeners.py:102 common/listeners.py:109 common/listeners.py:121
+msgid "Recipient"
+msgstr "Saaja"
+msgstr ""
+
+#: common/listeners.py:103 common/listeners.py:123
+msgid "Old Balance"
+msgstr "Vana tasakaal"
+msgstr ""
+
+#: common/listeners.py:104 common/listeners.py:124
+msgid "New Balance"
+msgstr "Uus tasakaal"
+msgstr ""
+
+#: common/listeners.py:106 common/listeners.py:112 common/listeners.py:119
+#: common/listeners.py:126
+msgid "Guild"
+msgstr "Gild"
+msgstr ""
+
+#: common/listeners.py:108
+msgid "Sender"
+msgstr "Saatja"
+msgstr ""
+
+#: common/listeners.py:110
+msgid "Transfer Amount"
+msgstr "Ülekande summa"
+msgstr ""
+
+#: common/listeners.py:115
+msgid "User ID"
+msgstr "Kasutaja ID"
+msgstr ""
+
+#: common/listeners.py:117
+msgid "Pruned Users"
+msgstr "Kärbitud kasutajad"
+msgstr ""
+
+#: common/listeners.py:122
+msgid "Amount"
+msgstr "Summa"
+msgstr ""
+
+#: common/listeners.py:126
+msgid "Unknown"
+msgstr "Tundmatu"
+msgstr ""
+
+#: common/listeners.py:128
+msgid "Channel"
+msgstr "Kanal"
+msgstr ""
+
+#: common/listeners.py:130
+msgid "Message"
+msgstr "Sõnum"
+msgstr ""
+
+#: common/listeners.py:166
+msgid "Global bank has been wiped!"
+msgstr "Ülemaailmne pank on pühitud!"
+msgstr ""
+
+#: common/listeners.py:169
+msgid "All bank accounts for all guilds have been wiped!"
+msgstr "Kõikide gildide pangakontod on kustutatud!"
+msgstr ""
+
+#: common/listeners.py:177
+msgid "Bank accounts have been wiped!"
+msgstr "Pangakontod on kustutatud!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to Global!"
+msgstr "Pank on seatud globaalseks!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to per-server!"
+msgstr "Pank on seadistatud serveri kohta!"
+msgstr ""
+
+#: common/listeners.py:214
+msgid "Set Global Bank"
+msgstr "Määrake Global Bank"
+msgstr ""
+
+#: common/parser.py:14
+msgid ""
+msgstr ""
+"Invalid value, the argument must be an integer, optionally preceded with "
+"a `+` or `-` sign."
+msgstr ""
+
+#: common/parser.py:23
+msgid ""
+msgstr ""
+"Invalid value, the amount of currency to increase or decrease must be an "
+"integer different from zero."
+msgstr ""
+
+#: common/utils.py:107
+msgid "Not Set"
+msgstr "Pole määratud"
+msgstr ""
+
+#: common/utils.py:109
+msgid "# Extended Economy Settings\n"
+msgstr "# Laiendatud säästuseaded\n"
+msgstr ""
+
+#: common/utils.py:111
+msgid "`Transfer Tax:      `{}\n"
+msgstr "`Ülekandemaks: `{}\n"
+msgstr ""
+
+#: common/utils.py:113
+msgid "`Command Costs:     `{}\n"
+msgstr "`Käsukulud: `{}\n"
+msgstr ""
+
+#: common/utils.py:114
+msgid "`Global Bank:       `{}\n"
+msgstr "`Globaalne pank: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "`Delete After:      `{}\n"
+msgstr "`Kustuta pärast: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "Disabled"
+msgstr "Keelatud"
+msgstr ""
+
+#: common/utils.py:123
+msgid "`Set Global:        `{}\n"
+msgstr "`Määra globaalne: `{}\n"
+msgstr ""
+
+#: common/utils.py:128
+msgid "`Stack Roles:       `{}\n"
+msgstr "Virna rollid: `{}\n"
+msgstr ""
+
+#: common/utils.py:131
+msgid "`Role Bonuses:      `{}\n"
+msgstr "`Rolliboonused: `{}\n"
+msgstr ""
+
+#: common/utils.py:132
+msgid "`Payday Autoclaim:  `{}\n"
+msgstr "Palgapäeva automaatne nõue: `{}\n"
+msgstr ""
+
+#: common/utils.py:135
+msgid "`Autoclaim Channel: `{}\n"
+msgstr "`Automaatne nõue: `{}\n"
+msgstr ""
+
+#: common/utils.py:137
+msgid "`Autoclaim Roles:   `{}\n"
+msgstr "`Automaatnõue Rollid: `{}\n"
+msgstr ""
+
+#: common/utils.py:139
+msgid ""
+msgstr ""
+"## Event Log Channels\n"
+"`Default Log Channel: `{}\n"
+"`Set Balance:         `{}\n"
+"`Transfer Credits:    `{}\n"
+"`Bank Wipe:           `{}\n"
+"`Prune Accounts:      `{}\n"
+msgstr ""
+
+#: common/utils.py:156
+msgid "`Payday AutoClaim:    `{}\n"
+msgstr "Palgapäeva automaatne nõue: `{}\n"
+msgstr ""
+
+#: common/utils.py:160
+msgid "Showing settings for global bank"
+msgstr "Kuvatakse globaalse panga seaded"
+msgstr ""
+
+#: common/utils.py:162
+msgid "Showing settings for this server"
+msgstr "Kuvatakse selle serveri seaded"
+msgstr ""
+
+#: common/utils.py:169
+msgid ""
+msgstr ""
+"`Cost:        `{}\n"
+"`Duration:    `{}\n"
+"`Level:       `{}\n"
+"`Prompt:      `{}\n"
+"`Modifier:    `{}\n"
+"`Value:       `{}\n"
+"`Cached Uses: `{}\n"
+msgstr ""
+
+#: overrides/payday.py:40 overrides/payday.py:105
+msgid ""
+msgstr ""
+"You've reached the maximum amount of {currency}! Please spend some more 😬"
+"\n"
+"\n"
+"You currently have {new_balance} {currency}."
+msgstr ""
+
+#: overrides/payday.py:56 overrides/payday.py:123
+msgid ""
+msgstr ""
+"{author.mention} Here, take some {currency}. Enjoy! (+{amount} "
+"{currency}!)\n"
+"\n"
+"You currently have {new_balance} {currency}.\n"
+"\n"
+"You are currently #{pos} on the global leaderboard!"
+msgstr ""
+
+#: overrides/payday.py:78 overrides/payday.py:145
+msgid "{author.mention} Too soon. Your next payday is {relative_time}."
+msgstr "{author.mention} Liiga vara. Teie järgmine palgapäev on {relative_time}."
+msgstr ""
+
+#: views/confirm.py:12
+msgid "Yes"
+msgstr "Jah"
+msgstr ""
+
+#: views/confirm.py:13
+msgid "No"
+msgstr "Ei"
+msgstr ""
+
+#: views/confirm.py:19 views/cost_menu.py:179
+msgid "This isn't your menu!"
+msgstr "See pole sinu menüü!"
+msgstr ""
+
+#: views/cost_menu.py:39
+msgid "Command Name"
+msgstr "Käsu nimi"
+msgstr ""
+
+#: views/cost_menu.py:45
+msgid "Cost"
+msgstr "Maksumus"
+msgstr ""
+
+#: views/cost_menu.py:51
+msgid "Duration (Seconds)"
+msgstr "Kestus (sekundites)"
+msgstr ""
+
+#: views/cost_menu.py:57
+msgid "level, prompt, modifier (Comma separated)"
+msgstr "tase, viip, muutja (komadega eraldatud)"
+msgstr ""
+
+#: views/cost_menu.py:63
+msgid "Value (Decimal)[Optional]"
+msgstr "Väärtus (kümnendsüsteem)[Valikuline]"
+msgstr ""
+
+#: views/cost_menu.py:82
+msgid "Cost must be an integer!"
+msgstr "Maksumus peab olema täisarv!"
+msgstr ""
+
+#: views/cost_menu.py:86
+msgid "Duration must be an integer!"
+msgstr "Kestus peab olema täisarv!"
+msgstr ""
+
+#: views/cost_menu.py:90
+msgid "Value must be a decimal!"
+msgstr "Väärtus peab olema koma!"
+msgstr ""
+
+#: views/cost_menu.py:97
+msgid "Invalid details! Must be 3 values separated by commas."
+msgstr "Valed üksikasjad! Peab olema 3 komadega eraldatud väärtust."
+msgstr ""
+
+#: views/cost_menu.py:98
+msgid ""
+msgstr ""
+"\n"
+"Example: `user, notify, static`"
+msgstr ""
+
+#: views/cost_menu.py:103
+msgid "Invalid level! You must use one of: admin, mod, all, user, global"
+msgstr "Kehtetu tase! Peate kasutama ühte järgmistest: admin, mod, all, user, global"
+msgstr ""
+
+#: views/cost_menu.py:107
+msgid ""
+msgstr ""
+"Invalid prompt! You must use one of: text, reaction, button, silent, "
+"notify"
+msgstr ""
+
+#: views/cost_menu.py:111
+msgid ""
+msgstr ""
+"Invalid modifier! You must use one of: static, percent, exponential, "
+"linear"
+msgstr ""
+
+#: views/cost_menu.py:254
+msgid "Page {}/{}"
+msgstr "Leht {}/{}"
+msgstr ""
+
+#: views/cost_menu.py:271
+msgid "Add Command Cost"
+msgstr "Lisa käsukulu"
+msgstr ""
+
+#: views/cost_menu.py:278
+msgid "Command already has a cost!"
+msgstr "Käsklusel on juba kulu!"
+msgstr ""
+
+#: views/cost_menu.py:283 views/cost_menu.py:323 views/cost_menu.py:344
+msgid "Command not found!"
+msgstr "Käsku ei leitud!"
+msgstr ""
+
+#: views/cost_menu.py:285
+msgid "You can't add a cost to a command that is always available!"
+msgstr "Alati saadaval olevale käsule ei saa kulu lisada!"
+msgstr ""
+
+#: views/cost_menu.py:305
+msgid "Command cost added!"
+msgstr "Lisatud käsukulu!"
+msgstr ""
+
+#: views/cost_menu.py:329
+msgid "Command cost removed!"
+msgstr "Käsukulu eemaldatud!"
+msgstr ""
+
+#: views/cost_menu.py:351
+msgid "Edit Cost: {}"
+msgstr "Muuda kulu: {}"
+msgstr ""
+
+#: views/cost_menu.py:369
+msgid "Command cost updated!"
+msgstr "Käsukulu uuendatud!"
+msgstr ""
+

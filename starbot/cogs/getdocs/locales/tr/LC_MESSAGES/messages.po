@@ -1,0 +1,61 @@
+# Turkish translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:53+0100\n"
+"PO-Revision-Date: 2024-10-14 06:55+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: tr\n"
+"Language-Team: tr <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: getdocs.py:226 getdocs.py:347 getdocs.py:410
+msgid "Please provide a valid documentations source."
+msgstr "Lütfen geçerli bir belge kaynağı sağlayın."
+msgstr ""
+
+#: getdocs.py:366 getdocs.py:1739
+msgid "RTFM caching isn't finished."
+msgstr "RTFM önbelleğe alma işlemi tamamlanmadı."
+msgstr ""
+
+#: getdocs.py:421 view.py:54 view.py:93
+msgid "No results found."
+msgstr "Sonuç bulunamadı."
+msgstr ""
+
+#: getdocs.py:580
+msgid "The source `{source}` is already enabled."
+msgstr "`{source}` kaynağı zaten etkin."
+msgstr ""
+
+#: getdocs.py:584 getdocs.py:614
+msgid "The source `{source}` doesn't exist."
+msgstr "`{source}` kaynağı mevcut değil."
+msgstr ""
+
+#: getdocs.py:610
+msgid "The source `{source}` is already disabled."
+msgstr "`{source}` kaynağı zaten devre dışı."
+msgstr ""
+
+#: view.py:21
+msgid "Select an option."
+msgstr "Bir seçenek seçin."
+msgstr ""
+
+#: view.py:67
+msgid "You are not allowed to use this interaction."
+msgstr "Bu etkileşimi kullanmanıza izin verilmiyor."
+msgstr ""
+

@@ -1,0 +1,369 @@
+# Polish translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:35+0100\n"
+"PO-Revision-Date: 2024-10-14 05:43+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pl\n"
+"Language-Team: pl <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: converters.py:15
+msgid "Invalid action."
+msgstr "Nieprawidłowa akcja."
+msgstr ""
+
+#: converters.py:24
+msgid "Invalid datetime format. Expected format is ISO (`YYYY-MM-DDTHH:MM:SS`)."
+msgstr "Nieprawidłowy format daty i godziny. Oczekiwany format to ISO („RRRR-MM-DDTHH:MM:SS”)."
+msgstr ""
+
+#: converters.py:26
+msgid "The date must be within the last 7 days."
+msgstr "Data musi przypadać w ciągu ostatnich 7 dni."
+msgstr ""
+
+#: ctrlz.py:25 ctrlz.py:29 ctrlz.py:42 ctrlz.py:46 ctrlz.py:50 ctrlz.py:58
+msgid "The target of the audit log was not found."
+msgstr "Nie odnaleziono celu dziennika kontrolnego."
+msgstr ""
+
+#: ctrlz.py:193
+msgid "Channel Create"
+msgstr "Utwórz kanał"
+msgstr ""
+
+#: ctrlz.py:194
+msgid "Overwrite Create"
+msgstr "Nadpisz Utwórz"
+msgstr ""
+
+#: ctrlz.py:195
+msgid "Ban"
+msgstr "Zakaz"
+msgstr ""
+
+#: ctrlz.py:196
+msgid "Bot Add"
+msgstr "Dodaj bota"
+msgstr ""
+
+#: ctrlz.py:197
+msgid "Role Create"
+msgstr "Tworzenie roli"
+msgstr ""
+
+#: ctrlz.py:198
+msgid "Invite Create"
+msgstr "Zaproś do tworzenia"
+msgstr ""
+
+#: ctrlz.py:199
+msgid "Webhook Create"
+msgstr "Utwórz webhook"
+msgstr ""
+
+#: ctrlz.py:200
+msgid "Emoji Create"
+msgstr "Utwórz emoji"
+msgstr ""
+
+#: ctrlz.py:201
+msgid "Message Pin"
+msgstr "Wiadomość Pin"
+msgstr ""
+
+#: ctrlz.py:202
+msgid "Integration Create"
+msgstr "Tworzenie integracji"
+msgstr ""
+
+#: ctrlz.py:203
+msgid "Stage Instance Create"
+msgstr "Utwórz instancję sceniczną"
+msgstr ""
+
+#: ctrlz.py:204
+msgid "Sticker Create"
+msgstr "Utwórz naklejkę"
+msgstr ""
+
+#: ctrlz.py:205
+msgid "Scheduled Event Create"
+msgstr "Zaplanowane wydarzenie Tworzenie"
+msgstr ""
+
+#: ctrlz.py:206
+msgid "Thread Create"
+msgstr "Utwórz wątek"
+msgstr ""
+
+#: ctrlz.py:207
+msgid "Automod Rule Create"
+msgstr "Utwórz regułę Automod"
+msgstr ""
+
+#: ctrlz.py:210
+msgid "Guild Update"
+msgstr "Aktualizacja Gildii"
+msgstr ""
+
+#: ctrlz.py:211
+msgid "Channel Update"
+msgstr "Aktualizacja kanału"
+msgstr ""
+
+#: ctrlz.py:212
+msgid "Overwrite Update"
+msgstr "Zastąp aktualizację"
+msgstr ""
+
+#: ctrlz.py:213
+msgid "Member Update"
+msgstr "Aktualizacja członka"
+msgstr ""
+
+#: ctrlz.py:214
+msgid "Member Role Update"
+msgstr "Aktualizacja roli członka"
+msgstr ""
+
+#: ctrlz.py:215
+msgid "Role Update"
+msgstr "Aktualizacja roli"
+msgstr ""
+
+#: ctrlz.py:216
+msgid "Webhook Update"
+msgstr "Aktualizacja webhooka"
+msgstr ""
+
+#: ctrlz.py:217
+msgid "Emoji Update"
+msgstr "Aktualizacja emotikonów"
+msgstr ""
+
+#: ctrlz.py:218
+msgid "Stage Instance Update"
+msgstr "Aktualizacja instancji sceny"
+msgstr ""
+
+#: ctrlz.py:219
+msgid "Sticker Update"
+msgstr "Aktualizacja naklejek"
+msgstr ""
+
+#: ctrlz.py:220
+msgid "Scheduled Event Update"
+msgstr "Zaplanowana aktualizacja wydarzenia"
+msgstr ""
+
+#: ctrlz.py:221
+msgid "Thread Update"
+msgstr "Aktualizacja wątku"
+msgstr ""
+
+#: ctrlz.py:222
+msgid "Automod Rule Update"
+msgstr "Aktualizacja zasad Automod"
+msgstr ""
+
+#: ctrlz.py:225
+msgid "Channel Delete"
+msgstr "Usuń kanał"
+msgstr ""
+
+#: ctrlz.py:226
+msgid "Overwrite Delete"
+msgstr "Nadpisz Usuń"
+msgstr ""
+
+#: ctrlz.py:227
+msgid "Unban"
+msgstr "Humbana"
+msgstr ""
+
+#: ctrlz.py:228
+msgid "Role Delete"
+msgstr "Rola Usuń"
+msgstr ""
+
+#: ctrlz.py:229
+msgid "Invite Delete"
+msgstr "Zaproś do usunięcia"
+msgstr ""
+
+#: ctrlz.py:230
+msgid "Webhook Delete"
+msgstr "Usuń webhook"
+msgstr ""
+
+#: ctrlz.py:231
+msgid "Message Unpin"
+msgstr "Odepnij wiadomość"
+msgstr ""
+
+#: ctrlz.py:232
+msgid "Scheduled Event Delete"
+msgstr "Zaplanowane usunięcie wydarzenia"
+msgstr ""
+
+#: ctrlz.py:233
+msgid "Automod Rule Delete"
+msgstr "Usuń regułę Automod"
+msgstr ""
+
+#: ctrlz.py:254 ctrlz.py:329
+msgid "Unknown audit log action."
+msgstr "Nieznane działanie dziennika kontrolnego."
+msgstr ""
+
+#: ctrlz.py:256
+msgid "Audit Log — {label}"
+msgstr "Dziennik audytu — {label}"
+msgstr ""
+
+#: ctrlz.py:266
+msgid "Target:"
+msgstr "Cel:"
+msgstr ""
+
+#: ctrlz.py:275
+msgid "Reason:"
+msgstr "Powód:"
+msgstr ""
+
+#: ctrlz.py:294
+msgid "Before:"
+msgstr "Zanim:"
+msgstr ""
+
+#: ctrlz.py:310
+msgid "After:"
+msgstr "Po:"
+msgstr ""
+
+#: ctrlz.py:331
+msgid "The audit log has already been reverted."
+msgstr "Dziennik kontroli został już przywrócony."
+msgstr ""
+
+#: ctrlz.py:337
+msgid ""
+msgstr ""
+"I don't have the necessary permissions or the target of the audit log is "
+"higher than me."
+msgstr ""
+
+#: ctrlz.py:339
+msgid "An error occurred while reverting the audit log:\n"
+msgstr "Wystąpił błąd podczas przywracania dziennika audytu:\n"
+msgstr ""
+
+#: ctrlz.py:380 ctrlz.py:404
+msgid "No audit logs found."
+msgstr "Nie znaleziono dzienników kontroli."
+msgstr ""
+
+#: views.py:21
+msgid "Create Actions"
+msgstr "Utwórz akcje"
+msgstr ""
+
+#: views.py:22
+msgid "Update Actions"
+msgstr "Aktualizuj działania"
+msgstr ""
+
+#: views.py:23
+msgid "Delete Actions"
+msgstr "Usuń akcje"
+msgstr ""
+
+#: views.py:24 views.py:233
+msgid "Revert"
+msgstr "Odwracać"
+msgstr ""
+
+#: views.py:29
+msgid "You are not allowed to use this interaction."
+msgstr "Nie możesz korzystać z tej interakcji."
+msgstr ""
+
+#: views.py:225
+msgid "✅ This Audit Log has been reverted successfully."
+msgstr "✅ Ten dziennik audytu został pomyślnie przywrócony."
+msgstr ""
+
+#: views.py:253
+msgid "Already Reverted"
+msgstr "Już przywrócone"
+msgstr ""
+
+#: views.py:267
+msgid "Ignore"
+msgstr "Ignorować"
+msgstr ""
+
+#: views.py:270
+msgid "Unignore"
+msgstr "Przestań ignorować"
+msgstr ""
+
+#: views.py:293
+msgid "Are you sure you want to revert all these audit logs?"
+msgstr "Czy na pewno chcesz przywrócić wszystkie dzienniki kontroli?"
+msgstr ""
+
+#: views.py:306
+msgid "❌ There are no audit logs to revert."
+msgstr "❌ Brak dzienników audytu do przywrócenia."
+msgstr ""
+
+#: views.py:309
+msgid "Reverting Audit Logs..."
+msgstr "Przywracanie dzienników kontrolnych..."
+msgstr ""
+
+#: views.py:310
+msgid "This may take a while."
+msgstr "To może chwilę potrwać."
+msgstr ""
+
+#: views.py:314 views.py:348
+msgid "Progression:"
+msgstr "Postęp:"
+msgstr ""
+
+#: views.py:318 views.py:354
+msgid "Errors:"
+msgstr "Błędy:"
+msgstr ""
+
+#: views.py:319
+msgid "No errors yet."
+msgstr "Nie ma jeszcze żadnych błędów."
+msgstr ""
+
+#: views.py:363
+msgid "❌ Errors..."
+msgstr "❌ Błędy..."
+msgstr ""
+
+#: views.py:371
+msgid "✅ All Audit Logs have been reverted successfully."
+msgstr "✅ Wszystkie dzienniki audytu zostały pomyślnie przywrócone."
+msgstr ""
+

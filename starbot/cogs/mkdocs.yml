@@ -1,0 +1,21 @@
+site_name: StarCogs Docs
+site_url: https://starcogs.readthedocs.io
+site_author: Star
+site_description: >-
+  StarCogs Documentations for Starfire bot
+
+# Repository
+repo_name: StarCogs
+repo_url: https://github.com/LeDeathAmongst/StarCogs
+
+# Copyright
+copyright: Copyright &copy; 2023 - present Star
+
+# Theme
+theme:
+  name: dracula
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.tooltips
+    - navigation.sections

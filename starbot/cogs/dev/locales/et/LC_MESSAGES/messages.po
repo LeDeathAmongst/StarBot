@@ -1,0 +1,112 @@
+# Estonian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:58+0100\n"
+"PO-Revision-Date: 2024-10-14 06:59+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: et\n"
+"Language-Team: et <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dev.py:745 dev.py:807 dev.py:1014
+msgid "Unreadable attachment with `utf-8`."
+msgstr "Lugematu manus utf-8-ga."
+msgstr ""
+
+#: dev.py:762
+msgid "This message isn't reachable."
+msgstr "See sõnum ei ole kättesaadav."
+msgstr ""
+
+#: dev.py:868
+msgid "Already running a REPL session in this channel. Exit it with `quit`."
+msgstr "Selles kanalis on juba käimas REPL-seanss. Väljuge käsuga "quit"."
+msgstr ""
+
+#: dev.py:872
+msgid ""
+msgstr ""
+"Already running a REPL session in this channel. Resume the REPL with "
+"`{prefix}replresume`."
+msgstr ""
+
+#: dev.py:884
+msgid ""
+msgstr ""
+"Enter code to execute or evaluate. `exit()` or `quit` to exit. "
+"`{prefix}replpause` to pause."
+msgstr ""
+
+#: dev.py:929
+msgid "Exiting."
+msgstr "Väljumine."
+msgstr ""
+
+#: dev.py:937
+msgid "There is no currently running REPL session in this channel."
+msgstr "Sellel kanalil pole praegu käimas REPL-seanssi."
+msgstr ""
+
+#: dev.py:943
+msgid "The REPL session in this channel has been resumed."
+msgstr "REPL-i seanss sellel kanalil on jätkunud."
+msgstr ""
+
+#: dev.py:945
+msgid "The REPL session in this channel is now paused."
+msgstr "REPL-i seanss sellel kanalil on nüüd peatatud."
+msgstr ""
+
+#: dev.py:967
+msgid "Bot owners will now bypass all commands with cooldowns{optional_duration}."
+msgstr "Botiomanikud jätavad nüüd kõigist käskudest jahtumisaega{optional_duration} mööda."
+msgstr ""
+
+#: dev.py:977
+msgid ""
+msgstr ""
+"Bot owners will no longer bypass all commands with "
+"cooldowns{optional_duration}."
+msgstr ""
+
+#: view.py:42
+msgid "Execute"
+msgstr "Käivitage"
+msgstr ""
+
+#: view.py:44
+msgid "Code to Execute"
+msgstr "Kood täitmiseks"
+msgstr ""
+
+#: view.py:46
+msgid "Write your code here..."
+msgstr "Kirjuta oma kood siia..."
+msgstr ""
+
+#: view.py:84
+msgid "You are not allowed to use this interaction."
+msgstr "Teil ei ole lubatud seda suhtlust kasutada."
+msgstr ""
+
+#: view.py:102
+msgid "Execute Debug"
+msgstr "Käivitage silumine"
+msgstr ""
+
+#: view.py:110
+msgid "Execute Eval"
+msgstr "Käivitage Eval"
+msgstr ""
+

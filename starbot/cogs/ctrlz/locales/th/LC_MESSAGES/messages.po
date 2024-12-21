@@ -1,0 +1,368 @@
+# Thai translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:35+0100\n"
+"PO-Revision-Date: 2024-10-14 05:45+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: th\n"
+"Language-Team: th <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: converters.py:15
+msgid "Invalid action."
+msgstr "การกระทำที่ไม่ถูกต้อง"
+msgstr ""
+
+#: converters.py:24
+msgid "Invalid datetime format. Expected format is ISO (`YYYY-MM-DDTHH:MM:SS`)."
+msgstr "รูปแบบวันที่และเวลาไม่ถูกต้อง รูปแบบที่ต้องการคือ ISO (`YYYY-MM-DDTHH:MM:SS`)"
+msgstr ""
+
+#: converters.py:26
+msgid "The date must be within the last 7 days."
+msgstr "วันที่จะต้องอยู่ภายใน 7 วันที่ผ่านมา"
+msgstr ""
+
+#: ctrlz.py:25 ctrlz.py:29 ctrlz.py:42 ctrlz.py:46 ctrlz.py:50 ctrlz.py:58
+msgid "The target of the audit log was not found."
+msgstr "ไม่พบเป้าหมายของบันทึกการตรวจสอบ"
+msgstr ""
+
+#: ctrlz.py:193
+msgid "Channel Create"
+msgstr "การสร้างช่อง"
+msgstr ""
+
+#: ctrlz.py:194
+msgid "Overwrite Create"
+msgstr "เขียนทับสร้าง"
+msgstr ""
+
+#: ctrlz.py:195
+msgid "Ban"
+msgstr "ห้าม"
+msgstr ""
+
+#: ctrlz.py:196
+msgid "Bot Add"
+msgstr "บอทเพิ่ม"
+msgstr ""
+
+#: ctrlz.py:197
+msgid "Role Create"
+msgstr "สร้างบทบาท"
+msgstr ""
+
+#: ctrlz.py:198
+msgid "Invite Create"
+msgstr "เชิญสร้าง"
+msgstr ""
+
+#: ctrlz.py:199
+msgid "Webhook Create"
+msgstr "สร้างเว็บฮุค"
+msgstr ""
+
+#: ctrlz.py:200
+msgid "Emoji Create"
+msgstr "อีโมจิสร้าง"
+msgstr ""
+
+#: ctrlz.py:201
+msgid "Message Pin"
+msgstr "ปักหมุดข้อความ"
+msgstr ""
+
+#: ctrlz.py:202
+msgid "Integration Create"
+msgstr "บูรณาการสร้าง"
+msgstr ""
+
+#: ctrlz.py:203
+msgid "Stage Instance Create"
+msgstr "สร้างอินสแตนซ์สเตจ"
+msgstr ""
+
+#: ctrlz.py:204
+msgid "Sticker Create"
+msgstr "สร้างสติ๊กเกอร์"
+msgstr ""
+
+#: ctrlz.py:205
+msgid "Scheduled Event Create"
+msgstr "สร้างเหตุการณ์ตามกำหนดการ"
+msgstr ""
+
+#: ctrlz.py:206
+msgid "Thread Create"
+msgstr "สร้างเธรด"
+msgstr ""
+
+#: ctrlz.py:207
+msgid "Automod Rule Create"
+msgstr "สร้างกฎ Automod"
+msgstr ""
+
+#: ctrlz.py:210
+msgid "Guild Update"
+msgstr "อัพเดตกิลด์"
+msgstr ""
+
+#: ctrlz.py:211
+msgid "Channel Update"
+msgstr "อัพเดทช่อง"
+msgstr ""
+
+#: ctrlz.py:212
+msgid "Overwrite Update"
+msgstr "เขียนทับการอัปเดต"
+msgstr ""
+
+#: ctrlz.py:213
+msgid "Member Update"
+msgstr "อัพเดตสมาชิก"
+msgstr ""
+
+#: ctrlz.py:214
+msgid "Member Role Update"
+msgstr "อัพเดตบทบาทของสมาชิก"
+msgstr ""
+
+#: ctrlz.py:215
+msgid "Role Update"
+msgstr "อัปเดตบทบาท"
+msgstr ""
+
+#: ctrlz.py:216
+msgid "Webhook Update"
+msgstr "อัพเดตเว็บฮุค"
+msgstr ""
+
+#: ctrlz.py:217
+msgid "Emoji Update"
+msgstr "อัปเดตอีโมจิ"
+msgstr ""
+
+#: ctrlz.py:218
+msgid "Stage Instance Update"
+msgstr "อัปเดตอินสแตนซ์สเตจ"
+msgstr ""
+
+#: ctrlz.py:219
+msgid "Sticker Update"
+msgstr "อัพเดตสติ๊กเกอร์"
+msgstr ""
+
+#: ctrlz.py:220
+msgid "Scheduled Event Update"
+msgstr "การอัปเดตกิจกรรมตามกำหนดการ"
+msgstr ""
+
+#: ctrlz.py:221
+msgid "Thread Update"
+msgstr "อัพเดตกระทู้"
+msgstr ""
+
+#: ctrlz.py:222
+msgid "Automod Rule Update"
+msgstr "อัปเดตกฎ Automod"
+msgstr ""
+
+#: ctrlz.py:225
+msgid "Channel Delete"
+msgstr "ลบช่อง"
+msgstr ""
+
+#: ctrlz.py:226
+msgid "Overwrite Delete"
+msgstr "เขียนทับ ลบ"
+msgstr ""
+
+#: ctrlz.py:227
+msgid "Unban"
+msgstr "ฮุมบัน"
+msgstr ""
+
+#: ctrlz.py:228
+msgid "Role Delete"
+msgstr "ลบบทบาท"
+msgstr ""
+
+#: ctrlz.py:229
+msgid "Invite Delete"
+msgstr "เชิญลบ."
+msgstr ""
+
+#: ctrlz.py:230
+msgid "Webhook Delete"
+msgstr "ลบเว็บฮุค"
+msgstr ""
+
+#: ctrlz.py:231
+msgid "Message Unpin"
+msgstr "เลิกปักหมุดข้อความ"
+msgstr ""
+
+#: ctrlz.py:232
+msgid "Scheduled Event Delete"
+msgstr "ลบเหตุการณ์ตามกำหนดการ"
+msgstr ""
+
+#: ctrlz.py:233
+msgid "Automod Rule Delete"
+msgstr "ลบกฎ Automod"
+msgstr ""
+
+#: ctrlz.py:254 ctrlz.py:329
+msgid "Unknown audit log action."
+msgstr "การดำเนินการบันทึกการตรวจสอบที่ไม่รู้จัก"
+msgstr ""
+
+#: ctrlz.py:256
+msgid "Audit Log — {label}"
+msgstr "บันทึกการตรวจสอบ — {label}"
+msgstr ""
+
+#: ctrlz.py:266
+msgid "Target:"
+msgstr "เป้า:"
+msgstr ""
+
+#: ctrlz.py:275
+msgid "Reason:"
+msgstr "เหตุผล:"
+msgstr ""
+
+#: ctrlz.py:294
+msgid "Before:"
+msgstr "ก่อน:"
+msgstr ""
+
+#: ctrlz.py:310
+msgid "After:"
+msgstr "หลังจาก:"
+msgstr ""
+
+#: ctrlz.py:331
+msgid "The audit log has already been reverted."
+msgstr "บันทึกการตรวจสอบถูกเปลี่ยนกลับแล้ว"
+msgstr ""
+
+#: ctrlz.py:337
+msgid ""
+msgstr ""
+"I don't have the necessary permissions or the target of the audit log is "
+"higher than me."
+msgstr ""
+
+#: ctrlz.py:339
+msgid "An error occurred while reverting the audit log:\n"
+msgstr "เกิดข้อผิดพลาดขณะคืนค่าบันทึกการตรวจสอบ:\n"
+msgstr ""
+
+#: ctrlz.py:380 ctrlz.py:404
+msgid "No audit logs found."
+msgstr "ไม่พบบันทึกการตรวจสอบ"
+msgstr ""
+
+#: views.py:21
+msgid "Create Actions"
+msgstr "สร้างการดำเนินการ"
+msgstr ""
+
+#: views.py:22
+msgid "Update Actions"
+msgstr "อัปเดตการดำเนินการ"
+msgstr ""
+
+#: views.py:23
+msgid "Delete Actions"
+msgstr "ลบการดำเนินการ"
+msgstr ""
+
+#: views.py:24 views.py:233
+msgid "Revert"
+msgstr "เปลี่ยนกลับ"
+msgstr ""
+
+#: views.py:29
+msgid "You are not allowed to use this interaction."
+msgstr "คุณไม่ได้รับอนุญาตให้ใช้การโต้ตอบนี้"
+msgstr ""
+
+#: views.py:225
+msgid "✅ This Audit Log has been reverted successfully."
+msgstr "✅ บันทึกการตรวจสอบนี้ถูกเปลี่ยนกลับสำเร็จแล้ว"
+msgstr ""
+
+#: views.py:253
+msgid "Already Reverted"
+msgstr "เปลี่ยนกลับแล้ว"
+msgstr ""
+
+#: views.py:267
+msgid "Ignore"
+msgstr "ไม่สนใจ"
+msgstr ""
+
+#: views.py:270
+msgid "Unignore"
+msgstr "เลิกสนใจ"
+msgstr ""
+
+#: views.py:293
+msgid "Are you sure you want to revert all these audit logs?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนกลับบันทึกการตรวจสอบเหล่านี้ทั้งหมด"
+msgstr ""
+
+#: views.py:306
+msgid "❌ There are no audit logs to revert."
+msgstr "❌ ไม่มีบันทึกการตรวจสอบที่จะเปลี่ยนกลับ"
+msgstr ""
+
+#: views.py:309
+msgid "Reverting Audit Logs..."
+msgstr "กำลังเปลี่ยนกลับบันทึกการตรวจสอบ..."
+msgstr ""
+
+#: views.py:310
+msgid "This may take a while."
+msgstr "การดำเนินการนี้อาจใช้เวลาสักครู่"
+msgstr ""
+
+#: views.py:314 views.py:348
+msgid "Progression:"
+msgstr "ความก้าวหน้า:"
+msgstr ""
+
+#: views.py:318 views.py:354
+msgid "Errors:"
+msgstr "ข้อผิดพลาด:"
+msgstr ""
+
+#: views.py:319
+msgid "No errors yet."
+msgstr "ยังไม่มีข้อผิดพลาด"
+msgstr ""
+
+#: views.py:363
+msgid "❌ Errors..."
+msgstr "❌ข้อผิดพลาด..."
+msgstr ""
+
+#: views.py:371
+msgid "✅ All Audit Logs have been reverted successfully."
+msgstr "✅ บันทึกการตรวจสอบทั้งหมดถูกเปลี่ยนกลับสำเร็จแล้ว"
+msgstr ""
+

@@ -1,0 +1,228 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:32+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "имя"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "текст"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Создание документов для винтика"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Имя процессора, для которого вы хотите создать документацию (с учетом регистра)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Замените все вхождения [p] префиксом ботов."
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Замените все вхождения [botname] на имена ботов."
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Включите дополнительную информацию, например о конвертерах и строках их документации."
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Включить скрытые команды"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Включите CSV с каждой командой, изолированной для каждой строки."
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Вот документация для всех ваших загруженных на данный момент процессоров!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "Я не смог найти этот винтик, может он не загружен?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Вот ваши документы для {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Число без десятичных знаков."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Число с десятичными знаками или без них."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Может быть 1, 0, правда, ложь, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "за"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "секунды"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "второй"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Слэш"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Команда"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Гибридный"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Использование"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Чеки"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Необходимый"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Необязательный"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Только сервер"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Ограничено"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Псевдонимы"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Остывать"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Не удалось получить строку документации или класс для конвертера {}."
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Не удалось получить строку документации для конвертера {}."
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Не удалось получить класс для конвертера {}."
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Автозаполнение"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "По умолчанию"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Выбор"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Не удалось найти {} для аргумента {} команды {}."
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Расширенная информация об аргументах\n"
+msgstr ""
+

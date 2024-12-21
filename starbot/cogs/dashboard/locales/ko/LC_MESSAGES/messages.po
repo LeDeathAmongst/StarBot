@@ -1,0 +1,117 @@
+# Korean translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:55+0100\n"
+"PO-Revision-Date: 2024-10-14 06:57+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dashboard.py:32
+msgid "This is not a valid URL."
+msgstr "유효한 URL이 아닙니다."
+msgstr ""
+
+#: dashboard.py:35
+msgid "This is not a valid Dashboard redirect URI: it must end with `/callback`."
+msgstr "유효한 대시보드 리디렉션 URI가 아닙니다. `/callback`으로 끝나야 합니다."
+msgstr ""
+
+#: dashboard.py:44
+msgid "This third party is not available."
+msgstr "이 제3자는 사용할 수 없습니다."
+msgstr ""
+
+#: dashboard.py:341
+msgid ""
+msgstr ""
+"Starfire's Dashboard is not installed. Check <https://starfire-"
+"dashboard.readthedocs.io>."
+msgstr ""
+
+#: dashboard.py:346
+msgid "You can't access the Dashboard."
+msgstr "대시보드에 액세스할 수 없습니다."
+msgstr ""
+
+#: dashboard.py:348
+msgid "Dashboard"
+msgstr "계기반"
+msgstr ""
+
+#: dashboard.py:377
+msgid "Discord Secret"
+msgstr "디스코드의 비밀"
+msgstr ""
+
+#: dashboard.py:385
+msgid "Discord OAuth secret set."
+msgstr "Discord OAuth 비밀 세트입니다."
+msgstr ""
+
+#: dashboard.py:408
+msgid "You are not allowed to use this interaction."
+msgstr "이 상호 작용을 사용할 수 없습니다."
+msgstr ""
+
+#: dashboard.py:413
+msgid "Set Discord OAuth Secret"
+msgstr "Discord OAuth 비밀번호 설정"
+msgstr ""
+
+#: dashboard.py:421
+msgid "Click on the button below to set a secret for Discord OAuth."
+msgstr "Discord OAuth의 비밀을 설정하려면 아래 버튼을 클릭하세요."
+msgstr ""
+
+#: rpc/__init__.py:105
+msgid "{name} Dashboard"
+msgstr "{이름} 대시보드"
+msgstr ""
+
+#: rpc/__init__.py:113
+msgid ""
+msgstr ""
+"Hello, welcome to the **Red-DiscordBot Dashboard** for {name}! {name} is "
+"based off the popular bot **Red-DiscordBot**, an open source, "
+"multifunctional bot. It has *tons of features* including moderation, "
+"audio, economy, fun and more! Here, you can control and interact with "
+"{name}'s settings. **So what are you waiting for? Invite it now!**"
+msgstr ""
+
+#: rpc/__init__.py:125
+msgid "Interactive Dashboard to control and interact with {name}."
+msgstr "{name}을(를) 제어하고 상호작용할 수 있는 대화형 대시보드입니다."
+msgstr ""
+
+#: rpc/default_cogs.py:101
+msgid ""
+msgstr ""
+"You attempted to create a new alias with the name {name}, but that name "
+"is already a command on this bot."
+msgstr ""
+
+#: rpc/default_cogs.py:108
+msgid ""
+msgstr ""
+"You attempted to create a new alias with the name {name}, but the command"
+" {command} does not exist."
+msgstr ""
+
+#: rpc/default_cogs.py:182
+msgid "`{command}`: "
+msgstr "`{명령}`:"
+msgstr ""
+

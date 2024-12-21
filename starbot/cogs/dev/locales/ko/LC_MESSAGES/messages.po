@@ -1,0 +1,112 @@
+# Korean translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:58+0100\n"
+"PO-Revision-Date: 2024-10-14 06:59+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dev.py:745 dev.py:807 dev.py:1014
+msgid "Unreadable attachment with `utf-8`."
+msgstr "'utf-8' 첨부 파일을 읽을 수 없습니다."
+msgstr ""
+
+#: dev.py:762
+msgid "This message isn't reachable."
+msgstr "이 메시지에 접근할 수 없습니다."
+msgstr ""
+
+#: dev.py:868
+msgid "Already running a REPL session in this channel. Exit it with `quit`."
+msgstr "이 채널에서 이미 REPL 세션을 실행 중입니다. 'quit'으로 종료하세요."
+msgstr ""
+
+#: dev.py:872
+msgid ""
+msgstr ""
+"Already running a REPL session in this channel. Resume the REPL with "
+"`{prefix}replresume`."
+msgstr ""
+
+#: dev.py:884
+msgid ""
+msgstr ""
+"Enter code to execute or evaluate. `exit()` or `quit` to exit. "
+"`{prefix}replpause` to pause."
+msgstr ""
+
+#: dev.py:929
+msgid "Exiting."
+msgstr "종료합니다."
+msgstr ""
+
+#: dev.py:937
+msgid "There is no currently running REPL session in this channel."
+msgstr "이 채널에는 현재 실행 중인 REPL 세션이 없습니다."
+msgstr ""
+
+#: dev.py:943
+msgid "The REPL session in this channel has been resumed."
+msgstr "이 채널의 REPL 세션이 재개되었습니다."
+msgstr ""
+
+#: dev.py:945
+msgid "The REPL session in this channel is now paused."
+msgstr "이제 이 채널의 REPL 세션이 일시 중지되었습니다."
+msgstr ""
+
+#: dev.py:967
+msgid "Bot owners will now bypass all commands with cooldowns{optional_duration}."
+msgstr "이제 봇 소유자는 쿨다운{선택적_기간}이 있는 모든 명령을 우회합니다."
+msgstr ""
+
+#: dev.py:977
+msgid ""
+msgstr ""
+"Bot owners will no longer bypass all commands with "
+"cooldowns{optional_duration}."
+msgstr ""
+
+#: view.py:42
+msgid "Execute"
+msgstr "실행하다"
+msgstr ""
+
+#: view.py:44
+msgid "Code to Execute"
+msgstr "실행할 코드"
+msgstr ""
+
+#: view.py:46
+msgid "Write your code here..."
+msgstr "여기에 코드를 작성하세요..."
+msgstr ""
+
+#: view.py:84
+msgid "You are not allowed to use this interaction."
+msgstr "이 상호 작용을 사용할 수 없습니다."
+msgstr ""
+
+#: view.py:102
+msgid "Execute Debug"
+msgstr "디버그 실행"
+msgstr ""
+
+#: view.py:110
+msgid "Execute Eval"
+msgstr "평가 실행"
+msgstr ""
+

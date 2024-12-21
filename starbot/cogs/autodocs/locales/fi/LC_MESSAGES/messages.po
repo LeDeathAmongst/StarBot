@@ -1,0 +1,227 @@
+# Finnish translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:26+0100\n"
+"PO-Revision-Date: 2024-10-14 05:29+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fi\n"
+"Language-Team: fi <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: autodocs.py:93
+msgid "name"
+msgstr "nimi"
+msgstr ""
+
+#: autodocs.py:93
+msgid "text"
+msgstr "teksti"
+msgstr ""
+
+#: autodocs.py:151
+msgid "Create docs for a cog"
+msgstr "Luo asiakirjoja hammaspyörälle"
+msgstr ""
+
+#: autodocs.py:153
+msgid "The name of the cog you want to make docs for (Case Sensitive)"
+msgstr "Hammaspyörän nimi, jolle haluat tehdä asiakirjoja (kirjainkoolla erottelulla)"
+msgstr ""
+
+#: autodocs.py:154
+msgid "Replace all occurrences of [p] with the bots prefix"
+msgstr "Korvaa kaikki [p] esiintymät botit-etuliitteellä"
+msgstr ""
+
+#: autodocs.py:155
+msgid "Replace all occurrences of [botname] with the bots name"
+msgstr "Korvaa kaikki [botin nimi] esiintymät botin nimellä"
+msgstr ""
+
+#: autodocs.py:156
+msgid "Include extra info like converters and their docstrings"
+msgstr "Sisällytä lisätietoja, kuten muuntimet ja niiden asiakirjat"
+msgstr ""
+
+#: autodocs.py:157
+msgid "Include hidden commands"
+msgstr "Sisällytä piilotetut komennot"
+msgstr ""
+
+#: autodocs.py:158
+msgid ""
+msgstr ""
+"Hide commands above specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:159
+msgid ""
+msgstr ""
+"Hide commands below specified privilege level (user, mod, admin, "
+"guildowner, botowner)"
+msgstr ""
+
+#: autodocs.py:160
+msgid "Include a csv with each command isolated per row"
+msgstr "Sisällytä csv, jossa jokainen komento on eristetty riviä kohden"
+msgstr ""
+
+#: autodocs.py:251
+msgid "Here are the docs for all of your currently loaded cogs!"
+msgstr "Tässä ovat kaikkien tällä hetkellä ladattujen hampaidesi asiakirjat!"
+msgstr ""
+
+#: autodocs.py:255
+msgid "I could not find that cog, maybe it is not loaded?"
+msgstr "En löytänyt sitä hammasratasta, ehkä se ei ole ladattu?"
+msgstr ""
+
+#: autodocs.py:280
+msgid "Here are your docs for {}!"
+msgstr "Tässä ovat asiakirjasi kohteelle {}!"
+msgstr ""
+
+#: converters.py:64
+msgid ""
+msgstr ""
+"A single word, if not using slash and multiple words are necessary use a "
+"quote e.g \"Hello world\"."
+msgstr ""
+
+#: converters.py:65
+msgid "A number without decimal places."
+msgstr "Numero ilman desimaaleja."
+msgstr ""
+
+#: converters.py:66
+msgid "A number with or without decimal places."
+msgstr "Numero desimaalien kanssa tai ilman."
+msgstr ""
+
+#: converters.py:67
+msgid "Can be 1, 0, true, false, t, f"
+msgstr "Voi olla 1, 0, tosi, epätosi, t, f"
+msgstr ""
+
+#: formatter.py:91
+msgid "per"
+msgstr "per"
+msgstr ""
+
+#: formatter.py:92
+msgid "seconds"
+msgstr "sekuntia"
+msgstr ""
+
+#: formatter.py:93
+msgid "second"
+msgstr "toinen"
+msgstr ""
+
+#: formatter.py:110
+msgid "Slash"
+msgstr "Kauttaviiva"
+msgstr ""
+
+#: formatter.py:111
+msgid "Command"
+msgstr "Komento"
+msgstr ""
+
+#: formatter.py:116
+msgid "Hybrid"
+msgstr "Hybridi"
+msgstr ""
+
+#: formatter.py:127
+msgid "Usage"
+msgstr "Käyttö"
+msgstr ""
+
+#: formatter.py:128
+msgid "Checks"
+msgstr "Tarkistukset"
+msgstr ""
+
+#: formatter.py:140
+msgid "Required"
+msgstr "Pakollinen"
+msgstr ""
+
+#: formatter.py:144
+msgid "Optional"
+msgstr "Valinnainen"
+msgstr ""
+
+#: formatter.py:156
+msgid "Server Only"
+msgstr "Vain palvelin"
+msgstr ""
+
+#: formatter.py:190
+msgid "Restricted to"
+msgstr "Rajoitettu"
+msgstr ""
+
+#: formatter.py:194
+msgid "Aliases"
+msgstr "Aliakset"
+msgstr ""
+
+#: formatter.py:197
+msgid "Cooldown"
+msgstr "Jäähdytys"
+msgstr ""
+
+#: formatter.py:213
+msgid "Could not get docstring or class for {} converter"
+msgstr "Dokumenttimerkkijonoa tai luokkaa ei voitu hakea muuntimelle {}"
+msgstr ""
+
+#: formatter.py:217 formatter.py:277
+msgid "Could not get docstring for {} converter"
+msgstr "Dokumenttimerkkijonoa ei voitu hakea muuntimelle {}"
+msgstr ""
+
+#: formatter.py:221
+msgid "Could not get class for {} converter"
+msgstr "Luokkaa {} muuntimelle ei voitu hakea"
+msgstr ""
+
+#: formatter.py:230
+msgid "Autocomplete"
+msgstr "Automaattinen täydennys"
+msgstr ""
+
+#: formatter.py:234
+msgid "Default"
+msgstr "Oletus"
+msgstr ""
+
+#: formatter.py:239
+msgid "Choices"
+msgstr "Valinnat"
+msgstr ""
+
+#: formatter.py:269
+msgid "Could not find {} for the {} argument of the {} command"
+msgstr "Ei löytynyt {} komennon {} argumentille {}"
+msgstr ""
+
+#: formatter.py:304
+msgid "Extended Arg Info\n"
+msgstr "Laajennettu Arg-tiedot\n"
+msgstr ""
+

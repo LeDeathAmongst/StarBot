@@ -1,0 +1,117 @@
+# Turkish translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:55+0100\n"
+"PO-Revision-Date: 2024-10-14 06:58+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: tr\n"
+"Language-Team: tr <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dashboard.py:32
+msgid "This is not a valid URL."
+msgstr "Bu geçerli bir URL değil."
+msgstr ""
+
+#: dashboard.py:35
+msgid "This is not a valid Dashboard redirect URI: it must end with `/callback`."
+msgstr "Bu geçerli bir Kontrol Paneli yönlendirme URI'si değil: "/callback" ile bitmelidir."
+msgstr ""
+
+#: dashboard.py:44
+msgid "This third party is not available."
+msgstr "Bu üçüncü taraf mevcut değil."
+msgstr ""
+
+#: dashboard.py:341
+msgid ""
+msgstr ""
+"Starfire's Dashboard is not installed. Check <https://starfire-"
+"dashboard.readthedocs.io>."
+msgstr ""
+
+#: dashboard.py:346
+msgid "You can't access the Dashboard."
+msgstr "Kontrol Paneline erişemezsiniz."
+msgstr ""
+
+#: dashboard.py:348
+msgid "Dashboard"
+msgstr "Kontrol Paneli"
+msgstr ""
+
+#: dashboard.py:377
+msgid "Discord Secret"
+msgstr "Anlaşmazlık Sırrı"
+msgstr ""
+
+#: dashboard.py:385
+msgid "Discord OAuth secret set."
+msgstr "Discord OAuth gizli seti."
+msgstr ""
+
+#: dashboard.py:408
+msgid "You are not allowed to use this interaction."
+msgstr "Bu etkileşimi kullanmanıza izin verilmiyor."
+msgstr ""
+
+#: dashboard.py:413
+msgid "Set Discord OAuth Secret"
+msgstr "Discord OAuth Sırrını Ayarla"
+msgstr ""
+
+#: dashboard.py:421
+msgid "Click on the button below to set a secret for Discord OAuth."
+msgstr "Discord OAuth için bir sır ayarlamak için aşağıdaki düğmeye tıklayın."
+msgstr ""
+
+#: rpc/__init__.py:105
+msgid "{name} Dashboard"
+msgstr "{name} Kontrol Paneli"
+msgstr ""
+
+#: rpc/__init__.py:113
+msgid ""
+msgstr ""
+"Hello, welcome to the **Red-DiscordBot Dashboard** for {name}! {name} is "
+"based off the popular bot **Red-DiscordBot**, an open source, "
+"multifunctional bot. It has *tons of features* including moderation, "
+"audio, economy, fun and more! Here, you can control and interact with "
+"{name}'s settings. **So what are you waiting for? Invite it now!**"
+msgstr ""
+
+#: rpc/__init__.py:125
+msgid "Interactive Dashboard to control and interact with {name}."
+msgstr "{name}'i kontrol etmek ve onunla etkileşimde bulunmak için Etkileşimli Kontrol Paneli."
+msgstr ""
+
+#: rpc/default_cogs.py:101
+msgid ""
+msgstr ""
+"You attempted to create a new alias with the name {name}, but that name "
+"is already a command on this bot."
+msgstr ""
+
+#: rpc/default_cogs.py:108
+msgid ""
+msgstr ""
+"You attempted to create a new alias with the name {name}, but the command"
+" {command} does not exist."
+msgstr ""
+
+#: rpc/default_cogs.py:182
+msgid "`{command}`: "
+msgstr "`{komut}`:"
+msgstr ""
+

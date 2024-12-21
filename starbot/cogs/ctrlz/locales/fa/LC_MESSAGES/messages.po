@@ -1,0 +1,368 @@
+# Persian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:35+0100\n"
+"PO-Revision-Date: 2024-10-14 05:38+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fa\n"
+"Language-Team: fa <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: converters.py:15
+msgid "Invalid action."
+msgstr "اقدام نامعتبر"
+msgstr ""
+
+#: converters.py:24
+msgid "Invalid datetime format. Expected format is ISO (`YYYY-MM-DDTHH:MM:SS`)."
+msgstr "قالب تاریخ نامعتبر است. قالب مورد انتظار ISO است (`YYYY-MM-DDTHH:MM:SS`)."
+msgstr ""
+
+#: converters.py:26
+msgid "The date must be within the last 7 days."
+msgstr "تاریخ باید در 7 روز گذشته باشد."
+msgstr ""
+
+#: ctrlz.py:25 ctrlz.py:29 ctrlz.py:42 ctrlz.py:46 ctrlz.py:50 ctrlz.py:58
+msgid "The target of the audit log was not found."
+msgstr "هدف گزارش حسابرسی پیدا نشد."
+msgstr ""
+
+#: ctrlz.py:193
+msgid "Channel Create"
+msgstr "ایجاد کانال"
+msgstr ""
+
+#: ctrlz.py:194
+msgid "Overwrite Create"
+msgstr "بازنویسی ایجاد کنید"
+msgstr ""
+
+#: ctrlz.py:195
+msgid "Ban"
+msgstr "ممنوع کردن"
+msgstr ""
+
+#: ctrlz.py:196
+msgid "Bot Add"
+msgstr "اضافه کردن ربات"
+msgstr ""
+
+#: ctrlz.py:197
+msgid "Role Create"
+msgstr "ایجاد نقش"
+msgstr ""
+
+#: ctrlz.py:198
+msgid "Invite Create"
+msgstr "دعوت به ایجاد"
+msgstr ""
+
+#: ctrlz.py:199
+msgid "Webhook Create"
+msgstr "ایجاد وب هوک"
+msgstr ""
+
+#: ctrlz.py:200
+msgid "Emoji Create"
+msgstr "ایجاد ایموجی"
+msgstr ""
+
+#: ctrlz.py:201
+msgid "Message Pin"
+msgstr "پین پیام"
+msgstr ""
+
+#: ctrlz.py:202
+msgid "Integration Create"
+msgstr "ایجاد یکپارچگی"
+msgstr ""
+
+#: ctrlz.py:203
+msgid "Stage Instance Create"
+msgstr "ایجاد نمونه مرحله"
+msgstr ""
+
+#: ctrlz.py:204
+msgid "Sticker Create"
+msgstr "ایجاد استیکر"
+msgstr ""
+
+#: ctrlz.py:205
+msgid "Scheduled Event Create"
+msgstr "ایجاد رویداد برنامه ریزی شده"
+msgstr ""
+
+#: ctrlz.py:206
+msgid "Thread Create"
+msgstr "ایجاد موضوع"
+msgstr ""
+
+#: ctrlz.py:207
+msgid "Automod Rule Create"
+msgstr "ایجاد قانون Automod"
+msgstr ""
+
+#: ctrlz.py:210
+msgid "Guild Update"
+msgstr "به روز رسانی انجمن"
+msgstr ""
+
+#: ctrlz.py:211
+msgid "Channel Update"
+msgstr "به روز رسانی کانال"
+msgstr ""
+
+#: ctrlz.py:212
+msgid "Overwrite Update"
+msgstr "بازنویسی به روز رسانی"
+msgstr ""
+
+#: ctrlz.py:213
+msgid "Member Update"
+msgstr "به روز رسانی اعضا"
+msgstr ""
+
+#: ctrlz.py:214
+msgid "Member Role Update"
+msgstr "به روز رسانی نقش اعضا"
+msgstr ""
+
+#: ctrlz.py:215
+msgid "Role Update"
+msgstr "به روز رسانی نقش"
+msgstr ""
+
+#: ctrlz.py:216
+msgid "Webhook Update"
+msgstr "به روز رسانی وب هوک"
+msgstr ""
+
+#: ctrlz.py:217
+msgid "Emoji Update"
+msgstr "به روز رسانی ایموجی"
+msgstr ""
+
+#: ctrlz.py:218
+msgid "Stage Instance Update"
+msgstr "به روز رسانی مرحله نمونه"
+msgstr ""
+
+#: ctrlz.py:219
+msgid "Sticker Update"
+msgstr "به روز رسانی استیکر"
+msgstr ""
+
+#: ctrlz.py:220
+msgid "Scheduled Event Update"
+msgstr "به روز رسانی رویداد برنامه ریزی شده"
+msgstr ""
+
+#: ctrlz.py:221
+msgid "Thread Update"
+msgstr "به روز رسانی موضوع"
+msgstr ""
+
+#: ctrlz.py:222
+msgid "Automod Rule Update"
+msgstr "به روز رسانی قانون Automod"
+msgstr ""
+
+#: ctrlz.py:225
+msgid "Channel Delete"
+msgstr "حذف کانال"
+msgstr ""
+
+#: ctrlz.py:226
+msgid "Overwrite Delete"
+msgstr "بازنویسی حذف"
+msgstr ""
+
+#: ctrlz.py:227
+msgid "Unban"
+msgstr "انسان"
+msgstr ""
+
+#: ctrlz.py:228
+msgid "Role Delete"
+msgstr "حذف نقش"
+msgstr ""
+
+#: ctrlz.py:229
+msgid "Invite Delete"
+msgstr "دعوت به حذف"
+msgstr ""
+
+#: ctrlz.py:230
+msgid "Webhook Delete"
+msgstr "حذف وب هوک"
+msgstr ""
+
+#: ctrlz.py:231
+msgid "Message Unpin"
+msgstr "پین کردن پیام"
+msgstr ""
+
+#: ctrlz.py:232
+msgid "Scheduled Event Delete"
+msgstr "حذف رویداد برنامه ریزی شده"
+msgstr ""
+
+#: ctrlz.py:233
+msgid "Automod Rule Delete"
+msgstr "Automod Rule Delete"
+msgstr ""
+
+#: ctrlz.py:254 ctrlz.py:329
+msgid "Unknown audit log action."
+msgstr "اقدام گزارش حسابرسی ناشناخته."
+msgstr ""
+
+#: ctrlz.py:256
+msgid "Audit Log — {label}"
+msgstr "گزارش حسابرسی - {label}"
+msgstr ""
+
+#: ctrlz.py:266
+msgid "Target:"
+msgstr "هدف:"
+msgstr ""
+
+#: ctrlz.py:275
+msgid "Reason:"
+msgstr "دلیل:"
+msgstr ""
+
+#: ctrlz.py:294
+msgid "Before:"
+msgstr "قبل از:"
+msgstr ""
+
+#: ctrlz.py:310
+msgid "After:"
+msgstr "بعد از:"
+msgstr ""
+
+#: ctrlz.py:331
+msgid "The audit log has already been reverted."
+msgstr "گزارش حسابرسی قبلاً بازگردانده شده است."
+msgstr ""
+
+#: ctrlz.py:337
+msgid ""
+msgstr ""
+"I don't have the necessary permissions or the target of the audit log is "
+"higher than me."
+msgstr ""
+
+#: ctrlz.py:339
+msgid "An error occurred while reverting the audit log:\n"
+msgstr "هنگام برگرداندن گزارش حسابرسی خطایی روی داد:\n"
+msgstr ""
+
+#: ctrlz.py:380 ctrlz.py:404
+msgid "No audit logs found."
+msgstr "هیچ گزارش حسابرسی پیدا نشد."
+msgstr ""
+
+#: views.py:21
+msgid "Create Actions"
+msgstr "Actions را ایجاد کنید"
+msgstr ""
+
+#: views.py:22
+msgid "Update Actions"
+msgstr "به روز رسانی اقدامات"
+msgstr ""
+
+#: views.py:23
+msgid "Delete Actions"
+msgstr "حذف کنش ها"
+msgstr ""
+
+#: views.py:24 views.py:233
+msgid "Revert"
+msgstr "برگردانید"
+msgstr ""
+
+#: views.py:29
+msgid "You are not allowed to use this interaction."
+msgstr "شما مجاز به استفاده از این تعامل نیستید."
+msgstr ""
+
+#: views.py:225
+msgid "✅ This Audit Log has been reverted successfully."
+msgstr "✅ این گزارش حسابرسی با موفقیت بازگردانده شد."
+msgstr ""
+
+#: views.py:253
+msgid "Already Reverted"
+msgstr "قبلاً برگردانده شده است"
+msgstr ""
+
+#: views.py:267
+msgid "Ignore"
+msgstr "نادیده گرفتن"
+msgstr ""
+
+#: views.py:270
+msgid "Unignore"
+msgstr "نادیده گرفتن"
+msgstr ""
+
+#: views.py:293
+msgid "Are you sure you want to revert all these audit logs?"
+msgstr "آیا مطمئن هستید که می خواهید همه این گزارش های حسابرسی را برگردانید؟"
+msgstr ""
+
+#: views.py:306
+msgid "❌ There are no audit logs to revert."
+msgstr "❌ هیچ گزارش حسابرسی برای برگرداندن وجود ندارد."
+msgstr ""
+
+#: views.py:309
+msgid "Reverting Audit Logs..."
+msgstr "در حال برگرداندن گزارش های حسابرسی..."
+msgstr ""
+
+#: views.py:310
+msgid "This may take a while."
+msgstr "این ممکن است کمی طول بکشد."
+msgstr ""
+
+#: views.py:314 views.py:348
+msgid "Progression:"
+msgstr "پیشرفت:"
+msgstr ""
+
+#: views.py:318 views.py:354
+msgid "Errors:"
+msgstr "خطاها:"
+msgstr ""
+
+#: views.py:319
+msgid "No errors yet."
+msgstr "هنوز هیچ خطایی وجود ندارد."
+msgstr ""
+
+#: views.py:363
+msgid "❌ Errors..."
+msgstr "❌ خطاها..."
+msgstr ""
+
+#: views.py:371
+msgid "✅ All Audit Logs have been reverted successfully."
+msgstr "✅ همه گزارش های حسابرسی با موفقیت بازگردانده شدند."
+msgstr ""
+

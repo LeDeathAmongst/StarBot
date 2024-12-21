@@ -1,0 +1,856 @@
+# Romanian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:09+0100\n"
+"PO-Revision-Date: 2024-10-14 04:26+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ro\n"
+"Language-Team: ro <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
+" < 20)) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: commands/admin.py:46
+msgid "**Global Bank:** `{}`\n"
+msgstr "**Global Bank:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "**Economy Cog:** `{}`\n"
+msgstr "**Economy Cog:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Loaded"
+msgstr "Încărcat"
+msgstr ""
+
+#: commands/admin.py:47
+msgid "Not Loaded"
+msgstr "Neîncărcat"
+msgstr ""
+
+#: commands/admin.py:48
+msgid "**Auto Paydays:** `{}`\n"
+msgstr "**Zile de plată automate:** `{}`\n"
+msgstr ""
+
+#: commands/admin.py:52
+msgid "**Auto Payday Roles:** {}\n"
+msgstr "**Roluri în ziua de plată automată:** {}\n"
+msgstr ""
+
+#: commands/admin.py:53 common/utils.py:110 common/utils.py:113
+#: common/utils.py:130 common/utils.py:136
+msgid "None"
+msgstr "Nici unul"
+msgstr ""
+
+#: commands/admin.py:79
+msgid "- {} has not used the bank yet.\n"
+msgstr "- {} nu a folosit încă banca.\n"
+msgstr ""
+
+#: commands/admin.py:82
+msgid "- {} has not used the economy commands yet.\n"
+msgstr "- {} nu a folosit încă comenzile economie.\n"
+msgstr ""
+
+#: commands/admin.py:87
+msgid "- {} has {} seconds left until their next payday.\n"
+msgstr "- {} mai are {} secunde până la următoarea zi de plată.\n"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "- {} is ready for their next payday.\n"
+msgstr "- {} este gata pentru următoarea zi de plată.\n"
+msgstr ""
+
+#: commands/admin.py:100
+msgid ""
+msgstr ""
+"You must be a bot owner to view these settings when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:109
+msgid "Economy cog is not loaded."
+msgstr "Rotul economic nu este încărcat."
+msgstr ""
+
+#: commands/admin.py:111
+msgid "You must be a bot owner to reset cooldowns when global bank is enabled!"
+msgstr "Trebuie să fiți proprietar de bot pentru a reseta perioadele de răcire când banca globală este activată!"
+msgstr ""
+
+#: commands/admin.py:121
+msgid "Payday cooldown reset for **{}**."
+msgstr "Resetarea timpului de recuperare pentru ziua de plată pentru **{}**."
+msgstr ""
+
+#: commands/admin.py:128 commands/admin.py:143 commands/admin.py:170
+msgid "This setting is not available when global bank is enabled."
+msgstr "Această setare nu este disponibilă când banca globală este activată."
+msgstr ""
+
+#: commands/admin.py:132
+msgid "Payday role amounts will now stack."
+msgstr "Sumele pentru rolurile de zi de plată se vor stivui acum."
+msgstr ""
+
+#: commands/admin.py:134
+msgid "Payday role amounts will no longer stack."
+msgstr "Sumele pentru rolurile de zi de plată nu se vor mai stivui."
+msgstr ""
+
+#: commands/admin.py:145
+msgid ""
+msgstr ""
+"\n"
+"Use {} to allow auto-claiming for for all users."
+msgstr ""
+
+#: commands/admin.py:152
+msgid "This role will no longer recieve paydays automatically."
+msgstr "Acest rol nu va mai primi automat zilele de plată."
+msgstr ""
+
+#: commands/admin.py:155
+msgid "This role will now receive paydays automatically."
+msgstr "Acest rol va primi acum zilele de plată automat."
+msgstr ""
+
+#: commands/admin.py:175
+msgid "Role bonus removed."
+msgstr "Bonusul de rol a fost eliminat."
+msgstr ""
+
+#: commands/admin.py:178
+msgid "That role does not have a bonus."
+msgstr "Rolul respectiv nu are bonus."
+msgstr ""
+
+#: commands/admin.py:183
+msgid "That role already has that bonus."
+msgstr "Rolul acela are deja acel bonus."
+msgstr ""
+
+#: commands/admin.py:184
+msgid "Role bonus updated."
+msgstr "Bonus de rol actualizat."
+msgstr ""
+
+#: commands/admin.py:186
+msgid "Role bonus added."
+msgstr "Bonus de rol adăugat."
+msgstr ""
+
+#: commands/admin.py:199
+msgid "Paydays will now be claimed automatically for all users."
+msgstr "Zilele de plată vor fi acum revendicate automat pentru toți utilizatorii."
+msgstr ""
+
+#: commands/admin.py:201
+msgid "Paydays will now be claimed automatically for set roles."
+msgstr "Zilele de plată vor fi acum revendicate automat pentru roluri stabilite."
+msgstr ""
+
+#: commands/admin.py:203
+msgid "Paydays will no longer be claimed automatically."
+msgstr "Zilele de plată nu vor mai fi revendicate automat."
+msgstr ""
+
+#: commands/admin.py:212
+msgid "There is no auto claim channel when global bank is enabled!"
+msgstr "Nu există un canal de revendicare automată când banca globală este activată!"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel set to {}"
+msgstr "Canal de revendicare automată setat la {}"
+msgstr ""
+
+#: commands/admin.py:213
+msgid "Auto claim channel removed."
+msgstr "Canalul de revendicare automată a fost eliminat."
+msgstr ""
+
+#: commands/admin.py:234
+msgid ""
+msgstr ""
+"You must be a bot owner to set the transfer tax when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:236
+msgid "Invalid tax percentage. Must be between 0 and 1."
+msgstr "Procent fiscal nevalid. Trebuie să fie între 0 și 1."
+msgstr ""
+
+#: commands/admin.py:243
+msgid "Transfer tax set to {}%"
+msgstr "Taxa de transfer setată la {}%"
+msgstr ""
+
+#: commands/admin.py:253
+msgid ""
+msgstr ""
+"You must be a bot owner to set the main log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:260
+msgid "Removing the main log channel."
+msgstr "Eliminarea canalului principal de jurnal."
+msgstr ""
+
+#: commands/admin.py:265
+msgid "That is already the main log channel."
+msgstr "Acesta este deja canalul principal de jurnal."
+msgstr ""
+
+#: commands/admin.py:266
+msgid "Main log channel changed to {}"
+msgstr "Canalul principal de jurnal s-a schimbat în {}"
+msgstr ""
+
+#: commands/admin.py:268
+msgid "Main log channel set to {}"
+msgstr "Canalul principal de jurnal setat la {}"
+msgstr ""
+
+#: commands/admin.py:298
+msgid ""
+msgstr ""
+"You must be a bot owner to set an event log channel when global bank is "
+"enabled."
+msgstr ""
+
+#: commands/admin.py:313
+msgid "Invalid event. Must be one of: {}"
+msgstr "Eveniment nevalid. Trebuie să fie unul dintre: {}"
+msgstr ""
+
+#: commands/admin.py:316
+msgid "No channel set for this event."
+msgstr "Niciun canal setat pentru acest eveniment."
+msgstr ""
+
+#: commands/admin.py:318
+msgid "Event log channel for {} removed."
+msgstr "Canalul jurnalului de evenimente pentru {} a fost eliminat."
+msgstr ""
+
+#: commands/admin.py:321
+msgid "That is already the event log channel for {}."
+msgstr "Acesta este deja canalul de jurnal de evenimente pentru {}."
+msgstr ""
+
+#: commands/admin.py:322
+msgid "Event log channel for {} changed to {}"
+msgstr "Canalul jurnalului de evenimente pentru {} a fost schimbat în {}"
+msgstr ""
+
+#: commands/admin.py:324
+msgid "Event log channel for {} set to {}"
+msgstr "Canalul jurnalului de evenimente pentru {} setat la {}"
+msgstr ""
+
+#: commands/admin.py:344
+msgid "Delete after time disabled."
+msgstr "Ștergeți după dezactivare."
+msgstr ""
+
+#: commands/admin.py:347
+msgid "Delete after time set to {} seconds."
+msgstr "Ștergeți după timpul setat la {} secunde."
+msgstr ""
+
+#: commands/admin.py:380
+msgid ""
+msgstr ""
+"- **cost**: The amount of currency to charge\n"
+"- **duration**(`default: 3600`): The time in seconds before the cost "
+"resets\n"
+"- **level**(`default: all`): The minimum permission level to apply the "
+"cost\n"
+" - admin: Admins and above can use the command for free\n"
+" - mod: Mods and above can use the command for free\n"
+" - all: Everyone must pay the cost to use the command\n"
+" - user: All users must pay the cost to use the command unless they are "
+"mod or admin\n"
+" - global: The cost is applied to all users globally\n"
+"- **prompt**(`default: notify`): How the user will be prompted to confirm"
+" the cost\n"
+" - text: The bot will send a text message asking the user to confirm the "
+"cost with yes or no\n"
+" - reaction: The bot will send a message with emoji reactions to confirm "
+"the cost\n"
+" - button: The bot will send a message with buttons to confirm the cost\n"
+" - silent: The bot will not prompt the user to confirm the cost\n"
+" - notify: The bot will simply notify the user of the cost without asking"
+" for confirmation\n"
+"- **modifier**(`default: static`): The type of cost modifier\n"
+" - static: The cost is a fixed amount\n"
+" - percent: The cost is a percentage of the user's balance on top of the "
+"base cost\n"
+" - exponential: The cost increases exponentially based on how frequently "
+"the command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration^2)`\n"
+" - linear: The cost increases linearly based on how frequently the "
+"command is used\n"
+"   - Ex: `Cost = cost + (value * uses over the duration)`\n"
+"- **value**(`default: 0.0`): The value of the cost modifier depends on "
+"the modifier type\n"
+" - static: This will be 0 and does nothing\n"
+" - percent: Value will be the percentage of the user's balance to add to "
+"the base cost\n"
+" - exponential: Value will be the base cost multiplier\n"
+" - linear: Value will be multiplied by the number of uses in the last "
+"hour to get the cost increase\n"
+msgstr ""
+
+#: commands/admin.py:412
+msgid "You can't add a cost to the addcost command."
+msgstr "Nu puteți adăuga un cost la comanda addcost."
+msgstr ""
+
+#: commands/admin.py:417
+msgid "You must be a bot owner to use this command while global bank is active."
+msgstr "Trebuie să fiți proprietarul unui bot pentru a utiliza această comandă în timp ce banca globală este activă."
+msgstr ""
+
+#: commands/admin.py:419
+msgid "Global bank is active, you must use the global level."
+msgstr "Banca globală este activă, trebuie să utilizați nivelul global."
+msgstr ""
+
+#: commands/admin.py:423
+msgid "You must be a bot owner to use the global level."
+msgstr "Trebuie să fiți proprietar de bot pentru a utiliza nivelul global."
+msgstr ""
+
+#: commands/admin.py:424
+msgid "You must enable global bank to use the global level."
+msgstr "Trebuie să activați banca globală pentru a utiliza nivelul global."
+msgstr ""
+
+#: commands/admin.py:430
+msgid "Command not found."
+msgstr "Comanda nu a fost găsită."
+msgstr ""
+
+#: commands/admin.py:432
+msgid "That is not a valid app command"
+msgstr "Aceasta nu este o comandă validă pentru aplicație"
+msgstr ""
+
+#: commands/admin.py:435
+msgid "You can't add costs to commands that are always available!"
+msgstr "Nu puteți adăuga costuri la comenzile care sunt întotdeauna disponibile!"
+msgstr ""
+
+#: commands/admin.py:438 views/cost_menu.py:289
+msgid "You can't add costs to commands you don't have permission to run!"
+msgstr "Nu puteți adăuga costuri la comenzile pe care nu aveți permisiunea de a le executa!"
+msgstr ""
+
+#: commands/admin.py:448
+msgid "This will overwrite the existing cost for this command. Continue?"
+msgstr "Aceasta va suprascrie costul existent pentru această comandă. Continua?"
+msgstr ""
+
+#: commands/admin.py:455
+msgid "Not adding cost."
+msgstr "Nu se adaugă costuri."
+msgstr ""
+
+#: commands/admin.py:456
+msgid "{} cost updated."
+msgstr "{} cost actualizat."
+msgstr ""
+
+#: commands/admin.py:458
+msgid "{} cost added."
+msgstr "{} cost adăugat."
+msgstr ""
+
+#: commands/admin.py:499
+msgid "No users found with that role."
+msgstr "Nu s-au găsit utilizatori cu acel rol."
+msgstr ""
+
+#: commands/admin.py:525
+msgid "No users were affected."
+msgstr "Niciun utilizator nu a fost afectat."
+msgstr ""
+
+#: commands/admin.py:527
+msgid "No balances were changed."
+msgstr "Nu s-au schimbat solduri."
+msgstr ""
+
+#: commands/admin.py:528
+msgid "user was"
+msgstr "utilizatorul a fost"
+msgstr ""
+
+#: commands/admin.py:528
+msgid "users were"
+msgstr "utilizatorii au fost"
+msgstr ""
+
+#: commands/admin.py:529
+msgid "Balances for {} updated, total change was {}."
+msgstr "Soldurile pentru {} au fost actualizate, modificarea totală a fost de {}."
+msgstr ""
+
+#: commands/user.py:34
+msgid "No users found."
+msgstr "Nu s-au găsit utilizatori."
+msgstr ""
+
+#: commands/user.py:52
+msgid "Bank Balances for {}"
+msgstr "Solduri bancare pentru {}"
+msgstr ""
+
+#: common/checks.py:68
+msgid "You do not have enough {} to run that command! (Need {})"
+msgstr "Nu aveți suficient {} pentru a rula acea comandă! (Am nevoie de {})"
+msgstr ""
+
+#: common/checks.py:69
+msgid "{}, you spent {} to run this command"
+msgstr "{}, ați cheltuit {} pentru a rula această comandă"
+msgstr ""
+
+#: common/checks.py:81
+msgid "Do you want to spend {} {} to run this command?"
+msgstr "Doriți să cheltuiți {} {} pentru a rula această comandă?"
+msgstr ""
+
+#: common/checks.py:96
+msgid "Not running `{}`."
+msgstr "Nu rulează `{}`."
+msgstr ""
+
+#: common/checks.py:140
+msgid "{}% transfer tax applied, {} deducted from transfer"
+msgstr "{}% taxa de transfer aplicată, {} dedus din transfer"
+msgstr ""
+
+#: common/listeners.py:41
+msgid "You have been refunded since this command failed."
+msgstr "Ai fost rambursat deoarece această comandă a eșuat."
+msgstr ""
+
+#: common/listeners.py:90
+msgid "Set Balance"
+msgstr "Setați Balanța"
+msgstr ""
+
+#: common/listeners.py:91
+msgid "Transfer Credits"
+msgstr "Transfer credite"
+msgstr ""
+
+#: common/listeners.py:92 common/listeners.py:186
+msgid "Bank Wipe"
+msgstr "Ștergere bancară"
+msgstr ""
+
+#: common/listeners.py:93
+msgid "Prune Accounts"
+msgstr "Prune Conturi"
+msgstr ""
+
+#: common/listeners.py:94
+msgid "Set Global"
+msgstr "Setați Global"
+msgstr ""
+
+#: common/listeners.py:95
+msgid "Payday Claim"
+msgstr "Reclamație pentru ziua de plată"
+msgstr ""
+
+#: common/listeners.py:98
+msgid "Bank Event: {}"
+msgstr "Eveniment bancar: {}"
+msgstr ""
+
+#: common/listeners.py:102 common/listeners.py:109 common/listeners.py:121
+msgid "Recipient"
+msgstr "Destinatar"
+msgstr ""
+
+#: common/listeners.py:103 common/listeners.py:123
+msgid "Old Balance"
+msgstr "Echilibrul vechi"
+msgstr ""
+
+#: common/listeners.py:104 common/listeners.py:124
+msgid "New Balance"
+msgstr "New Balance"
+msgstr ""
+
+#: common/listeners.py:106 common/listeners.py:112 common/listeners.py:119
+#: common/listeners.py:126
+msgid "Guild"
+msgstr "breasla"
+msgstr ""
+
+#: common/listeners.py:108
+msgid "Sender"
+msgstr "Expeditor"
+msgstr ""
+
+#: common/listeners.py:110
+msgid "Transfer Amount"
+msgstr "Suma de transfer"
+msgstr ""
+
+#: common/listeners.py:115
+msgid "User ID"
+msgstr "ID-ul de utilizator"
+msgstr ""
+
+#: common/listeners.py:117
+msgid "Pruned Users"
+msgstr "Utilizatori tăiați"
+msgstr ""
+
+#: common/listeners.py:122
+msgid "Amount"
+msgstr "Cantitate"
+msgstr ""
+
+#: common/listeners.py:126
+msgid "Unknown"
+msgstr "Necunoscut"
+msgstr ""
+
+#: common/listeners.py:128
+msgid "Channel"
+msgstr "Canal"
+msgstr ""
+
+#: common/listeners.py:130
+msgid "Message"
+msgstr "Mesaj"
+msgstr ""
+
+#: common/listeners.py:166
+msgid "Global bank has been wiped!"
+msgstr "Banca globală a fost ștearsă!"
+msgstr ""
+
+#: common/listeners.py:169
+msgid "All bank accounts for all guilds have been wiped!"
+msgstr "Toate conturile bancare pentru toate breslele au fost șterse!"
+msgstr ""
+
+#: common/listeners.py:177
+msgid "Bank accounts have been wiped!"
+msgstr "Conturile bancare au fost șterse!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to Global!"
+msgstr "Banca a fost setată la Global!"
+msgstr ""
+
+#: common/listeners.py:206
+msgid "Bank has been set to per-server!"
+msgstr "Banca a fost setată pe server!"
+msgstr ""
+
+#: common/listeners.py:214
+msgid "Set Global Bank"
+msgstr "Setați Global Bank"
+msgstr ""
+
+#: common/parser.py:14
+msgid ""
+msgstr ""
+"Invalid value, the argument must be an integer, optionally preceded with "
+"a `+` or `-` sign."
+msgstr ""
+
+#: common/parser.py:23
+msgid ""
+msgstr ""
+"Invalid value, the amount of currency to increase or decrease must be an "
+"integer different from zero."
+msgstr ""
+
+#: common/utils.py:107
+msgid "Not Set"
+msgstr "Nu setat"
+msgstr ""
+
+#: common/utils.py:109
+msgid "# Extended Economy Settings\n"
+msgstr "# Setări extinse pentru economie\n"
+msgstr ""
+
+#: common/utils.py:111
+msgid "`Transfer Tax:      `{}\n"
+msgstr "`Taxa de transfer: `{}\n"
+msgstr ""
+
+#: common/utils.py:113
+msgid "`Command Costs:     `{}\n"
+msgstr "`Costuri de comandă: `{}\n"
+msgstr ""
+
+#: common/utils.py:114
+msgid "`Global Bank:       `{}\n"
+msgstr "`Banca globală: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "`Delete After:      `{}\n"
+msgstr "`Șterge după: `{}\n"
+msgstr ""
+
+#: common/utils.py:117
+msgid "Disabled"
+msgstr "Dezactivat"
+msgstr ""
+
+#: common/utils.py:123
+msgid "`Set Global:        `{}\n"
+msgstr "`Set Global: `{}\n"
+msgstr ""
+
+#: common/utils.py:128
+msgid "`Stack Roles:       `{}\n"
+msgstr "`Stiva de roluri: `{}\n"
+msgstr ""
+
+#: common/utils.py:131
+msgid "`Role Bonuses:      `{}\n"
+msgstr "`Bonusuri de rol: `{}\n"
+msgstr ""
+
+#: common/utils.py:132
+msgid "`Payday Autoclaim:  `{}\n"
+msgstr "`Reclamare automată pentru ziua de plată: `{}\n"
+msgstr ""
+
+#: common/utils.py:135
+msgid "`Autoclaim Channel: `{}\n"
+msgstr "`Canal de revendicare automată: `{}\n"
+msgstr ""
+
+#: common/utils.py:137
+msgid "`Autoclaim Roles:   `{}\n"
+msgstr "`Roluri de revendicare automată: `{}\n"
+msgstr ""
+
+#: common/utils.py:139
+msgid ""
+msgstr ""
+"## Event Log Channels\n"
+"`Default Log Channel: `{}\n"
+"`Set Balance:         `{}\n"
+"`Transfer Credits:    `{}\n"
+"`Bank Wipe:           `{}\n"
+"`Prune Accounts:      `{}\n"
+msgstr ""
+
+#: common/utils.py:156
+msgid "`Payday AutoClaim:    `{}\n"
+msgstr "`Revendicare automată pentru ziua de plată: `{}\n"
+msgstr ""
+
+#: common/utils.py:160
+msgid "Showing settings for global bank"
+msgstr "Se afișează setările pentru banca globală"
+msgstr ""
+
+#: common/utils.py:162
+msgid "Showing settings for this server"
+msgstr "Se afișează setările pentru acest server"
+msgstr ""
+
+#: common/utils.py:169
+msgid ""
+msgstr ""
+"`Cost:        `{}\n"
+"`Duration:    `{}\n"
+"`Level:       `{}\n"
+"`Prompt:      `{}\n"
+"`Modifier:    `{}\n"
+"`Value:       `{}\n"
+"`Cached Uses: `{}\n"
+msgstr ""
+
+#: overrides/payday.py:40 overrides/payday.py:105
+msgid ""
+msgstr ""
+"You've reached the maximum amount of {currency}! Please spend some more 😬"
+"\n"
+"\n"
+"You currently have {new_balance} {currency}."
+msgstr ""
+
+#: overrides/payday.py:56 overrides/payday.py:123
+msgid ""
+msgstr ""
+"{author.mention} Here, take some {currency}. Enjoy! (+{amount} "
+"{currency}!)\n"
+"\n"
+"You currently have {new_balance} {currency}.\n"
+"\n"
+"You are currently #{pos} on the global leaderboard!"
+msgstr ""
+
+#: overrides/payday.py:78 overrides/payday.py:145
+msgid "{author.mention} Too soon. Your next payday is {relative_time}."
+msgstr "{author.mention} Prea devreme. Următoarea zi de plată este {relative_time}."
+msgstr ""
+
+#: views/confirm.py:12
+msgid "Yes"
+msgstr "Da"
+msgstr ""
+
+#: views/confirm.py:13
+msgid "No"
+msgstr "Nu"
+msgstr ""
+
+#: views/confirm.py:19 views/cost_menu.py:179
+msgid "This isn't your menu!"
+msgstr "Acesta nu este meniul tău!"
+msgstr ""
+
+#: views/cost_menu.py:39
+msgid "Command Name"
+msgstr "Numele comenzii"
+msgstr ""
+
+#: views/cost_menu.py:45
+msgid "Cost"
+msgstr "Cost"
+msgstr ""
+
+#: views/cost_menu.py:51
+msgid "Duration (Seconds)"
+msgstr "Durata (secunde)"
+msgstr ""
+
+#: views/cost_menu.py:57
+msgid "level, prompt, modifier (Comma separated)"
+msgstr "nivel, prompt, modificator (separat prin virgulă)"
+msgstr ""
+
+#: views/cost_menu.py:63
+msgid "Value (Decimal)[Optional]"
+msgstr "Valoare (zecimală)[Opțional]"
+msgstr ""
+
+#: views/cost_menu.py:82
+msgid "Cost must be an integer!"
+msgstr "Costul trebuie să fie un număr întreg!"
+msgstr ""
+
+#: views/cost_menu.py:86
+msgid "Duration must be an integer!"
+msgstr "Durata trebuie să fie un număr întreg!"
+msgstr ""
+
+#: views/cost_menu.py:90
+msgid "Value must be a decimal!"
+msgstr "Valoarea trebuie să fie o zecimală!"
+msgstr ""
+
+#: views/cost_menu.py:97
+msgid "Invalid details! Must be 3 values separated by commas."
+msgstr "Detalii nevalide! Trebuie să fie 3 valori separate prin virgulă."
+msgstr ""
+
+#: views/cost_menu.py:98
+msgid ""
+msgstr ""
+"\n"
+"Example: `user, notify, static`"
+msgstr ""
+
+#: views/cost_menu.py:103
+msgid "Invalid level! You must use one of: admin, mod, all, user, global"
+msgstr "Nivel nevalid! Trebuie să utilizați unul dintre: admin, mod, all, user, global"
+msgstr ""
+
+#: views/cost_menu.py:107
+msgid ""
+msgstr ""
+"Invalid prompt! You must use one of: text, reaction, button, silent, "
+"notify"
+msgstr ""
+
+#: views/cost_menu.py:111
+msgid ""
+msgstr ""
+"Invalid modifier! You must use one of: static, percent, exponential, "
+"linear"
+msgstr ""
+
+#: views/cost_menu.py:254
+msgid "Page {}/{}"
+msgstr "Pagina {}/{}"
+msgstr ""
+
+#: views/cost_menu.py:271
+msgid "Add Command Cost"
+msgstr "Adăugați costul comenzii"
+msgstr ""
+
+#: views/cost_menu.py:278
+msgid "Command already has a cost!"
+msgstr "Comanda are deja un cost!"
+msgstr ""
+
+#: views/cost_menu.py:283 views/cost_menu.py:323 views/cost_menu.py:344
+msgid "Command not found!"
+msgstr "Comanda nu a fost găsită!"
+msgstr ""
+
+#: views/cost_menu.py:285
+msgid "You can't add a cost to a command that is always available!"
+msgstr "Nu puteți adăuga un cost la o comandă care este întotdeauna disponibilă!"
+msgstr ""
+
+#: views/cost_menu.py:305
+msgid "Command cost added!"
+msgstr "Cost de comandă adăugat!"
+msgstr ""
+
+#: views/cost_menu.py:329
+msgid "Command cost removed!"
+msgstr "Costul de comandă a fost eliminat!"
+msgstr ""
+
+#: views/cost_menu.py:351
+msgid "Edit Cost: {}"
+msgstr "Editare cost: {}"
+msgstr ""
+
+#: views/cost_menu.py:369
+msgid "Command cost updated!"
+msgstr "Costul comenzii a fost actualizat!"
+msgstr ""
+

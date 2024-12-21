@@ -1,0 +1,5 @@
+sphinx_rtd_theme
+furo
+myst-parser
+pydata-sphinx-theme
+recommonmark

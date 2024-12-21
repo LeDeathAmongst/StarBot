@@ -1,0 +1,112 @@
+# Vietnamese translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:58+0100\n"
+"PO-Revision-Date: 2024-10-14 07:01+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: vi\n"
+"Language-Team: vi <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dev.py:745 dev.py:807 dev.py:1014
+msgid "Unreadable attachment with `utf-8`."
+msgstr "Tệp đính kèm không thể đọc được với `utf-8`."
+msgstr ""
+
+#: dev.py:762
+msgid "This message isn't reachable."
+msgstr "Tin nhắn này không thể truy cập được."
+msgstr ""
+
+#: dev.py:868
+msgid "Already running a REPL session in this channel. Exit it with `quit`."
+msgstr "Đã chạy phiên REPL trong kênh này. Thoát nó bằng `quit`."
+msgstr ""
+
+#: dev.py:872
+msgid ""
+msgstr ""
+"Already running a REPL session in this channel. Resume the REPL with "
+"`{prefix}replresume`."
+msgstr ""
+
+#: dev.py:884
+msgid ""
+msgstr ""
+"Enter code to execute or evaluate. `exit()` or `quit` to exit. "
+"`{prefix}replpause` to pause."
+msgstr ""
+
+#: dev.py:929
+msgid "Exiting."
+msgstr "Đang thoát."
+msgstr ""
+
+#: dev.py:937
+msgid "There is no currently running REPL session in this channel."
+msgstr "Hiện không có phiên REPL nào đang chạy trong kênh này."
+msgstr ""
+
+#: dev.py:943
+msgid "The REPL session in this channel has been resumed."
+msgstr "Phiên REPL trong kênh này đã được nối lại."
+msgstr ""
+
+#: dev.py:945
+msgid "The REPL session in this channel is now paused."
+msgstr "Phiên REPL trong kênh này hiện đã bị tạm dừng."
+msgstr ""
+
+#: dev.py:967
+msgid "Bot owners will now bypass all commands with cooldowns{optional_duration}."
+msgstr "Chủ sở hữu bot giờ đây sẽ bỏ qua tất cả các lệnh có thời gian hồi chiêu{Option_duration}."
+msgstr ""
+
+#: dev.py:977
+msgid ""
+msgstr ""
+"Bot owners will no longer bypass all commands with "
+"cooldowns{optional_duration}."
+msgstr ""
+
+#: view.py:42
+msgid "Execute"
+msgstr "Thực hiện"
+msgstr ""
+
+#: view.py:44
+msgid "Code to Execute"
+msgstr "Mã để thực thi"
+msgstr ""
+
+#: view.py:46
+msgid "Write your code here..."
+msgstr "Viết mã của bạn ở đây..."
+msgstr ""
+
+#: view.py:84
+msgid "You are not allowed to use this interaction."
+msgstr "Bạn không được phép sử dụng sự tương tác này."
+msgstr ""
+
+#: view.py:102
+msgid "Execute Debug"
+msgstr "Thực hiện gỡ lỗi"
+msgstr ""
+
+#: view.py:110
+msgid "Execute Eval"
+msgstr "Thực hiện đánh giá"
+msgstr ""
+

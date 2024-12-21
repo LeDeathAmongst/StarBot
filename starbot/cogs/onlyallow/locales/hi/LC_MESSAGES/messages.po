@@ -1,0 +1,68 @@
+# Hindi translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:32+0100\n"
+"PO-Revision-Date: 2024-10-14 04:33+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: hi\n"
+"Language-Team: hi <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: onlyallow.py:53
+msgid ""
+msgstr ""
+"Only specific cogs and commands are allowed in this server. Ask to a bot "
+"owner to add the cog(s) or the command(s) you want to use."
+msgstr ""
+
+#: onlyallow.py:114
+msgid "This cog is already in the allowed cogs list."
+msgstr "यह दल पहले से ही अनुमत दल सूची में है।"
+msgstr ""
+
+#: onlyallow.py:130
+msgid "This command is already in the allowed commands list."
+msgstr "यह आदेश पहले से ही अनुमत आदेश सूची में है।"
+msgstr ""
+
+#: onlyallow.py:146
+msgid "This cog isn't in the allowed cogs list."
+msgstr "यह दल अनुमत दल सूची में नहीं है।"
+msgstr ""
+
+#: onlyallow.py:164
+msgid "This command isn't in the allowed commands list."
+msgstr "यह आदेश अनुमत आदेश सूची में नहीं है."
+msgstr ""
+
+#: onlyallow.py:183
+msgid "All cogs and commands are allowed in this server."
+msgstr "इस सर्वर में सभी कॉग और कमांड की अनुमति है।"
+msgstr ""
+
+#: onlyallow.py:187
+msgid "Only Allow"
+msgstr "केवल अनुमति दें"
+msgstr ""
+
+#: onlyallow.py:195
+msgid "Allowed Cogs"
+msgstr "अनुमत कॉग"
+msgstr ""
+
+#: onlyallow.py:196
+msgid "Allowed Commands"
+msgstr "अनुमत आदेश"
+msgstr ""
+

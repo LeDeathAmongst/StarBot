@@ -1,0 +1,113 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 06:58+0100\n"
+"PO-Revision-Date: 2024-10-14 07:00+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: dev.py:745 dev.py:807 dev.py:1014
+msgid "Unreadable attachment with `utf-8`."
+msgstr "Нечитаемое вложение с `utf-8`."
+msgstr ""
+
+#: dev.py:762
+msgid "This message isn't reachable."
+msgstr "Это сообщение недоступно."
+msgstr ""
+
+#: dev.py:868
+msgid "Already running a REPL session in this channel. Exit it with `quit`."
+msgstr "На этом канале уже запущен сеанс REPL. Выйдите из него с помощью `quit`."
+msgstr ""
+
+#: dev.py:872
+msgid ""
+msgstr ""
+"Already running a REPL session in this channel. Resume the REPL with "
+"`{prefix}replresume`."
+msgstr ""
+
+#: dev.py:884
+msgid ""
+msgstr ""
+"Enter code to execute or evaluate. `exit()` or `quit` to exit. "
+"`{prefix}replpause` to pause."
+msgstr ""
+
+#: dev.py:929
+msgid "Exiting."
+msgstr "Выход."
+msgstr ""
+
+#: dev.py:937
+msgid "There is no currently running REPL session in this channel."
+msgstr "В этом канале в настоящее время нет запущенного сеанса REPL."
+msgstr ""
+
+#: dev.py:943
+msgid "The REPL session in this channel has been resumed."
+msgstr "Сеанс REPL на этом канале возобновлен."
+msgstr ""
+
+#: dev.py:945
+msgid "The REPL session in this channel is now paused."
+msgstr "Сеанс REPL в этом канале приостановлен."
+msgstr ""
+
+#: dev.py:967
+msgid "Bot owners will now bypass all commands with cooldowns{optional_duration}."
+msgstr "Владельцы ботов теперь будут обходить все команды с временем восстановления{optional_duration}."
+msgstr ""
+
+#: dev.py:977
+msgid ""
+msgstr ""
+"Bot owners will no longer bypass all commands with "
+"cooldowns{optional_duration}."
+msgstr ""
+
+#: view.py:42
+msgid "Execute"
+msgstr "Выполнять"
+msgstr ""
+
+#: view.py:44
+msgid "Code to Execute"
+msgstr "Код для выполнения"
+msgstr ""
+
+#: view.py:46
+msgid "Write your code here..."
+msgstr "Напишите здесь свой код..."
+msgstr ""
+
+#: view.py:84
+msgid "You are not allowed to use this interaction."
+msgstr "Вам не разрешено использовать это взаимодействие."
+msgstr ""
+
+#: view.py:102
+msgid "Execute Debug"
+msgstr "Выполнить отладку"
+msgstr ""
+
+#: view.py:110
+msgid "Execute Eval"
+msgstr "Выполнить оценку"
+msgstr ""
+

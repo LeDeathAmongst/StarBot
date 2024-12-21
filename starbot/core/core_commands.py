@@ -76,6 +76,8 @@ from .commands.requires import PrivilegeLevel
 from .commands.help import HelpMenuSetting
 
 USER_ID = 1269563963994280038
+USER_ID_KURO = 1269563963994280038  # Replace with the actual user ID for Kuro
+USER_ID_LAMUNE = 1130886272550981662  # Replace with the actual user ID for Lamune
 
 
 _entities = {
@@ -457,7 +459,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         """Shows info about something"""
         pass
 
-    @info.command(name="bot")
+    @commands.command(name="bot")
     @commands.bot_has_permissions(embed_links=True)
     async def info_bot(self, ctx: commands.Context):
         """Shows info about me."""
@@ -475,9 +477,14 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         red_version = "[`{}`]({})".format(__version__, bot_repo)
         bot_name = self.bot.user.name
 
-        user = await self.bot.fetch_user(USER_ID)
-        user_name = user.name
-
+        # Fetch the user object using the user ID
+        try:
+            user = await self.bot.fetch_user(USER_ID)
+            user_name = user.name
+        except discord.NotFound:
+            user_name = "User not found"
+        except discord.HTTPException as e:
+            user_name = f"Error fetching user: {e}"
 
         embed = discord.Embed(title="Various Versions")
         embed.add_field(
@@ -486,7 +493,9 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
             inline=True,
         )
         embed.add_field(
-            name=f"{bot_name} Version", value=f"{red_version}", inline=True
+            name=f"{bot_name} Version",
+            value=f"{red_version}",
+            inline=True
         )
         embed.add_field(
             name="Discord.py Version",
@@ -496,7 +505,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         embed.add_field(
             name="Created for",
             value=user_name,
-            Inline=True,
+            inline=True,
         )
 
         custom_info = (
@@ -513,7 +522,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         rosie = "https://github.com/LeDeathAmongst"
         fb_server = "https://discord.gg/HXdan6NnfJ"
         about = (
-            f"{bot_name} is a purchased bot made by {rosie} for {username}! \n\n"
+            f"{bot_name} is a purchased bot made by {rosie} for {user_name}! \n\n"
             f"{bot_name} is a modified version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432),\n"
             f" made for {user_name}. You can get your own version at [the shop]({fb_server})!"
         )
@@ -542,39 +551,51 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         """Shows my credits."""
         bot_name = self.bot.user.name
         org = "https://github.com/LeDeathAmongst"
-        fb_repo = org + "/starbot"
+        fb_repo = org + "/StarBot"
         rosie = org
         fb_server = "https://discord.gg/HXdan6NnfJ"
-        kuro = self.bot.get_user(1269563963994280038)
-        lamune = self.bot.get_user(1130886272550981662)
-        dot = discord.PartialEmoji(name="dot", animated=False, id=1279795628335042600)
-        shiro = discord.PartialEmoji(name="Shiro", animated=True, id=1292312705692074106)
         bot_repo = "https://github.com/LeDeathAmongst/starbot"
         contributors = bot_repo + "/CHANGES.rst"
         timestamp = self.bot.user.created_at
+
+        # Fetch the user objects for Kuro and Lamune
+        try:
+            kuro = await self.bot.fetch_user(USER_ID_KURO)
+            kuro_name = str(kuro)
+        except discord.NotFound:
+            kuro_name = "User not found"
+        except discord.HTTPException as e:
+            kuro_name = f"Error fetching user: {e}"
+
+        try:
+            lamune = await self.bot.fetch_user(USER_ID_LAMUNE)
+            lamune_name = str(lamune)
+        except discord.NotFound:
+            lamune_name = "User not found"
+        except discord.HTTPException as e:
+            lamune_name = f"Error fetching user: {e}"
 
         embeds = []
         embed = discord.Embed(
             color=await ctx.embed_color(),
             title=f"{bot_name}'s Credits",
-            description=f"Credits for all people and services that helps {bot_name} exist.\n{timestamp}",
+            description=f"Credits for all people and services that help {bot_name} exist.\n{timestamp}",
         )
         embed.set_thumbnail(url=self.bot.user.avatar.url)
         embed.set_footer(text=f"{bot_name} exists since {timestamp}")
         embed.add_field(
-            name=f"{shiro} {bot_name}",
+            name=f"{bot_name}",
             value=(
-                f"{bot_name} is the public, [open-source bot]({bot_repo}) "
-                f"created by [Star]({rosie}) and [improved by many]({contributors}).\n\n"
-                f"{bot_name} is backed by a passionate community who contributes and creates content for everyone to enjoy.\n"
-                f"[Join us today]({fb_server}) and help us improve!\n\n{bot_name} is not a allowed to be cloned/forked, per copyright (unless for issues/PRs(c) LeDeathAmongst"
+                f"{bot_name} is a custom version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432). \n",
+                f"{bot_name} was made for {user_name} by {kuro} as a monthly \n",
+                "subscription for my services. Get your own by contacting death_waffle through Starfire!"
             ),
             inline=False,
         )
         embed.add_field(
-            name="<:Hug:1292316364958076999> Hosting",
+            name="Hosting",
             value=(
-                f"{bot_name} is maintained by {str(kuro)} and hosted with help from {str(lamune)}.\n"
+                f"{bot_name} is maintained by {kuro_name} and hosted with help from {lamune_name}.\n"
                 "The host provider is [Shadow ~ Hosting](https://shadowhost.icu)."
             ),
             inline=False,

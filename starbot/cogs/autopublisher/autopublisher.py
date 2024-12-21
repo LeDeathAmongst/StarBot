@@ -304,30 +304,6 @@ class AutoPublisher(Cog):
         )
         await ctx.send(embed=embed)
 
-    @commands.bot_has_permissions(embed_links=True)
-    @autopublisher.command()
-    async def version(self, ctx: commands.Context) -> None:
-        """Shows the version of the cog."""
-        version = self.__version__
-        author = self.__author__
-        embed = discord.Embed(
-            title="Cog Information",
-            description=box(
-                f"{'Cog Author':<11}: {author}\n{'Cog Version':<10}: {version}",
-                lang="yaml",
-            ),
-            color=await ctx.embed_color(),
-        )
-        view = discord.ui.View()
-        style = discord.ButtonStyle.gray
-        docs = discord.ui.Button(
-            style=style,
-            label="Cog Documentations",
-            url=self.__docs__,
-        )
-        view.add_item(item=docs)
-        await ctx.send(embed=embed, view=view)
-
     @autopublisher.command()
     async def reset(self, ctx: commands.Context) -> None:
         """Reset AutoPublisher setting."""
@@ -369,7 +345,7 @@ class AutoPublisher(Cog):
 
 
 # -------------VIEW----------------
-# Credit: AAA3A.
+# Credit: Rosie.
 # https://discord.com/channels/133049272517001216/133251234164375552/1280854205497737216
 class IgnoredNewsChannelsView(discord.ui.View):
     def __init__(self, cog: Cog) -> None:

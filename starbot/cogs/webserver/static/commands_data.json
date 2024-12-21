@@ -583,7 +583,7 @@
   "EventPoster": {
     "event": "All event related commands."
   },
-  "BrainfuckCog": {
+  "brainfuck": {
     "unbrainfuck": "Interprets Brainfuck code and converts it to normal text.        ",
     "brainfuck": "Compiles normal text into Brainfuck code.        "
   },
@@ -1651,7 +1651,7 @@
     "hammertimeset": "Commands to set hammertime timezone and settings"
   },
   "DiscordSearch": {
-    "discordsearch": "Search for a message on Discord in a channel.\n\nWarning: The bot uses the api for each search.\nArguments:\n`--author @user1 --author user2#1234 --author 0123456789`\n`--mention @user1 --mention user2#1234 --mention 0123456789`\n`--before now`\n`--after \"25/12/2000 00h00\"`\n`--pinned true`\n`--content \"AAA3A-cogs\"`\n`--regex \"\\[p\\]\"`\n`--contain link --contain embed --contain file`\n`--limit 100` (It's the limit of the number of messages taken into account in the search, not the number of results.)"
+    "discordsearch": "Search for a message on Discord in a channel.\n\nWarning: The bot uses the api for each search.\nArguments:\n`--author @user1 --author user2#1234 --author 0123456789`\n`--mention @user1 --mention user2#1234 --mention 0123456789`\n`--before now`\n`--after \"25/12/2000 00h00\"`\n`--pinned true`\n`--content \"StarCogs\"`\n`--regex \"\\[p\\]\"`\n`--contain link --contain embed --contain file`\n`--limit 100` (It's the limit of the number of messages taken into account in the search, not the number of results.)"
   },
   "Clone": {
     "clone": "Clones specified user",
@@ -1954,7 +1954,7 @@
   "RepoList": {
     "repolist": "List all installed repos and their available cogs."
   },
-  "FluxImgGen": {
+  "fluximggen": {
     "flux": "Generate Images using Flux!\n\n**Examples:**\n- `[p]flux cyberpunk cat`\n- `[p]f kermit --model=realism`\n\n**Arguments:**\n- `<prompt>` - A detailed description of the image you want to create.\n- `--model` - Choose the specific model to use for image generation.\n- `--size` - Aspect Ratio for the generated image.\n- `--seed` - Specific seed value for randomization.\n\n**Models:**\n- `base` - Base flux model.\n- `realism` - Flux model with a LORa fine tuned for realism.\n- `3d` - Flux model with a LORa fine tuned for 3d images.\n- `anime` - Flux model with a LORa fine tuned for anime.\n- `disney` - Flux model with a LORa fine tuned for disney."
   },
   "Otherbot": {
@@ -1992,5 +1992,9 @@
   },
   "DMAffiliates": {
     "dmaffiliate": "Settings for the affiliate messages."
-  }
+  },
+  "author": "Rosie",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

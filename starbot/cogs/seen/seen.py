@@ -23,8 +23,6 @@ _: Translator = Translator("Seen", __file__)
 class Seen(Cog):
     """A cog to check when a member/role/channel/category/user/guild was last active!"""
 
-    __authors__: typing.List[str] = ["AAA3A", "aikaterna"]
-
     def __init__(self, bot: Red) -> None:
         super().__init__(bot=bot)
 

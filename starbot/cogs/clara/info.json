@@ -1,12 +1,19 @@
 {
-  "author" : ["coffeebank"],
-  "install_msg" : "Thanks for installing, I hope you enjoy :) To stay up to date with breaking changes, you might want to join my Support Discord. To find documentation, Discord, and more, drop by my site at https://coffeebank.github.io/coffee-cogs/clara/",
-  "name" : "Clara",
-  "short" : "See info about the servers your bot is in.",
-  "requirements" : [],
-  "description" : "See basic server info. Show bot info about the Discord servers your bot is in, including approximate total user count/member count and server count. Guild info, such as guild ID and guild names are also shown.",
-  "permissions" : [],
-  "end_user_data_statement" : "This cog does not store any End User Data.",
-  "tags" : ["servers", "member", "members", "information"],
+  "author": "Rosie",
+  "install_msg": "Thanks for installing, I hope you enjoy :) To stay up to date with breaking changes, you might want to join my Support Discord. To find documentation, Discord, and more, drop by my site at https://coffeebank.github.io/coffee-cogs/clara/",
+  "name": "Clara",
+  "short": "See info about the servers your bot is in.",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "description": "See basic server info. Show bot info about the Discord servers your bot is in, including approximate total user count/member count and server count. Guild info, such as guild ID and guild names are also shown.",
+  "permissions": [],
+  "end_user_data_statement": "This cog does not store any End User Data.",
+  "tags": [
+    "servers",
+    "member",
+    "members",
+    "information"
+  ],
   "min_bot_version": "3.5.0"
 }

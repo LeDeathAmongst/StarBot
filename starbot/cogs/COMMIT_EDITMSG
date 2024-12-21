@@ -63,7 +63,7 @@
 #	modified:   docs/cog_BoostUtils.rst
 #	new file:   docs/cog_BotJoinMessage.rst
 #	modified:   docs/cog_BotLogger.rst
-#	modified:   docs/cog_BrainfuckCog.rst
+#	modified:   docs/cog_brainfuck.rst
 #	modified:   docs/cog_Bumper.rst
 #	modified:   docs/cog_ButtonPoll.rst
 #	modified:   docs/cog_COC.rst
@@ -123,7 +123,7 @@
 #	modified:   docs/cog_FeatureRequest.rst
 #	modified:   docs/cog_Filter.rst
 #	modified:   docs/cog_Fluent.rst
-#	modified:   docs/cog_FluxImgGen.rst
+#	modified:   docs/cog_fluximggen.rst
 #	modified:   docs/cog_Forward.rst
 #	modified:   docs/cog_Freshmeat.rst
 #	modified:   docs/cog_GetDocs.rst

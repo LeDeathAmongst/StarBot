@@ -24,9 +24,6 @@ IMAGE_LINKS: Pattern = re.compile(
 
 
 class Bingo(commands.Cog):
-    __version__ = "1.2.2"
-    __author__ = ["TrustyJAID"]
-
     def __init__(self, bot):
         self.bot = bot
         self.config = Config.get_conf(self, 218773382617890828)

@@ -18,9 +18,6 @@ class Gmail(Commands, commands.Cog, metaclass=CompositeMetaClass):
     Use `[p]gmailhelp` for help getting started.
     """
 
-    __author__ = "vertyco"
-    __version__ = "0.0.2b"
-
     def __init__(self, bot: Red):
         super().__init__()
         self.bot: Red = bot
@@ -29,11 +26,6 @@ class Gmail(Commands, commands.Cog, metaclass=CompositeMetaClass):
 
         self.db: DB = DB()
         self.saving = False
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
 
     async def red_delete_data_for_user(self, *, requester: str, user_id: int):
         if requester == "owner" and user_id == self.bot.owner_id:

@@ -60,16 +60,6 @@ class HitOrMiss(Cog):
         if u:
             self.cache.remove(u)
 
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed = super().format_help_for_context(ctx) or ""
-        n = "\n" if "\n\n" not in pre_processed else ""
-        text = [
-            f"{pre_processed}{n}",
-            f"Cog Version: **{self.__version__}**",
-            f"Author: {humanize_list(self.__author__)}",
-        ]
-        return "\n".join(text)
-
     @staticmethod
     async def group_embeds_by_fields(
         *fields: Dict[str, Union[str, bool]],

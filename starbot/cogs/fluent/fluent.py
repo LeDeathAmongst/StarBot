@@ -59,13 +59,6 @@ class Fluent(commands.Cog):
     If a deepl key is set, it will use that before falling back to google translate and then flowery.
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "2.2.0"
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        return _("{}\nCog Version: {}\nAuthor: {}").format(helpcmd, self.__version__, self.__author__)
-
     async def red_delete_data_for_user(self, *, requester, user_id: int):
         """No data to delete"""
 

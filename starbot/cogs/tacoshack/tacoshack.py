@@ -300,10 +300,6 @@ class TacoShack(Cog):
             embeds.append(embed)
         await menu(ctx, pages=embeds, controls=DEFAULT_CONTROLS, message=None, page=0, timeout=20)
 
-    @_shack.command(name="version", hidden=True)
-    async def _version(self, ctx: commands.Context):
-        """Display the version."""
-        await ctx.send(("TacoShack Classic for Red v{} by {}").format(self.__version__,self.__author__))
         
     @_shack.command(name="help")
     @commands.bot_has_permissions(add_reactions=True, embed_links=True)

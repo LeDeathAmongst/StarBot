@@ -76,12 +76,6 @@ class LevelUp(
     Earn experience by chatting in text and voice channels, compare levels with your friends, customize your profile and view various leaderboards!
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "4.3.1"
-    __contributors__ = [
-        "[aikaterna](https://github.com/aikaterna/aikaterna-cogs)",
-        "[AAA3A](https://github.com/AAA3A-AAA3A/AAA3A-cogs)",
-    ]
 
     def __init__(self, bot: Red, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -284,16 +278,6 @@ class LevelUp(
                 return
             log.debug("Tenor API key updated")
             self.tenor = TenorAPI(api_tokens["api_key"], str(self.bot.user))
-
-    def format_help_for_context(self, ctx):
-        helpcmd = super().format_help_for_context(ctx)
-        info = (
-            f"{helpcmd}\n"
-            f"Cog Version: {self.__version__}\n"
-            f"Author: {self.__author__}\n"
-            f"Contributors: {humanize_list(self.__contributors__)}\n"
-        )
-        return info
 
     async def red_delete_data_for_user(self, *, requester: RequestType, user_id: int):
         return

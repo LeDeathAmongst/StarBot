@@ -24,10 +24,10 @@ del Star_Utils
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.utils import get_end_user_data_statement
 
-from .flux import FluxImgGen  # Import your cog
+from .flux import fluximggen  # Import your cog
 
 __red_end_user_data_statement__ = get_end_user_data_statement(file=__file__)
 
 async def setup(bot: Red) -> None:
-    cog = FluxImgGen(bot)  # Instantiate your cog
+    cog = fluximggen(bot)  # Instantiate your cog
     await bot.add_cog(cog)  # Add the cog to the bot

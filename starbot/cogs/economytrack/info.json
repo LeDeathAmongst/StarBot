@@ -1,7 +1,5 @@
 {
-  "author": [
-    "Vertyco"
-  ],
+  "author": "Rosie",
   "description": "Track your economy's total balance over time",
   "disabled": false,
   "end_user_data_statement": "This cog does not store data about users.",
@@ -18,7 +16,8 @@
   "requirements": [
     "pandas",
     "plotly",
-    "kaleido"
+    "kaleido",
+    "https://github.com/LeDeathAmongst/Star_Utils"
   ],
   "short": "Economy tracker",
   "tags": [

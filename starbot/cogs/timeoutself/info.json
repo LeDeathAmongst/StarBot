@@ -1,12 +1,12 @@
 {
-    "name": "TimeoutSelf",
-    "author": [
-        "Star"
-    ],
-    "short": "Command that lets people timeout themselves.",
-    "requirements": [],
-    "tags": [
-        "timeout",
-        "fun"
-    ]
+  "name": "TimeoutSelf",
+  "author": "Rosie",
+  "short": "Command that lets people timeout themselves.",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "tags": [
+    "timeout",
+    "fun"
+  ]
 }

@@ -1,19 +1,18 @@
 {
-    "author": [
-        "Dav"
-    ],
-    "description": "Manage your minecraft server whitelist from within discord.",
-    "hidden": false,
-    "install_msg": "Thank you for installing mcwhitelister. With this cog installed you give members of your discord access to your server whitelist.",
-    "short": "Sync Minecraft whitelist with discord.",
-    "tags": [
-        "Minecraft",
-        "Whitelist",
-        "Automation"
-    ],
-    "requirements": [
-        "aio-mc-rcon"
-    ],
-    "end_user_data_statement": "This cog stores end user data in order to allow it to whitelist players on a minecraft server. It stores minecraft player names(and user IDs) as well as discord user IDs.",
-    "min_bot_version": "3.5.0"
+  "author": "Rosie",
+  "description": "Manage your minecraft server whitelist from within discord.",
+  "hidden": false,
+  "install_msg": "Thank you for installing mcwhitelister. With this cog installed you give members of your discord access to your server whitelist.",
+  "short": "Sync Minecraft whitelist with discord.",
+  "tags": [
+    "Minecraft",
+    "Whitelist",
+    "Automation"
+  ],
+  "requirements": [
+    "aio-mc-rcon",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "end_user_data_statement": "This cog stores end user data in order to allow it to whitelist players on a minecraft server. It stores minecraft player names(and user IDs) as well as discord user IDs.",
+  "min_bot_version": "3.5.0"
 }

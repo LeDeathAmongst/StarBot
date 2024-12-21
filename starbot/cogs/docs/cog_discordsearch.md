@@ -8,7 +8,7 @@ Arguments:<br/>
 `--before now`<br/>
 `--after "25/12/2000 00h00"`<br/>
 `--pinned true`<br/>
-`--content "AAA3A-cogs"`<br/>
+`--content "StarCogs"`<br/>
 `--regex "\[p\]"`<br/>
 `--contain link --contain embed --contain file`<br/>
 `--limit 100` (It's the limit of the number of messages taken into account in the search, not the number of results.)<br/>

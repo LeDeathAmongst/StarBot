@@ -1,16 +1,16 @@
 {
-    "name": "TempChannels",
-    "author": [
-        "Star"
-    ],
-    "short": "Create a temporary text channel.",
-    "description": "This cog helps create a temporary text channel for a certain duration, and is automatically deleted afterwards. Supports role locking and more",
-    "install_msg": "Thanks for installing TempChannels. Please run `[p]tempchannels` to configure its settings.",
-    "min_bot_version": "3.5.0",
-    "requirements": [],
-    "tags": [
-        "temporary"
-    ],
-    "permissions": [],
-    "end_user_data_statement": "This cog does not store user-related information."
+  "name": "TempChannels",
+  "author": "Rosie",
+  "short": "Create a temporary text channel.",
+  "description": "This cog helps create a temporary text channel for a certain duration, and is automatically deleted afterwards. Supports role locking and more",
+  "install_msg": "Thanks for installing TempChannels. Please run `[p]tempchannels` to configure its settings.",
+  "min_bot_version": "3.5.0",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "tags": [
+    "temporary"
+  ],
+  "permissions": [],
+  "end_user_data_statement": "This cog does not store user-related information."
 }

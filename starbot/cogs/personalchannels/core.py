@@ -80,9 +80,6 @@ class PersonalChannels(Cog):
     Bot needs `manage_channels` guild permissions to utilize this cog.
     """
 
-    __author__: Final[List[str]] = ["inthedark.org"]
-    __version__: Final[str] = "0.1.1"
-
     def __init__(self, bot: Red) -> None:
         self.bot: Red = bot
         self.config: Config = Config.get_conf(self, identifier=69420, force_registration=True)
@@ -97,16 +94,6 @@ class PersonalChannels(Cog):
         }
         self.config.register_member(**default_member)
         self.config.register_guild(**default_guild)
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed = super().format_help_for_context(ctx)
-        n = "\n" if "\n\n" not in pre_processed else ""
-        text = [
-            f"{pre_processed}{n}",
-            f"Author: **{humanize_list(self.__author__)}**",
-            f"Cog Version: **{self.__version__}**",
-        ]
-        return "\n".join(text)
 
     async def red_get_data_for_user(
         self, *, requester: RequestType, user_id: int

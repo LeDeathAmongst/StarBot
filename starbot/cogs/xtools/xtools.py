@@ -44,14 +44,6 @@ class XTools(commands.Cog):
     Provides various features and functionalities related to Xbox, including profile retrieval, game clips and screenshot viewing, Microsoft services status checking, and more.
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "3.11.5"
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        return f"{helpcmd}\nCog Version: {self.__version__}\nAuthor: {self.__author__}"
-        # formatted for when you type [p]help Xbox
-
     async def red_delete_data_for_user(self, *, requester, user_id: int):
         """No data to delete"""
         async with self.config.users() as users:

@@ -19,9 +19,6 @@ _ = Translator("IdeaBoard", __file__)
 class IdeaBoard(Commands, Listeners, commands.Cog, metaclass=CompositeMetaClass):
     """Share Ideas and Suggestions"""
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "0.7.12"
-
     def __init__(self, bot: Red):
         super().__init__()
         self.bot: Red = bot
@@ -89,11 +86,6 @@ class IdeaBoard(Commands, Listeners, commands.Cog, metaclass=CompositeMetaClass)
             log.exception("Failed to save config", exc_info=e)
         finally:
             self.saving = False
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
 
     async def red_delete_data_for_user(self, *, requester, user_id: int):
         deleted = False

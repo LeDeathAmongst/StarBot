@@ -1,16 +1,15 @@
 {
-    "name": "GithubStuff",
-    "author": [
-        "pali (pali#0439)"
-    ],
-    "short": "Various GitHub-related useful things. TODO better description.",
-    "description": "Various GitHub-related useful things. TODO better description.",
-    "requirements": [
-        "pygithub",
-        "requests"
-    ],
-    "tags": [
-	"git",
-	"github"
-    ]
+  "name": "GithubStuff",
+  "author": "Rosie",
+  "short": "Various GitHub-related useful things. TODO better description.",
+  "description": "Various GitHub-related useful things. TODO better description.",
+  "requirements": [
+    "pygithub",
+    "requests",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "tags": [
+    "git",
+    "github"
+  ]
 }

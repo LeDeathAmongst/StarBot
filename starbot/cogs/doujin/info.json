@@ -1,10 +1,17 @@
 {
-    "author" : ["Eslyium (Eslyium#1949)", "Yukirin (Yukirin#0048)"],
-    "install_msg" : "Thank you for installing my Doujin module. Type `[p]help Doujin` for more information.",
-    "name" : "Doujin",
-    "short" : "Post random doujin (NSFW)",
-    "description" : "Post random doujin (NSFW) from selected site",
-    "disabled" : false,
-    "tags" : ["nsfw", "doujin", "image"],
-    "min_bot_version": "3.5.0"
+  "author": "Rosie",
+  "install_msg": "Thank you for installing my Doujin module. Type `[p]help Doujin` for more information.",
+  "name": "Doujin",
+  "short": "Post random doujin (NSFW)",
+  "description": "Post random doujin (NSFW) from selected site",
+  "disabled": false,
+  "tags": [
+    "nsfw",
+    "doujin",
+    "image"
+  ],
+  "min_bot_version": "3.5.0",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

@@ -96,15 +96,6 @@ async def has_role(ctx: commands.Context) -> bool:
 class Plague(commands.Cog):
     """A plague game."""
 
-    __version__ = "1.0.8"
-    __author__ = humanize_list(["phenom4n4n", "ltzmax"])
-    __docs__ = "https://github.com/ltzmax/maxcogs/blob/master/docs/Plague.md"
-
-    def format_help_for_context(self, ctx):
-        pre_processed = super().format_help_for_context(ctx)
-        n = "\n" if "\n\n" not in pre_processed else ""
-        return f"{pre_processed}{n}\nCog Version: {self.__version__}"
-
     def __init__(self, bot):
         self.bot = bot
         self.config = Config.get_conf(self, identifier=2395486659, force_registration=True)
@@ -126,11 +117,6 @@ class Plague(commands.Cog):
 
     async def cog_unload(self):
         self.bot.tree.remove_command(self.ctx_menu.name, type=self.ctx_menu.type)
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """Thanks Sinbad!"""
-        pre = super().format_help_for_context(ctx)
-        return f"{pre}\n\nAuthor: {self.__author__}\nCog Version: {self.__version__}\nDocs: {self.__docs__}"
 
     async def red_delete_data_for_user(self, *, requester: str, user_id: int):
         await self.config.user_from_id(user_id).clear()

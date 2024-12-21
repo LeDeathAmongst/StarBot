@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: aaa3a-cogs\n"
+"Project-Id-Version: StarCogs\n"
 "POT-Creation-Date: 2024-07-20 22:15+0200\n"
 "PO-Revision-Date: 2024-07-21 15:13\n"
 "Last-Translator: \n"
@@ -10,10 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: redgettext 3.4.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
-"X-Crowdin-Project: aaa3a-cogs\n"
+"X-Crowdin-Project: StarCogs\n"
 "X-Crowdin-Project-ID: 531090\n"
 "X-Crowdin-Language: ro\n"
-"X-Crowdin-File: /[AAA3A-AAA3A.AAA3A-cogs] main/tickettool/locales/messages.pot\n"
+"X-Crowdin-File: /[LeDeathAmongst.StarCogs] main/tickettool/locales/messages.pot\n"
 "X-Crowdin-File-ID: 102\n"
 "Language: ro_RO\n"
 
@@ -23,8 +23,8 @@ msgid "This profile does not exist."
 msgstr "Acest profil nu există."
 
 #: tickettool\settings.py:27
-msgid "I have to be the author of the message. You can use EmbedUtils by AAA3A to send one."
-msgstr "Eu trebuie să fiu autorul mesajului. Puteți folosi EmbedUtils de AAA3A pentru a trimite unul."
+msgid "I have to be the author of the message. You can use EmbedUtils by Rosie to send one."
+msgstr "Eu trebuie să fiu autorul mesajului. Puteți folosi EmbedUtils de Rosie pentru a trimite unul."
 
 #: tickettool\settings.py:54
 #, docstring

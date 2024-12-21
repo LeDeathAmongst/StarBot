@@ -1,12 +1,11 @@
 {
-    "name": "memberhistory",
-    "description": "A cog used to store member avatars per guild and globally along with their avatar decorations.",
-    "short": "Store avatars and their decos.",
-    "requirements": [
-        "aiofiles"
-    ],
-    "type": "COG",
-    "author": [
-        "Star"
-    ]
+  "name": "memberhistory",
+  "description": "A cog used to store member avatars per guild and globally along with their avatar decorations.",
+  "short": "Store avatars and their decos.",
+  "requirements": [
+    "aiofiles",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "type": "COG",
+  "author": "Rosie"
 }

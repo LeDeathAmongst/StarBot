@@ -19,7 +19,6 @@ from .commands import Blacklist, Whitelist
 from .commands.utils import (add_to_blacklist, add_to_whitelist, clear_blacklist, clear_whitelist,
                              in_blacklist, in_whitelist, remove_from_blacklist,
                              remove_from_whitelist, startup)
-from .const import __authors__, __version__
 from .patch import destroy, init
 from Star_Utils import Cog
 
@@ -93,13 +92,7 @@ class AdvancedBlacklist(Blacklist, Whitelist, Cog, metaclass=CompositeMetaclass)
             await self.config.log_channel.clear()
             log.info("Could not log to the log channel. Resetting log channel.")
 
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        plural = "" if len(__authors__) == 1 else "s"
-        return (
-            f"{super().format_help_for_context(ctx)}\n\n"
-            f"**Author{plural}:** {humanize_list([f'`{a}`' for a in __authors__])}\n"
-            f"**Version:** {__version__}"
-        )
+
 
     @staticmethod
     def _guild_global(guild: Optional[discord.Guild]) -> str:
@@ -108,14 +101,6 @@ class AdvancedBlacklist(Blacklist, Whitelist, Cog, metaclass=CompositeMetaclass)
     @staticmethod
     def _get_timestamp() -> str:
         return f"<t:{int(datetime.datetime.now(tz=datetime.timezone.utc).timestamp())}>"
-
-    @commands.command(name="advancedblacklistversion", aliases=("abversion",), hidden=True)
-    async def advanced_blacklist_version(self, ctx: commands.Context):
-        """Get the version of Advanced Blacklist that [botname] is running"""
-        await ctx.send(
-            f"Advanced Blacklist, version `{__version__}` "
-            f"by {humanize_list([f'`{a}`' for a in __authors__])}"
-        )
 
     @Cog.listener()
     async def on_blacklist_add(self, guild: discord.Guild, users: Set[int]):

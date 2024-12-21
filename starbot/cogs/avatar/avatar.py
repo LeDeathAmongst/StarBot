@@ -1,5 +1,4 @@
 from Star_Utils import Co, CogsUtils
-__version__ = "1.0.0"
 import discord
 from typing import Optional, Union, Literal
 from starbot.core import app_commands, commands, Config

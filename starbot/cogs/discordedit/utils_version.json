@@ -1,1 +1,7 @@
-{"needed_utils_version": 6.6}
+{
+  "needed_utils_version": 6.6,
+  "author": "Rosie",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
+}

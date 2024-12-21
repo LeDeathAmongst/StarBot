@@ -1,5 +1,4 @@
 from Star_Utils import Cog, CogsUtils
-__version__ = "1.0.0"
 # Copyright 2018-present Jakub Kuczys (https://github.com/Jackenmen)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

@@ -31,9 +31,6 @@ class BankEvents(PaydayOverride, commands.Cog, metaclass=CompositeMetaClass):
     https://github.com/Cog-Creators/Red-DiscordBot/pull/5325
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "2.2.1"
-
     def __init__(self, bot: Red):
         super().__init__()
         self.bot: Red = bot
@@ -47,11 +44,6 @@ class BankEvents(PaydayOverride, commands.Cog, metaclass=CompositeMetaClass):
         self.is_global_coro = None
         # Original commands
         self.payday_callback = None
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}\nContributors: YamiKaitou".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
 
     async def red_delete_data_for_user(self, *args, **kwargs):
         return

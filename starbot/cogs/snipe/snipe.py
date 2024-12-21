@@ -155,8 +155,6 @@ class SnipedMessage:
 class Snipe(DashboardIntegration, Cog):
     """Bulk sniping deleted and edited messages, for moderation purpose!"""
 
-    __authors__: typing.List[str] = ["epic guy", "AAA3A"]
-
     def __init__(self, bot: Red) -> None:
         super().__init__(bot=bot)
 

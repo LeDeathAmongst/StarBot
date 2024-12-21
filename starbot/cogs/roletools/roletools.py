@@ -84,9 +84,6 @@ class RoleTools(
     Role related tools for moderation
     """
 
-    __author__ = ["TrustyJAID"]
-    __version__ = "1.5.14"
-
     def __init__(self, bot: Red):
         self.bot = bot
         self.config = Config.get_conf(self, identifier=218773382617890828, force_registration=True)
@@ -126,20 +123,6 @@ class RoleTools(
 
     def cog_check(self, ctx: commands.Context) -> bool:
         return self._ready.is_set()
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """
-        Thanks Sinbad!
-        """
-        pre_processed = super().format_help_for_context(ctx)
-        ret = f"{pre_processed}\n\n- Cog Version: {self.__version__}\n"
-        # we'll only have a repo if the cog was installed through Downloader at some point
-        if self._repo:
-            ret += f"- Repo: {self._repo}\n"
-        # we should have a commit if we have the repo but just incase
-        if self._commit:
-            ret += f"- Commit: [{self._commit[:9]}]({self._repo}/tree/{self._commit})"
-        return ret
 
     async def add_cog_to_dev_env(self):
         await self.bot.wait_until_red_ready()

@@ -13,13 +13,6 @@ class GuildLog(commands.Cog):
     Log when the bot joins or leaves a guild
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "0.1.3"
-
-    def format_help_for_context(self, ctx):
-        helpcmd = super().format_help_for_context(ctx)
-        return f"{helpcmd}\nCog Version: {self.__version__}\nAuthor: {self.__author__}"
-
     async def red_delete_data_for_user(self, *, requester, user_id: int):
         """No data to delete"""
 

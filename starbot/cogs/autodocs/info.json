@@ -1,7 +1,5 @@
 {
-  "author": [
-    "Vertyco"
-  ],
+  "author": "Rosie",
   "description": "Generate documentation for your cogs automatically",
   "disabled": false,
   "end_user_data_statement": "This cog does not store data about users.",
@@ -18,7 +16,8 @@
   "requirements": [
     "ujson",
     "msgpack",
-    "pandas"
+    "pandas",
+    "https://github.com/LeDeathAmongst/Star_Utils"
   ],
   "short": "EZ Cog Doc Generation",
   "tags": [

@@ -1,5 +1,4 @@
 from Star_Utils import Co, CogsUtils
-__version__ = "1.0.0"
 import discord
 import random
 from datetime import datetime

@@ -64,9 +64,6 @@ class Captcha(
 ):
     """Captcha cog."""
 
-    __author__: Final[List[str]] = ["inthedark.org"]
-    __version__: Final[str] = "0.1.0"
-
     def __init__(self, bot: Red) -> None:
         super().__init__()
 
@@ -97,16 +94,6 @@ class Captcha(
         self.font_data: str = os.path.join(self.data_path, "DroidSansMono.ttf")
 
         self.task: asyncio.Task = asyncio.create_task(self._initialize())
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed = super().format_help_for_context(ctx) or ""
-        n = "\n" if "\n\n" not in pre_processed else ""
-        text = [
-            f"{pre_processed}{n}",
-            f"Cog Version: **{self.__version__}**",
-            f"Author: **{self.__author__}**",
-        ]
-        return "\n".join(text)
 
     async def _initialize(self) -> None:
         await self.bot.wait_until_red_ready()

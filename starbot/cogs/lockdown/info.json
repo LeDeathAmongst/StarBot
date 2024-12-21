@@ -1,15 +1,16 @@
 {
-    "author": [
-        "Star"
-    ],
-    "install_msg": "[p]help Lockdown to see commands, as well as setup instructions.",
-    "name": "Lockdown",
-    "disabled": false,
-    "short": "Cog for locking down a server in the event of a raid",
-    "description": "Locks down a server using roles to affect users below the lockdown role",
-    "tags": [
-        "antiraid",
-        "utility",
-        "lockdown"
-    ]
+  "author": "Rosie",
+  "install_msg": "[p]help Lockdown to see commands, as well as setup instructions.",
+  "name": "Lockdown",
+  "disabled": false,
+  "short": "Cog for locking down a server in the event of a raid",
+  "description": "Locks down a server using roles to affect users below the lockdown role",
+  "tags": [
+    "antiraid",
+    "utility",
+    "lockdown"
+  ],
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

@@ -1,4 +1,3 @@
-__version__ = "1.0.0"
 import discord
 from starbot.core import commands, Config
 from datetime import datetime, timedelta

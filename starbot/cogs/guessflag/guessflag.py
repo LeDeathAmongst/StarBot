@@ -45,10 +45,6 @@ class GuessFlag(Cog):
     Win credits to your `[p]bank balance` if you guess the flag correctly and lose credits from your `[p]bank balance` if you guess it wrong.
     """
 
-    __version__ = "1.0.0"
-    __author__: Final[str] = "MAX"
-    __docs__: Final[str] = "https://github.com/ltzmax/maxcogs/blob/master/docs/GuessFlag.md"
-
     def __init__(self, bot):
         self.bot = bot
         self.flags = None

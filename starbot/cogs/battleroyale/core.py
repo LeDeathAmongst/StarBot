@@ -113,16 +113,6 @@ class BattleRoyale(Cog):
             with suppress(RuntimeError):
                 self.bot.add_dev_env_value(k, v)
 
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed: str = super().format_help_for_context(ctx) or ""
-        n: str = "\n" if "\n\n" not in pre_processed else ""
-        text: List[str] = [
-            f"{pre_processed}{n}",
-            f"Cog Version: **{self.__version__}**",
-            f"Author: **{self.__author__}**",
-        ]
-        return "\n".join(text)
-
     async def red_delete_data_for_user(self, **kwargs: Any) -> None:
         """Nothing to delete."""
         return

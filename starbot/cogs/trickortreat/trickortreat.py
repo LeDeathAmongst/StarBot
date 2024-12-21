@@ -1,5 +1,4 @@
 from Star_Utils import Cog, CogsUtils
-__version__ = "1.0.0"
 import asyncio
 import datetime
 from typing import Literal, Optional

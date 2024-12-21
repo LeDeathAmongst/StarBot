@@ -1,4 +1,4 @@
-﻿from AAA3A_utils import Cog, Settings, Menu  # isort:skip
+﻿from Star_Utils import Cog, Settings, Menu  # isort:skip
 from starbot.core import commands, Config  # isort:skip
 from starbot.core.i18n import Translator, cog_i18n  # isort:skip
 import discord  # isort:skip

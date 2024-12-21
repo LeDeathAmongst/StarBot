@@ -1,24 +1,23 @@
 {
-    "author": [
-        "Star"
-    ],
-    "install_msg": "Thank you for installing Emoji!",
-    "name": "Emoji",
-    "short": "Retrieve information about emojis.",
-    "description": "Retrieve information about emojis.",
-    "end_user_data_statement": "This cog does not store end user data.",
-    "hidden": false,
-    "disabled": false,
-    "min_bot_version": "3.5.0",
-    "min_python_version": [
-        3,
-        10,
-        0
-    ],
-    "requirements": [
-        "colorthief"
-    ],
-    "tags": [
-        "utility"
-    ]
+  "author": "Rosie",
+  "install_msg": "Thank you for installing Emoji!",
+  "name": "Emoji",
+  "short": "Retrieve information about emojis.",
+  "description": "Retrieve information about emojis.",
+  "end_user_data_statement": "This cog does not store end user data.",
+  "hidden": false,
+  "disabled": false,
+  "min_bot_version": "3.5.0",
+  "min_python_version": [
+    3,
+    10,
+    0
+  ],
+  "requirements": [
+    "colorthief",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "tags": [
+    "utility"
+  ]
 }

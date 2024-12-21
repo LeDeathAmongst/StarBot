@@ -96,7 +96,6 @@ class Session:
 class Webhook(Cog):
     """Various webhook commands to create and send messages along webhooks!"""
 
-    __authors__: typing.List[str] = ["PhenoM4n4n", "AAA3A"]
 
     def __init__(self, bot: Red) -> None:
         super().__init__(bot=bot)

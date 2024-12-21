@@ -1,5 +1,4 @@
 from Star_Utils import Cog, CogsUtils
-__version__ = "1.0.0"
 # Ported from https://github.com/hizkifw/discord-tictactoe
 # This cog is licensed under Apache-2.0, which is bundled with the cog file under LICENSE.
 

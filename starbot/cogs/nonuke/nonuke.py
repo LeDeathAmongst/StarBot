@@ -36,13 +36,6 @@ class NoNuke(Listen, commands.Cog, metaclass=CompositeMetaClass):
     - If the vanity URL is changed, it will be logged.
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "1.2.1"
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        return f"{helpcmd}\nCog Version: {self.__version__}\nAuthor: {self.__author__}"
-
     async def red_delete_data_for_user(self, *, requester, user_id: int):
         """No data to delete"""
 

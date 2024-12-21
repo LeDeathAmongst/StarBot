@@ -1,15 +1,16 @@
 {
-    "author": [
-        "Star"
-    ],
-    "install_msg": "Thank you for installing my cog, if you run into any issues or have any questions, you can find me in the Red servers or DM me @blizzthewolf. You are also free to open an issue on [my repository](https://git.purplepanda.cc/blizz/blizz-cogs).",
-    "name": "UselessFacts",
-    "disabled": false,
-    "short": "Grabs a useless fact from the uselessfacts api!",
-    "description": "Posts a useless fact from the uselessfacts api, in embed form.",
-    "tags": [
-        "fact"
-    ],
-    "min_bot_version": "3.5.0",
-    "hidden": false
+  "author": "Rosie",
+  "install_msg": "Thank you for installing my cog, if you run into any issues or have any questions, you can find me in the Red servers or DM me @blizzthewolf. You are also free to open an issue on [my repository](https://git.purplepanda.cc/blizz/blizz-cogs).",
+  "name": "UselessFacts",
+  "disabled": false,
+  "short": "Grabs a useless fact from the uselessfacts api!",
+  "description": "Posts a useless fact from the uselessfacts api, in embed form.",
+  "tags": [
+    "fact"
+  ],
+  "min_bot_version": "3.5.0",
+  "hidden": false,
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

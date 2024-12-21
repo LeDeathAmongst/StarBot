@@ -1,7 +1,5 @@
 {
-  "author": [
-    "Bobloy"
-  ],
+  "author": "Rosie",
   "min_bot_version": "3.4.0",
   "description": "[BETA] Schedule commands to be run at certain times or intervals",
   "hidden": false,
@@ -11,7 +9,8 @@
   "requirements": [
     "apscheduler",
     "pytz",
-    "python-dateutil"
+    "python-dateutil",
+    "https://github.com/LeDeathAmongst/Star_Utils"
   ],
   "tags": [
     "bobloy",

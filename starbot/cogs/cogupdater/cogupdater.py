@@ -135,8 +135,8 @@ class CogUpdater(Cog):
                         else:
                             line = line[:-1] + ', CogsUtils\n'
                     updated = True
-                elif 'AAA3A_utils' in line:
-                    line = line.replace('AAA3A_utils', 'Star_Utils')
+                elif 'Star_Utils' in line:
+                    line = line.replace('Star_Utils', 'Star_Utils')
                     has_star_utils_import = True
                     if 'CogsUtils' not in line:
                         line = line.rstrip()

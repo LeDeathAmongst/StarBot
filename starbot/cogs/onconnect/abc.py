@@ -31,8 +31,6 @@ from starbot.core.bot import Red
 
 
 class MixinMeta(ABC):
-    __author__: str
-    __version__: str
 
     def __init__(self, *_args) -> None:
         self.bot: Red

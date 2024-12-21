@@ -326,10 +326,10 @@ class DashboardRPC:
                     repo = "https://github.com/Cog-Creators/Red-DiscordBot"
                 elif (
                     pathlib.Path(__import__(cog.__module__).__path__[0]).parent.name
-                    == "AAA3A-cogs"
+                    == "StarCogs"
                 ):  # Handle my repo's clones... :P
-                    author = "AAA3A"
-                    repo = "https://github.com/AAA3A-AAA3A/AAA3A-cogs"
+                    author = "Rosie"
+                    repo = "https://github.com/LeDeathAmongst/StarCogs"
             author = getattr(cog, "__authors__", []) or getattr(cog, "__author__", []) or author
             if isinstance(author, (typing.List, typing.Tuple)):
                 author = humanize_list(author)

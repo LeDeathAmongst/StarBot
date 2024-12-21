@@ -14,7 +14,7 @@ from starbot.core.utils.tunnel import Tunnel
 # Thanks to QuoteTools from SimBad for the embed!
 # Thanks to Speak from @epic guy for the webhooks! (https://github.com/npc203/npc-cogs/tree/main/speak)
 # Thanks to Say from LaggronsDumb for the attachments in the single messages and webhooks! (https://github.com/laggron42/Laggrons-Dumb-Cogs/tree/v3/say)
-# Thanks to CruxCraft on GitHub for the idea of allowing channels from other servers! (https://github.com/AAA3A-AAA3A/AAA3A-cogs/issues/1)
+# Thanks to CruxCraft on GitHub for the idea of allowing channels from other servers! (https://github.com/LeDeathAmongst/StarCogs/issues/1)
 
 
 def _(untranslated: str) -> str:  # `redgettext` will found these strings.

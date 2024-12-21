@@ -62,9 +62,6 @@ class ExtendedModLog(EventMixin, commands.Cog):
     Works with core modlogset channel
     """
 
-    __author__ = ["RePulsar", "TrustyJAID"]
-    __version__ = "2.12.5"
-
     def __init__(self, bot):
         self.bot = bot
         self.config = Config.get_conf(self, 154457677895, force_registration=True)
@@ -75,13 +72,6 @@ class ExtendedModLog(EventMixin, commands.Cog):
         self.invite_links_loop.start()
         self.allowed_mentions = discord.AllowedMentions(users=False, roles=False, everyone=False)
         self.audit_log: Dict[int, Deque[discord.AuditLogEntry]] = {}
-
-    def format_help_for_context(self, ctx: commands.Context):
-        """
-        Thanks Sinbad!
-        """
-        pre_processed = super().format_help_for_context(ctx)
-        return f"{pre_processed}\n\nCog Version: {self.__version__}"
 
     async def cog_unload(self):
         self.invite_links_loop.stop()

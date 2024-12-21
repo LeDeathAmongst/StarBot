@@ -56,9 +56,6 @@ class ThreadOpener(
     A cog to open continuous threads to messages in a channel.
     """
 
-    __author__: Final[List[str]] = ["inthedark.org"]
-    __version__: Final[str] = "0.1.0"
-
     def __init__(self, bot: Red) -> None:
         super().__init__()
         self.bot: Red = bot
@@ -127,16 +124,6 @@ class ThreadOpener(
             return False
         _roles: List[int] = [role.id for role in list(member.roles)]
         return any(role in roles for role in _roles) or any(user == member.id for user in users)
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed: str = super().format_help_for_context(ctx)
-        n: str = "\n" if "\n\n" not in pre_processed else ""
-        text: List[str] = [
-            f"{pre_processed}{n}",
-            f"Author: **{humanize_list(self.__author__)}**",
-            f"Cog Version: **{self.__version__}**",
-        ]
-        return "\n".join(text)
 
     async def cog_load(self) -> None:
         self.bot.add_view(self.view)

@@ -18,7 +18,6 @@ from starbot.core.utils.chat_formatting import (
 from starbot.core.utils.menus import DEFAULT_CONTROLS, menu
 from starbot.core.utils.predicates import MessagePredicate
 
-__version__ = "3.4.12"
 log = logging.getLogger("red.vrt.hunting")
 
 

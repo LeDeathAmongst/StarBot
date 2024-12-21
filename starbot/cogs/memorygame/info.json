@@ -1,19 +1,18 @@
 {
-    "author": [
-        "Star"
-    ],
-    "name": "MemoryGame",
-    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. If you enjoy my work, please consider donating on [Buy Me a Coffee](<https://www.buymeacoffee.com/aaa3a>) or [Ko-Fi](<https://ko-fi.com/aaa3a>)!",
-    "short": "Play to Memory game, with buttons, leaderboard and Red bank!",
-    "description": "Play to Memory game, with buttons, leaderboard and Red bank!",
-    "tags": [
-        "memory",
-        "game"
-    ],
-    "requirements": [
-        "git+https://github.com/AAA3A-AAA3A/AAA3A_utils.git",
-        "prettytable"
-    ],
-    "min_bot_version": "3.5.0",
-    "end_user_data_statement": "This cog saves levels and XP of users."
+  "author": "Rosie",
+  "name": "MemoryGame",
+  "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. If you enjoy my work, please consider donating on [Buy Me a Coffee](<https://www.buymeacoffee.com/Rosie>) or [Ko-Fi](<https://ko-fi.com/Rosie>)!",
+  "short": "Play to Memory game, with buttons, leaderboard and Red bank!",
+  "description": "Play to Memory game, with buttons, leaderboard and Red bank!",
+  "tags": [
+    "memory",
+    "game"
+  ],
+  "requirements": [
+    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
+    "prettytable",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "min_bot_version": "3.5.0",
+  "end_user_data_statement": "This cog saves levels and XP of users."
 }

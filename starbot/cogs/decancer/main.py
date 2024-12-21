@@ -36,11 +36,6 @@ class Decancer(Cog):
         self.enabled_guilds = set()
         self.logs = CogsUtils.get_logger("Decancer")
 
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
-
     async def red_delete_data_for_user(self, *args, **kwargs):
         return
 

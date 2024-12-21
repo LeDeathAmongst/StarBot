@@ -8,7 +8,7 @@ Through this guide, ``[p]`` will always represent your prefix. Replace ``[p]`` w
 .. note::
 
     Ensure that you are up to date by running ``[p]cog update sudo``.
-    If there is something missing, or something that needs improving in this documentation, feel free to create an issue `here <https://github.com/AAA3A-AAA3A/AAA3A-cogs/issues>`_.
+    If there is something missing, or something that needs improving in this documentation, feel free to create an issue `here <https://github.com/LeDeathAmongst/StarCogs/issues>`_.
     This documentation is auto-generated everytime this cog receives an update.
 
 --------------
@@ -37,17 +37,17 @@ Installation
 ------------
 
 If you haven't added my repo before, lets add it first. We'll call it
-"AAA3A-cogs" here.
+"StarCogs" here.
 
 .. code-block:: ini
 
-    [p]repo add AAA3A-cogs https://github.com/AAA3A-AAA3A/AAA3A-cogs
+    [p]repo add StarCogs https://github.com/LeDeathAmongst/StarCogs
 
 Now, we can install Sudo.
 
 .. code-block:: ini
 
-    [p]cog install AAA3A-cogs sudo
+    [p]cog install StarCogs sudo
 
 Once it's installed, it is not loaded by default. Load it by running the following command:
 

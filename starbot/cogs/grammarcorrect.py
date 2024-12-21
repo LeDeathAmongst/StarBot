@@ -1,5 +1,4 @@
 from Star_Utils import Co, CogsUtils
-__version__ = "1.0.0"
 import discord
 from starbot.core import commands, Config
 from better_profanity import profanity

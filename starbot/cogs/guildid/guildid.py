@@ -1,4 +1,3 @@
-__version__ = "1.0.0"
 import discord
 from discord import Embed
 from datetime import datetime

@@ -1,4 +1,4 @@
-﻿from AAA3A_utils import Cog, CogsUtils, Menu  # isort:skip
+﻿from Star_Utils import Cog, CogsUtils, Menu  # isort:skip
 from starbot.core import commands, Config  # isort:skip
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.i18n import Translator, cog_i18n  # isort:skip
@@ -28,7 +28,7 @@ class MyMessageConverter(commands.MessageConverter):
         if message.author != ctx.me:
             raise commands.UserFeedbackCheckFailure(
                 _(
-                    "I have to be the author of the message. You can use EmbedUtils by AAA3A to send one."
+                    "I have to be the author of the message. You can use EmbedUtils by Rosie to send one."
                 )
             )
         return message

@@ -25,14 +25,6 @@ class GuessTheNumber(Cog):
     def __init__(self, bot: Red) -> None:
         self.bot = bot
 
-        
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """
-        Thanks Sinbad!
-        """
-        pre_processed = super().format_help_for_context(ctx)
-        return f"{pre_processed}\n\nAuthors: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
-
     async def get_values(
         self, ctx: commands.Context, user: discord.User
     ) -> Optional[List[str]]:

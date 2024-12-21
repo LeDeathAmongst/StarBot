@@ -27,11 +27,6 @@ class TierLists(Commands, Cog, metaclass=CompositeMetaClass):
         self.db: DB = DB()
         self.saving = False
 
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
-
     async def cog_load(self) -> None:
         asyncio.create_task(self.initialize())
 

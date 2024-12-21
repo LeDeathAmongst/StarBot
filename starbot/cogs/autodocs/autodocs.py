@@ -28,14 +28,6 @@ class AutoDocs(commands.Cog):
     Easily create documentation for any cog in Markdown format.
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "1.1.1"
-
-    def format_help_for_context(self, ctx):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = _("{}\nCog Version: {}\nAuthor: {}").format(helpcmd, self.__version__, self.__author__)
-        return txt
-
     async def red_delete_data_for_user(self, *, requester, user_id: int):
         """No data to delete"""
 

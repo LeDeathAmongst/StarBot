@@ -47,8 +47,6 @@ class Sudo(Cog):
     ⚠️ This cog makes bot owners unable to be perceived as bot owners in commands while the cog is loaded unless the `[p]su` command is used.
     """
 
-    __authors__: typing.List[str] = ["AAA3A", "Draper", "jack1142 (Jackenmen#6607)"]
-
     async def cog_load(self) -> None:
         await super().cog_load()
         self.all_owner_ids = copy(self.bot.owner_ids)

@@ -1,12 +1,22 @@
 {
-    "author": ["Karlo"],
-    "description": "Automatically play music that a guild member is listening to on Spotify.\nThis cog REQUIRES a fully set up PyLav and will not work without it.",
-    "short": "Automatically play music that a guild member is listening to on Spotify.",
-    "tags": ["music", "spotify"],
-    "min_python_version": [3, 11, 0],
-    "requirements": ["Py-Lav>=1.10.10"],
-    "min_bot_version": "3.5.0.dev306",
-    "max_bot_version": "3.5.99",
-    "type": "COG",
-    "end_user_data_statement": "This cog does not persistently store data or metadata about users."
+  "author": "Rosie",
+  "description": "Automatically play music that a guild member is listening to on Spotify.\nThis cog REQUIRES a fully set up PyLav and will not work without it.",
+  "short": "Automatically play music that a guild member is listening to on Spotify.",
+  "tags": [
+    "music",
+    "spotify"
+  ],
+  "min_python_version": [
+    3,
+    11,
+    0
+  ],
+  "requirements": [
+    "Py-Lav>=1.10.10",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "min_bot_version": "3.5.0.dev306",
+  "max_bot_version": "3.5.99",
+  "type": "COG",
+  "end_user_data_statement": "This cog does not persistently store data or metadata about users."
 }

@@ -75,9 +75,6 @@ class DisboardReminder(commands.Cog):
     Set a reminder to bump on Disboard.
     """
 
-    __version__: Final[str] = "1.3.7"
-    __author__: Final[List[str]] = ["inthedark.org", "Phenom4n4n"]
-
     def __init__(self, bot: Red) -> None:
         self.bot: Red = bot
         self.config: Config = Config.get_conf(

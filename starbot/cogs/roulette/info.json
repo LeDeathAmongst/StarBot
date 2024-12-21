@@ -1,6 +1,9 @@
 {
-  "author" : ["Eris"],
-  "description" : "Roulette between 2 or more channels!",
-  "name" : "Roulette",
-  "ready": true
+  "author": "Rosie",
+  "description": "Roulette between 2 or more channels!",
+  "name": "Roulette",
+  "ready": true,
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

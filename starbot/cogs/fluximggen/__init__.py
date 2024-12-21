@@ -24,9 +24,9 @@ SOFTWARE.
 
 from starbot.core.bot import Red
 
-from .core import FluxImgGen
+from .core import fluximggen
 
 
 async def setup(bot: Red) -> None:
-    cog = FluxImgGen(bot)
+    cog = fluximggen(bot)
     await bot.add_cog(cog)

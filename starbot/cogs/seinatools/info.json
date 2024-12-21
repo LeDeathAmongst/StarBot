@@ -1,22 +1,21 @@
 {
-    "author": [
-        "Star"
-    ],
-    "install_msg": "Thanks for installing the tools cog.",
-    "name": "SeinaTools",
-    "disabled": false,
-    "short": "A simple tools cog for the bot owners.",
-    "description": "Some cool tools for the bot owners.",
-    "tags": [
-        "utility",
-        "tools"
-    ],
-    "required_cogs": {},
-    "requirements": [
-        "tabulate",
-        "emoji",
-        "playwright==1.30.0"
-    ],
-    "type": "COG",
-    "end_user_data_statement": "This cog does not store End User Data."
+  "author": "Rosie",
+  "install_msg": "Thanks for installing the tools cog.",
+  "name": "SeinaTools",
+  "disabled": false,
+  "short": "A simple tools cog for the bot owners.",
+  "description": "Some cool tools for the bot owners.",
+  "tags": [
+    "utility",
+    "tools"
+  ],
+  "required_cogs": {},
+  "requirements": [
+    "tabulate",
+    "emoji",
+    "playwright==1.30.0",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "type": "COG",
+  "end_user_data_statement": "This cog does not store End User Data."
 }

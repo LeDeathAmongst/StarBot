@@ -359,23 +359,6 @@ cog at this point.
         else:
             await (channel or ctx).send(message, view=_view.value())
 
-    @commands.command(hidden=True)
-    @checks.is_owner()
-    async def instantcmdinfo(self, ctx: commands.Context):
-        """
-        Get informations about the cog.
-        """
-        await ctx.send(
-            (
-                "Laggron's Dumb Cogs V3 - instantcmd\n\n"
-                "Version: {0.__version__}\n"
-                "Author: {0.__author__}\n"
-                "Github repository: https://github.com/retke/Laggrons-Dumb-Cogs/\n"
-                "Documentation: http://laggrons-dumb-cogs.readthedocs.io/\n\n"
-                "Support my work on Patreon: https://www.patreon.com/retke"
-            ).format(self)
-        )
-
     async def cog_unload(self):
         log.debug("Unloading cog...")
         # removes commands and listeners

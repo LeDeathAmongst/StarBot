@@ -1,17 +1,18 @@
 {
-    "author": [
-        "blizzardthewolf"
-    ],
-    "install_msg": "Thank you for installing my cog, if you run into any issues or have any questions, you can find me in the Red servers or DM me @blizzthewolf. You are also free to open an issue on [my repository](https://git.purplepanda.cc/blizz/blizz-cogs) Just load the cog to enable it.",
-    "name": "Repeater",
-    "disabled": false,
-    "short": "Repeats a word after it's been said 3 times in a row.",
-    "description": "Repeats a word after it's been said for 3 times in a row in a chain.",
-    "tags": [
-        "chain",
-        "repeater",
-        "repeat"
-    ],
-    "min_bot_version": "3.5.0",
-    "hidden": false
+  "author": "Rosie",
+  "install_msg": "Thank you for installing my cog, if you run into any issues or have any questions, you can find me in the Red servers or DM me @blizzthewolf. You are also free to open an issue on [my repository](https://git.purplepanda.cc/blizz/blizz-cogs) Just load the cog to enable it.",
+  "name": "Repeater",
+  "disabled": false,
+  "short": "Repeats a word after it's been said 3 times in a row.",
+  "description": "Repeats a word after it's been said for 3 times in a row in a chain.",
+  "tags": [
+    "chain",
+    "repeater",
+    "repeat"
+  ],
+  "min_bot_version": "3.5.0",
+  "hidden": false,
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

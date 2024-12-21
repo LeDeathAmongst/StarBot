@@ -1,19 +1,18 @@
 {
-    "name": "Auto-Ban",
-    "author": [
-        "Star"
-    ],
-    "description": "Configurable list of spam words to zap. Users with any roles are ignored.",
-    "short": "Configurable list of spam words to zap.",
-    "tags": [
-        "spam",
-        "passive",
-        "ban",
-        "autoban",
-        "utilities"
-    ],
-    "install_msg": "Thank you for installing the auto-ban cog. Add items for each server with `[p]autoban term` and remove with `[p]autoban remove term`",
-    "requirements": [
-        "git+https://github.com/LeDeathAmongst/Star_Utils.git"
-    ]
+  "name": "Auto-Ban",
+  "author": "Rosie",
+  "description": "Configurable list of spam words to zap. Users with any roles are ignored.",
+  "short": "Configurable list of spam words to zap.",
+  "tags": [
+    "spam",
+    "passive",
+    "ban",
+    "autoban",
+    "utilities"
+  ],
+  "install_msg": "Thank you for installing the auto-ban cog. Add items for each server with `[p]autoban term` and remove with `[p]autoban remove term`",
+  "requirements": [
+    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

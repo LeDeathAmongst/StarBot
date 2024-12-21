@@ -37,7 +37,7 @@ class DiffusionError(discord.errors.DiscordException):
     pass
 
 
-class FluxImgGen(Cog):
+class fluximggen(Cog):
     def __init__(self, bot: Red) -> None:
         self.bot: Red = bot
         self.session: aiohttp.ClientSession = aiohttp.ClientSession()
@@ -57,16 +57,6 @@ class FluxImgGen(Cog):
             self.tokens = await self.bot.get_shared_api_tokens("flux")
             if not self.tokens.get("model") or not self.tokens.get("size") or not self.tokens.get("endpoint"):
                 raise DiffusionError("Setup not done. Use `set api flux model <default_model>`, `set api flux size <default_size>`, and `set api endpoint <baseUrl for api>`.")
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed = super().format_help_for_context(ctx) or ""
-        n = "\n" if "\n\n" not in pre_processed else ""
-        text = [
-            f"{pre_processed}{n}",
-            f"Cog Version: **{self.__version__}**",
-            f"Author: **{self.__author__}**",
-        ]
-        return "\n".join(text)
 
     async def cog_load(self) -> None:
         await self.initialize_tokens()

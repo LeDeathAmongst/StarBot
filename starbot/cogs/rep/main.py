@@ -65,16 +65,6 @@ class RepManager(Cog):
 
         self._task.cancel()
 
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed = super().format_help_for_context(ctx) or ""
-        n = "\n" if "\n\n" not in pre_processed else ""
-        text = [
-            f"{pre_processed}{n}",
-            f"Cog Version: **{self.__version__}**",
-            f"Author: {cf.humanize_list(self.__author__)}",
-        ]
-        return "\n".join(text)
-
     async def send_logging_embed(
         self,
         ctx: commands.Context,

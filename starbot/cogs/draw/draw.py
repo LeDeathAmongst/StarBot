@@ -39,7 +39,7 @@ _: Translator = Translator("Draw", __file__)
 class Draw(Cog):
     """A cog to make pixel arts on Discord!"""
 
-    __authors__: typing.List[str] = ["WitherredAway", "AAA3A"]
+    
 
     def __init__(self, bot: Red) -> None:
         super().__init__(bot=bot)

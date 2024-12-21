@@ -290,16 +290,3 @@ class Commands(MixinMeta):
             )
             await self.maybe_reply(ctx=ctx, message=message)
 
-    @_connectset.command(name="version")
-    async def _version(self, ctx: commands.Context) -> None:
-        """Shows the cog version."""
-        message = f"Author: {self.__author__}\nVersion: {self.__version__}"
-        if await ctx.embed_requested():
-            embed = discord.Embed(
-                title="Cog Version:",
-                description=message,
-                colour=await ctx.embed_colour(),
-            )
-            await self.maybe_reply(ctx=ctx, embed=embed)
-        else:
-            await self.maybe_reply(ctx=ctx, message=f"**Cog Version:**\n{message}")

@@ -6,7 +6,7 @@ try:
     import Star_Utils
 except ModuleNotFoundError:
     raise errors.CogLoadError(
-        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/AAA3A-AAA3A/Star_Utils.git`. A restart of the bot isn't necessary."
+        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star_Utils.git`. A restart of the bot isn't necessary."
     )
 modules = sorted(
     [module for module in sys.modules if module.split(".")[0] == "Star_Utils"], reverse=True
@@ -25,11 +25,11 @@ del Star_Utils
 # needed_utils_version = data["needed_utils_version"]
 # if __version__ > needed_utils_version:
 #     raise errors.CogLoadError(
-#         "The needed utils to run the cog has a higher version than the one supported by this version of the cog. Please update the cogs of the `AAA3A-cogs` repo."
+#         "The needed utils to run the cog has a higher version than the one supported by this version of the cog. Please update the cogs of the `StarCogs` repo."
 #     )
 # elif __version__ < needed_utils_version:
 #     raise errors.CogLoadError(
-#         "The needed utils to run the cog has a lower version than the one supported by this version of the cog. Please execute the command `[p]pipinstall --upgrade git+https://github.com/AAA3A-AAA3A/Star_Utils.git`. A restart of the bot isn't necessary."
+#         "The needed utils to run the cog has a lower version than the one supported by this version of the cog. Please execute the command `[p]pipinstall --upgrade git+https://github.com/LeDeathAmongst/Star_Utils.git`. A restart of the bot isn't necessary."
 #     )
 
 from starbot.core.bot import Red  # isort:skip

@@ -1,4 +1,3 @@
-__version__ = "1.0.0"
 from Star_Utils import Cog, Loop, CogsUtils, Menu, Settings  # isort:skip
 from starbot.core import commands, app_commands, Config  # isort:skip
 from starbot.core.bot import Red  # isort:skip

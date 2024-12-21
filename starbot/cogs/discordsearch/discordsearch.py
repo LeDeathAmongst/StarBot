@@ -58,7 +58,7 @@ class DiscordSearch(Cog):
         `--before now`
         `--after "25/12/2000 00h00"`
         `--pinned true`
-        `--content "AAA3A-cogs"`
+        `--content "StarCogs"`
         `--regex "\\[p\\]"`
         `--contain link --contain embed --contain file`
         `--limit 100` (It's the limit of the number of messages taken into account in the search, not the number of results.)

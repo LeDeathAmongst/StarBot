@@ -17,8 +17,6 @@ from pyparsing import (
     quotedString,
 )
 
-__author__ = "PhasecoreX"
-
 
 class Template:
     """A simple template engine, safe for untrusted user templates."""

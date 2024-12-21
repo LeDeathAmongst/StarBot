@@ -52,8 +52,7 @@ class Connect4(Cog):
     }
 
     
-    __authors__ = ["Benjamin Mintz", "flare", "PhenoM4n4n"]
-
+    
     def __init__(self, bot):
         self.bot = bot
         defaults = {"stats": {"played": 0, "ties": 0, "wins": {}, "losses": {}, "draws": {}}}

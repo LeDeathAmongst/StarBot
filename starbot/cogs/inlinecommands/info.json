@@ -1,14 +1,15 @@
 {
-    "name": "InlineCommands",
-    "author": [
-        "Star"
-    ],
-    "short": "Lets people use commands in-line in messages using [command].",
-    "description": "Lets people use commands in-line in messages by putting them in square brackets.",
-    "install_msg": "Users can now put commands in square brackets in messages to use them in-line.",
-    "tags": [
-        "qol",
-        "commands"
-    ],
-    "end_user_data_statement": "This cog doesn't store anything at all."
+  "name": "InlineCommands",
+  "author": "Rosie",
+  "short": "Lets people use commands in-line in messages using [command].",
+  "description": "Lets people use commands in-line in messages by putting them in square brackets.",
+  "install_msg": "Users can now put commands in square brackets in messages to use them in-line.",
+  "tags": [
+    "qol",
+    "commands"
+  ],
+  "end_user_data_statement": "This cog doesn't store anything at all.",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

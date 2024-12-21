@@ -24,10 +24,10 @@ del Star_Utils
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.utils import get_end_user_data_statement
 
-from .brainfuck_cog import BrainfuckCog  # Import your cog
+from .brainfuck_cog import brainfuck  # Import your cog
 
 __red_end_user_data_statement__ = get_end_user_data_statement(file=__file__)
 
 async def setup(bot: Red) -> None:
-    cog = BrainfuckCog(bot)
+    cog = brainfuck(bot)
     await bot.add_cog(cog)

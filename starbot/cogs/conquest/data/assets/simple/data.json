@@ -1,4 +1,8 @@
 {
   "region_max": 70,
-  "extension": "jpg"
+  "extension": "jpg",
+  "author": "Rosie",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

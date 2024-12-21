@@ -22,7 +22,7 @@ class MyMessageConverter(commands.MessageConverter):
         if message.author != ctx.me:
             raise commands.UserFeedbackCheckFailure(
                 _(
-                    "I have to be the author of the message. You can use EmbedUtils by AAA3A to send one."
+                    "I have to be the author of the message. You can use EmbedUtils by Rosie to send one."
                 )
             )
         return message

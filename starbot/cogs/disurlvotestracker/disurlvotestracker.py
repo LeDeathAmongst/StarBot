@@ -1,5 +1,5 @@
-from AAA3A_utils import Cog, Loop, Menu, Settings  # isort:skip
-from AAA3A_utils.settings import CustomMessageConverter  # isort:skip
+from Star_Utils import Cog, Loop, Menu, Settings  # isort:skip
+from Star_Utils.settings import CustomMessageConverter  # isort:skip
 from starbot.core import commands, Config  # isort:skip
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.i18n import Translator, cog_i18n  # isort:skip

@@ -1,20 +1,19 @@
 {
-    "author": [
-        "Star"
-    ],
-    "name": "ReactToCommand",
-    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. If you enjoy my work, please consider donating on [Buy Me a Coffee](<https://www.buymeacoffee.com/aaa3a>) or [Ko-Fi](<https://ko-fi.com/aaa3a>)!\nThis cog will interact with other cogs which can cause unintended problems. It can cause random errors from cogs due to the mock objects passed to them when executing commands.\nUse CommandsButtons instead for buttons.",
-    "short": "A cog to allow a user to execute a command by clicking on a reaction!",
-    "description": "Have you ever wanted to allow a user to execute a command by clicking on a reaction? Then this cog is for you!",
-    "tags": [
-        "react",
-        "reaction",
-        "command"
-    ],
-    "requirements": [
-        "git+https://github.com/AAA3A-AAA3A/AAA3A_utils.git",
-        "emoji"
-    ],
-    "min_bot_version": "3.5.0",
-    "end_user_data_statement": "This cog does not persistently store data or metadata about users."
+  "author": "Rosie",
+  "name": "ReactToCommand",
+  "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. If you enjoy my work, please consider donating on [Buy Me a Coffee](<https://www.buymeacoffee.com/Rosie>) or [Ko-Fi](<https://ko-fi.com/Rosie>)!\nThis cog will interact with other cogs which can cause unintended problems. It can cause random errors from cogs due to the mock objects passed to them when executing commands.\nUse CommandsButtons instead for buttons.",
+  "short": "A cog to allow a user to execute a command by clicking on a reaction!",
+  "description": "Have you ever wanted to allow a user to execute a command by clicking on a reaction? Then this cog is for you!",
+  "tags": [
+    "react",
+    "reaction",
+    "command"
+  ],
+  "requirements": [
+    "git+https://github.com/LeDeathAmongst/Star_Utils.git",
+    "emoji",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "min_bot_version": "3.5.0",
+  "end_user_data_statement": "This cog does not persistently store data or metadata about users."
 }

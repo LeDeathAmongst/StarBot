@@ -1,19 +1,19 @@
 {
-    "author": [
-        "Star"
-    ],
-    "install_msg": "Thanks for installing AdminToggle! For info on this cog, use `,help CogName`! \\nIf you want to help translate, go to my [crowdin](https://crowdin.com/project/Star-Cogs)\\nIf you like my work, [donate me!](https://ko-fi.com/starcogs) \\n\\nToggle admin on/off (used to hide channels etc) by automatically adding/removing a configured role!",
-    "short": "Toggle on/off admin permissions!",
-    "description": "Do you need to hide channels from admins for game purposes? This cog allows an admin to toggle off his admin permissions and toggle it back on.",
-    "requirements": [],
-    "min_bot_version": "3.5.0",
-    "tags": [
-        "admin",
-        "toggle",
-        "game"
-    ],
-    "type": "COG",
-    "name": "Admintoggle",
-    "end_user_data_statement": "",
-    "hidden": false
+  "author": "Rosie",
+  "install_msg": "Thanks for installing AdminToggle! For info on this cog, use `,help CogName`! \\nIf you want to help translate, go to my [crowdin](https://crowdin.com/project/Star-Cogs)\\nIf you like my work, [donate me!](https://ko-fi.com/starcogs) \\n\\nToggle admin on/off (used to hide channels etc) by automatically adding/removing a configured role!",
+  "short": "Toggle on/off admin permissions!",
+  "description": "Do you need to hide channels from admins for game purposes? This cog allows an admin to toggle off his admin permissions and toggle it back on.",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "min_bot_version": "3.5.0",
+  "tags": [
+    "admin",
+    "toggle",
+    "game"
+  ],
+  "type": "COG",
+  "name": "Admintoggle",
+  "end_user_data_statement": "",
+  "hidden": false
 }

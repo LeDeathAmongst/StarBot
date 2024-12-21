@@ -1,7 +1,5 @@
 {
-  "author": [
-    "Vertyco"
-  ],
+  "author": "Rosie",
   "description": "Host and manage events in your server with a variety of customizable entry options",
   "disabled": false,
   "end_user_data_statement": "This cog does not persistently store data about users.",
@@ -20,7 +18,8 @@
   "requirements": [
     "ujson",
     "msgpack",
-    "aiocache"
+    "aiocache",
+    "https://github.com/LeDeathAmongst/Star_Utils"
   ],
   "short": "Host and manage events in your server",
   "tags": [

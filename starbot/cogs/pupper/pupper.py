@@ -17,19 +17,6 @@ log = logging.getLogger("red.vrt.pupper")
 class Pupper(commands.Cog):
     """Pet the doggo!"""
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "1.1.0"
-
-    def format_help_for_context(self, ctx):
-        helpcmd = super().format_help_for_context(ctx)
-        info = (
-            f"{helpcmd}\n"
-            f"Cog Version: {self.__version__}\n"
-            f"Original Author: aikaterna#1393\n"
-            f"Maintainer: {self.__author__}"
-        )
-        return info
-
     async def red_delete_data_for_user(self, **kwargs):
         """Nothing to delete"""
         return

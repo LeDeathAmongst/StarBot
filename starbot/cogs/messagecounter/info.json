@@ -1,9 +1,10 @@
 {
-    "name": "MessageCounter",
-    "author": [
-        "Star"
-    ],
-    "short": "",
-    "description": "",
-    "tags": []
+  "name": "MessageCounter",
+  "author": "Rosie",
+  "short": "",
+  "description": "",
+  "tags": [],
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

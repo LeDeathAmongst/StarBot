@@ -64,10 +64,6 @@ class GitHub(commands.Cog):
     Customizable system for GitHub commit updates similar to the webhook.
     """
 
-    __version__: Final[str] = "1.0.1"
-    __author__: Final[List[str]] = ["MAX", "Obi-Wan3"]
-    __docs__: Final[str] = "https://github.com/ltzmax/maxcogs/blob/master/docs/GitHub.md"
-
     def __init__(self, bot):
         self.bot = bot
         self.config = Config.get_conf(self, 14000605, force_registration=True)
@@ -89,11 +85,6 @@ class GitHub(commands.Cog):
         self.config.register_member(**default_member)
 
         self._github_rss.start()
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """Thanks Sinbad!"""
-        pre_processed = super().format_help_for_context(ctx)
-        return f"{pre_processed}\n\nAuthor: {self.__author__}\nCog Version: {self.__version__}\nDocs: {self.__docs__}"
 
     def cog_unload(self):
         self._github_rss.cancel()

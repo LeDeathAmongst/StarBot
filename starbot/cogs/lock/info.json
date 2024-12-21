@@ -1,23 +1,22 @@
 {
-    "name": "Lock",
-    "short": "Lock channels",
-    "description": "Lock channels or the whole server",
-    "end_user_data_statement": "This cog does not persistently store any data or metadata about users.",
-    "install_msg": "Thanks for installing Lock!",
-    "author": [
-        "Star"
-    ],
-    "required_cogs": {},
-    "requirements": [
-        "unidecode",
-        "rapidfuzz"
-    ],
-    "tags": [
-        "utility",
-        "server"
-    ],
-    "min_bot_version": "3.5.0",
-    "hidden": false,
-    "disabled": false,
-    "type": "COG"
+  "name": "Lock",
+  "short": "Lock channels",
+  "description": "Lock channels or the whole server",
+  "end_user_data_statement": "This cog does not persistently store any data or metadata about users.",
+  "install_msg": "Thanks for installing Lock!",
+  "author": "Rosie",
+  "required_cogs": {},
+  "requirements": [
+    "unidecode",
+    "rapidfuzz",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "tags": [
+    "utility",
+    "server"
+  ],
+  "min_bot_version": "3.5.0",
+  "hidden": false,
+  "disabled": false,
+  "type": "COG"
 }

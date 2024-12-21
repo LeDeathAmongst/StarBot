@@ -1,10 +1,11 @@
 {
-    "author": [
-        "Star"
-    ],
-    "description": "Information on bot server",
-    "name": "Host Info",
-    "short": "Host Info",
-    "hidden": false,
-    "ready": true
+  "author": "Rosie",
+  "description": "Information on bot server",
+  "name": "Host Info",
+  "short": "Host Info",
+  "hidden": false,
+  "ready": true,
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

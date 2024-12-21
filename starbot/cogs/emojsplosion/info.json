@@ -1,7 +1,10 @@
 {
-    "author" : ["Eris"],
-    "description" : "EMOJSPLOSION",
-    "name" : "EMOJSPLOSION",
-    "short": "EMOJSPLOSION",
-    "ready": true
+  "author": "Rosie",
+  "description": "EMOJSPLOSION",
+  "name": "EMOJSPLOSION",
+  "short": "EMOJSPLOSION",
+  "ready": true,
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

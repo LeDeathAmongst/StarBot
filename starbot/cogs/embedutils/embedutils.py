@@ -1,4 +1,4 @@
-from AAA3A_utils import Cog, CogsUtils, Menu  # isort:skip
+from Star_Utils import Cog, CogsUtils, Menu  # isort:skip
 from starbot.core import commands, Config  # isort:skip
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.i18n import Translator, cog_i18n  # isort:skip
@@ -46,7 +46,6 @@ PASTEBIN_LIST_CONVERTER = PastebinListConverter(conversion_type="json")
 class EmbedUtils(DashboardIntegration, Cog):
     """Create, send, and store rich embeds, from Red-Dashboard too!"""
 
-    __authors__: typing.List[str] = ["PhenoM4n4n", "AAA3A"]
 
     def __init__(self, bot: Red) -> None:
         super().__init__(bot=bot)
@@ -110,7 +109,7 @@ class EmbedUtils(DashboardIntegration, Cog):
         """Post embeds from valid JSON.
 
         This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).
-        Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).
+        Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).
         You can use an [**embeds creator**](https://embedutils.com/) to get a JSON payload.
 
         If you provide a message, it will be edited.
@@ -143,7 +142,7 @@ class EmbedUtils(DashboardIntegration, Cog):
         """Post embeds from valid YAML.
 
         This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).
-        Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).
+        Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).
 
         If you provide a message, it will be edited.
         You can use an attachment and the command `[p]embed yamlfile` will be invoked automatically.
@@ -171,7 +170,7 @@ class EmbedUtils(DashboardIntegration, Cog):
         """Post an embed from a valid JSON file (upload it).
 
         This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).
-        Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).
+        Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).
         You can use an [**embeds creator**](https://embedutils.com/) to get a JSON payload.
 
         If you provide a message, it will be edited.
@@ -243,7 +242,7 @@ class EmbedUtils(DashboardIntegration, Cog):
         """Post embeds from a GitHub/Gist/Pastebin/Hastebin link containing valid JSON.
 
         This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).
-        Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).
+        Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).
 
         If you provide a message, it will be edited.
         """

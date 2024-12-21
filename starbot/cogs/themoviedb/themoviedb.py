@@ -48,21 +48,12 @@ class TheMovieDB(commands.Cog):
     Search for informations of movies and TV shows from themoviedb.org.
     """
 
-    __author__ = "MAX"
-    __version__ = "1.0.0"
-    __docs__ = "https://github.com/ltzmax/maxcogs/blob/master/docs/TheMovieDB.md"
-
     def __init__(self, bot):
         self.bot = bot
         self.session = aiohttp.ClientSession()
 
     async def cog_unload(self) -> None:
         await self.session.close()
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """Thanks Sinbad!"""
-        pre_processed = super().format_help_for_context(ctx)
-        return f"{pre_processed}\n\nAuthor: {self.__author__}\nCog Version: {self.__version__}\nDocs: {self.__docs__}"
 
     async def red_delete_data_for_user(self, **kwargs) -> None:
         """Nothing to delete."""

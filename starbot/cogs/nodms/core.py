@@ -62,9 +62,6 @@ class NoDMs(Cog):
     configuration settings.
     """
 
-    __author__: Final[List[str]] = ["inthedark.org"]
-    __version__: Final[str] = "0.1.0"
-
     def __init__(self, bot: Red) -> None:
         self.bot: Red = bot
 
@@ -101,16 +98,6 @@ class NoDMs(Cog):
         self._task: asyncio.Task[None] = asyncio.create_task(self.initialize())
 
         self.bot.before_invoke(self._before_invoke_hook)
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre_processed = super().format_help_for_context(ctx) or ""
-        n = "\n" if "\n\n" not in pre_processed else ""
-        text = [
-            f"{pre_processed}{n}",
-            f"Cog Version: **{self.__version__}**",
-            f"Author: **{humanize_list(self.__author__)}**",
-        ]
-        return "\n".join(text)
 
     def get_users_from_cache(
         self, type: Literal["whitelist", "blacklist"]

@@ -15,12 +15,6 @@ class VrtUtils(Utils, commands.Cog, metaclass=CompositeMetaClass):
     A collection of stateless utility commands for getting info about various things.
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "2.11.7"
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        return f"{helpcmd}\nCog Version: {self.__version__}\nAuthor: {self.__author__}"
 
     async def red_delete_data_for_user(self, *, requester, user_id: int):
         """No data to delete"""

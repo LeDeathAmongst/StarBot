@@ -1,19 +1,18 @@
 {
-    "author": [
-        "flare(flare#0001)"
-    ],
-    "install_msg": "Command Statistics, Check out commands used in a guild, globally or in the current session(while the cog is loaded). Note to developers: This cog allows you to record 3rd party events using the `on_commandstats_action_v2` listener.\nThis command will save the data to config every 5 minutes to prevent loss of data.",
-    "name": "CommandStats",
-    "disabled": false,
-    "short": "Track all commands used.",
-    "description": "Track all commands used globally, guild wise and during the current session.",
-    "tags": [
-        "commandstats"
-    ],
-    "requirements": [
-        "tabulate",
-        "pandas"
-    ],
-    "min_bot_version": "3.5.0",
-    "hidden": false
+  "author": "Rosie",
+  "install_msg": "Command Statistics, Check out commands used in a guild, globally or in the current session(while the cog is loaded). Note to developers: This cog allows you to record 3rd party events using the `on_commandstats_action_v2` listener.\nThis command will save the data to config every 5 minutes to prevent loss of data.",
+  "name": "CommandStats",
+  "disabled": false,
+  "short": "Track all commands used.",
+  "description": "Track all commands used globally, guild wise and during the current session.",
+  "tags": [
+    "commandstats"
+  ],
+  "requirements": [
+    "tabulate",
+    "pandas",
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
+  "min_bot_version": "3.5.0",
+  "hidden": false
 }

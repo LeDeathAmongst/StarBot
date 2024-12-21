@@ -1,11 +1,18 @@
 {
-    "author" : ["jakjakob"],
-    "install_msg" : "Thanks for installing songshare! Keep in mind that this Cog interacts with Odesli/Songlink!\nThis cog does not respect ingored channels or guilds, neither blacklisted/whitelisted users\nUse the integrated channel/guild selection instead",
-    "name" : "songshare",
-    "short" : "Share music with every music service",
-    "description" : "Easily share music thanks to universally translated links",
-    "min_python_version" : 3.8,
-    "tags" : ["music", "songlink", "odesli"],
-    "end_user_data_statement": "This cog does not store any end user data, but remember that it interacts with the Songlink API.",
-    "min_bot_version": "3.5.3"
+  "author": "Rosie",
+  "install_msg": "Thanks for installing songshare! Keep in mind that this Cog interacts with Odesli/Songlink!\nThis cog does not respect ingored channels or guilds, neither blacklisted/whitelisted users\nUse the integrated channel/guild selection instead",
+  "name": "songshare",
+  "short": "Share music with every music service",
+  "description": "Easily share music thanks to universally translated links",
+  "min_python_version": 3.8,
+  "tags": [
+    "music",
+    "songlink",
+    "odesli"
+  ],
+  "end_user_data_statement": "This cog does not store any end user data, but remember that it interacts with the Songlink API.",
+  "min_bot_version": "3.5.3",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

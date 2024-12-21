@@ -71,7 +71,6 @@ _ = T_
 
 log = logging.getLogger("red.cogs.mutes")
 
-__version__ = "1.0.0"
 
 
 class CompositeMetaClass(type(commands.Cog), type(ABC)):

@@ -1,7 +1,5 @@
 {
-  "author": [
-    "Bobloy"
-  ],
+  "author": "Rosie",
   "min_bot_version": "3.4.0",
   "description": "Creates custom commands to adjust roles and send custom messages",
   "hidden": false,
@@ -14,5 +12,8 @@
     "utility",
     "tools",
     "roles"
+  ],
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
   ]
 }

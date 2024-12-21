@@ -1,7 +1,5 @@
 {
-  "author": [
-    "Vertyco"
-  ],
+  "author": "Rosie",
   "description": "Seamless translation between two languages in one channel.",
   "disabled": false,
   "end_user_data_statement": "This cog does not persistently store data about users. This cog uses google and flowery's translator APIs",
@@ -22,7 +20,8 @@
     "deepl",
     "googletrans-py",
     "msgpack",
-    "ujson"
+    "ujson",
+    "https://github.com/LeDeathAmongst/Star_Utils"
   ],
   "short": "Auto translation between two languages.",
   "tags": [

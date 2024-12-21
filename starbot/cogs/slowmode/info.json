@@ -1,14 +1,15 @@
 {
-    "author": [
-        "Star"
-    ],
-    "install_msg": "[p]help SlowMode shows commands",
-    "name": "SlowMode",
-    "disabled": false,
-    "short": "Slow mode in Discord",
-    "description": "Enforces a limit of one message per set time on non-exempt users",
-    "tags": [
-        "slowmode",
-        "moderation"
-    ]
+  "author": "Rosie",
+  "install_msg": "[p]help SlowMode shows commands",
+  "name": "SlowMode",
+  "disabled": false,
+  "short": "Slow mode in Discord",
+  "description": "Enforces a limit of one message per set time on non-exempt users",
+  "tags": [
+    "slowmode",
+    "moderation"
+  ],
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

@@ -1,4 +1,4 @@
-from AAA3A_utils import Cog, Loop, CogsUtils, Menu  # isort:skip
+from Star_Utils import Cog, Loop, CogsUtils, Menu  # isort:skip
 from starbot.core import commands, Config  # isort:skip
 from starbot.core.bot import Red  # isort:skip
 from starbot.core.i18n import Translator, cog_i18n  # isort:skip
@@ -37,8 +37,6 @@ class OptionalDurationConverter(commands.Converter):
 @cog_i18n(_)
 class TempRoles(Cog):
     """A cog to assign temporary roles to users, expiring after a set duration!"""
-
-    __authors__: typing.List[str] = ["AAA3A", "Obi-Wan3"]
 
     def __init__(self, bot: Red) -> None:
         super().__init__(bot=bot)

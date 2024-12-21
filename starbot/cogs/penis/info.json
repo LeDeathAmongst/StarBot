@@ -1,8 +1,13 @@
 {
-  "author": ["Twentysix", "DesignByAdrian (ThinkAdrian#1186)"],
+  "author": "Rosie",
   "DESCRIPTION": "Usage: [p]penis <user>\nThis is 100% accurate.",
   "SHORT": "Detects users' penis size with maximum accuracy.",
   "NAME": "Penis",
-  "TAGS": ["fun"],
-  "min_bot_version": "3.5.0"
+  "TAGS": [
+    "fun"
+  ],
+  "min_bot_version": "3.5.0",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

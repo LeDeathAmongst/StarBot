@@ -32,8 +32,6 @@ class ExtendedEconomy(
     Set prices for commands, customize how prices are applied, log bank events and more!
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "0.4.1b"
 
     def __init__(self, bot: Red):
         super().__init__()
@@ -49,11 +47,6 @@ class ExtendedEconomy(
 
         # Overrides
         self.payday_callback = None
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
 
     async def red_delete_data_for_user(self, *, requester: RequestType, user_id: int):
         """Nothing to delete"""

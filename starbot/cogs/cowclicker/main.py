@@ -24,18 +24,11 @@ class CowClicker(Commands, commands.Cog, metaclass=CompositeMetaClass):
     Based on the [Cow Clicker](https://en.wikipedia.org/wiki/Cow_Clicker) game by Ian Bogost.
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "0.0.20b"
-
     def __init__(self, bot: Red):
         super().__init__()
         self.bot: Red = bot
         self.db: PostgresEngine = None
 
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
 
     async def red_delete_data_for_user(self, *, requester: RequestType, user_id: int):
         if not self.db:

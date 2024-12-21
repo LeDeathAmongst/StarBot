@@ -109,7 +109,7 @@ Extended Arg Info
 Post embeds from valid JSON.<br/>
 
 This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).<br/>
-Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
+Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
 You can use an [**embeds creator**](https://embedutils.com/) to get a JSON payload.<br/>
 
 If you provide a message, it will be edited.<br/>
@@ -121,7 +121,7 @@ You can use an attachment and the command `s.embed yamlfile` will be invoked aut
 Post embeds from valid YAML.<br/>
 
 This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).<br/>
-Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
+Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
 
 If you provide a message, it will be edited.<br/>
 You can use an attachment and the command `s.embed yamlfile` will be invoked automatically.<br/>
@@ -132,7 +132,7 @@ You can use an attachment and the command `s.embed yamlfile` will be invoked aut
 Post embeds from a GitHub/Gist/Pastebin/Hastebin link containing valid JSON.<br/>
 
 This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).<br/>
-Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
+Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
 
 If you provide a message, it will be edited.<br/>
  - Usage: `s.embed pastebin [channel_or_message=None] <data>`
@@ -195,7 +195,7 @@ Extended Arg Info
 Post an embed from a valid JSON file (upload it).<br/>
 
 This must be in the format expected by [**this Discord documentation**](https://discord.com/developers/docs/resources/channel#embed-object).<br/>
-Here's an example: [**this example**](https://gist.github.com/AAA3A-AAA3A/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
+Here's an example: [**this example**](https://gist.github.com/LeDeathAmongst/3c9772b34a8ebc09b3b10018185f4cd4).<br/>
 You can use an [**embeds creator**](https://embedutils.com/) to get a JSON payload.<br/>
 
 If you provide a message, it will be edited.<br/>

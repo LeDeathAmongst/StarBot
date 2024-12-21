@@ -47,9 +47,6 @@ class Pixl(commands.Cog):
     The score of the game is based on how many blocks are left when the image is guessed.
     """
 
-    __author__ = "[vertyco](https://github.com/vertyco/vrt-cogs)"
-    __version__ = "0.3.7"
-
     def __init__(self, bot: Red, *args, **kwargs):
         super().__init__(*args, **kwargs)
         if InteractionClient:

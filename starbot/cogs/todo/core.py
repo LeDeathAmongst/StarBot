@@ -60,16 +60,6 @@ class ToDo(
             self.bot.remove_dev_env_value("todo")
         self.cache._pool.close()
 
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        pre = super().format_help_for_context(ctx)
-        plural = "s" if len(__authors__) > 1 else ""
-        return (
-            f"{pre}\n\n"
-            f"**Author{plural}:** {humanize_list([f'`{a}`' for a in __authors__])}\n"
-            "**Suggestors:** Use `[p]todo suggestors`!\n"
-            f"**Version:** `{__version__}`"
-        )
-
     async def red_delete_data_for_user(
         self,
         *,

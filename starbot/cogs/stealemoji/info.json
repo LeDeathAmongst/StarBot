@@ -1,12 +1,12 @@
 {
-  "author": [
-    "Bobloy"
-  ],
+  "author": "Rosie",
   "min_bot_version": "3.4.0",
   "description": "Steals custom emojis the bot sees and moves them to an emoji server",
   "hidden": false,
   "install_msg": "Thank you for installing StealEmoji",
-  "requirements": [],
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
   "short": "Steals custom emojis",
   "end_user_data_statement": "This cog gathers custom emojis from all sources, but stores no End User Data",
   "tags": [

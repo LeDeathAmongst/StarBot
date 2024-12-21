@@ -61,11 +61,6 @@ class MartTools(Listeners, Cog):
 
         asyncio.create_task(self._dump_cache_to_db())
 
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """Thanks Sinbad!"""
-        pre_processed = super().format_help_for_context(ctx)
-        return f"{pre_processed}\n\nAuthors: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
-
     async def initialize(self):
         await self.cursor.connect()
         await self.cursor.execute(PRAGMA_journal_mode)

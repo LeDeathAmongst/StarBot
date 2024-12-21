@@ -93,9 +93,6 @@ class NotSoBot(commands.Cog):
     Rewrite of many NotSoBot commands to work on starbot V3
     """
 
-    __author__ = ["NotSoSuper", "TrustyJAID"]
-    __version__ = "2.6.0"
-
     def __init__(self, bot):
         self.bot = bot
         self.image_cache = {}
@@ -151,13 +148,6 @@ class NotSoBot(commands.Cog):
         self.image_mimes = ["image/png", "image/pjpeg", "image/jpeg", "image/x-icon"]
         self.gif_mimes = ["image/gif"]
         self.tenor: Optional[TenorAPI] = None
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """
-        Thanks Sinbad!
-        """
-        pre_processed = super().format_help_for_context(ctx)
-        return f"{pre_processed}\n\nCog Version: {self.__version__}"
 
     async def red_delete_data_for_user(self, **kwargs):
         """

@@ -1,7 +1,11 @@
 {
   "maps": [
     "simple",
-	"ck2",
-	"HoI"
+    "ck2",
+    "HoI"
+  ],
+  "author": "Rosie",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
   ]
 }

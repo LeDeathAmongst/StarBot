@@ -4,7 +4,7 @@ from starbot.core import commands
 from Star_Utils import Cog
 from .dashboard_integration import DashboardIntegration
 
-class BrainfuckCog(Cog):
+class brainfuck(Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -121,4 +121,4 @@ class BrainfuckCog(Cog):
         return buffer
 
 def setup(bot):
-    bot.add_cog(BrainfuckCog(bot))
+    bot.add_cog(brainfuck(bot))

@@ -1,7 +1,10 @@
 {
-    "author" : ["Maddie"],
-    "description" : "Usage: [p]big_text [ASCII message]",
-    "name": "Big Text",
-    "short" : "Make your message big and emoji-fied",
-    "ready": true
+  "author": "Rosie",
+  "description": "Usage: [p]big_text [ASCII message]",
+  "name": "Big Text",
+  "short": "Make your message big and emoji-fied",
+  "ready": true,
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

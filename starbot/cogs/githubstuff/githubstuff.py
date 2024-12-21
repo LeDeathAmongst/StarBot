@@ -1,5 +1,4 @@
 from Star_Utils import Cog
-__version__ = "1.0.0"
 import discord
 from github import Github
 from starbot.core import commands, Config

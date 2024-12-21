@@ -1,7 +1,5 @@
 {
-  "author": [
-    "Vertyco"
-  ],
+  "author": "Rosie",
   "description": "Log the bot joining and leaving guilds.",
   "disabled": false,
   "end_user_data_statement": "This cog does not persistently store data about users.",
@@ -17,7 +15,9 @@
     "send_messages"
   ],
   "required_cogs": {},
-  "requirements": [],
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ],
   "short": "Log bot guild joins/leaves",
   "tags": [
     "utility",

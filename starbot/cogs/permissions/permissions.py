@@ -75,7 +75,6 @@ YAML_SCHEMA = Schema(
 )
 _ = translate
 
-__version__ = "1.0.0"
 
 
 @cog_i18n(_)

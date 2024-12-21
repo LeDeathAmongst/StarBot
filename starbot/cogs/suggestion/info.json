@@ -1,7 +1,10 @@
 {
-    "author" : ["Eris"],
-    "description" : "Suggest a change, provides ez access urls",
-    "name" : "Suggest",
-    "short": "Suggest",
-    "ready": true
+  "author": "Rosie",
+  "description": "Suggest a change, provides ez access urls",
+  "name": "Suggest",
+  "short": "Suggest",
+  "ready": true,
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

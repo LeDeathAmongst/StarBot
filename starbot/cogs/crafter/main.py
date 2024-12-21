@@ -77,19 +77,11 @@ def get_item_breakdown(
 class Crafter(commands.Cog):
     """Get crafting information for Ark items"""
 
-    __author__ = "vertyco"
-    __version__ = "1.0.1"
-
     def __init__(self, bot: Red):
         super().__init__()
         self.bot: Red = bot
         self.data: t.Dict[str, dict] = json.loads((bundled_data_path(self) / "items.json").read_text())
         self.items: t.Dict[str, Item] = {k: Item(**v) for k, v in self.data.items()}
-
-    def format_help_for_context(self, ctx: commands.Context):
-        helpcmd = super().format_help_for_context(ctx)
-        txt = "Version: {}\nAuthor: {}".format(self.__version__, self.__author__)
-        return f"{helpcmd}\n\n{txt}"
 
     async def red_delete_data_for_user(self, *args, **kwargs):
         return

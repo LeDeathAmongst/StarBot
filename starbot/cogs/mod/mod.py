@@ -19,7 +19,6 @@ from .settings import ModSettings
 
 _ = T_ = Translator("Mod", __file__)
 
-__version__ = "1.2.0"
 
 
 class CompositeMetaClass(type(commands.Cog), type(ABC)):

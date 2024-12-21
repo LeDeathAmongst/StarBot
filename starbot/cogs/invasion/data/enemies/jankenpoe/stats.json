@@ -1,172 +1,217 @@
 {
-    "name": "Janken Poe",
-    "lingers": 6,
-    "health": 12,
-    "armor": 0,
-    "reward_mult": 1.5,
-    "enrage_titles_override": null,
-    "arrival_weight": 1,
-    "states": {
-        "arriving": {
-            "msg": [
-                "You happen upon a lantern. You feel safe only for a moment as the lantern ominously lights itself with your presence",
-                "You feel the otherworldly warmth of a {name}'s lantern that appears at your feet. stand ready.",
-                "You come across a mysterious lantern",
-                "A lantern, ethereally lit, appears before you. Prepare yourselves."
-            ],
-            "countdown": 60
-        },
-        "dying": {
-            "msg": [
-                "The {name} disappears, leaving a still warm lantern lying on the floor.",
-                "The {name} vanishes in a puff of ash and smoke; its lantern falling to the ground in sparking cinders. You can rest now.",
-                "You hear a possessed agony leave the {name}'s only attachment to the physical world, the lantern, lying on the floor, snuffed out. You can now rest easy.",
-                "As the {name} takes its last immaterial breath, you hear a cry almost like a chior of sirens. Is it finally safe?",
-                "You stab your scissors through the windows of the {name}'s lantern dealing the final blow. As the spirit leaves, you almost hear an echo of a \"*thank you*\"",
-                "You finally defeat the dreaded {name}! Here is your reward for such a valient deed."
-            ]
-        },
-        "attacking": {
-            "msg": [
-                "The {name}'s lantern bursts into otherworldly energy and its blue flames scorch {guild}",
-                "The ethereal lantern bursts into flames sending ghostly images of rocks, papers, and scissors throughout {guild}"
-            ],
-            "damage": 0.75
-        },
-        "idle": {
-            "msg": [
-                "It doesn't look like you can hit it with anything physical in this state"
-            ],
-            "title_msg": [
-                "The {name} floats in front of you",
-                "The {name} is barely visible in this state",
-                "The {name} appears to be preparing for something"
-            ],
-            "default": true,
-            "active": true,
-            "next_state": ["idle_charging", "jan"],
-            "countdown": 20
-        },
-        "idle_charging": {
-            "msg": [
-                "Watch out!",
-                "Prepare for an attack!"
-            ],
-            "title_msg": [
-                "The {name}'s power is over 9000!",
-                "The {name} looks like it's charging an attack!",
-                "The {name} is charging an attack!"
-            ],
-            "active": true,
-            "next_state": ["jan_charging"],
-            "weight": 0.25,
-            "countdown": 7
-        },
-        "jan": {
-            "msg": [],
-            "title_msg": ["Jan"],
-            "next_state": ["ken"],
-            "countdown": 7
-        },
-        "ken": {
-            "msg": [],
-            "title_msg": ["Ken"],
-            "next_state": ["rock", "paper", "scissors"],
-            "countdown": 7
-        },
-        "jan_charging": {
-            "msg": ["The {name} is charging an attack, watch out!"],
-            "title_msg": ["JANNNN"],
-            "next_state": ["ken_charging"],
-            "countdown": 7
-        },
-        "ken_charging": {
-            "msg": ["The {name} is charging an attack, watch out!"],
-            "title_msg": ["KENNNNNN"],
-            "next_state": ["boulder", "spellbook", "knife"],
-            "countdown": 10
-        },
-        "scissors": {
-            "msg": [
-                "Quick, it looks like you can damage it at this time!",
-                "Luckily nobody gets hurt. Use this opportunity to attack!"
-            ],
-            "title_msg": [
-                "The {name} briefly enters the physical realm",
-                "The {name} pulls out a pair of scissors"
-            ],
-            "hurt_by": ["🪨"],
-            "hittable": true,
-            "countdown": 20
-        },
-        "rock": {
-            "msg": [
-                "Quick, it looks like you can damage it at this time!",
-                "Luckily nobody gets hurt. Use this opportunity to attack!"
-            ],
-            "title_msg": [
-                "The {name} briefly enters the physical realm",
-                "The {name} pulls out a rock"
-            ],
-            "hurt_by": ["📜"],
-            "hittable": true,
-            "countdown": 20
-        },
-        "paper": {
-            "msg": [
-                "Quick, it looks like you can damage it at this time!",
-                "Luckily nobody gets hurt. Use this opportunity to attack!"
-            ],
-            "title_msg": [
-                "The {name} briefly enters the physical realm",
-                "The {name} pulls out a sheet of paper"
-            ],
-            "hurt_by": ["✂️"],
-            "hittable": true,
-            "countdown": 20
-        },
-        "knife": {
-            "msg": [
-                "The {name} slashes at {guild} members, but don't back down, it looks like the {name} is vulnerable to damage now!",
-                "The {name} stabs at {guild} members dealing damage. Don't worry, you can deal some damage when it's in this state as well!"
-            ],
-            "title_msg": [
-                "The {name} pulls out an ethereal knife",
-                "The {name} pulls out a vorpal blade",
-                "The {name} materializes a razor-edged blade"
-            ],
-            "hurt_by": ["🪨"],
-            "hittable": true,
-            "damage": 0.25,
-            "countdown": 20
-        },
-        "boulder": {
-            "msg": [
-                "The {name} crashes the boulder into {guild}. Quick, get back up and attack him in turn. He seems to be vulnerable!",
-                "The boulder smashes into pieces, shrapnel flying at {guild} members. Hurry, it's time to retaliate!"
-            ],
-            "title_msg": [
-                "The {name} materializes a huge boulder",
-                "The {name} levitates a large boulder in front of you"
-            ],
-            "hurt_by": ["📜"],
-            "hittable": true,
-            "damage": 0.25,
-            "countdown": 20
-        },
-        "spellbook": {
-            "msg": [
-                "The spellbook's pages flutter and runes fly into {guild} damaging members. It looks like the spellbook is a physical object that can be attacked!",
-                "The glyphs fly off the spellbook's pages and pierce into {guild} members. It looks like the {name} is vulnerable at this time."
-            ],
-            "title_msg": [
-                "The {name} manifests a flittering spellbook",
-                "A mysterious spellbook appears in the control of the {name}. Arcane energy flies"
-            ],
-            "hurt_by": ["✂️"],
-            "hittable": true,
-            "damage": 0.25,
-            "countdown": 20
-        }
+  "name": "Janken Poe",
+  "lingers": 6,
+  "health": 12,
+  "armor": 0,
+  "reward_mult": 1.5,
+  "enrage_titles_override": null,
+  "arrival_weight": 1,
+  "states": {
+    "arriving": {
+      "msg": [
+        "You happen upon a lantern. You feel safe only for a moment as the lantern ominously lights itself with your presence",
+        "You feel the otherworldly warmth of a {name}'s lantern that appears at your feet. stand ready.",
+        "You come across a mysterious lantern",
+        "A lantern, ethereally lit, appears before you. Prepare yourselves."
+      ],
+      "countdown": 60
+    },
+    "dying": {
+      "msg": [
+        "The {name} disappears, leaving a still warm lantern lying on the floor.",
+        "The {name} vanishes in a puff of ash and smoke; its lantern falling to the ground in sparking cinders. You can rest now.",
+        "You hear a possessed agony leave the {name}'s only attachment to the physical world, the lantern, lying on the floor, snuffed out. You can now rest easy.",
+        "As the {name} takes its last immaterial breath, you hear a cry almost like a chior of sirens. Is it finally safe?",
+        "You stab your scissors through the windows of the {name}'s lantern dealing the final blow. As the spirit leaves, you almost hear an echo of a \"*thank you*\"",
+        "You finally defeat the dreaded {name}! Here is your reward for such a valient deed."
+      ]
+    },
+    "attacking": {
+      "msg": [
+        "The {name}'s lantern bursts into otherworldly energy and its blue flames scorch {guild}",
+        "The ethereal lantern bursts into flames sending ghostly images of rocks, papers, and scissors throughout {guild}"
+      ],
+      "damage": 0.75
+    },
+    "idle": {
+      "msg": [
+        "It doesn't look like you can hit it with anything physical in this state"
+      ],
+      "title_msg": [
+        "The {name} floats in front of you",
+        "The {name} is barely visible in this state",
+        "The {name} appears to be preparing for something"
+      ],
+      "default": true,
+      "active": true,
+      "next_state": [
+        "idle_charging",
+        "jan"
+      ],
+      "countdown": 20
+    },
+    "idle_charging": {
+      "msg": [
+        "Watch out!",
+        "Prepare for an attack!"
+      ],
+      "title_msg": [
+        "The {name}'s power is over 9000!",
+        "The {name} looks like it's charging an attack!",
+        "The {name} is charging an attack!"
+      ],
+      "active": true,
+      "next_state": [
+        "jan_charging"
+      ],
+      "weight": 0.25,
+      "countdown": 7
+    },
+    "jan": {
+      "msg": [],
+      "title_msg": [
+        "Jan"
+      ],
+      "next_state": [
+        "ken"
+      ],
+      "countdown": 7
+    },
+    "ken": {
+      "msg": [],
+      "title_msg": [
+        "Ken"
+      ],
+      "next_state": [
+        "rock",
+        "paper",
+        "scissors"
+      ],
+      "countdown": 7
+    },
+    "jan_charging": {
+      "msg": [
+        "The {name} is charging an attack, watch out!"
+      ],
+      "title_msg": [
+        "JANNNN"
+      ],
+      "next_state": [
+        "ken_charging"
+      ],
+      "countdown": 7
+    },
+    "ken_charging": {
+      "msg": [
+        "The {name} is charging an attack, watch out!"
+      ],
+      "title_msg": [
+        "KENNNNNN"
+      ],
+      "next_state": [
+        "boulder",
+        "spellbook",
+        "knife"
+      ],
+      "countdown": 10
+    },
+    "scissors": {
+      "msg": [
+        "Quick, it looks like you can damage it at this time!",
+        "Luckily nobody gets hurt. Use this opportunity to attack!"
+      ],
+      "title_msg": [
+        "The {name} briefly enters the physical realm",
+        "The {name} pulls out a pair of scissors"
+      ],
+      "hurt_by": [
+        "🪨"
+      ],
+      "hittable": true,
+      "countdown": 20
+    },
+    "rock": {
+      "msg": [
+        "Quick, it looks like you can damage it at this time!",
+        "Luckily nobody gets hurt. Use this opportunity to attack!"
+      ],
+      "title_msg": [
+        "The {name} briefly enters the physical realm",
+        "The {name} pulls out a rock"
+      ],
+      "hurt_by": [
+        "📜"
+      ],
+      "hittable": true,
+      "countdown": 20
+    },
+    "paper": {
+      "msg": [
+        "Quick, it looks like you can damage it at this time!",
+        "Luckily nobody gets hurt. Use this opportunity to attack!"
+      ],
+      "title_msg": [
+        "The {name} briefly enters the physical realm",
+        "The {name} pulls out a sheet of paper"
+      ],
+      "hurt_by": [
+        "✂️"
+      ],
+      "hittable": true,
+      "countdown": 20
+    },
+    "knife": {
+      "msg": [
+        "The {name} slashes at {guild} members, but don't back down, it looks like the {name} is vulnerable to damage now!",
+        "The {name} stabs at {guild} members dealing damage. Don't worry, you can deal some damage when it's in this state as well!"
+      ],
+      "title_msg": [
+        "The {name} pulls out an ethereal knife",
+        "The {name} pulls out a vorpal blade",
+        "The {name} materializes a razor-edged blade"
+      ],
+      "hurt_by": [
+        "🪨"
+      ],
+      "hittable": true,
+      "damage": 0.25,
+      "countdown": 20
+    },
+    "boulder": {
+      "msg": [
+        "The {name} crashes the boulder into {guild}. Quick, get back up and attack him in turn. He seems to be vulnerable!",
+        "The boulder smashes into pieces, shrapnel flying at {guild} members. Hurry, it's time to retaliate!"
+      ],
+      "title_msg": [
+        "The {name} materializes a huge boulder",
+        "The {name} levitates a large boulder in front of you"
+      ],
+      "hurt_by": [
+        "📜"
+      ],
+      "hittable": true,
+      "damage": 0.25,
+      "countdown": 20
+    },
+    "spellbook": {
+      "msg": [
+        "The spellbook's pages flutter and runes fly into {guild} damaging members. It looks like the spellbook is a physical object that can be attacked!",
+        "The glyphs fly off the spellbook's pages and pierce into {guild} members. It looks like the {name} is vulnerable at this time."
+      ],
+      "title_msg": [
+        "The {name} manifests a flittering spellbook",
+        "A mysterious spellbook appears in the control of the {name}. Arcane energy flies"
+      ],
+      "hurt_by": [
+        "✂️"
+      ],
+      "hittable": true,
+      "damage": 0.25,
+      "countdown": 20
     }
+  },
+  "author": "Rosie",
+  "requirements": [
+    "https://github.com/LeDeathAmongst/Star_Utils"
+  ]
 }

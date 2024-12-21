@@ -6,21 +6,21 @@ from starbot.core.bot import Red
 from starbot.core.utils import get_end_user_data_statement
 
 try:
-    import Star-Utils
+    import Star_Utils
 except ModuleNotFoundError:
     raise errors.CogLoadError(
-        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star-Utils.git`. A restart of the bot isn't necessary."
+        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star_Utils.git`. A restart of the bot isn't necessary."
     )
 
-modules = sorted([module for module in sys.modules if module.split('.')[0] == 'Star-Utils'], reverse=True)
+modules = sorted([module for module in sys.modules if module.split('.')[0] == 'Star_Utils'], reverse=True)
 for module in modules:
     try:
         importlib.reload(sys.modules[module])
     except ModuleNotFoundError:
         pass
-del Star-Utils
+del Star_Utils
 
-from Star-Utils import Cog
+from Star_Utils import Cog
 from .fifo import FIFO
 
 # Applying fix from: https://github.com/Azure/azure-functions-python-worker/issues/640

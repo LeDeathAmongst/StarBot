@@ -16,7 +16,7 @@ from starbot.core import app_commands, commands, modlog
 from starbot.core.bot import Red
 from starbot.core.utils import mod
 from starbot.core.utils.chat_formatting import humanize_list, humanize_number
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 from .converters import PurgeFlags, RawMessageIdsConverter, Snowflake
 from .utils import (

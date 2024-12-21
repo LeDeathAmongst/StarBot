@@ -1,6 +1,6 @@
 import discord
 from starbot.core import commands
-from Star-Utils import Cog
+from Star_Utils import Cog
 from .vminterface import VMInterface
 
 class VoiceMeisterCommands(Cog):

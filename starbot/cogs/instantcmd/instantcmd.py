@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # InstantCommands by retke, aka El Laggron
 # Idea by Malarne
 

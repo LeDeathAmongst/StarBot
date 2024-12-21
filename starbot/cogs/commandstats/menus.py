@@ -7,7 +7,7 @@ import tabulate
 from starbot.core import commands
 from starbot.core.utils.chat_formatting import box, escape, humanize_number
 from starbot.vendored.discord.ext import menus
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class GenericMenu(menus.MenuPages, inherit_buttons=False):
     def __init__(

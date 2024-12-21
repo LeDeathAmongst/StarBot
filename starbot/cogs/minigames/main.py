@@ -6,7 +6,7 @@ from starbot.core.utils import chat_formatting as cf
 import discord
 from .games import GTN, Cups, FTR, CTW
 from typing import Literal
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class MiniGames(Cog):
     def __init__(self, bot):

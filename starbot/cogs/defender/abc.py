@@ -27,7 +27,7 @@ from typing import List, Dict
 import datetime
 import discord
 import asyncio
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class CompositeMetaClass(type(Cog), type(ABC)):
     """

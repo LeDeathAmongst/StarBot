@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 """Temporary channel cog.
 
 Creates a temporary channel.

@@ -22,7 +22,7 @@ from typing import Mapping
 from tabulate import tabulate
 from collections import Counter
 from datetime import datetime, timedelta
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from .utils import check_weekend, download_widget, error_message, intro_msg
 

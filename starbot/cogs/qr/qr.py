@@ -7,7 +7,7 @@ import operator
 import pathlib
 import random
 from typing import Literal
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 import qrcode

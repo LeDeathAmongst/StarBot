@@ -1,7 +1,7 @@
 import discord
 from starbot.core import commands, checks
 from starbot.core.utils.chat_formatting import success, error, warning, info
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class VoiceMeisterSet(Cog):
     """Configure the VoiceMeister cog."""

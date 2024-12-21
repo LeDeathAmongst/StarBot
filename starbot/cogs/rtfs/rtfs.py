@@ -8,7 +8,7 @@ from itertools import chain, repeat
 from math import ceil
 from textwrap import dedent
 from typing import TYPE_CHECKING, Any, Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 import starbot

@@ -1,4 +1,4 @@
-from Star-Utils import Cog, Menu, CogsUtils  # isort:skip
+from Star_Utils import Cog, Menu, CogsUtils  # isort:skip
 from starbot.core import commands  # isort:skip
 from starbot.core.i18n import Translator  # isort:skip
 import discord  # isort:skip

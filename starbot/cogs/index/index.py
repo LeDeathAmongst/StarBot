@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 """
 Index - Browse and install Red repos and cogs using the Red-Index system
 Copyright (C) 2020-present  Twentysix (https://github.com/Twentysix26/)

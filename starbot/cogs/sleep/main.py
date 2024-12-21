@@ -1,7 +1,7 @@
 from starbot.core.bot import Red
 from starbot.core import commands, Config
 import discord
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class Sleep(Cog):
     """Put the bot to sleep"""

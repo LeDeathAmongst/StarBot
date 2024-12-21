@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 """Server Manage commands.commands.commands.commands.commands.commands.Cog, to help manage server icon and banners."""
 from starbot.core import commands
 

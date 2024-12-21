@@ -1,7 +1,7 @@
 import discord
 from typing import Literal
 from starbot.core import app_commands, commands
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class Banana(Cog):

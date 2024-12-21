@@ -1,7 +1,7 @@
 from starbot.core import commands, checks, Config
 import discord
 from datetime import timedelta
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class MassAction(Cog):
     """Cog for mass banning, kicking, muting, and timing out members in a role."""

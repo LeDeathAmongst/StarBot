@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from starbot.core import commands
 import random
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class RandomEmoji(Cog):
     def __init__(self, bot):

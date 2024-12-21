@@ -1,5 +1,5 @@
 from __future__ import annotations
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # Borrowed with permission from
 # https://github.com/mikeshardmind/SinbadCogs/blob/v3/scheduler/message.py
 

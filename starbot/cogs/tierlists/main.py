@@ -4,7 +4,7 @@ import typing as t
 
 from starbot.core import Config, commands
 from starbot.core.bot import Red
-from Star-Utils import Cog
+from Star_Utils import Cog
 from .abc import CompositeMetaClass
 from .commands import Commands
 from .common.models import DB

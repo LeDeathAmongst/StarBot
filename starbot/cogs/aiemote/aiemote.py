@@ -3,7 +3,7 @@ import logging
 import random
 import re
 from typing import Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 import tiktoken

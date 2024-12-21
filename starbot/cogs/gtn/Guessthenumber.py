@@ -5,7 +5,7 @@ from typing import List, Literal, Optional
 
 import discord
 from starbot.core import commands
-from Star-Utils import Cog
+from Star_Utils import Cog
 from starbot.core.bot import Red
 
 RequestType = Literal["discord_deleted_user", "owner", "user", "user_strict"]

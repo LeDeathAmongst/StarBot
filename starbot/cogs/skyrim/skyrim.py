@@ -1,5 +1,5 @@
 from random import randrange
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from starbot.core import commands
 from starbot.core.data_manager import bundled_data_path

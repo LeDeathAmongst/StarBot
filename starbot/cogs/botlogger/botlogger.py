@@ -3,7 +3,7 @@ from discord.ext import tasks
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 import logging
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 logger = logging.getLogger("red.botlogger")
 

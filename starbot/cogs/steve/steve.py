@@ -2,7 +2,7 @@ import random
 import re
 import discord
 from starbot.core import commands, data_manager, Config, checks, bot
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from .eris_event_lib import ErisEventMixin
 

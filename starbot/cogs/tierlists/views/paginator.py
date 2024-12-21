@@ -1,5 +1,5 @@
 from typing import List, Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 from discord.ui import Button, Select

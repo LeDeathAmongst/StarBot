@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 import json
 import os
 from pathlib import Path

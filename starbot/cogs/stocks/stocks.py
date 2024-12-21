@@ -5,7 +5,7 @@ from starbot.core import Config
 from starbot.core.utils.chat_formatting import pagify
 from starbot.core.utils.menus import menu, DEFAULT_CONTROLS, close_menu
 import aiohttp
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class Stocks(Cog):

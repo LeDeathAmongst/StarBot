@@ -1,6 +1,6 @@
 import contextlib
 import io
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 import python_minifier as minifier

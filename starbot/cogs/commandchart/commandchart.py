@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 """This cog is mostly derived from Aikaterna's cog "chatchart"
 You can find the cog here: https://github.com/aikaterna/aikaterna-cogs/tree/v3/chatchart
 

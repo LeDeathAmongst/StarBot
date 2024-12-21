@@ -1,7 +1,7 @@
 import discord
 from starbot.core import commands
 import requests
-from Star-Utils import Cog
+from Star_Utils import Cog
 class UselessFacts(Cog):
     def __init__(self, bot):
         self.bot = bot

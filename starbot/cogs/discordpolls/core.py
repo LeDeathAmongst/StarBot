@@ -23,7 +23,7 @@ SOFTWARE.
 """
 
 # flake8: noqa
-from Star-Utils import Cog
+from Star_Utils import Cog
 import contextlib
 import datetime
 import logging

@@ -8,22 +8,22 @@ from .voicemeister import VoiceMeister
 #from .c_voicemeisterset import VoiceMeisterSet
 #from .vminterface import VMInterface
 
-# Ensure Star-Utils is available
+# Ensure Star_Utils is available
 try:
-    import Star-Utils
+    import Star_Utils
 except ModuleNotFoundError:
     raise errors.CogLoadError(
-        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star-Utils.git`. A restart of the bot isn't necessary."
+        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star_Utils.git`. A restart of the bot isn't necessary."
     )
 
-# Reload Star-Utils modules
-modules = sorted([module for module in sys.modules if module.split('.')[0] == 'Star-Utils'], reverse=True)
+# Reload Star_Utils modules
+modules = sorted([module for module in sys.modules if module.split('.')[0] == 'Star_Utils'], reverse=True)
 for module in modules:
     try:
         importlib.reload(sys.modules[module])
     except ModuleNotFoundError:
         pass
-del Star-Utils
+del Star_Utils
 
 __red_end_user_data_statement__ = get_end_user_data_statement(file=__file__)
 

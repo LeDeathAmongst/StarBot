@@ -5,7 +5,7 @@ import aiohttp
 import discord
 from urllib.parse import quote
 import json
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class Pinboard(Cog):
     """Make pinned messages communal! Users can add and remove their contributions to a pinned message at any time."""

@@ -3,7 +3,7 @@ import aiohttp
 import asyncio
 from starbot.core import commands, Config, checks
 from starbot.core.bot import Red
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class Bl(Cog):
     """A cog to manage a blacklist of users with links in hypertext."""

@@ -2,7 +2,7 @@ import re
 import discord #type: ignore
 import asyncio
 from starbot.core import commands, Config #type: ignore
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class InfoControl(Cog):
     """Detect and remove potentially sensitive information from chat."""

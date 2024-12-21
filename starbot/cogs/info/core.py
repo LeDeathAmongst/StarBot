@@ -40,7 +40,7 @@ from .cache import Cache
 from .settings import SettingsCommands
 from .utils import SEINA, guild_only_and_has_embed_links
 from .views import CommandView, UserInfoView
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 log: logging.Logger = logging.getLogger("red.seina.info.core")
 
 OLD_USERINFO_COMMAND = discord.utils.MISSING

@@ -15,7 +15,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer, UbuntuCorp
 from starbot.core import Config, checks, commands
 from starbot.core.data_manager import cog_data_path
 from starbot.core.utils.predicates import MessagePredicate
-from Star-Utils import Cog
+from Star_Utils import Cog
 from chatter.trainers import MovieTrainer, TwitterCorpusTrainer, UbuntuCorpusTrainer2
 
 chatterbot_log = logging.getLogger("red.star.chatterbot")

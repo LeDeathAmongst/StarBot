@@ -1,7 +1,7 @@
 from starbot.core import commands
 from starbot.core.bot import Red
 from starbot.core.utils.views import SimpleMenu
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from .utils import (
     ValidRoleIndex,

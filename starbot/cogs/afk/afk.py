@@ -3,7 +3,7 @@ from starbot.core import commands, Config
 from starbot.core.bot import Red
 from typing import List, Dict
 import asyncio
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class AFK(Cog):
     """AFK Cog for StarBot"""

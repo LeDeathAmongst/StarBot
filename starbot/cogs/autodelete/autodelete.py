@@ -2,7 +2,7 @@ import discord
 from starbot.core import commands, Config
 from starbot.core.utils.chat_formatting import humanize_number
 from datetime import datetime
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class AutoDelete(Cog):
     def __init__(self, bot):

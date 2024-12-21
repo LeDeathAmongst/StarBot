@@ -33,7 +33,7 @@ from starbot.core.utils.chat_formatting import humanize_list, inline
 from starbot.core.utils.mod import get_audit_reason
 
 from .converters import ChannelToggle, LockableChannel, LockableRole
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 RequestType: TypeAlias = Literal["discord_deleted_user", "owner", "user", "user_strict"]
 

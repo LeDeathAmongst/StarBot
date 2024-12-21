@@ -3,7 +3,7 @@ from .data import find, find_one
 from .enums import Ability, DamageClass, ElementType
 from .misc import NonVolatileEffect, Metronome, ExpiringEffect, ExpiringItem, HeldItem
 from .move import Move
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class DuelPokemon():

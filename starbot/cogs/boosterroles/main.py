@@ -9,7 +9,7 @@ import logging
 from emoji import emoji_list
 from starbot.vendored.discord.ext.menus import ListPageSource
 from .views import Paginator
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 log = logging.getLogger("red.bounty.boosterroles")
 

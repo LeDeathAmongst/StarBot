@@ -1,7 +1,7 @@
 from starbot.core import commands, Config
 import discord
 from datetime import datetime
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 from discord.ext import tasks
 
 class ThemedChanger(Cog):

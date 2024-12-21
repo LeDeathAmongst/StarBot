@@ -25,7 +25,7 @@ SOFTWARE.
 # flake8: noqa
 
 # the implementation idea of this cog has been taken from the now archived <https://github.com/japandotorg/OB13-Cogs/tree/dpy2/nodms>
-from Star-Utils import Cog
+from Star_Utils import Cog
 import asyncio
 import contextlib
 import logging

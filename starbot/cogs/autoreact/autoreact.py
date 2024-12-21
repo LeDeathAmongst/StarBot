@@ -7,7 +7,7 @@ from starbot.core import commands, Config
 from starbot.core.bot import Red
 from starbot.core.utils.views import SimpleMenu
 from typing import Optional, Union
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 log = logging.getLogger("red.crab-cogs.autoreact")
 

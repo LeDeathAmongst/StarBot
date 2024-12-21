@@ -2,7 +2,7 @@ from starbot.core import commands  # isort:skip
 import discord  # isort:skip
 import typing  # isort:skip
 import typing_extensions  # isort:skip
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import asyncio
 import io

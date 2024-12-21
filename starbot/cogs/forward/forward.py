@@ -1,7 +1,7 @@
 import discord
 from starbot.core import Config, checks, commands
 from starbot.core.utils.chat_formatting import humanize_list
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class Forward(Cog):

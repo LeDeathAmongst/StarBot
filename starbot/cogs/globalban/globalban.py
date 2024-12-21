@@ -1,7 +1,7 @@
 import discord
 from starbot.core import commands
 from starbot.core.utils.mod import get_audit_reason
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class GlobalBan(Cog):

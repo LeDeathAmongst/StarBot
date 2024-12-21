@@ -1,5 +1,5 @@
 import datetime
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import dateparser
 import discord

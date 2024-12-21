@@ -3,7 +3,7 @@ import logging
 from typing import Dict, List, Tuple, Optional, Any, Iterable
 from starbot.core import commands
 from starbot.core.commands import Context
-from Star-Utils import Cog
+from Star_Utils import Cog
 import discord
 from starbot.core.utils.chat_formatting import escape, humanize_number
 from starbot.vendored.discord.ext import menus

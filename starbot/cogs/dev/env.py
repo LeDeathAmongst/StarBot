@@ -21,15 +21,15 @@ import aiohttp
 import discord.ext
 import starbot
 import rich
-from Star-Utils.cog import Cog
-from Star-Utils.cogsutils import CogsUtils
-from Star-Utils.context import Context, is_dev
-from Star-Utils.loop import Loop
-from Star-Utils.menus import Menu, Reactions
-from Star-Utils.sentry import SentryHelper
-from Star-Utils.settings import Settings
-from Star-Utils.shared_cog import SharedCog
-from Star-Utils.views import (
+from Star_Utils.cog import Cog
+from Star_Utils.cogsutils import CogsUtils
+from Star_Utils.context import Context, is_dev
+from Star_Utils.loop import Loop
+from Star_Utils.menus import Menu, Reactions
+from Star_Utils.sentry import SentryHelper
+from Star_Utils.settings import Settings
+from Star_Utils.shared_cog import SharedCog
+from Star_Utils.views import (
     Buttons,
     ChannelSelect,
     ConfirmationAskView,
@@ -330,7 +330,7 @@ class DevEnv(typing.Dict[str, typing.Any]):
             return attr
         try:
             if is_dev(bot=self["bot"]) and (attr := getattr(CogsUtils, key, None)) is not None:
-                self.imported.append(("Star-Utils.CogsUtils", key))
+                self.imported.append(("Star_Utils.CogsUtils", key))
                 self[key] = attr
                 return attr
         except (KeyError, AttributeError):

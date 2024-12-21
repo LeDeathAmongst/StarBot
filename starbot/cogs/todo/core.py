@@ -13,7 +13,7 @@ from starbot.core.bot import Red
 from starbot.core.utils import AsyncIter
 from starbot.core.utils.chat_formatting import escape, humanize_list, pagify, text_to_file
 from starbot.core.utils.predicates import MessagePredicate
-from Star-Utils import Cog
+from Star_Utils import Cog
 from .abc import MetaClass
 from .commands import *
 from .consts import __authors__, __suggestors__, __version__, config_structure

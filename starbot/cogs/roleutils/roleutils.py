@@ -32,7 +32,7 @@ from starbot.core.bot import Red
 from starbot.core.config import Config
 from starbot.core.modlog import register_casetype
 from starbot.core.utils.chat_formatting import humanize_list
-from Star-Utils import Cog
+from Star_Utils import Cog
 from .abc import CompositeMetaClass
 from .autorole import AutoRoles
 from .reactroles import ReactRoles

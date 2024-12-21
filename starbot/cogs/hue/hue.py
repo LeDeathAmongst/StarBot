@@ -1,5 +1,5 @@
 from typing import Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from red_commons.logging import getLogger
 from starbot.core import Config, checks, commands

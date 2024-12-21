@@ -9,7 +9,7 @@ import json
 import tempfile
 import os
 
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class Wordle(Cog):
     def __init__(self, bot):

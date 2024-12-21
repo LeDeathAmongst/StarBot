@@ -26,7 +26,7 @@ SOFTWARE.
 import asyncio
 import logging
 from typing import Any, List, Optional, Union, TYPE_CHECKING
-from Star-Utils import Cog
+from Star_Utils import Cog
 import discord
 import TagScriptEngine as tse
 from discord.app_commands.transformers import CommandParameter

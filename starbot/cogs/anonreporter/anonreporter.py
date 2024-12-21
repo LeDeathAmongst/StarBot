@@ -1,6 +1,6 @@
 from starbot.core import commands, checks, Config
 from starbot.core.i18n import cog_i18n, Translator
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 import asyncio

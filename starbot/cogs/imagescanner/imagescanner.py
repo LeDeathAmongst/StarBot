@@ -8,7 +8,7 @@ from hashlib import md5
 from starbot.core import commands, app_commands, Config
 from expiringdict import ExpiringDict
 from typing import Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import imagescanner.utils as utils
 from imagescanner.imageview import ImageView

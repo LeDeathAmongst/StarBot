@@ -5,7 +5,7 @@ from typing import Optional
 import discord
 from starbot.core import Config, commands
 from starbot.core.bot import Red
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from .utils import add_footer, kawaiiembed, rstats_embed, send_embed
 

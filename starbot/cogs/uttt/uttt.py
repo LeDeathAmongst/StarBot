@@ -4,7 +4,7 @@ import asyncio
 import logging
 from .game import UTTTGame
 from .views import ConfirmView, GetPlayersView
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class UTTT(Cog):

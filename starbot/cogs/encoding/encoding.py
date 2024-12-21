@@ -4,7 +4,7 @@ import re
 from string import ascii_lowercase as lc
 from string import ascii_uppercase as uc
 from typing import Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from starbot.core import commands
 from starbot.core.utils.chat_formatting import pagify

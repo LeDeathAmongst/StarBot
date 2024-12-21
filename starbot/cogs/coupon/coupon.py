@@ -1,6 +1,6 @@
 import discord
 import uuid
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from starbot.core import bank, checks, commands, Config
 from starbot.core.errors import BalanceTooHigh

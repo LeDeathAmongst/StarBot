@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # This cog did not have a license but is now licensed under the MIT License.
 # This cog was created by owocado and is now continued by ltzmax.
 # This cog was transfered via a pr from the author of the code https://github.com/ltzmax/maxcogs/pull/46

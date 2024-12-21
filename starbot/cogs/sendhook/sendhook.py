@@ -1,5 +1,5 @@
 from starbot.core import Config, commands, checks
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # from array import *
 import discord
 from discord import Webhook, SyncWebhook

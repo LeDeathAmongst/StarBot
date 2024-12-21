@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 import logging
 from typing import List, Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 from starbot.core import Config, commands

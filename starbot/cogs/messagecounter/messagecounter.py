@@ -7,7 +7,7 @@ from starbot.core.bot import Red
 from copy import deepcopy
 from starbot.core.utils.chat_formatting import box, pagify, quote
 import re
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class MessageCounter(Cog):
     default_guild_config = {

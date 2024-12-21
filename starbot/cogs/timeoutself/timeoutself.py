@@ -5,7 +5,7 @@ from starbot.core.bot import Red
 from typing import *
 import datetime
 import re
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 def parse_simple_time_interval(timestr: str) -> datetime.timedelta:
     """Parse a time string of the form "3d 48h5m 6s" into a datetime.timedelta object."""

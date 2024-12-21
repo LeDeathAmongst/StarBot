@@ -2,7 +2,7 @@ import time
 from datetime import datetime, timedelta
 from io import BytesIO
 from typing import Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import aiohttp
 import discord

@@ -4,7 +4,7 @@ from starbot.core.bot import Red  # type: ignore
 import discord  # type: ignore
 import asyncio
 from datetime import datetime, timedelta
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class StripeIdentity(Cog):
     def __init__(self, bot: Red):

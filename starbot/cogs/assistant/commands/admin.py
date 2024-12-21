@@ -33,7 +33,7 @@ from ..common.constants import MODELS, PRICES
 from ..common.models import DB, Embedding
 from ..common.utils import get_attachments
 from ..views import CodeMenu, EmbeddingMenu, SetAPI
-from Star-Utils import CogsUtils
+from Star_Utils import CogsUtils
 log = logging.getLogger("red.vrt.assistant.admin")
 _ = Translator("Assistant", __file__)
 

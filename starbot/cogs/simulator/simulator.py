@@ -16,7 +16,7 @@ from starbot.core import commands, Config
 from starbot.core.bot import Red
 from starbot.core.data_manager import cog_data_path
 from typing import *
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 log = logging.getLogger("red.crab-cogs.simulator")
 

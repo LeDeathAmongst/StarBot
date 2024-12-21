@@ -1,7 +1,7 @@
 import logging
 import discord
 from starbot.core import Config, commands
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 from starbot.core import commands
 
 log = logging.getLogger("red.botc.admintoggle")

@@ -2,7 +2,7 @@ import discord
 from starbot.core import commands, Config
 from datetime import datetime, timedelta
 import re
-from Star-Utils import Cog, CogsUtils, Settings
+from Star_Utils import Cog, CogsUtils, Settings
 
 class Wormhole(Cog):
     def __init__(self, bot):

@@ -1,7 +1,7 @@
 import discord
 from starbot.core import commands, Config
 import uuid
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 class AffiliatedServers(Cog):
     def __init__(self, bot):

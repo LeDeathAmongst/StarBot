@@ -1,4 +1,4 @@
-from Star-Utils import Co, CogsUtils
+from Star_Utils import Co, CogsUtils
 import discord
 import random
 from datetime import datetime

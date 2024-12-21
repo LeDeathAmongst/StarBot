@@ -14,7 +14,7 @@ from starbot.core.bot import Red
 from starbot.core.commands import TimedeltaConverter
 from starbot.core.utils.chat_formatting import humanize_timedelta, pagify
 
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from .datetime_cron_converters import CronConverter, DatetimeConverter, TimezoneConverter
 from .task import Task

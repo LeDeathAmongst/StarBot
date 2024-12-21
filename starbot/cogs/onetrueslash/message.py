@@ -1,7 +1,7 @@
 import asyncio
 from copy import copy
 from typing import TypeVar
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 

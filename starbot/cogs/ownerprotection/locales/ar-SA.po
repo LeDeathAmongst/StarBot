@@ -1,10 +1,10 @@
-from Star-Utils import Cog, Settings  # Use Star-Utils for Cog and Settings
+from Star_Utils import Cog, Settings  # Use Star_Utils for Cog and Settings
 import discord
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from discord.utils import utcnow
 
-class OwnerProtection(Cog):  # Inherit from Cog in Star-Utils
+class OwnerProtection(Cog):  # Inherit from Cog in Star_Utils
     """A cog to protect the bot owner/trusted owners from being muted, timed out, kicked, or banned."""
 
     def __init__(self, bot: Red):

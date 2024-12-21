@@ -1,7 +1,7 @@
 from starbot.core import commands
 from starbot.core.bot import Red
 import typing
-from Star-Utils import Cog
+from Star_Utils import Cog
 def dashboard_page(*args, **kwargs):
     def decorator(func: typing.Callable):
         func.__dashboard_decorator_params__ = (args, kwargs)

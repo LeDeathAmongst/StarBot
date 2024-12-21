@@ -5,7 +5,7 @@ import discord
 import asyncio
 import json
 from starbot.core.data_manager import bundled_data_path
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class Holidays(Cog):
     """Cog to interact with the Nager.Date API to fetch public holidays."""

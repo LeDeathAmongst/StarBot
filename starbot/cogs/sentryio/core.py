@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from typing import Mapping, Optional
-from Star-Utils import Cog
+from Star_Utils import Cog
 import discord
 import sentry_sdk
 from starbot.core import checks, commands

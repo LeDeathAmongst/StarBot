@@ -47,7 +47,7 @@ from .errors import MissingTagPermissions, TagCharacterLimitReached
 from .mixins import Commands, OwnerCommands, Processor
 from .objects import Tag
 from .utils import RequesterType
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 log: logging.Logger = logging.getLogger("red.seina.tags")
 

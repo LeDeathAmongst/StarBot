@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # stdlib
 from time import sleep
 from random import choice as randchoice

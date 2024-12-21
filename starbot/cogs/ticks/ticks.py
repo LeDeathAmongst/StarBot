@@ -4,7 +4,7 @@ from discord.ext.commands import Context
 from difflib import get_close_matches
 import discord
 import random
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class Ticks(Cog):
     def __init__(self, bot: Red):

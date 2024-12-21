@@ -3,22 +3,22 @@ import importlib
 import sys
 
 try:
-    import Star-Utils  # Attempt to import Star-Utils
+    import Star_Utils  # Attempt to import Star_Utils
 except ModuleNotFoundError:
     raise errors.CogLoadError(
-        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star-Utils.git`. A restart of the bot isn't necessary."
+        "The needed utils to run the cog were not found. Please execute the command `[p]pipinstall git+https://github.com/LeDeathAmongst/Star_Utils.git`. A restart of the bot isn't necessary."
     )
 
-# Reload Star-Utils modules if they are already loaded
+# Reload Star_Utils modules if they are already loaded
 modules = sorted(
-    [module for module in sys.modules if module.split(".")[0] == "Star-Utils"], reverse=True
+    [module for module in sys.modules if module.split(".")[0] == "Star_Utils"], reverse=True
 )
 for module in modules:
     try:
         importlib.reload(sys.modules[module])
     except ModuleNotFoundError:
         pass
-del Star-Utils
+del Star_Utils
 
 # Import Red and get_end_user_data_statement
 from starbot.core.bot import Red  # isort:skip

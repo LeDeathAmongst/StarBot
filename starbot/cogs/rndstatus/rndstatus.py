@@ -7,7 +7,7 @@ from collections import defaultdict
 import contextlib
 import asyncio
 import logging
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 log = logging.getLogger("red.aikaterna.rndstatus")

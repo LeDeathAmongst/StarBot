@@ -32,7 +32,7 @@ from ._tagscript import TAGSCRIPT_LIMIT, TagCharacterLimitReached, boosted, unbo
 from .abc import CompositeMetaClass
 from .commands.message import MessageCommands
 from .events import EventMixin
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class BoostUtils(
     Cog,

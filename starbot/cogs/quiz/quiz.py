@@ -7,7 +7,7 @@ import logging
 import math
 import random
 import time
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 from starbot.core import bank, checks, commands, Config
 from starbot.core.errors import BalanceTooHigh

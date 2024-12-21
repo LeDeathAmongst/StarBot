@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from typing import Union
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 from starbot.core import Config, commands

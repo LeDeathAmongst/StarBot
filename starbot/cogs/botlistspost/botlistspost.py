@@ -3,7 +3,7 @@ import contextlib
 import json
 import logging
 from typing import Dict
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import aiohttp
 import discord

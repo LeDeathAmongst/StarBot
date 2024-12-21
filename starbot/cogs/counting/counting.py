@@ -35,7 +35,7 @@ from starbot.core import Config, commands
 from starbot.core.utils.chat_formatting import box, humanize_number
 from starbot.core.utils.views import ConfirmView
 from tabulate import tabulate
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 log = logging.getLogger("red.maxcogs.counting")
 

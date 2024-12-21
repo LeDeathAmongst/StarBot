@@ -1,6 +1,6 @@
 import discord
 from starbot.core import app_commands, commands, Config
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class Gulag(Cog):

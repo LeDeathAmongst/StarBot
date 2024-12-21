@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 """AutoRoom cog for StarBot by PhasecoreX."""
 
 from abc import ABC

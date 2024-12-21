@@ -43,7 +43,7 @@ from starbot.core.bot import Red
 from starbot.core.data_manager import bundled_data_path, cog_data_path
 from starbot.core.utils.chat_formatting import box, humanize_list, pagify
 from starbot.core.utils.views import SimpleMenu
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 from .constants import EXP_MULTIPLIER, MAX_EXP, MAX_LEVEL, MIN_EXP, SWORDS
 from .converters import EmojiConverter
 from .game import Game

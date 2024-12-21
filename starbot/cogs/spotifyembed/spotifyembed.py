@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # from starbot.core import Config
 from starbot.core import Config, commands, checks
 import asyncio

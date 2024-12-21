@@ -4,7 +4,7 @@ from starbot.core import commands, Config
 from starbot.core.bot import Red
 from copy import copy
 import re
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class InlineCommands(Cog):

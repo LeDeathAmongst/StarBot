@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from starbot.core import commands, Config
 from .dashboard_integration import DashboardIntegration
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class COC(DashboardIntegration, Cog):  # Subclass ``DashboardIntegration``.
     def __init__(self, bot):

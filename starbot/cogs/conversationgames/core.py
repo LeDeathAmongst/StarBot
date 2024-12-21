@@ -37,7 +37,7 @@ from starbot.core.utils.chat_formatting import humanize_list
 from .constants import Endpoints, Ratings
 from .http import TruthOrDareAPIClient
 from .views import CGView
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 log: logging.Logger = logging.getLogger("red.seina.conversationgames")
 
 

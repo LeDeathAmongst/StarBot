@@ -7,7 +7,7 @@ from typing import Union
 import asyncio, os
 from .game import MonopolyGame
 from .views import GetPlayersView
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 #temp imports for backwards compatibility
 from starbot.core.data_manager import cog_data_path

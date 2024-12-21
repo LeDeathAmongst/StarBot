@@ -6,7 +6,7 @@ import asyncio
 from .game import BattleshipGame
 from .ai import BattleshipAI
 from .views import ConfirmView, GetPlayersView
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 
 class Battleship(Cog):

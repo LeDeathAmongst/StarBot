@@ -1,4 +1,4 @@
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # Developed by Redjumpman for starbot.
 # Inspired by the snail race mini game.
 

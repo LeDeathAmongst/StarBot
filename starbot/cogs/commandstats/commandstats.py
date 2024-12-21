@@ -5,7 +5,7 @@ from collections import OrderedDict
 from copy import deepcopy
 from io import StringIO
 from typing import Counter, Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 import pandas

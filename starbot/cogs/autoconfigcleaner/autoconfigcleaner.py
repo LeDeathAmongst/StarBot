@@ -3,7 +3,7 @@ import asyncio
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from datetime import datetime, timedelta
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class AutoConfigCleaner(Cog):
     """Automatically deletes server configurations 15 minutes after the bot leaves the server."""

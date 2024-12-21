@@ -1,7 +1,7 @@
 import re
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Union
-from Star-Utils import Cog
+from Star_Utils import Cog
 import discord
 import pytz
 from dateutil import parser

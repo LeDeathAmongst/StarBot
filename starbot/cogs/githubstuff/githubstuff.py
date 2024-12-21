@@ -1,4 +1,4 @@
-from Star-Utils import Cog
+from Star_Utils import Cog
 import discord
 from github import Github
 from starbot.core import commands, Config

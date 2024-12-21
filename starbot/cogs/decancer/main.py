@@ -13,7 +13,7 @@ from starbot.core.bot import Red
 from starbot.core.utils.chat_formatting import box, humanize_timedelta
 from starbot.core.utils.menus import start_adding_reactions
 from starbot.core.utils.predicates import ReactionPredicate
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 from .randomnick import properNouns
 
 log = logging.getLogger("red.unknown.decancer")

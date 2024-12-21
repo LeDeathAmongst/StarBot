@@ -1,5 +1,5 @@
 from __future__ import annotations
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import types
 from typing import TYPE_CHECKING, Callable, Dict, List, Optional, Union

@@ -3,7 +3,7 @@ from typing import Optional
 
 import discord
 from starbot.core import Config, checks, commands
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 DEF_GUILD = {
     "report_channel": None,

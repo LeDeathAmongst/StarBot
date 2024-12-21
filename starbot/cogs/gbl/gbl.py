@@ -1,7 +1,7 @@
 import discord
 from starbot.core import commands, Config, app_commands
 from starbot.core.bot import Red
-from Star-Utils import Cog, CogsUtils, Settings, Buttons, Menu
+from Star_Utils import Cog, CogsUtils, Settings, Buttons, Menu
 import sqlite3
 import asyncio
 import os

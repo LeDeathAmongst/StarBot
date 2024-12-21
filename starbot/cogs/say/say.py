@@ -7,7 +7,7 @@ from typing import List, Dict
 
 from fuzzywuzzy import process
 
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 
 class Say(Cog):

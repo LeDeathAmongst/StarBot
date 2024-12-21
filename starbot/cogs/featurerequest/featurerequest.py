@@ -2,7 +2,7 @@ import json
 import os
 import discord
 import uuid
-from Star-Utils import Cog
+from Star_Utils import Cog
 from starbot.core import commands, Config
 from starbot.core.bot import Red
 from discord.ext import commands as ext_commands

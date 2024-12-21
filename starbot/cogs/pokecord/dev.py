@@ -1,7 +1,7 @@
 import json
 import pprint
 from typing import Optional
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 import discord
 import tabulate

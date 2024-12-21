@@ -1,7 +1,7 @@
 import asyncio
 import itertools
 import typing
-from Star-Utils import Cog
+from Star_Utils import Cog
 import discord
 from discord.ext import tasks
 from starbot.core import Config, commands

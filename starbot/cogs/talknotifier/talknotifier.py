@@ -6,7 +6,7 @@ import time
 import typing as t
 import wtforms
 import logging
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 # Set up logging
 logger = logging.getLogger("TalkNotifier")

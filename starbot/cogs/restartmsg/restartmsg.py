@@ -2,7 +2,7 @@ import os
 import sys
 from starbot.core import commands, Config
 import discord
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class RestartMsg(Cog):
     def __init__(self, bot):

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 # Copyright 2018-present Jakub Kuczys (https://github.com/Jackenmen)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

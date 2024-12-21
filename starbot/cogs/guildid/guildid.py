@@ -2,7 +2,7 @@ import discord
 from discord import Embed
 from datetime import datetime
 from starbot.core import commands
-from Star-Utils import Cog, CogsUtils
+from Star_Utils import Cog, CogsUtils
 
 class GuildID(Cog):
     def __init__(self, bot):

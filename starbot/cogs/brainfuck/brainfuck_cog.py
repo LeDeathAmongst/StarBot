@@ -1,7 +1,7 @@
 import discord
 import argparse
 from starbot.core import commands
-from Star-Utils import Cog
+from Star_Utils import Cog
 from .dashboard_integration import DashboardIntegration
 
 class brainfuck(Cog):

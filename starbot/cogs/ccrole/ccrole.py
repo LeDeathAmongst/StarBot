@@ -9,7 +9,7 @@ from starbot.core import Config, checks, commands
 from starbot.core.bot import Red
 from starbot.core.utils.chat_formatting import box, pagify
 from starbot.core.utils.mod import get_audit_reason
-from Star-Utils import Cog
+from Star_Utils import Cog
 
 log = logging.getLogger("red.star.ccrole")
 

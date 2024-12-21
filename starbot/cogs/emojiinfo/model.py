@@ -1,5 +1,5 @@
 import json
-from Star-Utils import Cog
+from Star_Utils import Cog
 import discord
 from starbot.core import commands, data_manager
 

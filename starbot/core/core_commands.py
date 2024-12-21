@@ -477,6 +477,22 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         red_version = "[`{}`]({})".format(__version__, bot_repo)
         bot_name = self.bot.user.name
 
+        try:
+            kuro = await self.bot.fetch_user(USER_ID_KURO)
+            kuro_name = str(kuro)
+        except discord.NotFound:
+            kuro_name = "User not found"
+        except discord.HTTPException as e:
+            kuro_name = f"Error fetching user: {e}"
+
+        try:
+            lamune = await self.bot.fetch_user(USER_ID_LAMUNE)
+            lamune_name = str(lamune)
+        except discord.NotFound:
+            lamune_name = "User not found"
+        except discord.HTTPException as e:
+            lamune_name = f"Error fetching user: {e}"
+
         # Fetch the user object using the user ID
         try:
             user = await self.bot.fetch_user(USER_ID)
@@ -489,7 +505,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         embed = discord.Embed(title="Various Versions")
         embed.add_field(
             name="Python Version",
-            value=f"<a:Python:1292312029134192650> {python_version}",
+            value=f"{python_version}",
             inline=True,
         )
         embed.add_field(
@@ -499,7 +515,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         )
         embed.add_field(
             name="Discord.py Version",
-            value=f"<:dpy:1292313742167511080> {dpy_version}",
+            value=f"{dpy_version}",
             inline=True,
         )
         embed.add_field(
@@ -522,9 +538,10 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         rosie = "https://github.com/LeDeathAmongst"
         fb_server = "https://discord.gg/HXdan6NnfJ"
         about = (
-            f"{bot_name} is a purchased bot made by {rosie} for {user_name}! \n\n"
+            f"{bot_name} is a purchased bot made by {kuro} for {user_name}! \n\n"
             f"{bot_name} is a modified version of [Starfire](https://discord.com/oauth2/authorize?client_id=1275521742961508432),\n"
-            f" made for {user_name}. You can get your own version at [the shop]({fb_server})!"
+            f" made for {user_name}. You can get your own version at [the shop]({fb_server})!\n"
+            f"{bot_name} is legal property of LeDeathAmongst ({lamune} and {kuro} owned)"
         )
         embed.add_field(name=f"About {bot_name}", value=about, inline=False)
 
@@ -532,7 +549,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         server_invite = await self.bot.get_support_server_url()
         links = f"[Install {bot_name}]({bot_install})"
         if server_invite:
-            links += f" | [Support Server]({server_invite})"
+            links += f"[Support Server]({server_invite})"
         embed.add_field(name="Links", value=links, inline=False)
 
         embed.set_image(
@@ -575,13 +592,21 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         except discord.HTTPException as e:
             lamune_name = f"Error fetching user: {e}"
 
+        try:
+            user = await self.bot.fetch_user(USER_ID)
+            user_name = user.name
+        except discord.NotFound:
+            user_name = "User not found"
+        except discord.HTTPException as e:
+            user_name = f"Error fetching user: {e}"
+
         embeds = []
         embed = discord.Embed(
             color=await ctx.embed_color(),
             title=f"{bot_name}'s Credits",
             description=f"Credits for all people and services that help {bot_name} exist.\n{timestamp}",
         )
-        embed.set_thumbnail(url=self.bot.user.avatar.url)
+        embed.set_thumbnail(url=self.bot.user.avatar.display_url)
         embed.set_footer(text=f"{bot_name} exists since {timestamp}")
         embed.add_field(
             name=f"{bot_name}",

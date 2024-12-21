@@ -1,3 +1,0 @@
-   files:
-     - source: "/**/*.py"
-       translation: "/%original_path%/locales/%locale%.po"

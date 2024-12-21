@@ -17,6 +17,7 @@ Red-Commons
 Red-Lavalink
 rich
 schema
+tabulate
 typing_extensions
 yarl
 distro; sys_platform == "linux"

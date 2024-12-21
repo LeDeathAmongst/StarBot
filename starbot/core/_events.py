@@ -30,7 +30,6 @@ from .utils._internal_utils import (
     fuzzy_command_search,
     format_fuzzy_results,
     expected_version,
-    fetch_latest_red_version_info,
     send_to_owners_with_prefix_replaced,
 )
 from .utils.chat_formatting import box as code, error as cross, format_perms_list
@@ -211,8 +210,6 @@ def init_events(bot, cli_flags):
         if bot.intents.members:
             table_counts.add_row("Total Users", str(users))
         table_counts.add_row("Unique Users", str(unique_users))
-
-        pypi_version, py_version_req = await fetch_latest_red_version_info()
 
         rich_console = rich.get_console()
         rich_console.print(INTRO, style="dark_slate_gray2", markup=False, highlight=False)

@@ -75,6 +75,9 @@ from .commands import CommandConverter, CogConverter
 from .commands.requires import PrivilegeLevel
 from .commands.help import HelpMenuSetting
 
+USER_ID = 1269563963994280038
+
+
 _entities = {
     "*": "&midast;",
     "\\": "&bsol;",
@@ -471,7 +474,6 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
         dpy_version = "[`{}`]({})".format(discord.__version__, dpy_repo)
         red_version = "[`{}`]({})".format(__version__, bot_repo)
         bot_name = self.bot.user.name
-        USER_ID = 1269563963994280038
 
         user = await self.bot.fetch_user(USER_ID)
         user_name = user.name

@@ -606,7 +606,7 @@ class Core(commands.commands._RuleDropper, commands.Cog, CoreLogic):
             title=f"{bot_name}'s Credits",
             description=f"Credits for all people and services that help {bot_name} exist.\n{timestamp}",
         )
-        embed.set_thumbnail(url=self.bot.user.avatar.display_url)
+        embed.set_thumbnail(url=self.bot.user.avatar.url)
         embed.set_footer(text=f"{bot_name} exists since {timestamp}")
         embed.add_field(
             name=f"{bot_name}",

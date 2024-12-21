@@ -1,0 +1,11 @@
+{
+    "author": ["Star"],
+    "name": "GlobalBanList",
+    "install_msg": "Thank you for installing the GlobalBanList cog!\nDo `[p]help GlobalBanList` to get the list of commands and their description. If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>)\nIf you like my work, [donate me!](<https://ko-fi.com/starcogs>)\n\nThis cog provides a powerful global ban list system with appeal functionality across multiple Discord servers!",
+    "requirements": [
+        "git+https://github.com/LeDeathAmongst/Star_Utils.git"
+    ],
+    "min_bot_version": "3.5.9",
+    "end_user_data_statement": "This cog stores user IDs for banned users and their associated ban reasons. It also temporarily stores appeal information submitted by users.",
+    "hidden": false
+}

@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slash Commands and Interactions &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Publishing cogs for Red V3" href="guide_publish_cogs.html" />
+    <link rel="prev" title="Creating cogs for Red V3" href="guide_cog_creation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Slash Commands and Interactions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slash-commands-and-arguments">Slash Commands and Arguments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decorators">Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#groups-subcommands">Groups &amp; Subcommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hybrid-commands">Hybrid Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#context-menu-commands">Context Menu Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#closing-words-and-further-reading">Closing Words and Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Slash Commands and Interactions</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developguide_slash_and_interactions.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="slash-commands-and-interactions">
+<h1>Slash Commands and Interactions<a class="headerlink" href="#slash-commands-and-interactions" title="Link to this heading"></a></h1>
+<p>This guide is going to cover on how to write a simple slash command into a Red cog.
+This guide will assume that you have a working basic cog.
+If you do not have a basic cog, please refer to the <a class="reference internal" href="getting_started.html#getting-started"><span class="std std-ref">getting started</span></a> guide.
+It is also adviced to make yourself familiar with <a class="reference external" href="https://discord.com/developers/docs/interactions/application-commands">Application Commands</a> from Discord’s documentation.</p>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p>To start off, we will have to import some additional modules to our cog file.
+We will be using the <code class="docutils literal notranslate"><span class="pre">starbot.core.app_commands</span></code> module to create our slash commands.
+Once we have imported the module, we can start creating our slash commands in our cog class.
+For this example we will use a basic hello world command.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Go ahead and load your cog. Once it is loaded, we will have to enable and sync our slash commands.
+We can do this by using the <a class="reference internal" href="cog_guides/core.html#core-command-slash"><span class="std std-ref">[p]slash</span></a> command to manage our slash commands.
+Once you have registered your slash commands, you can test them out by typing <code class="docutils literal notranslate"><span class="pre">/hello</span></code> in your server.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You may need to restart your Discord client with <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">R</span></code> (or your device’s equivalent) to force
+your client to see the new command after syncing.</p>
+</div>
+</section>
+<section id="slash-commands-and-arguments">
+<h2>Slash Commands and Arguments<a class="headerlink" href="#slash-commands-and-arguments" title="Link to this heading"></a></h2>
+<p>There is a lot of flexibility when it comes to slash commands.
+Below we will go over some of the different stuff you can do with slash commands.</p>
+<section id="decorators">
+<h3>Decorators<a class="headerlink" href="#decorators" title="Link to this heading"></a></h3>
+<p>Just like with text commands, we can use decorators to modify the behaviour of our slash commands.
+For example, we can use the <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#discord.app_commands.guild_only" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">app_commands.guild_only()</span></code></a> decorator to make our slash command only work in guilds.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">guild_only</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>One of the more useful decorators is the <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#discord.app_commands.choices" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">app_commands.choices()</span></code></a> decorator.
+This decorator allows us to specify a list of choices for a specific argument.
+This is useful for arguments that have a limited number of options.
+For example, we can use this to create a command that allows us to choose between two different colors.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;The color you want to choose&quot;</span><span class="p">)</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span>
+         <span class="n">app_commands</span><span class="o">.</span><span class="n">Choice</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">),</span>
+         <span class="n">app_commands</span><span class="o">.</span><span class="n">Choice</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">),</span>
+    <span class="p">])</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">app_commands</span><span class="o">.</span><span class="n">Choice</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Your color is </span><span class="si">{</span><span class="n">color</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The user will be shown the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the choice, and the argument will be passed a
+<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#discord.app_commands.Choice" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">app_commands.Choice</span></code></a> object with the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code> associated with that choice.
+This allows user-facing names to be prettier than what is actually processed by the command.</p>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">Literal</span></code> can be used if the argument does not need a different
+user-facing label. When done this way, the resulting parameter will be one of
+the literal values listed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Literal</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;The color you want to choose&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="s2">&quot;Blue&quot;</span><span class="p">]):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Your color is </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, an <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">enum.Enum</span></code></a> subclass can be used to specify choices. When done this way, the
+resulting parameter will be an instance of that enum, rather than <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#discord.app_commands.Choice" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">app_commands.Choice</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">Red</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+    <span class="n">Blue</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;The color you want to choose&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Color</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Your color is </span><span class="si">{</span><span class="n">color</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Check out <a class="extlink-dpy_docs reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#decorators">the full reference of decorators at Discord.py’s documentation</a>.</p>
+</section>
+<section id="groups-subcommands">
+<h3>Groups &amp; Subcommands<a class="headerlink" href="#groups-subcommands" title="Link to this heading"></a></h3>
+<p>Slash commands can also be grouped together into groups and subcommands.
+These can be used to create a more complex command structure.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unlike text command groups, top level slash command groups <strong>cannot</strong> be invoked.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="n">zoo</span> <span class="o">=</span> <span class="n">app_commands</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;zoo&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Zoo related commands&quot;</span><span class="p">)</span>
+
+    <span class="nd">@zoo</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;add&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Add an animal to the zoo&quot;</span><span class="p">)</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">animal</span><span class="o">=</span><span class="s2">&quot;The animal you want to add&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">zoo_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">animal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Added </span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2"> to the zoo&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nd">@zoo</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;remove&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Remove an animal from the zoo&quot;</span><span class="p">)</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">animal</span><span class="o">=</span><span class="s2">&quot;The animal you want to remove&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">zoo_remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">animal</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removed </span><span class="si">{</span><span class="n">animal</span><span class="si">}</span><span class="s2"> from the zoo&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="arguments">
+<h3>Arguments<a class="headerlink" href="#arguments" title="Link to this heading"></a></h3>
+<p>As shown in some of the above examples, we can amplify our slash commands with arguments.
+However with slash commands Discord allows us to do a few more things.
+Such as specifically select a channel that we’d like to use in our commands,
+we can do the same with roles and members.
+Let’s take a look at how we can do that.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="s2">&quot;The channel you want to mention&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">mentionchannel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">GuildChannel</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;That channel is </span><span class="si">{</span><span class="n">channel</span><span class="o">.</span><span class="n">mention</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">&quot;The role you want to mention&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">mentionrole</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">role</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Role</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;That role is </span><span class="si">{</span><span class="n">role</span><span class="o">.</span><span class="n">mention</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">member</span><span class="o">=</span><span class="s2">&quot;The member you want to mention&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">mentionmember</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">member</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;That member is </span><span class="si">{</span><span class="n">member</span><span class="o">.</span><span class="n">mention</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you try out the mentionchannel command, you will see that it currently accepts any type of channel,
+however let’s say we want to limit this to voice channels only.
+We can do so by adjusting our type hint to <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.VoiceChannel" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">discord.VoiceChannel</span></code></a> instead of <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.GuildChannel" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">discord.abc.GuildChannel</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="s2">&quot;The channel you want to mention&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">mentionchannel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;That channel is </span><span class="si">{</span><span class="n">channel</span><span class="o">.</span><span class="n">mention</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With integer and float arguments, we can also specify a minimum and maximum value.
+This can also be done to strings to set a minimum and maximum length.
+These limits will be reflected within Discord when the user is filling out the command.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@app_commands</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">number</span><span class="o">=</span><span class="s2">&quot;The number you want to say, max 10&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">saynumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">number</span><span class="p">:</span> <span class="n">app_commands</span><span class="o">.</span><span class="n">Range</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">10</span><span class="p">]):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Your number is </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See the <a class="reference external" href="https://discordpy.readthedocs.io/en/stable/interactions/api.html#range">Discord.py documentation</a> for more information on this.</p>
+</section>
+</section>
+<section id="hybrid-commands">
+<h2>Hybrid Commands<a class="headerlink" href="#hybrid-commands" title="Link to this heading"></a></h2>
+<p>Hybrid commands are a way to bridge the gap between text commands and slash commands.
+These types of commands allow you to write a text and slash command simultaneously using the same function.
+This is useful for commands that you want to be able to use in both text and slash commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As with slash command groups, top level hybrid command groups <strong>cannot</strong> be invoked as a slash command. They can however be invoked as a text command.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">hybrid_command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">cat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Meow&quot;</span><span class="p">)</span>
+
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">hybrid_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;dog&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">dog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Woof&quot;</span><span class="p">)</span>
+        <span class="c1"># As discussed above, top level hybrid command groups cannot be invoked as a slash command.</span>
+        <span class="c1"># Thus, this will not work as a slash command.</span>
+
+    <span class="nd">@dog</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;bark&quot;</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Bark&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After syncing your cog via the <a class="reference internal" href="cog_guides/core.html#core-command-slash"><span class="std std-ref">[p]slash</span></a> command, you’ll be able to use the commands as both a slash and text command.</p>
+</section>
+<section id="context-menu-commands">
+<h2>Context Menu Commands<a class="headerlink" href="#context-menu-commands" title="Link to this heading"></a></h2>
+<p>Context menu commands are a way to provide a interaction via the context menu.
+These are seen under <code class="docutils literal notranslate"><span class="pre">Apps</span></code> in the Discord client when you right click on a message or user.
+Context menu commands are a great way to provide a quick way to interact with your bot.
+These commands accept one arguement, the contextual <code class="docutils literal notranslate"><span class="pre">user</span></code> or <code class="docutils literal notranslate"><span class="pre">message</span></code> that was right clicked.</p>
+<p>Setting up context commands is a bit more involved then setting up slash commands.
+First lets setup our context commands in our cog.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">app_commands</span>
+
+
+<span class="c1"># Important: we&#39;re building the commands outside of our cog class.</span>
+<span class="nd">@app_commands</span><span class="o">.</span><span class="n">context_menu</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Get message ID&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_message_id</span><span class="p">(</span><span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Message ID: </span><span class="si">{</span><span class="n">message</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nd">@app_commands</span><span class="o">.</span><span class="n">context_menu</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Get user ID&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_user_id</span><span class="p">(</span><span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;User ID: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once we’ve prepared our main cog file, we have to add a small bit of code to our <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.my_cog</span> <span class="kn">import</span> <span class="n">get_message_id</span><span class="p">,</span> <span class="n">get_user_id</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">bot</span><span class="p">):</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">get_message_id</span><span class="p">)</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">get_user_id</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="n">bot</span><span class="p">):</span>
+    <span class="c1"># We&#39;re removing the commands here to ensure they get unloaded properly when the cog is unloaded.</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">remove_command</span><span class="p">(</span><span class="s2">&quot;Get message ID&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">AppCommandType</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">remove_command</span><span class="p">(</span><span class="s2">&quot;Get user ID&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">AppCommandType</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we’re ready to sync our commands to Discord.
+We can do this by using the <a class="reference internal" href="cog_guides/core.html#core-command-slash"><span class="std std-ref">[p]slash</span></a> command.
+Take note of the specific arguments you have to use to sync a context command.</p>
+</section>
+<section id="closing-words-and-further-reading">
+<h2>Closing Words and Further Reading<a class="headerlink" href="#closing-words-and-further-reading" title="Link to this heading"></a></h2>
+<p>If you’re reading this, it means that you’ve made it to the end of this guide.
+Congratulations! You are now prepared with the basics of slash commands for Red.
+However there is a lot we didn’t touch on in this guide.
+Below this paragraph you’ll find a list of resources that you can use to learn more about slash commands.
+As always, if you have any questions, feel free to ask in the <a class="reference external" href="https://discord.gg/red">Red support server</a>.</p>
+<p>For more information on <a class="reference external" href="https://discord.com/developers/docs/interactions/application-commands">Application Commands</a> as a whole, please refer to the official Discord documentation.
+Discord.py also offers documentation regarding everything discussed on this page.
+You can find the documentation <a class="reference external" href="https://discordpy.readthedocs.io/en/stable/interactions/api.html">here</a>.
+And lastly, AbstractUmbra has a great write up of <a class="reference external" href="https://gist.github.com/AbstractUmbra/a9c188797ae194e592efe05fa129c57f">examples</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="guide_cog_creation.html" class="btn btn-neutral float-left" title="Creating cogs for Red V3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="guide_publish_cogs.html" class="btn btn-neutral float-right" title="Publishing cogs for Red V3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

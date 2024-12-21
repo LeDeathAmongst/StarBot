@@ -1,0 +1,86 @@
+# Bulgarian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 03:56+0100\n"
+"PO-Revision-Date: 2024-10-14 03:57+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bg\n"
+"Language-Team: bg <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: devutils.py:38
+msgid "No valid log level provided."
+msgstr "Не е предоставено валидно ниво на регистрационен файл."
+msgstr ""
+
+#: devutils.py:59
+msgid "No valid discord object provided."
+msgstr "Не е предоставен валиден обект на раздор."
+msgstr ""
+
+#: devutils.py:112 devutils.py:171 devutils.py:182
+msgid "You have not specified a correct command."
+msgstr "Не сте посочили правилна команда."
+msgstr ""
+
+#: devutils.py:116 devutils.py:186
+msgid "You can't execute yourself this command."
+msgstr "Не можете сами да изпълните тази команда."
+msgstr ""
+
+#: devutils.py:138 devutils.py:153
+msgid "`{command}` isn't a valid command."
+msgstr "`{command}` не е валидна команда."
+msgstr ""
+
+#: devutils.py:143 devutils.py:158
+msgid "You can't execute yourself `{command}`."
+msgstr "Не можете да изпълните сами `{command}`."
+msgstr ""
+
+#: devutils.py:191
+msgid "Command `{command}` finished in `{timing}`s."
+msgstr "Командата `{command}` приключи след `{timing}`."
+msgstr ""
+
+#: devutils.py:213
+msgid "The command isn't valid."
+msgstr "Командата не е валидна."
+msgstr ""
+
+#: devutils.py:217
+msgid "This command can't be executed."
+msgstr "Тази команда не може да бъде изпълнена."
+msgstr ""
+
+#: devutils.py:236
+msgid "Logger `{logger_name}` level set to `{level}`."
+msgstr "Нивото на регистратора `{logger_name}` е зададено на `{level}`."
+msgstr ""
+
+#: devutils.py:268
+msgid "I couldn't find any module with this name."
+msgstr "Не можах да намеря нито един модул с това име."
+msgstr ""
+
+#: devutils.py:272
+msgid "Module(s) {modules} reloaded."
+msgstr "Модулът(ите) {modules} са презаредени."
+msgstr ""
+
+#: devutils.py:277
+msgid "Modules [...] reloaded."
+msgstr "Модулите [...] презаредени."
+msgstr ""
+

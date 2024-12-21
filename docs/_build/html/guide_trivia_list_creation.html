@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia List Creation Guide &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started" href="getting_started.html" />
+    <link rel="prev" title="Permissions Cog Reference" href="cog_permissions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Trivia List Creation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#author-field">Author Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-field">Description Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#questions-and-answers">Questions and Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-custom-overrides">Optional: Custom Overrides</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Trivia List Creation Guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developguide_trivia_list_creation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="trivia-list-creation-guide">
+<span id="guide-trivia-list-creation"></span><h1>Trivia List Creation Guide<a class="headerlink" href="#trivia-list-creation-guide" title="Link to this heading"></a></h1>
+<p>The Trivia cog allows you to create your own “trivia lists”,
+which are then processed in the cog - allowing you to create as
+many questions as you’d like, with easy to use syntax.</p>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p>Let’s start off by creating a file named <code class="docutils literal notranslate"><span class="pre">mytrivia.yaml</span></code>.
+Our trivia list will be named after the file, so in this case,
+it will be called <code class="docutils literal notranslate"><span class="pre">mytrivia</span></code>.</p>
+</section>
+<section id="author-field">
+<h2>Author Field<a class="headerlink" href="#author-field" title="Link to this heading"></a></h2>
+<p>We should first include an <code class="docutils literal notranslate"><span class="pre">AUTHOR</span></code> field,
+to let the user know who wrote the questions.</p>
+<p>When the user starts the trivia, the author(s) will
+be sent in the starting message (see below).</p>
+<img alt="_images/trivia_author.png" src="_images/trivia_author.png" />
+<p>The following should be placed at the top of your file, replacing “Red”
+with your name:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">AUTHOR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Red</span>
+</pre></div>
+</div>
+<p>If there are multiple authors, we can separate them with commas.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">AUTHOR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Red, Rojo, Rouge</span>
+</pre></div>
+</div>
+</section>
+<section id="description-field">
+<h2>Description Field<a class="headerlink" href="#description-field" title="Link to this heading"></a></h2>
+<p>We can also add an optional <code class="docutils literal notranslate"><span class="pre">DESCRIPTION</span></code> to our trivia list, which
+will show from the output of <code class="docutils literal notranslate"><span class="pre">[p]trivia</span> <span class="pre">info</span> <span class="pre">&lt;category&gt;</span></code>. The
+description should indicate to the user what the trivia list is
+about and what kind of questions they can expect to face.</p>
+<p>For example, if you were writing a logo quiz trivia list, you could
+create a description like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">AUTHOR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kreusada</span>
+<span class="nt">DESCRIPTION</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">  </span><span class="no">A quiz to test your logo knowledge to the limit. This trivia</span>
+<span class="w">  </span><span class="no">will send image URLs and ask you to identify the company&#39;s name</span>
+<span class="w">  </span><span class="no">from the logo that is sent.</span>
+</pre></div>
+</div>
+</section>
+<section id="questions-and-answers">
+<h2>Questions and Answers<a class="headerlink" href="#questions-and-answers" title="Link to this heading"></a></h2>
+<p>Writing questions and answers is simple. Once you’ve finished your
+<code class="docutils literal notranslate"><span class="pre">AUTHOR</span></code> field and <code class="docutils literal notranslate"><span class="pre">DESCRIPTION</span></code> field, you can move on to your questions
+just below.</p>
+<p>Questions should consist of at least one answer, with other
+possible answers included if necessary. You must put a colon at the end
+of the question, for example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">How many days are there in a regular year?</span><span class="p p-Indicator">:</span>
+</pre></div>
+</div>
+<p>Answers will follow below, each separated by a line break and with a
+hyphen at the start of the line.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">How many days are there in a regular year?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">365</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">three hundred and sixty five</span>
+</pre></div>
+</div>
+<p>It’s always nice to include alternative answers if a question needs it.
+We can add as many valid answers as we’d like below this question. Answers
+are <strong>NOT</strong> case sensitive, so you don’t need to worry about adding the same
+answer multiple times in different casings.</p>
+<p>There are multiple special characters in YAML, such as colons, hashtags, hyphens
+and more. If these characters are included within our questions or answers,
+you’ll need to enclose the content with quotation marks.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;Who</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">#1</span><span class="nv"> </span><span class="s">followed</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Twitter?&quot;</span><span class="p p-Indicator">:</span>
+</pre></div>
+</div>
+<p>If we didn’t have these quotation marks, the question would not render.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Who is the</span><span class="w"> </span><span class="c1">#1 followed user on Twitter?:</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We can also include line breaks within our questions by using <code class="docutils literal notranslate"><span class="pre">\n</span></code>, like
+this for example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;My</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">line\nMy</span><span class="nv"> </span><span class="s">second</span><span class="nv"> </span><span class="s">line&quot;</span><span class="p p-Indicator">:</span>
+</pre></div>
+</div>
+</div>
+<p>As you’ve added more questions, your file should look something like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">AUTHOR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Red</span>
+<span class="nt">DESCRIPTION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A general quiz to test your knowledge.</span>
+<span class="l l-Scalar l-Scalar-Plain">How many days are there in a regular year?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">365</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">three hundred and sixty five</span>
+<span class="s">&quot;Who</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">#1</span><span class="nv"> </span><span class="s">followed</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Twitter?&quot;</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Barack Obama</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Obama</span>
+<span class="l l-Scalar l-Scalar-Plain">What is the only sea without any coasts?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sargasso</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sargasso Sea</span>
+<span class="l l-Scalar l-Scalar-Plain">Who won the Premier League in 2015?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Chelsea</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chelsea f.c.</span>
+<span class="l l-Scalar l-Scalar-Plain">How much money is a US Olympic gold medalist awarded?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$37,500</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">37,500</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">37.5k</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">37500</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$37500</span>
+</pre></div>
+</div>
+<p>You can keep adding questions until you are satisfied, and then you can upload and
+play your very own trivia! See <a class="reference internal" href="cog_guides/trivia.html#trivia-command-triviaset-custom"><span class="std std-ref">[p]triviaset custom</span></a> for more information.</p>
+<p>Still stuck? Take a look at
+<a class="reference external" href="https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop/starbot/cogs/trivia/data/lists">the core trivia lists</a>
+for reference.</p>
+</section>
+<section id="optional-custom-overrides">
+<h2>Optional: Custom Overrides<a class="headerlink" href="#optional-custom-overrides" title="Link to this heading"></a></h2>
+<p>Once you’ve got the hang of the question-answer format,
+you might want to add some custom overrides with the CONFIG key - in a similar way to the AUTHOR key.
+These will override the settings set with <a class="reference internal" href="cog_guides/trivia.html#trivia-command-triviaset"><span class="std std-ref">[p]triviaset</span></a>.
+For example, with a trivia list which has questions that are quick to answer you could decrease the time limit
+and require a higher score to win.</p>
+<p>Here are all the overrides available:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">CONFIG</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">bot_plays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true or false</span><span class="w">  </span><span class="c1"># bot gains points if no one answers correctly</span>
+<span class="w">    </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">positive number</span><span class="w">  </span><span class="c1"># answer time limit (seconds), must be greater than or equal to 4</span>
+<span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">positive number</span><span class="w">  </span><span class="c1"># timeout for no responses (seconds), must be greater than delay</span>
+<span class="w">    </span><span class="nt">max_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">positive integer</span><span class="w">  </span><span class="c1"># points required to win</span>
+<span class="w">    </span><span class="nt">reveal_answer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true or false</span><span class="w">  </span><span class="c1"># reveal answer on timeout</span>
+<span class="w">    </span><span class="nt">payout_multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">non-negative number</span><span class="w">  </span><span class="c1"># payout multiplier</span>
+<span class="w">    </span><span class="nt">use_spoilers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true or false</span><span class="w">  </span><span class="c1"># use spoilers in answers</span>
+</pre></div>
+</div>
+<p>So, your final file might look something like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">AUTHOR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Red</span>
+<span class="nt">CONFIG</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">bot_plays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">use_spoilers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="w">    </span><span class="nt">payout_multiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
+<span class="w">    </span><span class="nt">max_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="l l-Scalar l-Scalar-Plain">How many days are there in a regular year?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">365</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">three hundred and sixty five</span>
+<span class="s">&quot;Who</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">#1</span><span class="nv"> </span><span class="s">followed</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Twitter?&quot;</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Barack Obama</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Obama</span>
+<span class="l l-Scalar l-Scalar-Plain">What is the only sea without any coasts?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sargasso</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sargasso Sea</span>
+<span class="l l-Scalar l-Scalar-Plain">Who won the Premier League in 2015?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Chelsea</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chelsea f.c.</span>
+<span class="l l-Scalar l-Scalar-Plain">How much money is a US Olympic gold medallist awarded?</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$37,500</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">37,500</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">37.5k</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">37500</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$37500</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cog_permissions.html" class="btn btn-neutral float-left" title="Permissions Cog Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

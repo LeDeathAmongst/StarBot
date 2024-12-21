@@ -1,0 +1,18 @@
+{
+    "author": [
+        "Star"
+    ],
+    "description": "Simple Brainfuck Interpreter",
+    "hidden": false,
+    "install_msg": "Thanks for installing Brainfuck! For info on this cog, use `,help CogName`! \\nIf you want to help translate, go to my [crowdin](https://crowdin.com/project/Star-Cogs)\\nIf you like my work, [donate me!](https://ko-fi.com/starcogs) \\n\\nTo use it, either brainfuck something ([p]brainfuck <Text-input>), or Un-Brainfuck it ([p]unbrainfuck <Brainfuck-input>)!",
+    "short": "Brainfuck",
+    "end_user_data_statement": "",
+    "min_bot_version": "3.5.0",
+    "name": "Brainfuckcog",
+    "tags": [
+        "brainfuck",
+        "unbrainfuck",
+        "confuse"
+    ],
+    "requirements": []
+}

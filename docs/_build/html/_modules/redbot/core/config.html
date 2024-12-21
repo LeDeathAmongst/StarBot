@@ -1,0 +1,1916 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.config &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">starbot.core.config</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.config</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">collections.abc</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">weakref</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">AsyncContextManager</span><span class="p">,</span>
+    <span class="n">Awaitable</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Generator</span><span class="p">,</span>
+    <span class="n">MutableMapping</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">Type</span><span class="p">,</span>
+    <span class="n">TypeVar</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">._drivers</span> <span class="kn">import</span> <span class="n">BaseDriver</span><span class="p">,</span> <span class="n">ConfigCategory</span><span class="p">,</span> <span class="n">IdentifierData</span><span class="p">,</span> <span class="n">get_driver</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;ConfigCategory&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;IdentifierData&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Value&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Group&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Config&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;starbot.config&quot;</span><span class="p">)</span>
+
+<span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_T&quot;</span><span class="p">)</span>
+
+<span class="n">_config_cache</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">WeakValueDictionary</span><span class="p">()</span>
+<span class="n">_retrieved</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">WeakSet</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">ConfigMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    We want to prevent re-initializing existing config instances while having a singleton</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">cog_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">unique_identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">driver</span><span class="p">:</span> <span class="n">BaseDriver</span><span class="p">,</span>
+        <span class="n">force_registration</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">defaults</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="n">cog_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You must provide either the cog instance or a cog name.&quot;</span><span class="p">)</span>
+
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">cog_name</span><span class="p">,</span> <span class="n">unique_identifier</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">_config_cache</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">_config_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+        <span class="n">instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">ConfigMeta</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span>
+            <span class="n">cog_name</span><span class="p">,</span> <span class="n">unique_identifier</span><span class="p">,</span> <span class="n">driver</span><span class="p">,</span> <span class="n">force_registration</span><span class="p">,</span> <span class="n">defaults</span>
+        <span class="p">)</span>
+        <span class="n">_config_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">instance</span>
+        <span class="k">return</span> <span class="n">instance</span>
+
+
+<span class="k">def</span> <span class="nf">get_latest_confs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="s2">&quot;Config&quot;</span><span class="p">]:</span>
+    <span class="k">global</span> <span class="n">_retrieved</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">_config_cache</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">_retrieved</span><span class="p">)</span>
+    <span class="n">_retrieved</span> <span class="o">|=</span> <span class="n">ret</span>
+    <span class="c1"># noinspection PyTypeChecker</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">_ValueCtxManager</span><span class="p">(</span><span class="n">Awaitable</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">AsyncContextManager</span><span class="p">[</span><span class="n">_T</span><span class="p">]):</span>  <span class="c1"># pylint: disable=duplicate-bases</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Context manager implementation of config values.</span>
+
+<span class="sd">    This class allows mutable config values to be both &quot;get&quot; and &quot;set&quot; from</span>
+<span class="sd">    within an async context manager.</span>
+
+<span class="sd">    The context manager can only be used to get and set a mutable data type,</span>
+<span class="sd">    i.e. `dict`s or `list`s. This is because this class&#39;s ``raw_value``</span>
+<span class="sd">    attribute must contain a reference to the object being modified within the</span>
+<span class="sd">    context manager.</span>
+
+<span class="sd">    It should also be noted that the use of this context manager implies</span>
+<span class="sd">    the acquisition of the value&#39;s lock when the ``acquire_lock`` kwarg</span>
+<span class="sd">    to ``__init__`` is set to ``True``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_obj</span><span class="p">:</span> <span class="s2">&quot;Value&quot;</span><span class="p">,</span> <span class="n">coro</span><span class="p">:</span> <span class="n">Awaitable</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">*</span><span class="p">,</span> <span class="n">acquire_lock</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value_obj</span> <span class="o">=</span> <span class="n">value_obj</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coro</span> <span class="o">=</span> <span class="n">coro</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__original_value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__acquire_lock</span> <span class="o">=</span> <span class="n">acquire_lock</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__lock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_obj</span><span class="o">.</span><span class="n">get_lock</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">_T</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">coro</span><span class="o">.</span><span class="fm">__await__</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="fm">__aenter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acquire_lock</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">__lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="s2">&quot;Type of retrieved value must be mutable (i.e. &quot;</span>
+                <span class="s2">&quot;list or dict) in order to use a config value as &quot;</span>
+                <span class="s2">&quot;a context manager.&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__original_value</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="fm">__aexit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc</span><span class="p">,</span> <span class="n">tb</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">raw_value</span> <span class="o">=</span> <span class="n">_str_key_dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">raw_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span>
+            <span class="k">if</span> <span class="n">raw_value</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__original_value</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">value_obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_value</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__acquire_lock</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="Value">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Value">[docs]</a>
+<span class="k">class</span> <span class="nc">Value</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A singular &quot;value&quot; of data.</span>
+
+<span class="sd">    This class should not be instantiated directly - you should get instances of this class</span>
+<span class="sd">    through methods and attribute lookup on instances of `Config` and `Group`.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    identifier_data : IdentifierData</span>
+<span class="sd">        Information on identifiers for this value.</span>
+<span class="sd">    default</span>
+<span class="sd">        The default value for the data element that `identifiers` points at.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier_data</span><span class="p">:</span> <span class="n">IdentifierData</span><span class="p">,</span> <span class="n">default_value</span><span class="p">,</span> <span class="n">driver</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="s2">&quot;Config&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span> <span class="o">=</span> <span class="n">identifier_data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="n">default_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span> <span class="o">=</span> <span class="n">driver</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
+
+<div class="viewcode-block" id="Value.get_lock">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Value.get_lock">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a lock to create a critical region where this value is accessed.</span>
+
+<span class="sd">        When using this lock, make sure you either use it with the</span>
+<span class="sd">        ``async with`` syntax, or if that&#39;s not feasible, ensure you</span>
+<span class="sd">        keep a reference to it from the acquisition to the release of</span>
+<span class="sd">        the lock. That is, if you can&#39;t use ``async with`` syntax, use</span>
+<span class="sd">        the lock like this::</span>
+
+<span class="sd">            lock = config.foo.get_lock()</span>
+<span class="sd">            await lock.acquire()</span>
+<span class="sd">            # Do stuff...</span>
+<span class="sd">            lock.release()</span>
+
+<span class="sd">        Do not use it like this::</span>
+
+<span class="sd">            await config.foo.get_lock().acquire()</span>
+<span class="sd">            # Do stuff...</span>
+<span class="sd">            config.foo.get_lock().release()</span>
+
+<span class="sd">        Doing it the latter way will likely cause an error, as the</span>
+<span class="sd">        acquired lock will be cleaned up by the garbage collector before</span>
+<span class="sd">        it is released, meaning the second call to ``get_lock()`` will</span>
+<span class="sd">        return a different lock to the first call.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        asyncio.Lock</span>
+<span class="sd">            A lock which is weakly cached for this value object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">_lock_cache</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">())</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=...</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">default</span> <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">default</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+<div class="viewcode-block" id="Value.__call__">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Value.__call__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=...</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">acquire_lock</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_ValueCtxManager</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the literal value of this data element.</span>
+
+<span class="sd">        Each `Value` object is created by the `Group.__getattr__` method. The</span>
+<span class="sd">        &quot;real&quot; data of the `Value` object is accessed by this method. It is a</span>
+<span class="sd">        replacement for a :code:`get()` method.</span>
+
+<span class="sd">        The return value of this method can also be used as an asynchronous</span>
+<span class="sd">        context manager, i.e. with :code:`async with` syntax. This can only be</span>
+<span class="sd">        used on values which are mutable (namely lists and dicts), and will</span>
+<span class="sd">        set the value with its changes on exit of the context manager. It will</span>
+<span class="sd">        also acquire this value&#39;s lock to protect the critical region inside</span>
+<span class="sd">        this context manager&#39;s body, unless the ``acquire_lock`` keyword</span>
+<span class="sd">        argument is set to ``False``.</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        ::</span>
+
+<span class="sd">            foo = await config.guild(some_guild).foo()</span>
+
+<span class="sd">            # Is equivalent to this</span>
+
+<span class="sd">            group_obj = config.guild(some_guild)</span>
+<span class="sd">            value_obj = group_obj.foo</span>
+<span class="sd">            foo = await value_obj()</span>
+
+<span class="sd">        .. important::</span>
+
+<span class="sd">            This is now, for all intents and purposes, a coroutine.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default : `object`, optional</span>
+<span class="sd">            This argument acts as an override for the registered default</span>
+<span class="sd">            provided by `default`. This argument is ignored if its</span>
+<span class="sd">            value is :code:`...`.</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ----------------</span>
+<span class="sd">        acquire_lock : bool</span>
+<span class="sd">            Set to ``False`` to disable the acquisition of the value&#39;s</span>
+<span class="sd">            lock over the context manager body. Defaults to ``True``.</span>
+<span class="sd">            Has no effect when not used as a context manager.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `awaitable` mixed with `asynchronous context manager`</span>
+<span class="sd">            A coroutine object mixed in with an async context manager. When</span>
+<span class="sd">            awaited, this returns the raw data value. When used in :code:`async</span>
+<span class="sd">            with` syntax, on gets the value on entrance, and sets it on exit.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">_ValueCtxManager</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">default</span><span class="p">),</span> <span class="n">acquire_lock</span><span class="o">=</span><span class="n">acquire_lock</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Value.set">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Value.set">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the value of the data elements pointed to by `identifiers`.</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        ::</span>
+
+<span class="sd">            # Sets global value &quot;foo&quot; to False</span>
+<span class="sd">            await config.foo.set(False)</span>
+
+<span class="sd">            # Sets guild specific value of &quot;bar&quot; to True</span>
+<span class="sd">            await config.guild(some_guild).bar.set(True)</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value</span>
+<span class="sd">            The new literal value of this attribute.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">_str_key_dict</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Value.clear">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Value.clear">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Clears the value from record for the data element pointed to by `identifiers`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Group">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group">[docs]</a>
+<span class="k">class</span> <span class="nc">Group</span><span class="p">(</span><span class="n">Value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a group of data, composed of more `Group` or `Value` objects.</span>
+
+<span class="sd">    Inherits from `Value` which means that all of the attributes and methods</span>
+<span class="sd">    available in `Value` are also available when working with a `Group` object.</span>
+
+<span class="sd">    This class should not be instantiated directly - you should get instances of this class</span>
+<span class="sd">    through methods and attribute lookup on instances of `Config` and `Group`.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    defaults : `dict`</span>
+<span class="sd">        All registered default values for this Group.</span>
+<span class="sd">    force_registration : `bool`</span>
+<span class="sd">        Same as `Config.force_registration`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Group.__init__">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">identifier_data</span><span class="p">:</span> <span class="n">IdentifierData</span><span class="p">,</span>
+        <span class="n">defaults</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+        <span class="n">driver</span><span class="p">,</span>
+        <span class="n">config</span><span class="p">:</span> <span class="s2">&quot;Config&quot;</span><span class="p">,</span>
+        <span class="n">force_registration</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span> <span class="o">=</span> <span class="n">defaults</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">force_registration</span> <span class="o">=</span> <span class="n">force_registration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span> <span class="o">=</span> <span class="n">driver</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">identifier_data</span><span class="p">,</span> <span class="p">{},</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">defaults</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="n">default</span> <span class="o">=</span> <span class="n">default</span> <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="k">await</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">default</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nested_update</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">raw</span>
+
+    <span class="c1"># noinspection PyTypeChecker</span>
+<div class="viewcode-block" id="Group.__getattr__">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.__getattr__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="s2">&quot;Group&quot;</span><span class="p">,</span> <span class="n">Value</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get an attribute of this group.</span>
+
+<span class="sd">        This special method is called whenever dot notation is used on this</span>
+<span class="sd">        object.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        item : str</span>
+<span class="sd">            The name of the attribute being accessed.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group` or `Value`</span>
+<span class="sd">            A child value of this Group. This, of course, can be another</span>
+<span class="sd">            `Group`, due to Config&#39;s composite pattern.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AttributeError</span>
+<span class="sd">            If the attribute has not been registered and `force_registration`</span>
+<span class="sd">            is set to :code:`True`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">is_group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_group</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="n">is_value</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">is_group</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_value</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="n">new_identifiers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="o">.</span><span class="n">get_child</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_group</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Group</span><span class="p">(</span>
+                <span class="n">identifier_data</span><span class="o">=</span><span class="n">new_identifiers</span><span class="p">,</span>
+                <span class="n">defaults</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">[</span><span class="n">item</span><span class="p">],</span>
+                <span class="n">driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="p">,</span>
+                <span class="n">force_registration</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">force_registration</span><span class="p">,</span>
+                <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="n">is_value</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Value</span><span class="p">(</span>
+                <span class="n">identifier_data</span><span class="o">=</span><span class="n">new_identifiers</span><span class="p">,</span>
+                <span class="n">default_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">[</span><span class="n">item</span><span class="p">],</span>
+                <span class="n">driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="p">,</span>
+                <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">force_registration</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">{}</span><span class="s2">&#39; is not a valid registered Group or value.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Value</span><span class="p">(</span>
+                <span class="n">identifier_data</span><span class="o">=</span><span class="n">new_identifiers</span><span class="p">,</span>
+                <span class="n">default_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="p">,</span>
+                <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Group.clear_raw">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.clear_raw">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">nested_path</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allows a developer to clear data as if it was stored in a standard</span>
+<span class="sd">        Python dictionary.</span>
+
+<span class="sd">        For example::</span>
+
+<span class="sd">            await config.clear_raw(&quot;foo&quot;, &quot;bar&quot;)</span>
+
+<span class="sd">            # is equivalent to</span>
+
+<span class="sd">            data = {&quot;foo&quot;: {&quot;bar&quot;: None}}</span>
+<span class="sd">            del data[&quot;foo&quot;][&quot;bar&quot;]</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nested_path : Any</span>
+<span class="sd">            Multiple arguments that mirror the arguments passed in for nested</span>
+<span class="sd">            dict access. These are casted to `str` for you.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nested_path</span><span class="p">)</span>
+        <span class="n">identifier_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="o">.</span><span class="n">get_child</span><span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">identifier_data</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Group.is_group">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.is_group">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A helper method for `__getattr__`. Most developers will have no need</span>
+<span class="sd">        to use this.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        item : Any</span>
+<span class="sd">            See `__getattr__`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">default</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Group.is_value">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.is_value">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A helper method for `__getattr__`. Most developers will have no need</span>
+<span class="sd">        to use this.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        item : Any</span>
+<span class="sd">            See `__getattr__`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">default</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Group.get_attr">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.get_attr">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Manually get an attribute of this Group.</span>
+
+<span class="sd">        This is available to use as an alternative to using normal Python</span>
+<span class="sd">        attribute access. It may be required if you find a need for dynamic</span>
+<span class="sd">        attribute access.</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        A possible use case::</span>
+
+<span class="sd">            @commands.command()</span>
+<span class="sd">            async def some_command(self, ctx, item: str):</span>
+<span class="sd">                user = ctx.author</span>
+
+<span class="sd">                # Where the value of item is the name of the data field in Config</span>
+<span class="sd">                await ctx.send(await self.config.user(user).get_attr(item).foo())</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        item : str</span>
+<span class="sd">            The name of the data field in `Config`. This is casted to</span>
+<span class="sd">            `str` for you.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Value` or `Group`</span>
+<span class="sd">            The attribute which was requested.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getattr__</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Group.get_raw">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.get_raw">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">nested_path</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">default</span><span class="o">=...</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allows a developer to access data as if it was stored in a standard</span>
+<span class="sd">        Python dictionary.</span>
+
+<span class="sd">        For example::</span>
+
+<span class="sd">            d = await config.get_raw(&quot;foo&quot;, &quot;bar&quot;)</span>
+
+<span class="sd">            # is equivalent to</span>
+
+<span class="sd">            data = {&quot;foo&quot;: {&quot;bar&quot;: &quot;baz&quot;}}</span>
+<span class="sd">            d = data[&quot;foo&quot;][&quot;bar&quot;]</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        If retrieving a sub-group, the return value of this method will</span>
+<span class="sd">        include registered defaults for values which have not yet been set.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nested_path : str</span>
+<span class="sd">            Multiple arguments that mirror the arguments passed in for nested</span>
+<span class="sd">            dict access. These are casted to `str` for you.</span>
+<span class="sd">        default</span>
+<span class="sd">            Default argument for the value attempting to be accessed. If the</span>
+<span class="sd">            value does not exist the default will be returned.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Any</span>
+<span class="sd">            The value of the path requested.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        KeyError</span>
+<span class="sd">            If the value does not exist yet in Config&#39;s internal storage.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nested_path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">poss_default</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults</span>
+            <span class="k">for</span> <span class="n">ident</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">poss_default</span> <span class="o">=</span> <span class="n">poss_default</span><span class="p">[</span><span class="n">ident</span><span class="p">]</span>
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">default</span> <span class="o">=</span> <span class="n">poss_default</span>
+
+        <span class="n">identifier_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="o">.</span><span class="n">get_child</span><span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">raw</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">identifier_data</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">default</span>
+            <span class="k">raise</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nested_update</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">raw</span></div>
+
+
+<div class="viewcode-block" id="Group.all">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.all">[docs]</a>
+    <span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">acquire_lock</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_ValueCtxManager</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a dictionary representation of this group&#39;s data.</span>
+
+<span class="sd">        The return value of this method can also be used as an asynchronous</span>
+<span class="sd">        context manager, i.e. with :code:`async with` syntax.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        The return value of this method will include registered defaults for</span>
+<span class="sd">        values which have not yet been set.</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ----------------</span>
+<span class="sd">        acquire_lock : bool</span>
+<span class="sd">            Same as the ``acquire_lock`` keyword parameter in</span>
+<span class="sd">            `Value.__call__`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            All of this Group&#39;s attributes, resolved as raw data values.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">(</span><span class="n">acquire_lock</span><span class="o">=</span><span class="n">acquire_lock</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Group.nested_update">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.nested_update">[docs]</a>
+    <span class="k">def</span> <span class="nf">nested_update</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">,</span> <span class="n">defaults</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Robust updater for nested dictionaries</span>
+
+<span class="sd">        If no defaults are passed, then the instance attribute &#39;defaults&#39;</span>
+<span class="sd">        will be used.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">defaults</span> <span class="ow">is</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">defaults</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">current</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Mapping</span><span class="p">):</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nested_update</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="p">{}))</span>
+                <span class="n">defaults</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">defaults</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">defaults</span></div>
+
+
+<div class="viewcode-block" id="Group.set">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.set">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You may only set the value of a group to be a dict.&quot;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Group.set_raw">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Group.set_raw">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">set_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">nested_path</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allows a developer to set data as if it was stored in a standard</span>
+<span class="sd">        Python dictionary.</span>
+
+<span class="sd">        For example::</span>
+
+<span class="sd">            await config.set_raw(&quot;foo&quot;, &quot;bar&quot;, value=&quot;baz&quot;)</span>
+
+<span class="sd">            # is equivalent to</span>
+
+<span class="sd">            data = {&quot;foo&quot;: {&quot;bar&quot;: None}}</span>
+<span class="sd">            data[&quot;foo&quot;][&quot;bar&quot;] = &quot;baz&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nested_path : Any</span>
+<span class="sd">            Multiple arguments that mirror the arguments passed in for nested</span>
+<span class="sd">            `dict` access. These are casted to `str` for you.</span>
+<span class="sd">        value</span>
+<span class="sd">            The value to store.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">nested_path</span><span class="p">)</span>
+        <span class="n">identifier_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier_data</span><span class="o">.</span><span class="n">get_child</span><span class="p">(</span><span class="o">*</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">_str_key_dict</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">identifier_data</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Config">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config">[docs]</a>
+<span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ConfigMeta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Configuration manager for cogs and Red.</span>
+
+<span class="sd">    You should always use `get_conf` to instantiate a Config object. Use</span>
+<span class="sd">    `get_core_conf` for Config used in the core package.</span>
+
+<span class="sd">    .. important::</span>
+<span class="sd">        Most config data should be accessed through its respective</span>
+<span class="sd">        group method (e.g. :py:meth:`guild`) however the process for</span>
+<span class="sd">        accessing global data is a bit different. There is no</span>
+<span class="sd">        :python:`global` method because global data is accessed by</span>
+<span class="sd">        normal attribute access::</span>
+
+<span class="sd">            await config.foo()</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    cog_name : `str`</span>
+<span class="sd">        The name of the cog that has requested a `Config` object.</span>
+<span class="sd">    unique_identifier : `int`</span>
+<span class="sd">        Unique identifier provided to differentiate cog data when name</span>
+<span class="sd">        conflicts occur.</span>
+<span class="sd">    force_registration : `bool`</span>
+<span class="sd">        Determines whether `Config` should throw an error (`AttributeError`)</span>
+<span class="sd">        when attempting to access an attribute which has not been previously registered.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        **You should use this.** By enabling force registration you give Config</span>
+<span class="sd">        the ability to alert you instantly if you&#39;ve made a typo when</span>
+<span class="sd">        attempting to access data.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">GLOBAL</span> <span class="o">=</span> <span class="s2">&quot;GLOBAL&quot;</span>
+    <span class="n">GUILD</span> <span class="o">=</span> <span class="s2">&quot;GUILD&quot;</span>
+    <span class="n">CHANNEL</span> <span class="o">=</span> <span class="s2">&quot;TEXTCHANNEL&quot;</span>
+    <span class="n">ROLE</span> <span class="o">=</span> <span class="s2">&quot;ROLE&quot;</span>
+    <span class="n">USER</span> <span class="o">=</span> <span class="s2">&quot;USER&quot;</span>
+    <span class="n">MEMBER</span> <span class="o">=</span> <span class="s2">&quot;MEMBER&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">cog_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">unique_identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">driver</span><span class="p">:</span> <span class="n">BaseDriver</span><span class="p">,</span>
+        <span class="n">force_registration</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">defaults</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cog_name</span> <span class="o">=</span> <span class="n">cog_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">unique_identifier</span> <span class="o">=</span> <span class="n">unique_identifier</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span> <span class="o">=</span> <span class="n">driver</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">force_registration</span> <span class="o">=</span> <span class="n">force_registration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span> <span class="o">=</span> <span class="n">defaults</span> <span class="ow">or</span> <span class="p">{}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">custom_groups</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lock_cache</span><span class="p">:</span> <span class="n">MutableMapping</span><span class="p">[</span>
+            <span class="n">IdentifierData</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">WeakValueDictionary</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">defaults</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+<div class="viewcode-block" id="Config.get_conf">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_conf">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_conf</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">cog_instance</span><span class="p">,</span>
+        <span class="n">identifier</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">force_registration</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">cog_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">allow_old</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a Config instance for your cog.</span>
+
+<span class="sd">        .. warning::</span>
+
+<span class="sd">            If you are using this classmethod to get a second instance of an</span>
+<span class="sd">            existing Config object for a particular cog, you MUST provide the</span>
+<span class="sd">            correct identifier. If you do not, you *will* screw up all other</span>
+<span class="sd">            Config instances for that cog.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        cog_instance</span>
+<span class="sd">            This is an instance of your cog after it has been instantiated. If</span>
+<span class="sd">            you&#39;re calling this method from within your cog&#39;s :code:`__init__`,</span>
+<span class="sd">            this is just :code:`self`.</span>
+<span class="sd">        identifier : int</span>
+<span class="sd">            A (hard-coded) random integer, used to keep your data distinct from</span>
+<span class="sd">            any other cog with the same name.</span>
+<span class="sd">        force_registration : `bool`, optional</span>
+<span class="sd">            Should config require registration of data keys before allowing you</span>
+<span class="sd">            to get/set values? See `force_registration`.</span>
+<span class="sd">        cog_name : str, optional</span>
+<span class="sd">            Config normally uses ``cog_instance`` to determine the name of your cog.</span>
+<span class="sd">            If you wish you may pass ``None`` to ``cog_instance`` and directly specify</span>
+<span class="sd">            the name of your cog here.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Config</span>
+<span class="sd">            A new Config object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">allow_old</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;DANGER! This is getting an outdated driver. &quot;</span>
+                <span class="s2">&quot;Hopefully this is only being done from convert&quot;</span>
+            <span class="p">)</span>
+        <span class="n">uuid</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cog_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">cog_name</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">cog_instance</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span>
+
+        <span class="n">driver</span> <span class="o">=</span> <span class="n">get_driver</span><span class="p">(</span><span class="n">cog_name</span><span class="p">,</span> <span class="n">uuid</span><span class="p">,</span> <span class="n">allow_old</span><span class="o">=</span><span class="n">allow_old</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&quot;migrate_identifier&quot;</span><span class="p">):</span>
+            <span class="n">driver</span><span class="o">.</span><span class="n">migrate_identifier</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+
+        <span class="n">conf</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">cog_name</span><span class="o">=</span><span class="n">cog_name</span><span class="p">,</span>
+            <span class="n">unique_identifier</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span>
+            <span class="n">force_registration</span><span class="o">=</span><span class="n">force_registration</span><span class="p">,</span>
+            <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">conf</span></div>
+
+
+<div class="viewcode-block" id="Config.get_core_conf">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_core_conf">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_core_conf</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">force_registration</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">allow_old</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a Config instance for the core bot.</span>
+
+<span class="sd">        All core modules that require a config instance should use this</span>
+<span class="sd">        classmethod instead of `get_conf`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        force_registration : `bool`, optional</span>
+<span class="sd">            See `force_registration`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_conf</span><span class="p">(</span>
+            <span class="kc">None</span><span class="p">,</span>
+            <span class="n">cog_name</span><span class="o">=</span><span class="s2">&quot;Core&quot;</span><span class="p">,</span>
+            <span class="n">identifier</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">force_registration</span><span class="o">=</span><span class="n">force_registration</span><span class="p">,</span>
+            <span class="n">allow_old</span><span class="o">=</span><span class="n">allow_old</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Group</span><span class="p">,</span> <span class="n">Value</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Same as `group.__getattr__` except for global data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        item : str</span>
+<span class="sd">            The attribute you want to get.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group` or `Value`</span>
+<span class="sd">            The value for the attribute you want to retrieve</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        AttributeError</span>
+<span class="sd">            If there is no global attribute by the given name and</span>
+<span class="sd">            `force_registration` is set to :code:`True`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">global_group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GLOBAL</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">global_group</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_defaults_dict</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Since we&#39;re allowing nested config stuff now, not storing the</span>
+<span class="sd">        _defaults as a flat dict sounds like a good idea. May turn out</span>
+<span class="sd">        to be an awful one but we&#39;ll see.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">partial</span> <span class="o">=</span> <span class="n">ret</span>
+        <span class="n">splitted</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;__&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">splitted</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">{}</span><span class="s2">&#39; is an invalid config key.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">splitted</span><span class="p">):</span>
+                <span class="n">partial</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">partial</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="n">partial</span> <span class="o">=</span> <span class="n">partial</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_update_defaults</span><span class="p">(</span><span class="n">to_add</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">_partial</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This tries to update the _defaults dictionary with the nested</span>
+<span class="sd">        partial dict generated by _get_defaults_dict. This WILL</span>
+<span class="sd">        throw an error if you try to have both a value and a group</span>
+<span class="sd">        registered under the same name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">to_add</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">val_is_dict</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">_partial</span><span class="p">:</span>
+                <span class="n">existing_is_dict</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_partial</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="nb">dict</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">val_is_dict</span> <span class="o">!=</span> <span class="n">existing_is_dict</span><span class="p">:</span>
+                    <span class="c1"># != is XOR</span>
+                    <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;You cannot register a Group and a Value under the same name.&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">val_is_dict</span><span class="p">:</span>
+                    <span class="n">Config</span><span class="o">.</span><span class="n">_update_defaults</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">_partial</span><span class="o">=</span><span class="n">_partial</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">_partial</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">_partial</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="k">def</span> <span class="nf">_register_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># this serves as a &#39;deep copy&#39; and verification that the default is serializable to JSON</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">kwargs</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">to_add</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_defaults_dict</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update_defaults</span><span class="p">(</span><span class="n">to_add</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_defaults</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+<div class="viewcode-block" id="Config.register_global">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.register_global">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_global</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Register default values for attributes you wish to store in `Config`</span>
+<span class="sd">        at a global level.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        You can register a single value or multiple values::</span>
+
+<span class="sd">            config.register_global(</span>
+<span class="sd">                foo=True</span>
+<span class="sd">            )</span>
+
+<span class="sd">            config.register_global(</span>
+<span class="sd">                bar=False,</span>
+<span class="sd">                baz=None</span>
+<span class="sd">            )</span>
+
+<span class="sd">        You can also now register nested values::</span>
+
+<span class="sd">            _defaults = {</span>
+<span class="sd">                &quot;foo&quot;: {</span>
+<span class="sd">                    &quot;bar&quot;: True,</span>
+<span class="sd">                    &quot;baz&quot;: False</span>
+<span class="sd">                }</span>
+<span class="sd">            }</span>
+
+<span class="sd">            # Will register `foo.bar` == True and `foo.baz` == False</span>
+<span class="sd">            config.register_global(</span>
+<span class="sd">                **_defaults</span>
+<span class="sd">            )</span>
+
+<span class="sd">        You can do the same thing without a :python:`_defaults` dict by</span>
+<span class="sd">        using double underscore as a variable name separator::</span>
+
+<span class="sd">            # This is equivalent to the previous example</span>
+<span class="sd">            config.register_global(</span>
+<span class="sd">                foo__bar=True,</span>
+<span class="sd">                foo__baz=False</span>
+<span class="sd">            )</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_default</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GLOBAL</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.register_guild">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.register_guild">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_guild</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Register default values on a per-guild level.</span>
+
+<span class="sd">        See `register_global` for more details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_default</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GUILD</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.register_channel">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.register_channel">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Register default values on a per-channel level.</span>
+
+<span class="sd">        See `register_global` for more details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># We may need to add a voice channel category later</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_default</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.register_role">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.register_role">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Registers default values on a per-role level.</span>
+
+<span class="sd">        See `register_global` for more details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_default</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ROLE</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.register_user">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.register_user">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Registers default values on a per-user level.</span>
+
+<span class="sd">        This means that each user&#39;s data is guild-independent.</span>
+
+<span class="sd">        See `register_global` for more details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_default</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.register_member">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.register_member">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_member</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Registers default values on a per-member level.</span>
+
+<span class="sd">        This means that each user&#39;s data is guild-dependent.</span>
+
+<span class="sd">        See `register_global` for more details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_default</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.register_custom">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.register_custom">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_custom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Registers default values for a custom group.</span>
+
+<span class="sd">        See `register_global` for more details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_register_default</span><span class="p">(</span><span class="n">group_identifier</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.init_custom">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.init_custom">[docs]</a>
+    <span class="k">def</span> <span class="nf">init_custom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">identifier_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes a custom group for usage. This method must be called first!</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">identifier_count</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_groups</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">group_identifier</span><span class="p">,</span> <span class="n">identifier_count</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Cannot change identifier count of already registered group: </span><span class="si">{</span><span class="n">group_identifier</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">primary_keys</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        .. warning::</span>
+<span class="sd">            :code:`Config._get_base_group()` should not be used to get config groups as</span>
+<span class="sd">            this is not a safe operation. Using this could end up corrupting your config file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># noinspection PyTypeChecker</span>
+        <span class="n">pkey_len</span><span class="p">,</span> <span class="n">is_custom</span> <span class="o">=</span> <span class="n">ConfigCategory</span><span class="o">.</span><span class="n">get_pkey_info</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_groups</span><span class="p">)</span>
+        <span class="n">identifier_data</span> <span class="o">=</span> <span class="n">IdentifierData</span><span class="p">(</span>
+            <span class="n">cog_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cog_name</span><span class="p">,</span>
+            <span class="n">uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">unique_identifier</span><span class="p">,</span>
+            <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">,</span>
+            <span class="n">primary_key</span><span class="o">=</span><span class="n">primary_keys</span><span class="p">,</span>
+            <span class="n">identifiers</span><span class="o">=</span><span class="p">(),</span>
+            <span class="n">primary_key_len</span><span class="o">=</span><span class="n">pkey_len</span><span class="p">,</span>
+            <span class="n">is_custom</span><span class="o">=</span><span class="n">is_custom</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">primary_keys</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">identifier_data</span><span class="o">.</span><span class="n">primary_key_len</span><span class="p">:</span>
+            <span class="c1"># Don&#39;t mix in defaults with groups higher than the document level</span>
+            <span class="n">defaults</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">defaults</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="k">return</span> <span class="n">Group</span><span class="p">(</span>
+            <span class="n">identifier_data</span><span class="o">=</span><span class="n">identifier_data</span><span class="p">,</span>
+            <span class="n">defaults</span><span class="o">=</span><span class="n">defaults</span><span class="p">,</span>
+            <span class="n">driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="p">,</span>
+            <span class="n">force_registration</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">force_registration</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="Config.guild_from_id">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.guild_from_id">[docs]</a>
+    <span class="k">def</span> <span class="nf">guild_from_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given guild id.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild_id : int</span>
+<span class="sd">            A guild id.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The guild&#39;s Group object.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If the given guild_id parameter is not of type int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">guild_id</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;guild_id should be of type int, not </span><span class="si">{</span><span class="n">guild_id</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GUILD</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild_id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.guild">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.guild">[docs]</a>
+    <span class="k">def</span> <span class="nf">guild</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given guild.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild : discord.Guild</span>
+<span class="sd">            A guild object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The guild&#39;s Group object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GUILD</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.channel_from_id">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.channel_from_id">[docs]</a>
+    <span class="k">def</span> <span class="nf">channel_from_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given channel id.</span>
+
+<span class="sd">        This does not discriminate between text and voice channels.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        channel_id : int</span>
+<span class="sd">            A channel id.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The channel&#39;s Group object.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If the given channel_id parameter is not of type int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;channel_id should be of type int, not </span><span class="si">{</span><span class="n">channel_id</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">channel_id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.channel">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.channel">[docs]</a>
+    <span class="k">def</span> <span class="nf">channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">GuildChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given channel.</span>
+
+<span class="sd">        This does not discriminate between text and voice channels.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        channel : `discord.abc.GuildChannel` or `discord.Thread`</span>
+<span class="sd">            A channel object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The channel&#39;s Group object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.role_from_id">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.role_from_id">[docs]</a>
+    <span class="k">def</span> <span class="nf">role_from_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">role_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given role id.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        role_id : int</span>
+<span class="sd">            A role id.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The role&#39;s Group object.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If the given role_id parameter is not of type int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">role_id</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;role_id should be of type int, not </span><span class="si">{</span><span class="n">role_id</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ROLE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">role_id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.role">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.role">[docs]</a>
+    <span class="k">def</span> <span class="nf">role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">role</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Role</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given role.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        role : discord.Role</span>
+<span class="sd">            A role object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The role&#39;s Group object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ROLE</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.user_from_id">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.user_from_id">[docs]</a>
+    <span class="k">def</span> <span class="nf">user_from_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given user id.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        user_id : int</span>
+<span class="sd">            The user&#39;s id</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The user&#39;s Group object.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If the given user_id parameter is not of type int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;user_id should be of type int, not </span><span class="si">{</span><span class="n">user_id</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">user_id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.user">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.user">[docs]</a>
+    <span class="k">def</span> <span class="nf">user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given user.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        user : discord.abc.User</span>
+<span class="sd">            A user object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The user&#39;s Group object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.member_from_ids">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.member_from_ids">[docs]</a>
+    <span class="k">def</span> <span class="nf">member_from_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">member_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the ids which represent a member.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild_id : int</span>
+<span class="sd">            The id of the guild of the member</span>
+<span class="sd">        member_id : int</span>
+<span class="sd">            The id of the member</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The member&#39;s Group object.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If the given guild_id or member_id parameter is not of type int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">guild_id</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;guild_id should be of type int, not </span><span class="si">{</span><span class="n">guild_id</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">member_id</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;member_id should be of type int, not </span><span class="si">{</span><span class="n">member_id</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild_id</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">member_id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.member">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.member">[docs]</a>
+    <span class="k">def</span> <span class="nf">member</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">member</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Group</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given member.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        member : discord.Member</span>
+<span class="sd">            A member object.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The member&#39;s Group object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">id</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.custom">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.custom">[docs]</a>
+    <span class="k">def</span> <span class="nf">custom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">identifiers</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a `Group` for the given custom group.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        group_identifier : str</span>
+<span class="sd">            Used to identify the custom group.</span>
+<span class="sd">        identifiers : str</span>
+<span class="sd">            The attributes necessary to uniquely identify an entry in the</span>
+<span class="sd">            custom group. These are casted to `str` for you.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        `Group &lt;starbot.core.config.Group&gt;`</span>
+<span class="sd">            The custom group&#39;s Group object.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">group_identifier</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_groups</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Group identifier not initialized: </span><span class="si">{</span><span class="n">group_identifier</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">group_identifier</span><span class="p">),</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">identifiers</span><span class="p">))</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_all_from_scope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scope</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a dict of all values from a particular scope of data.</span>
+
+<span class="sd">        :code:`scope` must be one of the constants attributed to</span>
+<span class="sd">        this class, i.e. :code:`GUILD`, :code:`MEMBER` et cetera.</span>
+
+<span class="sd">        IDs as keys in the returned dict are casted to `int` for convenience.</span>
+
+<span class="sd">        Default values are also mixed into the data if they have not yet been</span>
+<span class="sd">        overwritten.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="n">scope</span><span class="p">)</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">defaults</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">scope</span><span class="p">,</span> <span class="p">{})</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dict_</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">identifier_data</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dict_</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">defaults</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+                <span class="n">ret</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span> <span class="o">=</span> <span class="n">data</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+<div class="viewcode-block" id="Config.all_guilds">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.all_guilds">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">all_guilds</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all guild data as a dict.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        The return value of this method will include registered defaults for</span>
+<span class="sd">        values which have not yet been set.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            A dictionary in the form {`int`: `dict`} mapping</span>
+<span class="sd">            :code:`GUILD_ID -&gt; data`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_from_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GUILD</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.all_channels">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.all_channels">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">all_channels</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all channel data as a dict.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        The return value of this method will include registered defaults for</span>
+<span class="sd">        values which have not yet been set.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            A dictionary in the form {`int`: `dict`} mapping</span>
+<span class="sd">            :code:`CHANNEL_ID -&gt; data`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_from_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.all_roles">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.all_roles">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">all_roles</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all role data as a dict.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        The return value of this method will include registered defaults for</span>
+<span class="sd">        values which have not yet been set.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            A dictionary in the form {`int`: `dict`} mapping</span>
+<span class="sd">            :code:`ROLE_ID -&gt; data`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_from_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ROLE</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.all_users">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.all_users">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all user data as a dict.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        The return value of this method will include registered defaults for</span>
+<span class="sd">        values which have not yet been set.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            A dictionary in the form {`int`: `dict`} mapping</span>
+<span class="sd">            :code:`USER_ID -&gt; data`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_from_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">)</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_all_members_from_guild</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">defaults</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="k">for</span> <span class="n">member_id</span><span class="p">,</span> <span class="n">member_data</span> <span class="ow">in</span> <span class="n">guild_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">new_member_data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">defaults</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">new_member_data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">member_data</span><span class="p">)</span>
+            <span class="n">ret</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">member_id</span><span class="p">)]</span> <span class="o">=</span> <span class="n">new_member_data</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+<div class="viewcode-block" id="Config.all_members">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.all_members">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">all_members</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get data for all members.</span>
+
+<span class="sd">        If :code:`guild` is specified, only the data for the members of that</span>
+<span class="sd">        guild will be returned. As such, the dict will map</span>
+<span class="sd">        :code:`MEMBER_ID -&gt; data`. Otherwise, the dict maps</span>
+<span class="sd">        :code:`GUILD_ID -&gt; MEMBER_ID -&gt; data`.</span>
+
+<span class="sd">        Note</span>
+<span class="sd">        ----</span>
+<span class="sd">        The return value of this method will include registered defaults for</span>
+<span class="sd">        values which have not yet been set.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild : `discord.Guild`, optional</span>
+<span class="sd">            The guild to get the member data from. Can be omitted if data</span>
+<span class="sd">            from every member of all guilds is desired.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            A dictionary of all specified member data.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">guild</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">dict_</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">identifier_data</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">guild_id</span><span class="p">,</span> <span class="n">guild_data</span> <span class="ow">in</span> <span class="n">dict_</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="n">ret</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">guild_id</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_members_from_guild</span><span class="p">(</span><span class="n">guild_data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">guild_data</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">identifier_data</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_members_from_guild</span><span class="p">(</span><span class="n">guild_data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">scopes</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all data in a particular scope.</span>
+
+<span class="sd">        The only situation where a second scope should be passed in is if</span>
+<span class="sd">        member data from a specific guild is being cleared.</span>
+
+<span class="sd">        If no scopes are passed, then all data is cleared from every scope.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        *scopes : str, optional</span>
+<span class="sd">            The scope of the data. Generally only one scope needs to be</span>
+<span class="sd">            provided, a second only necessary for clearing member data</span>
+<span class="sd">            of a specific guild.</span>
+
+<span class="sd">            **Leaving blank removes all data from this Config instance.**</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">scopes</span><span class="p">:</span>
+            <span class="c1"># noinspection PyTypeChecker</span>
+            <span class="n">identifier_data</span> <span class="o">=</span> <span class="n">IdentifierData</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cog_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">unique_identifier</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">(),</span> <span class="p">(),</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="p">(</span><span class="n">identifier_data</span><span class="p">,</span> <span class="n">defaults</span><span class="o">=</span><span class="p">{},</span> <span class="n">driver</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_driver</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cat</span><span class="p">,</span> <span class="o">*</span><span class="n">scopes</span> <span class="o">=</span> <span class="n">scopes</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="o">*</span><span class="n">scopes</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Config.clear_all">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all data from this Config instance.</span>
+
+<span class="sd">        This resets all data to its registered defaults.</span>
+
+<span class="sd">        .. important::</span>
+
+<span class="sd">            This cannot be undone.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Config.clear_all_globals">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all_globals">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all_globals</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all global data.</span>
+
+<span class="sd">        This resets all global data to its registered defaults.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GLOBAL</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.clear_all_guilds">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all_guilds">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all_guilds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all guild data.</span>
+
+<span class="sd">        This resets all guild data to its registered defaults.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GUILD</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.clear_all_channels">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all_channels">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all_channels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all channel data.</span>
+
+<span class="sd">        This resets all channel data to its registered defaults.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.clear_all_roles">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all_roles">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all_roles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all role data.</span>
+
+<span class="sd">        This resets all role data to its registered defaults.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ROLE</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.clear_all_users">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all_users">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all user data.</span>
+
+<span class="sd">        This resets all user data to its registered defaults.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.clear_all_members">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all_members">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all_members</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all member data.</span>
+
+<span class="sd">        This resets all specified member data to its registered defaults.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild : `discord.Guild`, optional</span>
+<span class="sd">            The guild to clear member data from. Omit to clear member data from</span>
+<span class="sd">            all guilds.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+            <span class="k">return</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.clear_all_custom">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.clear_all_custom">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">clear_all_custom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear all custom group data.</span>
+
+<span class="sd">        This resets all custom group data to its registered defaults.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        group_identifier : str</span>
+<span class="sd">            The identifier for the custom group. This is casted to</span>
+<span class="sd">            `str` for you.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_scope</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">group_identifier</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Config.get_guilds_lock">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_guilds_lock">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_guilds_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a lock for all guild data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        asyncio.Lock</span>
+<span class="sd">            A lock for all guild data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_custom_lock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GUILD</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.get_channels_lock">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_channels_lock">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_channels_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a lock for all channel data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        asyncio.Lock</span>
+<span class="sd">            A lock for all channels data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_custom_lock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.get_roles_lock">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_roles_lock">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_roles_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a lock for all role data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        asyncio.Lock</span>
+<span class="sd">            A lock for all roles data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_custom_lock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ROLE</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.get_users_lock">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_users_lock">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_users_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a lock for all user data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        asyncio.Lock</span>
+<span class="sd">            A lock for all user data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_custom_lock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">USER</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.get_members_lock">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_members_lock">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_members_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a lock for all member data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild : Optional[discord.Guild]</span>
+<span class="sd">            The guild containing the members whose data you want to</span>
+<span class="sd">            lock. Omit to lock all data for all members in all guilds.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        asyncio.Lock</span>
+<span class="sd">            A lock for all member data for the given guild.</span>
+<span class="sd">            If ``guild`` is omitted this will give a lock</span>
+<span class="sd">            for all data for all members in all guilds.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">guild</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_custom_lock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GUILD</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">id_data</span> <span class="o">=</span> <span class="n">IdentifierData</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">cog_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">unique_identifier</span><span class="p">,</span>
+                <span class="n">category</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span>
+                <span class="n">primary_key</span><span class="o">=</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">),),</span>
+                <span class="n">identifiers</span><span class="o">=</span><span class="p">(),</span>
+                <span class="n">primary_key_len</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_cache</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">id_data</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">())</span></div>
+
+
+<div class="viewcode-block" id="Config.get_custom_lock">
+<a class="viewcode-back" href="../../../framework_config.html#starbot.core.config.Config.get_custom_lock">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_custom_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_identifier</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a lock for all data in a custom scope.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        group_identifier : str</span>
+<span class="sd">            The group identifier for the custom scope you want to lock.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        asyncio.Lock</span>
+<span class="sd">            A lock for all data in a custom scope with given group identifier.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">pkey_len</span><span class="p">,</span> <span class="n">is_custom</span> <span class="o">=</span> <span class="n">ConfigCategory</span><span class="o">.</span><span class="n">get_pkey_info</span><span class="p">(</span>
+                <span class="n">group_identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">custom_groups</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Custom group not initialized: </span><span class="si">{</span><span class="n">group_identifier</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">id_data</span> <span class="o">=</span> <span class="n">IdentifierData</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">cog_name</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">unique_identifier</span><span class="p">,</span>
+                <span class="n">category</span><span class="o">=</span><span class="n">group_identifier</span><span class="p">,</span>
+                <span class="n">primary_key</span><span class="o">=</span><span class="p">(),</span>
+                <span class="n">identifiers</span><span class="o">=</span><span class="p">(),</span>
+                <span class="n">primary_key_len</span><span class="o">=</span><span class="n">pkey_len</span><span class="p">,</span>
+                <span class="n">is_custom</span><span class="o">=</span><span class="n">is_custom</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_cache</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">id_data</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">())</span></div>
+</div>
+
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">migrate</span><span class="p">(</span><span class="n">cur_driver_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">BaseDriver</span><span class="p">],</span> <span class="n">new_driver_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">BaseDriver</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Migrate from one driver type to another.&quot;&quot;&quot;</span>
+    <span class="c1"># Get custom group data</span>
+    <span class="n">core_conf</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">get_core_conf</span><span class="p">(</span><span class="n">allow_old</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">core_conf</span><span class="o">.</span><span class="n">init_custom</span><span class="p">(</span><span class="s2">&quot;CUSTOM_GROUPS&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">all_custom_group_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">core_conf</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="s2">&quot;CUSTOM_GROUPS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="k">await</span> <span class="n">cur_driver_cls</span><span class="o">.</span><span class="n">migrate_to</span><span class="p">(</span><span class="n">new_driver_cls</span><span class="p">,</span> <span class="n">all_custom_group_data</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_str_key_dict</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">_T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_T</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Recursively casts all keys in the given `dict` to `str`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : Dict[Any, Any]</span>
+<span class="sd">        The `dict` to cast keys to `str`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Dict[str, Any]</span>
+<span class="sd">        The `dict` with keys (and nested keys) casted to `str`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">_str_key_dict</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="n">ret</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

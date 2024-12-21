@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Webhook Logs{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>Webhook Logs</h1>
+    <button id="refresh-logs" class="btn">Refresh Logs</button>
+    <div id="logs-container">
+        {% include 'logs_content.html' %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.getElementById('refresh-logs').addEventListener('click', function() {
+        fetch('/webhook-logs-content')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('logs-container').innerHTML = html;
+            });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,19 @@
+{
+  "author" : ["cswimr"],
+  "install_msg" : "Thank you for installing Pterodactyl!\nYou can find the source code of this cog [here](https://coastalcommits.com/cswimr/SeaCogs).\nDocumentation can be found [here](https://seacogs.coastalcommits.com/pterodactyl ).",
+  "name" : "Pterodactyl",
+  "short" : "Interface with Pterodactyl through websockets.",
+  "description" : "Interface with Pterodactyl through websockets.",
+  "end_user_data_statement" : "This cog does not store end user data.",
+  "hidden": false,
+  "disabled": false,
+  "min_bot_version": "3.5.0",
+  "min_python_version": [3, 8, 0],
+  "requirements": ["git+https://github.com/cswimr/pydactyl", "websockets"],
+  "tags": [
+      "pterodactyl",
+      "minecraft",
+      "server",
+      "management"
+  ]
+}

@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Image" href="image.html" />
+    <link rel="prev" title="Filter" href="filter.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ball">8 (8ball)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#choose">choose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flip">flip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lmgtfy">lmgtfy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roll">roll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rps-rock-paper-scissors">rps (Rock Paper Scissors)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serverinfo">serverinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stopwatch">stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#urban">urban</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">General</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/general.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="general">
+<span id="id1"></span><h1>General<a class="headerlink" href="#general" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the general cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">general</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="general-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>This cog includes a miscellaneous group of games, useful
+tools, and informative commands such as <code class="docutils literal notranslate"><span class="pre">serverinfo</span></code> or <code class="docutils literal notranslate"><span class="pre">urban</span></code>.</p>
+</section>
+<section id="commands">
+<span id="general-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<p>Here’s a list of all commands available for this cog.</p>
+<section id="ball">
+<span id="general-command-8"></span><h3>8 (8ball)<a class="headerlink" href="#ball" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]8 &lt;question&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Ask 8 ball a question.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Your question must end with a question mark.</p>
+</div>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;question&gt;</span></code>: The question you would like to ask 8 ball.</p></li>
+</ul>
+</section>
+<section id="choose">
+<span id="general-command-choose"></span><h3>choose<a class="headerlink" href="#choose" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]choose &lt;first&gt; &lt;second&gt; [others...]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Choose between multiple options.
+Options are separated by spaces.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There must be at least 2 options to pick from.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To denote options which include whitespace, you should enclose the option in double quotes.</p>
+</div>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;first&gt;</span></code>: The first mandatory option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;second&gt;</span></code>: The second mandatory option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[others...]</span></code>: Any remaining optional options.</p></li>
+</ul>
+</section>
+<section id="flip">
+<span id="general-command-flip"></span><h3>flip<a class="headerlink" href="#flip" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]flip [user]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Flip a coin… or a user.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[user]</span></code>: The user to flip. Defaults to flipping a coin if no user is provided.</p></li>
+</ul>
+</section>
+<section id="lmgtfy">
+<span id="general-command-lmgtfy"></span><h3>lmgtfy<a class="headerlink" href="#lmgtfy" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]lmgtfy &lt;search_terms&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Create a lmgtfy link.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;search_terms&gt;</span></code>: The terms used to generate the lmgtfy link.</p></li>
+</ul>
+</section>
+<section id="roll">
+<span id="general-command-roll"></span><h3>roll<a class="headerlink" href="#roll" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]roll [number=100]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Roll a random number. The result will be between 1 and <code class="docutils literal notranslate"><span class="pre">&lt;number&gt;</span></code>.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[number]</span></code>: The maximum number that can be rolled. Defaults to 100.</p></li>
+</ul>
+</section>
+<section id="rps-rock-paper-scissors">
+<span id="general-command-rps"></span><h3>rps (Rock Paper Scissors)<a class="headerlink" href="#rps-rock-paper-scissors" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]rps &lt;your_choice&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Play Rock Paper Scissors.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;your_choice&gt;</span></code>: The choice that you choose.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Choices <strong>must</strong> be between <code class="docutils literal notranslate"><span class="pre">rock</span></code>, <code class="docutils literal notranslate"><span class="pre">paper</span></code>, or <code class="docutils literal notranslate"><span class="pre">scissors</span></code>.</p>
+</div>
+</section>
+<section id="serverinfo">
+<span id="general-commands-serverinfo"></span><h3>serverinfo<a class="headerlink" href="#serverinfo" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]serverinfo [details=False]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Show server information.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[details]</span></code>: Show extra details about the server when set to True. Defaults to False.</p></li>
+</ul>
+</section>
+<section id="stopwatch">
+<span id="general-commands-stopwatch"></span><h3>stopwatch<a class="headerlink" href="#stopwatch" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]stopwatch
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Start or stop the stopwatch.</p>
+</section>
+<section id="urban">
+<span id="general-commands-urban"></span><h3>urban<a class="headerlink" href="#urban" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]urban &lt;word&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Search the Urban Dictionary.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;word&gt;</span></code>: The term to search for.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="filter.html" class="btn btn-neutral float-left" title="Filter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="image.html" class="btn btn-neutral float-right" title="Image" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

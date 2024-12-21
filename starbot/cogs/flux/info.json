@@ -1,0 +1,18 @@
+{
+    "author": [
+        "Star"
+    ],
+    "name": "FluxImgGen",
+    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description.\n If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>), if you want to support my work, [Buy me a Ko-Fi](<https://ko-fi.com/starcogs>)",
+    "short": "Generate Images using Flux",
+    "description": "Generate Images using Flux",
+    "tags": [
+        "Flux_Image_Generation"
+    ],
+    "requirements": [
+        "git+https://github.com/LeDeathAmongst/Star_Utils.git"
+    ],
+    "min_bot_version": "3.5.0",
+    "end_user_data_statement": "",
+    "hidden": false
+}

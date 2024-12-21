@@ -1,0 +1,30 @@
+{
+    "author": [
+        "crayyy_zee"
+    ],
+    "description": "Create different tierlists that users can add options to and vote on.",
+    "disabled": false,
+    "end_user_data_statement": "This cog stores end user data in the form of tierlists and votes.",
+    "hidden": false,
+    "install_msg": "Thank you for installing!",
+    "min_bot_version": "3.5.3",
+    "min_python_version": [
+        3,
+        10,
+        0
+    ],
+    "required_cogs": {},
+    "requirements": [
+        "pydantic",
+        "numpy",
+        "git+https://github.com/astanin/python-tabulate.git@master",
+        "fuzzywuzzy"
+    ],
+    "short": "",
+    "tags": [
+        "tierlist",
+        "vote",
+        "poll"
+    ],
+    "type": "COG"
+}

@@ -1,0 +1,16 @@
+{
+    "author": ["Star"],
+    "name": "Wordle",
+    "install_msg": "Thank you for installing the Wordle cog!\nUse `[p]help Wordle` to get the list of commands and their descriptions. If you want to help translate, visit [crowdin](<https://crowdin.com/project/YourProject>)\nIf you enjoy this cog, consider [donating](<https://your-donation-link>)\n\nEnjoy playing Wordle in your Discord server!",
+    "requirements": [
+        "Pillow",
+        "aiohttp",
+        "git+https://github.com/LeDeathAmongst/Star_Utils"
+    ],
+    "min_bot_version": "3.5.9",
+    "end_user_data_statement": "This cog stores user preferences for Wordle games, including word length, number of tries, colorblind mode, and hard mode settings. It also stores game statistics and leaderboard data.",
+    "hidden": false,
+    "short": "Play Wordle in your Discord server",
+    "description": "A cog that allows users to play Wordle in Discord. Features customizable settings, statistics, and a leaderboard.",
+    "tags": ["game", "wordle", "puzzle"]
+}

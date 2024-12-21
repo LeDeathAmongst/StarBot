@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future changes (currently deprecated functionality) &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Backward incompatible changes in Red 3.5" href="3.5.html" />
+    <link rel="prev" title="Backward incompatible changes" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Backward incompatible changes</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Future changes (currently deprecated functionality)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-developers">For Developers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#removals">Removals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.5.html">Backward incompatible changes in Red 3.5</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Backward incompatible changes</a></li>
+      <li class="breadcrumb-item active">Future changes (currently deprecated functionality)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developincompatible_changes/future.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="future-changes-currently-deprecated-functionality">
+<span id="deprecated-functionality"></span><h1>Future changes (currently deprecated functionality)<a class="headerlink" href="#future-changes-currently-deprecated-functionality" title="Link to this heading"></a></h1>
+<p>This page lists all functionalities that are currently deprecated, features that have been removed in past minor releases, and any other backward incompatible changes that are planned or have been removed in past minor releases. The objective is to give users a clear rationale why a certain change has been made, and what alternatives (if any) should be used instead.</p>
+<p>These changes are sorted (in their respective sections) in a reverse chronological order.</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#for-developers" id="id1">For Developers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#removals" id="id2">Removals</a></p>
+<ul>
+<li><p><a class="reference internal" href="#downloader-s-shared-libraries" id="id3">Downloader’s shared libraries</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="for-developers">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">For Developers</a><a class="headerlink" href="#for-developers" title="Link to this heading"></a></h2>
+<section id="removals">
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">Removals</a><a class="headerlink" href="#removals" title="Link to this heading"></a></h3>
+<section id="downloader-s-shared-libraries">
+<h4><a class="toc-backref" href="#id3" role="doc-backlink">Downloader’s shared libraries</a><a class="headerlink" href="#downloader-s-shared-libraries" title="Link to this heading"></a></h4>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.2.0.</span></p>
+</div>
+<p>Shared libraries have been deprecated in favor of pip-installable libraries.
+Shared libraries do not provide any functionality that can’t already be achieved
+with pip requirements <em>and</em> as such don’t provide much value in return for
+the added complexity.</p>
+<p>Known issues, especially those related to hot-reload, were not handled automatically
+for shared libraries, same as they are not handled for the libraries installed
+through pip.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Backward incompatible changes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3.5.html" class="btn btn-neutral float-right" title="Backward incompatible changes in Red 3.5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

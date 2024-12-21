@@ -1,0 +1,24 @@
+{
+    "name": "Ship",
+    "short": "Calculate the percentage of love compatibility between two people.",
+    "description": "Calculate the percentage of love compatibility between two people.",
+    "install_msg": "Thanks for installing `ship` cog! Please enjoy it :D",
+    "author": [
+        "Star"
+    ],
+    "tags": [
+        "love",
+        "meme",
+        "ship"
+    ],
+    "requirements": [
+        "pillow==9.5.0",
+        "unidecode",
+        "rapidfuzz"
+    ],
+    "hidden": false,
+    "disabled": false,
+    "type": "COG",
+    "end_user_data_statement": "This cog does not store end user data.",
+    "min_bot_version": "3.5.0"
+}

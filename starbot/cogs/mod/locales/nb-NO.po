@@ -1,0 +1,1038 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red-discordbot\n"
+"POT-Creation-Date: 2023-09-13 20:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: Norwegian Bokmal\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: red-discordbot\n"
+"X-Crowdin-Project-ID: 289505\n"
+"X-Crowdin-Language: nb\n"
+"X-Crowdin-File-ID: 34\n"
+"Language: nb_NO\n"
+
+#: starbot/cogs/mod/events.py:57 starbot/cogs/mod/events.py:72
+msgid "Mention spam (Autoban)"
+msgstr "Nevne spam (Autoban)"
+
+#: starbot/cogs/mod/events.py:81
+msgid "Mention Spam (Autokick)"
+msgstr "Nevne spam (Autokick)"
+
+#: starbot/cogs/mod/events.py:96
+msgid "Mention spam (Autokick)"
+msgstr "Nevne spam (Autokick)"
+
+#: starbot/cogs/mod/events.py:105
+msgid "Please do not mass mention people!"
+msgstr "Vennligst ikke masse nevner folk!"
+
+#: starbot/cogs/mod/events.py:109
+msgid "{member}, Please do not mass mention people!"
+msgstr "{member}, Vennligst ikke masse nevner folk!"
+
+#: starbot/cogs/mod/events.py:128
+msgid "Mention spam (Autowarn)"
+msgstr "Nevne spam (Autowarn)"
+
+#: starbot/cogs/mod/kickban.py:82
+msgid "That user is not in a voice channel."
+msgstr "Den brukeren er ikke i en talekanal."
+
+#: starbot/cogs/mod/kickban.py:89
+msgid "I require the {perms} permission(s) in that user's channel to do that."
+msgstr "Jeg krever {perms} tillatelse(r) i brukerens kanal for å gjøre det der."
+
+#: starbot/cogs/mod/kickban.py:99
+msgid "You must have the {perms} permission(s) in that user's channel to use this command."
+msgstr "Du må ha {perms} tillatelse(r) i kanalen for å bruke denne kommandoen."
+
+#: starbot/cogs/mod/kickban.py:121 starbot/cogs/mod/kickban.py:463
+#: starbot/cogs/mod/kickban.py:636
+msgid "Invalid days. Must be between 0 and 7."
+msgstr "Ugyldige dager. Må være mellom 0 og 7."
+
+#: starbot/cogs/mod/kickban.py:127 starbot/cogs/mod/kickban.py:610
+msgid "I cannot let you do that. Self-harm is bad {}"
+msgstr "Jeg kan ikke la deg gjøre det. Selvskade er dårlig {}"
+
+#: starbot/cogs/mod/kickban.py:132 starbot/cogs/mod/kickban.py:315
+#: starbot/cogs/mod/kickban.py:615 starbot/cogs/mod/kickban.py:696
+#: starbot/cogs/mod/kickban.py:782 starbot/cogs/mod/names.py:64
+msgid "I cannot let you do that. You are not higher than the user in the role hierarchy."
+msgstr "Jeg kan ikke la deg gjøre det. Du er ikke høyere enn brukeren i rollehierarkiet."
+
+#: starbot/cogs/mod/kickban.py:139 starbot/cogs/mod/kickban.py:323
+#: starbot/cogs/mod/kickban.py:623
+msgid "I cannot do that due to Discord hierarchy rules."
+msgstr "Jeg kan ikke gjøre det på grunn av Discord hierarkiske regler."
+
+#: starbot/cogs/mod/kickban.py:145
+msgid "You have been banned from {guild}."
+msgstr "Du har blitt utestengt fra {guild}."
+
+#: starbot/cogs/mod/kickban.py:149 starbot/cogs/mod/kickban.py:334
+msgid "**Reason**"
+msgstr "**Årsak**"
+
+#: starbot/cogs/mod/kickban.py:150 starbot/cogs/mod/kickban.py:335
+msgid "No reason was given."
+msgstr "Ingen grunn ble oppgitt."
+
+#: starbot/cogs/mod/kickban.py:171 starbot/cogs/mod/kickban.py:480
+msgid "User with ID {user_id} is already banned."
+msgstr "Bruker med ID {user_id} er allerede utestengt."
+
+#: starbot/cogs/mod/kickban.py:182
+msgid "User with ID {user_id} was upgraded from a temporary to a permanent ban."
+msgstr "Brukeren med ID {user_id} ble oppgradert fra en midlertidig til et permanent forbud."
+
+#: starbot/cogs/mod/kickban.py:198 starbot/cogs/mod/kickban.py:364
+msgid "Done. That felt good."
+msgstr "Ferdig. Det følte seg bra."
+
+#: starbot/cogs/mod/kickban.py:200 starbot/cogs/mod/kickban.py:343
+msgid "I'm not allowed to do that."
+msgstr "Jeg har ikke lov til å gjøre det."
+
+#: starbot/cogs/mod/kickban.py:202 starbot/cogs/mod/kickban.py:554
+msgid "User with ID {user_id} not found"
+msgstr "Bruker med ID {user_id} ble ikke funnet"
+
+#: starbot/cogs/mod/kickban.py:212
+msgid "An unexpected error occurred."
+msgstr "En uventet feil oppstod."
+
+#: starbot/cogs/mod/kickban.py:266
+msgid "Tempban finished"
+msgstr "Tempban fullført"
+
+#: starbot/cogs/mod/kickban.py:291
+#, docstring
+msgid "\n"
+"        Kick a user.\n\n"
+"        Examples:\n"
+"        - `[p]kick 428675506947227648 wanted to be kicked.`\n"
+"            This will kick the user with ID 428675506947227648 from the server.\n"
+"        - `[p]kick @Twentysix wanted to be kicked.`\n"
+"            This will kick Twentysix from the server.\n\n"
+"        If a reason is specified, it will be the reason that shows up\n"
+"        in the audit log.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/kickban.py:308 starbot/cogs/mod/kickban.py:689
+msgid "I cannot let you do that. Self-harm is bad {emoji}"
+msgstr "Jeg kan ikke la deg gjøre det. Selvskade er dårlig {emoji}"
+
+#: starbot/cogs/mod/kickban.py:330
+msgid "You have been kicked from {guild}."
+msgstr "Du har blitt sparket fra {guild}."
+
+#: starbot/cogs/mod/kickban.py:378
+#, docstring
+msgid "Ban a user from this server and optionally delete days of messages.\n\n"
+"        `days` is the amount of days of messages to cleanup on ban.\n\n"
+"        Examples:\n"
+"        - `[p]ban 428675506947227648 7 Continued to spam after told to stop.`\n"
+"            This will ban the user with ID 428675506947227648 and it will delete 7 days worth of messages.\n"
+"        - `[p]ban @Twentysix 7 Continued to spam after told to stop.`\n"
+"            This will ban Twentysix and it will delete 7 days worth of messages.\n\n"
+"        A user ID should be provided if the user is not a member of this server.\n"
+"        If days is not a number, it's treated as the first word of the reason.\n"
+"        Minimum 0 days, maximum 7. If not specified, the defaultdays setting will be used instead.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/kickban.py:416
+#, docstring
+msgid "Mass bans user(s) from the server.\n\n"
+"        `days` is the amount of days of messages to cleanup on massban.\n\n"
+"        Example:\n"
+"           - `[p]massban 345628097929936898 57287406247743488 7 they broke all rules.`\n"
+"            This will ban all the added userids and delete 7 days worth of their messages.\n\n"
+"        User IDs need to be provided in order to ban\n"
+"        using this command.\n"
+"        "
+msgstr "Masseutestenger bruker(e) fra tjeneren.\n\n"
+"        `dager` er antall dager med meldinger å rydde opp i massbanen.\n\n"
+"        Example:\n"
+"           - `[p]massban 345628097929936898 57287406247743488 7 they broke all rules.`\n"
+"            Dette vil utestenge alle lagrede brukere, og slette 7 dager verdt av meldinger fra disse.\n\n"
+"        Bruker-ID-er må fremlegges for å utestenge\n"
+"        med denne kommandoen.\n"
+"        "
+
+#: starbot/cogs/mod/kickban.py:432
+msgid "Banned {num} users from the server."
+msgstr "Utestengte {num} brukere fra serveren."
+
+#: starbot/cogs/mod/kickban.py:436
+msgid "\n"
+"Errors:\n"
+msgstr "\n"
+"Feil:\n"
+
+#: starbot/cogs/mod/kickban.py:439
+msgid "\n"
+"Following user IDs have been upgraded from a temporary to a permanent ban:\n"
+msgstr "\n"
+"Etter bruker-ID-er er oppgradert fra en midlertidig til et permanent forbud:\n"
+
+#: starbot/cogs/mod/kickban.py:467
+msgid "I lack the permissions to do this."
+msgstr "Jeg mangler tillatelser til å gjøre dette."
+
+#: starbot/cogs/mod/kickban.py:519 starbot/cogs/mod/kickban.py:523
+msgid "Failed to ban user {user_id}: {reason}"
+msgstr "Kunne ikke forby bruker {user_id}: {reason}"
+
+#: starbot/cogs/mod/kickban.py:559
+msgid "Could not ban user with ID {user_id}: missing permissions."
+msgstr "Kunne ikke utestenge bruker med ID {user_id}: manglende tillatelser."
+
+#: starbot/cogs/mod/kickban.py:592
+#, docstring
+msgid "Temporarily ban a user from this server.\n\n"
+"        `duration` is the amount of time the user should be banned for.\n"
+"        `days` is the amount of days of messages to cleanup on tempban.\n\n"
+"        Examples:\n"
+"        - `[p]tempban @Twentysix Because I say so`\n"
+"            This will ban Twentysix for the default amount of time set by an administrator.\n"
+"        - `[p]tempban @Twentysix 15m You need a timeout`\n"
+"            This will ban Twentysix for 15 minutes.\n"
+"        - `[p]tempban 428675506947227648 1d2h15m 5 Evil person`\n"
+"            This will ban the user with ID 428675506947227648 for 1 day 2 hours 15 minutes and will delete the last 5 days of their messages.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/kickban.py:646
+msgid "You have been temporarily banned from {server_name} until {date}."
+msgstr "Du har blitt midlertidig utestengt fra {server_name} til {date}."
+
+#: starbot/cogs/mod/kickban.py:650
+msgid "\n\n"
+"**Reason:** {reason}"
+msgstr "\n\n"
+"**Årsak:** {reason}"
+
+#: starbot/cogs/mod/kickban.py:652
+msgid "\n\n"
+"Here is an invite for when your ban expires: {invite_link}"
+msgstr "\n\n"
+"Her er en invitasjon for når utestengelsen din utløper: {invite_link}"
+
+#: starbot/cogs/mod/kickban.py:662
+msgid "I can't do that for some reason."
+msgstr "Det kan jeg ikke gjøre av en eller annen grunn."
+
+#: starbot/cogs/mod/kickban.py:664
+msgid "Something went wrong while banning."
+msgstr "Noe gikk galt under utestengelsen."
+
+#: starbot/cogs/mod/kickban.py:676
+msgid "Done. Enough chaos for now."
+msgstr "Ferdig. Nok kaos nå."
+
+#: starbot/cogs/mod/kickban.py:683
+#, docstring
+msgid "Kick a user and delete 1 day's worth of their messages."
+msgstr "Kast ut en bruker og slett en dags verdi av meldingene sine."
+
+#: starbot/cogs/mod/kickban.py:710
+msgid "You have been banned and then unbanned as a quick way to delete your messages.\n"
+"You can now join the server again. {invite_link}"
+msgstr "Du har blitt utestengt og deretter opphevet utestengelsen som en rask måte å slette meldingene dine.\n"
+"Du kan nå bli med i serveren igjen. {invite_link}"
+
+#: starbot/cogs/mod/kickban.py:721
+msgid "My role is not high enough to softban that user."
+msgstr "Min rolle er ikke høy nok til å sparke ut den brukeren."
+
+#: starbot/cogs/mod/kickban.py:765
+msgid "Done. Enough chaos."
+msgstr "Ferdig. Nok kaos."
+
+#: starbot/cogs/mod/kickban.py:773
+#, docstring
+msgid "Kick a member from a voice channel."
+msgstr "Kast ut et medlem fra en talekanal."
+
+#: starbot/cogs/mod/kickban.py:795
+msgid "I am unable to kick this member from the voice channel."
+msgstr "Jeg kan ikke kaste ut dette medlemmet fra talekanalen."
+
+#: starbot/cogs/mod/kickban.py:798
+msgid "Something went wrong while attempting to kick that member."
+msgstr "Noe gikk galt under forsøk på å sparke den brukeren."
+
+#: starbot/cogs/mod/kickban.py:812
+msgid "User has been kicked from the voice channel."
+msgstr "Brukeren har blitt sparket ut fra talekanalen."
+
+#: starbot/cogs/mod/kickban.py:820
+#, docstring
+msgid "Unban a user from speaking and listening in the server's voice channels."
+msgstr "Fjern forbud for en bruker fra å snakke og lytte i serverens talekanaler."
+
+#: starbot/cogs/mod/kickban.py:839
+msgid "That user isn't muted or deafened by the server."
+msgstr "Den brukeren er ikke dempet eller dempet av serveren."
+
+#: starbot/cogs/mod/kickban.py:855
+msgid "User is now allowed to speak and listen in voice channels."
+msgstr "Brukeren kan nå snakke og lytte i talekanaler."
+
+#: starbot/cogs/mod/kickban.py:861
+#, docstring
+msgid "Ban a user from speaking and listening in the server's voice channels."
+msgstr "Bannlys en bruker fra å snakke og lytte i serverens talekanaler."
+
+#: starbot/cogs/mod/kickban.py:882
+msgid "That user is already muted and deafened server-wide."
+msgstr "Den brukeren er allerede dempet og stykket server-wide."
+
+#: starbot/cogs/mod/kickban.py:896
+msgid "User has been banned from speaking or listening in voice channels."
+msgstr "Brukeren har blitt utestengt fra å snakke eller lytte i talekanaler."
+
+#: starbot/cogs/mod/kickban.py:905
+#, docstring
+msgid "Unban a user from this server.\n\n"
+"        Requires specifying the target user's ID. To find this, you may either:\n"
+"        1. Copy it from the mod log case (if one was created), or\n"
+"        2. Enable Developer Mode, go to Bans in this server's settings, right-click the user and select 'Copy ID'.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/kickban.py:917
+msgid "It seems that user isn't banned!"
+msgstr "Det virker som brukeren ikke er utestengt!"
+
+#: starbot/cogs/mod/kickban.py:922
+msgid "Something went wrong while attempting to unban that user."
+msgstr "Noe gikk galt under forsøket på å oppheve utestengelsen av den brukeren."
+
+#: starbot/cogs/mod/kickban.py:936
+msgid "Unbanned that user from this server."
+msgstr "Opphevet utstengelsen fra den brukeren for denne serveren."
+
+#: starbot/cogs/mod/kickban.py:942
+msgid "I don't share another server with this user. I can't reinvite them."
+msgstr "Jeg deler ikke en annen server med denne brukeren. Jeg kan ikke invitere dem på nytt."
+
+#: starbot/cogs/mod/kickban.py:950
+msgid "You've been unbanned from {server}.\n"
+"Here is an invite for that server: {invite_link}"
+msgstr "Du har blitt utestengt fra {server}.\n"
+"Her er en invitasjon for den serveren: {invite_link}"
+
+#: starbot/cogs/mod/kickban.py:957
+msgid "I failed to send an invite to that user. Perhaps you may be able to send it for me?\n"
+"Here's the invite link: {invite_link}"
+msgstr "Jeg sendte ikke en invitasjon til den brukeren. Kanskje du kan sende den for meg?\n"
+"Her er invitasjons lenken: {invite_link}"
+
+#: starbot/cogs/mod/kickban.py:965
+msgid "Something went wrong when attempting to send that user an invite. Here's the link so you can try: {invite_link}"
+msgstr "Noe gikk galt under forsøket på å sende den brukeren invitasjonen. Her er linken så du kan prøve: {invite_link}"
+
+#: starbot/cogs/mod/mod.py:44
+#, docstring
+msgid "Moderation tools."
+msgstr "Moderering verktøy."
+
+#: starbot/cogs/mod/mod.py:135 starbot/cogs/mod/mod.py:145
+msgid "Ignored guilds and channels have been moved. Please use {command} to migrate the old settings."
+msgstr "Ignorerte servere og kanaler. Bruk {command} for å migrere de gamle innstillingene."
+
+#: starbot/cogs/mod/mod.py:155
+msgid "Delete delay settings have been moved. Please use {command} to migrate the old settings."
+msgstr "Slett forsinkelse innstillingene har blitt flyttet. Bruk {command} for å overføre de gamle innstillingene."
+
+#: starbot/cogs/mod/mod.py:176
+#, docstring
+msgid "Move ignored channels and servers to core"
+msgstr "Flytt ignorerte kanaler og servere til kjernen"
+
+#: starbot/cogs/mod/mod.py:185
+msgid "Ignored channels and guilds restored."
+msgstr "Ignorerte kanaler og servere gjenopprettet."
+
+#: starbot/cogs/mod/mod.py:190
+#, docstring
+msgid "\n"
+"        Move deletedelay settings to core\n"
+"        "
+msgstr "\n"
+"        Flytt slettede innstillinger til kjernen\n"
+"        "
+
+#: starbot/cogs/mod/mod.py:199
+msgid "Delete delay settings restored."
+msgstr "Slett forsinkelsesinnstillinger gjenopprettet."
+
+#: starbot/cogs/mod/names.py:38
+#, docstring
+msgid "Change a member's server nickname.\n\n"
+"        Leaving the nickname argument empty will remove it.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/names.py:47
+msgid "Nicknames must be between 2 and 32 characters long."
+msgstr "Kallenavn må være mellom 2 og 32 tegn."
+
+#: starbot/cogs/mod/names.py:55
+msgid "I do not have permission to rename that member. They may be higher than or equal to me in the role hierarchy."
+msgstr "Jeg har ikke tillatelse til å endre navn på at medlem. De kan være høyere enn eller lik meg i rollehierarkiet."
+
+#: starbot/cogs/mod/names.py:75
+msgid "I do not have permission to rename that member."
+msgstr "Jeg har ikke tillatelse til å gi medlemmet nytt navn."
+
+#: starbot/cogs/mod/names.py:78
+msgid "That nickname is invalid."
+msgstr "Det kallenavnet er ugyldig."
+
+#: starbot/cogs/mod/names.py:80
+msgid "An unexpected error has occurred."
+msgstr ""
+
+#: starbot/cogs/mod/names.py:82
+msgid "Done."
+msgstr "Ferdig."
+
+#: starbot/cogs/mod/names.py:93
+msgid "Custom: {emoji} {name}"
+msgstr "Egendefinert: {emoji} {name}"
+
+#: starbot/cogs/mod/names.py:95
+msgid "Custom: {emoji}"
+msgstr "Egendefinert: {emoji}"
+
+#: starbot/cogs/mod/names.py:97
+msgid "Custom: {name}"
+msgstr "Egendefinert: {name}"
+
+#: starbot/cogs/mod/names.py:105
+msgid "Playing: {name}"
+msgstr "Spiller {name}"
+
+#: starbot/cogs/mod/names.py:114
+msgid "Streaming: [{name}{sep}{game}]({url})"
+msgstr "Strømme: [{name}{sep}{game}]({url})"
+
+#: starbot/cogs/mod/names.py:121
+msgid "Streaming: {name}"
+msgstr "Strømme: {name}"
+
+#: starbot/cogs/mod/names.py:130
+msgid "Listening: [{title}{sep}{artist}]({url})"
+msgstr "Lytter: [{title}{sep}{artist}]({url})"
+
+#: starbot/cogs/mod/names.py:137
+msgid "Listening: {title}"
+msgstr "Lytter: {title}"
+
+#: starbot/cogs/mod/names.py:145
+msgid "Watching: {name}"
+msgstr "Overvåker: {name}"
+
+#: starbot/cogs/mod/names.py:153
+msgid "Competing in: {competing}"
+msgstr "Konkurrerende i: {competing}"
+
+#: starbot/cogs/mod/names.py:176
+#, docstring
+msgid "Show information about a member.\n\n"
+"        This includes fields for status, discord join date, server\n"
+"        join date, voice state and previous usernames/global display names/nicknames.\n\n"
+"        If the member has no roles, previous usernames, global display names, or server nicknames,\n"
+"        these fields will be omitted.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/names.py:219
+msgid "Unknown"
+msgstr "Ukjent"
+
+#: starbot/cogs/mod/names.py:231
+msgid "Chilling in {} status"
+msgstr "Slapper av i {} status"
+
+#: starbot/cogs/mod/names.py:244
+msgid "and {numeric_number} more roles not displayed due to embed limits."
+msgstr "og {numeric_number} flere roller vises ikke på grunn av grenseverdier for innebygging."
+
+#: starbot/cogs/mod/names.py:271
+msgid "Joined Discord on"
+msgstr "Ble med Discord den"
+
+#: starbot/cogs/mod/names.py:272
+msgid "Joined this server on"
+msgstr "Ble medlem på serveren"
+
+#: starbot/cogs/mod/names.py:275
+msgid "Roles"
+msgstr "Roller"
+
+#: starbot/cogs/mod/names.py:275
+msgid "Role"
+msgstr "Rolle"
+
+#: starbot/cogs/mod/names.py:278
+msgid "Previous Username"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:278
+msgid "Previous Usernames"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:279
+msgid "Previous Global Display Name"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:279
+msgid "Previous Global Display Names"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:280
+msgid "Previous Server Nickname"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:280
+msgid "Previous Server Nicknames"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:290
+msgid "Current voice channel"
+msgstr "Gjeldende talekanal"
+
+#: starbot/cogs/mod/names.py:294
+msgid "Member #{} | User ID: {}"
+msgstr "Medlem #{} | Bruker ID: {}"
+
+#: starbot/cogs/mod/names.py:308
+#, docstring
+msgid "Show previous usernames, global display names, and server nicknames of a member."
+msgstr ""
+
+#: starbot/cogs/mod/names.py:312
+msgid "Past 20 usernames:"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:313
+msgid "Past 20 global display names:"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:314
+msgid "Past 20 server nicknames:"
+msgstr ""
+
+#: starbot/cogs/mod/names.py:324
+msgid "That member doesn't have any recorded name or nickname change."
+msgstr "Det medlemmet har ikke noe registrert navn eller endring av kallenavn."
+
+#: starbot/cogs/mod/settings.py:22
+#, docstring
+msgid "Manage server administration settings."
+msgstr "Administrer serveradministrasjonsinnstillinger."
+
+#: starbot/cogs/mod/settings.py:26
+#, docstring
+msgid "Show the current server administration settings."
+msgstr "Vis gjeldende innstillinger for server administrasjon."
+
+#: starbot/cogs/mod/settings.py:30
+msgid "Track name changes: {yes_or_no}\n"
+msgstr "Spornavn endringer: {yes_or_no}\n"
+
+#: starbot/cogs/mod/settings.py:31 starbot/cogs/mod/settings.py:54
+#: starbot/cogs/mod/settings.py:82 starbot/cogs/mod/settings.py:90
+#: starbot/cogs/mod/settings.py:93
+msgid "Yes"
+msgstr "Ja"
+
+#: starbot/cogs/mod/settings.py:31 starbot/cogs/mod/settings.py:54
+#: starbot/cogs/mod/settings.py:59 starbot/cogs/mod/settings.py:64
+#: starbot/cogs/mod/settings.py:69 starbot/cogs/mod/settings.py:74
+#: starbot/cogs/mod/settings.py:82 starbot/cogs/mod/settings.py:90
+#: starbot/cogs/mod/settings.py:93
+msgid "No"
+msgstr "Nei"
+
+#: starbot/cogs/mod/settings.py:52
+msgid "Overridden by another setting"
+msgstr "Overstyrt av en annen innstilling"
+
+#: starbot/cogs/mod/settings.py:55
+msgid "Track nickname changes: {yes_or_no}\n"
+msgstr "Spor kallenavn endrer: {yes_or_no}\n"
+
+#: starbot/cogs/mod/settings.py:56
+msgid "Delete repeats: {num_repeats}\n"
+msgstr "Slett gjentarett: {num_repeats}\n"
+
+#: starbot/cogs/mod/settings.py:57
+msgid "after {num} repeats"
+msgstr "etter {num} gjentatte ganger"
+
+#: starbot/cogs/mod/settings.py:61
+msgid "Warn mention spam: {num_mentions}\n"
+msgstr "Advare nevne spam: {num_mentions}\n"
+
+#: starbot/cogs/mod/settings.py:62 starbot/cogs/mod/settings.py:67
+#: starbot/cogs/mod/settings.py:72
+msgid "{num} mentions"
+msgstr "{num} omtaler"
+
+#: starbot/cogs/mod/settings.py:66
+msgid "Kick mention spam: {num_mentions}\n"
+msgstr "Kast ut nevne spam: {num_mentions}\n"
+
+#: starbot/cogs/mod/settings.py:71
+msgid "Ban mention spam: {num_mentions}\n"
+msgstr "Utestengelsesspam: {num_mentions}\n"
+
+#: starbot/cogs/mod/settings.py:77
+msgid "Mention Spam Strict: All mentions will count including duplicates\n"
+msgstr "Nevn spamt brudd: Alle nevner vil telle med duplikater\n"
+
+#: starbot/cogs/mod/settings.py:79
+msgid "Mention Spam Strict: Only unique mentions will count\n"
+msgstr "Nevn spam: Bare unike nevner teller\n"
+
+#: starbot/cogs/mod/settings.py:81
+msgid "Respects hierarchy: {yes_or_no}\n"
+msgstr "Spenner hierarki: {yes_or_no}\n"
+
+#: starbot/cogs/mod/settings.py:84
+msgid "Delete delay: {num_seconds}\n"
+msgstr "Slett forsinkelse: {num_seconds}\n"
+
+#: starbot/cogs/mod/settings.py:85
+msgid "{num} seconds"
+msgstr "{num} sekunder"
+
+#: starbot/cogs/mod/settings.py:87
+msgid "None"
+msgstr "Ingen"
+
+#: starbot/cogs/mod/settings.py:89
+msgid "Reinvite on unban: {yes_or_no}\n"
+msgstr "Invitasjon på annet: {yes_or_no}\n"
+
+#: starbot/cogs/mod/settings.py:92
+msgid "Send message to users on kick/ban: {yes_or_no}\n"
+msgstr "Send melding til brukere på kick/ban: {yes_or_no}\n"
+
+#: starbot/cogs/mod/settings.py:96
+msgid "Default message history delete on ban: Previous {num_days} days\n"
+msgstr "Standard meldingshistorie slettes i forbud: Forrige {num_days} dager\n"
+
+#: starbot/cogs/mod/settings.py:100
+msgid "Default message history delete on ban: Don't delete any\n"
+msgstr "Standard meldingshistorikk slettet i utestengt: Ikke slett noe\n"
+
+#: starbot/cogs/mod/settings.py:101
+msgid "Default tempban duration: {duration}"
+msgstr "Standard tempban varighet: {duration}"
+
+#: starbot/cogs/mod/settings.py:109
+#, docstring
+msgid "Toggle role hierarchy check for mods and admins.\n\n"
+"        **WARNING**: Disabling this setting will allow mods to take\n"
+"        actions on users above them in the role hierarchy!\n\n"
+"        This is enabled by default.\n"
+"        "
+msgstr "Veksle rollehierarki sjekk for mods og admins.\n\n"
+"        **ADVARSEL**: Deaktivering av denne innstillingen vil tillate mods å ta\n"
+"        handlinger på brukere over dem i rollenehierarkiet!\n\n"
+"        Dette er aktivert som standard.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:121
+msgid "Role hierarchy will be checked when moderation commands are issued."
+msgstr "Rollehierarki vil bli sjekket når moderasjons-kommandoer utstedes."
+
+#: starbot/cogs/mod/settings.py:126
+msgid "Role hierarchy will be ignored when moderation commands are issued."
+msgstr "Rollehierarki vil bli ignorert når moderasjonskommandoer utstedes."
+
+#: starbot/cogs/mod/settings.py:132
+#, docstring
+msgid "\n"
+"        Manage the automoderation settings for mentionspam.\n"
+"        "
+msgstr "\n"
+"        Behandle automatiseringsinnstillingene for nevnelsesspam.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:139
+#, docstring
+msgid "\n"
+"        Setting to account for duplicate mentions.\n\n"
+"        If enabled all mentions will count including duplicated mentions.\n"
+"        If disabled only unique mentions will count.\n\n"
+"        Use this command without any parameter to see current setting.\n"
+"        "
+msgstr "\n"
+"        Setter til konto for duplikate nevinger.\n\n"
+"        Hvis aktivert vil alle omtaler telle med dupliserte omtaler.\n"
+"        Hvis deaktivert, vil bare unike omtaler telle med.\n\n"
+"        Bruk denne kommandoen uten noen parameter for å se gjeldende innstilling.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:151
+msgid "Mention spam currently accounts for multiple mentions of the same user."
+msgstr "Nevn spam kontoer for flere nevner av samme bruker."
+
+#: starbot/cogs/mod/settings.py:153
+msgid "Mention spam currently only accounts for mentions of different users."
+msgstr "Nevn spam bare kontoer for nevner forskjellige brukere."
+
+#: starbot/cogs/mod/settings.py:158
+msgid "Mention spam will now account for multiple mentions of the same user."
+msgstr "Nevn spam vil nå stå for flere omtaler av samme bruker."
+
+#: starbot/cogs/mod/settings.py:160
+msgid "Mention spam will only account for mentions of different users."
+msgstr "Nevn spam vil bare forholde seg til nevninger om forskjellige brukere."
+
+#: starbot/cogs/mod/settings.py:167
+#, docstring
+msgid "\n"
+"        Sets the autowarn conditions for mention spam.\n\n"
+"        Users will be warned if they send any messages which contain more than\n"
+"        `<max_mentions>` mentions.\n\n"
+"        `<max_mentions>` Must be 0 or greater. Set to 0 to disable this feature.\n"
+"        "
+msgstr "\n"
+"        Angir autowarn betingelser for nevnt spam.\n\n"
+"        Brukere vil bli advart dersom de sender meldinger som inneholder mer enn\n"
+"        \n"
+" \n"
+"<max_mentions>` omtaler.\n\n"
+"<max_mentions>må være 0 eller høyere. Sett til 0 for å deaktivere denne funksjonen.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:178
+msgid "Autowarn for mention spam is already disabled."
+msgstr "Autowarn for nevne spam er allerede deaktivert."
+
+#: starbot/cogs/mod/settings.py:180
+msgid "Autowarn for mention spam disabled."
+msgstr "Autowarn for nevne spam deaktivert."
+
+#: starbot/cogs/mod/settings.py:183
+msgid "`<max_mentions>` must be 1 or higher to autowarn."
+msgstr "`<max_mentions>` må være 1 eller høyere for å autowarn."
+
+#: starbot/cogs/mod/settings.py:189
+msgid "\n"
+"Autowarn is equal to or higher than autokick."
+msgstr "\n"
+"Autowarn er lik eller høyere enn autokick."
+
+#: starbot/cogs/mod/settings.py:193
+msgid "\n"
+"Autowarn is equal to or higher than autoban."
+msgstr "\n"
+"Autowarn er lik eller høyere enn autoban."
+
+#: starbot/cogs/mod/settings.py:197
+msgid "Autowarn for mention spam enabled. Anyone mentioning {max_mentions} or more people in a single message will be autowarned.\n"
+"{mismatch_message}"
+msgstr "Autowarn for å nevne spam aktivert. Alle som nevner {max_mentions} eller flere mennesker i en enkelt melding vil bli automatiskt.\n"
+"{mismatch_message}"
+
+#: starbot/cogs/mod/settings.py:207
+#, docstring
+msgid "\n"
+"        Sets the autokick conditions for mention spam.\n\n"
+"        Users will be kicked if they send any messages which contain more than\n"
+"        `<max_mentions>` mentions.\n\n"
+"        `<max_mentions>` Must be 0 or greater. Set to 0 to disable this feature.\n"
+"        "
+msgstr "\n"
+"        Angir tilstanden for autokick for nevnt spam.\n\n"
+"        Brukere vil bli sparket hvis de sender meldinger som inneholder mer enn\n"
+"        `<max_mentions>` omtaler.\n\n"
+"<max_mentions>må være 0 eller høyere. Sett til 0 for å deaktivere denne funksjonen.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:218
+msgid "Autokick for mention spam is already disabled."
+msgstr "Autokick for nevne spam er allerede deaktivert."
+
+#: starbot/cogs/mod/settings.py:220
+msgid "Autokick for mention spam disabled."
+msgstr "Autokick for å nevne spam deaktivert."
+
+#: starbot/cogs/mod/settings.py:223
+msgid "`<max_mentions>` must be 1 or higher to autokick."
+msgstr "`<max_mentions>` må være 1 eller høyere for å bli autokick."
+
+#: starbot/cogs/mod/settings.py:229
+msgid "\n"
+"Autokick is equal to or lower than autowarn."
+msgstr "\n"
+"Autokick er lik eller lavere enn autowarn."
+
+#: starbot/cogs/mod/settings.py:233
+msgid "\n"
+"Autokick is equal to or higher than autoban."
+msgstr "\n"
+"Autokick er lik eller høyere enn autoban."
+
+#: starbot/cogs/mod/settings.py:237
+msgid "Autokick for mention spam enabled. Anyone mentioning {max_mentions} or more people in a single message will be autokicked.\n"
+"{mismatch_message}"
+msgstr "Autokick for å nevne spam aktivert. Alle som nevner {max_mentions} eller flere mennesker i en enkelt melding vil bli automatisk hentet.\n"
+"{mismatch_message}"
+
+#: starbot/cogs/mod/settings.py:247
+#, docstring
+msgid "Set the autoban conditions for mention spam.\n\n"
+"        Users will be banned if they send any message which contains more than\n"
+"        `<max_mentions>` mentions.\n\n"
+"        `<max_mentions>` Must be 0 or greater. Set to 0 to disable this feature.\n"
+"        "
+msgstr "\n"
+"        Angir tilstanden for autokick for nevnt spam.\n\n"
+"        Brukere vil bli sparket hvis de sender meldinger som inneholder mer enn\n"
+"        `<max_mentions>` omtaler.\n\n"
+"<max_mentions>må være 0 eller høyere. Sett til 0 for å deaktivere denne funksjonen.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:257
+msgid "Autoban for mention spam is already disabled."
+msgstr "Autoban for nevnelse av spam er allerede deaktivert."
+
+#: starbot/cogs/mod/settings.py:259
+msgid "Autoban for mention spam disabled."
+msgstr "Autoban for nevne spam deaktivert."
+
+#: starbot/cogs/mod/settings.py:262
+msgid "`<max_mentions>` must be 1 or higher to autoban."
+msgstr "`<max_mentions>` må være 1 eller høyere for å autoban."
+
+#: starbot/cogs/mod/settings.py:268
+msgid "\n"
+"Autoban is equal to or lower than autowarn."
+msgstr "\n"
+"Autoban er lik eller lavere enn autowarn."
+
+#: starbot/cogs/mod/settings.py:272
+msgid "\n"
+"Autoban is equal to or lower than autokick."
+msgstr "\n"
+"Autoban er lik eller lavere enn autokick."
+
+#: starbot/cogs/mod/settings.py:276
+msgid "Autoban for mention spam enabled. Anyone mentioning {max_mentions} or more people in a single message will be autobanned.\n"
+"{mismatch_message}"
+msgstr "Autoban for å nevne spam aktivert. Alle som nevner {max_mentions} eller flere mennesker i en enkelt melding vil bli autobannet.\n"
+"{mismatch_message}"
+
+#: starbot/cogs/mod/settings.py:286
+#, docstring
+msgid "Enable auto-deletion of repeated messages.\n\n"
+"        Must be between 2 and 20.\n\n"
+"        Set to -1 to disable this feature.\n"
+"        "
+msgstr "Aktiver automatisk sletting av gjentatte meldinger.\n\n"
+"        må være mellom 2 og 20.\n\n"
+"        satt til -1 for å deaktivere denne funksjonen.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:297 starbot/cogs/mod/settings.py:323
+msgid "Repeated messages will be ignored."
+msgstr "Gjentatte meldinger vil bli ignorert."
+
+#: starbot/cogs/mod/settings.py:303
+msgid "Messages repeated up to {num} times will be deleted."
+msgstr "Meldinger som gjentas opp til {num} ganger vil bli slettet."
+
+#: starbot/cogs/mod/settings.py:307
+msgid "Number of repeats must be between 2 and 20 or equal to -1 if you want to disable this feature!"
+msgstr "Antall repetisjoner må være mellom 2 og 20 eller lik -1 hvis du ønsker å deaktivere denne funksjonen!"
+
+#: starbot/cogs/mod/settings.py:316
+msgid "Bot will delete repeated messages after {num} repeats. Set this value to -1 to ignore repeated messages"
+msgstr "Boten vil slette gjentatte meldinger etter {num} gjentakelser. Sett denne verdien til -1 for å ignorere gjentatte meldinger"
+
+#: starbot/cogs/mod/settings.py:328
+#, docstring
+msgid "Toggle whether an invite will be sent to a user when unbanned.\n\n"
+"        If this is True, the bot will attempt to create and send a single-use invite\n"
+"        to the newly-unbanned user.\n"
+"        "
+msgstr "Velg om en invitasjon vil bli sendt til en bruker når den ikke er utestengt.\n\n"
+"        Hvis dette er riktig, boten vil forsøke å lage og sende en engangs invitasjon\n"
+"        til den nyutestengte brukeren.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:338
+msgid "Users unbanned with {command} will be reinvited."
+msgstr "Brukere som opphevet utestengelsen med {command} vil bli invitert på nytt."
+
+#: starbot/cogs/mod/settings.py:345
+msgid "Users unbanned with {command} will not be reinvited."
+msgstr "Brukere som ikke er utestengt med {command} vil ikke bli invitert på nytt."
+
+#: starbot/cogs/mod/settings.py:353
+#, docstring
+msgid "Toggle whether a message should be sent to a user when they are kicked/banned.\n\n"
+"        If this option is enabled, the bot will attempt to DM the user with the guild name\n"
+"        and reason as to why they were kicked/banned.\n"
+"        "
+msgstr "Velg om en melding skal sendes til en bruker når den er kicked/bannlyst.\n\n"
+"        Hvis dette valget er aktivert botten vil forsøke å DM brukeren med klan navnet\n"
+"        og årsaken til at de ble sparket/bannlyst.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:362
+msgid "DM when kicked/banned is currently set to: {setting}"
+msgstr "DM når kick/ban er satt til: {setting}"
+
+#: starbot/cogs/mod/settings.py:367
+msgid "Bot will now attempt to send a DM to user before kick and ban."
+msgstr "Bot vil nå forsøke å sende en direktemelding til bruker før kick og utestengelse."
+
+#: starbot/cogs/mod/settings.py:370
+msgid "Bot will no longer attempt to send a DM to user before kick and ban."
+msgstr "Bot vil ikke lenger forsøke å sende en DM til bruker før spark og utestengelse."
+
+#: starbot/cogs/mod/settings.py:376
+#, docstring
+msgid "Set the default number of days worth of messages to be deleted when a user is banned.\n\n"
+"        The number of days must be between 0 and 7.\n"
+"        "
+msgstr "Angi standardantall dager verdt for meldinger som skal slettes når en bruker er utestengt.\n\n"
+"        Antall dager må være mellom 0 og 7.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:382
+msgid "Invalid number of days. Must be between 0 and 7."
+msgstr "Ugyldig antall dager. Må være mellom 0 og 7."
+
+#: starbot/cogs/mod/settings.py:385
+msgid "{days} days worth of messages will be deleted when a user is banned."
+msgstr "{days} dager verdt av meldinger vil bli slettet når en bruker er utestengt."
+
+#: starbot/cogs/mod/settings.py:400
+#, docstring
+msgid "Set the default time to be used when a user is tempbanned.\n\n"
+"        Accepts: seconds, minutes, hours, days, weeks\n"
+"        `duration` must be greater than zero.\n\n"
+"        Examples:\n"
+"            `[p]modset defaultduration 7d12h10m`\n"
+"            `[p]modset defaultduration 7 days 12 hours 10 minutes`\n"
+"        "
+msgstr "Angi standard tid som skal brukes når en bruker er midlertidig utestengt.\n\n"
+"        Godtatt: sekunder, minutter, timer, dager, uker\n"
+"        `varighet` må være større enn null.\n\n"
+"        Eksempler:\n"
+"            `[p]modset defaultduration 7d12h10m`\n"
+"            `[p]modset defaultduration 7 dager 12 timer 10 minutter`\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:412
+msgid "The default duration for tempbanning a user is now {duration}."
+msgstr "Standard varighet for midlertidig utestengelse av en bruker er nå {duration}."
+
+#: starbot/cogs/mod/settings.py:420
+#, docstring
+msgid "\n"
+"        Toggle whether server nickname changes should be tracked.\n\n"
+"        This setting will be overridden if trackallnames is disabled.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/settings.py:429
+msgid "Nickname changes are currently being tracked."
+msgstr "Kallenavn endringer spores for øyeblikket."
+
+#: starbot/cogs/mod/settings.py:431
+msgid "Nickname changes are not currently being tracked."
+msgstr "Kallenavn endringer blir ikke sporet."
+
+#: starbot/cogs/mod/settings.py:436
+msgid "Nickname changes will now be tracked."
+msgstr "Navnendringer vil nå bli sporet."
+
+#: starbot/cogs/mod/settings.py:438
+msgid "Nickname changes will no longer be tracked."
+msgstr "Kallenavn endringer vil ikke lenger spores."
+
+#: starbot/cogs/mod/settings.py:445
+#, docstring
+msgid "\n"
+"        Toggle whether all name changes should be tracked.\n\n"
+"        Toggling this off also overrides the tracknicknames setting.\n"
+"        "
+msgstr "\n"
+"        Veksle om alle navneendringer skal spores.\n\n"
+"        Hvis du slår på dette overstyrer også innstillingen for sporekallenavn.\n"
+"        "
+
+#: starbot/cogs/mod/settings.py:453
+msgid "Name changes are currently being tracked."
+msgstr "Navneendringer spores for øyeblikket."
+
+#: starbot/cogs/mod/settings.py:455
+msgid "All name changes are currently not being tracked."
+msgstr "Alle navneendringer blir ikke sporet."
+
+#: starbot/cogs/mod/settings.py:460
+msgid "Name changes will now be tracked."
+msgstr "Navnendringer vil nå bli sporet."
+
+#: starbot/cogs/mod/settings.py:462
+msgid "All name changes will no longer be tracked.\n"
+"To delete existing name data, use {command}."
+msgstr "Alle navneendringer vil ikke lenger spores.\n"
+"For å slette eksisterende navnedata, bruk {command}."
+
+#: starbot/cogs/mod/settings.py:473
+#, docstring
+msgid "Delete all stored usernames, global display names, and server nicknames.\n\n"
+"        Examples:\n"
+"        - `[p]modset deletenames` - Did not confirm. Shows the help message.\n"
+"        - `[p]modset deletenames yes` - Deletes all stored usernames, global display names, and server nicknames.\n\n"
+"        **Arguments**\n\n"
+"        - `<confirmation>` This will default to false unless specified.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/settings.py:485
+msgid "This will delete all stored usernames, global display names, and server nicknames the bot has stored.\n"
+"If you're sure, type {command}"
+msgstr ""
+
+#: starbot/cogs/mod/settings.py:529
+msgid "Usernames, global display names, and server nicknames have been deleted from Mod config."
+msgstr ""
+
+#: starbot/cogs/mod/slowmode.py:28
+#, docstring
+msgid "Changes thread's or text channel's slowmode setting.\n\n"
+"        Interval can be anything from 0 seconds to 6 hours.\n"
+"        Use without parameters to disable.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/mod/slowmode.py:37
+msgid "Slowmode interval is now {interval}."
+msgstr "Rolig modus intervall er nå {interval}."
+
+#: starbot/cogs/mod/slowmode.py:42
+msgid "Slowmode has been disabled."
+msgstr "Rolig modus er deaktivert."
+

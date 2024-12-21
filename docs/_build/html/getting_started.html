@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting started &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About (privileged) intents and public bots" href="intents.html" />
+    <link rel="prev" title="Trivia List Creation Guide" href="guide_trivia_list_creation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#invite-red-to-your-server">Invite Red to your server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interact-with-red">Interact with Red</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-commands">The commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cogs">Cogs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#community-cogs">Community cogs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#permissions">Permissions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bot-owner">Bot owner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#server-owner">Server owner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#administrator">Administrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moderator">Moderator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hosting">Hosting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-documentation">User documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developgetting_started.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<p>If you recently installed Red, you should read this.
+This is a quick start guide for a general usage.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you haven’t installed Red, please do it by following
+one of the <a class="reference internal" href="install_guides/index.html"><span class="doc">installation guides</span></a>.</p>
+</div>
+<p>Assuming you correctly installed Red, you should have a
+window like this:</p>
+<img alt="_images/red-console.png" src="_images/red-console.png" />
+<section id="invite-red-to-your-server">
+<span id="getting-started-invite"></span><h2>Invite Red to your server<a class="headerlink" href="#invite-red-to-your-server" title="Link to this heading"></a></h2>
+<p>When started, the console will show you the <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">URL</span></code>
+(visible at the bottom of the screenshot above).
+Paste the link into your browser and select the server you want
+to invite the bot in, like any other bot.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">server</span></code> permission to add bots.</p>
+</div>
+<p>Complete the captcha, it should tell you <code class="docutils literal notranslate"><span class="pre">Authorized!</span></code> and you
+should see your bot in the members list.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If Discord shows <code class="docutils literal notranslate"><span class="pre">Bot</span> <span class="pre">requires</span> <span class="pre">code</span> <span class="pre">grant</span></code>, please untick this
+option in your token settings</p>
+<img alt="_images/code-grant.png" src="_images/code-grant.png" />
+</div>
+</section>
+<section id="interact-with-red">
+<span id="getting-started-interact"></span><h2>Interact with Red<a class="headerlink" href="#interact-with-red" title="Link to this heading"></a></h2>
+<p>As a chatbot, you interact with Red via the Discord text channels
+(not from the command prompt). To send commands to the bot, you will have to
+use the prefix you set before, followed by the command you want to use. For
+example, if your prefix is <code class="docutils literal notranslate"><span class="pre">!</span></code>, you will execute your command like this:
+<code class="docutils literal notranslate"><span class="pre">!ping</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since the prefix can be anything, it’ll be referenced as <code class="docutils literal notranslate"><span class="pre">[p]</span></code>
+in documentations.</p>
+</div>
+<section id="the-commands">
+<span id="getting-started-commands"></span><h3>The commands<a class="headerlink" href="#the-commands" title="Link to this heading"></a></h3>
+<p>The command you’re going to use the most is <strong>help</strong>. This command will
+show you <strong>all of the available commands</strong> of the bot with a small description.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]help
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The message is generated dynamically and users will only see the
+commands they can use. You can change what commands users can use with the
+permissions cog.</p>
+</div>
+<p>You can also pick a command to get its detailed description and the
+parameters.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]help command
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Arguments enclosed in <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">&gt;</span></code> are <strong>required</strong> for the command to work.</p>
+<p>Arguments enclosed in <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> are <strong>optional</strong> for the command;
+you can decide whether to use them or not.</p>
+<p>If your argument includes spaces like <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">world!</span></code>, most of the time
+you will need to place it in double quotes like this: <code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">world!&quot;</span></code>.
+Sometimes (especially for the last argument) these double quotes are not
+required.</p>
+<p>Arguments followed by an ellipsis <code class="docutils literal notranslate"><span class="pre">...</span></code> means that you may provide
+multiple arguments for the command.</p>
+<p>For example, the command <code class="docutils literal notranslate"><span class="pre">[p]cog</span> <span class="pre">install</span></code> in the downloader cog has
+the syntax <code class="docutils literal notranslate"><span class="pre">cog</span> <span class="pre">install</span> <span class="pre">&lt;repo&gt;</span> <span class="pre">&lt;cogs...&gt;</span></code>, meaning that you can provide
+1 or more <code class="docutils literal notranslate"><span class="pre">cogs</span></code> to install from the <code class="docutils literal notranslate"><span class="pre">repo</span></code>.</p>
+<p>Arguments followed by <code class="docutils literal notranslate"><span class="pre">=value</span></code> means that, if not specified,
+the argument will be equal to <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<p>For example, the command <code class="docutils literal notranslate"><span class="pre">[p]cleanup</span> <span class="pre">messages</span></code> in the cleanup cog has
+the syntax <code class="docutils literal notranslate"><span class="pre">cleanup</span> <span class="pre">messages</span> <span class="pre">&lt;number&gt;</span> <span class="pre">[delete_pinned=False]</span></code>, which means
+<code class="docutils literal notranslate"><span class="pre">delete_pinned</span></code> default will be false, unless you specify it as true.</p>
+</div>
+<p>You can use help to show the <strong>categories</strong> too, generally called cogs,
+by doing the following (notice the capitalization):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]help YourCategory
+</pre></div>
+</div>
+<p>Help also shows <strong>command groups</strong>. They are group of commands.
+To get the description of a subcommand, type this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]help commandgroup subcommand
+</pre></div>
+</div>
+<p>When using subcommands, you also need to specify the command group.
+As an example, <code class="docutils literal notranslate"><span class="pre">cleanup</span></code> has 6 subcommands. If you want
+to use one of them, do: <code class="docutils literal notranslate"><span class="pre">[p]cleanup</span> <span class="pre">messages</span> <span class="pre">10</span></code></p>
+</section>
+</section>
+<section id="cogs">
+<span id="getting-started-cogs"></span><h2>Cogs<a class="headerlink" href="#cogs" title="Link to this heading"></a></h2>
+<p>Red is built with cogs, a fancy term for plugins. They are
+modules that add functionality to Red. They contain
+commands to use.</p>
+<p>Red comes with 18 cogs containing the basic features, such
+as moderation, utility, music, streams…</p>
+<p>You can see your loaded and unloaded cogs with the <code class="docutils literal notranslate"><span class="pre">[p]cogs</span></code>
+command. By default, all cogs will be unloaded.</p>
+<p>You can load or unload a cog by using the load or unload command</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]load cogname
+[p]unload cogname
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can load and unload multiple cogs at once:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]load cog1 cog2 ...
+</pre></div>
+</div>
+</div>
+<p>You can enable and disable everything you want, which means you can
+customize Red how you want!</p>
+<section id="community-cogs">
+<span id="getting-started-community-cogs"></span><h3>Community cogs<a class="headerlink" href="#community-cogs" title="Link to this heading"></a></h3>
+<p>There’s an entire <a class="reference external" href="https://discord.gg/red">community</a> that contributes
+to Red. Those contributors make additional cogs for you to use. You can
+download them using the downloader cog.</p>
+<p>You can start using the downloader cog by loading it: <code class="docutils literal notranslate"><span class="pre">[p]load</span> <span class="pre">downloader</span></code></p>
+<p>You can find cogs by searching on <a class="reference external" href="https://index.discord.red">https://index.discord.red</a>. Find whatever you want,
+there are hundreds of cogs available!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An even better way to discover new cogs and repositories is in the works! Stay tuned!</p>
+</div>
+<p>Cogs come in repositories. A repository is a container of cogs
+that you can install. Let’s suppose you want to install the <code class="docutils literal notranslate"><span class="pre">say</span></code>
+cog from the repository <code class="docutils literal notranslate"><span class="pre">Laggrons-Dumb-Cogs</span></code>. You’ll first need
+to add the repository.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]repo add Laggrons-Dumb-Cogs https://github.com/retke/Laggrons-Dumb-Cogs
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may need to specify a branch. If so, add its name after the link.</p>
+</div>
+<p>Then you can install the cog</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]cog install Laggrons-Dumb-Cogs say
+</pre></div>
+</div>
+<p>Now the cog is installed, but not loaded. You can load it using the <code class="docutils literal notranslate"><span class="pre">[p]load</span></code>
+command we talked about before.</p>
+</section>
+</section>
+<section id="permissions">
+<span id="getting-started-permissions"></span><h2>Permissions<a class="headerlink" href="#permissions" title="Link to this heading"></a></h2>
+<p>Red works with different levels of permissions. Every cog defines
+the level of permission needed for a command.</p>
+<section id="bot-owner">
+<h3>Bot owner<a class="headerlink" href="#bot-owner" title="Link to this heading"></a></h3>
+<p>The bot owner can access all commands on every guild. They can also use
+exclusive commands that can interact with the global settings
+or system files.</p>
+<p><em>You</em> are the owner by default.</p>
+</section>
+<section id="server-owner">
+<h3>Server owner<a class="headerlink" href="#server-owner" title="Link to this heading"></a></h3>
+<p>The server owner can access all commands on their guild, except the global
+ones or those that can interact with system files (available for the
+bot owner).</p>
+</section>
+<section id="administrator">
+<h3>Administrator<a class="headerlink" href="#administrator" title="Link to this heading"></a></h3>
+<p>The administrator is defined by its roles. You can set multiple admin roles
+with the <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">addadminrole</span></code> and <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">removeadminrole</span></code> commands.</p>
+<p>For example, in the mod cog, an admin can use the <code class="docutils literal notranslate"><span class="pre">[p]modset</span></code> command
+which defines the cog settings.</p>
+</section>
+<section id="moderator">
+<h3>Moderator<a class="headerlink" href="#moderator" title="Link to this heading"></a></h3>
+<p>A moderator is a step above the average users. You can set multiple moderator
+roles with the <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">addmodrole</span></code> and <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">removemodrole</span></code> commands.</p>
+<p>For example, in the filter cog, a mod will be able to use the various commands
+under <code class="docutils literal notranslate"><span class="pre">[p]filter</span></code> (such as adding and removing filtered words), but they will
+not be able to modify the cog settings with the <code class="docutils literal notranslate"><span class="pre">[p]filterset</span></code> command.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don’t like the default permission settings for some commands or
+want to restrict a cog or a command to a channel/member, you can use
+the permissions cog.</p>
+</div>
+</section>
+</section>
+<section id="hosting">
+<span id="getting-started-hosting"></span><h2>Hosting<a class="headerlink" href="#hosting" title="Link to this heading"></a></h2>
+<p>If you are hosting Red on your personal computer, you will soon notice that
+if you close the window or if you shut down you computer, Red will be offline.
+It needs an environment to work and respond.</p>
+<p>You can try to host Red somewhere it will always be online, like on a virtual
+private server (VPS) or on a personal server (e.g. Raspberry Pi).</p>
+<p>If you want to do it, follow these steps.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before trying to host Red on a Linux environment, you need to know the
+basics of the Unix commands, such as navigating the system files or use
+a terminal text editor.</p>
+<p>You should read <a class="reference external" href="https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics">DigitalOcean’s tutorial: An Introduction to Linux Basics</a>
+if you have not used Linux before.</p>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Find a host</strong></p></li>
+</ol>
+<blockquote>
+<div><p>You need to find a server to host Red. You can rent a VPS (it can be free)
+on an online service. Please check <a class="reference internal" href="host-list.html#host-list"><span class="std std-ref">this list of hosts</span></a> for
+more information.</p>
+<p>You can also buy a Raspberry Pi (~$20), which is a micro-computer that will
+be able to host Red. The model 3 or above is recommended.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>Install Linux</strong></p></li>
+</ol>
+<blockquote>
+<div><p>Most of the VPS providers have tools for installing Linux automatically. If
+you’re a beginner, we recommend <strong>Ubuntu 24.04 LTS</strong>.</p>
+<p>For Raspberry Pi users, just install <a class="reference external" href="https://www.raspberrypi.org/software/">Raspbian</a> on a micro-SD card.</p>
+</div></blockquote>
+<p>2.1. <strong>Log in</strong></p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is for those who have an online server. If you have
+a local Linux machine, just open the terminal and skip to the next part.</p>
+</div>
+<p>As we said before, a VPS is controlled through command line. You will have to
+connect to your VPS through a protocol called SSH.</p>
+<img alt="_images/instances-ssh-button.png" src="_images/instances-ssh-button.png" />
+<p>On your host page (here, it is Google Cloud), find the SSH button and click on
+it. You will be connected to your server with command line. You should see
+something like this.</p>
+<img alt="_images/ssh-output.png" src="_images/ssh-output.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don’t forget to type the command <code class="docutils literal notranslate"><span class="pre">logout</span></code> to close the SSH properly.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>Install and set up Red</strong></p></li>
+</ol>
+<blockquote>
+<div><p>Follow one of the Linux installation guides. We provide guides for the
+most used distributions. Check the <a class="reference internal" href="install_guides/index.html"><span class="doc">list of install guides</span></a> and search for
+your distribution.</p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p><strong>Set up an auto-restart</strong></p></li>
+</ol>
+<blockquote>
+<div><p>Once you got Red running on your server, it will still shut down if you close
+the window. You can set up an auto-restarting system that will create a
+side task and handle fatal errors, so you can just leave your server running
+and enjoy Red!</p>
+<p>For that, follow <a class="reference internal" href="autostart_systemd.html#systemd-service-guide"><span class="std std-ref">the systemd service guide</span></a>.</p>
+</div></blockquote>
+</section>
+<section id="user-documentation">
+<span id="getting-started-userdocs"></span><h2>User documentation<a class="headerlink" href="#user-documentation" title="Link to this heading"></a></h2>
+<p>You will soon start using the Red core cogs. A detailed documentation is
+available for every core cog, under the <a class="reference internal" href="index.html#main"><span class="std std-ref">How to use</span></a> section.</p>
+<p>The cog guides are formatted the same. They’re divided into 3 sections:</p>
+<ul>
+<li><p><strong>Guide</strong></p>
+<p>This will introduce you to the cog and explain you how it works.</p>
+</li>
+<li><p><strong>Commands</strong></p>
+<p>A list of the available commands, with details and arguments.
+Each command guide will be formatted like this:</p>
+<ul>
+<li><p><strong>Syntax</strong></p>
+<p>A line that will show how the command must be invoked, with the arguments.</p>
+</li>
+<li><p><strong>Aliases</strong></p>
+<p>Each command may have one or more aliases, which are alternative command names
+you can use to invoke the same command. For example, <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">colour</span></code> can also
+be invoked with <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">color</span></code>. If there are aliases for a command, they will
+appear just under the syntax.</p>
+</li>
+<li><p><strong>Description</strong></p>
+<p>A detailed description of what the command does, with details about how
+it must be used.</p>
+</li>
+<li><p><strong>Arguments</strong></p>
+<p>A list of all arguments needed (or not) for the command, with more details.</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="guide_trivia_list_creation.html" class="btn btn-neutral float-left" title="Trivia List Creation Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="intents.html" class="btn btn-neutral float-right" title="About (privileged) intents and public bots" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

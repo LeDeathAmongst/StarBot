@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publishing cogs for Red V3 &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Becoming an Approved Cog Creator" href="guide_cog_creators.html" />
+    <link rel="prev" title="Slash Commands and Interactions" href="guide_slash_and_interactions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Publishing cogs for Red V3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#repository-template">Repository Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#info-json-format">Info.json format</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#keys-common-to-both-repo-and-cog-info-json-case-sensitive">Keys common to both repo and cog info.json (case sensitive)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys-specific-to-the-cog-info-json-case-sensitive">Keys specific to the cog info.json (case sensitive)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-to-the-index">Adding to the Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Publishing cogs for Red V3</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developguide_publish_cogs.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="publishing-cogs-for-red-v3">
+<h1>Publishing cogs for Red V3<a class="headerlink" href="#publishing-cogs-for-red-v3" title="Link to this heading"></a></h1>
+<p>Users of Red install 3rd-party cogs using Downloader cog. To make your cog available
+to install for others, you will have to create a git repository
+and publish it on git repository hosting (for example <a class="reference external" href="https://github.com">GitHub</a>)</p>
+<section id="repository-template">
+<h2>Repository Template<a class="headerlink" href="#repository-template" title="Link to this heading"></a></h2>
+<p>We have standardized what a repository’s structure should look like to better assist
+our Downloader system and provide essential information to the Red portal.</p>
+<p>The main repository should contain at a minimum:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#info-json-format"><span class="std std-ref">An info.json file</span></a></p></li>
+<li><p>One folder for each cog package in the repository</p>
+<ul>
+<li><p>refer to <a class="reference internal" href="guide_cog_creation.html"><span class="doc">Creating cogs for Red V3</span></a> for information on how to create a valid cog package</p></li>
+<li><p>you should also put <a class="reference internal" href="#info-json-format"><span class="std std-ref">info.json file</span></a> inside each cog folder</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<p>We also recommend adding a license and README file with general information about the repository.</p>
+<p>For a simple example of what this might look like when finished,
+take a look at <a class="reference external" href="https://github.com/Cog-Creators/Applications">our example template</a>.</p>
+</section>
+<section id="info-json-format">
+<span id="id1"></span><h2>Info.json format<a class="headerlink" href="#info-json-format" title="Link to this heading"></a></h2>
+<p>The optional info.json file may exist inside every package folder in the repo,
+as well as in the root of the repo. The following sections describe the valid
+keys within an info file (and maybe how the Downloader cog uses them).</p>
+<section id="keys-common-to-both-repo-and-cog-info-json-case-sensitive">
+<h3>Keys common to both repo and cog info.json (case sensitive)<a class="headerlink" href="#keys-common-to-both-repo-and-cog-info-json-case-sensitive" title="Link to this heading"></a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">author</span></code> (list of strings) - list of names of authors of the cog or repo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - A long description of the cog or repo. For cogs, this
+is displayed when a user executes <code class="docutils literal notranslate"><span class="pre">[p]cog</span> <span class="pre">info</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">install_msg</span></code> (string) - The message that gets displayed when a cog
+is installed or a repo is added</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">[p]</span></code> key in your string to use the prefix
+used for installing.</p>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">short</span></code> (string) - A short description of the cog or repo. For cogs, this info
+is displayed when a user executes <code class="docutils literal notranslate"><span class="pre">[p]cog</span> <span class="pre">list</span></code></p></li>
+</ul>
+</section>
+<section id="keys-specific-to-the-cog-info-json-case-sensitive">
+<h3>Keys specific to the cog info.json (case sensitive)<a class="headerlink" href="#keys-specific-to-the-cog-info-json-case-sensitive" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">end_user_data_statement</span></code> (string) - A statement explaining what end user data the cog is storing.
+This is displayed when a user executes <code class="docutils literal notranslate"><span class="pre">[p]cog</span> <span class="pre">info</span></code>. If the statement has changed since last update, user will be informed during the update.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_bot_version</span></code> (string) - Min version number of Red in the format <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.MICRO</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_bot_version</span></code> (string) - Max version number of Red in the format <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.MICRO</span></code>,
+if <code class="docutils literal notranslate"><span class="pre">min_bot_version</span></code> is newer than <code class="docutils literal notranslate"><span class="pre">max_bot_version</span></code>, <code class="docutils literal notranslate"><span class="pre">max_bot_version</span></code> will be ignored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_python_version</span></code> (list of integers) - Min version number of Python
+in the format <code class="docutils literal notranslate"><span class="pre">[MAJOR,</span> <span class="pre">MINOR,</span> <span class="pre">PATCH]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code> (bool) - Determines if a cog is visible in the cog list for a repo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabled</span></code> (bool) - Determines if a cog is available for install.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required_cogs</span></code> (dict mapping a cog name to repo URL) - A dict of required cogs that this cog depends on
+in the format <code class="docutils literal notranslate"><span class="pre">{cog_name</span> <span class="pre">:</span> <span class="pre">repo_url}</span></code>.
+Downloader will not deal with this functionality but it may be useful for other cogs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requirements</span></code> (list of strings) - list of required libraries that are
+passed to pip on cog install. <code class="docutils literal notranslate"><span class="pre">SHARED_LIBRARIES</span></code> do NOT go in this
+list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (list of strings) - A list of strings that are related to the
+functionality of the cog. Used to aid in searching.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (string) - Optional, defaults to <code class="docutils literal notranslate"><span class="pre">COG</span></code>. Must be either <code class="docutils literal notranslate"><span class="pre">COG</span></code> or
+<code class="docutils literal notranslate"><span class="pre">SHARED_LIBRARY</span></code>. If <code class="docutils literal notranslate"><span class="pre">SHARED_LIBRARY</span></code> then <code class="docutils literal notranslate"><span class="pre">hidden</span></code> will be <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Shared libraries are deprecated since version 3.2 and are marked for removal in the future.</p>
+</div>
+</section>
+</section>
+<section id="adding-to-the-index">
+<h2>Adding to the Index<a class="headerlink" href="#adding-to-the-index" title="Link to this heading"></a></h2>
+<p>Repositories that are correctly configured can be added to the <a class="reference external" href="https://index.discord.red/">public index of cogs</a>.</p>
+<p>To be added to the index, make a pull request to the <a class="reference external" href="https://github.com/Cog-Creators/Red-Index">Red-Index repository</a> in the unapproved section. You can learn more about this process in the repository description.</p>
+<p>To be added to the approved repositories, first see <a class="reference internal" href="guide_cog_creators.html"><span class="doc">Becoming an Approved Cog Creator</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="guide_slash_and_interactions.html" class="btn btn-neutral float-left" title="Slash Commands and Interactions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="guide_cog_creators.html" class="btn btn-neutral float-right" title="Becoming an Approved Cog Creator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,666 @@
+# Bangla translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:35+0100\n"
+"PO-Revision-Date: 2024-10-14 04:36+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: main.py:155 main.py:203 main.py:230
+msgid "This server is in the ingored list!"
+msgstr "এই সার্ভার ingored তালিকায় আছে!"
+msgstr ""
+
+#: main.py:158 main.py:206 main.py:233
+msgid "This server is not in the allowed list!"
+msgstr "এই সার্ভার অনুমোদিত তালিকায় নেই!"
+msgstr ""
+
+#: main.py:185
+msgid "Please confirm this action by passing `True` as an argument"
+msgstr "একটি যুক্তি হিসাবে `True` পাস করে এই কর্ম নিশ্চিত করুন"
+msgstr ""
+
+#: main.py:193
+msgid "All backups have been wiped!"
+msgstr "সমস্ত ব্যাকআপ মুছে ফেলা হয়েছে!"
+msgstr ""
+
+#: main.py:220
+msgid "A backup has been created!"
+msgstr "একটি ব্যাকআপ তৈরি করা হয়েছে!"
+msgstr ""
+
+#: main.py:239
+msgid "There are no backups for this guild!"
+msgstr "এই গিল্ডের জন্য কোন ব্যাকআপ নেই!"
+msgstr ""
+
+#: main.py:244
+msgid "Server restore is complete!"
+msgstr "সার্ভার পুনরুদ্ধার সম্পূর্ণ!"
+msgstr ""
+
+#: common/views.py:286 main.py:246
+msgid "The following errors occurred while restoring the backup"
+msgstr "ব্যাকআপ পুনরুদ্ধার করার সময় নিম্নলিখিত ত্রুটিগুলি ঘটেছে৷"
+msgstr ""
+
+#: main.py:260 main.py:261
+msgid "**None Set**"
+msgstr "**কোনও সেট নয়**"
+msgstr ""
+
+#: main.py:263
+msgid ""
+msgstr ""
+"### Global Settings\n"
+"- Global backups: {}\n"
+"- Max backups per server: {}\n"
+"- Allow auto-backups: {}\n"
+"- Message backup limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+"- Ignored servers: {}\n"
+"- Allowed servers: {}\n"
+msgstr ""
+
+#: main.py:295
+msgid "Auto backups have been **Disabled**"
+msgstr "স্বয়ংক্রিয় ব্যাকআপগুলি **অক্ষম করা হয়েছে**"
+msgstr ""
+
+#: main.py:298
+msgid "Auto backups have been **Enabled**"
+msgstr "স্বয়ংক্রিয় ব্যাকআপগুলি **সক্রিয় করা হয়েছে**"
+msgstr ""
+
+#: main.py:313
+msgid "Limit must be 0 or higher"
+msgstr "সীমা 0 বা তার বেশি হতে হবে"
+msgstr ""
+
+#: main.py:316
+msgid "Message backup has been **Disabled**"
+msgstr "বার্তা ব্যাকআপ **অক্ষম করা হয়েছে**"
+msgstr ""
+
+#: main.py:318
+msgid "Message backup limit has been set"
+msgstr "বার্তা ব্যাকআপ সীমা সেট করা হয়েছে"
+msgstr ""
+
+#: main.py:330
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring the roles of all members can be slow for large servers."
+msgstr ""
+
+#: main.py:332
+msgid "Members will now be backed up"
+msgstr "সদস্যদের এখন ব্যাক আপ করা হবে"
+msgstr ""
+
+#: main.py:334
+msgid "Members will no longer be backed up"
+msgstr "সদস্যদের আর ব্যাক আপ করা হবে না"
+msgstr ""
+
+#: main.py:347
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Any roles above the bot's role will not be restored."
+msgstr ""
+
+#: main.py:349
+msgid "Roles will now be backed up"
+msgstr "ভূমিকা এখন ব্যাক আপ করা হবে"
+msgstr ""
+
+#: main.py:351
+msgid "Roles will no longer be backed up"
+msgstr "ভূমিকা আর ব্যাক আপ করা হবে না"
+msgstr ""
+
+#: main.py:364
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring emojis is EXTREMELY rate-limited and can take a long time (like"
+" hours) for servers with many emojis."
+msgstr ""
+
+#: main.py:368
+msgid "Emojis will now be backed up"
+msgstr "ইমোজি এখন ব্যাক আপ করা হবে"
+msgstr ""
+
+#: main.py:370
+msgid "Emojis will no longer be backed up"
+msgstr "ইমোজি আর ব্যাক আপ করা হবে না"
+msgstr ""
+
+#: main.py:383
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring stickers is EXTREMELY rate-limited and can take a long time "
+"(like hours) for servers with many stickers."
+msgstr ""
+
+#: main.py:387
+msgid "Stickers will now be backed up"
+msgstr "স্টিকার এখন ব্যাক আপ করা হবে"
+msgstr ""
+
+#: main.py:389
+msgid "Stickers will no longer be backed up"
+msgstr "স্টিকার আর ব্যাক আপ করা হবে না"
+msgstr ""
+
+#: main.py:399
+msgid "Max backups set to 0, Cartographer has been **Disabled**"
+msgstr "সর্বোচ্চ ব্যাকআপ 0 এ সেট করা হয়েছে, মানচিত্রকারকে **অক্ষম করা হয়েছে**"
+msgstr ""
+
+#: main.py:401
+msgid "Max backup count has been set"
+msgstr "সর্বোচ্চ ব্যাকআপ গণনা সেট করা হয়েছে"
+msgstr ""
+
+#: main.py:411
+msgid "Server removed from the ignore list"
+msgstr "উপেক্ষা তালিকা থেকে সার্ভার সরানো হয়েছে"
+msgstr ""
+
+#: main.py:414
+msgid "Server added to the ignore list"
+msgstr "উপেক্ষা তালিকায় সার্ভার যোগ করা হয়েছে"
+msgstr ""
+
+#: main.py:424
+msgid "Server removed from the allow list"
+msgstr "অনুমতি তালিকা থেকে সার্ভার সরানো হয়েছে"
+msgstr ""
+
+#: main.py:427
+msgid "Server added to the allow list"
+msgstr "অনুমতি তালিকায় সার্ভার যোগ করা হয়েছে"
+msgstr ""
+
+#: common/formatting.py:17
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:           `{}\n"
+"`Created:        `{}\n"
+"`AFK Channel:    `{}\n"
+"`AFK Timeout:    `{}\n"
+"`Verification:   `{}\n"
+"`Notifications:  `{}\n"
+"`Locale:         `{}\n"
+"`Emojis:         `{}\n"
+"`Stickers:       `{}\n"
+"`Role Count:     `{}\n"
+"`Members Saved:  `{}\n"
+"`Bans:           `{}\n"
+"`Categories:     `{}\n"
+"`Text Channels:  `{} ({} messages)\n"
+"`Voice Channels: `{} ({} messages)\n"
+"`Forums:         `{}\n"
+msgstr ""
+
+#: common/serializers.py:121 common/serializers.py:132
+#: common/serializers.py:164 common/serializers.py:204
+#: common/serializers.py:211 common/serializers.py:342
+#: common/serializers.py:356 common/serializers.py:709
+#: common/serializers.py:809 common/serializers.py:826
+#: common/serializers.py:894 common/serializers.py:901
+#: common/serializers.py:945 common/serializers.py:954
+msgid "Restored from backup"
+msgstr "ব্যাকআপ থেকে পুনরুদ্ধার করা হয়েছে"
+msgstr ""
+
+#: common/serializers.py:207
+msgid "Failed to add the following roles to {}: {} - {}\n"
+msgstr "নিম্নলিখিত ভূমিকাগুলি {} এ যোগ করতে ব্যর্থ হয়েছে: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:214
+msgid "Failed to remove the following roles from {}: {} - {}\n"
+msgstr "{} থেকে নিম্নলিখিত ভূমিকাগুলি সরাতে ব্যর্থ হয়েছে: {} - {}\n৷"
+msgstr ""
+
+#: common/serializers.py:290
+msgid "Channel {} missing role or member overwrite: {} - {}\n"
+msgstr "চ্যানেল {} অনুপস্থিত ভূমিকা বা সদস্য ওভাররাইট: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+#: common/serializers.py:1127
+msgid "Cartographer Restore"
+msgstr "কার্টোগ্রাফার পুনরুদ্ধার"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+msgid "Restoring messages from backup"
+msgstr "ব্যাকআপ থেকে বার্তা পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1088
+msgid "Restoring backup"
+msgstr "ব্যাকআপ পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1092
+msgid "Restoring server settings"
+msgstr "সার্ভার সেটিংস পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1093
+msgid "Step 1 of 9"
+msgstr "9 এর মধ্যে 1 ধাপ"
+msgstr ""
+
+#: common/serializers.py:1095
+msgid "Restoring roles"
+msgstr "ভূমিকা পুনঃস্থাপন"
+msgstr ""
+
+#: common/serializers.py:1096
+msgid "Step 2 of 9"
+msgstr "9 এর মধ্যে 2 ধাপ"
+msgstr ""
+
+#: common/serializers.py:1098
+msgid "Restoring emojis and stickers"
+msgstr "ইমোজি এবং স্টিকার পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1099
+msgid "Step 3 of 9"
+msgstr "ধাপ 9 এর মধ্যে 3"
+msgstr ""
+
+#: common/serializers.py:1101
+msgid "Restoring channels"
+msgstr "চ্যানেল পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1102
+msgid "Step 4 of 9"
+msgstr "9 এর মধ্যে 4 ধাপ"
+msgstr ""
+
+#: common/serializers.py:1104
+msgid "Restoring AFK settings"
+msgstr "AFK সেটিংস পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1105
+msgid "Step 5 of 9"
+msgstr "9 এর মধ্যে 5 ধাপ"
+msgstr ""
+
+#: common/serializers.py:1107
+msgid "Restoring system channels"
+msgstr "সিস্টেম চ্যানেল পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1108
+msgid "Step 6 of 9"
+msgstr "9 এর মধ্যে 6 ধাপ"
+msgstr ""
+
+#: common/serializers.py:1110
+msgid "Restoring remainder of the server settings"
+msgstr "সার্ভার সেটিংসের অবশিষ্টাংশ পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1111
+msgid "Step 7 of 9"
+msgstr "ধাপ 9 এর মধ্যে 7"
+msgstr ""
+
+#: common/serializers.py:1113
+msgid "Restoring member roles"
+msgstr "সদস্যের ভূমিকা পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1114
+msgid "Step 8 of 9"
+msgstr "9 এর মধ্যে 8 ধাপ"
+msgstr ""
+
+#: common/serializers.py:1116
+msgid "Restoring bans"
+msgstr "নিষেধাজ্ঞা পুনরুদ্ধার করা হচ্ছে"
+msgstr ""
+
+#: common/serializers.py:1117
+msgid "Step 9 of 9"
+msgstr "ধাপ 9 এর মধ্যে 9"
+msgstr ""
+
+#: common/serializers.py:1119
+msgid "Restoration complete!"
+msgstr "পুনরুদ্ধার সম্পূর্ণ!"
+msgstr ""
+
+#: common/serializers.py:1123
+msgid "Server restoration took {}"
+msgstr "সার্ভার পুনরুদ্ধার সময় নিয়েছে {}"
+msgstr ""
+
+#: common/serializers.py:1146
+msgid "Banner too large to restore\n"
+msgstr "ব্যানার পুনরুদ্ধার করার জন্য খুব বড়\n"
+msgstr ""
+
+#: common/serializers.py:1149
+msgid "Icon too large to restore\n"
+msgstr "পুনরুদ্ধার করার জন্য আইকন খুবই বড়\n"
+msgstr ""
+
+#: common/serializers.py:1152
+msgid "Splash too large to restore\n"
+msgstr "পুনরুদ্ধার করার জন্য স্প্ল্যাশ খুব বড়\n"
+msgstr ""
+
+#: common/serializers.py:1155
+msgid "Discovery splash too large to restore\n"
+msgstr "পুনরুদ্ধার করার জন্য ডিসকভারি স্প্ল্যাশ খুব বড়\n"
+msgstr ""
+
+#: common/serializers.py:1254
+msgid ""
+msgstr ""
+"Backup has more emojis than the target server can hold. Some emojis will "
+"not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1258
+msgid "Emoji '{}' not restored due to limit\n"
+msgstr "ইমোজি '{}' সীমার কারণে পুনরুদ্ধার করা হয়নি\n"
+msgstr ""
+
+#: common/serializers.py:1282
+msgid ""
+msgstr ""
+"Backup has more stickers than the target server can hold. Some stickers "
+"will not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1286
+msgid "Sticker '{}' not restored due to limit\n"
+msgstr "স্টিকার '{}' সীমার কারণে পুনরুদ্ধার করা হয়নি\n"
+msgstr ""
+
+#: common/serializers.py:1326
+msgid ""
+msgstr ""
+"This channel isn't part of the backup, it can be deleted after the "
+"restore is complete."
+msgstr ""
+
+#: common/views.py:43
+msgid "That is not a number!"
+msgstr "এটা একটা সংখ্যা নয়!"
+msgstr ""
+
+#: common/views.py:54
+msgid "Confirmation"
+msgstr "নিশ্চিতকরণ"
+msgstr ""
+
+#: common/views.py:57
+msgid "THIS CANNOT BE UNDONE!"
+msgstr "এটি পূর্বাবস্থায় ফেরানো যাবে না!"
+msgstr ""
+
+#: common/views.py:59
+msgid "Are you SURE?"
+msgstr "আপনি কি নিশ্চিত?"
+msgstr ""
+
+#: common/views.py:67
+msgid "How many messages to backup? (0 = None)"
+msgstr "ব্যাকআপ কত বার্তা? (0 = কোনটিই নয়)"
+msgstr ""
+
+#: common/views.py:77
+msgid "response must be a string!"
+msgstr "প্রতিক্রিয়া একটি স্ট্রিং হতে হবে!"
+msgstr ""
+
+#: common/views.py:80
+msgid "Message backup limit must be a number!"
+msgstr "বার্তা ব্যাকআপ সীমা একটি সংখ্যা হতে হবে!"
+msgstr ""
+
+#: common/views.py:101
+msgid "Close"
+msgstr "বন্ধ"
+msgstr ""
+
+#: common/views.py:104
+msgid "Cartographer Backups"
+msgstr "কার্টোগ্রাফার ব্যাকআপ"
+msgstr ""
+
+#: common/views.py:105
+msgid "Controls"
+msgstr "নিয়ন্ত্রণ করে"
+msgstr ""
+
+#: common/views.py:106
+msgid ""
+msgstr ""
+"- Backup Current Server: 📥\n"
+"- Restore Here: 🔄\n"
+"- Switch Servers: 🔍\n"
+"- Set AutoBackup Interval: ⌛\n"
+"- Delete Backup: 🗑️\n"
+"- Print Details: ℹ️\n"
+msgstr ""
+
+#: common/views.py:114
+msgid "Settings"
+msgstr "সেটিংস"
+msgstr ""
+
+#: common/views.py:115
+msgid ""
+msgstr ""
+"- Auto Backup Interval Hours: {}\n"
+"- Last Backup: {}\n"
+"## Global Settings\n"
+"-# The following settings are configured by the bot owner\n"
+"- Max Backups Per Guild: {}\n"
+"- Backup Message Limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+msgstr ""
+
+#: common/views.py:142
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:    `{}\n"
+"`Created: `{}\n"
+msgstr ""
+
+#: common/views.py:150
+msgid "Page {}"
+msgstr "পৃষ্ঠা {}"
+msgstr ""
+
+#: common/views.py:152
+msgid "There are no backups for this server yet!"
+msgstr "এই সার্ভারের জন্য এখনো কোনো ব্যাকআপ নেই!"
+msgstr ""
+
+#: common/views.py:161
+msgid "This isn't your menu!"
+msgstr "এটি আপনার মেনু নয়!"
+msgstr ""
+
+#: common/views.py:198 common/views.py:257
+msgid "I need administrator permissions to restore a backup in this server!"
+msgstr "এই সার্ভারে একটি ব্যাকআপ পুনরুদ্ধার করতে আমার প্রশাসকের অনুমতি দরকার!"
+msgstr ""
+
+#: common/views.py:208 common/views.py:271
+msgid "Restore has been cancelled!"
+msgstr "পুনরুদ্ধার বাতিল করা হয়েছে!"
+msgstr ""
+
+#: common/views.py:212
+msgid "The maximum amount of messages that can be backed up per channel is {}!"
+msgstr "প্রতি চ্যানেলে সর্বোচ্চ যত বার্তা ব্যাক আপ করা যায় তা হল {}!"
+msgstr ""
+
+#: common/views.py:221
+msgid ""
+msgstr ""
+"Warning! I need to have the highest role in the server to restore roles "
+"properly!"
+msgstr ""
+
+#: common/views.py:224
+msgid ""
+msgstr ""
+"Backing up {}!\n"
+"-# This may take a while..."
+msgstr ""
+
+#: common/views.py:226
+msgid "Backup in Progress"
+msgstr "ব্যাকআপ চলছে"
+msgstr ""
+
+#: common/views.py:243
+msgid ""
+msgstr ""
+"An error occurred while backing up the server!\n"
+"{}"
+msgstr ""
+
+#: common/views.py:247
+msgid "Backup created in {}!"
+msgstr "{} এ ব্যাকআপ তৈরি করা হয়েছে!"
+msgstr ""
+
+#: common/views.py:247
+msgid "0 seconds"
+msgstr "0 সেকেন্ড"
+msgstr ""
+
+#: common/views.py:248
+msgid "Backup Created"
+msgstr "ব্যাকআপ তৈরি করা হয়েছে"
+msgstr ""
+
+#: common/views.py:261
+msgid "No backups to restore!"
+msgstr "পুনরুদ্ধার করার জন্য কোন ব্যাকআপ নেই!"
+msgstr ""
+
+#: common/views.py:280
+msgid "Your backup is being restored!"
+msgstr "আপনার ব্যাকআপ পুনরুদ্ধার করা হচ্ছে!"
+msgstr ""
+
+#: common/views.py:291
+msgid "Switch Servers"
+msgstr "সার্ভার স্যুইচ করুন"
+msgstr ""
+
+#: common/views.py:291
+msgid "Server ID"
+msgstr "সার্ভার আইডি"
+msgstr ""
+
+#: common/views.py:291
+msgid "Enter the ID of the server"
+msgstr "সার্ভারের আইডি লিখুন"
+msgstr ""
+
+#: common/views.py:298
+msgid "I am not in that server!"
+msgstr "আমি সেই সার্ভারে নেই!"
+msgstr ""
+
+#: common/views.py:302
+msgid "You do not appear to be in that server!"
+msgstr "আপনি সেই সার্ভারে আছেন বলে মনে হচ্ছে না!"
+msgstr ""
+
+#: common/views.py:305
+msgid "You can only switch to servers that you are an administrator of!"
+msgstr "আপনি শুধুমাত্র সেই সার্ভারগুলিতে স্যুইচ করতে পারেন যেগুলির আপনি একজন প্রশাসক!"
+msgstr ""
+
+#: common/views.py:314
+msgid "Auto backups have been disabled by the bot owner!"
+msgstr "অটো ব্যাকআপ বট মালিক দ্বারা নিষ্ক্রিয় করা হয়েছে!"
+msgstr ""
+
+#: common/views.py:316
+msgid "Auto Backup Interval"
+msgstr "স্বয়ংক্রিয় ব্যাকআপ ব্যবধান"
+msgstr ""
+
+#: common/views.py:316
+msgid "Interval Hours"
+msgstr "ব্যবধান ঘন্টা"
+msgstr ""
+
+#: common/views.py:316
+msgid "Hours in-between backups"
+msgstr "ব্যাকআপের মধ্যে ঘন্টা"
+msgstr ""
+
+#: common/views.py:322
+msgid "Auto-backup interval hours has been set to {}"
+msgstr "স্বতঃ-ব্যাকআপ ব্যবধান ঘন্টা সেট করা হয়েছে {}"
+msgstr ""
+
+#: common/views.py:334
+msgid "No backups to delete!"
+msgstr "মুছে ফেলার জন্য কোন ব্যাকআপ নেই!"
+msgstr ""
+
+#: common/views.py:341
+msgid "Backup deleted!"
+msgstr "ব্যাকআপ মুছে ফেলা হয়েছে!"
+msgstr ""
+
+#: common/views.py:349
+msgid "No backups to get info for!"
+msgstr "কোন ব্যাকআপ জন্য তথ্য পেতে!"
+msgstr ""
+

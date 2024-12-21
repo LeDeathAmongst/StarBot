@@ -1,0 +1,20 @@
+{
+    "author": [
+        "Star"
+    ],
+    "install_msg": "**This cog might up your rate limits quickly depending on the amount of banned members.** \\nDo `[p]help CogName` to get the list of commands and their description. If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>)\\nIf you like my work, [donate me!](<https://ko-fi.com/starcogs>)\\n\\n",
+    "name": "Unbanall",
+    "disabled": false,
+    "short": "Unban all banned members in your server.",
+    "description": "Unban all banned members in your server.",
+    "tags": [
+        "unban",
+        "bans",
+        "ban",
+        "banned"
+    ],
+    "min_bot_version": "3.5.0",
+    "hidden": false,
+    "requirements": [],
+    "end_user_data_statement": ""
+}

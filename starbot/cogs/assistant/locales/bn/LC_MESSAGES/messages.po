@@ -1,0 +1,1932 @@
+# Bangla translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:57+0100\n"
+"PO-Revision-Date: 2024-10-14 06:02+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: views.py:33
+msgid "Set API Key"
+msgstr "API কী সেট করুন"
+msgstr ""
+
+#: views.py:35
+msgid "Enter your API Key below"
+msgstr "নীচে আপনার API কী লিখুন"
+msgstr ""
+
+#: views.py:56 views.py:142 views.py:474
+msgid "This isn't your menu!"
+msgstr "এটি আপনার মেনু নয়!"
+msgstr ""
+
+#: views.py:77
+msgid "Entry name"
+msgstr "প্রবেশের নাম"
+msgstr ""
+
+#: views.py:85
+msgid "Training context"
+msgstr "প্রশিক্ষণের প্রসঙ্গ"
+msgstr ""
+
+#: views.py:104
+msgid "Search Query"
+msgstr "অনুসন্ধান ক্যোয়ারী"
+msgstr ""
+
+#: views.py:192
+msgid ""
+msgstr ""
+"Failed to process embedding `{}`\n"
+"Content: ```\n"
+"{}\n"
+"```"
+msgstr ""
+
+#: views.py:194
+msgid "An embedding with the name `{}` already exists!"
+msgstr "`{}` নামের একটি এম্বেডিং ইতিমধ্যেই বিদ্যমান!"
+msgstr ""
+
+#: views.py:199
+msgid "Your embedding labeled `{}` has been processed!"
+msgstr "আপনার `{}` লেবেলযুক্ত এমবেডিং প্রক্রিয়া করা হয়েছে!"
+msgstr ""
+
+#: views.py:211
+msgid "No embeddings to inspect!"
+msgstr "পরিদর্শন করার জন্য কোন এম্বেডিং নেই!"
+msgstr ""
+
+#: views.py:232
+msgid "No embeddings to edit!"
+msgstr "সম্পাদনা করার জন্য কোন এম্বেডিং নেই!"
+msgstr ""
+
+#: views.py:243
+msgid "Failed to edit that embedding, please try again later"
+msgstr "সেই এম্বেডিং সম্পাদনা করতে ব্যর্থ হয়েছে, অনুগ্রহ করে পরে আবার চেষ্টা করুন৷"
+msgstr ""
+
+#: views.py:253
+msgid "Your embedding has been modified!"
+msgstr "আপনার এম্বেডিং পরিবর্তন করা হয়েছে!"
+msgstr ""
+
+#: views.py:294
+msgid "Add an embedding"
+msgstr "একটি এম্বেডিং যোগ করুন"
+msgstr ""
+
+#: views.py:300
+msgid "Your embedding is processing and will appear when ready!"
+msgstr "আপনার এম্বেডিং প্রক্রিয়া করা হচ্ছে এবং প্রস্তুত হলে প্রদর্শিত হবে!"
+msgstr ""
+
+#: views.py:316
+msgid "No embeddings to delete!"
+msgstr "মুছে ফেলার জন্য কোন এমবেডিং নেই!"
+msgstr ""
+
+#: views.py:318
+msgid "Deleted `{}` embedding."
+msgstr "মুছে ফেলা হয়েছে `{}` এম্বেডিং।"
+msgstr ""
+
+#: views.py:344
+msgid "No embeddings to search!"
+msgstr "অনুসন্ধান করার জন্য কোন এম্বেডিং নেই!"
+msgstr ""
+
+#: views.py:345
+msgid "Search for an embedding"
+msgstr "একটি এম্বেডিং জন্য অনুসন্ধান করুন"
+msgstr ""
+
+#: views.py:370
+msgid "Search result: **{}**"
+msgstr "অনুসন্ধান ফলাফল: **{}**"
+msgstr ""
+
+#: views.py:400
+msgid "Function Edit"
+msgstr "ফাংশন সম্পাদনা"
+msgstr ""
+
+#: views.py:407
+msgid "JSON Schema"
+msgstr "JSON স্কিমা"
+msgstr ""
+
+#: common/api.py:626 views.py:413
+msgid "Code"
+msgstr "কোড"
+msgstr ""
+
+#: common/api.py:624 views.py:419
+msgid "Permission Level"
+msgstr "অনুমতি স্তর"
+msgstr ""
+
+#: views.py:420
+msgid "User, Mod, Admin, or Owner"
+msgstr "ব্যবহারকারী, মোড, অ্যাডমিন বা মালিক"
+msgstr ""
+
+#: views.py:431
+msgid ""
+msgstr ""
+"Invalid permission level, must be one of `User`, `Mod`, `Admin`, or "
+"`Owner`"
+msgstr ""
+
+#: views.py:582
+msgid "No code to inspect!"
+msgstr "পরিদর্শন করার কোন কোড!"
+msgstr ""
+
+#: views.py:606
+msgid "Here are your custom functions"
+msgstr "এখানে আপনার কাস্টম ফাংশন আছে"
+msgstr ""
+
+#: views.py:611
+msgid ""
+msgstr ""
+"Reply to this message with the json schema for your function\n"
+"- [Example Functions](https://github.com/vertyco/vrt-"
+"cogs/tree/main/assistant/example-funcs)"
+msgstr ""
+
+#: views.py:632 views.py:707
+msgid ""
+msgstr ""
+"SchemaError\n"
+"{}"
+msgstr ""
+
+#: views.py:634 views.py:709
+msgid "Empty schema!"
+msgstr "খালি স্কিমা!"
+msgstr ""
+
+#: views.py:637 views.py:712
+msgid ""
+msgstr ""
+"Invalid schema!\n"
+"**Missing**\n"
+"{}"
+msgstr ""
+
+#: views.py:641
+msgid "Reply to this message with the custom code"
+msgstr "কাস্টম কোড সহ এই বার্তার উত্তর দিন"
+msgstr ""
+
+#: views.py:656 views.py:718
+msgid "Invalid function"
+msgstr "অবৈধ ফাংশন"
+msgstr ""
+
+#: views.py:660
+msgid "`{}` has been overwritten!"
+msgstr "`{}` ওভাররাইট করা হয়েছে!"
+msgstr ""
+
+#: views.py:662
+msgid "`{}` has been created!"
+msgstr "`{}` তৈরি করা হয়েছে!"
+msgstr ""
+
+#: views.py:673
+msgid "No code to edit!"
+msgstr "সম্পাদনা করার জন্য কোন কোড নেই!"
+msgstr ""
+
+#: views.py:681 views.py:742
+msgid "Could not find function!"
+msgstr "ফাংশন খুঁজে পাওয়া যায়নি!"
+msgstr ""
+
+#: views.py:683
+msgid "This function is managed by the `{}` cog and cannot be edited"
+msgstr "এই ফাংশনটি `{}` কগ দ্বারা পরিচালিত হয় এবং সম্পাদনা করা যায় না"
+msgstr ""
+
+#: views.py:689
+msgid ""
+msgstr ""
+"The json schema for this function is too long, you'll need to re-upload "
+"it to modify"
+msgstr ""
+
+#: views.py:694
+msgid ""
+msgstr ""
+"The code for this function is too long, you'll need to re-upload it to "
+"modify"
+msgstr ""
+
+#: views.py:727
+msgid "`{}` function updated!"
+msgstr "`{}` ফাংশন আপডেট হয়েছে!"
+msgstr ""
+
+#: views.py:735
+msgid "No code to delete!"
+msgstr "মুছে ফেলার জন্য কোন কোড!"
+msgstr ""
+
+#: views.py:744
+msgid "This function is managed by the `{}` cog and cannot be deleted"
+msgstr "এই ফাংশনটি `{}` কগ দ্বারা পরিচালিত হয় এবং মুছে ফেলা যাবে না"
+msgstr ""
+
+#: views.py:751
+msgid "`{}` has been deleted!"
+msgstr "`{}` মুছে ফেলা হয়েছে!"
+msgstr ""
+
+#: views.py:758
+msgid "No code to toggle!"
+msgstr "টগল করার জন্য কোন কোড নেই!"
+msgstr ""
+
+#: views.py:771
+msgid "Search for a function"
+msgstr "একটি ফাংশন জন্য অনুসন্ধান করুন"
+msgstr ""
+
+#: commands/admin.py:76
+msgid "`OpenAI Version:      `{}\n"
+msgstr "`ওপেনএআই সংস্করণ: `{}\n"
+msgstr ""
+
+#: commands/admin.py:77
+msgid "`OpenAI API Status:   `{}\n"
+msgstr "`OpenAI API স্ট্যাটাস: `{}\n"
+msgstr ""
+
+#: commands/admin.py:78
+msgid "`Draw Command:        `{}\n"
+msgstr "`আঁকুন কমান্ড: `{}\n"
+msgstr ""
+
+#: commands/admin.py:78
+msgid "Enabled"
+msgstr "সক্রিয়"
+msgstr ""
+
+#: commands/admin.py:78
+msgid "Disabled"
+msgstr "অক্ষম"
+msgstr ""
+
+#: commands/admin.py:79
+msgid "`Model:               `{}\n"
+msgstr "`মডেল: `{}\n"
+msgstr ""
+
+#: commands/admin.py:80
+msgid "`Embed Model:         `{}\n"
+msgstr "`এম্বেড মডেল: `{}\n"
+msgstr ""
+
+#: commands/admin.py:81
+msgid "`Enabled:             `{}\n"
+msgstr "`সক্ষম: `{}\n"
+msgstr ""
+
+#: commands/admin.py:82
+msgid "`Timezone:            `{}\n"
+msgstr "`টাইমজোন: `{}\n"
+msgstr ""
+
+#: commands/admin.py:83
+msgid "`Channel:             `{}\n"
+msgstr "`চ্যানেল: `{}\n"
+msgstr ""
+
+#: commands/admin.py:83 commands/admin.py:178
+msgid "Not Set"
+msgstr "সেট নয়"
+msgstr ""
+
+#: commands/admin.py:84
+msgid "`? Required:          `{}\n"
+msgstr "`? প্রয়োজনীয়: `{}\n"
+msgstr ""
+
+#: commands/admin.py:85
+msgid "`Question Mode:       `{}\n"
+msgstr "`প্রশ্ন মোড: `{}\n"
+msgstr ""
+
+#: commands/admin.py:86
+msgid "`Mention on Reply:    `{}\n"
+msgstr "`উত্তরে উল্লেখ করুন: `{}\n"
+msgstr ""
+
+#: commands/admin.py:87
+msgid "`Respond to Mentions: `{}\n"
+msgstr "উল্লেখের উত্তর: `{}\n"
+msgstr ""
+
+#: commands/admin.py:88
+msgid "`Collaborative Mode:  `{}\n"
+msgstr "`সহযোগী মোড: `{}\n"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "`Max Retention:       `{}\n"
+msgstr "`সর্বোচ্চ ধারণ: `{}\n"
+msgstr ""
+
+#: commands/admin.py:90
+msgid "`Retention Expire:    `{}s\n"
+msgstr "`ধারণ মেয়াদ শেষ: `{}s\n"
+msgstr ""
+
+#: commands/admin.py:91
+msgid "`Max Tokens:          `{}\n"
+msgstr "`সর্বোচ্চ টোকেনস: `{}\n"
+msgstr ""
+
+#: commands/admin.py:92
+msgid "`Max Response Tokens: `{}\n"
+msgstr "`সর্বোচ্চ প্রতিক্রিয়া টোকেন: `{}\n"
+msgstr ""
+
+#: commands/admin.py:93
+msgid "`Min Length:          `{}\n"
+msgstr "`ন্যূনতম দৈর্ঘ্য: `{}\n"
+msgstr ""
+
+#: commands/admin.py:94
+msgid "`Temperature:         `{}\n"
+msgstr "`তাপমাত্রা: `{}\n"
+msgstr ""
+
+#: commands/admin.py:95
+msgid "`Frequency Penalty:   `{}\n"
+msgstr "`ফ্রিকোয়েন্সি পেনাল্টি: `{}\n"
+msgstr ""
+
+#: commands/admin.py:96
+msgid "`Presence Penalty:    `{}\n"
+msgstr "`উপস্থিতির শাস্তি: `{}\n"
+msgstr ""
+
+#: commands/admin.py:97
+msgid "`Seed:                `{}\n"
+msgstr "`বীজ: `{}\n"
+msgstr ""
+
+#: commands/admin.py:98
+msgid "`Vision Resolution:   `{}\n"
+msgstr "`ভিশন রেজোলিউশন: `{}\n"
+msgstr ""
+
+#: commands/admin.py:99
+msgid "`System Prompt:       `{} tokens\n"
+msgstr "`সিস্টেম প্রম্পট: `{} টোকেন\n"
+msgstr ""
+
+#: commands/admin.py:100
+msgid "`User Prompt:         `{} tokens\n"
+msgstr "`ইউজার প্রম্পট: `{} টোকেন\n"
+msgstr ""
+
+#: commands/admin.py:104
+msgid "Assistant Settings"
+msgstr "সহকারী সেটিংস"
+msgstr ""
+
+#: commands/admin.py:110
+msgid ""
+msgstr ""
+"System prompt override is **Allowed**, users can set a personal system "
+"prompt per convo."
+msgstr ""
+
+#: commands/admin.py:112
+msgid ""
+msgstr ""
+"System prompt override is **Disabled**, users cannot set a personal "
+"system prompt per convo."
+msgstr ""
+
+#: commands/admin.py:113
+msgid ""
+msgstr ""
+"\n"
+"*This will be restricted to mods if collaborative conversations are "
+"enabled!*"
+msgstr ""
+
+#: commands/admin.py:114
+msgid "System Prompt Overriding"
+msgstr "সিস্টেম প্রম্পট ওভাররাইডিং"
+msgstr ""
+
+#: commands/admin.py:122
+msgid "Channel Prompt Overrides"
+msgstr "চ্যানেল প্রম্পট ওভাররাইড"
+msgstr ""
+
+#: commands/admin.py:130
+msgid "Mixed (Please Refresh!)"
+msgstr "মিশ্রিত (দয়া করে রিফ্রেশ করুন!)"
+msgstr ""
+
+#: commands/admin.py:132
+msgid "Synced!"
+msgstr "সিঙ্ক করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:134
+msgid "N/A"
+msgstr "N/A"
+msgstr ""
+
+#: commands/admin.py:137
+msgid "`Top N Embeddings:  `{}\n"
+msgstr "`শীর্ষ N এম্বেডিংস: `{}\n"
+msgstr ""
+
+#: commands/admin.py:138
+msgid "`Min Relatedness:   `{}\n"
+msgstr "`ন্যূনতম সম্পর্কিততা: `{}\n"
+msgstr ""
+
+#: commands/admin.py:139
+msgid "`Embedding Method:  `{}\n"
+msgstr "`এমবেডিং পদ্ধতি: `{}\n"
+msgstr ""
+
+#: commands/admin.py:140
+msgid "`Encodings:         `{}"
+msgstr "`এনকোডিংস: `{}"
+msgstr ""
+
+#: commands/admin.py:144
+msgid "Embeddings ({})"
+msgstr "এম্বেডিং ({})"
+msgstr ""
+
+#: commands/admin.py:150
+msgid ""
+msgstr ""
+"The following roles/users are considered tutors. If function calls are on"
+" and create_memory is enabled, the model can create its own embeddings: "
+msgstr ""
+
+#: commands/admin.py:159
+msgid "`Function Calling:  `{}\n"
+msgstr "`ফাংশন কলিং: `{}\n"
+msgstr ""
+
+#: commands/admin.py:160
+msgid "`Maximum Recursion: `{}\n"
+msgstr "`সর্বোচ্চ পুনরাবৃত্তি: `{}\n"
+msgstr ""
+
+#: commands/admin.py:161
+msgid "`Function Tokens:   `{}\n"
+msgstr "`ফাংশন টোকেনস: `{}\n"
+msgstr ""
+
+#: commands/admin.py:165
+msgid ""
+msgstr ""
+"The following cogs also have functions registered with the assistant\n"
+"{}"
+msgstr ""
+
+#: commands/admin.py:170
+msgid "Custom Functions ({})"
+msgstr "কাস্টম ফাংশন ({})"
+msgstr ""
+
+#: commands/admin.py:177
+msgid "OpenAI Key"
+msgstr "OpenAI কী"
+msgstr ""
+
+#: commands/admin.py:185
+msgid "Regex Blacklist"
+msgstr "Regex কালো তালিকা"
+msgstr ""
+
+#: commands/admin.py:187
+msgid "Regex Failure Blocking"
+msgstr "Regex ব্যর্থতা ব্লক করা"
+msgstr ""
+
+#: commands/admin.py:188
+msgid "Block reply if regex replacement fails: **{}**"
+msgstr "রেজেক্স প্রতিস্থাপন ব্যর্থ হলে উত্তর ব্লক করুন: **{}**"
+msgstr ""
+
+#: commands/admin.py:193
+msgid "Conversations are stored persistently"
+msgstr "কথোপকথন ক্রমাগত সংরক্ষণ করা হয়"
+msgstr ""
+
+#: commands/admin.py:195
+msgid "conversations are stored in memory until reboot or reload"
+msgstr "রিবুট বা রিলোড না হওয়া পর্যন্ত কথোপকথন মেমরিতে সংরক্ষণ করা হয়"
+msgstr ""
+
+#: commands/admin.py:197
+msgid "Persistent Conversations"
+msgstr "অবিরাম কথোপকথন"
+msgstr ""
+
+#: commands/admin.py:211
+msgid "Blacklist"
+msgstr "কালো তালিকা"
+msgstr ""
+
+#: commands/admin.py:223
+msgid "Model Role Overrides"
+msgstr "মডেল ভূমিকা ওভাররাইড"
+msgstr ""
+
+#: commands/admin.py:234
+msgid "Max Token Role Overrides"
+msgstr "সর্বোচ্চ টোকেন ভূমিকা ওভাররাইড"
+msgstr ""
+
+#: commands/admin.py:245
+msgid "Max Message Retention Role Overrides"
+msgstr "সর্বাধিক বার্তা ধারণ ভূমিকা ওভাররাইড"
+msgstr ""
+
+#: commands/admin.py:257
+msgid "Max Message Retention Time Role Overrides"
+msgstr "সর্বোচ্চ বার্তা ধরে রাখার সময় ভূমিকা ওভাররাইড করে"
+msgstr ""
+
+#: commands/admin.py:271
+msgid "Max Response Token Role Overrides"
+msgstr "সর্বোচ্চ প্রতিক্রিয়া টোকেন ভূমিকা ওভাররাইড"
+msgstr ""
+
+#: commands/admin.py:275
+msgid "Your Brave websearch API key is set!"
+msgstr "আপনার সাহসী ওয়েব অনুসন্ধান API কী সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:277
+msgid ""
+msgstr ""
+"Enables the use of the `search_internet` function\n"
+"Get your API key **[Here](https://brave.com/search/api/)**\n"
+msgstr ""
+
+#: commands/admin.py:281
+msgid "Brave Websearch API key"
+msgstr "সাহসী ওয়েবসার্চ API কী"
+msgstr ""
+
+#: commands/admin.py:283
+msgid "Showing settings for {}"
+msgstr "{} এর জন্য সেটিংস দেখানো হচ্ছে"
+msgstr ""
+
+#: commands/admin.py:289
+msgid "SystemPrompt"
+msgstr "সিস্টেম প্রম্পট"
+msgstr ""
+
+#: commands/admin.py:295
+msgid "InitialPrompt"
+msgstr "প্রাথমিক প্রম্পট"
+msgstr ""
+
+#: commands/admin.py:305
+msgid "Sent your current settings for this server in DMs!"
+msgstr "এই সার্ভারের জন্য আপনার বর্তমান সেটিংস DM এ পাঠানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:307
+msgid "You need to allow DMs so I can message you!"
+msgstr "আপনাকে ডিএম-এর অনুমতি দিতে হবে যাতে আমি আপনাকে বার্তা দিতে পারি!"
+msgstr ""
+
+#: commands/admin.py:317
+msgid "There is no usage data yet!"
+msgstr "এখনও কোন ব্যবহার তথ্য নেই!"
+msgstr ""
+
+#: commands/admin.py:348
+msgid "`Total:  `{} (${} @ ${}/1k tokens)"
+msgstr "`মোট: `{} (${} @ ${}/1k টোকেন)"
+msgstr ""
+
+#: commands/admin.py:355
+msgid "Free/Self-Hosted"
+msgstr "বিনামূল্যে/স্ব-হোস্টেড"
+msgstr ""
+
+#: commands/admin.py:359
+msgid ""
+msgstr ""
+"`Input:  `{} (${} @ ${}/1k tokens)\n"
+"`Output: `{} (${} @ ${}/1k tokens)\n"
+"`Total:  `{} (${})"
+msgstr ""
+
+#: commands/admin.py:373
+msgid ""
+msgstr ""
+"**Overall Token Usage and Cost**\n"
+"`Input:      `{} (${})\n"
+"`Output:     `{} (${})\n"
+"`Total:      `{} (${})\n"
+"`Tool Calls: `{}\n"
+msgstr ""
+
+#: commands/admin.py:397
+msgid "Token usage stats have been reset!"
+msgstr "টোকেন ব্যবহারের পরিসংখ্যান রিসেট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:409
+msgid ""
+msgstr ""
+"Click to set your OpenAI key\n"
+"\n"
+"To remove your keys, enter `none`"
+msgstr ""
+
+#: commands/admin.py:417
+msgid "OpenAI key has been removed!"
+msgstr "OpenAI কী সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:420 commands/admin.py:447
+msgid "No API key was entered!"
+msgstr "কোন API কী প্রবেশ করানো হয়নি!"
+msgstr ""
+
+#: commands/admin.py:423
+msgid "OpenAI key has been set!"
+msgstr "OpenAI কী সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:437
+msgid ""
+msgstr ""
+"Click to set your API key\n"
+"\n"
+"To remove your keys, enter `none`"
+msgstr ""
+
+#: commands/admin.py:445
+msgid "Brave API key has been removed!"
+msgstr "সাহসী API কী সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:450
+msgid "Brave API key has been set!"
+msgstr "সাহসী API কী সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:462
+msgid "Invalid Timezone, did you mean `{}`?"
+msgstr "অবৈধ টাইমজোন, আপনি কি `{}` বলতে চান?"
+msgstr ""
+
+#: commands/admin.py:464
+msgid "Timezone set to **{}** (`{}`)"
+msgstr "টাইমজোন সেট করা হয়েছে **{}** (`{}`)"
+msgstr ""
+
+#: commands/admin.py:509 commands/admin.py:574 commands/admin.py:648
+#: commands/base.py:349
+msgid "Failed to read `{}`, bot owner can use `{}` for more information"
+msgstr "`{}` পড়তে ব্যর্থ, বট মালিক আরও তথ্যের জন্য `{}` ব্যবহার করতে পারেন"
+msgstr ""
+
+#: commands/admin.py:525 commands/admin.py:596 commands/admin.py:665
+#, python-format
+msgid ""
+msgstr ""
+"Your system and initial prompt combined will use {} tokens!\n"
+"Write a prompt combination using {} tokens or less to leave 10% of your "
+"configured max tokens for your response."
+msgstr ""
+
+#: commands/admin.py:533
+msgid "The initial prompt has been removed!"
+msgstr "প্রাথমিক প্রম্পট সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:536
+msgid ""
+msgstr ""
+"Please include an initial prompt or .txt file!\n"
+"Use `{}` to view details for this command"
+msgstr ""
+
+#: commands/admin.py:542
+msgid "The initial prompt has been overwritten!"
+msgstr "প্রাথমিক প্রম্পট ওভাররাইট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:545
+msgid "Initial prompt has been set!"
+msgstr "প্রাথমিক প্রম্পট সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:555
+msgid "No channel prompt set for {}"
+msgstr "{} এর জন্য কোনো চ্যানেল প্রম্পট সেট করা নেই"
+msgstr ""
+
+#: commands/admin.py:584
+msgid "Channel prompt has been removed from {}!"
+msgstr "চ্যানেল প্রম্পট {} থেকে সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:587
+msgid "No channel prompt set for {}!"
+msgstr "{} এর জন্য কোনো চ্যানেল প্রম্পট সেট করা হয়নি!"
+msgstr ""
+
+#: commands/admin.py:602
+msgid "Channel prompt has been overwritten for {}!"
+msgstr "চ্যানেল প্রম্পট {}-এর জন্য ওভাররাইট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:604
+msgid "Channel prompt has been set for {}!"
+msgstr "{} এর জন্য চ্যানেল প্রম্পট সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:673
+msgid "The system prompt has been removed!"
+msgstr "সিস্টেম প্রম্পট সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:676
+msgid ""
+msgstr ""
+"Please include a system prompt or .txt file!\n"
+"Use `{}` to view details for this command"
+msgstr ""
+
+#: commands/admin.py:682
+msgid "The system prompt has been overwritten!"
+msgstr "সিস্টেম প্রম্পট ওভাররাইট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:685
+msgid "System prompt has been set!"
+msgstr "সিস্টেম প্রম্পট সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:700
+msgid "Assistant channel has been removed"
+msgstr "সহকারী চ্যানেল সরানো হয়েছে"
+msgstr ""
+
+#: commands/admin.py:703
+msgid "Assistant channel has been overwritten"
+msgstr "সহকারী চ্যানেল ওভাররাইট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:706
+msgid "Channel id has been set"
+msgstr "চ্যানেল আইডি সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:716
+msgid ""
+msgstr ""
+"System prompt overriding **Disabled**, users cannot set per-convo system "
+"prompts"
+msgstr ""
+
+#: commands/admin.py:719
+msgid ""
+msgstr ""
+"System prompt overriding **Enabled**, users can now set per-convo system "
+"prompts"
+msgstr ""
+
+#: commands/admin.py:728
+msgid "The assistant is now **Disabled**"
+msgstr "সহকারী এখন **অক্ষম**"
+msgstr ""
+
+#: commands/admin.py:731
+msgid "The assistant is now **Enabled**"
+msgstr "সহকারী এখন **সক্ষম**"
+msgstr ""
+
+#: commands/admin.py:740
+msgid "The draw command is now **Disabled**"
+msgstr "ড্র কমান্ড এখন **অক্ষম**"
+msgstr ""
+
+#: commands/admin.py:743
+msgid "The draw command is now **Enabled**"
+msgstr "ড্র কমান্ড এখন **সক্ষম**"
+msgstr ""
+
+#: commands/admin.py:752
+msgid "Vision resolution has been set to **Low**"
+msgstr "দৃষ্টি রেজোলিউশন **নিম্ন** সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:755
+msgid "Vision resolution has been set to **High**"
+msgstr "দৃষ্টি রেজোলিউশন **উচ্চ** সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:758
+msgid "Vision resolution has been set to **Auto**"
+msgstr "দৃষ্টি রেজোলিউশন **অটো** সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:767
+msgid "Questions will be answered regardless of if they end with **?**"
+msgstr "প্রশ্নগুলি **?** দিয়ে শেষ না করেই উত্তর দেওয়া হবে।"
+msgstr ""
+
+#: commands/admin.py:770
+msgid "Questions must end in **?** to be answered"
+msgstr "প্রশ্নের উত্তর দেওয়ার জন্য অবশ্যই **?**-এ শেষ হতে হবে"
+msgstr ""
+
+#: commands/admin.py:779
+msgid "The bot will no longer respond to mentions"
+msgstr "বট আর উল্লেখে সাড়া দেবে না"
+msgstr ""
+
+#: commands/admin.py:782
+msgid "The bot will now respond to mentions"
+msgstr "বট এখন উল্লেখের জবাব দেবে"
+msgstr ""
+
+#: commands/admin.py:791
+msgid "Mentions are now **Disabled**"
+msgstr "উল্লেখ এখন **অক্ষম**"
+msgstr ""
+
+#: commands/admin.py:794
+msgid "Mentions are now **Enabled**"
+msgstr "উল্লেখ এখন **সক্ষম**"
+msgstr ""
+
+#: commands/admin.py:807
+msgid "Collaborative conversations are now **Disabled**"
+msgstr "সহযোগিতামূলক কথোপকথন এখন **অক্ষম**"
+msgstr ""
+
+#: commands/admin.py:810
+msgid "Collaborative conversations are now **Enabled**"
+msgstr "সহযোগিতামূলক কথোপকথন এখন **সক্ষম**"
+msgstr ""
+
+#: commands/admin.py:828 commands/admin.py:1848
+msgid "Max retention needs to be at least 0 or higher"
+msgstr "সর্বোচ্চ ধারণ কমপক্ষে 0 বা তার বেশি হওয়া দরকার"
+msgstr ""
+
+#: commands/admin.py:832
+msgid "Conversation retention has been disabled"
+msgstr "কথোপকথন ধরে রাখা অক্ষম করা হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:834
+msgid "Conversations can now retain up to **{}** messages"
+msgstr "কথোপকথনগুলি এখন **{}** পর্যন্ত বার্তা রাখতে পারে৷"
+msgstr ""
+
+#: commands/admin.py:848 commands/admin.py:1871
+msgid "Max retention time needs to be at least 0 or higher"
+msgstr "সর্বোচ্চ ধরে রাখার সময় কমপক্ষে 0 বা তার বেশি হওয়া দরকার"
+msgstr ""
+
+#: commands/admin.py:852
+msgid "Conversations will be stored until the bot restarts or the cog is reloaded"
+msgstr "বট রিস্টার্ট না হওয়া বা কগ রিলোড না হওয়া পর্যন্ত কথোপকথন সংরক্ষণ করা হবে"
+msgstr ""
+
+#: commands/admin.py:854
+msgid "Conversations will be considered active for **{}** seconds"
+msgstr "কথোপকথনগুলি **{}** সেকেন্ডের জন্য সক্রিয় বলে বিবেচিত হবে৷"
+msgstr ""
+
+#: commands/admin.py:866
+msgid "Temperature must be between **0.0** and **2.0**"
+msgstr "তাপমাত্রা অবশ্যই **0.0** এবং **2.0** এর মধ্যে হতে হবে"
+msgstr ""
+
+#: commands/admin.py:871
+msgid "Temperature has been set to **{}**"
+msgstr "তাপমাত্রা সেট করা হয়েছে **{}**"
+msgstr ""
+
+#: commands/admin.py:882
+msgid "Frequency penalty must be between **-2.0** and **2.0**"
+msgstr "ফ্রিকোয়েন্সি পেনাল্টি **-2.0** এবং **2.0** এর মধ্যে হতে হবে"
+msgstr ""
+
+#: commands/admin.py:887
+msgid "Frequency penalty has been set to **{}**"
+msgstr "ফ্রিকোয়েন্সি পেনাল্টি সেট করা হয়েছে **{}**"
+msgstr ""
+
+#: commands/admin.py:898
+msgid "Presence penalty must be between **-2.0** and **2.0**"
+msgstr "উপস্থিতি শাস্তি **-2.0** এবং **2.0** এর মধ্যে হতে হবে"
+msgstr ""
+
+#: commands/admin.py:903
+msgid "Presence penalty has been set to **{}**"
+msgstr "উপস্থিতি শাস্তি **{}** সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:914
+msgid "Seed must be a positive integer"
+msgstr "বীজ একটি ধনাত্মক পূর্ণসংখ্যা হতে হবে"
+msgstr ""
+
+#: commands/admin.py:918
+msgid "The seed has been set to **{}**"
+msgstr "বীজ সেট করা হয়েছে **{}**"
+msgstr ""
+
+#: commands/admin.py:935
+msgid "{} embeddings have been updated"
+msgstr "{} এম্বেডিং আপডেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:937
+msgid "No embeddings needed to be refreshed"
+msgstr "রিফ্রেশ করার জন্য কোনো এম্বেডিংয়ের প্রয়োজন নেই"
+msgstr ""
+
+#: commands/admin.py:945
+msgid "Assistant will not call functions"
+msgstr "সহকারী ফাংশন কল করবে না"
+msgstr ""
+
+#: commands/admin.py:948
+msgid "Assistant will now call functions as needed"
+msgstr "সহায়ক এখন প্রয়োজন অনুযায়ী ফাংশন কল করবে"
+msgstr ""
+
+#: commands/admin.py:965
+msgid "Function calls will not be used since recursion is 0"
+msgstr "রিকারশন 0 হওয়ায় ফাংশন কল ব্যবহার করা হবে না"
+msgstr ""
+
+#: commands/admin.py:967
+msgid ""
+msgstr ""
+"The model can now call various functions up to {} times before returning "
+"a response"
+msgstr ""
+
+#: commands/admin.py:979
+msgid "Minimum length needs to be at least 0 or higher"
+msgstr "ন্যূনতম দৈর্ঘ্য কমপক্ষে 0 বা তার বেশি হওয়া দরকার"
+msgstr ""
+
+#: commands/admin.py:983
+msgid "{} will respond regardless of message length"
+msgstr "{} বার্তার দৈর্ঘ্য নির্বিশেষে প্রতিক্রিয়া জানাবে"
+msgstr ""
+
+#: commands/admin.py:986
+msgid "{} will respond to messages with more than **{}** characters"
+msgstr "{} **{}** এর বেশি অক্ষর সহ বার্তাগুলিতে প্রতিক্রিয়া জানাবে৷"
+msgstr ""
+
+#: commands/admin.py:1007 commands/admin.py:1028 commands/admin.py:1825
+msgid "Cannot be a negative number!"
+msgstr "ঋণাত্মক সংখ্যা হতে পারে না!"
+msgstr ""
+
+#: commands/admin.py:1011
+msgid ""
+msgstr ""
+"The maximum amount of tokens sent in a payload will be {}.\n"
+"*Note that models with token limits lower than this will still be trimmed*"
+msgstr ""
+
+#: commands/admin.py:1016
+msgid "The maximum amount of tokens sent in a payload will be dynamic"
+msgstr "একটি পেলোডে পাঠানো সর্বাধিক পরিমাণ টোকেন গতিশীল হবে"
+msgstr ""
+
+#: commands/admin.py:1032
+msgid "The maximum amount of tokens in the models responses will be {}."
+msgstr "মডেলের প্রতিক্রিয়াগুলিতে টোকেনের সর্বাধিক পরিমাণ হবে {}৷"
+msgstr ""
+
+#: commands/admin.py:1034
+msgid "Response tokens will now be dynamic"
+msgstr "প্রতিক্রিয়া টোকেন এখন গতিশীল হবে"
+msgstr ""
+
+#: commands/admin.py:1052 commands/admin.py:1080 commands/admin.py:1768
+msgid ""
+msgstr ""
+"Valid models are:\n"
+"{}"
+msgstr ""
+
+#: commands/admin.py:1059 commands/admin.py:1775
+msgid "Error: {}"
+msgstr "ত্রুটি: {}"
+msgstr ""
+
+#: commands/admin.py:1063
+msgid "The **{}** model will now be used"
+msgstr "**{}** মডেলটি এখন ব্যবহার করা হবে"
+msgstr ""
+
+#: commands/admin.py:1082
+msgid "The **{}** model will now be used for embeddings"
+msgstr "**{}** মডেলটি এখন এমবেডিংয়ের জন্য ব্যবহার করা হবে"
+msgstr ""
+
+#: commands/admin.py:1093 commands/admin.py:2003
+msgid "Not wiping embedding data"
+msgstr "এমবেডিং ডেটা মুছে ফেলা হচ্ছে না"
+msgstr ""
+
+#: commands/admin.py:1096
+msgid "All embedding data has been wiped!"
+msgstr "সমস্ত এমবেডিং ডেটা মুছে ফেলা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1107 commands/admin.py:1976
+msgid "Not wiping conversations"
+msgstr "কথোপকথন মুছা না"
+msgstr ""
+
+#: commands/admin.py:1111
+msgid "Conversations have been wiped in this server!"
+msgstr "কথোপকথন এই সার্ভারে মুছে ফেলা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1122
+msgid "Top N must be between 0 and 10"
+msgstr "শীর্ষ N 0 এবং 10 এর মধ্যে হতে হবে"
+msgstr ""
+
+#: commands/admin.py:1126
+msgid "Embeddings will not be pulled during conversations"
+msgstr "কথোপকথনের সময় এম্বেডিং টানা হবে না"
+msgstr ""
+
+#: commands/admin.py:1128
+msgid "Up to **{}** embeddings will be pulled for each interaction"
+msgstr "প্রতিটি ইন্টারঅ্যাকশনের জন্য **{}** পর্যন্ত এম্বেডিং টানা হবে"
+msgstr ""
+
+#: commands/admin.py:1143
+msgid "Minimum relatedness must be between 0 and 1"
+msgstr "ন্যূনতম সম্পর্ক অবশ্যই 0 এবং 1 এর মধ্যে হতে হবে"
+msgstr ""
+
+#: commands/admin.py:1146
+msgid "Minimum relatedness has been set to **{}**"
+msgstr "ন্যূনতম সম্পর্ক সেট করা হয়েছে **{}**"
+msgstr ""
+
+#: commands/admin.py:1155
+msgid "That regex is invalid"
+msgstr "এই regex অবৈধ"
+msgstr ""
+
+#: commands/admin.py:1159
+msgid "`{}` has been **Removed** from the blacklist"
+msgstr "`{}` কালো তালিকা থেকে **মুছে ফেলা হয়েছে**"
+msgstr ""
+
+#: commands/admin.py:1162
+msgid "`{}` has been **Added** to the blacklist"
+msgstr "`{}` কালো তালিকায় **যোগ করা হয়েছে**"
+msgstr ""
+
+#: commands/admin.py:1176
+msgid "If a regex blacklist fails, the bots reply will be blocked"
+msgstr "একটি regex কালো তালিকা ব্যর্থ হলে, বট উত্তর ব্লক করা হবে"
+msgstr ""
+
+#: commands/admin.py:1179
+msgid "If a reges blacklist fails, the bot will still reply"
+msgstr "যদি একটি রেজিস ব্ল্যাকলিস্ট ব্যর্থ হয়, বট এখনও উত্তর দেবে"
+msgstr ""
+
+#: commands/admin.py:1192
+msgid "Question mode is now **Disabled**"
+msgstr "প্রশ্ন মোড এখন **অক্ষম**"
+msgstr ""
+
+#: commands/admin.py:1195
+msgid "Question mode is now **Enabled**"
+msgstr "প্রশ্ন মোড এখন **সক্ষম**"
+msgstr ""
+
+#: commands/admin.py:1217
+msgid "Embedding method has been set to **Static**"
+msgstr "এম্বেডিং পদ্ধতি **স্ট্যাটিক** এ সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1220
+msgid "Embedding method has been set to **Hybrid**"
+msgstr "এম্বেডিং পদ্ধতি **হাইব্রিড** এ সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1223
+msgid "Embedding method has been set to **User**"
+msgstr "এম্বেডিং পদ্ধতি **ব্যবহারকারী** এ সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1226
+msgid "Embedding method has been set to **Dynamic**"
+msgstr "এম্বেডিং পদ্ধতি **ডাইনামিক** এ সেট করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1244
+msgid ""
+msgstr ""
+"You must attach **.csv** files to this command or reference a message "
+"that has them!"
+msgstr ""
+
+#: commands/admin.py:1257 commands/admin.py:1333 commands/admin.py:1381
+msgid "Error reading **{}**: {}"
+msgstr "পড়ার ত্রুটি **{}**: {}"
+msgstr ""
+
+#: commands/admin.py:1262
+msgid "**{}** contains invalid formatting, columns must be "
+msgstr "**{}** অবৈধ বিন্যাস রয়েছে, কলাম অবশ্যই হতে হবে"
+msgstr ""
+
+#: commands/admin.py:1270
+msgid "There are no valid files to import!"
+msgstr "আমদানি করার জন্য কোনো বৈধ ফাইল নেই!"
+msgstr ""
+
+#: commands/admin.py:1272 commands/admin.py:1398
+msgid ""
+msgstr ""
+"Processing the following files in the background\n"
+"{}"
+msgstr ""
+
+#: commands/admin.py:1286 commands/admin.py:1409
+msgid "processing"
+msgstr "প্রক্রিয়াকরণ"
+msgstr ""
+
+#: commands/admin.py:1288 commands/admin.py:1411
+msgid "overwriting"
+msgstr "ওভাররাইটিং"
+msgstr ""
+
+#: commands/admin.py:1295 commands/admin.py:1419
+msgid ""
+msgstr ""
+"{}\n"
+"`Currently {}: `**{}** ({}/{})"
+msgstr ""
+
+#: commands/admin.py:1301 commands/admin.py:1426
+msgid "Failed to process embedding: `{}`"
+msgstr "এমবেডিং প্রক্রিয়া করতে ব্যর্থ হয়েছে: `{}`৷"
+msgstr ""
+
+#: commands/admin.py:1306 commands/admin.py:1439 commands/admin.py:1443
+msgid ""
+msgstr ""
+"{}\n"
+"**COMPLETE**"
+msgstr ""
+
+#: commands/admin.py:1307 commands/admin.py:1440
+msgid "Successfully imported {} embeddings!"
+msgstr "সফলভাবে আমদানি করা {} এমবেডিং!"
+msgstr ""
+
+#: commands/admin.py:1321 commands/admin.py:1960
+msgid ""
+msgstr ""
+"You must attach **.json** files to this command or reference a message "
+"that has them!"
+msgstr ""
+
+#: commands/admin.py:1344
+msgid "Failed to import **{}** because it contains invalid formatting!"
+msgstr "**{}** আমদানি করতে ব্যর্থ হয়েছে কারণ এতে অবৈধ বিন্যাস রয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1349
+msgid ""
+msgstr ""
+"Imported the following files: `{}`\n"
+"{} embeddings imported"
+msgstr ""
+
+#: commands/admin.py:1367
+msgid ""
+msgstr ""
+"You must attach **.xlsx** files to this command or reference a message "
+"that has them!"
+msgstr ""
+
+#: commands/admin.py:1390
+msgid "{} is invalid! Must contain the following columns: {}"
+msgstr "{} অবৈধ! নিম্নলিখিত কলাম থাকতে হবে: {}"
+msgstr ""
+
+#: commands/admin.py:1444
+msgid "No embeddings needed to be updated!"
+msgstr "কোন এমবেডিং আপডেট করা প্রয়োজন!"
+msgstr ""
+
+#: commands/admin.py:1456 commands/admin.py:1499 commands/admin.py:1543
+msgid "There are no embeddings to export!"
+msgstr "রপ্তানি করার জন্য কোন এমবেডিং নেই!"
+msgstr ""
+
+#: commands/admin.py:1512 commands/admin.py:1532 commands/admin.py:1551
+#: commands/admin.py:1571 commands/admin.py:1946
+msgid "Here is your embeddings export!"
+msgstr "এখানে আপনার এমবেডিং এক্সপোর্ট!"
+msgstr ""
+
+#: commands/admin.py:1515 commands/admin.py:1554 commands/admin.py:1928
+msgid "File too large, attempting to compress..."
+msgstr "ফাইল খুব বড়, কম্প্রেস করার চেষ্টা করা হচ্ছে..."
+msgstr ""
+
+#: commands/admin.py:1535 commands/admin.py:1574 commands/admin.py:1949
+msgid "File is still too large even with compression!"
+msgstr "কম্প্রেশন সহ ফাইল এখনও অনেক বড়!"
+msgstr ""
+
+#: commands/admin.py:1714
+msgid "{} has been removed from the blacklist"
+msgstr "{} কালো তালিকা থেকে সরানো হয়েছে৷"
+msgstr ""
+
+#: commands/admin.py:1717
+msgid "{} has been added to the blacklist"
+msgstr "{} কালো তালিকায় যোগ করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1740
+msgid "{} has been removed from the tutor list"
+msgstr "{} টিউটর তালিকা থেকে সরানো হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1743
+msgid "{} has been added to the tutor list"
+msgstr "{} টিউটর তালিকায় যোগ করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1781
+msgid "Role override for {} removed!"
+msgstr "{} এর জন্য ভূমিকা ওভাররাইড সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1784
+msgid "Role override for {} overwritten!"
+msgstr "{} ওভাররাইটের জন্য ভূমিকা ওভাররাইড!"
+msgstr ""
+
+#: commands/admin.py:1787
+msgid "Role override for {} added!"
+msgstr "{} এর জন্য ভূমিকা ওভাররাইড যোগ করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1799
+msgid "Use at least 100 tokens"
+msgstr "কমপক্ষে 100টি টোকেন ব্যবহার করুন"
+msgstr ""
+
+#: commands/admin.py:1805
+msgid "Max token override for {} removed!"
+msgstr "{} এর জন্য সর্বোচ্চ টোকেন ওভাররাইড সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1808
+msgid "Max token override for {} overwritten!"
+msgstr "সর্বোচ্চ টোকেন ওভাররাইড {} ওভাররাইট করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1811
+msgid "Max token override for {} added!"
+msgstr "{} এর জন্য সর্বাধিক টোকেন ওভাররাইড যোগ করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1831
+msgid "Max response token override for {} removed!"
+msgstr "{} এর জন্য সর্বোচ্চ প্রতিক্রিয়া টোকেন ওভাররাইড সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1834
+msgid "Max response token override for {} overwritten!"
+msgstr "সর্বাধিক প্রতিক্রিয়া টোকেন ওভাররাইডের জন্য {} ওভাররাইট!"
+msgstr ""
+
+#: commands/admin.py:1837
+msgid "Max response token override for {} added!"
+msgstr "{} এর জন্য সর্বাধিক প্রতিক্রিয়া টোকেন ওভাররাইড যোগ করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1854
+msgid "Max retention override for {} removed!"
+msgstr "{} এর জন্য সর্বাধিক ধারণ ওভাররাইড সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1857
+msgid "Max retention override for {} overwritten!"
+msgstr "{} ওভাররাইট করার জন্য সর্বাধিক ধারণ ওভাররাইড!"
+msgstr ""
+
+#: commands/admin.py:1860
+msgid "Max retention override for {} added!"
+msgstr "{} এর জন্য সর্বাধিক ধারণ ওভাররাইড যোগ করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1877
+msgid "Max retention time override for {} removed!"
+msgstr "{} এর জন্য সর্বোচ্চ ধরে রাখার সময় ওভাররাইড সরানো হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1880
+msgid "Max retention time override for {} overwritten!"
+msgstr "{} ওভাররাইট করার জন্য সর্বাধিক ধরে রাখার সময় ওভাররাইড!"
+msgstr ""
+
+#: commands/admin.py:1883
+msgid "Max retention time override for {} added!"
+msgstr "{} এর জন্য সর্বোচ্চ ধরে রাখার সময় ওভাররাইড যোগ করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1897
+msgid "Not wiping cog"
+msgstr "কগ মোছা না"
+msgstr ""
+
+#: commands/admin.py:1902
+msgid "Cog has been wiped!"
+msgstr "কগ মোছা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1925
+msgid "Here is your export!"
+msgstr "এখানে আপনার রপ্তানি!"
+msgstr ""
+
+#: commands/admin.py:1964
+msgid "Cog has been restored!"
+msgstr "কগ পুনরুদ্ধার করা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1979
+msgid "Conversations have been wiped for all servers!"
+msgstr "কথোপকথন সব সার্ভারের জন্য মুছে ফেলা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:1988
+msgid "Persistent conversations have been **Disabled**"
+msgstr "অবিরাম কথোপকথন **অক্ষম** করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:1991
+msgid "Persistent conversations have been **Enabled**"
+msgstr "অবিরাম কথোপকথন **সক্ষম** করা হয়েছে"
+msgstr ""
+
+#: commands/admin.py:2006
+msgid "All embedding data has been wiped for all servers!"
+msgstr "সমস্ত এম্বেডিং ডেটা সমস্ত সার্ভারের জন্য মুছে ফেলা হয়েছে!"
+msgstr ""
+
+#: commands/admin.py:2019
+msgid "Assistant will no longer listen to other bot messages"
+msgstr "অ্যাসিস্ট্যান্ট আর অন্য বট মেসেজ শুনবে না"
+msgstr ""
+
+#: commands/admin.py:2022
+msgid "Assistant will listen to other bot messages"
+msgstr "সহকারী অন্যান্য বট বার্তা শুনবে"
+msgstr ""
+
+#: commands/base.py:36
+msgid ""
+msgstr ""
+"\n"
+"# How to Use\n"
+"\n"
+"### Commands\n"
+"`[p]convostats` - view your conversation message count/token usage for "
+"that convo.\n"
+"`[p]clearconvo` - reset your conversation for the current "
+"channel/thread/forum.\n"
+"`[p]showconvo` - get a json dump of your current conversation (this is "
+"mostly for debugging)\n"
+"`[p]chat` or `[p]ask` - command prefix for chatting with the bot outside "
+"of the live chat, or just @ it.\n"
+"\n"
+"### Chat Arguments\n"
+"`[p]chat --last` - resend the last message of the conversation.\n"
+"`[p]chat --extract` - extract all markdown text to be sent as a separate "
+"message.\n"
+"`[p]chat --outputfile <filename>` - sends the reply as a file instead.\n"
+"\n"
+"### Argument Use-Cases\n"
+"`[p]chat --last --outpufile test.py` - output the last message the bot "
+"sent as a file.\n"
+"`[p]chat write a python script to do X... --extract --outputfile test.py`"
+" - all code blocks from the output will be sent as a file in addition to "
+"the reply.\n"
+"`[p]chat --last --extract --outputfile test.py` - extract code blocks "
+"from the last message to send as a file.\n"
+"\n"
+"### File Comprehension\n"
+"Files may be uploaded with the chat command to be included with the "
+"question or query, so rather than pasting snippets, the entire file can "
+"be uploaded so that you can ask a question about it.\n"
+"At the moment the bot is capable of reading the following file "
+"extensions.\n"
+"```json\n"
+"{}\n"
+"```\n"
+"If a file has no extension it will still try to read it only if it can be"
+" decoded to utf-8.\n"
+"### Tips\n"
+"- Replying to someone else's message while using the `[p]chat` command "
+"will include their message in *your* conversation, useful if someone says"
+" something helpful and you want to include it in your current convo with "
+"GPT.\n"
+"- Replying to a message with a file attachment will have that file be "
+"read and included in your conversation. Useful if you upload a file and "
+"forget to use the chat command with it, or if someone else uploads a file"
+" you want to query the bot with.\n"
+"- Conversations are *Per* user *Per* channel, so each channel you "
+"interact with GPT in is a different convo.\n"
+"- Talking to the bot like a person rather than a search engine generally "
+"yields better results. The more verbose you can be, the better.\n"
+"- Conversations are persistent, if you want the bot to forget the convo "
+"so far, use the `[p]clearconvo` command\n"
+"        "
+msgstr ""
+
+#: commands/base.py:77
+msgid "Generate an image with Dalle-3"
+msgstr "Dalle-3 দিয়ে একটি ইমেজ তৈরি করুন"
+msgstr ""
+
+#: commands/base.py:78
+msgid "What would you like to draw?"
+msgstr "আপনি কি আঁকতে চান?"
+msgstr ""
+
+#: commands/base.py:79
+msgid "The size of the image to generate"
+msgstr "ছবির আকার তৈরি করতে হবে"
+msgstr ""
+
+#: commands/base.py:80
+msgid "The quality of the image to generate"
+msgstr "ছবির গুণমান তৈরি করতে হবে"
+msgstr ""
+
+#: commands/base.py:81
+msgid "The style of the image to generate"
+msgstr "ছবির শৈলী তৈরি করতে হবে"
+msgstr ""
+
+#: commands/base.py:93
+msgid "The API key is not set up!"
+msgstr "API কী সেট আপ করা হয়নি!"
+msgstr ""
+
+#: commands/base.py:95
+msgid "Image generation is disabled!"
+msgstr "ছবি তৈরি করা অক্ষম!"
+msgstr ""
+
+#: commands/base.py:97
+msgid "Generating image..."
+msgstr "ছবি তৈরি করা হচ্ছে..."
+msgstr ""
+
+#: commands/base.py:100 common/functions.py:35
+msgid ""
+msgstr ""
+"-# Size: {}\n"
+"-# Quality: {}\n"
+"-# Style: {}"
+msgstr ""
+
+#: commands/base.py:105 common/functions.py:40
+msgid "Cost: ${}"
+msgstr "খরচ: ${}"
+msgstr ""
+
+#: commands/base.py:107
+msgid "Revised Prompt"
+msgstr "সংশোধিত প্রম্পট"
+msgstr ""
+
+#: commands/base.py:198
+msgid ""
+msgstr ""
+"`Messages:   `{}/{}\n"
+"`Tokens:     `{}/{}\n"
+"`Expired:    `{}\n"
+"`Model:      `{}"
+msgstr ""
+
+#: commands/base.py:207
+msgid ""
+msgstr ""
+"\n"
+"`Tool Calls: `{}"
+msgstr ""
+
+#: commands/base.py:209
+msgid "*Collabroative conversations are enabled*"
+msgstr "*সহযোগী কথোপকথন সক্ষম করা হয়েছে*"
+msgstr ""
+
+#: commands/base.py:215
+msgid "Conversation stats for {}"
+msgstr "{} এর জন্য কথোপকথনের পরিসংখ্যান"
+msgstr ""
+
+#: commands/base.py:218
+msgid "Token limit is a soft cap and excess is trimmed before sending to the api"
+msgstr "টোকেন সীমা একটি নরম ক্যাপ এবং অতিরিক্ত এপিআইতে পাঠানোর আগে ছাঁটাই করা হয়"
+msgstr ""
+
+#: commands/base.py:223
+msgid "System prompt override for this conversation"
+msgstr "এই কথোপকথনের জন্য সিস্টেম প্রম্পট ওভাররাইড"
+msgstr ""
+
+#: commands/base.py:226
+msgid "System prompt override for this channel"
+msgstr "এই চ্যানেলের জন্য সিস্টেম প্রম্পট ওভাররাইড"
+msgstr ""
+
+#: commands/base.py:244
+msgid ""
+msgstr ""
+"Only moderators can clear channel conversations when collaborative "
+"conversations are enabled!"
+msgstr ""
+
+#: commands/base.py:248
+msgid "Your conversation in this channel has been reset!"
+msgstr "এই চ্যানেলে আপনার কথোপকথন পুনরায় সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/base.py:265
+msgid ""
+msgstr ""
+"Only moderators can pop messages from conversations when collaborative "
+"conversations are enabled!"
+msgstr ""
+
+#: commands/base.py:269 commands/base.py:301
+msgid "There are no messages in this conversation yet!"
+msgstr "এই কথোপকথনে এখনও কোন বার্তা নেই!"
+msgstr ""
+
+#: commands/base.py:274
+msgid "Removed the last message from this conversation"
+msgstr "এই কথোপকথন থেকে শেষ বার্তাটি সরানো হয়েছে৷"
+msgstr ""
+
+#: commands/base.py:293
+msgid ""
+msgstr ""
+"Only moderators can copy conversations when collaborative conversations "
+"are enabled!"
+msgstr ""
+
+#: commands/base.py:304
+msgid "You cannot copy a conversation to a channel you can't see!"
+msgstr "আপনি দেখতে পাচ্ছেন না এমন একটি চ্যানেলে কথোপকথন কপি করতে পারবেন না!"
+msgstr ""
+
+#: commands/base.py:310
+msgid "This conversation has been overwritten in {}"
+msgstr "এই কথোপকথনটি {} এ ওভাররাইট করা হয়েছে"
+msgstr ""
+
+#: commands/base.py:312
+msgid "This conversation has been copied over to {}"
+msgstr "এই কথোপকথনটি {} এ কপি করা হয়েছে"
+msgstr ""
+
+#: commands/base.py:331
+msgid "Conversation system prompt overriding is **Disabled**."
+msgstr "কথোপকথন সিস্টেম প্রম্পট ওভাররাইডিং **অক্ষম**।"
+msgstr ""
+
+#: commands/base.py:341
+msgid ""
+msgstr ""
+"Only moderators can set conversation prompts when collaborative "
+"conversations are enabled!"
+msgstr ""
+
+#: commands/base.py:361
+#, python-format
+msgid ""
+msgstr ""
+"This prompt is uses {} tokens which is more than 90% of the maximum "
+"tokens allowed per conversation!\n"
+"Write a prompt using {} tokens or less to leave 10% of your token limit "
+"for responses"
+msgstr ""
+
+#: commands/base.py:370
+msgid "System prompt has been set for this conversation!"
+msgstr "এই কথোপকথনের জন্য সিস্টেম প্রম্পট সেট করা হয়েছে!"
+msgstr ""
+
+#: commands/base.py:372
+msgid "System prompt has been **Removed** for this conversation!"
+msgstr "এই কথোপকথনের জন্য সিস্টেম প্রম্পট **মুছে ফেলা হয়েছে**!"
+msgstr ""
+
+#: commands/base.py:396
+msgid "You have no conversation in this channel!"
+msgstr "এই চ্যানেলে আপনার কোন কথোপকথন নেই!"
+msgstr ""
+
+#: commands/base.py:409
+msgid "Here is your conversation transcript!"
+msgstr "এখানে আপনার কথোপকথন প্রতিলিপি!"
+msgstr ""
+
+#: commands/base.py:421
+msgid "You do not have any embeddings configured!"
+msgstr "আপনার কোন এম্বেডিং কনফিগার করা নেই!"
+msgstr ""
+
+#: commands/base.py:423
+msgid "Top N is set to 0 so no embeddings will be returned"
+msgstr "শীর্ষ N 0 এ সেট করা হয়েছে তাই কোনো এম্বেডিং ফেরত দেওয়া হবে না"
+msgstr ""
+
+#: commands/base.py:429
+msgid "Failed to get embedding for your query"
+msgstr "আপনার প্রশ্নের জন্য এম্বেডিং পেতে ব্যর্থ হয়েছে"
+msgstr ""
+
+#: commands/base.py:433
+msgid "No embeddings could be related to this query with the current settings"
+msgstr "বর্তমান সেটিংসের সাথে এই প্রশ্নের সাথে কোনো এম্বেডিং সম্পর্কিত হতে পারে না"
+msgstr ""
+
+#: commands/base.py:437
+msgid "`Entry Name:  `{}\n"
+msgstr "`প্রবেশের নাম: `{}\n"
+msgstr ""
+
+#: commands/base.py:438
+msgid "`Relatedness: `{}\n"
+msgstr "`সম্পর্কিততা: `{}\n"
+msgstr ""
+
+#: commands/base.py:439
+msgid "`Dimensions:  `{}\n"
+msgstr "`মাত্রা: `{}\n"
+msgstr ""
+
+#: common/api.py:39
+msgid "Failed to fetch: {}"
+msgstr "আনতে ব্যর্থ হয়েছে: {}"
+msgstr ""
+
+#: common/api.py:219
+msgid "There are no API keys set!\n"
+msgstr "কোন API কী সেট নেই!\n"
+msgstr ""
+
+#: common/api.py:221
+msgid "- Set your OpenAI key with `{}`\n"
+msgstr "- `{}` দিয়ে আপনার OpenAI কী সেট করুন\n"
+msgstr ""
+
+#: common/api.py:588
+msgid "Custom Functions"
+msgstr "কাস্টম ফাংশন"
+msgstr ""
+
+#: common/api.py:594
+msgid "3rd Party"
+msgstr "৩য় পক্ষ"
+msgstr ""
+
+#: common/api.py:595
+msgid "This function is managed by the `{}` cog"
+msgstr "এই ফাংশনটি `{}` কগ দ্বারা পরিচালিত হয়"
+msgstr ""
+
+#: common/api.py:600
+msgid "Internal Function"
+msgstr "অভ্যন্তরীণ ফাংশন"
+msgstr ""
+
+#: common/api.py:601
+msgid ""
+msgstr ""
+"This is an internal command that can only be used when interacting with a"
+" tutor"
+msgstr ""
+
+#: common/api.py:607
+msgid "This function consumes `{}` input tokens each call\n"
+msgstr "এই ফাংশনটি প্রতিটি কলে `{}` ইনপুট টোকেন ব্যবহার করে\n"
+msgstr ""
+
+#: common/api.py:622
+msgid "Hidden..."
+msgstr "লুকানো..."
+msgstr ""
+
+#: common/api.py:625
+msgid "Schema"
+msgstr "স্কিমা"
+msgstr ""
+
+#: common/api.py:628 common/api.py:651
+msgid "Page {}/{}"
+msgstr "পৃষ্ঠা {}/{}"
+msgstr ""
+
+#: common/api.py:635
+msgid "No custom code has been added yet!"
+msgstr "কোন কাস্টম কোড এখনো যোগ করা হয়নি!"
+msgstr ""
+
+#: common/api.py:650
+msgid "Embeddings"
+msgstr "এমবেডিং"
+msgstr ""
+
+#: common/api.py:661
+msgid ""
+msgstr ""
+"`Created:    `{}\n"
+"`Modified:   `{}\n"
+"`Tokens:     `{}\n"
+"`Dimensions: `{}\n"
+"`AI Created: `{}\n"
+"`Model:      `{}\n"
+msgstr ""
+
+#: common/api.py:688
+msgid "No embeddings have been added!"
+msgstr "কোন এম্বেডিং যোগ করা হয়েছে!"
+msgstr ""
+
+#: common/chat.py:147
+msgid "No message history!"
+msgstr "কোন বার্তা ইতিহাস!"
+msgstr ""
+
+#: common/chat.py:163 common/chat.py:166 common/chat.py:168
+msgid "Internal Server Error({}): {}"
+msgstr "অভ্যন্তরীণ সার্ভার ত্রুটি({}): {}"
+msgstr ""
+
+#: common/chat.py:170
+msgid "Failed to communicate with API!"
+msgstr "API এর সাথে যোগাযোগ করতে ব্যর্থ!"
+msgstr ""
+
+#: common/chat.py:174
+msgid "Invalid API key, please set a new valid key!"
+msgstr "অবৈধ API কী, অনুগ্রহ করে একটি নতুন বৈধ কী সেট করুন!"
+msgstr ""
+
+#: common/chat.py:176
+msgid "Uh oh, looks like my API key is invalid!"
+msgstr "ওহ, মনে হচ্ছে আমার API কীটি অবৈধ!"
+msgstr ""
+
+#: common/chat.py:178
+msgid "Rate limit error: {}"
+msgstr "হার সীমা ত্রুটি: {}"
+msgstr ""
+
+#: common/chat.py:180
+msgid "Read timeout error: {}"
+msgstr "টাইমআউট ত্রুটি পড়ুন: {}"
+msgstr ""
+
+#: common/chat.py:186
+msgid "Uh oh, something went wrong! Bot owner can use `{}` to view the error."
+msgstr "ওহ, কিছু ভুল হয়েছে! বট মালিক ত্রুটি দেখতে `{}` ব্যবহার করতে পারেন।"
+msgstr ""
+
+#: common/chat.py:189
+msgid "API Status: {}"
+msgstr "API স্থিতি: {}"
+msgstr ""
+
+#: common/chat.py:222
+msgid "No results found"
+msgstr "কোন ফলাফল পাওয়া যায়নি"
+msgstr ""
+
+#: common/chat.py:328
+msgid "None"
+msgstr "কোনোটিই নয়"
+msgstr ""
+
+#: common/chat.py:412
+msgid "Request timed out, please try again."
+msgstr "অনুরোধের সময় শেষ, অনুগ্রহ করে আবার চেষ্টা করুন।"
+msgstr ""
+
+#: common/chat.py:423 common/chat.py:426 common/chat.py:429 common/chat.py:431
+msgid "Bad Request Error({}): {}"
+msgstr "খারাপ অনুরোধ ত্রুটি({}): {}"
+msgstr ""
+
+#: common/chat.py:550
+msgid "Result sent!"
+msgstr "ফলাফল পাঠানো হয়েছে!"
+msgstr ""
+
+#: common/chat.py:641
+msgid "Response failed due to invalid regex, check logs for more info."
+msgstr "অবৈধ রেজেক্সের কারণে প্রতিক্রিয়া ব্যর্থ হয়েছে, আরও তথ্যের জন্য লগ চেক করুন৷"
+msgstr ""
+
+#: common/chat.py:758
+msgid ""
+msgstr ""
+"\n"
+"Missing 'attach files' permissions!"
+msgstr ""
+
+#: common/utils.py:64
+msgid "Canceled"
+msgstr "বাতিল"
+msgstr ""
+
+#: common/utils.py:77
+msgid "You have been blacklisted from using this command!"
+msgstr "এই কমান্ড ব্যবহার করার জন্য আপনাকে কালো তালিকাভুক্ত করা হয়েছে!"
+msgstr ""
+
+#: common/utils.py:81
+msgid "You have a blacklisted role and cannot use this command!"
+msgstr "আপনার একটি কালো তালিকাভুক্ত ভূমিকা আছে এবং এই কমান্ডটি ব্যবহার করতে পারবেন না!"
+msgstr ""
+
+#: common/utils.py:85
+msgid "You cannot use that command in this channel!"
+msgstr "আপনি এই চ্যানেলে সেই কমান্ডটি ব্যবহার করতে পারবেন না!"
+msgstr ""
+
+#: common/utils.py:89
+msgid "You cannot use that command in any channels under this category"
+msgstr "আপনি এই বিভাগের অধীনে কোনো চ্যানেলে সেই কমান্ডটি ব্যবহার করতে পারবেন না"
+msgstr ""
+
+#: common/utils.py:124 common/utils.py:125
+msgid "[Code Removed]"
+msgstr "[কোড সরানো হয়েছে]"
+msgstr ""
+

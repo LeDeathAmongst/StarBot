@@ -1,0 +1,586 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Red - Discord Bot’s documentation! &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installing Red" href="install_guides/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to Red - Discord Bot’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developindex.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-red-discord-bot-s-documentation">
+<span id="main"></span><h1>Welcome to Red - Discord Bot’s documentation!<a class="headerlink" href="#welcome-to-red-discord-bot-s-documentation" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_customcom.html#how-it-works">How it works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_customcom.html#cooldowns">Cooldowns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_customcom.html#context-parameters">Context Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_customcom.html#command-parameters">Command Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_customcom.html#example-commands">Example commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_permissions.html#how-it-works">How it works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_permissions.html#rule-priority">Rule priority</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_permissions.html#setting-rules-from-a-file">Setting Rules From a File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_permissions.html#example-configurations">Example configurations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_trivia_list_creation.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_trivia_list_creation.html#author-field">Author Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_trivia_list_creation.html#description-field">Description Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_trivia_list_creation.html#questions-and-answers">Questions and Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_trivia_list_creation.html#optional-custom-overrides">Optional: Custom Overrides</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#invite-red-to-your-server">Invite Red to your server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#interact-with-red">Interact with Red</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#cogs">Cogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#permissions">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#hosting">Hosting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#user-documentation">User documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intents.html#intents-intents">Intents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intents.html#public-bots">Public bots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intents.html#bot-verification-process">Bot verification process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intents.html#message-intent-and-slash-commands">Message intent and slash commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/admin.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/admin.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/alias.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/alias.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#basic-audio-use">Basic Audio Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#frequently-asked-questions">Frequently Asked Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#queue-related-commands">Queue Related Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#playlist-commands">Playlist Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#owner-only-audioset-commands">Owner-Only Audioset Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#guild-based-audioset-commands">Guild-based Audioset Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#spotify-playback-and-api-keys">Spotify Playback and API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#local-tracks">Local Tracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#dj-role-and-voteskip">DJ Role and Voteskip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#sound-quality-issues">Sound Quality Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#lavalink-red-community-supported-advanced-usage">Lavalink - Red Community-Supported Advanced Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#setting-up-an-unmanaged-lavalink-node-on-a-remote-vps-or-server">Setting up an unmanaged Lavalink node on a remote VPS or server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#lavalink-setup-commands">Lavalink Setup Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#managed-node-management-commands">Managed Node Management Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/audio.html#unmanaged-node-management-commands">Unmanaged Node Management Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/cleanup.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/cleanup.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/cog_manager_ui.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/cog_manager_ui.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/core.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/core.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/customcommands.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/customcommands.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/dev.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/dev.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/downloader.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/downloader.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/economy.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/economy.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/filter.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/filter.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/general.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/general.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/image.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/image.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/permissions.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/permissions.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/mod.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/mod.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/modlog.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/modlog.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/mutes.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/mutes.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/reports.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/reports.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/streams.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/streams.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/trivia.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/trivia.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/warnings.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog_guides/warnings.html#commands">Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="red_core_data_statement.html#notes-for-everyone">Notes for everyone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="red_core_data_statement.html#additional-notes-for-bot-owners-and-hosts">Additional Notes for Bot Owners and Hosts</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_migration.html#red-as-a-package">Red as a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_migration.html#cogs-as-packages">Cogs as packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_migration.html#config">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_migration.html#bank">Bank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_migration.html#mod-log">Mod Log</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creation.html#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creation.html#setting-up-a-package">Setting up a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creation.html#creating-a-cog">Creating a cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creation.html#testing-your-cog">Testing your cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creation.html#publishing-your-cog">Publishing your cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creation.html#becoming-an-approved-cog-creator">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creation.html#additional-resources">Additional resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_slash_and_interactions.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_slash_and_interactions.html#slash-commands-and-arguments">Slash Commands and Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_slash_and_interactions.html#hybrid-commands">Hybrid Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_slash_and_interactions.html#context-menu-commands">Context Menu Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_slash_and_interactions.html#closing-words-and-further-reading">Closing Words and Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_publish_cogs.html#repository-template">Repository Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_publish_cogs.html#info-json-format">Info.json format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_publish_cogs.html#adding-to-the-index">Adding to the Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creators.html#creating-a-cog-creator-application">Creating a Cog Creator Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creators.html#requirements-for-cog-creators">Requirements for Cog Creators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creators.html#recommendations-for-cog-creators">Recommendations for Cog Creators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creators.html#perks-of-being-a-cog-creator">Perks of being a Cog Creator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guide_cog_creators.html#other-details">Other Details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_apikeys.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_apikeys.html#event-reference">Event Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_apikeys.html#additional-references">Additional References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_bank.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_bank.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_bot.html#red">Red</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.admin"><code class="docutils literal notranslate"><span class="pre">admin()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.admin_or_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">admin_or_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.admin_or_permissions"><code class="docutils literal notranslate"><span class="pre">admin_or_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.bot_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">bot_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.bot_can_react"><code class="docutils literal notranslate"><span class="pre">bot_can_react()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.bot_has_permissions"><code class="docutils literal notranslate"><span class="pre">bot_has_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.bot_in_a_guild"><code class="docutils literal notranslate"><span class="pre">bot_in_a_guild()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.can_manage_channel"><code class="docutils literal notranslate"><span class="pre">can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.guildowner"><code class="docutils literal notranslate"><span class="pre">guildowner()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.guildowner_or_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">guildowner_or_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.guildowner_or_permissions"><code class="docutils literal notranslate"><span class="pre">guildowner_or_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.has_guild_permissions"><code class="docutils literal notranslate"><span class="pre">has_guild_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.has_permissions"><code class="docutils literal notranslate"><span class="pre">has_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.is_owner"><code class="docutils literal notranslate"><span class="pre">is_owner()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.mod"><code class="docutils literal notranslate"><span class="pre">mod()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.mod_or_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">mod_or_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.mod_or_permissions"><code class="docutils literal notranslate"><span class="pre">mod_or_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_checks.html#starbot.core.commands.permissions_check"><code class="docutils literal notranslate"><span class="pre">permissions_check()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.command"><code class="docutils literal notranslate"><span class="pre">command()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.hybrid_command"><code class="docutils literal notranslate"><span class="pre">hybrid_command()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.group"><code class="docutils literal notranslate"><span class="pre">group()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.hybrid_group"><code class="docutils literal notranslate"><span class="pre">hybrid_group()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.Cog"><code class="docutils literal notranslate"><span class="pre">Cog</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.GroupCog"><code class="docutils literal notranslate"><span class="pre">GroupCog</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.Command"><code class="docutils literal notranslate"><span class="pre">Command</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.HybridCommand"><code class="docutils literal notranslate"><span class="pre">HybridCommand</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.Group"><code class="docutils literal notranslate"><span class="pre">Group</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.HybridGroup"><code class="docutils literal notranslate"><span class="pre">HybridGroup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.Context"><code class="docutils literal notranslate"><span class="pre">Context</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.GuildContext"><code class="docutils literal notranslate"><span class="pre">GuildContext</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.DMContext"><code class="docutils literal notranslate"><span class="pre">DMContext</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.UserFeedbackCheckFailure"><code class="docutils literal notranslate"><span class="pre">UserFeedbackCheckFailure</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#commands-requires">commands.requires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.requires.PermState"><code class="docutils literal notranslate"><span class="pre">PermState</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.requires.PrivilegeLevel"><code class="docutils literal notranslate"><span class="pre">PrivilegeLevel</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.requires.Requires"><code class="docutils literal notranslate"><span class="pre">Requires</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#commands-converter">commands.converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.UserInputOptional"><code class="docutils literal notranslate"><span class="pre">UserInputOptional</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.CogConverter"><code class="docutils literal notranslate"><span class="pre">CogConverter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.CommandConverter"><code class="docutils literal notranslate"><span class="pre">CommandConverter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.DictConverter"><code class="docutils literal notranslate"><span class="pre">DictConverter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.NoParseOptional"><code class="docutils literal notranslate"><span class="pre">NoParseOptional</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.RawUserIdConverter"><code class="docutils literal notranslate"><span class="pre">RawUserIdConverter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.RelativedeltaConverter"><code class="docutils literal notranslate"><span class="pre">RelativedeltaConverter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.TimedeltaConverter"><code class="docutils literal notranslate"><span class="pre">TimedeltaConverter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.finite_float"><code class="docutils literal notranslate"><span class="pre">finite_float()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.get_dict_converter"><code class="docutils literal notranslate"><span class="pre">get_dict_converter()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.get_timedelta_converter"><code class="docutils literal notranslate"><span class="pre">get_timedelta_converter()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.parse_relativedelta"><code class="docutils literal notranslate"><span class="pre">parse_relativedelta()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.parse_timedelta"><code class="docutils literal notranslate"><span class="pre">parse_timedelta()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#starbot.core.commands.converter.positive_int"><code class="docutils literal notranslate"><span class="pre">positive_int</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_commands.html#help-functionality">Help Functionality</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_app_commands.html#starbot.core.app_commands.UserFeedbackCheckFailure"><code class="docutils literal notranslate"><span class="pre">UserFeedbackCheckFailure</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_config.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_config.html#tutorial">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_config.html#advanced-usage">Advanced Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_config.html#v2-data-usage">V2 Data Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_config.html#best-practices-and-performance-notes">Best practices and performance notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_config.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.bundled_data_path"><code class="docutils literal notranslate"><span class="pre">bundled_data_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.cog_data_path"><code class="docutils literal notranslate"><span class="pre">cog_data_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.data_path"><code class="docutils literal notranslate"><span class="pre">data_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.instance_name"><code class="docutils literal notranslate"><span class="pre">instance_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.metadata_file"><code class="docutils literal notranslate"><span class="pre">metadata_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.storage_details"><code class="docutils literal notranslate"><span class="pre">storage_details()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.storage_type"><code class="docutils literal notranslate"><span class="pre">storage_type()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_events.html#rpc-server">RPC Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_i18n.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_i18n.html#tutorial">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_i18n.html#module-starbot.core.i18n">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_modlog.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_modlog.html#registering-case-types">Registering Case types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_modlog.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_rpc.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_rpc.html#interacting-with-the-rpc-server">Interacting with the RPC Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_rpc.html#api-reference">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_tree.html#redtree">RedTree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils">General Utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.chat_formatting">Chat Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.embed">Embed Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.menus">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#event-predicates">Event Predicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.mod">Mod Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.tunnel">Tunnel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.common_filters">Common Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.views">Utility UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework_utils.html#module-starbot.core.utils.antispam">AntiSpam</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="version_guarantees.html#exclusions">Exclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="incompatible_changes/future.html">Future changes (currently deprecated functionality)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="incompatible_changes/3.5.html">Backward incompatible changes in Red 3.5</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="host-list.html#hosting-on-a-vps-or-dedicated-server">Hosting on a VPS or Dedicated Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="host-list.html#self-hosting">Self Hosting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="host-list.html#choosing-a-provider">Choosing a Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="host-list.html#average-providers">Average Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="host-list.html#higher-end-providers">Higher End Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="host-list.html#free-hosting">Free Hosting</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install_guides/index.html" class="btn btn-neutral float-right" title="Installing Red" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

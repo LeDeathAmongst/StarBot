@@ -1,0 +1,22 @@
+{
+    "author" : [
+        "sravan"
+    ],
+    "description" : "A guess the number game which you can play in discord",
+    "disabled" : false,
+    "end_user_data_statement" : "This cog does not persistently store any data or metadata about users.",
+    "hidden" : false,
+    "install_msg" : "Thank you for installing. Run [p]gtn to load the cog.",
+    "max_bot_version" : "0.0.0",
+    "min_bot_version" : "3.3.10",
+    "name" : "GuessTheNumber",
+    "permissions" : [],
+    "required_cogs" : {},
+    "requirements" : [],
+    "short" : "A simple gtn game",
+    "tags" : [
+        "fun",
+        "game"
+    ],
+    "type" : "COG"
+}

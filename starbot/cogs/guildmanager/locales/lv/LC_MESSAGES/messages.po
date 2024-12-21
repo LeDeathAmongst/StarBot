@@ -1,0 +1,290 @@
+# Latvian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:00+0100\n"
+"PO-Revision-Date: 2024-10-14 04:05+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: lv\n"
+"Language-Team: lv <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
+" 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: guildmanager.py:41
+msgid "Whitelisted Guilds"
+msgstr "Baltajā sarakstā iekļautās ģildes"
+msgstr ""
+
+#: guildmanager.py:64
+msgid "The following guilds have been whitelisted: {}"
+msgstr "Šīs ģildes ir iekļautas baltajā sarakstā: {}"
+msgstr ""
+
+#: guildmanager.py:68
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already whitelisted: {}"
+msgstr ""
+
+#: guildmanager.py:87
+msgid "The following guilds have been removed from whitelist: {}"
+msgstr "Šīs ģildes ir noņemtas no baltā saraksta: {}"
+msgstr ""
+
+#: guildmanager.py:92
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were in the whitelist: {}"
+msgstr ""
+
+#: guildmanager.py:101
+msgid "The whitelist has been cleared."
+msgstr "Baltais saraksts ir notīrīts."
+msgstr ""
+
+#: guildmanager.py:110
+msgid "Blacklisted Guilds"
+msgstr "Melnajā sarakstā iekļautās ģildes"
+msgstr ""
+
+#: guildmanager.py:133 guildmanager.py:156
+msgid "The following guilds have been blacklisted: {}"
+msgstr "Melnajā sarakstā ir iekļautas šādas ģildes: {}"
+msgstr ""
+
+#: guildmanager.py:137 guildmanager.py:160
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already blacklisted: {}"
+msgstr ""
+
+#: guildmanager.py:169
+msgid "The blacklist has been cleared."
+msgstr "Melnais saraksts ir dzēsts."
+msgstr ""
+
+#: guildmanager.py:177
+msgid "The bot is no longer serverlocked."
+msgstr "Bots vairs nav bloķēts serveris."
+msgstr ""
+
+#: guildmanager.py:179
+msgid "The bot is now serverlocked."
+msgstr "Bots tagad ir bloķēts serveris."
+msgstr ""
+
+#: guildmanager.py:187
+msgid "All guilds are already chunked."
+msgstr "Visas ģildes jau ir sašķeltas."
+msgstr ""
+
+#: guildmanager.py:192
+msgid "The following guilds have been chunked: {}"
+msgstr "Šīs ģildes ir sadalītas gabalos: {}"
+msgstr ""
+
+#: guildmanager.py:195
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already chunked: {}"
+msgstr ""
+
+#: guildmanager.py:219
+msgid "The minimum member limit has been set to {}."
+msgstr "Minimālais dalībnieku ierobežojums ir iestatīts uz {}."
+msgstr ""
+
+#: guildmanager.py:220
+msgid "The minimum member limit has been removed."
+msgstr "Minimālais dalībnieku ierobežojums ir noņemts."
+msgstr ""
+
+#: guildmanager.py:231
+msgid "The ratio must be between 0 and 100."
+msgstr "Attiecībai ir jābūt no 0 līdz 100."
+msgstr ""
+
+#: guildmanager.py:235
+msgid "The bot ratio has been set to {}%."
+msgstr "Botu attiecība ir iestatīta uz {}%."
+msgstr ""
+
+#: guildmanager.py:236
+msgid "The bot ratio has been removed."
+msgstr "Botu attiecība ir noņemta."
+msgstr ""
+
+#: guildmanager.py:248
+msgid "Guild Manager Settings"
+msgstr "Ģildes pārvaldnieka iestatījumi"
+msgstr ""
+
+#: guildmanager.py:269 guildmanager.py:384
+msgid "No bot farms found."
+msgstr "Nav atrasta neviena botu ferma."
+msgstr ""
+
+#: guildmanager.py:275 guildmanager.py:303
+msgid "(Whitelisted)"
+msgstr "(iekļauts baltajā sarakstā)"
+msgstr ""
+
+#: guildmanager.py:278
+msgid "Bot Ratio: {}"
+msgstr "Botu attiecība: {}"
+msgstr ""
+
+#: guildmanager.py:281
+msgid "Bot Farms ({}% Bots)"
+msgstr "Botu fermas ({}% robotu)"
+msgstr ""
+
+#: guildmanager.py:296 guildmanager.py:410
+msgid "No servers with less members than minimum found."
+msgstr "Nav atrasts neviens serveris ar mazāku dalībnieku skaitu par minimālo skaitu."
+msgstr ""
+
+#: guildmanager.py:304 guildmanager.py:322
+msgid "Members: {}"
+msgstr "Dalībnieki: {}"
+msgstr ""
+
+#: guildmanager.py:307
+msgid "Servers With Less Than {} Members)"
+msgstr "Serveri ar mazāk nekā {} biedriem)"
+msgstr ""
+
+#: guildmanager.py:317
+msgid "No unchunked guilds found."
+msgstr "Neviena nedalīta ģilde nav atrasta."
+msgstr ""
+
+#: guildmanager.py:323
+msgid "Cached: {}"
+msgstr "Kešatmiņā saglabāts: {}"
+msgstr ""
+
+#: guildmanager.py:327
+msgid "Unchunked Guilds"
+msgstr "Nesadalītas ģildes"
+msgstr ""
+
+#: guildmanager.py:341
+msgid "Page {}/{}"
+msgstr "Lapa {}/{}"
+msgstr ""
+
+#: guildmanager.py:355
+msgid "No blacklisted guilds found."
+msgstr "Netika atrasta neviena melnajā sarakstā iekļauta ģilde."
+msgstr ""
+
+#: guildmanager.py:358
+msgid "Do you want me to leave {} blacklisted guilds?"
+msgstr "Vai vēlaties, lai es pametu {} melnajā sarakstā iekļautās ģildes?"
+msgstr ""
+
+#: guildmanager.py:364
+msgid "Done. I have left {} blacklisted guilds."
+msgstr "Gatavs. Esmu atstājis {} melnajā sarakstā iekļautās ģildes."
+msgstr ""
+
+#: guildmanager.py:368
+msgid "Ok, I won't leave any blacklisted guilds."
+msgstr "Labi, es neatstāšu nevienu melnajā sarakstā iekļauto ģildi."
+msgstr ""
+
+#: guildmanager.py:387
+msgid "Do you want me to leave {} bot farms?"
+msgstr "Vai vēlaties, lai es pametu {} robotu fermu?"
+msgstr ""
+
+#: guildmanager.py:393
+msgid "Done. I have left {} bot farms."
+msgstr "Gatavs. Esmu atstājis {} robotu fermu."
+msgstr ""
+
+#: guildmanager.py:396
+msgid "Ok, I won't leave any bot farms."
+msgstr "Labi, es neatstāšu nevienu botu fermu."
+msgstr ""
+
+#: guildmanager.py:414
+msgid "Do you want me to leave {} servers?"
+msgstr "Vai vēlaties, lai es pametu {} serverus?"
+msgstr ""
+
+#: guildmanager.py:420
+msgid "Done. I have left {} servers."
+msgstr "Gatavs. Esmu atstājis {} serverus."
+msgstr ""
+
+#: guildmanager.py:423
+msgid "Ok, I won't leave any servers."
+msgstr "Labi, es neatstāšu nevienu serveri."
+msgstr ""
+
+#: guildmanager.py:454
+msgid "I'm leaving because this server is blacklisted."
+msgstr "Es aizeju, jo šis serveris ir iekļauts melnajā sarakstā."
+msgstr ""
+
+#: guildmanager.py:458
+msgid "Blacklisted"
+msgstr "Melnajā sarakstā"
+msgstr ""
+
+#: guildmanager.py:463
+msgid "I'm leaving because this server has less than {} members."
+msgstr "Es aizeju, jo šajā serverī ir mazāk nekā {} dalībnieki."
+msgstr ""
+
+#: guildmanager.py:469
+msgid "Not Enough Members"
+msgstr "Nepietiek deputātu"
+msgstr ""
+
+#: guildmanager.py:476
+msgid "I'm leaving this server since it has a high bot to member ratio."
+msgstr "Es pametu šo serveri, jo tajā ir augsta robotu un dalībnieku attiecība."
+msgstr ""
+
+#: guildmanager.py:482
+msgid "Bot Farm"
+msgstr "Botu ferma"
+msgstr ""
+
+#: guildmanager.py:491
+msgid "I'm leaving since I was serverlocked by my owner."
+msgstr "Es aizeju, jo mans īpašnieks bloķēja serveri."
+msgstr ""
+
+#: guildmanager.py:495
+msgid "Server Locked"
+msgstr "Serveris ir bloķēts"
+msgstr ""
+
+#: guildmanager.py:526
+msgid "I have joined a server!"
+msgstr "Esmu pievienojies serverim!"
+msgstr ""
+
+#: guildmanager.py:538
+msgid "I have left a server!"
+msgstr "Esmu atstājis serveri!"
+msgstr ""
+

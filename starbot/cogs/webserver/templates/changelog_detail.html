@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Changelog for Version {{ changelog.version }}</h1>
+<p>Released on: {{ changelog.date }}</p>
+<h2>Changes:</h2>
+<ul>
+    {% for change in changelog.changes %}
+    <li>{{ change }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('changelogs') }}">Back to all changelogs</a>
+{% endblock %}

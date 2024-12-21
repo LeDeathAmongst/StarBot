@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red-discordbot\n"
+"POT-Creation-Date: 2024-07-18 21:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: Norwegian Bokmal\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: red-discordbot\n"
+"X-Crowdin-Project-ID: 289505\n"
+"X-Crowdin-Language: nb\n"
+"X-Crowdin-File-ID: 197\n"
+"Language: nb_NO\n"
+
+#: starbot/core/utils/chat_formatting.py:586
+msgid "year"
+msgstr "år"
+
+#: starbot/core/utils/chat_formatting.py:586
+msgid "years"
+msgstr "år"
+
+#: starbot/core/utils/chat_formatting.py:587
+msgid "month"
+msgstr "måned"
+
+#: starbot/core/utils/chat_formatting.py:587
+msgid "months"
+msgstr "måneder"
+
+#: starbot/core/utils/chat_formatting.py:588
+msgid "day"
+msgstr "dag"
+
+#: starbot/core/utils/chat_formatting.py:588
+msgid "days"
+msgstr "dager"
+
+#: starbot/core/utils/chat_formatting.py:589
+msgid "hour"
+msgstr "time"
+
+#: starbot/core/utils/chat_formatting.py:589
+msgid "hours"
+msgstr "timer"
+
+#: starbot/core/utils/chat_formatting.py:590
+msgid "minute"
+msgstr "minutter"
+
+#: starbot/core/utils/chat_formatting.py:590
+msgid "minutes"
+msgstr "minutter"
+
+#: starbot/core/utils/chat_formatting.py:591
+msgid "second"
+msgstr "sekunder"
+
+#: starbot/core/utils/chat_formatting.py:591
+msgid "seconds"
+msgstr "sekunder"
+
+#: starbot/core/utils/chat_formatting.py:599
+msgid "negative"
+msgstr ""
+
+#: starbot/core/utils/views.py:34
+msgid "Select a Page"
+msgstr "Velg en side"
+
+#: starbot/core/utils/views.py:172
+msgid "Page {num}"
+msgstr "Side {num}"
+
+#: starbot/core/utils/views.py:317 starbot/core/utils/views.py:673
+msgid "You are not authorized to interact with this."
+msgstr "Du er ikke autorisert til å samhandle med dette."
+
+#: starbot/core/utils/views.py:359
+msgid "Set API Keys"
+msgstr "Angi API-nøkler"
+
+#: starbot/core/utils/views.py:360
+msgid "Keys and tokens"
+msgstr "Nøkler og symboler"
+
+#: starbot/core/utils/views.py:362
+msgid "Set API Keys for {service}"
+msgstr "Angi API-nøkler for {service}"
+
+#: starbot/core/utils/views.py:363
+msgid "Keys and tokens for {service}"
+msgstr "Nøkler og tokens for {service}"
+
+#: starbot/core/utils/views.py:372
+msgid "Service"
+msgstr "Tjeneste"
+
+#: starbot/core/utils/views.py:409
+msgid "This modal is for bot owners only. Whoops!"
+msgstr "Denne modalen er bare for bot eiere. Whoops!"
+
+#: starbot/core/utils/views.py:422
+msgid "{error_message}\n"
+"Please try again."
+msgstr "{error_message}\n"
+"Vennligst prøv på nytt."
+
+#: starbot/core/utils/views.py:429 starbot/core/utils/views.py:436
+msgid "`{service}` API tokens have been set."
+msgstr "`{service}` API tokens har blitt satt."
+
+#: starbot/core/utils/views.py:472
+msgid "This button is for bot owners only, oh well."
+msgstr "Denne knappen er bare for bot eiere oh vel."
+

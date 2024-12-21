@@ -1,0 +1,1028 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.utils.chat_formatting &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../utils.html">starbot.core.utils</a></li>
+      <li class="breadcrumb-item active">starbot.core.utils.chat_formatting</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.utils.chat_formatting</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">textwrap</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">rich.console</span> <span class="kn">import</span> <span class="n">Console</span>
+<span class="kn">from</span> <span class="nn">rich.errors</span> <span class="kn">import</span> <span class="n">MarkupError</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">SupportsInt</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">babel.lists</span> <span class="kn">import</span> <span class="n">format_list</span> <span class="k">as</span> <span class="n">babel_list</span>
+<span class="kn">from</span> <span class="nn">babel.numbers</span> <span class="kn">import</span> <span class="n">format_decimal</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core.i18n</span> <span class="kn">import</span> <span class="n">Translator</span><span class="p">,</span> <span class="n">get_babel_locale</span><span class="p">,</span> <span class="n">get_babel_regional_format</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;ansify&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;info&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;question&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;box&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;header&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hyperlink&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inline&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;italics&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;spoiler&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pagify&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;strikethrough&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;subtext&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;underline&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;quote&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;escape&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;humanize_list&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;format_perms_list&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;humanize_timedelta&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;humanize_number&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;text_to_file&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s2">&quot;UtilsChatFormatting&quot;</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="success">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.success">[docs]</a>
+<span class="k">def</span> <span class="nf">success</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get text prefixed with a success emoji.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be prefixed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;a:Tick:1279795666507272225&gt; </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="hyperlink">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.hyperlink">[docs]</a>
+<span class="k">def</span> <span class="nf">hyperlink</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create hyperlink markdown with text and a URL.</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text which will contain the link.</span>
+<span class="sd">    url : str</span>
+<span class="sd">        The URL used for the hyperlink.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">](</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">)&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="header">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.header">[docs]</a>
+<span class="k">def</span> <span class="nf">header</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;small&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;large&quot;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Formats a header.</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text for the header.</span>
+<span class="sd">    url : Literal[&#39;small&#39;, &#39;medium&#39;, &#39;large&#39;]</span>
+<span class="sd">        The size of the header (&#39;small&#39;, &#39;medium&#39; or &#39;large&#39;)</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="s2">&quot;small&quot;</span><span class="p">:</span>
+        <span class="n">multiplier</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">size</span> <span class="o">==</span> <span class="s2">&quot;medium&quot;</span><span class="p">:</span>
+        <span class="n">multiplier</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">size</span> <span class="o">==</span> <span class="s2">&quot;large&quot;</span><span class="p">:</span>
+        <span class="n">multiplier</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid size &#39;</span><span class="si">{</span><span class="n">size</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;#&quot;</span> <span class="o">*</span> <span class="n">multiplier</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">text</span></div>
+
+
+
+<div class="viewcode-block" id="subtext">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.subtext">[docs]</a>
+<span class="k">def</span> <span class="nf">subtext</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Formats subtext from the given text.</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to format as subtext.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;-# &quot;</span> <span class="o">+</span> <span class="n">text</span></div>
+
+
+
+<div class="viewcode-block" id="error">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.error">[docs]</a>
+<span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get text prefixed with an error emoji.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be prefixed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;a:Wrong:1279795741300097025&gt; </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="question">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.question">[docs]</a>
+<span class="k">def</span> <span class="nf">question</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get text prefixed with a question emoji.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be prefixed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;a:questionmark:1279802778721714280&gt; </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="info">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.info">[docs]</a>
+<span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get text prefixed with an info emoji.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be prefixed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;a:info:1279795585951600712&gt; </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="warning">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.warning">[docs]</a>
+<span class="k">def</span> <span class="nf">warning</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get text prefixed with a warning emoji.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be prefixed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new message.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;a:Warning:1279791970666942525&gt; </span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="bold">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.bold">[docs]</a>
+<span class="k">def</span> <span class="nf">bold</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">escape_formatting</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the given text in bold.</span>
+
+<span class="sd">    Note: By default, this function will escape ``text`` prior to emboldening.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+<span class="sd">    escape_formatting : `bool`, optional</span>
+<span class="sd">        Set to :code:`False` to not escape markdown formatting in the text.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;**</span><span class="si">{</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">formatting</span><span class="o">=</span><span class="n">escape_formatting</span><span class="p">)</span><span class="si">}</span><span class="s2">**&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="box">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.box">[docs]</a>
+<span class="k">def</span> <span class="nf">box</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lang</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the given text in a code block.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+<span class="sd">    lang : `str`, optional</span>
+<span class="sd">        The syntax highlighting language for the codeblock.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;```</span><span class="si">{</span><span class="n">lang</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="se">\n</span><span class="s2">```&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="inline">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.inline">[docs]</a>
+<span class="k">def</span> <span class="nf">inline</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the given text as inline code.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;`&quot;</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;``</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">``&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">`&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="italics">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.italics">[docs]</a>
+<span class="k">def</span> <span class="nf">italics</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">escape_formatting</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the given text in italics.</span>
+
+<span class="sd">    Note: By default, this function will escape ``text`` prior to italicising.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+<span class="sd">    escape_formatting : `bool`, optional</span>
+<span class="sd">        Set to :code:`False` to not escape markdown formatting in the text.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;*</span><span class="si">{</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">formatting</span><span class="o">=</span><span class="n">escape_formatting</span><span class="p">)</span><span class="si">}</span><span class="s2">*&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="spoiler">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.spoiler">[docs]</a>
+<span class="k">def</span> <span class="nf">spoiler</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">escape_formatting</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the given text as a spoiler.</span>
+
+<span class="sd">    Note: By default, this function will escape ``text`` prior to making the text a spoiler.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+<span class="sd">    escape_formatting : `bool`, optional</span>
+<span class="sd">        Set to :code:`False` to not escape markdown formatting in the text.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;||</span><span class="si">{</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">formatting</span><span class="o">=</span><span class="n">escape_formatting</span><span class="p">)</span><span class="si">}</span><span class="s2">||&quot;</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">bordered</span><span class="p">(</span><span class="o">*</span><span class="n">columns</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">ascii_border</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get two blocks of text inside borders.</span>
+
+<span class="sd">    Note</span>
+<span class="sd">    ----</span>
+<span class="sd">    This will only work with a monospaced font.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    *columns : `sequence` of `str`</span>
+<span class="sd">        The columns of text, each being a list of lines in that column.</span>
+<span class="sd">    ascii_border : bool</span>
+<span class="sd">        Whether or not the border should be pure ASCII.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The bordered text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">borders</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;TL&quot;</span><span class="p">:</span> <span class="s2">&quot;+&quot;</span> <span class="k">if</span> <span class="n">ascii_border</span> <span class="k">else</span> <span class="s2">&quot;┌&quot;</span><span class="p">,</span>  <span class="c1"># Top-left</span>
+        <span class="s2">&quot;TR&quot;</span><span class="p">:</span> <span class="s2">&quot;+&quot;</span> <span class="k">if</span> <span class="n">ascii_border</span> <span class="k">else</span> <span class="s2">&quot;┐&quot;</span><span class="p">,</span>  <span class="c1"># Top-right</span>
+        <span class="s2">&quot;BL&quot;</span><span class="p">:</span> <span class="s2">&quot;+&quot;</span> <span class="k">if</span> <span class="n">ascii_border</span> <span class="k">else</span> <span class="s2">&quot;└&quot;</span><span class="p">,</span>  <span class="c1"># Bottom-left</span>
+        <span class="s2">&quot;BR&quot;</span><span class="p">:</span> <span class="s2">&quot;+&quot;</span> <span class="k">if</span> <span class="n">ascii_border</span> <span class="k">else</span> <span class="s2">&quot;┘&quot;</span><span class="p">,</span>  <span class="c1"># Bottom-right</span>
+        <span class="s2">&quot;HZ&quot;</span><span class="p">:</span> <span class="s2">&quot;-&quot;</span> <span class="k">if</span> <span class="n">ascii_border</span> <span class="k">else</span> <span class="s2">&quot;─&quot;</span><span class="p">,</span>  <span class="c1"># Horizontal</span>
+        <span class="s2">&quot;VT&quot;</span><span class="p">:</span> <span class="s2">&quot;|&quot;</span> <span class="k">if</span> <span class="n">ascii_border</span> <span class="k">else</span> <span class="s2">&quot;│&quot;</span><span class="p">,</span>  <span class="c1"># Vertical</span>
+    <span class="p">}</span>
+
+    <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">4</span>  <span class="c1"># Separator between boxes</span>
+    <span class="n">widths</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">column</span><span class="p">)</span> <span class="o">+</span> <span class="mi">9</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">)</span>  <span class="c1"># width of each col</span>
+    <span class="n">colsdone</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>  <span class="c1"># whether or not each column is done</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{TL}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{HZ}</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="n">width</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{TR}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">width</span> <span class="ow">in</span> <span class="n">widths</span><span class="p">)]</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">zip_longest</span><span class="p">(</span><span class="o">*</span><span class="n">columns</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">colidx</span><span class="p">,</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="n">widths</span><span class="p">[</span><span class="n">colidx</span><span class="p">]</span>
+            <span class="n">done</span> <span class="o">=</span> <span class="n">colsdone</span><span class="p">[</span><span class="n">colidx</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">column</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+                    <span class="c1"># bottom border of column</span>
+                    <span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{HZ}</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="n">width</span>
+                    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{BL}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">column</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{BR}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="n">colsdone</span><span class="p">[</span><span class="n">colidx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># mark column as done</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># leave empty</span>
+                    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">width</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">column</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">column</span><span class="p">))</span>  <span class="c1"># append padded spaces</span>
+                <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{VT}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">column</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{VT}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+
+    <span class="n">final_row</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">width</span><span class="p">,</span> <span class="n">done</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">colsdone</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+            <span class="n">final_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{BL}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{HZ}</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="n">width</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{BR}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">final_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="p">(</span><span class="n">width</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_row</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">borders</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="pagify">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.pagify">[docs]</a>
+<span class="k">class</span> <span class="nc">pagify</span><span class="p">(</span><span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate multiple pages from the given text.</span>
+
+<span class="sd">    Note</span>
+<span class="sd">    ----</span>
+<span class="sd">    This does not respect code blocks or inline code.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The content to pagify and send.</span>
+<span class="sd">    delims : `sequence` of `str`, optional</span>
+<span class="sd">        Characters where page breaks will occur. If no delimiters are found</span>
+<span class="sd">        in a page, the page will break after ``page_length`` characters.</span>
+<span class="sd">        By default this only contains the newline.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    priority : `bool`</span>
+<span class="sd">        Set to :code:`True` to choose the page break delimiter based on the</span>
+<span class="sd">        order of ``delims``. Otherwise, the page will always break at the</span>
+<span class="sd">        last possible delimiter.</span>
+<span class="sd">    escape_mass_mentions : `bool`</span>
+<span class="sd">        If :code:`True`, any mass mentions (here or everyone) will be</span>
+<span class="sd">        silenced.</span>
+<span class="sd">    shorten_by : `int`</span>
+<span class="sd">        How much to shorten each page by. Defaults to 8.</span>
+<span class="sd">    page_length : `int`</span>
+<span class="sd">        The maximum length of each page. Defaults to 2000.</span>
+
+<span class="sd">    Yields</span>
+<span class="sd">    ------</span>
+<span class="sd">    `str`</span>
+<span class="sd">        Pages of the given text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">delims</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,),</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">priority</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">escape_mass_mentions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">shorten_by</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="n">page_length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_text</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_delims</span> <span class="o">=</span> <span class="n">delims</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_priority</span> <span class="o">=</span> <span class="n">priority</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_escape_mass_mentions</span> <span class="o">=</span> <span class="n">escape_mass_mentions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shorten_by</span> <span class="o">=</span> <span class="n">shorten_by</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_page_length</span> <span class="o">=</span> <span class="n">page_length</span> <span class="o">-</span> <span class="n">shorten_by</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_start</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_text</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">text</span><span class="p">[:</span><span class="mi">19</span><span class="p">]</span><span class="si">}</span><span class="se">\N{HORIZONTAL ELLIPSIS}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="s2">&quot;pagify(&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">text</span><span class="si">!r}</span><span class="s2">,&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_delims</span><span class="si">!r}</span><span class="s2">,&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; priority=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_priority</span><span class="si">!r}</span><span class="s2">,&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; escape_mass_mentions=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_escape_mass_mentions</span><span class="si">!r}</span><span class="s2">,&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; shorten_by=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_shorten_by</span><span class="si">!r}</span><span class="s2">,&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot; page_length=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_page_length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">_shorten_by</span><span class="si">!r}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;)&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__length_hint__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_end</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_page_length</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pagify</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_text</span>
+        <span class="n">escape_mass_mentions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_escape_mass_mentions</span>
+        <span class="n">page_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_page_length</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">page_length</span><span class="p">:</span>
+            <span class="n">stop</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">page_length</span>
+            <span class="k">if</span> <span class="n">escape_mass_mentions</span><span class="p">:</span>
+                <span class="n">stop</span> <span class="o">-=</span> <span class="n">text</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;@here&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span> <span class="o">+</span> <span class="n">text</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;@everyone&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span>
+            <span class="n">closest_delim_it</span> <span class="o">=</span> <span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_delims</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_priority</span><span class="p">:</span>
+                <span class="n">closest_delim</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">closest_delim_it</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">closest_delim</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">closest_delim_it</span><span class="p">)</span>
+            <span class="n">stop</span> <span class="o">=</span> <span class="n">closest_delim</span> <span class="k">if</span> <span class="n">closest_delim</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">stop</span>
+            <span class="k">if</span> <span class="n">escape_mass_mentions</span><span class="p">:</span>
+                <span class="n">to_send</span> <span class="o">=</span> <span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">],</span> <span class="n">mass_mentions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">to_send</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">]</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start</span> <span class="o">=</span> <span class="n">stop</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">to_send</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">to_send</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_start</span> <span class="o">=</span> <span class="n">end</span>
+            <span class="k">if</span> <span class="n">escape_mass_mentions</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">],</span> <span class="n">mass_mentions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">text</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+
+        <span class="k">raise</span> <span class="ne">StopIteration</span></div>
+
+
+
+<div class="viewcode-block" id="strikethrough">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.strikethrough">[docs]</a>
+<span class="k">def</span> <span class="nf">strikethrough</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">escape_formatting</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the given text with a strikethrough.</span>
+
+<span class="sd">    Note: By default, this function will escape ``text`` prior to applying a strikethrough.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+<span class="sd">    escape_formatting : `bool`, optional</span>
+<span class="sd">        Set to :code:`False` to not escape markdown formatting in the text.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;~~</span><span class="si">{</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">formatting</span><span class="o">=</span><span class="n">escape_formatting</span><span class="p">)</span><span class="si">}</span><span class="s2">~~&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="underline">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.underline">[docs]</a>
+<span class="k">def</span> <span class="nf">underline</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">escape_formatting</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the given text with an underline.</span>
+
+<span class="sd">    Note: By default, this function will escape ``text`` prior to underlining.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+<span class="sd">    escape_formatting : `bool`, optional</span>
+<span class="sd">        Set to :code:`False` to not escape markdown formatting in the text.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;__</span><span class="si">{</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">formatting</span><span class="o">=</span><span class="n">escape_formatting</span><span class="p">)</span><span class="si">}</span><span class="s2">__&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="quote">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.quote">[docs]</a>
+<span class="k">def</span> <span class="nf">quote</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Quotes the given text.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be marked up.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The marked up text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">indent</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;&gt; &quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="kc">True</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="escape">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.escape">[docs]</a>
+<span class="k">def</span> <span class="nf">escape</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">mass_mentions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">formatting</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get text with all mass mentions or markdown escaped.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be escaped.</span>
+<span class="sd">    mass_mentions : `bool`, optional</span>
+<span class="sd">        Set to :code:`True` to escape mass mentions in the text.</span>
+<span class="sd">    formatting : `bool`, optional</span>
+<span class="sd">        Set to :code:`True` to escape any markdown formatting in the text.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The escaped text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">mass_mentions</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;@everyone&quot;</span><span class="p">,</span> <span class="s2">&quot;@</span><span class="se">\u200b</span><span class="s2">everyone&quot;</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;@here&quot;</span><span class="p">,</span> <span class="s2">&quot;@</span><span class="se">\u200b</span><span class="s2">here&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">formatting</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">escape_markdown</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">text</span></div>
+
+
+
+<div class="viewcode-block" id="ansify">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.ansify">[docs]</a>
+<span class="k">def</span> <span class="nf">ansify</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">suppress_error</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts the given text with the language set to ANSI.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text : str</span>
+<span class="sd">        The text to be converted.</span>
+<span class="sd">    suppress_error : `bool`, optional</span>
+<span class="sd">        Set to :code:`False` to raise an error if the text is not valid ANSI.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The converted text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">console</span> <span class="o">=</span> <span class="n">Console</span><span class="p">(</span><span class="n">color_system</span><span class="o">=</span><span class="s2">&quot;standard&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">console</span><span class="o">.</span><span class="n">capture</span><span class="p">()</span> <span class="k">as</span> <span class="n">captured</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">MarkupError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">suppress_error</span><span class="p">:</span>
+                <span class="n">console</span><span class="o">.</span><span class="n">out</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">console</span><span class="o">.</span><span class="n">out</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">captured</span><span class="o">.</span><span class="n">get</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="humanize_list">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.humanize_list">[docs]</a>
+<span class="k">def</span> <span class="nf">humanize_list</span><span class="p">(</span>
+    <span class="n">items</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="o">*</span><span class="p">,</span> <span class="n">locale</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;standard&quot;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get comma-separated list, with the last element joined with *and*.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    items : Sequence[str]</span>
+<span class="sd">        The items of the list to join together.</span>
+<span class="sd">    locale : Optional[str]</span>
+<span class="sd">        The locale to convert, if not specified it defaults to the bot&#39;s locale.</span>
+<span class="sd">    style : str</span>
+<span class="sd">        The style to format the list with.</span>
+
+<span class="sd">        Note: Not all styles are necessarily available in all locales,</span>
+<span class="sd">        see documentation of `babel.lists.format_list` for more details.</span>
+
+<span class="sd">        standard</span>
+<span class="sd">            A typical &#39;and&#39; list for arbitrary placeholders.</span>
+<span class="sd">            eg. &quot;January, February, and March&quot;</span>
+<span class="sd">        standard-short</span>
+<span class="sd">             A short version of a &#39;and&#39; list, suitable for use with short or</span>
+<span class="sd">             abbreviated placeholder values.</span>
+<span class="sd">             eg. &quot;Jan., Feb., and Mar.&quot;</span>
+<span class="sd">        or</span>
+<span class="sd">            A typical &#39;or&#39; list for arbitrary placeholders.</span>
+<span class="sd">            eg. &quot;January, February, or March&quot;</span>
+<span class="sd">        or-short</span>
+<span class="sd">            A short version of an &#39;or&#39; list.</span>
+<span class="sd">            eg. &quot;Jan., Feb., or Mar.&quot;</span>
+<span class="sd">        unit</span>
+<span class="sd">            A list suitable for wide units.</span>
+<span class="sd">            eg. &quot;3 feet, 7 inches&quot;</span>
+<span class="sd">        unit-short</span>
+<span class="sd">            A list suitable for short units</span>
+<span class="sd">            eg. &quot;3 ft, 7 in&quot;</span>
+<span class="sd">        unit-narrow</span>
+<span class="sd">            A list suitable for narrow units, where space on the screen is very limited.</span>
+<span class="sd">            eg. &quot;3′ 7″&quot;</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        The locale does not support the specified style.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    .. testsetup::</span>
+
+<span class="sd">        from starbot.core.utils.chat_formatting import humanize_list</span>
+
+<span class="sd">    .. doctest::</span>
+
+<span class="sd">        &gt;&gt;&gt; humanize_list([&#39;One&#39;, &#39;Two&#39;, &#39;Three&#39;])</span>
+<span class="sd">        &#39;One, Two, and Three&#39;</span>
+<span class="sd">        &gt;&gt;&gt; humanize_list([&#39;One&#39;])</span>
+<span class="sd">        &#39;One&#39;</span>
+<span class="sd">        &gt;&gt;&gt; humanize_list([&#39;omena&#39;, &#39;peruna&#39;, &#39;aplari&#39;], style=&#39;or&#39;, locale=&#39;fi&#39;)</span>
+<span class="sd">        &#39;omena, peruna tai aplari&#39;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">babel_list</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span> <span class="n">locale</span><span class="o">=</span><span class="n">get_babel_locale</span><span class="p">(</span><span class="n">locale</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="format_perms_list">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.format_perms_list">[docs]</a>
+<span class="k">def</span> <span class="nf">format_perms_list</span><span class="p">(</span><span class="n">perms</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Permissions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Format a list of permission names.</span>
+
+<span class="sd">    This will return a humanized list of the names of all enabled</span>
+<span class="sd">    permissions in the provided `discord.Permissions` object.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    perms : discord.Permissions</span>
+<span class="sd">        The permissions object with the requested permissions to list</span>
+<span class="sd">        enabled.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The humanized list.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">perm_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">perm</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">perms</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">perm_name</span> <span class="o">=</span> <span class="s2">&quot;`&quot;</span> <span class="o">+</span> <span class="n">perm</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;`&quot;</span>
+            <span class="n">perm_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">perm_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">humanize_list</span><span class="p">(</span><span class="n">perm_names</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Guild&quot;</span><span class="p">,</span> <span class="s2">&quot;Server&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="humanize_timedelta">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.humanize_timedelta">[docs]</a>
+<span class="k">def</span> <span class="nf">humanize_timedelta</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">seconds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SupportsInt</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get a locale aware human timedelta representation.</span>
+
+<span class="sd">    This works with either a timedelta object or a number of seconds.</span>
+
+<span class="sd">    Fractional values will be omitted, and values less than 1 second</span>
+<span class="sd">    an empty string.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timedelta: Optional[datetime.timedelta]</span>
+<span class="sd">        A timedelta object</span>
+<span class="sd">    seconds: Optional[SupportsInt]</span>
+<span class="sd">        A number of seconds</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        A locale aware representation of the timedelta or seconds.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        The function was called with neither a number of seconds nor a timedelta object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">seconds</span> <span class="k">if</span> <span class="n">seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">timedelta</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You must provide either a timedelta or a number of seconds&quot;</span><span class="p">)</span>
+
+    <span class="n">seconds</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="n">periods</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;years&quot;</span><span class="p">),</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;months&quot;</span><span class="p">),</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">30</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;day&quot;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;days&quot;</span><span class="p">),</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;hour&quot;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;hours&quot;</span><span class="p">),</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;minute&quot;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;minutes&quot;</span><span class="p">),</span> <span class="mi">60</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;second&quot;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;seconds&quot;</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="n">strings</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">period_name</span><span class="p">,</span> <span class="n">plural_period_name</span><span class="p">,</span> <span class="n">period_seconds</span> <span class="ow">in</span> <span class="n">periods</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">seconds</span> <span class="o">&gt;=</span> <span class="n">period_seconds</span><span class="p">:</span>
+            <span class="n">period_value</span><span class="p">,</span> <span class="n">seconds</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="n">period_seconds</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">period_value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">plural_period_name</span> <span class="k">if</span> <span class="n">period_value</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">period_name</span>
+            <span class="n">strings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">period_value</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="humanize_number">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.humanize_number">[docs]</a>
+<span class="k">def</span> <span class="nf">humanize_number</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="n">override_locale</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert an int or float to a str with digit separators based on bot locale.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    val : Union[int, float]</span>
+<span class="sd">        The int/float to be formatted.</span>
+<span class="sd">    override_locale: Optional[str]</span>
+<span class="sd">        A value to override bot&#39;s regional format.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    decimals.InvalidOperation</span>
+<span class="sd">        If val is greater than 10 x 10^21 for some locales, 10 x 10^24 in others.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        Locale-aware formatted number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">format_decimal</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">locale</span><span class="o">=</span><span class="n">get_babel_regional_format</span><span class="p">(</span><span class="n">override_locale</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="text_to_file">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.chat_formatting.text_to_file">[docs]</a>
+<span class="k">def</span> <span class="nf">text_to_file</span><span class="p">(</span>
+    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;file.txt&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">spoiler</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Prepares text to be sent as a file on Discord, without character limit.</span>
+
+<span class="sd">    This writes text into a bytes object that can be used for the ``file`` or ``files`` parameters</span>
+<span class="sd">    of :meth:`discord.abc.Messageable.send`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text: str</span>
+<span class="sd">        The text to put in your file.</span>
+<span class="sd">    filename: str</span>
+<span class="sd">        The name of the file sent. Defaults to ``file.txt``.</span>
+<span class="sd">    spoiler: bool</span>
+<span class="sd">        Whether the attachment is a spoiler. Defaults to ``False``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    discord.File</span>
+<span class="sd">        The file containing your text.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">discord</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">spoiler</span><span class="o">=</span><span class="n">spoiler</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

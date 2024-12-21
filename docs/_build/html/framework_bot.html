@@ -1,0 +1,1604 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bot &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command Check Decorators" href="framework_checks.html" />
+    <link rel="prev" title="Bank" href="framework_bank.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#red">Red</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#starbot.core.bot.Red"><code class="docutils literal notranslate"><span class="pre">Red</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.register_rpc_handler"><code class="docutils literal notranslate"><span class="pre">Red.register_rpc_handler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.unregister_rpc_handler"><code class="docutils literal notranslate"><span class="pre">Red.unregister_rpc_handler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.add_cog"><code class="docutils literal notranslate"><span class="pre">Red.add_cog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.add_command"><code class="docutils literal notranslate"><span class="pre">Red.add_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.add_dev_env_value"><code class="docutils literal notranslate"><span class="pre">Red.add_dev_env_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.add_permissions_hook"><code class="docutils literal notranslate"><span class="pre">Red.add_permissions_hook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.add_to_blacklist"><code class="docutils literal notranslate"><span class="pre">Red.add_to_blacklist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.add_to_whitelist"><code class="docutils literal notranslate"><span class="pre">Red.add_to_whitelist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.allowed_by_whitelist_blacklist"><code class="docutils literal notranslate"><span class="pre">Red.allowed_by_whitelist_blacklist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.before_identify_hook"><code class="docutils literal notranslate"><span class="pre">Red.before_identify_hook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.before_invoke"><code class="docutils literal notranslate"><span class="pre">Red.before_invoke()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.clear_blacklist"><code class="docutils literal notranslate"><span class="pre">Red.clear_blacklist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.clear_permission_rules"><code class="docutils literal notranslate"><span class="pre">Red.clear_permission_rules()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.clear_whitelist"><code class="docutils literal notranslate"><span class="pre">Red.clear_whitelist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.close"><code class="docutils literal notranslate"><span class="pre">Red.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.cog_disabled_in_guild"><code class="docutils literal notranslate"><span class="pre">Red.cog_disabled_in_guild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.cog_disabled_in_guild_raw"><code class="docutils literal notranslate"><span class="pre">Red.cog_disabled_in_guild_raw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.disable_app_command"><code class="docutils literal notranslate"><span class="pre">Red.disable_app_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.embed_requested"><code class="docutils literal notranslate"><span class="pre">Red.embed_requested()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.enable_app_command"><code class="docutils literal notranslate"><span class="pre">Red.enable_app_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_admin_role_ids"><code class="docutils literal notranslate"><span class="pre">Red.get_admin_role_ids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_admin_roles"><code class="docutils literal notranslate"><span class="pre">Red.get_admin_roles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_blacklist"><code class="docutils literal notranslate"><span class="pre">Red.get_blacklist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_cog"><code class="docutils literal notranslate"><span class="pre">Red.get_cog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_command"><code class="docutils literal notranslate"><span class="pre">Red.get_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_embed_colour"><code class="docutils literal notranslate"><span class="pre">Red.get_embed_colour()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_install_url"><code class="docutils literal notranslate"><span class="pre">Red.get_install_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_invite_url"><code class="docutils literal notranslate"><span class="pre">Red.get_invite_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_mod_role_ids"><code class="docutils literal notranslate"><span class="pre">Red.get_mod_role_ids()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_mod_roles"><code class="docutils literal notranslate"><span class="pre">Red.get_mod_roles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_or_fetch_member"><code class="docutils literal notranslate"><span class="pre">Red.get_or_fetch_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_or_fetch_user"><code class="docutils literal notranslate"><span class="pre">Red.get_or_fetch_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_owner_notification_destinations"><code class="docutils literal notranslate"><span class="pre">Red.get_owner_notification_destinations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_shared_api_tokens"><code class="docutils literal notranslate"><span class="pre">Red.get_shared_api_tokens()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_support_server_url"><code class="docutils literal notranslate"><span class="pre">Red.get_support_server_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_valid_prefixes"><code class="docutils literal notranslate"><span class="pre">Red.get_valid_prefixes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.get_whitelist"><code class="docutils literal notranslate"><span class="pre">Red.get_whitelist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.handle_data_deletion_request"><code class="docutils literal notranslate"><span class="pre">Red.handle_data_deletion_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.hybrid_command"><code class="docutils literal notranslate"><span class="pre">Red.hybrid_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.hybrid_group"><code class="docutils literal notranslate"><span class="pre">Red.hybrid_group()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.ignored_channel_or_guild"><code class="docutils literal notranslate"><span class="pre">Red.ignored_channel_or_guild()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.is_admin"><code class="docutils literal notranslate"><span class="pre">Red.is_admin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.is_automod_immune"><code class="docutils literal notranslate"><span class="pre">Red.is_automod_immune()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.is_invite_url_public"><code class="docutils literal notranslate"><span class="pre">Red.is_invite_url_public()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.is_mod"><code class="docutils literal notranslate"><span class="pre">Red.is_mod()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.is_owner"><code class="docutils literal notranslate"><span class="pre">Red.is_owner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.list_enabled_app_commands"><code class="docutils literal notranslate"><span class="pre">Red.list_enabled_app_commands()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.list_packages"><code class="docutils literal notranslate"><span class="pre">Red.list_packages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.load_extension"><code class="docutils literal notranslate"><span class="pre">Red.load_extension()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.message_eligible_as_command"><code class="docutils literal notranslate"><span class="pre">Red.message_eligible_as_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.process_commands"><code class="docutils literal notranslate"><span class="pre">Red.process_commands()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_before_invoke_hook"><code class="docutils literal notranslate"><span class="pre">Red.remove_before_invoke_hook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_cog"><code class="docutils literal notranslate"><span class="pre">Red.remove_cog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_command"><code class="docutils literal notranslate"><span class="pre">Red.remove_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_dev_env_value"><code class="docutils literal notranslate"><span class="pre">Red.remove_dev_env_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_from_blacklist"><code class="docutils literal notranslate"><span class="pre">Red.remove_from_blacklist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_from_whitelist"><code class="docutils literal notranslate"><span class="pre">Red.remove_from_whitelist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_permissions_hook"><code class="docutils literal notranslate"><span class="pre">Red.remove_permissions_hook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_shared_api_services"><code class="docutils literal notranslate"><span class="pre">Red.remove_shared_api_services()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.remove_shared_api_tokens"><code class="docutils literal notranslate"><span class="pre">Red.remove_shared_api_tokens()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.reset_help_formatter"><code class="docutils literal notranslate"><span class="pre">Red.reset_help_formatter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.send_filtered"><code class="docutils literal notranslate"><span class="pre">Red.send_filtered()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.send_help_for"><code class="docutils literal notranslate"><span class="pre">Red.send_help_for()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.send_interactive"><code class="docutils literal notranslate"><span class="pre">Red.send_interactive()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.send_to_owners"><code class="docutils literal notranslate"><span class="pre">Red.send_to_owners()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.set_help_formatter"><code class="docutils literal notranslate"><span class="pre">Red.set_help_formatter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.set_prefixes"><code class="docutils literal notranslate"><span class="pre">Red.set_prefixes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.set_shared_api_tokens"><code class="docutils literal notranslate"><span class="pre">Red.set_shared_api_tokens()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.setup_hook"><code class="docutils literal notranslate"><span class="pre">Red.setup_hook()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.shutdown"><code class="docutils literal notranslate"><span class="pre">Red.shutdown()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.start"><code class="docutils literal notranslate"><span class="pre">Red.start()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.uptime"><code class="docutils literal notranslate"><span class="pre">Red.uptime</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.use_buttons"><code class="docutils literal notranslate"><span class="pre">Red.use_buttons()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.verify_permissions_hooks"><code class="docutils literal notranslate"><span class="pre">Red.verify_permissions_hooks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bot.Red.wait_until_red_ready"><code class="docutils literal notranslate"><span class="pre">Red.wait_until_red_ready()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Bot</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developframework_bot.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="module-starbot.core.bot">
+<span id="bot"></span><h1>Bot<a class="headerlink" href="#module-starbot.core.bot" title="Link to this heading"></a></h1>
+<section id="red">
+<h2>Red<a class="headerlink" href="#red" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="starbot.core.bot.Red">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">starbot.core.bot.</span></span><span class="sig-name descname"><span class="pre">Red</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cli_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('/root/starbot')</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DynamicShardedBot</span></code></p>
+<p>Our subclass of discord.ext.commands.AutoShardedBot</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.register_rpc_handler">
+<span class="sig-name descname"><span class="pre">register_rpc_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#starbot.core.bot.Red.register_rpc_handler" title="Link to this definition"></a></dt>
+<dd><p>Registers a method to act as an RPC handler if the internal RPC server is active.</p>
+<p>When calling this method through the RPC server, use the naming scheme
+“cogname__methodname”.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>All parameters to RPC handler methods must be JSON serializable objects.
+The return value of handler methods must also be JSON serializable.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>RPC support is included in Red on a <a class="reference internal" href="version_guarantees.html#developer-guarantees-exclusions"><span class="std std-ref">provisional</span></a> basis.
+Backwards incompatible changes (up to and including removal of the RPC) may occur if deemed necessary.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>method</strong> (<em>coroutine</em>) – The method to register with the internal RPC server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.unregister_rpc_handler">
+<span class="sig-name descname"><span class="pre">unregister_rpc_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#starbot.core.bot.Red.unregister_rpc_handler" title="Link to this definition"></a></dt>
+<dd><p>Deregisters an RPC method handler.</p>
+<p>This will be called automatically for you on cog unload and will pass silently if the
+method is not previously registered.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>RPC support is included in Red on a <a class="reference internal" href="version_guarantees.html#developer-guarantees-exclusions"><span class="std std-ref">provisional</span></a> basis.
+Backwards incompatible changes (up to and including removal of the RPC) may occur if deemed necessary.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>method</strong> (<em>coroutine</em>) – The method to unregister from the internal RPC server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.add_cog">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">add_cog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cog</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guilds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.add_cog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.add_cog" title="Link to this definition"></a></dt>
+<dd><p></p>
+<p>Adds a “cog” to the bot.</p>
+<p>A cog is a class that has its own event listeners and commands.</p>
+<p>If the cog is a <code class="xref py py-class docutils literal notranslate"><span class="pre">app_commands.Group</span></code> then it is added to
+the bot’s <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#discord.app_commands.CommandTree" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommandTree</span></code></a> as well.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Exceptions raised inside a <a class="reference internal" href="framework_commands.html#starbot.core.commands.Cog" title="starbot.core.commands.Cog"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cog</span></code></a>’s <code class="xref py py-meth docutils literal notranslate"><span class="pre">cog_load()</span></code> method will be
+propagated to the caller.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span><code class="xref py py-exc docutils literal notranslate"><span class="pre">ClientException</span></code> is raised when a cog with the same name
+is already loaded.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span><code class="docutils literal notranslate"><span class="pre">cog</span></code> parameter is now positional-only.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span>This method is now a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine" title="(in Python v3.13)"><span class="xref std std-term">coroutine</span></a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cog</strong> (<a class="reference internal" href="framework_commands.html#starbot.core.commands.Cog" title="starbot.core.commands.Cog"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cog</span></code></a>) – The cog to register to the bot.</p></li>
+<li><p><strong>override</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – <p>If a previously loaded cog with the same name should be ejected
+instead of raising an error.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0.</span></p>
+</div>
+</p></li>
+<li><p><strong>guild</strong> (Optional[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.Snowflake" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Snowflake</span></code></a>]) – <p>If the cog is an application command group, then this would be the
+guild where the cog group would be added to. If not given then
+it becomes a global command instead.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0.</span></p>
+</div>
+</p></li>
+<li><p><strong>guilds</strong> (List[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.Snowflake" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Snowflake</span></code></a>]) – <p>If the cog is an application command group, then this would be the
+guilds where the cog group would be added to. If not given then
+it becomes a global command instead. Cannot be mixed with
+<code class="docutils literal notranslate"><span class="pre">guild</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – The cog does not inherit from <a class="reference internal" href="framework_commands.html#starbot.core.commands.Cog" title="starbot.core.commands.Cog"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cog</span></code></a>.</p></li>
+<li><p><strong>CommandError</strong> – An error happened during loading.</p></li>
+<li><p><strong>ClientException</strong> – A cog with the same name is already loaded.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.add_command">
+<span class="sig-name descname"><span class="pre">add_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.add_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.add_command" title="Link to this definition"></a></dt>
+<dd><p>Adds a <a class="reference internal" href="framework_commands.html#starbot.core.commands.Command" title="starbot.core.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a> into the internal list of commands.</p>
+<p>This is usually not called, instead the <code class="xref py py-meth docutils literal notranslate"><span class="pre">command()</span></code> or
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">group()</span></code> shortcut decorators are used instead.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 1.4: </span>Raise <code class="xref py py-exc docutils literal notranslate"><span class="pre">CommandRegistrationError</span></code> instead of generic <code class="xref py py-exc docutils literal notranslate"><span class="pre">ClientException</span></code></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span><code class="docutils literal notranslate"><span class="pre">command</span></code> parameter is now positional-only.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>command</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code>) – The command to add.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>CommandRegistrationError</strong> – If the command or its alias is already registered by different command.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the command passed is not a subclass of <a class="reference internal" href="framework_commands.html#starbot.core.commands.Command" title="starbot.core.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.add_dev_env_value">
+<span class="sig-name descname"><span class="pre">add_dev_env_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.add_dev_env_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.add_dev_env_value" title="Link to this definition"></a></dt>
+<dd><p>Add a custom variable to the dev environment (<code class="docutils literal notranslate"><span class="pre">[p]debug</span></code>, <code class="docutils literal notranslate"><span class="pre">[p]eval</span></code>, and <code class="docutils literal notranslate"><span class="pre">[p]repl</span></code> commands).
+If dev mode is disabled, nothing will happen.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">add_dev_env_value</span><span class="p">(</span><span class="s2">&quot;mycog&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">ctx</span><span class="p">:</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">bot</span><span class="o">.</span><span class="n">add_dev_env_value</span><span class="p">(</span><span class="s2">&quot;mycogdata&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">ctx</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="p">[</span><span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">cog_unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">remove_dev_env_value</span><span class="p">(</span><span class="s2">&quot;mycog&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">remove_dev_env_value</span><span class="p">(</span><span class="s2">&quot;mycogdata&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once your cog is loaded, the custom variables <code class="docutils literal notranslate"><span class="pre">mycog</span></code> and <code class="docutils literal notranslate"><span class="pre">mycogdata</span></code>
+will be included in the environment of dev commands.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of your custom variable.</p></li>
+<li><p><strong>value</strong> (<em>Callable</em><em>[</em><em>[</em><a class="reference internal" href="framework_commands.html#starbot.core.commands.Context" title="starbot.core.commands.Context"><em>commands.Context</em></a><em>]</em><em>, </em><em>Any</em><em>]</em>) – The function returning the value of the variable.
+It must take a <a class="reference internal" href="framework_commands.html#starbot.core.commands.Context" title="starbot.core.commands.Context"><code class="xref any py py-class docutils literal notranslate"><span class="pre">commands.Context</span></code></a> as its sole parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – <code class="docutils literal notranslate"><span class="pre">value</span></code> argument isn’t a callable.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – The passed callable takes no or more than one argument.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – The name of the custom variable is either reserved by a variable
+    from the default environment or already taken by some other custom variable.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.add_permissions_hook">
+<span class="sig-name descname"><span class="pre">add_permissions_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.add_permissions_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.add_permissions_hook" title="Link to this definition"></a></dt>
+<dd><p>Add a permissions hook.</p>
+<p>Permissions hooks are check predicates which are called before
+calling <a class="reference internal" href="framework_commands.html#starbot.core.commands.requires.Requires.verify" title="starbot.core.commands.requires.Requires.verify"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Requires.verify</span></code></a>, and they can optionally return an
+override: <code class="docutils literal notranslate"><span class="pre">True</span></code> to allow, <code class="docutils literal notranslate"><span class="pre">False</span></code> to deny, and <code class="docutils literal notranslate"><span class="pre">None</span></code> to
+default to normal behaviour.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>hook</strong> – A command check predicate which returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>
+or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.add_to_blacklist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">add_to_blacklist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">users_or_roles</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.add_to_blacklist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.add_to_blacklist" title="Link to this definition"></a></dt>
+<dd><p>Add users or roles to the global or local blocklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>users_or_roles</strong> (<em>Iterable</em><em>[</em><em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Role" title="(in discord.py v2.4.0)"><em>discord.Role</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em><em>]</em>) – The items to add to the blocklist.
+Roles and role IDs should only be passed when updating a local blocklist.</p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild, whose local blocklist should be modified.
+If not passed, the global blocklist will be modified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – The values passed were not of the proper type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.add_to_whitelist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">add_to_whitelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">users_or_roles</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.add_to_whitelist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.add_to_whitelist" title="Link to this definition"></a></dt>
+<dd><p>Add users or roles to the global or local allowlist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>users_or_roles</strong> (<em>Iterable</em><em>[</em><em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Role" title="(in discord.py v2.4.0)"><em>discord.Role</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em><em>]</em>) – The items to add to the allowlist.
+Roles and role IDs should only be passed when updating a local allowlist.</p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild, whose local allowlist should be modified.
+If not passed, the global allowlist will be modified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – The passed values were not of the proper type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.allowed_by_whitelist_blacklist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">allowed_by_whitelist_blacklist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">who</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">who_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.allowed_by_whitelist_blacklist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.allowed_by_whitelist_blacklist" title="Link to this definition"></a></dt>
+<dd><p>This checks if a user or member is allowed to run things,
+as considered by Red’s allowlist and blocklist.</p>
+<p>If given a user object, this function will check the global lists</p>
+<p>If given a member, this will additionally check guild lists</p>
+<p>If omitting a user or member, you must provide a value for <code class="docutils literal notranslate"><span class="pre">who_id</span></code></p>
+<p>You may also provide a value for <code class="docutils literal notranslate"><span class="pre">guild</span></code> in this case</p>
+<p>If providing a member by guild and member ids,
+you should supply <code class="docutils literal notranslate"><span class="pre">role_ids</span></code> as well</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>who</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em><em>]</em>) – The user or member object to check</p></li>
+<li><p><strong>who_id</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The id of the user or member to check
+If not providing a value for <code class="docutils literal notranslate"><span class="pre">who</span></code>, this is a required parameter.</p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – When used in conjunction with a provided value for <code class="docutils literal notranslate"><span class="pre">who_id</span></code>, checks
+the lists for the corresponding guild as well.
+This is ignored when <code class="docutils literal notranslate"><span class="pre">who</span></code> is passed.</p></li>
+<li><p><strong>role_ids</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – When used with both <code class="docutils literal notranslate"><span class="pre">who_id</span></code> and <code class="docutils literal notranslate"><span class="pre">guild</span></code>, checks the role ids provided.
+This is required for accurate checking of members in a guild if providing ids.
+This is ignored when <code class="docutils literal notranslate"><span class="pre">who</span></code> is passed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – Did not provide <code class="docutils literal notranslate"><span class="pre">who</span></code> or <code class="docutils literal notranslate"><span class="pre">who_id</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a> if user is allowed to run things, <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">False</span></code></a> otherwise</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.before_identify_hook">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">before_identify_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shard_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.before_identify_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.before_identify_hook" title="Link to this definition"></a></dt>
+<dd><p>A hook that is called before IDENTIFYing a session.
+Same as in discord.py, but also dispatches “on_red_identify” bot event.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.before_invoke">
+<span class="sig-name descname"><span class="pre">before_invoke</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.before_invoke"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.before_invoke" title="Link to this definition"></a></dt>
+<dd><p>Overridden decorator method for Red’s <code class="docutils literal notranslate"><span class="pre">before_invoke</span></code> behavior.</p>
+<p>This can safely be used purely functionally as well.</p>
+<p>3rd party cogs should remove any hooks which they register at unload
+using <a class="reference internal" href="#starbot.core.bot.Red.remove_before_invoke_hook" title="starbot.core.bot.Red.remove_before_invoke_hook"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">remove_before_invoke_hook</span></code></a></p>
+<p>Below behavior shared with discord.py:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">before_invoke</span></code> hooks are
+only called if all checks and argument parsing procedures pass
+without error. If any check or argument parsing procedures fail
+then the hooks are not called.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coro</strong> (<em>Callable</em><em>[</em><em>[</em><a class="reference internal" href="framework_commands.html#starbot.core.commands.Context" title="starbot.core.commands.Context"><em>commands.Context</em></a><em>]</em><em>, </em><em>Awaitable</em><em>[</em><em>Any</em><em>]</em><em>]</em>) – The coroutine to register as the pre-invoke hook.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – The coroutine passed is not actually a coroutine.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.clear_blacklist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">clear_blacklist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.clear_blacklist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.clear_blacklist" title="Link to this definition"></a></dt>
+<dd><p>Clears the global or local blocklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild, whose local blocklist should be cleared.
+If not passed, the global blocklist will be cleared.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.clear_permission_rules">
+<span class="sig-name descname"><span class="pre">clear_permission_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.clear_permission_rules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.clear_permission_rules" title="Link to this definition"></a></dt>
+<dd><p>Clear all permission overrides in a scope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>guild_id</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The guild ID to wipe permission overrides for. If
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, this will clear all global rules and leave all
+guild rules untouched.</p></li>
+<li><p><strong>**kwargs</strong> – Keyword arguments to be passed to each required call of
+<code class="docutils literal notranslate"><span class="pre">commands.Requires.clear_all_rules</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.clear_whitelist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">clear_whitelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.clear_whitelist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.clear_whitelist" title="Link to this definition"></a></dt>
+<dd><p>Clears the global or local allowlist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild, whose local allowlist should be cleared.
+If not passed, the global allowlist will be cleared.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.close">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.close" title="Link to this definition"></a></dt>
+<dd><p>Logs out of Discord and closes all connections.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.cog_disabled_in_guild">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">cog_disabled_in_guild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.cog_disabled_in_guild"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.cog_disabled_in_guild" title="Link to this definition"></a></dt>
+<dd><p>Check if a cog is disabled in a guild</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cog</strong> (<a class="reference internal" href="framework_commands.html#starbot.core.commands.Cog" title="starbot.core.commands.Cog"><em>commands.Cog</em></a>)</p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.cog_disabled_in_guild_raw">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">cog_disabled_in_guild_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cog_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.cog_disabled_in_guild_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.cog_disabled_in_guild_raw" title="Link to this definition"></a></dt>
+<dd><p>Check if a cog is disabled in a guild without the cog or guild object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cog_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – This should be the cog’s qualified name, not necessarily the classname</p></li>
+<li><p><strong>guild_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.disable_app_command">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">disable_app_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('chat_input',</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.disable_app_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.disable_app_command" title="Link to this definition"></a></dt>
+<dd><p>Mark an application command as being disabled.
+Disabled commands are not added to the bot’s tree, are not able to be synced, and cannot be invoked.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.embed_requested">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">embed_requested</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_permissions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.embed_requested"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.embed_requested" title="Link to this definition"></a></dt>
+<dd><p>Determine if an embed is requested for a response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>channel</strong> (Union[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.TextChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.TextChannel</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.VoiceChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.VoiceChannel</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.StageChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.StageChannel</span></code></a>, <a class="reference internal" href="framework_commands.html#starbot.core.commands.Context" title="starbot.core.commands.Context"><code class="xref any py py-class docutils literal notranslate"><span class="pre">commands.Context</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.User</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Member</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a>]) – The target messageable object to check embed settings for.</p>
+</dd>
+<dt class="field-even">Keyword Arguments<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>command</strong> (<a class="reference internal" href="framework_commands.html#starbot.core.commands.Command" title="starbot.core.commands.Command"><code class="xref any py py-class docutils literal notranslate"><span class="pre">starbot.core.commands.Command</span></code></a>, optional) – The command ran.
+This is auto-filled when <code class="docutils literal notranslate"><span class="pre">channel</span></code> is passed with command context.</p></li>
+<li><p><strong>check_permissions</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">bool</span></code></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this method will also check whether the bot can send embeds
+in the given channel and if it can’t, it will return <code class="docutils literal notranslate"><span class="pre">False</span></code> regardless of
+the bot’s embed settings.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">True</span></code> if an embed is requested</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – When the passed channel is of type <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.GroupChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.GroupChannel</span></code></a>,
+    <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.DMChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.DMChannel</span></code></a>, or <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessageable" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.enable_app_command">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">enable_app_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('chat_input',</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.enable_app_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.enable_app_command" title="Link to this definition"></a></dt>
+<dd><p>Mark an application command as being enabled.
+Enabled commands are able to be added to the bot’s tree, are able to be synced, and can be invoked.
+:raises CommandLimitReached: Raised when attempting to enable a command that would exceed the command limit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_admin_role_ids">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_admin_role_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_admin_role_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_admin_role_ids" title="Link to this definition"></a></dt>
+<dd><p>Gets the admin role ids for a guild id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_admin_roles">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_admin_roles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_admin_roles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_admin_roles" title="Link to this definition"></a></dt>
+<dd><p>Gets the admin roles for a guild.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_blacklist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_blacklist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_blacklist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_blacklist" title="Link to this definition"></a></dt>
+<dd><p>Get the global or local blocklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild to get the local blocklist for.
+If this is not passed, the global blocklist will be returned.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The IDs of the blocked users/roles.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_cog">
+<span class="sig-name descname"><span class="pre">get_cog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_cog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_cog" title="Link to this definition"></a></dt>
+<dd><p>Gets the cog instance requested.</p>
+<p>If the cog is not found, <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned instead.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span><code class="docutils literal notranslate"><span class="pre">name</span></code> parameter is now positional-only.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The name of the cog you are requesting.
+This is equivalent to the name passed via keyword
+argument in class creation or the class name if unspecified.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The cog that was requested. If not found, returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<code class="xref py py-class docutils literal notranslate"><span class="pre">Cog</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_command">
+<span class="sig-name descname"><span class="pre">get_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_command" title="Link to this definition"></a></dt>
+<dd><p>Get a <a class="reference internal" href="framework_commands.html#starbot.core.commands.Command" title="starbot.core.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a> from the internal list
+of commands.</p>
+<p>This could also be used as a way to get aliases.</p>
+<p>The name could be fully qualified (e.g. <code class="docutils literal notranslate"><span class="pre">'foo</span> <span class="pre">bar'</span></code>) will get
+the subcommand <code class="docutils literal notranslate"><span class="pre">bar</span></code> of the group command <code class="docutils literal notranslate"><span class="pre">foo</span></code>. If a
+subcommand is not found then <code class="docutils literal notranslate"><span class="pre">None</span></code> is returned just as usual.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span><code class="docutils literal notranslate"><span class="pre">name</span></code> parameter is now positional-only.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The name of the command to get.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The command that was requested. If not found, returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_embed_colour">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_embed_colour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#starbot.core.bot.Red.get_embed_colour" title="Link to this definition"></a></dt>
+<dd><p>Get the embed color for a location. This takes into account all related settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>location</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.Messageable" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.abc.Messageable</span></code></a>) – Location to check embed color for.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Embed color for the provided location.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>discord.Color</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_install_url">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_install_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_install_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_install_url" title="Link to this definition"></a></dt>
+<dd><p>Generates the install URL for the bot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Install URL.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_invite_url">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_invite_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_invite_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_invite_url" title="Link to this definition"></a></dt>
+<dd><p>Generates the invite URL for the bot.</p>
+<p>Does not check if the invite URL is configured to be public
+with <code class="docutils literal notranslate"><span class="pre">[p]inviteset</span> <span class="pre">public</span></code>. To check if invites are public,
+use <a class="reference internal" href="#starbot.core.bot.Red.is_invite_url_public" title="starbot.core.bot.Red.is_invite_url_public"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.is_invite_url_public()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Invite URL.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_mod_role_ids">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_mod_role_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_mod_role_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_mod_role_ids" title="Link to this definition"></a></dt>
+<dd><p>Gets the mod role ids for a guild id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_mod_roles">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_mod_roles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_mod_roles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_mod_roles" title="Link to this definition"></a></dt>
+<dd><p>Gets the mod roles for a guild.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_or_fetch_member">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_or_fetch_member</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">member_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_or_fetch_member"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_or_fetch_member" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Member</span></code></a> from a guild and a member ID.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method may make an API call if the user is not found in the bot cache. For general usage, consider <code class="docutils literal notranslate"><span class="pre">discord.Guild.get_member</span></code> instead.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a>) – The guild which the member should be retrieved from.</p></li>
+<li><p><strong>member_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The ID of the member that should be retrieved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Errors</strong> – Please refer to <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild.fetch_member" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild.fetch_member</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user you requested.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)">discord.Member</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_or_fetch_user">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_or_fetch_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_or_fetch_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_or_fetch_user" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.User</span></code></a> based on their ID.
+You do not have to share any guilds
+with the user to get this information, however many operations
+do require that you do.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method may make an API call if the user is not found in the bot cache. For general usage, consider <code class="docutils literal notranslate"><span class="pre">bot.get_user</span></code> instead.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The ID of the user that should be retrieved.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Errors</strong> – Please refer to <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Client.fetch_user" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Client.fetch_user</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user you requested.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)">discord.User</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_owner_notification_destinations">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_owner_notification_destinations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_owner_notification_destinations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_owner_notification_destinations" title="Link to this definition"></a></dt>
+<dd><p>Gets the users and channels to send to.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_shared_api_tokens">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_shared_api_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_shared_api_tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_shared_api_tokens" title="Link to this definition"></a></dt>
+<dd><p>Gets the shared API tokens for a service, or all of them if no argument specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – The service to get tokens for. Leave empty to get tokens for all services.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Mapping of token names to tokens.
+This mapping exists because some services have multiple tokens.
+If <code class="docutils literal notranslate"><span class="pre">service_name</span></code> is <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a>, this method will return
+a mapping with mappings for all services.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]] or Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_support_server_url">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_support_server_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_support_server_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_support_server_url" title="Link to this definition"></a></dt>
+<dd><p>Get the support server URL for this bot.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_valid_prefixes">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_valid_prefixes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_valid_prefixes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_valid_prefixes" title="Link to this definition"></a></dt>
+<dd><p>This gets the valid prefixes for a guild.</p>
+<p>If not provided a guild (or passed None) it will give the DM prefixes.</p>
+<p>This is just a fancy wrapper around <code class="docutils literal notranslate"><span class="pre">get_prefix</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild you want prefixes for. Omit (or pass None) for the DM prefixes</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If a guild was specified, the valid prefixes in that guild.
+If a guild was not specified, the valid prefixes for DMs</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.get_whitelist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">get_whitelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.get_whitelist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.get_whitelist" title="Link to this definition"></a></dt>
+<dd><p>Get the global or local allowlist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild to get the local allowlist for.
+If this is not passed, the global allowlist will be returned.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The IDs of the allowed users/roles.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.handle_data_deletion_request">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">handle_data_deletion_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requester</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.handle_data_deletion_request"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.handle_data_deletion_request" title="Link to this definition"></a></dt>
+<dd><p>This tells each cog and extension, as well as any APIs in Red
+to go delete data</p>
+<p>Calling this should be limited to interfaces designed for it.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">starbot.core.commands.Cog.delete_data_for_user</span></code>
+for details about the parameters and intent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>requester</strong></p></li>
+<li><p><strong>user_id</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A named tuple <code class="docutils literal notranslate"><span class="pre">(failed_modules,</span> <span class="pre">failed_cogs,</span> <span class="pre">unhandled)</span></code>
+containing lists with names of failed modules, failed cogs,
+and cogs that didn’t handle data deletion request.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DataDeletionResults</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.hybrid_command">
+<span class="sig-name descname"><span class="pre">hybrid_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_app_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.hybrid_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.hybrid_command" title="Link to this definition"></a></dt>
+<dd><p>A shortcut decorator that invokes <a class="reference internal" href="framework_commands.html#starbot.core.commands.hybrid_command" title="starbot.core.commands.hybrid_command"><code class="xref py py-func docutils literal notranslate"><span class="pre">hybrid_command()</span></code></a> and adds it to
+the internal command list via <a class="reference internal" href="#starbot.core.bot.Red.add_command" title="starbot.core.bot.Red.add_command"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_command()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A decorator that converts the provided method into a Command, adds it to the bot, then returns it.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Callable[…, <code class="xref py py-class docutils literal notranslate"><span class="pre">HybridCommand</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.hybrid_group">
+<span class="sig-name descname"><span class="pre">hybrid_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_app_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.hybrid_group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.hybrid_group" title="Link to this definition"></a></dt>
+<dd><p>A shortcut decorator that invokes <a class="reference internal" href="framework_commands.html#starbot.core.commands.hybrid_group" title="starbot.core.commands.hybrid_group"><code class="xref py py-func docutils literal notranslate"><span class="pre">hybrid_group()</span></code></a> and adds it to
+the internal command list via <a class="reference internal" href="#starbot.core.bot.Red.add_command" title="starbot.core.bot.Red.add_command"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_command()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A decorator that converts the provided method into a Group, adds it to the bot, then returns it.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Callable[…, <code class="xref py py-class docutils literal notranslate"><span class="pre">HybridGroup</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.ignored_channel_or_guild">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">ignored_channel_or_guild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.ignored_channel_or_guild"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.ignored_channel_or_guild" title="Link to this definition"></a></dt>
+<dd><p>This checks if the bot is meant to be ignoring commands in a channel or guild,
+as considered by Red’s whitelist and blacklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ctx</strong> – Context object of the command which needs to be checked prior to invoking
+or a Message object which might be intended for use as a command
+or an Interaction object which might be intended for use with a command.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a> if commands are allowed in the channel, <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">False</span></code></a> otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – <code class="docutils literal notranslate"><span class="pre">ctx.channel</span></code> is a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessageable" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code></a> with a <code class="docutils literal notranslate"><span class="pre">type</span></code> other
+    than <code class="docutils literal notranslate"><span class="pre">discord.ChannelType.private</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.is_admin">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_admin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.is_admin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.is_admin" title="Link to this definition"></a></dt>
+<dd><p>Checks if a member is an admin of their guild.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.is_automod_immune">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_automod_immune</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_check</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.is_automod_immune"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.is_automod_immune" title="Link to this definition"></a></dt>
+<dd><p>Checks if the user, message, context, or role should be considered immune from automated
+moderation actions.</p>
+<p>Bot users are considered immune.</p>
+<p>This will return <code class="docutils literal notranslate"><span class="pre">False</span></code> in direct messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>to_check</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Message" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Message</span></code></a> or <a class="reference internal" href="framework_commands.html#starbot.core.commands.Context" title="starbot.core.commands.Context"><code class="xref any py py-class docutils literal notranslate"><span class="pre">commands.Context</span></code></a> or <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.abc.User</span></code></a> or <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Role" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Role</span></code></a>) – Something to check if it would be immune</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if immune</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.is_invite_url_public">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_invite_url_public</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.is_invite_url_public"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.is_invite_url_public" title="Link to this definition"></a></dt>
+<dd><p>Determines if invite URL is configured to be public with <code class="docutils literal notranslate"><span class="pre">[p]inviteset</span> <span class="pre">public</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">True</span></code> if the invite URL is public.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.is_mod">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_mod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.is_mod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.is_mod" title="Link to this definition"></a></dt>
+<dd><p>Checks if a member is a mod or admin of their guild.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.is_owner">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_owner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.is_owner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.is_owner" title="Link to this definition"></a></dt>
+<dd><p>Determines if the user should be considered a bot owner.</p>
+<p>This takes into account CLI flags and application ownership.</p>
+<p>By default,
+application team members are not considered owners,
+while individual application owners are.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>user</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>]</em>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.list_enabled_app_commands">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">list_enabled_app_commands</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.list_enabled_app_commands"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.list_enabled_app_commands" title="Link to this definition"></a></dt>
+<dd><p>List the currently enabled application command names.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.list_packages">
+<em class="property"><span class="pre">staticmethod</span> </em><span class="sig-name descname"><span class="pre">list_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.list_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.list_packages" title="Link to this definition"></a></dt>
+<dd><p>Lists packages present in the cogs folder</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.load_extension">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">load_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spec</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.load_extension"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.load_extension" title="Link to this definition"></a></dt>
+<dd><p></p>
+<p>Loads an extension.</p>
+<p>An extension is a python module that contains commands, cogs, or
+listeners.</p>
+<p>An extension must have a global function, <code class="docutils literal notranslate"><span class="pre">setup</span></code> defined as
+the entry point on what to do when the extension is loaded. This entry
+point must have a single argument, the <code class="docutils literal notranslate"><span class="pre">bot</span></code>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span>This method is now a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine" title="(in Python v3.13)"><span class="xref std std-term">coroutine</span></a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The extension name to load. It must be dot separated like
+regular Python imports if accessing a sub-module. e.g.
+<code class="docutils literal notranslate"><span class="pre">foo.test</span></code> if you want to import <code class="docutils literal notranslate"><span class="pre">foo/test.py</span></code>.</p></li>
+<li><p><strong>package</strong> (Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]) – <p>The package name to resolve relative imports with.
+This is required when loading an extension using a relative path, e.g <code class="docutils literal notranslate"><span class="pre">.foo.test</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.7.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ExtensionNotFound</strong> – The extension could not be imported.
+    This is also raised if the name of the extension could not
+    be resolved using the provided <code class="docutils literal notranslate"><span class="pre">package</span></code> parameter.</p></li>
+<li><p><strong>ExtensionAlreadyLoaded</strong> – The extension is already loaded.</p></li>
+<li><p><strong>NoEntryPointError</strong> – The extension does not have a setup function.</p></li>
+<li><p><strong>ExtensionFailed</strong> – The extension or its setup function had an execution error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.message_eligible_as_command">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">message_eligible_as_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.message_eligible_as_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.message_eligible_as_command" title="Link to this definition"></a></dt>
+<dd><p>Runs through the things which apply globally about commands
+to determine if a message may be responded to as a command.</p>
+<p>This can’t interact with permissions as permissions is hyper-local
+with respect to command objects, create command objects for this
+if that’s needed.</p>
+<p>This also does not check for prefix or command conflicts,
+as it is primarily designed for non-prefix based response handling
+via on_message_without_command</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – The message object to check</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether or not the message is eligible to be treated as a command.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.process_commands">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">process_commands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.process_commands"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.process_commands" title="Link to this definition"></a></dt>
+<dd><p>Same as base method, but dispatches an additional event for cogs
+which want to handle normal messages differently to command
+messages,  without the overhead of additional get_context calls
+per cog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_before_invoke_hook">
+<span class="sig-name descname"><span class="pre">remove_before_invoke_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coro</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_before_invoke_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_before_invoke_hook" title="Link to this definition"></a></dt>
+<dd><p>Functional method to remove a <a class="reference internal" href="#starbot.core.bot.Red.before_invoke" title="starbot.core.bot.Red.before_invoke"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">before_invoke</span></code></a> hook.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_cog">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">remove_cog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cogname</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guilds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_cog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_cog" title="Link to this definition"></a></dt>
+<dd><p></p>
+<p>Removes a cog from the bot and returns it.</p>
+<p>All registered commands and event listeners that the
+cog has registered will be removed as well.</p>
+<p>If no cog is found then this method has no effect.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span><code class="docutils literal notranslate"><span class="pre">name</span></code> parameter is now positional-only.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span>This method is now a <a class="reference external" href="https://docs.python.org/3/glossary.html#term-coroutine" title="(in Python v3.13)"><span class="xref std std-term">coroutine</span></a>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The name of the cog to remove.</p></li>
+<li><p><strong>guild</strong> (Optional[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.Snowflake" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Snowflake</span></code></a>]) – <p>If the cog is an application command group, then this would be the
+guild where the cog group would be removed from. If not given then
+a global command is removed instead instead.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0.</span></p>
+</div>
+</p></li>
+<li><p><strong>guilds</strong> (List[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.Snowflake" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Snowflake</span></code></a>]) – <p>If the cog is an application command group, then this would be the
+guilds where the cog group would be removed from. If not given then
+a global command is removed instead instead. Cannot be mixed with
+<code class="docutils literal notranslate"><span class="pre">guild</span></code>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0.</span></p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The cog that was removed. <code class="docutils literal notranslate"><span class="pre">None</span></code> if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="framework_commands.html#starbot.core.commands.Cog" title="starbot.core.commands.Cog"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cog</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_command">
+<span class="sig-name descname"><span class="pre">remove_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_command" title="Link to this definition"></a></dt>
+<dd><p>Remove a <a class="reference internal" href="framework_commands.html#starbot.core.commands.Command" title="starbot.core.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a> from the internal list
+of commands.</p>
+<p>This could also be used as a way to remove aliases.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span><code class="docutils literal notranslate"><span class="pre">name</span></code> parameter is now positional-only.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The name of the command to remove.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The command that was removed. If the name is not valid then
+<code class="docutils literal notranslate"><span class="pre">None</span></code> is returned instead.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="framework_commands.html#starbot.core.commands.Command" title="starbot.core.commands.Command"><code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_dev_env_value">
+<span class="sig-name descname"><span class="pre">remove_dev_env_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_dev_env_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_dev_env_value" title="Link to this definition"></a></dt>
+<dd><p>Remove a custom variable from the dev environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the custom variable.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#KeyError" title="(in Python v3.13)"><strong>KeyError</strong></a> – The custom variable was never set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_from_blacklist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">remove_from_blacklist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">users_or_roles</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_from_blacklist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_from_blacklist" title="Link to this definition"></a></dt>
+<dd><p>Remove users or roles from the global or local blocklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>users_or_roles</strong> (<em>Iterable</em><em>[</em><em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Role" title="(in discord.py v2.4.0)"><em>discord.Role</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em><em>]</em>) – The items to remove from the blocklist.
+Roles and role IDs should only be passed when updating a local blocklist.</p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild, whose local blocklist should be modified.
+If not passed, the global blocklist will be modified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – The values passed were not of the proper type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_from_whitelist">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">remove_from_whitelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">users_or_roles</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_from_whitelist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_from_whitelist" title="Link to this definition"></a></dt>
+<dd><p>Remove users or roles from the global or local allowlist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>users_or_roles</strong> (<em>Iterable</em><em>[</em><em>Union</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Role" title="(in discord.py v2.4.0)"><em>discord.Role</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em><em>]</em>) – The items to remove from the allowlist.
+Roles and role IDs should only be passed when updating a local allowlist.</p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild, whose local allowlist should be modified.
+If not passed, the global allowlist will be modified.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – The passed values were not of the proper type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_permissions_hook">
+<span class="sig-name descname"><span class="pre">remove_permissions_hook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hook</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_permissions_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_permissions_hook" title="Link to this definition"></a></dt>
+<dd><p>Remove a permissions hook.</p>
+<p>Parameters are the same as those in <a class="reference internal" href="#starbot.core.bot.Red.add_permissions_hook" title="starbot.core.bot.Red.add_permissions_hook"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">add_permissions_hook</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the permissions hook has not been added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_shared_api_services">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">remove_shared_api_services</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">service_names</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_shared_api_services"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_shared_api_services" title="Link to this definition"></a></dt>
+<dd><p>Removes shared API services, as well as keys and tokens associated with them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>*service_names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The services to remove.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Removing the youtube service</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">remove_shared_api_services</span><span class="p">(</span><span class="s2">&quot;youtube&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.remove_shared_api_tokens">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">remove_shared_api_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">token_names</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.remove_shared_api_tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.remove_shared_api_tokens" title="Link to this definition"></a></dt>
+<dd><p>Removes shared API tokens</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The service to remove tokens for</p></li>
+<li><p><strong>*token_names</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of each token to be removed</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Removing the api_key for youtube</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">remove_shared_api_tokens</span><span class="p">(</span><span class="s2">&quot;youtube&quot;</span><span class="p">,</span> <span class="s2">&quot;api_key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.reset_help_formatter">
+<span class="sig-name descname"><span class="pre">reset_help_formatter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.reset_help_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.reset_help_formatter" title="Link to this definition"></a></dt>
+<dd><p>Resets Red’s help formatter.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method is <a class="reference internal" href="version_guarantees.html#developer-guarantees-exclusions"><span class="std std-ref">provisional</span></a>.</p>
+</div>
+<p>This exists for use in <code class="docutils literal notranslate"><span class="pre">cog_unload</span></code> for cogs which replace the formatter
+as well as for a rescue command in core_commands.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.send_filtered">
+<em class="property"><span class="pre">staticmethod</span> <span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">send_filtered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_mass_mentions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_invite_links</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_all_links</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.send_filtered"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.send_filtered" title="Link to this definition"></a></dt>
+<dd><p>This is a convenience wrapper around</p>
+<p>discord.abc.Messageable.send</p>
+<p>It takes the destination you’d like to send to, which filters to apply
+(defaults on mass mentions, and invite links) and any other parameters
+normally accepted by destination.send</p>
+<p>This should realistically only be used for responding using user provided
+input. (unfortunately, including usernames)
+Manually crafted messages which don’t take any user input have no need of this</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The message that was sent.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Message" title="(in discord.py v2.4.0)">discord.Message</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.send_help_for">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">send_help_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help_for</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_help_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.send_help_for"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.send_help_for" title="Link to this definition"></a></dt>
+<dd><p>Invokes Red’s helpformatter for a given context and object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.send_interactive">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">send_interactive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">messages</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_lang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">join_character</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.send_interactive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.send_interactive" title="Link to this definition"></a></dt>
+<dd><p>Send multiple messages interactively.</p>
+<p>The user will be prompted for whether or not they would like to view
+the next message, one at a time. They will also be notified of how
+many messages are remaining on each prompt.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.Messageable" title="(in discord.py v2.4.0)"><em>discord.abc.Messageable</em></a>) – The channel to send the messages to.</p></li>
+<li><p><strong>messages</strong> (<a class="reference external" href="https://docs.python.org/3/glossary.html#term-iterable" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">iterable</span></code></a> of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">str</span></code></a>) – The messages to send.</p></li>
+<li><p><strong>user</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a>) – The user that can respond to the prompt.
+When this is <code class="docutils literal notranslate"><span class="pre">None</span></code>, any user can respond.</p></li>
+<li><p><strong>box_lang</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – If specified, each message will be contained within a code block of
+this language.</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – How long the user has to respond to the prompt before it times out.
+After timing out, the bot deletes its prompt message.</p></li>
+<li><p><strong>join_character</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The character used to join all the messages when the file output
+is selected.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of sent messages.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Message" title="(in discord.py v2.4.0)">discord.Message</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.send_to_owners">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">send_to_owners</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.send_to_owners"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.send_to_owners" title="Link to this definition"></a></dt>
+<dd><p>This sends something to all owners and their configured extra destinations.</p>
+<p>This takes the same arguments as discord.abc.Messageable.send</p>
+<p>This logs failing sends</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.set_help_formatter">
+<span class="sig-name descname"><span class="pre">set_help_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatter</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.set_help_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.set_help_formatter" title="Link to this definition"></a></dt>
+<dd><p>Set’s starbot’s help formatter.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method is <a class="reference internal" href="version_guarantees.html#developer-guarantees-exclusions"><span class="std std-ref">provisional</span></a>.</p>
+</div>
+<p>The formatter must implement all methods in
+<code class="docutils literal notranslate"><span class="pre">commands.help.HelpFormatterABC</span></code></p>
+<p>Cogs which set a help formatter should inform users of this.
+Users should not use multiple cogs which set a help formatter.</p>
+<p>This should specifically be an instance of a formatter.
+This allows cogs to pass a config object or similar to the
+formatter prior to the bot using it.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">commands.help.HelpFormatterABC</span></code> for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the default formatter has already been replaced</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If given an invalid formatter</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.set_prefixes">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">set_prefixes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefixes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.set_prefixes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.set_prefixes" title="Link to this definition"></a></dt>
+<dd><p>Set global/server prefixes.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">guild</span></code> is not provided (or None is passed), this will set the global prefixes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefixes</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – The prefixes you want to set. Passing empty list will reset prefixes for the <code class="docutils literal notranslate"><span class="pre">guild</span></code></p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – The guild you want to set the prefixes for. Omit (or pass None) to set the global prefixes</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">prefixes</span></code> is not a list of strings</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If empty list is passed to <code class="docutils literal notranslate"><span class="pre">prefixes</span></code> when setting global prefixes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.set_shared_api_tokens">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">set_shared_api_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service_name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">tokens</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.set_shared_api_tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.set_shared_api_tokens" title="Link to this definition"></a></dt>
+<dd><p>Sets shared API tokens for a service</p>
+<p>In most cases, this should not be used. Users should instead be using the
+<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">api</span></code> command</p>
+<p>This will not clear existing values not specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The service to set tokens for</p></li>
+<li><p><strong>**tokens</strong> – token_name -&gt; token</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Setting the api_key for youtube from a value in a variable <code class="docutils literal notranslate"><span class="pre">my_key</span></code></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">set_shared_api_tokens</span><span class="p">(</span><span class="s2">&quot;youtube&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">my_key</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.setup_hook">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">setup_hook</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.setup_hook"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.setup_hook" title="Link to this definition"></a></dt>
+<dd><p></p>
+<p>A coroutine to be called to setup the bot, by default this is blank.</p>
+<p>To perform asynchronous setup after the bot is logged in but before
+it has connected to the Websocket, overwrite this coroutine.</p>
+<p>This is only called once, in <code class="xref py py-meth docutils literal notranslate"><span class="pre">login()</span></code>, and will be called before
+any events are dispatched, making it a better solution than doing such
+setup in the <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.on_ready" title="(in discord.py v2.4.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">on_ready()</span></code></a> event.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since this is called <em>before</em> the websocket connection is made therefore
+anything that waits for the websocket will deadlock, this includes things
+like <code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_for()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">wait_until_ready()</span></code>.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.shutdown">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.shutdown"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.shutdown" title="Link to this definition"></a></dt>
+<dd><p>Gracefully quit Red.</p>
+<p>The program will exit with code <code class="code docutils literal notranslate"><span class="pre">0</span></code> by default.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>restart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If <code class="code docutils literal notranslate"><span class="pre">True</span></code>, the program will exit with code <code class="code docutils literal notranslate"><span class="pre">26</span></code>. If the
+launcher sees this, it will attempt to restart the bot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.start">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.start" title="Link to this definition"></a></dt>
+<dd><p></p>
+<p>A shorthand coroutine for <code class="xref py py-meth docutils literal notranslate"><span class="pre">login()</span></code> + <code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The authentication token. Do not prefix this token with
+anything as the library will do it for you.</p></li>
+<li><p><strong>reconnect</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If we should attempt reconnecting, either due to internet
+failure or a specific failure on Discord’s part. Certain
+disconnects that lead to bad state will not be handled (such as
+invalid sharding payloads or bad tokens).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – An unexpected keyword argument was received.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.uptime">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">uptime</span></span><a class="headerlink" href="#starbot.core.bot.Red.uptime" title="Link to this definition"></a></dt>
+<dd><p>Allow access to the value, but we don’t want cog creators setting it</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.use_buttons">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">use_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.use_buttons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.use_buttons" title="Link to this definition"></a></dt>
+<dd><p>Determines whether the bot owner has enabled use of buttons instead of
+reactions for basic menus.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.verify_permissions_hooks">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">verify_permissions_hooks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.verify_permissions_hooks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.verify_permissions_hooks" title="Link to this definition"></a></dt>
+<dd><p>Run permissions hooks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ctx</strong> (<a class="reference internal" href="framework_commands.html#starbot.core.commands.Context" title="starbot.core.commands.Context"><em>commands.Context</em></a>) – The context for the command being invoked.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">False</span></code> if any hooks returned <code class="docutils literal notranslate"><span class="pre">False</span></code>, <code class="docutils literal notranslate"><span class="pre">True</span></code> if any
+hooks return <code class="docutils literal notranslate"><span class="pre">True</span></code> and none returned <code class="docutils literal notranslate"><span class="pre">False</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code>
+otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.bot.Red.wait_until_red_ready">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">wait_until_red_ready</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bot.html#Red.wait_until_red_ready"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bot.Red.wait_until_red_ready" title="Link to this definition"></a></dt>
+<dd><p>Wait until our post connection startup is done.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="framework_bank.html" class="btn btn-neutral float-left" title="Bank" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="framework_checks.html" class="btn btn-neutral float-right" title="Command Check Decorators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

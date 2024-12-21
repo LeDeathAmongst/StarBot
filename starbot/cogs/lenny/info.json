@@ -1,0 +1,20 @@
+{
+    "author": [
+        "Star"
+    ],
+    "install_msg": "\u156e\u229c\u1d25\u229c\u156d",
+    "name": "Lenny",
+    "short": "( \u0361\u00b0 \u035c\u0296 \u0361\u00b0)",
+    "description": "\u4e41(-\u30ed-)\u310f",
+    "requirements": [],
+    "tags": [
+        "lenny",
+        "emoji",
+        "donger",
+        "kaomoji",
+        "fun"
+    ],
+    "hidden": false,
+    "disabled": false,
+    "min_bot_version": "3.5.0"
+}

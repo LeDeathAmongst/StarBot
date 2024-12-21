@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: karlo-cogs\n"
+"POT-Creation-Date: 2023-02-17 14:49+0000\n"
+"PO-Revision-Date: 2024-09-08 17:21\n"
+"Last-Translator: \n"
+"Language-Team: Croatian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: karlo-cogs\n"
+"X-Crowdin-Project-ID: 523580\n"
+"X-Crowdin-Language: hr\n"
+"X-Crowdin-File: /autoplay/locales/messages.pot\n"
+"X-Crowdin-File-ID: 37\n"
+"Language: hr_HR\n"
+
+#: autoplay/autoplay.py:19
+#, docstring
+msgid "Automatically play music that a guild member is listening to on Spotify."
+msgstr "Automatski reproduciraj glazbu koju neki član guilde sluša na Spotifyu."
+
+#: autoplay/autoplay.py:27
+msgid "Start AutoPlay"
+msgstr "Pokreni AutoPlay"
+
+#: autoplay/autoplay.py:51
+msgid "I'll no longer autoplay."
+msgstr "Više neću automatski reproducirati."
+
+#: autoplay/autoplay.py:59
+msgid "I'll now play whatever {member} is listening to."
+msgstr "Sada ću puštat što god {member} sluša."
+
+#: autoplay/autoplay.py:76
+msgid "This can only be used in a guild."
+msgstr "Ovo se može koristiti samo u guildu."
+
+#: autoplay/autoplay.py:84
+msgid "I'll now play whatever {member} is listening to.\n"
+"To stop autoplay, use a player command like `stop`"
+msgstr "Sada ću pustiti što god {member} sluša.\n"
+"Za zaustavljanje automatske reprodukcije upotrijebite naredbu playera poput `stop`"
+

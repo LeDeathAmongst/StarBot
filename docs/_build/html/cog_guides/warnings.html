@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warnings &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Red and End User Data" href="../red_core_data_statement.html" />
+    <link rel="prev" title="Trivia" href="trivia.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Warnings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#actionlist">actionlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mywarnings">mywarnings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reasonlist">reasonlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unwarn">unwarn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#warn">warn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#warnaction">warnaction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#warnaction-add">warnaction add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warnaction-delete">warnaction delete</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#warnings-command-warnings">warnings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#warningset">warningset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#warningset-allowcustomreasons">warningset allowcustomreasons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warningset-senddm">warningset senddm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warningset-showmoderator">warningset showmoderator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warningset-usewarnchannel">warningset usewarnchannel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warningset-warnchannel">warningset warnchannel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#warnreason">warnreason</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#warnreason-create">warnreason create</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warnreason-delete">warnreason delete</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Warnings</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/warnings.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="warnings">
+<span id="id1"></span><h1>Warnings<a class="headerlink" href="#warnings" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the warnings cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">warnings</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="warnings-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Warn misbehaving users and take automated actions.</p>
+</section>
+<section id="commands">
+<span id="warnings-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<section id="actionlist">
+<span id="warnings-command-actionlist"></span><h3>actionlist<a class="headerlink" href="#actionlist" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]actionlist
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>List all configured automated actions for Warnings.</p>
+</section>
+<section id="mywarnings">
+<span id="warnings-command-mywarnings"></span><h3>mywarnings<a class="headerlink" href="#mywarnings" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]mywarnings
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>List warnings for yourself.</p>
+</section>
+<section id="reasonlist">
+<span id="warnings-command-reasonlist"></span><h3>reasonlist<a class="headerlink" href="#reasonlist" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]reasonlist
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>List all configured reasons for Warnings.</p>
+</section>
+<section id="unwarn">
+<span id="warnings-command-unwarn"></span><h3>unwarn<a class="headerlink" href="#unwarn" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]unwarn &lt;member&gt; &lt;warn_id&gt; [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Remove a warning from a member.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to remove the warning from. You can either mention the member, provide their ID, their exact
+name with the tag or not, or their nickname enclosed in quotes if there are spaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;warn_id&gt;</span></code>: The warning ID to remove from the member.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason for unwarning this member.</p></li>
+</ul>
+</section>
+<section id="warn">
+<span id="warnings-command-warn"></span><h3>warn<a class="headerlink" href="#warn" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warn &lt;member&gt; [points=1] &lt;reason&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Warn the user for the specified reason.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to warn. You can either mention the member, provide their ID, their exact
+name with the tag or not, or their nickname enclosed in quotes if there are spaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[points]</span></code>: The number of points the warning should be for. If no number is supplied, 1 point will be given. Pre-set warnings disregard this.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;reason&gt;</span></code>: The reason for the warning. This can be a registered reason, or a custom reason if <code class="docutils literal notranslate"><span class="pre">[p]warningset</span> <span class="pre">allowcustomreasons</span></code> is set.</p></li>
+</ul>
+</section>
+<section id="warnaction">
+<span id="warnings-command-warnaction"></span><h3>warnaction<a class="headerlink" href="#warnaction" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warnaction
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Manage automated actions for Warnings.</p>
+<p>Actions are essentially command macros. Any command can be run
+when the action is initially triggered, and/or when the action
+is lifted.</p>
+<p>Actions must be given a name and a points threshold. When a
+user is warned enough so that their points go over this
+threshold, the action will be executed.</p>
+<section id="warnaction-add">
+<span id="warnings-command-warnaction-add"></span><h4>warnaction add<a class="headerlink" href="#warnaction-add" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warnaction add &lt;name&gt; &lt;points&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Create an automated action.</p>
+<p>Duplicate action names are not allowed.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code>: The name of the action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;points&gt;</span></code>: The number of points for this action.</p></li>
+</ul>
+</section>
+<section id="warnaction-delete">
+<span id="warnings-command-warnaction-delete"></span><h4>warnaction delete<a class="headerlink" href="#warnaction-delete" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warnaction delete &lt;action_name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Delete the action with the specified name.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;action_name&gt;</span></code>: The name of the action to delete.</p></li>
+</ul>
+</section>
+</section>
+<section id="warnings-command-warnings">
+<span id="id2"></span><h3>warnings<a class="headerlink" href="#warnings-command-warnings" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warnings &lt;member&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>List the warnings for the specified member.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to get the warnings for. You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+</ul>
+</section>
+<section id="warningset">
+<span id="warnings-command-warningset"></span><h3>warningset<a class="headerlink" href="#warningset" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warningset
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Manage settings for Warnings.</p>
+<section id="warningset-allowcustomreasons">
+<span id="warnings-command-warningset-allowcustomreasons"></span><h4>warningset allowcustomreasons<a class="headerlink" href="#warningset-allowcustomreasons" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warningset allowcustomreasons &lt;true_or_false&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Enable or disable custom reasons for a warning.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;true_or_false&gt;</span></code>: You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="warningset-senddm">
+<span id="warnings-command-warningset-senddm"></span><h4>warningset senddm<a class="headerlink" href="#warningset-senddm" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warningset senddm &lt;true_or_false&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set whether warnings should be sent to users in DMs.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;true_or_false&gt;</span></code>: You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="warningset-showmoderator">
+<span id="warnings-command-warningset-showmoderator"></span><h4>warningset showmoderator<a class="headerlink" href="#warningset-showmoderator" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warningset showmoderator &lt;true_or_false&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Decide whether the name of the moderator warning a user should be included in the DM to that user.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;true_or_false&gt;</span></code>: You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="warningset-usewarnchannel">
+<span id="warnings-command-warningset-usewarnchannel"></span><h4>warningset usewarnchannel<a class="headerlink" href="#warningset-usewarnchannel" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warningset usewarnchannel &lt;true_or_false&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set if warnings should be sent to a channel set with <code class="docutils literal notranslate"><span class="pre">[p]warningset</span> <span class="pre">warnchannel</span></code>.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;true_or_false&gt;</span></code>: You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="warningset-warnchannel">
+<span id="warnings-command-warningset-warnchannel"></span><h4>warningset warnchannel<a class="headerlink" href="#warningset-warnchannel" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warningset warnchannel [channel]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the channel where warnings should be sent to.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[channel]</span></code>: You can either mention the channel, provide its exact name or its ID. Leave empty to use the channel <code class="docutils literal notranslate"><span class="pre">[p]warn</span></code> command was called in.</p></li>
+</ul>
+</section>
+</section>
+<section id="warnreason">
+<span id="warnings-command-warnreason"></span><h3>warnreason<a class="headerlink" href="#warnreason" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warnreason
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Manage warning reasons.</p>
+<p>Reasons must be given a name, description and points value. The
+name of the reason must be given when a user is warned.</p>
+<section id="warnreason-create">
+<span id="warnings-command-warnreason-create"></span><h4>warnreason create<a class="headerlink" href="#warnreason-create" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warnreason create &lt;name&gt; &lt;points&gt; &lt;description&gt;
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Alias: <code class="docutils literal notranslate"><span class="pre">warnreason</span> <span class="pre">add</span></code></p>
+</div>
+<p><strong>Description</strong></p>
+<p>Create a warning reason.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code>: The name for the new reason.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;points&gt;</span></code>: The number of points with the new reason.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;description&gt;</span></code>: The description of the new warn reason.</p></li>
+</ul>
+</section>
+<section id="warnreason-delete">
+<span id="warnings-command-warnreason-delete"></span><h4>warnreason delete<a class="headerlink" href="#warnreason-delete" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]warnreason delete &lt;reason_name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Delete a warning reason.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;reason_name&gt;</span></code>: The name of the reason to delete.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="trivia.html" class="btn btn-neutral float-left" title="Trivia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../red_core_data_statement.html" class="btn btn-neutral float-right" title="Red and End User Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

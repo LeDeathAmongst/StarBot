@@ -1,0 +1,289 @@
+# Bulgarian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:00+0100\n"
+"PO-Revision-Date: 2024-10-14 04:00+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bg\n"
+"Language-Team: bg <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: guildmanager.py:41
+msgid "Whitelisted Guilds"
+msgstr "Гилдии в белия списък"
+msgstr ""
+
+#: guildmanager.py:64
+msgid "The following guilds have been whitelisted: {}"
+msgstr "Следните гилдии са включени в белия списък: {}"
+msgstr ""
+
+#: guildmanager.py:68
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already whitelisted: {}"
+msgstr ""
+
+#: guildmanager.py:87
+msgid "The following guilds have been removed from whitelist: {}"
+msgstr "Следните гилдии са премахнати от белия списък: {}"
+msgstr ""
+
+#: guildmanager.py:92
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were in the whitelist: {}"
+msgstr ""
+
+#: guildmanager.py:101
+msgid "The whitelist has been cleared."
+msgstr "Белият списък е изчистен."
+msgstr ""
+
+#: guildmanager.py:110
+msgid "Blacklisted Guilds"
+msgstr "Гилдии в черния списък"
+msgstr ""
+
+#: guildmanager.py:133 guildmanager.py:156
+msgid "The following guilds have been blacklisted: {}"
+msgstr "Следните гилдии са в черния списък: {}"
+msgstr ""
+
+#: guildmanager.py:137 guildmanager.py:160
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already blacklisted: {}"
+msgstr ""
+
+#: guildmanager.py:169
+msgid "The blacklist has been cleared."
+msgstr "Черният списък е изчистен."
+msgstr ""
+
+#: guildmanager.py:177
+msgid "The bot is no longer serverlocked."
+msgstr "Ботът вече не е заключен на сървъра."
+msgstr ""
+
+#: guildmanager.py:179
+msgid "The bot is now serverlocked."
+msgstr "Сега ботът е заключен на сървъра."
+msgstr ""
+
+#: guildmanager.py:187
+msgid "All guilds are already chunked."
+msgstr "Всички гилдии вече са разделени на парчета."
+msgstr ""
+
+#: guildmanager.py:192
+msgid "The following guilds have been chunked: {}"
+msgstr "Следните гилдии са разделени на части: {}"
+msgstr ""
+
+#: guildmanager.py:195
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already chunked: {}"
+msgstr ""
+
+#: guildmanager.py:219
+msgid "The minimum member limit has been set to {}."
+msgstr "Ограничението за минимален член е зададено на {}."
+msgstr ""
+
+#: guildmanager.py:220
+msgid "The minimum member limit has been removed."
+msgstr "Ограничението за минимален член е премахнато."
+msgstr ""
+
+#: guildmanager.py:231
+msgid "The ratio must be between 0 and 100."
+msgstr "Съотношението трябва да бъде между 0 и 100."
+msgstr ""
+
+#: guildmanager.py:235
+msgid "The bot ratio has been set to {}%."
+msgstr "Съотношението на бота е зададено на {}%."
+msgstr ""
+
+#: guildmanager.py:236
+msgid "The bot ratio has been removed."
+msgstr "Съотношението на бота е премахнато."
+msgstr ""
+
+#: guildmanager.py:248
+msgid "Guild Manager Settings"
+msgstr "Настройки на мениджъра на гилдията"
+msgstr ""
+
+#: guildmanager.py:269 guildmanager.py:384
+msgid "No bot farms found."
+msgstr "Няма намерени ферми за ботове."
+msgstr ""
+
+#: guildmanager.py:275 guildmanager.py:303
+msgid "(Whitelisted)"
+msgstr "(в белия списък)"
+msgstr ""
+
+#: guildmanager.py:278
+msgid "Bot Ratio: {}"
+msgstr "Бот съотношение: {}"
+msgstr ""
+
+#: guildmanager.py:281
+msgid "Bot Farms ({}% Bots)"
+msgstr "Ферми за ботове ({}% ботове)"
+msgstr ""
+
+#: guildmanager.py:296 guildmanager.py:410
+msgid "No servers with less members than minimum found."
+msgstr "Няма намерени сървъри с по-малко членове от минимума."
+msgstr ""
+
+#: guildmanager.py:304 guildmanager.py:322
+msgid "Members: {}"
+msgstr "Членове: {}"
+msgstr ""
+
+#: guildmanager.py:307
+msgid "Servers With Less Than {} Members)"
+msgstr "Сървъри с по-малко от {} членове)"
+msgstr ""
+
+#: guildmanager.py:317
+msgid "No unchunked guilds found."
+msgstr "Няма открити неразделени гилдии."
+msgstr ""
+
+#: guildmanager.py:323
+msgid "Cached: {}"
+msgstr "Кеширано: {}"
+msgstr ""
+
+#: guildmanager.py:327
+msgid "Unchunked Guilds"
+msgstr "Неразделени гилдии"
+msgstr ""
+
+#: guildmanager.py:341
+msgid "Page {}/{}"
+msgstr "Страница {}/{}"
+msgstr ""
+
+#: guildmanager.py:355
+msgid "No blacklisted guilds found."
+msgstr "Няма намерени гилдии в черен списък."
+msgstr ""
+
+#: guildmanager.py:358
+msgid "Do you want me to leave {} blacklisted guilds?"
+msgstr "Искате ли да напусна {} гилдии в черен списък?"
+msgstr ""
+
+#: guildmanager.py:364
+msgid "Done. I have left {} blacklisted guilds."
+msgstr "Готово. Оставих {} гилдии в черен списък."
+msgstr ""
+
+#: guildmanager.py:368
+msgid "Ok, I won't leave any blacklisted guilds."
+msgstr "Добре, няма да оставя нито една гилдия в черния списък."
+msgstr ""
+
+#: guildmanager.py:387
+msgid "Do you want me to leave {} bot farms?"
+msgstr "Искате ли да напусна {} ферми за ботове?"
+msgstr ""
+
+#: guildmanager.py:393
+msgid "Done. I have left {} bot farms."
+msgstr "Готово. Напуснах {} ферми за ботове."
+msgstr ""
+
+#: guildmanager.py:396
+msgid "Ok, I won't leave any bot farms."
+msgstr "Добре, няма да оставя никакви ферми за ботове."
+msgstr ""
+
+#: guildmanager.py:414
+msgid "Do you want me to leave {} servers?"
+msgstr "Искате ли да напусна сървърите на {}?"
+msgstr ""
+
+#: guildmanager.py:420
+msgid "Done. I have left {} servers."
+msgstr "Готово. Напуснах {} сървъра."
+msgstr ""
+
+#: guildmanager.py:423
+msgid "Ok, I won't leave any servers."
+msgstr "Добре, няма да оставя никакви сървъри."
+msgstr ""
+
+#: guildmanager.py:454
+msgid "I'm leaving because this server is blacklisted."
+msgstr "Напускам, защото този сървър е в черния списък."
+msgstr ""
+
+#: guildmanager.py:458
+msgid "Blacklisted"
+msgstr "Черен списък"
+msgstr ""
+
+#: guildmanager.py:463
+msgid "I'm leaving because this server has less than {} members."
+msgstr "Напускам, защото този сървър има по-малко от {} членове."
+msgstr ""
+
+#: guildmanager.py:469
+msgid "Not Enough Members"
+msgstr "Няма достатъчно членове"
+msgstr ""
+
+#: guildmanager.py:476
+msgid "I'm leaving this server since it has a high bot to member ratio."
+msgstr "Напускам този сървър, тъй като има високо съотношение бот към член."
+msgstr ""
+
+#: guildmanager.py:482
+msgid "Bot Farm"
+msgstr "Ферма за ботове"
+msgstr ""
+
+#: guildmanager.py:491
+msgid "I'm leaving since I was serverlocked by my owner."
+msgstr "Напускам, тъй като сървърът ми беше заключен от моя собственик."
+msgstr ""
+
+#: guildmanager.py:495
+msgid "Server Locked"
+msgstr "Сървърът е заключен"
+msgstr ""
+
+#: guildmanager.py:526
+msgid "I have joined a server!"
+msgstr "Присъединих се към сървър!"
+msgstr ""
+
+#: guildmanager.py:538
+msgid "I have left a server!"
+msgstr "Напуснах сървър!"
+msgstr ""
+

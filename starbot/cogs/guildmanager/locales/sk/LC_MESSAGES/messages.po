@@ -1,0 +1,289 @@
+# Slovak translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:00+0100\n"
+"PO-Revision-Date: 2024-10-14 04:06+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sk\n"
+"Language-Team: sk <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: guildmanager.py:41
+msgid "Whitelisted Guilds"
+msgstr "cechy na bielej listine"
+msgstr ""
+
+#: guildmanager.py:64
+msgid "The following guilds have been whitelisted: {}"
+msgstr "Nasledujúce spolky boli pridané na bielu listinu: {}"
+msgstr ""
+
+#: guildmanager.py:68
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already whitelisted: {}"
+msgstr ""
+
+#: guildmanager.py:87
+msgid "The following guilds have been removed from whitelist: {}"
+msgstr "Nasledujúce spolky boli odstránené z bieleho zoznamu: {}"
+msgstr ""
+
+#: guildmanager.py:92
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were in the whitelist: {}"
+msgstr ""
+
+#: guildmanager.py:101
+msgid "The whitelist has been cleared."
+msgstr "Biely zoznam bol vymazaný."
+msgstr ""
+
+#: guildmanager.py:110
+msgid "Blacklisted Guilds"
+msgstr "Cechy na čiernej listine"
+msgstr ""
+
+#: guildmanager.py:133 guildmanager.py:156
+msgid "The following guilds have been blacklisted: {}"
+msgstr "Nasledujúce spolky boli na čiernej listine: {}"
+msgstr ""
+
+#: guildmanager.py:137 guildmanager.py:160
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already blacklisted: {}"
+msgstr ""
+
+#: guildmanager.py:169
+msgid "The blacklist has been cleared."
+msgstr "Čierna listina bola vymazaná."
+msgstr ""
+
+#: guildmanager.py:177
+msgid "The bot is no longer serverlocked."
+msgstr "Robot už nie je uzamknutý na serveri."
+msgstr ""
+
+#: guildmanager.py:179
+msgid "The bot is now serverlocked."
+msgstr "Robot je teraz uzamknutý na serveri."
+msgstr ""
+
+#: guildmanager.py:187
+msgid "All guilds are already chunked."
+msgstr "Všetky cechy sú už rozdelené."
+msgstr ""
+
+#: guildmanager.py:192
+msgid "The following guilds have been chunked: {}"
+msgstr "Nasledujúce spolky boli rozdelené: {}"
+msgstr ""
+
+#: guildmanager.py:195
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already chunked: {}"
+msgstr ""
+
+#: guildmanager.py:219
+msgid "The minimum member limit has been set to {}."
+msgstr "Minimálny počet členov bol nastavený na {}."
+msgstr ""
+
+#: guildmanager.py:220
+msgid "The minimum member limit has been removed."
+msgstr "Minimálny počet členov bol odstránený."
+msgstr ""
+
+#: guildmanager.py:231
+msgid "The ratio must be between 0 and 100."
+msgstr "Pomer musí byť medzi 0 a 100."
+msgstr ""
+
+#: guildmanager.py:235
+msgid "The bot ratio has been set to {}%."
+msgstr "Pomer robotov bol nastavený na {} %."
+msgstr ""
+
+#: guildmanager.py:236
+msgid "The bot ratio has been removed."
+msgstr "Pomer robotov bol odstránený."
+msgstr ""
+
+#: guildmanager.py:248
+msgid "Guild Manager Settings"
+msgstr "Nastavenia správcu cechu"
+msgstr ""
+
+#: guildmanager.py:269 guildmanager.py:384
+msgid "No bot farms found."
+msgstr "Nenašli sa žiadne farmy s robotmi."
+msgstr ""
+
+#: guildmanager.py:275 guildmanager.py:303
+msgid "(Whitelisted)"
+msgstr "(na bielej listine)"
+msgstr ""
+
+#: guildmanager.py:278
+msgid "Bot Ratio: {}"
+msgstr "Pomer robotov: {}"
+msgstr ""
+
+#: guildmanager.py:281
+msgid "Bot Farms ({}% Bots)"
+msgstr "Robotické farmy ({} % robotov)"
+msgstr ""
+
+#: guildmanager.py:296 guildmanager.py:410
+msgid "No servers with less members than minimum found."
+msgstr "Nenašli sa žiadne servery s menším počtom členov, ako je minimum."
+msgstr ""
+
+#: guildmanager.py:304 guildmanager.py:322
+msgid "Members: {}"
+msgstr "Členovia: {}"
+msgstr ""
+
+#: guildmanager.py:307
+msgid "Servers With Less Than {} Members)"
+msgstr "Servery s menej ako {} členmi)"
+msgstr ""
+
+#: guildmanager.py:317
+msgid "No unchunked guilds found."
+msgstr "Nenašli sa žiadne oddelené cechy."
+msgstr ""
+
+#: guildmanager.py:323
+msgid "Cached: {}"
+msgstr "Vo vyrovnávacej pamäti: {}"
+msgstr ""
+
+#: guildmanager.py:327
+msgid "Unchunked Guilds"
+msgstr "Unchunked Guilds"
+msgstr ""
+
+#: guildmanager.py:341
+msgid "Page {}/{}"
+msgstr "Strana {}/{}"
+msgstr ""
+
+#: guildmanager.py:355
+msgid "No blacklisted guilds found."
+msgstr "Nenašli sa žiadne cechy na čiernej listine."
+msgstr ""
+
+#: guildmanager.py:358
+msgid "Do you want me to leave {} blacklisted guilds?"
+msgstr "Chcete, aby som opustil {} cechy na čiernej listine?"
+msgstr ""
+
+#: guildmanager.py:364
+msgid "Done. I have left {} blacklisted guilds."
+msgstr "Hotovo. Opustil som {} cechov na čiernej listine."
+msgstr ""
+
+#: guildmanager.py:368
+msgid "Ok, I won't leave any blacklisted guilds."
+msgstr "Ok, neopustím žiadne cechy na čiernej listine."
+msgstr ""
+
+#: guildmanager.py:387
+msgid "Do you want me to leave {} bot farms?"
+msgstr "Chcete, aby som opustil {} farmy robotov?"
+msgstr ""
+
+#: guildmanager.py:393
+msgid "Done. I have left {} bot farms."
+msgstr "Hotovo. Opustil som {} robotických fariem."
+msgstr ""
+
+#: guildmanager.py:396
+msgid "Ok, I won't leave any bot farms."
+msgstr "Ok, neopustím žiadne farmy robotov."
+msgstr ""
+
+#: guildmanager.py:414
+msgid "Do you want me to leave {} servers?"
+msgstr "Chcete, aby som opustil {} serverov?"
+msgstr ""
+
+#: guildmanager.py:420
+msgid "Done. I have left {} servers."
+msgstr "Hotovo. Opustil som {} serverov."
+msgstr ""
+
+#: guildmanager.py:423
+msgid "Ok, I won't leave any servers."
+msgstr "Ok, neopustím žiadne servery."
+msgstr ""
+
+#: guildmanager.py:454
+msgid "I'm leaving because this server is blacklisted."
+msgstr "Odchádzam, pretože tento server je na čiernej listine."
+msgstr ""
+
+#: guildmanager.py:458
+msgid "Blacklisted"
+msgstr "Na čiernej listine"
+msgstr ""
+
+#: guildmanager.py:463
+msgid "I'm leaving because this server has less than {} members."
+msgstr "Odchádzam, pretože tento server má menej ako {} členov."
+msgstr ""
+
+#: guildmanager.py:469
+msgid "Not Enough Members"
+msgstr "Nie je dostatok členov"
+msgstr ""
+
+#: guildmanager.py:476
+msgid "I'm leaving this server since it has a high bot to member ratio."
+msgstr "Opúšťam tento server, pretože má vysoký pomer robotov k členom."
+msgstr ""
+
+#: guildmanager.py:482
+msgid "Bot Farm"
+msgstr "Bot farma"
+msgstr ""
+
+#: guildmanager.py:491
+msgid "I'm leaving since I was serverlocked by my owner."
+msgstr "Odchádzam, pretože ma môj vlastník uzamkol na serveri."
+msgstr ""
+
+#: guildmanager.py:495
+msgid "Server Locked"
+msgstr "Server uzamknutý"
+msgstr ""
+
+#: guildmanager.py:526
+msgid "I have joined a server!"
+msgstr "Pripojil som sa na server!"
+msgstr ""
+
+#: guildmanager.py:538
+msgid "I have left a server!"
+msgstr "Opustil som server!"
+msgstr ""
+

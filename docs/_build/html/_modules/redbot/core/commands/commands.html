@@ -1,0 +1,1507 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.commands.commands &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">starbot.core.commands.commands</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.commands.commands</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module for command helpers and classes.</span>
+
+<span class="sd">This module contains extended classes and functions which are intended to</span>
+<span class="sd">be used instead of those from the `discord.ext.commands` module.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">weakref</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">Awaitable</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">ClassVar</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Literal</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">TypeVar</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+    <span class="n">MutableMapping</span><span class="p">,</span>
+    <span class="n">TYPE_CHECKING</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">discord.ext.commands</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">BadArgument</span><span class="p">,</span>
+    <span class="n">CommandError</span><span class="p">,</span>
+    <span class="n">CheckFailure</span><span class="p">,</span>
+    <span class="n">DisabledCommand</span><span class="p">,</span>
+    <span class="n">command</span> <span class="k">as</span> <span class="n">dpy_command_deco</span><span class="p">,</span>
+    <span class="n">Command</span> <span class="k">as</span> <span class="n">DPYCommand</span><span class="p">,</span>
+    <span class="n">GroupCog</span> <span class="k">as</span> <span class="n">DPYGroupCog</span><span class="p">,</span>
+    <span class="n">HybridCommand</span> <span class="k">as</span> <span class="n">DPYHybridCommand</span><span class="p">,</span>
+    <span class="n">HybridGroup</span> <span class="k">as</span> <span class="n">DPYHybridGroup</span><span class="p">,</span>
+    <span class="n">Cog</span> <span class="k">as</span> <span class="n">DPYCog</span><span class="p">,</span>
+    <span class="n">CogMeta</span> <span class="k">as</span> <span class="n">DPYCogMeta</span><span class="p">,</span>
+    <span class="n">Group</span> <span class="k">as</span> <span class="n">DPYGroup</span><span class="p">,</span>
+    <span class="n">Greedy</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">.requires</span> <span class="kn">import</span> <span class="n">PermState</span><span class="p">,</span> <span class="n">PrivilegeLevel</span><span class="p">,</span> <span class="n">Requires</span><span class="p">,</span> <span class="n">PermStateAllowedStates</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">app_commands</span>
+<span class="kn">from</span> <span class="nn">..i18n</span> <span class="kn">import</span> <span class="n">Translator</span>
+
+<span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_T&quot;</span><span class="p">)</span>
+<span class="n">_CogT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_CogT&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="s2">&quot;Cog&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="c1"># circular import avoidance</span>
+    <span class="kn">from</span> <span class="nn">.context</span> <span class="kn">import</span> <span class="n">Context</span>
+    <span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">ParamSpec</span><span class="p">,</span> <span class="n">Concatenate</span>
+    <span class="kn">from</span> <span class="nn">discord.ext.commands._types</span> <span class="kn">import</span> <span class="n">ContextT</span><span class="p">,</span> <span class="n">Coro</span>
+
+    <span class="n">_P</span> <span class="o">=</span> <span class="n">ParamSpec</span><span class="p">(</span><span class="s2">&quot;_P&quot;</span><span class="p">)</span>
+
+    <span class="n">CommandCallback</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span>
+        <span class="n">Callable</span><span class="p">[</span><span class="n">Concatenate</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">ContextT</span><span class="p">,</span> <span class="n">_P</span><span class="p">],</span> <span class="n">Coro</span><span class="p">[</span><span class="n">_T</span><span class="p">]],</span>
+        <span class="n">Callable</span><span class="p">[</span><span class="n">Concatenate</span><span class="p">[</span><span class="n">ContextT</span><span class="p">,</span> <span class="n">_P</span><span class="p">],</span> <span class="n">Coro</span><span class="p">[</span><span class="n">_T</span><span class="p">]],</span>
+    <span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">_P</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_P&quot;</span><span class="p">)</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Cog&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CogMixin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CogCommandMixin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CogGroupMixin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Command&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Group&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GroupCog&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GroupMixin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;HybridCommand&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;HybridGroup&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;command&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;group&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hybrid_command&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hybrid_group&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RESERVED_COMMAND_NAMES&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RedUnhandledAPI&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1">#: The following names are reserved for various reasons</span>
+<span class="n">RESERVED_COMMAND_NAMES</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;cancel&quot;</span><span class="p">,</span>  <span class="c1"># reserved due to use in ``starbot.core.utils.MessagePredicate``</span>
+<span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s2">&quot;commands.commands&quot;</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">RedUnhandledAPI</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;An exception which can be raised to signal a lack of handling specific APIs&quot;&quot;&quot;</span>
+
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">CogCommandMixin</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A mixin for cogs and commands.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;To be defined by subclasses&quot;&quot;&quot;</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span>
+            <span class="n">decorated</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">decorated</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="p">:</span> <span class="n">Requires</span> <span class="o">=</span> <span class="n">Requires</span><span class="p">(</span>
+            <span class="n">privilege_level</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span>
+                <span class="n">decorated</span><span class="p">,</span> <span class="s2">&quot;__requires_privilege_level__&quot;</span><span class="p">,</span> <span class="n">PrivilegeLevel</span><span class="o">.</span><span class="n">NONE</span>
+            <span class="p">),</span>
+            <span class="n">user_perms</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">decorated</span><span class="p">,</span> <span class="s2">&quot;__requires_user_perms__&quot;</span><span class="p">,</span> <span class="p">{}),</span>
+            <span class="n">bot_perms</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">decorated</span><span class="p">,</span> <span class="s2">&quot;__requires_bot_perms__&quot;</span><span class="p">,</span> <span class="p">{}),</span>
+            <span class="n">checks</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">decorated</span><span class="p">,</span> <span class="s2">&quot;__requires_checks__&quot;</span><span class="p">,</span> <span class="p">[]),</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">format_text_for_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This formats text based on values in context</span>
+
+<span class="sd">        The steps are (currently, roughly) the following:</span>
+
+<span class="sd">            - substitute ``[p]`` with ``ctx.clean_prefix``</span>
+<span class="sd">            - substitute ``[botname]`` with ``ctx.me.display_name``</span>
+
+<span class="sd">        More steps may be added at a later time.</span>
+
+<span class="sd">        Cog creators should only override this if they want</span>
+<span class="sd">        help text to be modified, and may also want to</span>
+<span class="sd">        look at `format_help_for_context` and (for commands only)</span>
+<span class="sd">        ``format_shortdoc_for_context``</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx: Context</span>
+<span class="sd">        text: str</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            text which has had some portions replaced based on context</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">formatting_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\[p\]|\[botname\]&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">replacement</span><span class="p">(</span><span class="n">m</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">Match</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;[p]&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ctx</span><span class="o">.</span><span class="n">clean_prefix</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;[botname]&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="o">.</span><span class="n">display_name</span>
+            <span class="c1"># We shouldn&#39;t get here:</span>
+            <span class="k">return</span> <span class="n">s</span>
+
+        <span class="k">return</span> <span class="n">formatting_pattern</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">replacement</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">format_help_for_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This formats the help string based on values in context</span>
+
+<span class="sd">        The steps are (currently, roughly) the following:</span>
+
+<span class="sd">            - get the localized help</span>
+<span class="sd">            - substitute ``[p]`` with ``ctx.clean_prefix``</span>
+<span class="sd">            - substitute ``[botname]`` with ``ctx.me.display_name``</span>
+
+<span class="sd">        More steps may be added at a later time.</span>
+
+<span class="sd">        Cog creators may override this in their own command classes</span>
+<span class="sd">        as long as the method signature stays the same.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx: Context</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            Localized help with some formatting</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">help_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">help</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">help_str</span><span class="p">:</span>
+            <span class="c1"># Short circuit out on an empty help string</span>
+            <span class="k">return</span> <span class="n">help_str</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_text_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_str</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">allow_for</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Actively allow this command for the given model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        model_id : Union[int, str]</span>
+<span class="sd">            Must be an `int` if supplying an ID. `str` is only valid</span>
+<span class="sd">            for &quot;default&quot;.</span>
+<span class="sd">        guild_id : int</span>
+<span class="sd">            The guild ID to allow this cog or command in. For global</span>
+<span class="sd">            rules, use ``0``.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_ALLOW</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">deny_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Actively deny this command to the given model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        model_id : Union[int, str]</span>
+<span class="sd">            Must be an `int` if supplying an ID. `str` is only valid</span>
+<span class="sd">            for &quot;default&quot;.</span>
+<span class="sd">        guild_id : int</span>
+<span class="sd">            The guild ID to deny this cog or command in. For global</span>
+<span class="sd">            rules, use ``0``.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cur_rule</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">PASSIVE_ALLOW</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">CAUTIOUS_ALLOW</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_DENY</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">clear_rule_for</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PermState</span><span class="p">,</span> <span class="n">PermState</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Clear the rule which is currently set for this model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        model_id : Union[int, str]</span>
+<span class="sd">            Must be an `int` if supplying an ID. `str` is only valid</span>
+<span class="sd">            for &quot;default&quot;.</span>
+<span class="sd">        guild_id : int</span>
+<span class="sd">            The guild ID. For global rules, use ``0``.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cur_rule</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_ALLOW</span><span class="p">:</span>
+            <span class="n">new_rule</span> <span class="o">=</span> <span class="n">PermState</span><span class="o">.</span><span class="n">NORMAL</span>
+        <span class="k">elif</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_DENY</span><span class="p">:</span>
+            <span class="n">new_rule</span> <span class="o">=</span> <span class="n">PermState</span><span class="o">.</span><span class="n">NORMAL</span>
+        <span class="k">elif</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">CAUTIOUS_ALLOW</span><span class="p">:</span>
+            <span class="n">new_rule</span> <span class="o">=</span> <span class="n">PermState</span><span class="o">.</span><span class="n">PASSIVE_ALLOW</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">cur_rule</span><span class="p">,</span> <span class="n">cur_rule</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">new_rule</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">cur_rule</span><span class="p">,</span> <span class="n">new_rule</span>
+
+    <span class="k">def</span> <span class="nf">set_default_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rule</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the default rule for this cog or command.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        rule : Optional[bool]</span>
+<span class="sd">            The rule to set as default. If ``True`` for allow,</span>
+<span class="sd">            ``False`` for deny and ``None`` for normal.</span>
+<span class="sd">        guild_id : int</span>
+<span class="sd">            The guild to set the default rule in. When ``0``, this will</span>
+<span class="sd">            set the global default rule.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">rule</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">clear_rule_for</span><span class="p">(</span><span class="n">Requires</span><span class="o">.</span><span class="n">DEFAULT</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">rule</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allow_for</span><span class="p">(</span><span class="n">Requires</span><span class="o">.</span><span class="n">DEFAULT</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">rule</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">deny_to</span><span class="p">(</span><span class="n">Requires</span><span class="o">.</span><span class="n">DEFAULT</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Command">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command">[docs]</a>
+<span class="k">class</span> <span class="nc">Command</span><span class="p">(</span><span class="n">CogCommandMixin</span><span class="p">,</span> <span class="n">DPYCommand</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Command class for Red.</span>
+
+<span class="sd">    This should not be created directly, and instead via the decorator.</span>
+
+<span class="sd">    This class inherits from `discord.ext.commands.Command`. The</span>
+<span class="sd">    attributes listed below are simply additions to the ones listed</span>
+<span class="sd">    with that class.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        If you subclass this command, attributes and methods</span>
+<span class="sd">        must remain compatible.</span>
+
+<span class="sd">        None of your methods should start with ``red_`` or</span>
+<span class="sd">        be dunder names which start with red (eg. ``__red_test_thing__``)</span>
+<span class="sd">        unless to override behavior in a method designed to be overridden,</span>
+<span class="sd">        as this prefix is reserved for future methods in order to be</span>
+<span class="sd">        able to add features non-breakingly.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    checks : List[`coroutine function`]</span>
+<span class="sd">        A list of check predicates which cannot be overridden, unlike</span>
+<span class="sd">        `Requires.checks`.</span>
+<span class="sd">    translator : Translator</span>
+<span class="sd">        A translator for this command&#39;s help docstring.</span>
+<span class="sd">    ignore_optional_for_conversion : bool</span>
+<span class="sd">        A value which can be set to not have discord.py&#39;s</span>
+<span class="sd">        argument parsing behavior for ``typing.Optional``</span>
+<span class="sd">        (type used will be of the inner type instead)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ignore_optional_for_conversion</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;ignore_optional_for_conversion&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_disabled_in</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SnowflakeList</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">SnowflakeList</span><span class="p">([])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_help_override</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;help_override&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">translator</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;i18n&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">aliases</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">RESERVED_COMMAND_NAMES</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;The name `</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">` cannot be set as a command name. It is reserved for internal use.&quot;</span>
+                    <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;This command (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">qualified_name</span><span class="si">}</span><span class="s2">) has an excessively long qualified name, &quot;</span>
+                <span class="s2">&quot;and will not be added to the bot to prevent breaking tools and menus. (limit 60)&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_ensure_assignment_on_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_ensure_assignment_on_copy</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+        <span class="c1"># Red specific</span>
+        <span class="n">other</span><span class="o">.</span><span class="n">requires</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires</span>
+        <span class="n">other</span><span class="o">.</span><span class="n">ignore_optional_for_conversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore_optional_for_conversion</span>
+        <span class="k">return</span> <span class="n">other</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span>
+
+    <span class="nd">@callback</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">):</span>
+        <span class="c1"># Below should be mostly the same as discord.py</span>
+        <span class="c1">#</span>
+        <span class="c1"># Here&#39;s the list of cases where the behavior differs:</span>
+        <span class="c1">#   - `typing.Optional` behavior is changed</span>
+        <span class="c1">#      when `ignore_optional_for_conversion` option is used</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Command</span><span class="p">,</span> <span class="n">Command</span><span class="p">)</span><span class="o">.</span><span class="n">callback</span><span class="o">.</span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore_optional_for_conversion</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">_NoneType</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">origin</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">annotation</span><span class="p">,</span> <span class="s2">&quot;__origin__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">origin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">Union</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">args</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">annotation</span><span class="o">.</span><span class="n">__args__</span>
+            <span class="k">if</span> <span class="n">_NoneType</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+                <span class="n">args</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span> <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">_NoneType</span><span class="p">)</span>
+                <span class="c1"># typing.Union is automatically deduplicated and flattened</span>
+                <span class="c1"># so we don&#39;t need to anything else here</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">annotation</span><span class="o">=</span><span class="n">Union</span><span class="p">[</span><span class="n">args</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Help string for this command.</span>
+
+<span class="sd">        If the :code:`help` kwarg was passed into the decorator, it will</span>
+<span class="sd">        default to that. If not, it will attempt to translate the docstring</span>
+<span class="sd">        of the command&#39;s callback function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_help_override</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_help_override</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">translator</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">translator</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cog</span><span class="p">,</span> <span class="s2">&quot;__translator__&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">translator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">translator</span>
+        <span class="n">command_doc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="o">.</span><span class="vm">__doc__</span>
+        <span class="k">if</span> <span class="n">command_doc</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">inspect</span><span class="o">.</span><span class="n">cleandoc</span><span class="p">(</span><span class="n">translator</span><span class="p">(</span><span class="n">command_doc</span><span class="p">))</span>
+
+    <span class="nd">@help</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="c1"># We don&#39;t want our help property to be overwritten, namely by super()</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">parents</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Group&quot;</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;List[commands.Group] : Returns all parent commands of this command.</span>
+
+<span class="sd">        This is sorted by the length of :attr:`.qualified_name` from highest to lowest.</span>
+<span class="sd">        If the command has no parents, this will be an empty list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="n">cmd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">parent</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">entries</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># noinspection PyMethodOverriding</span>
+<div class="viewcode-block" id="Command.can_run">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.can_run">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">can_run</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span>
+        <span class="o">/</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">check_all_parents</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">change_permission_state</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if this command can be run in the given context.</span>
+
+<span class="sd">        This function first checks if the command can be run using</span>
+<span class="sd">        discord.py&#39;s method `discord.ext.commands.Command.can_run`,</span>
+<span class="sd">        then will return the result of `Requires.verify`.</span>
+
+<span class="sd">        Keyword Arguments</span>
+<span class="sd">        -----------------</span>
+<span class="sd">        check_all_parents : bool</span>
+<span class="sd">            If ``True``, this will check permissions for all of this</span>
+<span class="sd">            command&#39;s parents and its cog as well as the command</span>
+<span class="sd">            itself. Defaults to ``False``.</span>
+<span class="sd">        change_permission_state : bool</span>
+<span class="sd">            Whether or not the permission state should be changed as</span>
+<span class="sd">            a result of this call. For most cases this should be</span>
+<span class="sd">            ``False``. Defaults to ``False``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="k">await</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># This is so contexts invoking other commands can be checked with</span>
+        <span class="c1"># this command as well</span>
+        <span class="n">original_command</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">command</span>
+        <span class="n">original_state</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">permission_state</span>
+        <span class="n">ctx</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="bp">self</span>
+
+        <span class="k">if</span> <span class="n">check_all_parents</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="c1"># Since we&#39;re starting from the beginning, we should reset the state to normal</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="n">permission_state</span> <span class="o">=</span> <span class="n">PermState</span><span class="o">.</span><span class="n">NORMAL</span>
+            <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parents</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">parent</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">change_permission_state</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">CommandError</span><span class="p">:</span>
+                    <span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
+
+                <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">cog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># For top-level commands, we need to check the cog&#39;s requires too</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">cog</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ret</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">original_command</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">change_permission_state</span><span class="p">:</span>
+                <span class="n">ctx</span><span class="o">.</span><span class="n">permission_state</span> <span class="o">=</span> <span class="n">original_state</span></div>
+
+
+<div class="viewcode-block" id="Command.is_enabled">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.is_enabled">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Snowflake</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if the command is enabled globally or in a guild.</span>
+
+<span class="sd">        When guild is provided, this method checks whether</span>
+<span class="sd">        the command is enabled both globally and in the guild.</span>
+
+<span class="sd">        This is generally set by the settings managed with</span>
+<span class="sd">        the ``[p]command enable/disable global/server`` commands.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild : discord.abc.Snowflake, optional</span>
+<span class="sd">            The guild to check that the command is enabled in.</span>
+<span class="sd">            If this is ``None``, this will check whether</span>
+<span class="sd">            the command is enabled globally.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            ``True`` if the command is enabled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_disabled_in</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">prepare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
+        <span class="n">ctx</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="bp">self</span>
+
+        <span class="n">cmd_enabled</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cmd_enabled</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">DisabledCommand</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> command is disabled&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">change_permission_state</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">CheckFailure</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The check functions for command </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">qualified_name</span><span class="si">}</span><span class="s2"> failed.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_concurrency</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_concurrency</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cooldown_after_parsing</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_arguments</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_prepare_cooldowns</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_prepare_cooldowns</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_arguments</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">call_before_hooks</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_concurrency</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_concurrency</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+<div class="viewcode-block" id="Command.can_see">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.can_see">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">can_see</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if this command is visible in the given context.</span>
+
+<span class="sd">        In short, this will verify whether the user can run the</span>
+<span class="sd">        command, and also whether the command is hidden or not.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : `Context`</span>
+<span class="sd">            The invocation context to check with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            ``True`` if this command is visible in the given context.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">cmd</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">parents</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">cmd</span><span class="o">.</span><span class="n">hidden</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">can_run</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span>
+                    <span class="n">ctx</span><span class="p">,</span> <span class="n">check_all_parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">change_permission_state</span><span class="o">=</span><span class="kc">False</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">CheckFailure</span><span class="p">,</span> <span class="n">DisabledCommand</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">can_run</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Command.disable_in">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.disable_in">[docs]</a>
+    <span class="k">def</span> <span class="nf">disable_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Disable this command in the given guild.</span>
+
+<span class="sd">        This is generally called by the settings managed with</span>
+<span class="sd">        the ``[p]command disable global/server`` commands.</span>
+<span class="sd">        Any changes made outside of that will not persist after cog</span>
+<span class="sd">        reload and may also be affected when either of those commands</span>
+<span class="sd">        is called on this command. It is not recommended to rely on</span>
+<span class="sd">        this method, if you want a consistent behavior.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild : discord.Guild</span>
+<span class="sd">            The guild to disable the command in.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            ``True`` if the command wasn&#39;t already disabled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_disabled_in</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_disabled_in</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Command.enable_in">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.enable_in">[docs]</a>
+    <span class="k">def</span> <span class="nf">enable_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Enable this command in the given guild.</span>
+
+<span class="sd">        This is generally called by the settings managed with</span>
+<span class="sd">        the ``[p]command disable global/server`` commands.</span>
+<span class="sd">        Any changes made outside of that will not persist after cog</span>
+<span class="sd">        reload and may also be affected when either of those commands</span>
+<span class="sd">        is called on this command. It is not recommended to rely on</span>
+<span class="sd">        this method, if you want a consistent behavior.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        guild : discord.Guild</span>
+<span class="sd">            The guild to enable the command in.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            ``True`` if the command wasn&#39;t already enabled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_disabled_in</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Command.allow_for">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.allow_for">[docs]</a>
+    <span class="k">def</span> <span class="nf">allow_for</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">allow_for</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="n">parents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parents</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">parents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cog</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">:</span>
+            <span class="n">cur_rule</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">NORMAL</span><span class="p">:</span>
+                <span class="n">parent</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">PASSIVE_ALLOW</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_DENY</span><span class="p">:</span>
+                <span class="n">parent</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">CAUTIOUS_ALLOW</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Command.clear_rule_for">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.clear_rule_for">[docs]</a>
+    <span class="k">def</span> <span class="nf">clear_rule_for</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PermState</span><span class="p">,</span> <span class="n">PermState</span><span class="p">]:</span>
+        <span class="n">old_rule</span><span class="p">,</span> <span class="n">new_rule</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">clear_rule_for</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">old_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_ALLOW</span><span class="p">:</span>
+            <span class="n">parents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parents</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">parents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cog</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">:</span>
+                <span class="n">should_continue</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">reevaluate_rules_for</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">should_continue</span><span class="p">:</span>
+                    <span class="k">break</span>
+        <span class="k">return</span> <span class="n">old_rule</span><span class="p">,</span> <span class="n">new_rule</span></div>
+
+
+<div class="viewcode-block" id="Command.error">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.error">[docs]</a>
+    <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coro</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A decorator that registers a coroutine as a local error handler.</span>
+
+<span class="sd">        A local error handler is an :func:`.on_command_error` event limited to</span>
+<span class="sd">        a single command.</span>
+
+<span class="sd">        The on_command_error event is still dispatched</span>
+<span class="sd">        for commands with a dedicated error handler.</span>
+
+<span class="sd">        Red&#39;s global error handler will ignore commands with a registered error handler.</span>
+
+<span class="sd">        To have red handle specific errors with the default behavior,</span>
+<span class="sd">        call ``Red.on_command_error`` with ``unhandled_by_cog`` set to True.</span>
+
+<span class="sd">        Due to how discord.py wraps exceptions, the exception you are expecting here</span>
+<span class="sd">        is likely in ``error.original`` despite that the normal event handler for bot</span>
+<span class="sd">        wide command error handling has no such wrapping.</span>
+
+<span class="sd">        For example:</span>
+
+<span class="sd">            .. code-block:: python</span>
+
+<span class="sd">                @a_command.error</span>
+<span class="sd">                async def a_command_error_handler(self, ctx, error):</span>
+<span class="sd">                    if isinstance(error.original, MyErrorType):</span>
+<span class="sd">                        self.log_exception(error.original)</span>
+<span class="sd">                    else:</span>
+<span class="sd">                        await ctx.bot.on_command_error(ctx, error.original, unhandled_by_cog=True)</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        -----------</span>
+<span class="sd">        coro : :term:`coroutine function`</span>
+<span class="sd">            The coroutine to register as the local error handler.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        -------</span>
+<span class="sd">        discord.ClientException</span>
+<span class="sd">            The coroutine is not actually a coroutine.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">coro</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Command.format_shortdoc_for_context">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Command.format_shortdoc_for_context">[docs]</a>
+    <span class="k">def</span> <span class="nf">format_shortdoc_for_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This formats the short version of the help</span>
+<span class="sd">        string based on values in context</span>
+
+<span class="sd">        See ``format_text_for_context`` for the actual implementation details</span>
+
+<span class="sd">        Cog creators may override this in their own command and cog classes</span>
+<span class="sd">        as long as the method signature stays the same.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx: Context</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            Localized help with some formatting</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">short_doc</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_text_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">sh</span><span class="p">)</span> <span class="k">if</span> <span class="n">sh</span> <span class="k">else</span> <span class="n">sh</span></div>
+</div>
+
+
+
+<span class="k">class</span> <span class="nc">GroupMixin</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ext</span><span class="o">.</span><span class="n">commands</span><span class="o">.</span><span class="n">GroupMixin</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Mixin for `Group` and `Red` classes.</span>
+
+<span class="sd">    This class inherits from :class:`discord.ext.commands.GroupMixin`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A shortcut decorator that invokes :func:`.command` and adds it to</span>
+<span class="sd">        the internal command list via :meth:`~.GroupMixin.add_command`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;parent&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">command</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)(</span><span class="n">func</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+        <span class="k">return</span> <span class="n">decorator</span>
+
+    <span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A shortcut decorator that invokes :func:`.group` and adds it to</span>
+<span class="sd">        the internal command list via :meth:`~.GroupMixin.add_command`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;parent&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">group</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)(</span><span class="n">func</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+        <span class="k">return</span> <span class="n">decorator</span>
+
+
+<span class="k">class</span> <span class="nc">CogGroupMixin</span><span class="p">:</span>
+    <span class="n">requires</span><span class="p">:</span> <span class="n">Requires</span>
+
+    <span class="k">def</span> <span class="nf">reevaluate_rules_for</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PermState</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Re-evaluate a rule by checking subcommand rules.</span>
+
+<span class="sd">        This is called when a subcommand is no longer actively allowed.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        model_id : Union[int, str]</span>
+<span class="sd">            Must be an `int` if supplying an ID. `str` is only valid</span>
+<span class="sd">            for &quot;default&quot;.</span>
+<span class="sd">        guild_id : int</span>
+<span class="sd">            The guild ID. For global rules, use ``0``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Tuple[PermState, bool]</span>
+<span class="sd">            A 2-tuple containing the new rule and a bool indicating</span>
+<span class="sd">            whether or not the rule was changed as a result of this</span>
+<span class="sd">            call.</span>
+
+<span class="sd">        :meta private:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cur_rule</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cur_rule</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">PermState</span><span class="o">.</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_ALLOW</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_DENY</span><span class="p">):</span>
+            <span class="c1"># The above three states are unaffected by subcommand rules</span>
+            <span class="c1"># Remaining states can be changed if there exists no actively-allowed</span>
+            <span class="c1"># subcommand (this includes subcommands multiple levels below)</span>
+
+            <span class="n">all_commands</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Command</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;all_commands&quot;</span><span class="p">,</span> <span class="p">{})</span>
+
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span>
+                <span class="n">cmd</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span> <span class="ow">in</span> <span class="n">PermStateAllowedStates</span>
+                <span class="k">for</span> <span class="n">cmd</span> <span class="ow">in</span> <span class="n">all_commands</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+            <span class="p">):</span>
+                <span class="k">return</span> <span class="n">cur_rule</span><span class="p">,</span> <span class="kc">False</span>
+            <span class="k">elif</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">PASSIVE_ALLOW</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">NORMAL</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">PermState</span><span class="o">.</span><span class="n">NORMAL</span><span class="p">,</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">cur_rule</span> <span class="ow">is</span> <span class="n">PermState</span><span class="o">.</span><span class="n">CAUTIOUS_ALLOW</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">set_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_DENY</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">PermState</span><span class="o">.</span><span class="n">ACTIVE_DENY</span><span class="p">,</span> <span class="kc">True</span>
+
+        <span class="c1"># Default return value</span>
+        <span class="k">return</span> <span class="n">cur_rule</span><span class="p">,</span> <span class="kc">False</span>
+
+
+<div class="viewcode-block" id="Group">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Group">[docs]</a>
+<span class="k">class</span> <span class="nc">Group</span><span class="p">(</span><span class="n">GroupMixin</span><span class="p">,</span> <span class="n">Command</span><span class="p">,</span> <span class="n">CogGroupMixin</span><span class="p">,</span> <span class="n">DPYGroup</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Group command class for Red.</span>
+
+<span class="sd">    This class inherits from `Command`, with :class:`GroupMixin` and</span>
+<span class="sd">    `discord.ext.commands.Group` mixed in.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">autohelp</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;autohelp&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">invoke</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
+        <span class="c1"># we skip prepare in some cases to avoid some things</span>
+        <span class="c1"># We still always want this part of the behavior though</span>
+        <span class="n">ctx</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="n">ctx</span><span class="o">.</span><span class="n">subcommand_passed</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># Our re-ordered behavior below.</span>
+        <span class="n">view</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">view</span>
+        <span class="n">previous</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">index</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">skip_ws</span><span class="p">()</span>
+        <span class="n">trigger</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">get_word</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">trigger</span><span class="p">:</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="n">subcommand_passed</span> <span class="o">=</span> <span class="n">trigger</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="n">invoked_subcommand</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_commands</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">trigger</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">previous</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">previous</span>
+
+        <span class="k">if</span> <span class="n">ctx</span><span class="o">.</span><span class="n">invoked_subcommand</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">ctx</span><span class="o">.</span><span class="n">invoked_subcommand</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">autohelp</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">invoke_without_command</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">change_permission_state</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="n">CheckFailure</span><span class="p">()</span>
+                <span class="c1"># This ordering prevents sending help before checking `before_invoke` hooks</span>
+                <span class="k">await</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                <span class="k">return</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send_help</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">invoke_without_command</span><span class="p">:</span>
+            <span class="c1"># So invoke_without_command when a subcommand of this group is invoked</span>
+            <span class="c1"># will skip the invocation of *this* command. However, because of</span>
+            <span class="c1"># how our permissions system works, we don&#39;t want it to skip the checks</span>
+            <span class="c1"># as well.</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">change_permission_state</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">CheckFailure</span><span class="p">()</span>
+            <span class="c1"># this is actually why we don&#39;t prepare earlier.</span>
+
+        <span class="k">await</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span></div>
+
+
+
+<span class="k">class</span> <span class="nc">CogMixin</span><span class="p">(</span><span class="n">CogGroupMixin</span><span class="p">,</span> <span class="n">CogCommandMixin</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Mixin class for a cog, intended for use with discord.py&#39;s cog class&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">doc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__doc__</span>
+        <span class="n">translator</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;__translator__&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">doc</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">inspect</span><span class="o">.</span><span class="n">cleandoc</span><span class="p">(</span><span class="n">translator</span><span class="p">(</span><span class="n">doc</span><span class="p">))</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">red_get_data_for_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MutableMapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        .. note::</span>
+
+<span class="sd">            This method is documented `provisionally &lt;developer-guarantees-exclusions&gt;`</span>
+<span class="sd">            and may have minor changes made to it.</span>
+<span class="sd">            It is not expected to undergo major changes,</span>
+<span class="sd">            but nothing utilizes this method yet and the inclusion of this method</span>
+<span class="sd">            in documentation in advance is solely to allow cog creators time to prepare.</span>
+
+
+<span class="sd">        This should be overridden by all cogs.</span>
+
+<span class="sd">        Overridden implementations should return a mapping of filenames to io.BytesIO</span>
+<span class="sd">        containing a human-readable version of the data</span>
+<span class="sd">        the cog has about the specified user_id or an empty mapping</span>
+<span class="sd">        if the cog does not have end user data.</span>
+
+<span class="sd">        The data should be easily understood for what it represents to</span>
+<span class="sd">        most users of age to use Discord.</span>
+
+<span class="sd">        You may want to include a readme file</span>
+<span class="sd">        which explains specifics about the data.</span>
+
+<span class="sd">        This method may also be implemented for an extension.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        user_id: int</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MutableMapping[str, io.BytesIO]</span>
+<span class="sd">            A mapping of filenames to BytesIO objects</span>
+<span class="sd">            suitable to send as a files or as part of an archive to a user.</span>
+
+<span class="sd">            This may be empty if you don&#39;t have data for users.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        RedUnhandledAPI</span>
+<span class="sd">            If the method was not overridden,</span>
+<span class="sd">            or an overridden implementation is not handling this</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="n">RedUnhandledAPI</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">red_delete_data_for_user</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">requester</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;discord_deleted_user&quot;</span><span class="p">,</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;user_strict&quot;</span><span class="p">],</span>
+        <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This should be overridden by all cogs.</span>
+
+<span class="sd">        If your cog does not store data, overriding and doing nothing should still</span>
+<span class="sd">        be done to indicate that this has been considered.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">                This may receive other strings in the future without warning</span>
+<span class="sd">                you should safely handle</span>
+<span class="sd">                any string value (log a warning if needed)</span>
+<span class="sd">                as additional requester types may be added</span>
+<span class="sd">                in the future without prior warning.</span>
+<span class="sd">                (see what this method can raise for details)</span>
+
+
+<span class="sd">        This method can currently be passed one of these strings:</span>
+
+
+<span class="sd">            - ``&quot;discord_deleted_user&quot;``:</span>
+
+<span class="sd">                The request should be processed as if</span>
+<span class="sd">                Discord has asked for the data removal</span>
+<span class="sd">                This then additionally must treat the</span>
+<span class="sd">                user ID itself as something to be deleted.</span>
+<span class="sd">                The user ID is no longer operational data</span>
+<span class="sd">                as the ID no longer refers to a valid user.</span>
+
+<span class="sd">            - ``&quot;owner&quot;``:</span>
+
+<span class="sd">                The request was made by the bot owner.</span>
+<span class="sd">                If removing the data requested by the owner</span>
+<span class="sd">                would be an operational hazard</span>
+<span class="sd">                (such as removing a user id from a blocked user list)</span>
+<span class="sd">                you may elect to inform the user of an alternative way</span>
+<span class="sd">                to remove that ID to ensure the process can not be abused</span>
+<span class="sd">                by users to bypass anti-abuse measures,</span>
+<span class="sd">                but there must remain a way for them to process this request.</span>
+
+<span class="sd">            - ``&quot;user_strict&quot;``:</span>
+
+<span class="sd">                The request was made by a user,</span>
+<span class="sd">                the bot settings allow a user to request their own data</span>
+<span class="sd">                be deleted, and the bot is configured to respect this</span>
+<span class="sd">                at the cost of functionality.</span>
+<span class="sd">                Cogs may retain data needed for anti abuse measures</span>
+<span class="sd">                such as IDs and timestamps of interactions,</span>
+<span class="sd">                but should not keep EUD such</span>
+<span class="sd">                as user nicknames if receiving a request of this nature.</span>
+
+<span class="sd">            - ``&quot;user&quot;``:</span>
+
+<span class="sd">                The request was made by a user,</span>
+<span class="sd">                the bot settings allow a user to request their own data</span>
+<span class="sd">                be deleted, and the bot is configured to let cogs keep</span>
+<span class="sd">                data needed for operation.</span>
+<span class="sd">                Under this case, you may elect to retain data which is</span>
+<span class="sd">                essential to the functionality of the cog. This case will</span>
+<span class="sd">                only happen if the bot owner has opted into keeping</span>
+<span class="sd">                minimal EUD needed for cog functionality.</span>
+
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        requester: Literal[&quot;discord_deleted_user&quot;, &quot;owner&quot;, &quot;user&quot;, &quot;user_strict&quot;]</span>
+<span class="sd">            See above notes for details about this parameter</span>
+<span class="sd">        user_id: int</span>
+<span class="sd">            The user ID which needs deletion handling</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        RedUnhandledAPI</span>
+<span class="sd">            If the method was not overridden,</span>
+<span class="sd">            or an overridden implementation is not handling this</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="n">RedUnhandledAPI</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">can_run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This really just exists to allow easy use with other methods using can_run</span>
+<span class="sd">        on commands and groups such as help formatters.</span>
+
+<span class="sd">        kwargs used in that won&#39;t apply here as they don&#39;t make sense to,</span>
+<span class="sd">        but will be swallowed silently for a compatible signature for ease of use.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : `Context`</span>
+<span class="sd">            The invocation context to check with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            ``True`` if this cog is usable in the given context.</span>
+
+<span class="sd">        :meta private:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">can_run</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">CommandError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="n">can_run</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">can_see</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if this cog is visible in the given context.</span>
+
+<span class="sd">        In short, this will verify whether</span>
+<span class="sd">        the user is allowed to access the cog by permissions.</span>
+
+<span class="sd">        This has an identical signature to the one used by commands, and groups,</span>
+<span class="sd">        but needs a different underlying mechanism.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : `Context`</span>
+<span class="sd">            The invocation context to check with.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            ``True`` if this cog is visible in the given context.</span>
+
+<span class="sd">        :meta private:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Cog">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.Cog">[docs]</a>
+<span class="k">class</span> <span class="nc">Cog</span><span class="p">(</span><span class="n">CogMixin</span><span class="p">,</span> <span class="n">DPYCog</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">DPYCogMeta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Red&#39;s Cog base class</span>
+
+<span class="sd">    This includes a metaclass from discord.py</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        None of your methods should start with ``red_`` or</span>
+<span class="sd">        be dunder names which start with red (eg. ``__red_test_thing__``)</span>
+<span class="sd">        unless to override behavior in a method designed to be overridden,</span>
+<span class="sd">        as this prefix is reserved for future methods in order to be</span>
+<span class="sd">        able to add features non-breakingly.</span>
+
+<span class="sd">        Attributes and methods must remain compatible</span>
+<span class="sd">        with discord.py and with any of red&#39;s methods and attributes.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">__cog_commands__</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Command</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">all_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Command</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This does not have identical behavior to</span>
+<span class="sd">        Group.all_commands but should return what you expect</span>
+
+<span class="sd">        :meta private:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">cmd</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">cmd</span> <span class="k">for</span> <span class="n">cmd</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__cog_commands__</span><span class="p">}</span></div>
+
+
+
+<div class="viewcode-block" id="GroupCog">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.GroupCog">[docs]</a>
+<span class="k">class</span> <span class="nc">GroupCog</span><span class="p">(</span><span class="n">Cog</span><span class="p">,</span> <span class="n">DPYGroupCog</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Red&#39;s Cog base class with app commands group as the base.</span>
+
+<span class="sd">    This class inherits from `Cog` and `discord.ext.commands.GroupCog`</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="HybridCommand">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.HybridCommand">[docs]</a>
+<span class="k">class</span> <span class="nc">HybridCommand</span><span class="p">(</span><span class="n">Command</span><span class="p">,</span> <span class="n">DPYHybridCommand</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;HybridCommand class for Red.</span>
+
+<span class="sd">    This should not be created directly, and instead via the decorator.</span>
+
+<span class="sd">    This class inherits from `Command` and `discord.ext.commands.HybridCommand`.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        This class is not intended to be subclassed.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="HybridGroup">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.HybridGroup">[docs]</a>
+<span class="k">class</span> <span class="nc">HybridGroup</span><span class="p">(</span><span class="n">Group</span><span class="p">,</span> <span class="n">DPYHybridGroup</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;HybridGroup command class for Red.</span>
+
+<span class="sd">    This should not be created directly, and instead via the decorator.</span>
+
+<span class="sd">    This class inherits from `Group` and `discord.ext.commands.HybridGroup`.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        Red&#39;s HybridGroups differ from `discord.ext.commands.HybridGroup`</span>
+<span class="sd">        by setting `discord.ext.commands.Group.invoke_without_command` to be `False` by default.</span>
+<span class="sd">        If `discord.ext.commands.HybridGroup.fallback` is provided then</span>
+<span class="sd">        `discord.ext.commands.Group.invoke_without_command` is</span>
+<span class="sd">        set to `True`.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        This class is not intended to be subclassed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+        <span class="n">fallback</span> <span class="o">=</span> <span class="s2">&quot;fallback&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;fallback&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="n">invoke_without_command</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;invoke_without_command&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="ow">or</span> <span class="n">fallback</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;invoke_without_command&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">invoke_without_command</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">invoke_without_command</span> <span class="o">=</span> <span class="n">invoke_without_command</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_callback</span>
+
+    <span class="nd">@callback</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">):</span>
+        <span class="c1"># Below should be mostly the same as discord.py</span>
+        <span class="nb">super</span><span class="p">(</span><span class="vm">__class__</span><span class="p">,</span> <span class="vm">__class__</span><span class="p">)</span><span class="o">.</span><span class="n">callback</span><span class="o">.</span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">invoke_without_command</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="s2">&quot;You cannot have a group command with callbacks and `invoke_without_command` set to False.&quot;</span>
+            <span class="p">)</span>
+
+<div class="viewcode-block" id="HybridGroup.command">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.HybridGroup.command">[docs]</a>
+    <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">MISSING</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;parent&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">hybrid_command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)(</span><span class="n">func</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+        <span class="k">return</span> <span class="n">decorator</span></div>
+
+
+<div class="viewcode-block" id="HybridGroup.group">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.HybridGroup.group">[docs]</a>
+    <span class="k">def</span> <span class="nf">group</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">MISSING</span><span class="p">,</span>
+        <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;parent&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">hybrid_group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)(</span><span class="n">func</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+        <span class="k">return</span> <span class="n">decorator</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="hybrid_command">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.hybrid_command">[docs]</a>
+<span class="k">def</span> <span class="nf">hybrid_command</span><span class="p">(</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">app_commands</span><span class="o">.</span><span class="n">locale_str</span><span class="p">]</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">MISSING</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">with_app_command</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">attrs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">CommandCallback</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">ContextT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]],</span> <span class="n">HybridCommand</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A decorator which transforms an async function into a `HybridCommand`.</span>
+
+<span class="sd">    Same interface as `discord.ext.commands.hybrid_command`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">CommandCallback</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">ContextT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">HybridCommand</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;callback is already a command.&quot;</span><span class="p">)</span>
+        <span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;help_override&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">HybridCommand</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">with_app_command</span><span class="o">=</span><span class="n">with_app_command</span><span class="p">,</span> <span class="o">**</span><span class="n">attrs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">decorator</span></div>
+
+
+
+<div class="viewcode-block" id="hybrid_group">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.hybrid_group">[docs]</a>
+<span class="k">def</span> <span class="nf">hybrid_group</span><span class="p">(</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">app_commands</span><span class="o">.</span><span class="n">locale_str</span><span class="p">]</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">MISSING</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">with_app_command</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">attrs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">CommandCallback</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">ContextT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]],</span> <span class="n">HybridGroup</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A decorator which transforms an async function into a `HybridGroup`.</span>
+
+<span class="sd">    Same interface as `discord.ext.commands.hybrid_group`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">CommandCallback</span><span class="p">[</span><span class="n">_CogT</span><span class="p">,</span> <span class="n">ContextT</span><span class="p">,</span> <span class="n">_P</span><span class="p">,</span> <span class="n">_T</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;callback is already a command.&quot;</span><span class="p">)</span>
+        <span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;help_override&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">HybridGroup</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">with_app_command</span><span class="o">=</span><span class="n">with_app_command</span><span class="p">,</span> <span class="o">**</span><span class="n">attrs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">decorator</span></div>
+
+
+
+<div class="viewcode-block" id="command">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.command">[docs]</a>
+<span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Command</span><span class="p">,</span> <span class="o">**</span><span class="n">attrs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A decorator which transforms an async function into a `Command`.</span>
+
+<span class="sd">    Same interface as `discord.ext.commands.command`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">attrs</span><span class="p">[</span><span class="s2">&quot;help_override&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">attrs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dpy_command_deco</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">attrs</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="group">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.group">[docs]</a>
+<span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Group</span><span class="p">,</span> <span class="o">**</span><span class="n">attrs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A decorator which transforms an async function into a `Group`.</span>
+
+<span class="sd">    Same interface as `discord.ext.commands.group`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">dpy_command_deco</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="o">**</span><span class="n">attrs</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># The below are intentionally left out of `__all__`</span>
+<span class="c1"># as they are not intended for general use</span>
+<span class="k">class</span> <span class="nc">_AlwaysAvailableMixin</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This should be used for commands</span>
+<span class="sd">    which should not be disabled or removed</span>
+
+<span class="sd">    These commands cannot belong to any cog except Core (core_commands.py)</span>
+<span class="sd">    to prevent issues with the appearance of certain behavior.</span>
+
+<span class="sd">    These commands do not respect most forms of checks, and</span>
+<span class="sd">    should only be used with that in mind.</span>
+
+<span class="sd">    This particular class is not supported for 3rd party use</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">can_run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">bot</span>
+
+    <span class="n">can_see</span> <span class="o">=</span> <span class="n">can_run</span>
+
+
+<span class="k">class</span> <span class="nc">_RuleDropper</span><span class="p">(</span><span class="n">CogCommandMixin</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Objects inheriting from this, be they command or cog,</span>
+<span class="sd">    should not be interfered with operation except by their own rules,</span>
+<span class="sd">    or by global checks which are not tailored for these objects but instead</span>
+<span class="sd">    on global abuse prevention</span>
+<span class="sd">    (such as a check that disallows blocked users and bots from interacting.)</span>
+
+<span class="sd">    This should not be used by 3rd-party extensions directly for their own objects.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">allow_for</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This will do nothing.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">deny_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This will do nothing.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">clear_rule_for</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PermState</span><span class="p">,</span> <span class="n">PermState</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This will do nothing, except return a compatible rule</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cur_rule</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">requires</span><span class="o">.</span><span class="n">get_rule</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">cur_rule</span><span class="p">,</span> <span class="n">cur_rule</span>
+
+    <span class="k">def</span> <span class="nf">set_default_rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rule</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">],</span> <span class="n">guild_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This will do nothing.&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">_AlwaysAvailableCommand</span><span class="p">(</span><span class="n">_AlwaysAvailableMixin</span><span class="p">,</span> <span class="n">_RuleDropper</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">_AlwaysAvailableGroup</span><span class="p">(</span><span class="n">_AlwaysAvailableMixin</span><span class="p">,</span> <span class="n">_RuleDropper</span><span class="p">,</span> <span class="n">Group</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">_ForgetMeSpecialCommand</span><span class="p">(</span><span class="n">_RuleDropper</span><span class="p">,</span> <span class="n">Command</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    We need special can_run behavior here</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">can_run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">datarequests</span><span class="o">.</span><span class="n">allow_user_requests</span><span class="p">()</span>
+
+    <span class="n">can_see</span> <span class="o">=</span> <span class="n">can_run</span>
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

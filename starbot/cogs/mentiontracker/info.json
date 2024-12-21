@@ -1,0 +1,20 @@
+{
+    "author": [
+        "blizzardthewolf"
+    ],
+    "install_msg": "Thank you for installing my cog, if you run into any issues or have any questions, you can find me in the Red servers or DM me @blizzthewolf. You are also free to open an issue on [my repository](https://git.purplepanda.cc/blizz/blizz-cogs). Use `[p]mentioned` to view your last mentions!",
+    "name": "MentionTracker",
+    "disabled": false,
+    "short": "The MentionTracker cog tracks and displays the last 5 mentions a user has received, including the content, author, and timestamp of each mention.",
+    "description": "The MentionTracker cog tracks and displays the last 5 mentions a user has received, including the content, author, and timestamp of each mention. Useful for when you get pinged while asleep!",
+    "tags": [
+        "ping",
+        "mention",
+        "mentions",
+        "pings",
+        "tracker",
+        "stats"
+    ],
+    "min_bot_version": "3.5.0",
+    "hidden": false
+}

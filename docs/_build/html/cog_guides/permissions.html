@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permissions &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mod" href="mod.html" />
+    <link rel="prev" title="Image" href="image.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Permissions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#permissions-command-permissions">permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl">permissions acl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl-getglobal">permissions acl getglobal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl-getserver">permissions acl getserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl-setglobal">permissions acl setglobal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl-setserver">permissions acl setserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl-updateglobal">permissions acl updateglobal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl-updateserver">permissions acl updateserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-acl-yamlexample">permissions acl yamlexample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-addglobalrule">permissions addglobalrule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-addserverrule">permissions addserverrule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-canrun">permissions canrun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-clearglobalrules">permissions clearglobalrules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-clearserverrules">permissions clearserverrules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-explain">permissions explain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-removeglobalrule">permissions removeglobalrule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-removeserverrule">permissions removeserverrule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-setdefaultglobalrule">permissions setdefaultglobalrule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#permissions-setdefaultserverrule">permissions setdefaultserverrule</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Permissions</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/permissions.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="permissions">
+<span id="id1"></span><h1>Permissions<a class="headerlink" href="#permissions" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the permissions cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">permissions</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="permissions-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Customise permissions for commands and cogs.</p>
+<p>This cog extends the default permission model of the bot. By default, many commands are restricted based on what the command can do.
+This cog allows you to refine some of those restrictions. You can allow wider or narrower access to most commands using it. You cannot, however, change the restrictions on owner-only commands.</p>
+<p>When additional rules are set using this cog, those rules will be checked prior to checking for the default restrictions of the command.
+Global rules (set by the owner) are checked first, then rules set for servers. If multiple global or server rules apply to the case, the order they are checked in is:</p>
+<ol class="arabic simple">
+<li><p>Rules about a user.</p></li>
+<li><p>Rules about the voice channel a user is in.</p></li>
+<li><p>Rules about the text channel or a parent of the thread a command was issued in.</p></li>
+<li><p>Rules about a role the user has (The highest role they have with a rule will be used).</p></li>
+<li><p>Rules about the server a user is in (Global rules only).</p></li>
+</ol>
+</section>
+<section id="commands">
+<span id="permissions-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<section id="permissions-command-permissions">
+<span id="id2"></span><h3>permissions<a class="headerlink" href="#permissions-command-permissions" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Command permission management tools.</p>
+<section id="permissions-acl">
+<span id="permissions-command-permissions-acl"></span><h4>permissions acl<a class="headerlink" href="#permissions-acl" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Manage permissions with YAML files.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See <a class="reference internal" href="../cog_permissions.html#cog-permissions"><span class="std std-ref">here</span></a> for more information with configuring these yaml files.</p>
+</div>
+</section>
+<section id="permissions-acl-getglobal">
+<span id="permissions-command-permissions-acl-getglobal"></span><h4>permissions acl getglobal<a class="headerlink" href="#permissions-acl-getglobal" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl getglobal
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Get a YAML file detailing all global rules.</p>
+</section>
+<section id="permissions-acl-getserver">
+<span id="permissions-command-permissions-acl-getserver"></span><h4>permissions acl getserver<a class="headerlink" href="#permissions-acl-getserver" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl getserver
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Get a YAML file detailing all rules in this server.</p>
+</section>
+<section id="permissions-acl-setglobal">
+<span id="permissions-command-permissions-acl-setglobal"></span><h4>permissions acl setglobal<a class="headerlink" href="#permissions-acl-setglobal" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl setglobal
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set global rules with a YAML file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will override reset <em>all</em> global rules
+to the rules specified in the uploaded file.</p>
+</div>
+<p>This does not validate the names of commands and cogs before
+setting the new rules.</p>
+</section>
+<section id="permissions-acl-setserver">
+<span id="permissions-command-permissions-acl-setserver"></span><h4>permissions acl setserver<a class="headerlink" href="#permissions-acl-setserver" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl setserver
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set rules for this server with a YAML file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will override reset <em>all</em> rules in this
+server to the rules specified in the uploaded file.</p>
+</div>
+</section>
+<section id="permissions-acl-updateglobal">
+<span id="permissions-command-permissions-acl-updateglobal"></span><h4>permissions acl updateglobal<a class="headerlink" href="#permissions-acl-updateglobal" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl updateglobal
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Update global rules with a YAML file.</p>
+<p>This won’t touch any rules not specified in the YAML
+file.</p>
+</section>
+<section id="permissions-acl-updateserver">
+<span id="permissions-command-permissions-acl-updateserver"></span><h4>permissions acl updateserver<a class="headerlink" href="#permissions-acl-updateserver" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl updateserver
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Update rules for this server with a YAML file.</p>
+<p>This won’t touch any rules not specified in the YAML
+file.</p>
+</section>
+<section id="permissions-acl-yamlexample">
+<span id="permissions-command-permissions-acl-yamlexample"></span><h4>permissions acl yamlexample<a class="headerlink" href="#permissions-acl-yamlexample" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions acl yamlexample
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sends an example of the yaml layout for permissions</p>
+</section>
+<section id="permissions-addglobalrule">
+<span id="permissions-command-permissions-addglobalrule"></span><h4>permissions addglobalrule<a class="headerlink" href="#permissions-addglobalrule" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions addglobalrule &lt;allow_or_deny&gt; &lt;cog_or_command&gt; &lt;who_or_what...&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add a global rule to a cog or command.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;allow_or_deny&gt;</span></code>: This should be one of “allow” or “deny”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;cog_or_command&gt;</span></code>: The cog or command to add the rule to. This is case sensitive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;who_or_what...&gt;</span></code>: One or more users, channels or roles the rule is for.</p></li>
+</ul>
+</section>
+<section id="permissions-addserverrule">
+<span id="permissions-command-permissions-addserverrule"></span><h4>permissions addserverrule<a class="headerlink" href="#permissions-addserverrule" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions addserverrule &lt;allow_or_deny&gt; &lt;cog_or_command&gt; &lt;who_or_what...&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add a rule to a cog or command in this server.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;allow_or_deny&gt;</span></code>: This should be one of “allow” or “deny”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;cog_or_command&gt;</span></code>: The cog or command to add the rule to. This is case sensitive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;who_or_what...&gt;</span></code>: One or more users, channels or roles the rule is for.</p></li>
+</ul>
+</section>
+<section id="permissions-canrun">
+<span id="permissions-command-permissions-canrun"></span><h4>permissions canrun<a class="headerlink" href="#permissions-canrun" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions canrun &lt;user&gt; &lt;command&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Check if a user can run a command.</p>
+<p>This will take the current context into account, such as the
+server and text channel.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;user&gt;</span></code>: The user to check permissions for.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code>: The command to check whether the user can run it or not.</p></li>
+</ul>
+</section>
+<section id="permissions-clearglobalrules">
+<span id="permissions-command-permissions-clearglobalrules"></span><h4>permissions clearglobalrules<a class="headerlink" href="#permissions-clearglobalrules" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions clearglobalrules
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Reset all global rules.</p>
+</section>
+<section id="permissions-clearserverrules">
+<span id="permissions-command-permissions-clearserverrules"></span><h4>permissions clearserverrules<a class="headerlink" href="#permissions-clearserverrules" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions clearserverrules
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Reset all rules in this server.</p>
+</section>
+<section id="permissions-explain">
+<span id="permissions-command-permissions-explain"></span><h4>permissions explain<a class="headerlink" href="#permissions-explain" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions explain
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Explain how permissions works.</p>
+</section>
+<section id="permissions-removeglobalrule">
+<span id="permissions-command-permissions-removeglobalrule"></span><h4>permissions removeglobalrule<a class="headerlink" href="#permissions-removeglobalrule" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions removeglobalrule &lt;cog_or_command&gt; &lt;who_or_what...&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Remove a global rule from a command.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;cog_or_command&gt;</span></code>: The cog or command to remove the rule from. This is case sensitive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;who_or_what...&gt;</span></code>: One or more users, channels or roles the rule is for.</p></li>
+</ul>
+</section>
+<section id="permissions-removeserverrule">
+<span id="permissions-command-permissions-removeserverrule"></span><h4>permissions removeserverrule<a class="headerlink" href="#permissions-removeserverrule" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions removeserverrule &lt;cog_or_command&gt; &lt;who_or_what...&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Remove a server rule from a command.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;cog_or_command&gt;</span></code>: The cog or command to remove the rule from. This is case sensitive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;who_or_what...&gt;</span></code>: One or more users, channels or roles the rule is for.</p></li>
+</ul>
+</section>
+<section id="permissions-setdefaultglobalrule">
+<span id="permissions-command-permissions-setdefaultglobalrule"></span><h4>permissions setdefaultglobalrule<a class="headerlink" href="#permissions-setdefaultglobalrule" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions setdefaultglobalrule &lt;allow_or_deny&gt; &lt;cog_or_command&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the default global rule for a command or a cog.</p>
+<p>This is the rule a command will default to when no other rule
+is found.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;cog_or_command&gt;</span></code>: The cog or command to add the rule to. This is case sensitive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;who_or_what...&gt;</span></code>: One or more users, channels or roles the rule is for.</p></li>
+</ul>
+</section>
+<section id="permissions-setdefaultserverrule">
+<span id="permissions-command-permissions-setdefaultserverrule"></span><h4>permissions setdefaultserverrule<a class="headerlink" href="#permissions-setdefaultserverrule" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]permissions setdefaultserverrule &lt;allow_or_deny&gt; &lt;cog_or_command&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the default rule for a command or a cog in this server.</p>
+<p>This is the rule a command will default to when no other rule
+is found.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;cog_or_command&gt;</span></code>: The cog or command to add the rule to. This is case sensitive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;who_or_what...&gt;</span></code>: One or more users, channels or roles the rule is for.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="image.html" class="btn btn-neutral float-left" title="Image" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mod.html" class="btn btn-neutral float-right" title="Mod" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

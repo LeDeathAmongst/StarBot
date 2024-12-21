@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alias &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Audio" href="audio.html" />
+    <link rel="prev" title="Admin" href="admin.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Alias</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#alias-command-alias">alias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alias-add">alias add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alias-delete">alias delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alias-list">alias list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alias-show">alias show</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alias-help">alias help</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alias-global">alias global</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Alias</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/alias.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="alias">
+<span id="id1"></span><h1>Alias<a class="headerlink" href="#alias" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the alias cog. You will
+find detailed docs about the usage and the commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">alias</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="alias-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>This cog is used to create shortcuts for commands.</p>
+<p>Here’s an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">play</span>
+<span class="c1"># with an alias, you can call the command above with a shortcut like this:</span>
+<span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">p</span>
+<span class="c1"># &quot;p&quot; is now a shortcut for &quot;play&quot;</span>
+</pre></div>
+</div>
+<p>In this example, we made an alias named <code class="docutils literal notranslate"><span class="pre">p</span></code> that will
+invoke the <code class="docutils literal notranslate"><span class="pre">play</span></code> command. If you use <code class="docutils literal notranslate"><span class="pre">[p]play</span></code> or <code class="docutils literal notranslate"><span class="pre">[p]p</span></code>, the result will
+be the same.</p>
+<hr class="docutils" />
+<p>Here’s another example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">cleanup</span> <span class="n">messages</span>
+<span class="c1"># now we&#39;re creating another alias that will group both the command and the subcommand into this:</span>
+<span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">clear</span>
+<span class="c1"># &quot;clear&quot; is now a shortcut for &quot;cleanup messages&quot;</span>
+</pre></div>
+</div>
+<p>In this second example, we made an alias called <code class="docutils literal notranslate"><span class="pre">clear</span></code> that will
+invoke the <code class="docutils literal notranslate"><span class="pre">cleanup</span> <span class="pre">messages</span></code> subcommand. Now if you use <code class="docutils literal notranslate"><span class="pre">[p]cleanup</span>
+<span class="pre">message</span></code> or <code class="docutils literal notranslate"><span class="pre">[p]clear</span></code>, the result will be the same.</p>
+<hr class="docutils" />
+<p>This is the basic usage, where you can define an alias for the first part of
+the command and give the second part when invoking the command. A more advanced
+usage of aliases is the usage of arguments.</p>
+<p>Let’s suppose you want to make an alias to ban someone, delete 7 days of
+messages and set the reason to “Spam bot.”, that cannot be done with a classic
+alias since the required member argument is the first one. If you create the
+alias “spamban” using arguments like this <code class="docutils literal notranslate"><span class="pre">ban</span> <span class="pre">{0}</span> <span class="pre">7</span> <span class="pre">Spam</span> <span class="pre">bot.</span></code>, <code class="docutils literal notranslate"><span class="pre">{0}</span></code> will
+be replaced by the first argument of your alias:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># we created the following alias named &quot;spamban&quot;
+[p]spamban Slime#3160
+# this alias will execute the following command:
+[p]ban Slime#3160 7 Spam bot.
+</pre></div>
+</div>
+<p>For a more detailed explanation, read <a class="reference internal" href="#alias-command-alias-add"><span class="std std-ref">this</span></a>.</p>
+</section>
+<section id="commands">
+<span id="alias-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<section id="alias-command-alias">
+<span id="id2"></span><h3>alias<a class="headerlink" href="#alias-command-alias" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]alias
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>This is the main command used for setting up the cog.
+It will be used for all other commands.</p>
+<section id="alias-add">
+<span id="alias-command-alias-add"></span><h4>alias add<a class="headerlink" href="#alias-add" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]alias add &lt;alias_name&gt; &lt;command&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Creates an alias. It will be used like this <code class="docutils literal notranslate"><span class="pre">[p]alias_name</span> <span class="pre">&lt;arguments&gt;</span></code>
+and will be equal to this <code class="docutils literal notranslate"><span class="pre">[p]command</span> <span class="pre">&lt;arguments&gt;</span></code>.</p>
+<p>Let’s develop the examples given <a class="reference internal" href="#alias-usage"><span class="std std-ref">earlier</span></a> a bit more,
+the left part of the command is the alias (blue), and the right part is the
+parameters members have to give for the command (orange).</p>
+<img alt="../_images/example-1.png" src="../_images/example-1.png" />
+<p>One more thing you can do with aliases is using arguments, a bit like
+CustomCommands. Let’s suppose you want an alias that bans x member and deletes
+7 days of messages. Without aliases, the command would look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]ban</span> <span class="pre">NotSoTrustyJAID#0001</span> <span class="pre">7</span> <span class="pre">My</span> <span class="pre">random</span> <span class="pre">reason</span></code></p>
+<p>A classic alias wouldn’t work because the member argument is the first one,
+and you can only shorten the left part before the required argument.</p>
+<p>An alias with arguments can fix that, you can define the alias on the whole
+command and replace the required argument by <code class="docutils literal notranslate"><span class="pre">{0}</span></code>, which will be replaced
+by the first parameter given when invoking the alias.</p>
+<p>Back to our example, let’s make an alias named <code class="docutils literal notranslate"><span class="pre">bigban</span></code> which will be
+assigned to this expression: <code class="docutils literal notranslate"><span class="pre">ban</span> <span class="pre">{0}</span> <span class="pre">7</span></code></p>
+<img alt="../_images/example-2.png" src="../_images/example-2.png" />
+<p>You can see in blue the “static” part of the alias, what is contained and
+doesn’t need to be given, the orange part is the arguments given at the end of
+the command, just like a classic alias, and the green part is the positional
+argument we defined: the first argument of the alias will be the green part.</p>
+<p>You can add as many arguments as you want, they can start at <code class="docutils literal notranslate"><span class="pre">{0}</span></code> or <code class="docutils literal notranslate"><span class="pre">{1}</span></code>
+and must be in order: <code class="docutils literal notranslate"><span class="pre">{1}</span></code> will be the first argument, <code class="docutils literal notranslate"><span class="pre">{2}</span></code> will be the
+second one…</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The numbers must be in order, you cannot use <code class="docutils literal notranslate"><span class="pre">{0}</span></code> and <code class="docutils literal notranslate"><span class="pre">{2}</span></code>
+without using <code class="docutils literal notranslate"><span class="pre">{1}</span></code>.</p>
+</div>
+<p>Here are more examples:</p>
+<ul>
+<li><ul class="simple">
+<li><p>Full command: <code class="docutils literal notranslate"><span class="pre">[p]cleanup</span> <span class="pre">messages</span> <span class="pre">75</span> <span class="pre">True</span></code></p></li>
+<li><p>Alias: <code class="docutils literal notranslate"><span class="pre">[p]alias</span> <span class="pre">add</span> <span class="pre">fullclear</span> <span class="pre">cleanup</span> <span class="pre">messages</span> <span class="pre">{0}</span> <span class="pre">True</span></code></p></li>
+<li><p>Invoked alias: <code class="docutils literal notranslate"><span class="pre">[p]fullclear</span> <span class="pre">75</span></code></p></li>
+</ul>
+<p><em>The</em> <code class="docutils literal notranslate"><span class="pre">True</span></code> <em>at the end tells the bot to also clear pinned messages.</em></p>
+</li>
+<li><ul class="simple">
+<li><p>Full command: <code class="docutils literal notranslate"><span class="pre">[p]repo</span> <span class="pre">add</span> <span class="pre">SinbadCogs</span>
+<span class="pre">https://github.com/mikeshardmind/SinbadCogs</span> <span class="pre">v3</span></code></p></li>
+<li><p>Alias: <code class="docutils literal notranslate"><span class="pre">[p]alias</span> <span class="pre">add</span> <span class="pre">newrepo</span> <span class="pre">repo</span> <span class="pre">add</span> <span class="pre">{2}</span> <span class="pre">https://github.com/{1}/{2}</span></code></p></li>
+<li><p>Invoked with alias: <code class="docutils literal notranslate"><span class="pre">[p]newrepo</span> <span class="pre">mikeshardmind</span> <span class="pre">SinbadCogs</span> <span class="pre">v3</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;alias_name&gt;</span></code>: The new command name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code>: The command to execute when <code class="docutils literal notranslate"><span class="pre">[p]alias_name</span></code> is invoked.</p></li>
+</ul>
+</section>
+<section id="alias-delete">
+<span id="alias-command-alias-delete"></span><h4>alias delete<a class="headerlink" href="#alias-delete" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]alias [delete|remove|del] &lt;alias_name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Removes an alias from the list. Check the list with
+the <a class="reference internal" href="#alias-command-alias-list"><span class="std std-ref">alias list</span></a> command.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;alias_name&gt;</span></code>: The alias’ name to delete.</p></li>
+</ul>
+</section>
+<section id="alias-list">
+<span id="alias-command-alias-list"></span><h4>alias list<a class="headerlink" href="#alias-list" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]alias list
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows all of the existing aliases on the current server.</p>
+</section>
+<section id="alias-show">
+<span id="alias-command-alias-show"></span><h4>alias show<a class="headerlink" href="#alias-show" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]alias show &lt;alias_name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows the command associated to the alias.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;alias_name&gt;</span></code>: The alias you want information from.</p></li>
+</ul>
+</section>
+<section id="alias-help">
+<span id="alias-command-alias-help"></span><h4>alias help<a class="headerlink" href="#alias-help" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]alias help &lt;alias_name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows help message for an alias.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;alias_name&gt;</span></code>: Alias you want to get help from.</p></li>
+</ul>
+</section>
+<section id="alias-global">
+<span id="alias-command-alias-global"></span><h4>alias global<a class="headerlink" href="#alias-global" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]alias global
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Another group command which contains the <a class="reference internal" href="#alias-command-alias-add"><span class="std std-ref">add</span></a>, <a class="reference internal" href="#alias-command-alias-delete"><span class="std std-ref">del</span></a> and <a class="reference internal" href="#alias-command-alias-list"><span class="std std-ref">list</span></a> commands.</p>
+<p>They work the same, except the created aliases will be
+global instead of being only server-wide.</p>
+<p>Please refer to these docs for the commands, they work with the
+same arguments. For example, if you want to add a global alias,
+instead of doing <code class="docutils literal notranslate"><span class="pre">[p]alias</span> <span class="pre">add</span> <span class="pre">&lt;arguments&gt;</span></code>, do <code class="docutils literal notranslate"><span class="pre">[p]alias</span>
+<span class="pre">global</span> <span class="pre">add</span> <span class="pre">&lt;arguments&gt;</span></code>.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="admin.html" class="btn btn-neutral float-left" title="Admin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="audio.html" class="btn btn-neutral float-right" title="Audio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

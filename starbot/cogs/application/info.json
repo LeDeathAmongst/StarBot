@@ -1,0 +1,11 @@
+{
+    "author": ["Star"],
+    "name": "Applications",
+    "install_msg": "Thank you for installing the Applications cog!\nDo `[p]help Applications` to get the list of commands and their description. If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>)\nIf you like my work, [donate me!](<https://ko-fi.com/starcogs>)\n\nThis cog provides a comprehensive application system for your Discord server, allowing you to create custom application types, manage applications, and review them efficiently!",
+    "requirements": [
+        "git+https://github.com/LeDeathAmongst/Star_Utils.git"
+    ],
+    "min_bot_version": "3.5.9",
+    "end_user_data_statement": "This cog stores user IDs and application responses for the purpose of managing applications. This data is only stored within the bot's configuration and is not shared with external services.",
+    "hidden": false
+}

@@ -1,0 +1,666 @@
+# Portuguese translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:35+0100\n"
+"PO-Revision-Date: 2024-10-14 04:48+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: main.py:155 main.py:203 main.py:230
+msgid "This server is in the ingored list!"
+msgstr "Este servidor está na lista ingored!"
+msgstr ""
+
+#: main.py:158 main.py:206 main.py:233
+msgid "This server is not in the allowed list!"
+msgstr "Este servidor não está na lista de permitidos!"
+msgstr ""
+
+#: main.py:185
+msgid "Please confirm this action by passing `True` as an argument"
+msgstr "Por favor, confirme esta ação passando `True` como argumento"
+msgstr ""
+
+#: main.py:193
+msgid "All backups have been wiped!"
+msgstr "Todos os backups foram apagados!"
+msgstr ""
+
+#: main.py:220
+msgid "A backup has been created!"
+msgstr "Um backup foi criado!"
+msgstr ""
+
+#: main.py:239
+msgid "There are no backups for this guild!"
+msgstr "Não há backups para esta guilda!"
+msgstr ""
+
+#: main.py:244
+msgid "Server restore is complete!"
+msgstr "A restauração do servidor foi concluída!"
+msgstr ""
+
+#: common/views.py:286 main.py:246
+msgid "The following errors occurred while restoring the backup"
+msgstr "Os seguintes erros ocorreram ao restaurar o backup"
+msgstr ""
+
+#: main.py:260 main.py:261
+msgid "**None Set**"
+msgstr "**Nenhum definido**"
+msgstr ""
+
+#: main.py:263
+msgid ""
+msgstr ""
+"### Global Settings\n"
+"- Global backups: {}\n"
+"- Max backups per server: {}\n"
+"- Allow auto-backups: {}\n"
+"- Message backup limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+"- Ignored servers: {}\n"
+"- Allowed servers: {}\n"
+msgstr ""
+
+#: main.py:295
+msgid "Auto backups have been **Disabled**"
+msgstr "Os backups automáticos foram **desativados**"
+msgstr ""
+
+#: main.py:298
+msgid "Auto backups have been **Enabled**"
+msgstr "Os backups automáticos foram **ativados**"
+msgstr ""
+
+#: main.py:313
+msgid "Limit must be 0 or higher"
+msgstr "O limite precisa ser 0 ou superior"
+msgstr ""
+
+#: main.py:316
+msgid "Message backup has been **Disabled**"
+msgstr "O backup de mensagens foi **desativado**"
+msgstr ""
+
+#: main.py:318
+msgid "Message backup limit has been set"
+msgstr "O limite de backup de mensagens foi definido"
+msgstr ""
+
+#: main.py:330
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring the roles of all members can be slow for large servers."
+msgstr ""
+
+#: main.py:332
+msgid "Members will now be backed up"
+msgstr "Os membros agora terão backup"
+msgstr ""
+
+#: main.py:334
+msgid "Members will no longer be backed up"
+msgstr "Os membros não terão mais backup"
+msgstr ""
+
+#: main.py:347
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Any roles above the bot's role will not be restored."
+msgstr ""
+
+#: main.py:349
+msgid "Roles will now be backed up"
+msgstr "As funções agora terão backup"
+msgstr ""
+
+#: main.py:351
+msgid "Roles will no longer be backed up"
+msgstr "As funções não terão mais backup"
+msgstr ""
+
+#: main.py:364
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring emojis is EXTREMELY rate-limited and can take a long time (like"
+" hours) for servers with many emojis."
+msgstr ""
+
+#: main.py:368
+msgid "Emojis will now be backed up"
+msgstr "Agora será feito backup dos emojis"
+msgstr ""
+
+#: main.py:370
+msgid "Emojis will no longer be backed up"
+msgstr "Emojis não terão mais backup"
+msgstr ""
+
+#: main.py:383
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring stickers is EXTREMELY rate-limited and can take a long time "
+"(like hours) for servers with many stickers."
+msgstr ""
+
+#: main.py:387
+msgid "Stickers will now be backed up"
+msgstr "Os adesivos agora terão backup"
+msgstr ""
+
+#: main.py:389
+msgid "Stickers will no longer be backed up"
+msgstr "Os adesivos não terão mais backup"
+msgstr ""
+
+#: main.py:399
+msgid "Max backups set to 0, Cartographer has been **Disabled**"
+msgstr "Máximo de backups definido como 0, o cartógrafo foi **desativado**"
+msgstr ""
+
+#: main.py:401
+msgid "Max backup count has been set"
+msgstr "A contagem máxima de backups foi definida"
+msgstr ""
+
+#: main.py:411
+msgid "Server removed from the ignore list"
+msgstr "Servidor removido da lista de ignorados"
+msgstr ""
+
+#: main.py:414
+msgid "Server added to the ignore list"
+msgstr "Servidor adicionado à lista de ignorados"
+msgstr ""
+
+#: main.py:424
+msgid "Server removed from the allow list"
+msgstr "Servidor removido da lista de permissões"
+msgstr ""
+
+#: main.py:427
+msgid "Server added to the allow list"
+msgstr "Servidor adicionado à lista de permissões"
+msgstr ""
+
+#: common/formatting.py:17
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:           `{}\n"
+"`Created:        `{}\n"
+"`AFK Channel:    `{}\n"
+"`AFK Timeout:    `{}\n"
+"`Verification:   `{}\n"
+"`Notifications:  `{}\n"
+"`Locale:         `{}\n"
+"`Emojis:         `{}\n"
+"`Stickers:       `{}\n"
+"`Role Count:     `{}\n"
+"`Members Saved:  `{}\n"
+"`Bans:           `{}\n"
+"`Categories:     `{}\n"
+"`Text Channels:  `{} ({} messages)\n"
+"`Voice Channels: `{} ({} messages)\n"
+"`Forums:         `{}\n"
+msgstr ""
+
+#: common/serializers.py:121 common/serializers.py:132
+#: common/serializers.py:164 common/serializers.py:204
+#: common/serializers.py:211 common/serializers.py:342
+#: common/serializers.py:356 common/serializers.py:709
+#: common/serializers.py:809 common/serializers.py:826
+#: common/serializers.py:894 common/serializers.py:901
+#: common/serializers.py:945 common/serializers.py:954
+msgid "Restored from backup"
+msgstr "Restaurado do backup"
+msgstr ""
+
+#: common/serializers.py:207
+msgid "Failed to add the following roles to {}: {} - {}\n"
+msgstr "Falha ao adicionar as seguintes funções a {}: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:214
+msgid "Failed to remove the following roles from {}: {} - {}\n"
+msgstr "Falha ao remover as seguintes funções de {}: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:290
+msgid "Channel {} missing role or member overwrite: {} - {}\n"
+msgstr "Função ausente do canal {} ou substituição de membro: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+#: common/serializers.py:1127
+msgid "Cartographer Restore"
+msgstr "Restauração do cartógrafo"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+msgid "Restoring messages from backup"
+msgstr "Restaurando mensagens do backup"
+msgstr ""
+
+#: common/serializers.py:1088
+msgid "Restoring backup"
+msgstr "Restaurando backup"
+msgstr ""
+
+#: common/serializers.py:1092
+msgid "Restoring server settings"
+msgstr "Restaurando configurações do servidor"
+msgstr ""
+
+#: common/serializers.py:1093
+msgid "Step 1 of 9"
+msgstr "Etapa 1 de 9"
+msgstr ""
+
+#: common/serializers.py:1095
+msgid "Restoring roles"
+msgstr "Restaurando funções"
+msgstr ""
+
+#: common/serializers.py:1096
+msgid "Step 2 of 9"
+msgstr "Etapa 2 de 9"
+msgstr ""
+
+#: common/serializers.py:1098
+msgid "Restoring emojis and stickers"
+msgstr "Restaurando emojis e adesivos"
+msgstr ""
+
+#: common/serializers.py:1099
+msgid "Step 3 of 9"
+msgstr "Etapa 3 de 9"
+msgstr ""
+
+#: common/serializers.py:1101
+msgid "Restoring channels"
+msgstr "Restaurando canais"
+msgstr ""
+
+#: common/serializers.py:1102
+msgid "Step 4 of 9"
+msgstr "Etapa 4 de 9"
+msgstr ""
+
+#: common/serializers.py:1104
+msgid "Restoring AFK settings"
+msgstr "Restaurando configurações AFK"
+msgstr ""
+
+#: common/serializers.py:1105
+msgid "Step 5 of 9"
+msgstr "Etapa 5 de 9"
+msgstr ""
+
+#: common/serializers.py:1107
+msgid "Restoring system channels"
+msgstr "Restaurando canais do sistema"
+msgstr ""
+
+#: common/serializers.py:1108
+msgid "Step 6 of 9"
+msgstr "Etapa 6 de 9"
+msgstr ""
+
+#: common/serializers.py:1110
+msgid "Restoring remainder of the server settings"
+msgstr "Restaurando o restante das configurações do servidor"
+msgstr ""
+
+#: common/serializers.py:1111
+msgid "Step 7 of 9"
+msgstr "Etapa 7 de 9"
+msgstr ""
+
+#: common/serializers.py:1113
+msgid "Restoring member roles"
+msgstr "Restaurando funções de membros"
+msgstr ""
+
+#: common/serializers.py:1114
+msgid "Step 8 of 9"
+msgstr "Etapa 8 de 9"
+msgstr ""
+
+#: common/serializers.py:1116
+msgid "Restoring bans"
+msgstr "Restaurando proibições"
+msgstr ""
+
+#: common/serializers.py:1117
+msgid "Step 9 of 9"
+msgstr "Etapa 9 de 9"
+msgstr ""
+
+#: common/serializers.py:1119
+msgid "Restoration complete!"
+msgstr "Restauração concluída!"
+msgstr ""
+
+#: common/serializers.py:1123
+msgid "Server restoration took {}"
+msgstr "A restauração do servidor demorou {}"
+msgstr ""
+
+#: common/serializers.py:1146
+msgid "Banner too large to restore\n"
+msgstr "Banner muito grande para ser restaurado\n"
+msgstr ""
+
+#: common/serializers.py:1149
+msgid "Icon too large to restore\n"
+msgstr "Ícone muito grande para restaurar\n"
+msgstr ""
+
+#: common/serializers.py:1152
+msgid "Splash too large to restore\n"
+msgstr "Splash muito grande para restaurar\n"
+msgstr ""
+
+#: common/serializers.py:1155
+msgid "Discovery splash too large to restore\n"
+msgstr "O splash da descoberta é muito grande para ser restaurado\n"
+msgstr ""
+
+#: common/serializers.py:1254
+msgid ""
+msgstr ""
+"Backup has more emojis than the target server can hold. Some emojis will "
+"not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1258
+msgid "Emoji '{}' not restored due to limit\n"
+msgstr "Emoji '{}' não restaurado devido ao limite\n"
+msgstr ""
+
+#: common/serializers.py:1282
+msgid ""
+msgstr ""
+"Backup has more stickers than the target server can hold. Some stickers "
+"will not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1286
+msgid "Sticker '{}' not restored due to limit\n"
+msgstr "Adesivo '{}' não restaurado devido ao limite\n"
+msgstr ""
+
+#: common/serializers.py:1326
+msgid ""
+msgstr ""
+"This channel isn't part of the backup, it can be deleted after the "
+"restore is complete."
+msgstr ""
+
+#: common/views.py:43
+msgid "That is not a number!"
+msgstr "Isso não é um número!"
+msgstr ""
+
+#: common/views.py:54
+msgid "Confirmation"
+msgstr "Confirmação"
+msgstr ""
+
+#: common/views.py:57
+msgid "THIS CANNOT BE UNDONE!"
+msgstr "ISSO NÃO PODE SER DESFEITO!"
+msgstr ""
+
+#: common/views.py:59
+msgid "Are you SURE?"
+msgstr "Tem certeza?"
+msgstr ""
+
+#: common/views.py:67
+msgid "How many messages to backup? (0 = None)"
+msgstr "Quantas mensagens para fazer backup? (0 = Nenhum)"
+msgstr ""
+
+#: common/views.py:77
+msgid "response must be a string!"
+msgstr "a resposta deve ser uma string!"
+msgstr ""
+
+#: common/views.py:80
+msgid "Message backup limit must be a number!"
+msgstr "O limite de backup de mensagens deve ser um número!"
+msgstr ""
+
+#: common/views.py:101
+msgid "Close"
+msgstr "Fechar"
+msgstr ""
+
+#: common/views.py:104
+msgid "Cartographer Backups"
+msgstr "Backups do cartógrafo"
+msgstr ""
+
+#: common/views.py:105
+msgid "Controls"
+msgstr "Controles"
+msgstr ""
+
+#: common/views.py:106
+msgid ""
+msgstr ""
+"- Backup Current Server: 📥\n"
+"- Restore Here: 🔄\n"
+"- Switch Servers: 🔍\n"
+"- Set AutoBackup Interval: ⌛\n"
+"- Delete Backup: 🗑️\n"
+"- Print Details: ℹ️\n"
+msgstr ""
+
+#: common/views.py:114
+msgid "Settings"
+msgstr "Configurações"
+msgstr ""
+
+#: common/views.py:115
+msgid ""
+msgstr ""
+"- Auto Backup Interval Hours: {}\n"
+"- Last Backup: {}\n"
+"## Global Settings\n"
+"-# The following settings are configured by the bot owner\n"
+"- Max Backups Per Guild: {}\n"
+"- Backup Message Limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+msgstr ""
+
+#: common/views.py:142
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:    `{}\n"
+"`Created: `{}\n"
+msgstr ""
+
+#: common/views.py:150
+msgid "Page {}"
+msgstr "Página {}"
+msgstr ""
+
+#: common/views.py:152
+msgid "There are no backups for this server yet!"
+msgstr "Ainda não há backups para este servidor!"
+msgstr ""
+
+#: common/views.py:161
+msgid "This isn't your menu!"
+msgstr "Este não é o seu menu!"
+msgstr ""
+
+#: common/views.py:198 common/views.py:257
+msgid "I need administrator permissions to restore a backup in this server!"
+msgstr "Preciso de permissões de administrador para restaurar um backup neste servidor!"
+msgstr ""
+
+#: common/views.py:208 common/views.py:271
+msgid "Restore has been cancelled!"
+msgstr "A restauração foi cancelada!"
+msgstr ""
+
+#: common/views.py:212
+msgid "The maximum amount of messages that can be backed up per channel is {}!"
+msgstr "A quantidade máxima de mensagens que podem ser armazenadas em backup por canal é {}!"
+msgstr ""
+
+#: common/views.py:221
+msgid ""
+msgstr ""
+"Warning! I need to have the highest role in the server to restore roles "
+"properly!"
+msgstr ""
+
+#: common/views.py:224
+msgid ""
+msgstr ""
+"Backing up {}!\n"
+"-# This may take a while..."
+msgstr ""
+
+#: common/views.py:226
+msgid "Backup in Progress"
+msgstr "Backup em andamento"
+msgstr ""
+
+#: common/views.py:243
+msgid ""
+msgstr ""
+"An error occurred while backing up the server!\n"
+"{}"
+msgstr ""
+
+#: common/views.py:247
+msgid "Backup created in {}!"
+msgstr "Backup criado em {}!"
+msgstr ""
+
+#: common/views.py:247
+msgid "0 seconds"
+msgstr "0 segundos"
+msgstr ""
+
+#: common/views.py:248
+msgid "Backup Created"
+msgstr "Backup criado"
+msgstr ""
+
+#: common/views.py:261
+msgid "No backups to restore!"
+msgstr "Não há backups para restaurar!"
+msgstr ""
+
+#: common/views.py:280
+msgid "Your backup is being restored!"
+msgstr "Seu backup está sendo restaurado!"
+msgstr ""
+
+#: common/views.py:291
+msgid "Switch Servers"
+msgstr "Trocar servidores"
+msgstr ""
+
+#: common/views.py:291
+msgid "Server ID"
+msgstr "ID do servidor"
+msgstr ""
+
+#: common/views.py:291
+msgid "Enter the ID of the server"
+msgstr "Digite o ID do servidor"
+msgstr ""
+
+#: common/views.py:298
+msgid "I am not in that server!"
+msgstr "Eu não estou nesse servidor!"
+msgstr ""
+
+#: common/views.py:302
+msgid "You do not appear to be in that server!"
+msgstr "Você não parece estar nesse servidor!"
+msgstr ""
+
+#: common/views.py:305
+msgid "You can only switch to servers that you are an administrator of!"
+msgstr "Você só pode mudar para servidores dos quais você é administrador!"
+msgstr ""
+
+#: common/views.py:314
+msgid "Auto backups have been disabled by the bot owner!"
+msgstr "Os backups automáticos foram desativados pelo proprietário do bot!"
+msgstr ""
+
+#: common/views.py:316
+msgid "Auto Backup Interval"
+msgstr "Intervalo de backup automático"
+msgstr ""
+
+#: common/views.py:316
+msgid "Interval Hours"
+msgstr "Horas de intervalo"
+msgstr ""
+
+#: common/views.py:316
+msgid "Hours in-between backups"
+msgstr "Horas entre backups"
+msgstr ""
+
+#: common/views.py:322
+msgid "Auto-backup interval hours has been set to {}"
+msgstr "O intervalo de horas do backup automático foi definido como {}"
+msgstr ""
+
+#: common/views.py:334
+msgid "No backups to delete!"
+msgstr "Não há backups para excluir!"
+msgstr ""
+
+#: common/views.py:341
+msgid "Backup deleted!"
+msgstr "Cópia de segurança excluída!"
+msgstr ""
+
+#: common/views.py:349
+msgid "No backups to get info for!"
+msgstr "Não há backups para obter informações!"
+msgstr ""
+

@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Becoming an Approved Cog Creator &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Shared API Keys" href="framework_apikeys.html" />
+    <link rel="prev" title="Publishing cogs for Red V3" href="guide_publish_cogs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Becoming an Approved Cog Creator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-cog-creator-application">Creating a Cog Creator Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements-for-cog-creators">Requirements for Cog Creators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recommendations-for-cog-creators">Recommendations for Cog Creators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#perks-of-being-a-cog-creator">Perks of being a Cog Creator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-details">Other Details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Becoming an Approved Cog Creator</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developguide_cog_creators.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="becoming-an-approved-cog-creator">
+<h1>Becoming an Approved Cog Creator<a class="headerlink" href="#becoming-an-approved-cog-creator" title="Link to this heading"></a></h1>
+<p>This guide serves to explain the Cog Creator Application process and lays out the requirements to be a Cog Creator.</p>
+<section id="creating-a-cog-creator-application">
+<h2>Creating a Cog Creator Application<a class="headerlink" href="#creating-a-cog-creator-application" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to have created and published your cogs before you create a Cog Creator Application!
+See <a class="reference internal" href="guide_cog_creation.html"><span class="doc">Creating cogs for Red V3</span></a> and <a class="reference internal" href="guide_publish_cogs.html"><span class="doc">Publishing cogs for Red V3</span></a> for more information.</p>
+</div>
+<p>Cog Creator Applications are hosted on the <a class="reference external" href="https://cogboard.discord.red/c/apps/12">cogboard</a>.
+To create an application, start a new topic in the “Applications” category and fill out all of the required information.
+QA reviews Cog Creator Applications for security and functionality on a first come, first serve basis.
+Once your application is reviewed, you will have 14 days to make any requested changes, or to check in with the member of QA who is reviewing your application.</p>
+</section>
+<section id="requirements-for-cog-creators">
+<h2>Requirements for Cog Creators<a class="headerlink" href="#requirements-for-cog-creators" title="Link to this heading"></a></h2>
+<p>The following is a list of the requirements for approved Cog Creators.
+QA uses this list to request changes for Cog Creator Applications.
+Handling these requirements before submitting your application can streamline the review process.
+Any Cog Creator that does not follow these requirements will have their repo removed from approved listings and may have their Cog Creator status revoked.</p>
+<ul>
+<li><p>Readme that contains</p>
+<ul class="simple">
+<li><p>Repository name</p></li>
+<li><p>Installation instructions</p></li>
+<li><p>Extra setup instructions (if applicable)</p></li>
+<li><p>Credits (if applicable)</p></li>
+</ul>
+</li>
+<li><p>Repo-wide <code class="docutils literal notranslate"><span class="pre">info.json</span></code> file with the keys</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">author</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">short</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code></p></li>
+</ul>
+</li>
+<li><p>Cog <code class="docutils literal notranslate"><span class="pre">info.json</span></code> files with the keys</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">author</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">short</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requirements</span></code> (if applicable)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_python_version</span></code> (if applicable)</p></li>
+</ul>
+<p>See <a class="reference internal" href="guide_publish_cogs.html#info-json-format"><span class="std std-ref">Info.json format</span></a> for more information on how to set up <code class="docutils literal notranslate"><span class="pre">info.json</span></code> files.</p>
+</li>
+<li><p>No cog contains malicious code.</p></li>
+<li><p>No cog contains code that could impact the stability of the bot, such as blocking the event loop for an extended period of time, unreasonably high IO usage, etc.</p></li>
+<li><p>No cog contains copied code that does not respect the license of the source.</p></li>
+<li><p>Disclose in the <code class="docutils literal notranslate"><span class="pre">install_msg</span></code> key of the <code class="docutils literal notranslate"><span class="pre">info.json</span></code> file of each cog that contains any of the following:</p>
+<ul class="simple">
+<li><p>Heavy memory or I/O usage.</p></li>
+<li><p>Any NSFW material.</p></li>
+<li><p>Bundled data.</p></li>
+<li><p>Stored data (outside of using Config).</p></li>
+<li><p>Interactions with outside services.</p></li>
+<li><p>Any extra setup instructions required.</p></li>
+</ul>
+</li>
+<li><p>No cog breaks the Discord TOS.</p></li>
+<li><p>No cog conflicts with any core cogs (e.g., causing a core cog to fail to load) unless it is intended to replace that cog.</p></li>
+<li><p>Your repo shows an understanding of a range of common cog practices. This requirement exists to ensure QA can trust the safety and functionality of any future code you will create. This is handled on a case-by-case basis, however the following points should outline what we are looking to see:</p>
+<ul class="simple">
+<li><p>Cogs that are more than what is able to be run in a simple eval.</p></li>
+<li><p>Cogs that are more than just a simple API access request.</p></li>
+<li><p>Cogs that properly use Red utilities, for example Config, or any other utility functions.</p></li>
+<li><p>Cogs that use event listeners (bot.wait_for or cog-wide listeners) or custom tasks that are efficient and handle exceptions appropriately.</p></li>
+<li><p>Cogs that handle errors properly.</p></li>
+<li><p>Cogs that handle permissions properly.</p></li>
+</ul>
+<p><em>While we’re looking for these things to qualify your code, you don’t need to apply all of them in order to qualify.</em></p>
+</li>
+<li><p>Any unusable or broken commands or cogs are hidden.</p></li>
+<li><p>The default locale must be English.</p></li>
+<li><p>The main cog class and every command must have a doc-string.</p></li>
+<li><p>No cog allows for escalation of permissions. (e.g., sending a mass ping through the bot without having permission to do so)</p></li>
+<li><p>Respect the role hierarchy. Don’t let a lower role have a way to grant a higher role.</p></li>
+<li><p>If your cog install comes with any pre-packaged data, use <a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.bundled_data_path" title="starbot.core.data_manager.bundled_data_path"><code class="xref any py py-func docutils literal notranslate"><span class="pre">bundled_data_path()</span></code></a> to access it.</p></li>
+<li><p>If your cog install creates any non-config data, use <a class="reference internal" href="framework_datamanager.html#starbot.core.data_manager.cog_data_path" title="starbot.core.data_manager.cog_data_path"><code class="xref any py py-func docutils literal notranslate"><span class="pre">cog_data_path()</span></code></a> to store it.</p></li>
+<li><p>Unless the cog is intentionally designed to listen to certain input from bots, cogs should ignore input from bots.</p></li>
+<li><p>Cogs use public methods of Red where possible.</p></li>
+<li><p>Use the proper method if one exists. (and ask for one if it doesn’t exist)</p>
+<ul class="simple">
+<li><p>If that’s not possible, don’t break anything in core or any other cog with your code.</p></li>
+<li><p>If you have to use private methods, lock the cog to specific Red versions you can guarantee it works on without breaking anything using the <code class="docutils literal notranslate"><span class="pre">min_bot_version</span></code> and <code class="docutils literal notranslate"><span class="pre">max_bot_version</span></code> keys in that cog’s <code class="docutils literal notranslate"><span class="pre">info.json</span></code> file.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="recommendations-for-cog-creators">
+<span id="id1"></span><h2>Recommendations for Cog Creators<a class="headerlink" href="#recommendations-for-cog-creators" title="Link to this heading"></a></h2>
+<p>The following is a list of recommendations for Cog Creators.
+While not required for approved Cog Creators, they are still recommended in order to ensure consistency between repos.</p>
+<ul>
+<li><p>Cogs should follow a few naming conventions for consistency.</p>
+<ul class="simple">
+<li><p>Cog classes should be TitleCased, using alphabetic characters only.</p></li>
+<li><p>Commands should be lower case, using alphanumeric characters only.</p></li>
+<li><p>Cog modules should be lower case, using alphabetic characters only.</p></li>
+</ul>
+</li>
+<li><p>If your cog uses logging:</p>
+<ul class="simple">
+<li><p>The namespace for logging should be: <code class="docutils literal notranslate"><span class="pre">red.your_repo_name.cog_name</span></code>.</p></li>
+<li><p>Print statements are not a substitute for proper logging.</p></li>
+</ul>
+</li>
+<li><p>If you use asyncio.create_task, your tasks should:</p>
+<ul class="simple">
+<li><p>Be cancelled on cog unload.</p></li>
+<li><p>Handle errors.</p></li>
+</ul>
+</li>
+<li><div class="line-block">
+<div class="line">Event listeners should exit early if it is an event you don’t need.</div>
+<div class="line">This makes your events less expensive in terms of CPU time. Examples below:</div>
+</div>
+<ul class="simple">
+<li><p>Checking that you are in a guild before interacting with config for an antispam command.</p></li>
+<li><p>Checking that you aren’t reacting to a bot message (<code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">message.author.bot</span></code>) early on.</p></li>
+</ul>
+</li>
+<li><p>Use .gitignore (or something else) to keep unwanted files out of your cog repo.</p></li>
+<li><p>Put a license on your cog repo.</p>
+<ul class="simple">
+<li><p>By default, in most jurisdictions, without a license that at least offers the code for use,
+users cannot legally use your code.</p></li>
+</ul>
+</li>
+<li><p>Use botwide features when they apply. Some examples of this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ctx.embed_color</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bot.is_automod_immune</span></code></p></li>
+</ul>
+</li>
+<li><p>Use decorators to limit command use, restrict usage, or define whether the bot needs special permissions.
+You can find all of the permission and cooldown related decorators under the <code class="docutils literal notranslate"><span class="pre">starbot.core.commands</span></code> namespace.</p></li>
+<li><p>Check against user input before doing things. Common things to check:</p>
+<ul class="simple">
+<li><p>Resulting output is safe.</p></li>
+<li><p>Values provided make sense. (eg. no negative numbers for payday)</p></li>
+<li><p>Don’t unsafely use user input for things like database input.</p></li>
+</ul>
+</li>
+<li><p>Check events against <a class="reference internal" href="framework_bot.html#starbot.core.bot.Red.cog_disabled_in_guild" title="starbot.core.bot.Red.cog_disabled_in_guild"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">bot.cog_disabled_in_guild()</span></code></a></p>
+<ul class="simple">
+<li><p>Not all events need to be checked, only those that interact with a guild.</p></li>
+<li><p>Some discretion may apply, for example,
+a cog which logs command invocation errors could choose to ignore this
+but a cog which takes actions based on messages should not.</p></li>
+</ul>
+</li>
+<li><p>Respect settings when treating non-command messages as commands.</p></li>
+<li><p>Handle user data responsibly</p>
+<ul>
+<li><p>Don’t do unexpected things with user data.</p></li>
+<li><p>Don’t expose user data to additional audiences without permission.</p></li>
+<li><p>Don’t collect data your cogs don’t need.</p></li>
+<li><div class="line-block">
+<div class="line">Don’t store data in unexpected locations.</div>
+<div class="line">Utilize the cog data path, Config, or if you need something more
+prompt the owner to provide it.</div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Utilize the data deletion and statement APIs</p>
+<ul>
+<li><p>See <a class="reference internal" href="framework_commands.html#starbot.core.commands.Cog.red_delete_data_for_user" title="starbot.core.commands.Cog.red_delete_data_for_user"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">starbot.core.commands.Cog.red_delete_data_for_user()</span></code></a></p></li>
+<li><div class="line-block">
+<div class="line">Make a statement about what data your cogs use with the module level
+variable <code class="docutils literal notranslate"><span class="pre">__red_end_user_data_statement__</span></code>.</div>
+<div class="line">This should be a string containing a user friendly explanation of what data
+your cog stores and why.</div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Set contextual locales in events and other background tasks that use i18n APIs</p>
+<ul class="simple">
+<li><p>See <a class="reference internal" href="framework_i18n.html#starbot.core.i18n.set_contextual_locales_from_guild" title="starbot.core.i18n.set_contextual_locales_from_guild"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.i18n.set_contextual_locales_from_guild()</span></code></a></p></li>
+<li><p>Usage of i18n APIs within commands automatically has proper contextual locales set.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="perks-of-being-a-cog-creator">
+<h2>Perks of being a Cog Creator<a class="headerlink" href="#perks-of-being-a-cog-creator" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Added to a growing, curated list of approved repositories hosted on the <a class="reference external" href="https://index.discord.red/">Red Index</a>.</p></li>
+<li><p>The Cog Creator role on the main Red Server and the Cog Support Server.</p></li>
+<li><p>Access to an additional testing channel and the #advanced-coding channel on the main Red Server.</p></li>
+<li><p>Write permission in the #v3-burndown channel on the main Red Server.</p></li>
+<li><p>Access to an additional testing channel and the Cog Creators channel on the Support Server.</p></li>
+<li><p>Alerted about breaking changes in Red before anyone else.</p></li>
+<li><p>Ability to request a channel in the Cog Support Server if you feel like the traffic/question volume for your cogs warrants it.</p></li>
+</ul>
+</section>
+<section id="other-details">
+<h2>Other Details<a class="headerlink" href="#other-details" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Once a QA member has conducted a final review, you will have up to 14 days to make the necessary changes.</p></li>
+<li><p>The reviewer of your application has the final word.</p></li>
+<li><p>Hidden cogs will not be explicitly reviewed, however they are not allowed to contain malicious or ToS breaking code.</p></li>
+<li><p>QA reserves the right to revoke these roles and all privileges if you are found to be in gross negligence, malicious intent, or reckless abandonment of your repository.</p></li>
+<li><p>Cogs must be functionally working to the quality of an approved cog on the latest minor version of Red to be listed on the Red Index. Cogs that are not updated within 1 month of initial breakage will be delisted from the index until they are updated. Examples of potential breakage include, but are not limited to:</p>
+<ul>
+<li><p>A dependency without version constraints receiving a breaking update</p></li>
+<li><p>An API changing the schema of its endpoints</p></li>
+<li><p>Red itself releasing a new minor version</p></li>
+</ul>
+</li>
+<li><p>Only 1 person is allowed to be the Cog Creator for a particular repo. Multiple people are allowed to maintain the repo, however the “main” owner (and the Cog Creator) is responsible for any code on the repo.</p></li>
+<li><p>The Cog Creator status for a repo can be transferred to another user if the Cog Creator requests it.</p></li>
+<li><p>An approved Cog Creator can ask QA to add additional repos they have created to the approved pool.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="guide_publish_cogs.html" class="btn btn-neutral float-left" title="Publishing cogs for Red V3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="framework_apikeys.html" class="btn btn-neutral float-right" title="Shared API Keys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

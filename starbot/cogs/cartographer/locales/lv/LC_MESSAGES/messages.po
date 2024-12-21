@@ -1,0 +1,667 @@
+# Latvian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:35+0100\n"
+"PO-Revision-Date: 2024-10-14 04:46+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: lv\n"
+"Language-Team: lv <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
+" 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: main.py:155 main.py:203 main.py:230
+msgid "This server is in the ingored list!"
+msgstr "Šis serveris ir iekļauts sarakstā!"
+msgstr ""
+
+#: main.py:158 main.py:206 main.py:233
+msgid "This server is not in the allowed list!"
+msgstr "Šis serveris nav atļauto sarakstā!"
+msgstr ""
+
+#: main.py:185
+msgid "Please confirm this action by passing `True` as an argument"
+msgstr "Lūdzu, apstipriniet šo darbību, kā argumentu nosūtot “True”."
+msgstr ""
+
+#: main.py:193
+msgid "All backups have been wiped!"
+msgstr "Visas dublējumkopijas ir izdzēstas!"
+msgstr ""
+
+#: main.py:220
+msgid "A backup has been created!"
+msgstr "Dublējums ir izveidots!"
+msgstr ""
+
+#: main.py:239
+msgid "There are no backups for this guild!"
+msgstr "Šai ģildei nav rezerves kopiju!"
+msgstr ""
+
+#: main.py:244
+msgid "Server restore is complete!"
+msgstr "Servera atjaunošana ir pabeigta!"
+msgstr ""
+
+#: common/views.py:286 main.py:246
+msgid "The following errors occurred while restoring the backup"
+msgstr "Atjaunojot dublējumu, radās šādas kļūdas"
+msgstr ""
+
+#: main.py:260 main.py:261
+msgid "**None Set**"
+msgstr "**Nav iestatīts**"
+msgstr ""
+
+#: main.py:263
+msgid ""
+msgstr ""
+"### Global Settings\n"
+"- Global backups: {}\n"
+"- Max backups per server: {}\n"
+"- Allow auto-backups: {}\n"
+"- Message backup limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+"- Ignored servers: {}\n"
+"- Allowed servers: {}\n"
+msgstr ""
+
+#: main.py:295
+msgid "Auto backups have been **Disabled**"
+msgstr "Automātiskā dublēšana ir **atspējota**"
+msgstr ""
+
+#: main.py:298
+msgid "Auto backups have been **Enabled**"
+msgstr "Automātiskā dublēšana ir **Iespējota**"
+msgstr ""
+
+#: main.py:313
+msgid "Limit must be 0 or higher"
+msgstr "Ierobežojumam ir jābūt 0 vai lielākam"
+msgstr ""
+
+#: main.py:316
+msgid "Message backup has been **Disabled**"
+msgstr "Ziņojumu dublēšana ir **Atspējota**"
+msgstr ""
+
+#: main.py:318
+msgid "Message backup limit has been set"
+msgstr "Ir iestatīts ziņojumu dublēšanas ierobežojums"
+msgstr ""
+
+#: main.py:330
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring the roles of all members can be slow for large servers."
+msgstr ""
+
+#: main.py:332
+msgid "Members will now be backed up"
+msgstr "Tagad dalībnieki tiks dublēti"
+msgstr ""
+
+#: main.py:334
+msgid "Members will no longer be backed up"
+msgstr "Dalībnieki vairs netiks dublēti"
+msgstr ""
+
+#: main.py:347
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Any roles above the bot's role will not be restored."
+msgstr ""
+
+#: main.py:349
+msgid "Roles will now be backed up"
+msgstr "Lomas tagad tiks dublētas"
+msgstr ""
+
+#: main.py:351
+msgid "Roles will no longer be backed up"
+msgstr "Lomas vairs netiks dublētas"
+msgstr ""
+
+#: main.py:364
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring emojis is EXTREMELY rate-limited and can take a long time (like"
+" hours) for servers with many emojis."
+msgstr ""
+
+#: main.py:368
+msgid "Emojis will now be backed up"
+msgstr "Emocijzīmes tagad tiks dublētas"
+msgstr ""
+
+#: main.py:370
+msgid "Emojis will no longer be backed up"
+msgstr "Emocijzīmes vairs netiks dublētas"
+msgstr ""
+
+#: main.py:383
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring stickers is EXTREMELY rate-limited and can take a long time "
+"(like hours) for servers with many stickers."
+msgstr ""
+
+#: main.py:387
+msgid "Stickers will now be backed up"
+msgstr "Uzlīmes tagad tiks dublētas"
+msgstr ""
+
+#: main.py:389
+msgid "Stickers will no longer be backed up"
+msgstr "Uzlīmes vairs netiks dublētas"
+msgstr ""
+
+#: main.py:399
+msgid "Max backups set to 0, Cartographer has been **Disabled**"
+msgstr "Maksimālais dublējumkopiju skaits ir iestatīts uz 0, kartogrāfs ir **atspējots**"
+msgstr ""
+
+#: main.py:401
+msgid "Max backup count has been set"
+msgstr "Ir iestatīts maksimālais rezerves kopiju skaits"
+msgstr ""
+
+#: main.py:411
+msgid "Server removed from the ignore list"
+msgstr "Serveris ir noņemts no ignorēšanas saraksta"
+msgstr ""
+
+#: main.py:414
+msgid "Server added to the ignore list"
+msgstr "Serveris ir pievienots ignorēšanas sarakstam"
+msgstr ""
+
+#: main.py:424
+msgid "Server removed from the allow list"
+msgstr "Serveris ir noņemts no atļauju saraksta"
+msgstr ""
+
+#: main.py:427
+msgid "Server added to the allow list"
+msgstr "Serveris ir pievienots atļauju sarakstam"
+msgstr ""
+
+#: common/formatting.py:17
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:           `{}\n"
+"`Created:        `{}\n"
+"`AFK Channel:    `{}\n"
+"`AFK Timeout:    `{}\n"
+"`Verification:   `{}\n"
+"`Notifications:  `{}\n"
+"`Locale:         `{}\n"
+"`Emojis:         `{}\n"
+"`Stickers:       `{}\n"
+"`Role Count:     `{}\n"
+"`Members Saved:  `{}\n"
+"`Bans:           `{}\n"
+"`Categories:     `{}\n"
+"`Text Channels:  `{} ({} messages)\n"
+"`Voice Channels: `{} ({} messages)\n"
+"`Forums:         `{}\n"
+msgstr ""
+
+#: common/serializers.py:121 common/serializers.py:132
+#: common/serializers.py:164 common/serializers.py:204
+#: common/serializers.py:211 common/serializers.py:342
+#: common/serializers.py:356 common/serializers.py:709
+#: common/serializers.py:809 common/serializers.py:826
+#: common/serializers.py:894 common/serializers.py:901
+#: common/serializers.py:945 common/serializers.py:954
+msgid "Restored from backup"
+msgstr "Atjaunots no dublējuma"
+msgstr ""
+
+#: common/serializers.py:207
+msgid "Failed to add the following roles to {}: {} - {}\n"
+msgstr "{} neizdevās pievienot šādas lomas: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:214
+msgid "Failed to remove the following roles from {}: {} - {}\n"
+msgstr "Neizdevās noņemt šādas lomas no {}: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:290
+msgid "Channel {} missing role or member overwrite: {} - {}\n"
+msgstr "Kanālam {} trūkst lomas vai dalībnieks ir pārrakstīts: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+#: common/serializers.py:1127
+msgid "Cartographer Restore"
+msgstr "Kartogrāfs Atjaunot"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+msgid "Restoring messages from backup"
+msgstr "Ziņojumu atjaunošana no dublējuma"
+msgstr ""
+
+#: common/serializers.py:1088
+msgid "Restoring backup"
+msgstr "Dublējuma atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1092
+msgid "Restoring server settings"
+msgstr "Servera iestatījumu atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1093
+msgid "Step 1 of 9"
+msgstr "1. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1095
+msgid "Restoring roles"
+msgstr "Lomu atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1096
+msgid "Step 2 of 9"
+msgstr "2. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1098
+msgid "Restoring emojis and stickers"
+msgstr "Emociju un uzlīmju atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1099
+msgid "Step 3 of 9"
+msgstr "3. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1101
+msgid "Restoring channels"
+msgstr "Atjauno kanālus"
+msgstr ""
+
+#: common/serializers.py:1102
+msgid "Step 4 of 9"
+msgstr "4. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1104
+msgid "Restoring AFK settings"
+msgstr "AFK iestatījumu atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1105
+msgid "Step 5 of 9"
+msgstr "5. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1107
+msgid "Restoring system channels"
+msgstr "Sistēmas kanālu atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1108
+msgid "Step 6 of 9"
+msgstr "6. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1110
+msgid "Restoring remainder of the server settings"
+msgstr "Atlikušo servera iestatījumu atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1111
+msgid "Step 7 of 9"
+msgstr "7. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1113
+msgid "Restoring member roles"
+msgstr "Dalībnieku lomu atjaunošana"
+msgstr ""
+
+#: common/serializers.py:1114
+msgid "Step 8 of 9"
+msgstr "8. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1116
+msgid "Restoring bans"
+msgstr "Atjaunot aizliegumus"
+msgstr ""
+
+#: common/serializers.py:1117
+msgid "Step 9 of 9"
+msgstr "9. darbība no 9"
+msgstr ""
+
+#: common/serializers.py:1119
+msgid "Restoration complete!"
+msgstr "Restaurācija pabeigta!"
+msgstr ""
+
+#: common/serializers.py:1123
+msgid "Server restoration took {}"
+msgstr "Servera atjaunošana ilga {}"
+msgstr ""
+
+#: common/serializers.py:1146
+msgid "Banner too large to restore\n"
+msgstr "Reklāmkarogs ir pārāk liels, lai to atjaunotu\n"
+msgstr ""
+
+#: common/serializers.py:1149
+msgid "Icon too large to restore\n"
+msgstr "Ikona ir pārāk liela, lai to atjaunotu\n"
+msgstr ""
+
+#: common/serializers.py:1152
+msgid "Splash too large to restore\n"
+msgstr "Splash ir pārāk liels, lai to atjaunotu\n"
+msgstr ""
+
+#: common/serializers.py:1155
+msgid "Discovery splash too large to restore\n"
+msgstr "Atklāšanas šļakatas ir pārāk lielas, lai to atjaunotu\n"
+msgstr ""
+
+#: common/serializers.py:1254
+msgid ""
+msgstr ""
+"Backup has more emojis than the target server can hold. Some emojis will "
+"not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1258
+msgid "Emoji '{}' not restored due to limit\n"
+msgstr "Emocijzīme “{}” netika atjaunota ierobežojuma dēļ\n"
+msgstr ""
+
+#: common/serializers.py:1282
+msgid ""
+msgstr ""
+"Backup has more stickers than the target server can hold. Some stickers "
+"will not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1286
+msgid "Sticker '{}' not restored due to limit\n"
+msgstr "Uzlīme “{}” netika atjaunota ierobežojuma dēļ\n"
+msgstr ""
+
+#: common/serializers.py:1326
+msgid ""
+msgstr ""
+"This channel isn't part of the backup, it can be deleted after the "
+"restore is complete."
+msgstr ""
+
+#: common/views.py:43
+msgid "That is not a number!"
+msgstr "Tas nav cipars!"
+msgstr ""
+
+#: common/views.py:54
+msgid "Confirmation"
+msgstr "Apstiprinājums"
+msgstr ""
+
+#: common/views.py:57
+msgid "THIS CANNOT BE UNDONE!"
+msgstr "TO NEVAR ATCELT!"
+msgstr ""
+
+#: common/views.py:59
+msgid "Are you SURE?"
+msgstr "Vai esat pārliecināts?"
+msgstr ""
+
+#: common/views.py:67
+msgid "How many messages to backup? (0 = None)"
+msgstr "Cik ziņojumu jādublē? (0 = nav)"
+msgstr ""
+
+#: common/views.py:77
+msgid "response must be a string!"
+msgstr "atbildei jābūt virknei!"
+msgstr ""
+
+#: common/views.py:80
+msgid "Message backup limit must be a number!"
+msgstr "Ziņojumu dublēšanas ierobežojumam ir jābūt skaitlim!"
+msgstr ""
+
+#: common/views.py:101
+msgid "Close"
+msgstr "Aizvērt"
+msgstr ""
+
+#: common/views.py:104
+msgid "Cartographer Backups"
+msgstr "Kartogrāfa dublējumkopijas"
+msgstr ""
+
+#: common/views.py:105
+msgid "Controls"
+msgstr "Vadības ierīces"
+msgstr ""
+
+#: common/views.py:106
+msgid ""
+msgstr ""
+"- Backup Current Server: 📥\n"
+"- Restore Here: 🔄\n"
+"- Switch Servers: 🔍\n"
+"- Set AutoBackup Interval: ⌛\n"
+"- Delete Backup: 🗑️\n"
+"- Print Details: ℹ️\n"
+msgstr ""
+
+#: common/views.py:114
+msgid "Settings"
+msgstr "Iestatījumi"
+msgstr ""
+
+#: common/views.py:115
+msgid ""
+msgstr ""
+"- Auto Backup Interval Hours: {}\n"
+"- Last Backup: {}\n"
+"## Global Settings\n"
+"-# The following settings are configured by the bot owner\n"
+"- Max Backups Per Guild: {}\n"
+"- Backup Message Limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+msgstr ""
+
+#: common/views.py:142
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:    `{}\n"
+"`Created: `{}\n"
+msgstr ""
+
+#: common/views.py:150
+msgid "Page {}"
+msgstr "{}. lapa"
+msgstr ""
+
+#: common/views.py:152
+msgid "There are no backups for this server yet!"
+msgstr "Šim serverim vēl nav neviena dublējuma!"
+msgstr ""
+
+#: common/views.py:161
+msgid "This isn't your menu!"
+msgstr "Šī nav jūsu ēdienkarte!"
+msgstr ""
+
+#: common/views.py:198 common/views.py:257
+msgid "I need administrator permissions to restore a backup in this server!"
+msgstr "Man ir nepieciešamas administratora atļaujas, lai atjaunotu dublējumu šajā serverī!"
+msgstr ""
+
+#: common/views.py:208 common/views.py:271
+msgid "Restore has been cancelled!"
+msgstr "Atjaunošana ir atcelta!"
+msgstr ""
+
+#: common/views.py:212
+msgid "The maximum amount of messages that can be backed up per channel is {}!"
+msgstr "Maksimālais ziņojumu skaits, ko var dublēt vienā kanālā, ir {}!"
+msgstr ""
+
+#: common/views.py:221
+msgid ""
+msgstr ""
+"Warning! I need to have the highest role in the server to restore roles "
+"properly!"
+msgstr ""
+
+#: common/views.py:224
+msgid ""
+msgstr ""
+"Backing up {}!\n"
+"-# This may take a while..."
+msgstr ""
+
+#: common/views.py:226
+msgid "Backup in Progress"
+msgstr "Notiek dublēšana"
+msgstr ""
+
+#: common/views.py:243
+msgid ""
+msgstr ""
+"An error occurred while backing up the server!\n"
+"{}"
+msgstr ""
+
+#: common/views.py:247
+msgid "Backup created in {}!"
+msgstr "Dublējums izveidots {}!"
+msgstr ""
+
+#: common/views.py:247
+msgid "0 seconds"
+msgstr "0 sekundes"
+msgstr ""
+
+#: common/views.py:248
+msgid "Backup Created"
+msgstr "Dublējums ir izveidots"
+msgstr ""
+
+#: common/views.py:261
+msgid "No backups to restore!"
+msgstr "Nav dublējumkopiju, ko atjaunot!"
+msgstr ""
+
+#: common/views.py:280
+msgid "Your backup is being restored!"
+msgstr "Jūsu dublējums tiek atjaunots!"
+msgstr ""
+
+#: common/views.py:291
+msgid "Switch Servers"
+msgstr "Pārslēgt serverus"
+msgstr ""
+
+#: common/views.py:291
+msgid "Server ID"
+msgstr "Servera ID"
+msgstr ""
+
+#: common/views.py:291
+msgid "Enter the ID of the server"
+msgstr "Ievadiet servera ID"
+msgstr ""
+
+#: common/views.py:298
+msgid "I am not in that server!"
+msgstr "Es neesmu tajā serverī!"
+msgstr ""
+
+#: common/views.py:302
+msgid "You do not appear to be in that server!"
+msgstr "Šķiet, ka jūs neesat šajā serverī!"
+msgstr ""
+
+#: common/views.py:305
+msgid "You can only switch to servers that you are an administrator of!"
+msgstr "Varat pārslēgties tikai uz serveriem, kuru administrators esat!"
+msgstr ""
+
+#: common/views.py:314
+msgid "Auto backups have been disabled by the bot owner!"
+msgstr "Bota īpašnieks ir atspējojis automātisko dublēšanu!"
+msgstr ""
+
+#: common/views.py:316
+msgid "Auto Backup Interval"
+msgstr "Automātiskās dublēšanas intervāls"
+msgstr ""
+
+#: common/views.py:316
+msgid "Interval Hours"
+msgstr "Intervāls Stundas"
+msgstr ""
+
+#: common/views.py:316
+msgid "Hours in-between backups"
+msgstr "Stundas starp dublēšanu"
+msgstr ""
+
+#: common/views.py:322
+msgid "Auto-backup interval hours has been set to {}"
+msgstr "Automātiskās dublēšanas intervāla stundas ir iestatītas uz {}"
+msgstr ""
+
+#: common/views.py:334
+msgid "No backups to delete!"
+msgstr "Nav dublējumkopiju, ko dzēst!"
+msgstr ""
+
+#: common/views.py:341
+msgid "Backup deleted!"
+msgstr "Dublējums izdzēsts!"
+msgstr ""
+
+#: common/views.py:349
+msgid "No backups to get info for!"
+msgstr "Nav rezerves kopiju, par kurām iegūt informāciju!"
+msgstr ""
+

@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.utils.menus &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../utils.html">starbot.core.utils</a></li>
+      <li class="breadcrumb-item active">starbot.core.utils.menus</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.utils.menus</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Original source of reaction-based menu idea from</span>
+<span class="c1"># https://github.com/Lunar-Dust/Dusty-Cogs/blob/master/menu/menu.py</span>
+<span class="c1">#</span>
+<span class="c1"># Ported to Red V3 by Palm\_\_ (https://github.com/palmtree5)</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">contextlib</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">MappingProxyType</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">commands</span>
+<span class="kn">from</span> <span class="nn">.predicates</span> <span class="kn">import</span> <span class="n">ReactionPredicate</span>
+<span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">SimpleMenu</span><span class="p">,</span> <span class="n">_SimplePageSource</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;menu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;next_page&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;prev_page&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;close_menu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;start_adding_reactions&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DEFAULT_CONTROLS&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_T&quot;</span><span class="p">)</span>
+<span class="n">_PageList</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_PageList&quot;</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">])</span>
+<span class="n">_ReactableEmoji</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Emoji</span><span class="p">]</span>
+<span class="n">_ControlCallable</span> <span class="o">=</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">_PageList</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">_T</span><span class="p">]</span>
+
+<span class="n">_active_menus</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">SimpleMenu</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="k">class</span> <span class="nc">_GenericButton</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">emoji</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">_ControlCallable</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">emoji</span><span class="o">=</span><span class="n">emoji</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">grey</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">defer</span><span class="p">()</span>
+        <span class="n">ctx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">ctx</span>
+        <span class="n">pages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">entries</span>
+        <span class="n">controls</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">message</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">current_page</span>
+        <span class="n">timeout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">timeout</span>
+        <span class="n">emoji</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">emoji</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">emoji</span><span class="o">.</span><span class="n">is_unicode_emoji</span><span class="p">()</span>
+            <span class="k">else</span> <span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_emoji</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">emoji</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">emoji</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">author</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">_fallback_author_to_ctx</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">emoji</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">emoji</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="menu">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.menus.menu">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">menu</span><span class="p">(</span>
+    <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span>
+    <span class="n">pages</span><span class="p">:</span> <span class="n">_PageList</span><span class="p">,</span>
+    <span class="n">controls</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_ControlCallable</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">page</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">30.0</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An emoji-based menu</span>
+
+<span class="sd">    All functions for handling what a particular emoji does</span>
+<span class="sd">    should be coroutines (i.e. :code:`async def`). Additionally,</span>
+<span class="sd">    they must take all of the parameters of this function, in</span>
+<span class="sd">    addition to a string representing the emoji reacted with.</span>
+<span class="sd">    This parameter should be the 7th one, and none of the</span>
+<span class="sd">    parameters in the handling functions are optional.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        The ``user`` parameter is considered `provisional &lt;developer-guarantees-exclusions&gt;`.</span>
+<span class="sd">        If no issues arise, we plan on including it under developer guarantees</span>
+<span class="sd">        in the first release made after 2024-05-24.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        If you&#39;re using the ``user`` param, you need to pass it</span>
+<span class="sd">        as a keyword-only argument, and set :obj:`None` as the</span>
+<span class="sd">        default in your function.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    Simple menu using default controls::</span>
+
+<span class="sd">        from starbot.core.utils.menus import menu</span>
+
+<span class="sd">        pages = [&quot;Hello&quot;, &quot;Hi&quot;, &quot;Bonjour&quot;, &quot;Salut&quot;]</span>
+<span class="sd">        await menu(ctx, pages)</span>
+
+<span class="sd">    Menu with a custom control performing an action (deleting an item from pages list)::</span>
+
+<span class="sd">        from starbot.core.utils import menus</span>
+
+<span class="sd">        items = [&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cucumber&quot;, &quot;Dragonfruit&quot;]</span>
+
+<span class="sd">        def generate_pages():</span>
+<span class="sd">            return [f&quot;{fruit} is an awesome fruit!&quot; for fruit in items]</span>
+
+<span class="sd">        async def delete_item_action(ctx, pages, controls, message, page, timeout, emoji):</span>
+<span class="sd">            fruit = items.pop(page)  # lookup and remove corresponding fruit name</span>
+<span class="sd">            await ctx.send(f&quot;I guess you don&#39;t like {fruit}, huh? Deleting...&quot;)</span>
+<span class="sd">            pages = generate_pages()</span>
+<span class="sd">            if not pages:</span>
+<span class="sd">                return await menus.close_menu(ctx, pages, controls, message, page, timeout)</span>
+<span class="sd">            page = min(page, len(pages) - 1)</span>
+<span class="sd">            return await menus.menu(ctx, pages, controls, message, page, timeout)</span>
+
+<span class="sd">        pages = generate_pages()</span>
+<span class="sd">        controls = {**menus.DEFAULT_CONTROLS, &quot;\\N{NO ENTRY SIGN}&quot;: delete_item_action}</span>
+<span class="sd">        await menus.menu(ctx, pages, controls)</span>
+
+<span class="sd">    Menu with custom controls that output a result (confirmation prompt)::</span>
+
+<span class="sd">        from starbot.core.utils.menus import menu</span>
+
+<span class="sd">        async def control_yes(*args, **kwargs):</span>
+<span class="sd">            return True</span>
+
+<span class="sd">        async def control_no(*args, **kwargs):</span>
+<span class="sd">            return False</span>
+
+<span class="sd">        msg = &quot;Do you wish to continue?&quot;</span>
+<span class="sd">        controls = {</span>
+<span class="sd">            &quot;\\N{WHITE HEAVY CHECK MARK}&quot;: control_yes,</span>
+<span class="sd">            &quot;\\N{CROSS MARK}&quot;: control_no,</span>
+<span class="sd">        }</span>
+<span class="sd">        reply = await menu(ctx, [msg], controls)</span>
+<span class="sd">        if reply:</span>
+<span class="sd">            await ctx.send(&quot;Continuing...&quot;)</span>
+<span class="sd">        else:</span>
+<span class="sd">            await ctx.send(&quot;Okay, I&#39;m not going to perform the requested action.&quot;)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ctx: commands.Context</span>
+<span class="sd">        The command context</span>
+<span class="sd">    pages: Union[List[str], List[discord.Embed]]</span>
+<span class="sd">        The pages of the menu.</span>
+<span class="sd">        All pages need to be of the same type (either `str` or `discord.Embed`).</span>
+<span class="sd">    controls: Optional[Mapping[str, Callable]]</span>
+<span class="sd">        A mapping of emoji to the function which handles the action for the</span>
+<span class="sd">        emoji. The signature of the function should be the same as of this function</span>
+<span class="sd">        and should additionally accept an ``emoji`` parameter of type `str`.</span>
+<span class="sd">        If not passed, `DEFAULT_CONTROLS` is used *or*</span>
+<span class="sd">        only a close menu control is shown when ``pages`` is of length 1.</span>
+<span class="sd">    message: Optional[discord.Message]</span>
+<span class="sd">        The message representing the menu. Usually :code:`None` when first opening</span>
+<span class="sd">        the menu</span>
+<span class="sd">    page: int</span>
+<span class="sd">        The current page number of the menu</span>
+<span class="sd">    timeout: float</span>
+<span class="sd">        The time (in seconds) to wait for a reaction</span>
+<span class="sd">    user: Optional[discord.User]</span>
+<span class="sd">        The user allowed to interact with the menu. Defaults to ``ctx.author``.</span>
+
+<span class="sd">        .. warning::</span>
+
+<span class="sd">            This parameter is `provisional &lt;developer-guarantees-exclusions&gt;`.</span>
+<span class="sd">            If no issues arise, we plan on including it under developer guarantees</span>
+<span class="sd">            in the first release made after 2024-05-24.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If either of the notes above are violated</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">message</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">message</span><span class="o">.</span><span class="n">id</span> <span class="ow">in</span> <span class="n">_active_menus</span><span class="p">:</span>
+        <span class="c1"># prevents the expected callback from going any further</span>
+        <span class="c1"># our custom button will always pass the message the view is</span>
+        <span class="c1"># attached to, allowing one to send multiple menus on the same</span>
+        <span class="c1"># context.</span>
+        <span class="n">view</span> <span class="o">=</span> <span class="n">_active_menus</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">pages</span> <span class="o">!=</span> <span class="n">view</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+            <span class="n">view</span><span class="o">.</span><span class="n">_source</span> <span class="o">=</span> <span class="n">_SimplePageSource</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span>
+        <span class="n">new_page</span> <span class="o">=</span> <span class="k">await</span> <span class="n">view</span><span class="o">.</span><span class="n">get_page</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="n">page</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="n">timeout</span>
+        <span class="k">await</span> <span class="n">view</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="o">**</span><span class="n">new_page</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pages</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">,</span> <span class="nb">str</span><span class="p">)):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Pages must be of type discord.Embed or str&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pages</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span>
+        <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pages</span>
+    <span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;All pages must be of the same type&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">controls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">controls</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;</span><span class="se">\N{CROSS MARK}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">close_menu</span><span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">controls</span> <span class="o">=</span> <span class="n">DEFAULT_CONTROLS</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">controls</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">maybe_coro</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">):</span>
+            <span class="n">maybe_coro</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">func</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">maybe_coro</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Function must be a coroutine&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">use_buttons</span><span class="p">()</span> <span class="ow">and</span> <span class="n">message</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Only send the button version if `message` is None</span>
+        <span class="c1"># This is because help deals with this menu in weird ways</span>
+        <span class="c1"># where the original message is already sent prior to starting.</span>
+        <span class="c1"># This is not normally the way we recommend sending this because</span>
+        <span class="c1"># internally we already include the emojis we expect.</span>
+        <span class="k">if</span> <span class="n">controls</span> <span class="o">==</span> <span class="n">DEFAULT_CONTROLS</span><span class="p">:</span>
+            <span class="n">view</span> <span class="o">=</span> <span class="n">SimpleMenu</span><span class="p">(</span><span class="n">pages</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+            <span class="k">await</span> <span class="n">view</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+            <span class="k">await</span> <span class="n">view</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">view</span> <span class="o">=</span> <span class="n">SimpleMenu</span><span class="p">(</span><span class="n">pages</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+            <span class="n">view</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">last_button</span><span class="p">)</span>
+            <span class="n">view</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">first_button</span><span class="p">)</span>
+            <span class="n">has_next</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">has_prev</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">has_close</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">to_add</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">emoji</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">controls</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">part_emoji</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="o">.</span><span class="n">from_str</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">emoji</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">func</span> <span class="o">==</span> <span class="n">next_page</span><span class="p">:</span>
+                    <span class="n">has_next</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">if</span> <span class="n">part_emoji</span> <span class="o">!=</span> <span class="n">view</span><span class="o">.</span><span class="n">forward_button</span><span class="o">.</span><span class="n">emoji</span><span class="p">:</span>
+                        <span class="n">view</span><span class="o">.</span><span class="n">forward_button</span><span class="o">.</span><span class="n">emoji</span> <span class="o">=</span> <span class="n">part_emoji</span>
+                <span class="k">elif</span> <span class="n">func</span> <span class="o">==</span> <span class="n">prev_page</span><span class="p">:</span>
+                    <span class="n">has_prev</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">if</span> <span class="n">part_emoji</span> <span class="o">!=</span> <span class="n">view</span><span class="o">.</span><span class="n">backward_button</span><span class="o">.</span><span class="n">emoji</span><span class="p">:</span>
+                        <span class="n">view</span><span class="o">.</span><span class="n">backward_button</span><span class="o">.</span><span class="n">emoji</span> <span class="o">=</span> <span class="n">part_emoji</span>
+                <span class="k">elif</span> <span class="n">func</span> <span class="o">==</span> <span class="n">close_menu</span><span class="p">:</span>
+                    <span class="n">has_close</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">to_add</span><span class="p">[</span><span class="n">part_emoji</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">has_next</span><span class="p">:</span>
+                <span class="n">view</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">forward_button</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">has_prev</span><span class="p">:</span>
+                <span class="n">view</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">backward_button</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">has_close</span><span class="p">:</span>
+                <span class="n">view</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">stop_button</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">emoji</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">to_add</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">view</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">_GenericButton</span><span class="p">(</span><span class="n">emoji</span><span class="p">,</span> <span class="n">func</span><span class="p">))</span>
+            <span class="k">await</span> <span class="n">view</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+            <span class="n">_active_menus</span><span class="p">[</span><span class="n">view</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">view</span>
+            <span class="k">await</span> <span class="n">view</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+            <span class="k">del</span> <span class="n">_active_menus</span><span class="p">[</span><span class="n">view</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+            <span class="k">return</span>
+    <span class="n">current_page</span> <span class="o">=</span> <span class="n">pages</span><span class="p">[</span><span class="n">page</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">message</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">current_page</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">):</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="c1"># Don&#39;t wait for reactions to be added (GH-1797)</span>
+        <span class="c1"># noinspection PyAsyncCall</span>
+        <span class="n">start_adding_reactions</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">controls</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">current_page</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">):</span>
+                <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">current_page</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">NotFound</span><span class="p">:</span>
+            <span class="k">return</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">predicates</span> <span class="o">=</span> <span class="n">ReactionPredicate</span><span class="o">.</span><span class="n">with_emojis</span><span class="p">(</span>
+            <span class="nb">tuple</span><span class="p">(</span><span class="n">controls</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">message</span><span class="p">,</span> <span class="n">user</span> <span class="ow">or</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span>
+        <span class="p">)</span>
+        <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="s2">&quot;reaction_add&quot;</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="n">predicates</span><span class="p">)),</span>
+            <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="s2">&quot;reaction_remove&quot;</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="n">predicates</span><span class="p">)),</span>
+        <span class="p">]</span>
+        <span class="n">done</span><span class="p">,</span> <span class="n">pending</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span>
+            <span class="n">tasks</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">return_when</span><span class="o">=</span><span class="n">asyncio</span><span class="o">.</span><span class="n">FIRST_COMPLETED</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">pending</span><span class="p">:</span>
+            <span class="n">task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">done</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">()</span>
+        <span class="n">react</span><span class="p">,</span> <span class="n">__</span> <span class="o">=</span> <span class="n">done</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="nb">isinstance</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialMessageable</span><span class="p">)</span>
+                <span class="ow">or</span> <span class="n">message</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">permissions_for</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="p">)</span><span class="o">.</span><span class="n">manage_messages</span>
+            <span class="p">):</span>
+                <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">clear_reactions</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">,</span> <span class="ne">RuntimeError</span><span class="p">):</span>  <span class="c1"># cannot remove all reactions</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">controls</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">remove_reaction</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">:</span>
+                    <span class="k">return</span>
+                <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">:</span>
+                    <span class="k">pass</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">NotFound</span><span class="p">:</span>
+            <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">controls</span><span class="p">[</span><span class="n">react</span><span class="o">.</span><span class="n">emoji</span><span class="p">](</span>
+                <span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">react</span><span class="o">.</span><span class="n">emoji</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">controls</span><span class="p">[</span><span class="n">react</span><span class="o">.</span><span class="n">emoji</span><span class="p">](</span>
+                <span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">react</span><span class="o">.</span><span class="n">emoji</span>
+            <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="next_page">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.menus.next_page">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">next_page</span><span class="p">(</span>
+    <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span>
+    <span class="n">pages</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">controls</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_ControlCallable</span><span class="p">],</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">,</span>
+    <span class="n">page</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">emoji</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function for showing next page which is suitable</span>
+<span class="sd">    for use in ``controls`` mapping that is passed to `menu()`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">page</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Loop around to the first item</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">page</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">menu</span><span class="p">(</span>
+            <span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="prev_page">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.menus.prev_page">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">prev_page</span><span class="p">(</span>
+    <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span>
+    <span class="n">pages</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">controls</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_ControlCallable</span><span class="p">],</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">,</span>
+    <span class="n">page</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">emoji</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function for showing previous page which is suitable</span>
+<span class="sd">    for use in ``controls`` mapping that is passed to `menu()`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">page</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># Loop around to the last item</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">page</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">menu</span><span class="p">(</span>
+            <span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">user</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="close_menu">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.menus.close_menu">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">close_menu</span><span class="p">(</span>
+    <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span>
+    <span class="n">pages</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+    <span class="n">controls</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_ControlCallable</span><span class="p">],</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">,</span>
+    <span class="n">page</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">emoji</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function for closing (deleting) menu which is suitable</span>
+<span class="sd">    for use in ``controls`` mapping that is passed to `menu()`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">NotFound</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="start_adding_reactions">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.menus.start_adding_reactions">[docs]</a>
+<span class="k">def</span> <span class="nf">start_adding_reactions</span><span class="p">(</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">,</span> <span class="n">emojis</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">_ReactableEmoji</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Task</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Start adding reactions to a message.</span>
+
+<span class="sd">    This is a non-blocking operation - calling this will schedule the</span>
+<span class="sd">    reactions being added, but the calling code will continue to</span>
+<span class="sd">    execute asynchronously. There is no need to await this function.</span>
+
+<span class="sd">    This is particularly useful if you wish to start waiting for a</span>
+<span class="sd">    reaction whilst the reactions are still being added - in fact,</span>
+<span class="sd">    this is exactly what `menu()` uses to do that.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    message: discord.Message</span>
+<span class="sd">        The message to add reactions to.</span>
+<span class="sd">    emojis : Iterable[Union[str, discord.Emoji]]</span>
+<span class="sd">        The emojis to react to the message with.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    asyncio.Task</span>
+<span class="sd">        The task for the coroutine adding the reactions.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">task</span><span class="p">():</span>
+        <span class="c1"># The task should exit silently if the message is deleted</span>
+        <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">NotFound</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">emoji</span> <span class="ow">in</span> <span class="n">emojis</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">add_reaction</span><span class="p">(</span><span class="n">emoji</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">task</span><span class="p">())</span></div>
+
+
+
+<span class="c1">#: Default controls for `menu()` that contain controls for</span>
+<span class="c1">#: previous page, closing menu, and next page.</span>
+<span class="n">DEFAULT_CONTROLS</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">_ControlCallable</span><span class="p">]</span> <span class="o">=</span> <span class="n">MappingProxyType</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;</span><span class="se">\N{LEFTWARDS BLACK ARROW}\N{VARIATION SELECTOR-16}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">prev_page</span><span class="p">,</span>
+        <span class="s2">&quot;</span><span class="se">\N{CROSS MARK}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">close_menu</span><span class="p">,</span>
+        <span class="s2">&quot;</span><span class="se">\N{BLACK RIGHTWARDS ARROW}\N{VARIATION SELECTOR-16}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">next_page</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

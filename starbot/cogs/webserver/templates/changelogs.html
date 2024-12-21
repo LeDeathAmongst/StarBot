@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Changelogs</h1>
+<ul>
+    {% for log in changelogs %}
+    <li>
+        <a href="{{ url_for('changelog_detail', version=log.version) }}">
+            Version {{ log.version }} - {{ log.date }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

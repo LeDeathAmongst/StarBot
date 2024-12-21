@@ -1,0 +1,468 @@
+from Star_Utils import Cog, CogsUtils, Menu
+from starbot.core import commands
+from starbot.core.bot import Red
+from starbot.core.i18n import Translator, cog_i18n
+import discord
+import typing
+import asyncio
+import importlib
+import json
+import logging
+import re
+import sys
+import time
+from discord.http import Route
+from red_commons.logging import TRACE, VERBOSE, getLogger
+from starbot.core.utils.chat_formatting import humanize_list
+_: Translator = Translator('Devutils', __file__)
+SLEEP_FLAG = re.compile('(?:--|—)sleep (\\d+)$')
+
+
+class LogLevelConverter(commands.Converter):
+
+    async def convert(self, ctx: commands.Context, argument: str) ->int:
+        levels = {'CRITICAL': logging.CRITICAL, 'ERROR': logging.ERROR,
+            'WARNING': logging.WARNING, 'INFO': logging.INFO, 'DEBUG':
+            logging.DEBUG, 'VERBOSE': VERBOSE, 'TRACE': TRACE}
+        if argument.upper() in levels:
+            return levels[argument.upper()]
+        try:
+            argument = int(argument)
+        except ValueError:
+            pass
+        else:
+            try:
+                return list(levels.values())[argument]
+            except IndexError:
+                pass
+        raise commands.BadArgument(_('No valid log level provided.'))
+
+
+class StrConverter(commands.Converter):
+
+    async def convert(self, ctx: commands.Context, argument: str) ->str:
+        return argument
+
+
+class RawRequestConverter(commands.Converter):
+
+    async def convert(self, ctx: commands.Context, argument: str):
+        _types = [discord.Guild, discord.abc.GuildChannel, discord.Thread,
+            discord.Member, discord.User, discord.Role, discord.Emoji,
+            discord.Message, discord.Invite]
+        for _type in _types:
+            try:
+                return await discord.ext.commands.converter.CONVERTER_MAPPING[
+                    _type]().convert(ctx, argument)
+            except commands.BadArgument:
+                pass
+        raise commands.BadArgument(_('No valid discord object provided.'))
+
+
+@cog_i18n(_)
+class DevUtils(Cog):
+    msgid "Various development utilities!"
+msgstr "Verschiedene Entwicklungshilfsmittel!"
+
+    @commands.Cog.listener()
+    async def on_message_without_command(self, message: discord.Message):
+        if await self.bot.cog_disabled_in_guild(cog=self, guild=message.guild
+            ) or not await self.bot.allowed_by_whitelist_blacklist(who=
+            message.author):
+            return
+        if message.webhook_id is not None or message.author.bot:
+            return
+        context = await self.bot.get_context(message)
+        if context.prefix is None:
+            return
+        command = context.message.content[len(str(context.prefix)):]
+        if len(command.split(' ')) == 0:
+            return
+        command_name = command.split(' ')[0]
+        if command_name not in ('do', 'execute', 'bypass', 'timing',
+            'reinvoke', 'loglevel', 'stoptyping', 'reloadmodule', 'rawrequest'
+            ):
+            return
+        await CogsUtils.invoke_command(bot=self.bot, author=context.author,
+            channel=context.channel, command=f'devutils {command}', prefix=
+            context.prefix, message=context.message)
+
+    @commands.is_owner()
+    @commands.hybrid_group()
+    async def devutils(self, ctx: commands.Context) ->None:
+        "Generated-By: redgettext 3.4.2\n"
+        pass
+
+    #: devutils\devutils.py:346
+    async def do(self, ctx, times: int, sequential: typing.Optional[bool]=
+        True, *, command: str) ->None:
+        "        "
+        "        Repeats a command a specified number of times.\n\n"
+
+        "        `--sleep <int>` is an optional flag specifying how much time to wait between command invocations.\n"
+        "        "
+        if (match := SLEEP_FLAG.search(command)):
+            sleep = int(match.group(1))
+            command = command[:-len(match.group(0))]
+        else:
+            sleep = 1
+        new_ctx = await CogsUtils.invoke_command(bot=ctx.bot, author=ctx.
+            author, channel=ctx.channel, command=command, prefix=ctx.prefix,
+            message=ctx.message, invoke=False)
+        if not new_ctx.valid:
+            raise commands.UserFeedbackCheckFailure(_(
+                'You have not specified a correct command.'))
+        if not await discord.utils.async_all([check(new_ctx) for check in
+            new_ctx.command.checks]):
+            raise commands.UserFeedbackCheckFailure(_(
+                "You can't execute yourself this command."))
+        if sequential:
+            for __ in range(times):
+                await ctx.bot.invoke(new_ctx)
+                await asyncio.sleep(sleep)
+        else:
+            todo = [ctx.bot.invoke(new_ctx) for _ in range(times)]
+            await asyncio.gather(*todo)
+
+    #: devutils\devutils.py:297
+    async def execute(self, ctx: commands.Context, sequential: typing.
+        Optional[bool]=True, *, commands_list: str) ->None:
+        msgid "Execute multiple commands at once. Split them using |."
+msgstr "Führen Sie mehrere Befehle auf einmal aus.
+        commands_list = [command.strip() for command in commands_list.split
+            ('|')]
+        if sequential:
+            for command in commands_list:
+                new_ctx = await CogsUtils.invoke_command(bot=ctx.bot,
+                    author=ctx.author, channel=ctx.channel, command=command,
+                    prefix=ctx.prefix, message=ctx.message, invoke=True)
+                if not new_ctx.valid:
+                    raise commands.UserFeedbackCheckFailure(_(
+                        "`{command}` isn't a valid command.").format(
+                        command=command))
+                if not await discord.utils.async_all([check(new_ctx) for
+                    check in new_ctx.command.checks]):
+                    raise commands.UserFeedbackCheckFailure(_(
+                        "You can't execute yourself `{command}`.").format(
+                        command=command))
+        else:
+            todo = []
+            for command in commands:
+                new_ctx = await CogsUtils.invoke_command(bot=ctx.bot,
+                    author=ctx.author, channel=ctx.channel, command=command,
+                    prefix=ctx.prefix, message=ctx.message, invoke=False)
+                if not new_ctx.valid:
+                    raise commands.UserFeedbackCheckFailure(_(
+                        "`{command}` isn't a valid command.").format(
+                        command=command))
+                if not await discord.utils.async_all([check(new_ctx) for
+                    check in new_ctx.command.checks]):
+                    raise commands.UserFeedbackCheckFailure(_(
+                        "You can't execute yourself `{command}`.").format(
+                        command=command))
+                todo.append(ctx.bot.invoke(new_ctx))
+            await asyncio.gather(*todo)
+
+    #: devutils\devutils.py:336
+    async def bypass(self, ctx: commands.Context, *, command: str) ->None:
+        msgid "Bypass a command's checks and cooldowns."
+msgstr "Umgehe die Kontrollen und Abklingzeiten eines Befehls."
+        new_ctx = await CogsUtils.invoke_command(bot=ctx.bot, author=ctx.
+            author, channel=ctx.channel, command=command, prefix=ctx.prefix,
+            message=ctx.message, invoke=False)
+        if not new_ctx.valid:
+            raise commands.UserFeedbackCheckFailure(_(
+                'You have not specified a correct command.'))
+        await new_ctx.reinvoke()
+
+    #: devutils\devutils.py:174
+    async def timing(self, ctx: commands.Context, *, command: str) ->None:
+        msgid "Run a command timing execution and catching exceptions."
+msgstr "Führen Sie einen Befehl aus, um die Ausführung zu timen und Ausnahmen abzufangen."
+        new_ctx = await CogsUtils.invoke_command(bot=ctx.bot, author=ctx.
+            author, channel=ctx.channel, command=command, prefix=ctx.prefix,
+            message=ctx.message, invoke=False)
+        if not new_ctx.valid:
+            raise commands.UserFeedbackCheckFailure(_(
+                'You have not specified a correct command.'))
+        if not await discord.utils.async_all([check(new_ctx) for check in
+            new_ctx.command.checks]):
+            raise commands.UserFeedbackCheckFailure(_(
+                "You can't execute yourself this command."))
+        start = time.perf_counter()
+        await ctx.bot.invoke(new_ctx)
+        end = time.perf_counter()
+        return await ctx.send(_(
+            'Command `{command}` finished in `{timing}`s.').format(command=
+            new_ctx.command.qualified_name, timing=f'{end - start:.3f}'))
+
+    #: devutils\devutils.py:134
+    async def reinvoke(self, ctx: commands.Context, message: discord.
+        Message=None) ->None:
+        msgid "Reinvoke a command message.\n\n"
+
+        "        You may reply to a message to reinvoke it or pass a message ID/link.\n"
+        "        The command will be invoked with the author and the channel of the specified message.\n"
+        "        "
+        if message is None:
+            if not (ctx.message.reference is not None and isinstance((
+                message := ctx.message.reference.resolved), discord.Message)):
+                raise commands.UserInputError()
+        new_ctx = await CogsUtils.invoke_command(bot=ctx.bot, author=
+            message.author, channel=message.channel, command=
+            f'{ctx.prefix}devutils reinvoke{message.content[len(ctx.prefix) + 8:]}'
+             if message.content.startswith(f'{ctx.prefix}reinvoke') else
+            message.content, prefix='', message=message)
+        if not new_ctx.valid:
+            raise commands.UserFeedbackCheckFailure(_(
+                "The command isn't valid."))
+        if not await discord.utils.async_all([check(new_ctx) for check in
+            new_ctx.command.checks]):
+            raise commands.UserFeedbackCheckFailure(_(
+                "This command can't be executed."))
+
+    #: devutils\devutils.py:51
+    async def loglevel(self, ctx: commands.Context, level:
+        LogLevelConverter, logger_name: str='red') ->None:
+        msgid "Change the logging level for a logger. If no name is provided, the root logger (`red`) is used.\n\n"
+
+        "        Die Stufen sind die folgenden:\n"
+        "        - `0`: `CRITICAL`\n"
+        "        - `1`: `ERROR`\n"
+        "        - `2`: `WARNING`\n"
+        "        - `3`: `INFO`\n"
+        "        - `4`: `DEBUG`\n"
+        "        - `5`: `VERBOSE`\n"
+        "        - `6`: `TRACE`\n"
+        "        "
+        logger = getLogger(logger_name)
+        "        "
+msgstr "Ändert die Protokollierungsstufe für einen Logger.
+        await ctx.send(_('Logger `{logger_name}` level set to `{level}`.').
+            format(level=logging.getLevelName(logger.level), logger_name=
+            logger_name))
+
+    #: devutils\devutils.py:224
+    async def stoptyping(self, ctx: commands.Context) ->None:
+        """Stop all bot typing tasks."""
+        tasks = []
+        was_typing = False
+        for task in asyncio.all_tasks():
+            if task.get_stack(limit=1)[0].f_code.co_name == 'do_typing':
+                tasks.append(task)
+                was_typing = True
+        if not was_typing:
+            raise commands.UserFeedbackCheckFailure(
+                "Hmm, it doesn't look like I'm typing...")
+        for task in tasks:
+            task.cancel()
+
+    #: devutils\devutils.py:291
+    async def reloadmodule(self, ctx: commands.Context, modules: commands.
+        Greedy[StrConverter]) ->None:
+        msgid "Force reload a module (to use code changes without restarting your bot).\n\n"
+
+        "        ⚠️ Please only use this if you know what you're doing.\n"
+        "        "
+msgstr "\n"
+        _modules = []
+        for module in modules:
+            _modules.extend([m for m in sys.modules if m.split('.')[:len(
+                module.split('.'))] == module.split('.')])
+        modules = sorted(_modules, reverse=True)
+        if not modules:
+            raise commands.UserFeedbackCheckFailure(_(
+                "I couldn't find any module with this name."))
+        for module in modules:
+            importlib.reload(sys.modules[module])
+        text = _('Module(s) {modules} reloaded.').format(modules=
+            humanize_list([f'`{module}`' for module in modules]))
+        if len(text) <= 2000:
+            await ctx.send(text)
+        else:
+            await ctx.send(_('Modules [...] reloaded.'))
+
+    @devutils.command(aliases=['rawcontent'])
+    async def rawrequest(self, ctx: commands.Context, *, thing:
+        RawRequestConverter) ->None:
+        msgid "Display the JSON of a Discord object with a raw request."
+msgstr "Anzeige des JSON eines Discord-Objekts mit einer Rohanfrage."
+        if isinstance(thing, discord.Guild):
+            raw_content = await ctx.bot.http.request(route=Route(method=
+                'GET', path='/guilds/{guild_id}', guild_id=thing.id))
+        elif isinstance(thing, (discord.abc.GuildChannel, discord.Thread)):
+            raw_content = await ctx.bot.http.request(route=Route(method=
+                'GET', path='/channels/{channel_id}', channel_id=thing.id))
+        elif isinstance(thing, discord.Member):
+            raw_content = await ctx.bot.http.request(route=Route(method=
+                'GET', path='/guilds/{guild_id}/members/{user_id}',
+                guild_id=thing.guild.id, user_id=thing.id))
+        elif isinstance(thing, discord.User):
+            raw_content = await ctx.bot.http.request(route=Route(method=
+                'GET', path='/users/{user_id}', user_id=thing.id))
+        elif isinstance(thing, discord.Role):
+            raw_content = [role for role in await ctx.bot.http.request(
+                route=Route(method='GET', path='/guilds/{guild_id}/roles',
+                guild_id=thing.guild.id)) if int(role['id']) == thing.id][0]
+        elif isinstance(thing, discord.Emoji):
+            raw_content = await ctx.bot.http.request(route=Route(method=
+                'GET', path='/guilds/{guild_id}/emojis/{emoji_id}',
+                guild_id=thing.guild.id, emoji_id=thing.id))
+        elif isinstance(thing, discord.Message):
+            raw_content = await ctx.bot.http.request(route=Route(method=
+                'GET', path='/channels/{channel_id}/messages/{message_id}',
+                channel_id=thing.channel.id, message_id=thing.id))
+        elif isinstance(thing, discord.Invite):
+            raw_content = await ctx.bot.http.request(route=Route(method=
+                'GET', path='/invites/{invite_code}', invite_code=thing.code))
+        await Menu(json.dumps(raw_content, indent=4), lang='py').start(ctx)
+
+msgid ""
+msgstr ""
+"Project-Id-Version: aaa3a-cogs\n"
+"POT-Creation-Date: 2024-07-20 22:14+0200\n"
+"PO-Revision-Date: 2024-07-21 15:16\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: aaa3a-cogs\n"
+"X-Crowdin-Project-ID: 531090\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /[AAA3A-AAA3A.AAA3A-cogs] main/devutils/locales/messages.pot\n"
+"X-Crowdin-File-ID: 312\n"
+"Language: de_DE\n"
+
+#: devutils\devutils.py:51
+msgid "No valid log level provided."
+msgstr "Keine gültige Protokollebene angegeben."
+
+#: devutils\devutils.py:80
+msgid "No valid discord object provided."
+msgstr "Kein gültiges Discord-Objekt angegeben."
+
+#: devutils\devutils.py:85
+#, docstring
+msgid "Various development utilities!"
+msgstr "Verschiedene Entwicklungshilfsmittel!"
+
+#: devutils\devutils.py:134
+#, docstring
+msgid "\n"
+"        Repeats a command a specified number of times.\n\n"
+"        `--sleep <int>` is an optional flag specifying how much time to wait between command invocations.\n"
+"        "
+msgstr "\n"
+"        Wiederholt einen Befehl eine bestimmte Anzahl von Malen.\n\n"
+"        `--sleep <int>` ist ein optionales Flag, das angibt, wie viel Zeit zwischen den Befehlsaufrufen gewartet werden soll.\n"
+"        "
+
+#: devutils\devutils.py:155 devutils\devutils.py:235 devutils\devutils.py:251
+msgid "You have not specified a correct command."
+msgstr "Sie haben keinen korrekten Befehl angegeben."
+
+#: devutils\devutils.py:157 devutils\devutils.py:253
+msgid "You can't execute yourself this command."
+msgstr "Sie können diesen Befehl nicht selbst ausführen."
+
+#: devutils\devutils.py:174
+#, docstring
+msgid "Execute multiple commands at once. Split them using |."
+msgstr "Führen Sie mehrere Befehle auf einmal aus. Trennen Sie sie mit |."
+
+#: devutils\devutils.py:189 devutils\devutils.py:211
+msgid "`{command}` isn't a valid command."
+msgstr "{command}\" ist kein gültiger Befehl."
+
+#: devutils\devutils.py:195 devutils\devutils.py:217
+msgid "You can't execute yourself `{command}`."
+msgstr "Sie können sich nicht selbst hinrichten `{command}`."
+
+#: devutils\devutils.py:224
+#, docstring
+msgid "Bypass a command's checks and cooldowns."
+msgstr "Umgehe die Kontrollen und Abklingzeiten eines Befehls."
+
+#: devutils\devutils.py:240
+#, docstring
+msgid "Run a command timing execution and catching exceptions."
+msgstr "Führen Sie einen Befehl aus, um die Ausführung zu timen und Ausnahmen abzufangen."
+
+#: devutils\devutils.py:259
+msgid "Command `{command}` finished in `{timing}`s."
+msgstr "Der Befehl `{command}` wurde in `{timing}`s beendet."
+
+#: devutils\devutils.py:266
+#, docstring
+msgid "Reinvoke a command message.\n\n"
+"        You may reply to a message to reinvoke it or pass a message ID/link.\n"
+"        The command will be invoked with the author and the channel of the specified message.\n"
+"        "
+msgstr "Widerrufen Sie eine Befehlsnachricht.\n\n"
+"        Sie können auf eine Nachricht antworten, um sie zu widerrufen, oder eine Nachrichten-ID/einen Link übergeben.\n"
+"        Der Befehl wird mit dem Autor und dem Kanal der angegebenen Nachricht aufgerufen.\n"
+"        "
+
+#: devutils\devutils.py:289
+msgid "The command isn't valid."
+msgstr "Der Befehl ist ungültig."
+
+#: devutils\devutils.py:291
+msgid "This command can't be executed."
+msgstr "Dieser Befehl kann nicht ausgeführt werden."
+
+#: devutils\devutils.py:297
+#, docstring
+msgid "Change the logging level for a logger. If no name is provided, the root logger (`red`) is used.\n\n"
+"        Levels are the following:\n"
+"        - `0`: `CRITICAL`\n"
+"        - `1`: `ERROR`\n"
+"        - `2`: `WARNING`\n"
+"        - `3`: `INFO`\n"
+"        - `4`: `DEBUG`\n"
+"        - `5`: `VERBOSE`\n"
+"        - `6`: `TRACE`\n"
+"        "
+msgstr "Ändert die Protokollierungsstufe für einen Logger. Wenn kein Name angegeben wird, wird der Root-Logger (`red`) verwendet.\n\n"
+"        Die Stufen sind die folgenden:\n"
+"        - `0`: `KRITISCH`\n"
+"        - `1`: `FEHLER`\n"
+"        - `2`: `WARNUNG`\n"
+"        - `3`: `INFO`\n"
+"        - `4`: `DEBUG`\n"
+"        - `5`: `VERBOSE`\n"
+"        - `6`: `TRACE`\n"
+"        "
+
+#: devutils\devutils.py:311
+msgid "Logger `{logger_name}` level set to `{level}`."
+msgstr "Logger `{logger_name}` Level auf `{level}` gesetzt."
+
+#: devutils\devutils.py:320
+#, docstring
+msgid "Force reload a module (to use code changes without restarting your bot).\n\n"
+"        ⚠️ Please only use this if you know what you're doing.\n"
+"        "
+msgstr "Erzwingen Sie das Neuladen eines Moduls (um Codeänderungen zu verwenden, ohne den Bot neu zu starten).\n\n"
+"        ⚠️ Bitte verwenden Sie dies nur, wenn Sie wissen, was Sie tun.\n"
+"        "
+
+#: devutils\devutils.py:336
+msgid "I couldn't find any module with this name."
+msgstr "Ich konnte kein Modul mit diesem Namen finden."
+
+#: devutils\devutils.py:340
+msgid "Module(s) {modules} reloaded."
+msgstr "Modul(e) {modules} neu geladen."
+
+#: devutils\devutils.py:346
+msgid "Modules [...] reloaded."
+msgstr "Module [...] neu geladen."
+
+#: devutils\devutils.py:350
+#, docstring
+msgid "Display the JSON of a Discord object with a raw request."
+msgstr "Anzeige des JSON eines Discord-Objekts mit einer Rohanfrage."

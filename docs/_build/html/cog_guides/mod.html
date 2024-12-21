@@ -1,0 +1,834 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mod &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ModLog" href="modlog.html" />
+    <link rel="prev" title="Permissions" href="permissions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mod</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ban">ban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kick">kick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#massban">massban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modset">modset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#modset-defaultdays">modset defaultdays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-defaultduration">modset defaultduration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-deletenames">modset deletenames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-deleterepeats">modset deleterepeats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-dm">modset dm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-hierarchy">modset hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-mentionspam">modset mentionspam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-mentionspam-ban">modset mentionspam ban</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-mentionspam-kick">modset mentionspam kick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-mentionspam-strict">modset mentionspam strict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-mentionspam-warn">modset mentionspam warn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-reinvite">modset reinvite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-showsettings">modset showsettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-trackallnames">modset trackallnames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modset-tracknicknames">modset tracknicknames</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#movedeletedelay">movedeletedelay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moveignoredchannels">moveignoredchannels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#names">names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rename">rename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slowmode">slowmode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#softban">softban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tempban">tempban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unban">unban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#userinfo">userinfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#voiceban">voiceban</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#voicekick">voicekick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#voiceunban">voiceunban</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mod</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/mod.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="mod">
+<span id="id1"></span><h1>Mod<a class="headerlink" href="#mod" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the mod cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">mod</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="mod-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>A range of highly customizable moderation tools used to protect your
+guild from users who cannot follow the rules.</p>
+</section>
+<section id="commands">
+<span id="mod-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<section id="ban">
+<span id="mod-command-ban"></span><h3>ban<a class="headerlink" href="#ban" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]ban &lt;user&gt; [days] [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Ban a user from this server and optionally delete days of messages.</p>
+<p><code class="docutils literal notranslate"><span class="pre">days</span></code> is the amount of days of messages to cleanup on ban.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;user&gt;</span></code>: The user to ban. You can either provide the member’s ID or their exact name with the tag or
+not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[days]</span></code>: The amount of days of messages to cleanup on ban. This parameter defaults to the defaultdays setting, or no days if this has not yet been configured.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason why the user was banned (optional).</p></li>
+</ul>
+<p><strong>Example Usage</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]ban</span> <span class="pre">428675506947227648</span> <span class="pre">7</span> <span class="pre">Continued</span> <span class="pre">to</span> <span class="pre">spam</span> <span class="pre">after</span> <span class="pre">told</span> <span class="pre">to</span> <span class="pre">stop.</span></code></dt><dd><p>This will ban the user with ID 428675506947227648 and it will delete 7 days worth of messages.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]ban</span> <span class="pre">&#64;Twentysix</span> <span class="pre">7</span> <span class="pre">Continued</span> <span class="pre">to</span> <span class="pre">spam</span> <span class="pre">after</span> <span class="pre">told</span> <span class="pre">to</span> <span class="pre">stop.</span></code></dt><dd><p>This will ban Twentysix and it will delete 7 days worth of messages.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>A user ID should be provided if the user is not a member of this server.
+If days is not a number, it’s treated as the first word of the reason.
+Minimum 0 days, maximum 7. If not specified, the defaultdays setting will be used instead.</p>
+</section>
+<section id="kick">
+<span id="mod-command-kick"></span><h3>kick<a class="headerlink" href="#kick" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]kick &lt;member&gt; [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Kick a user.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to kick. You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason why the user was kicked (optional).</p></li>
+</ul>
+<p><strong>Example Usage</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]kick</span> <span class="pre">428675506947227648</span> <span class="pre">wanted</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">kicked.</span></code></dt><dd><p>This will kick the user with ID 428675506947227648 from the server.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]kick</span> <span class="pre">&#64;Twentysix</span> <span class="pre">wanted</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">kicked.</span></code></dt><dd><p>This will kick Twentysix from the server.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>If a reason is specified, it will be the reason that shows up
+in the audit log.</p>
+</section>
+<section id="massban">
+<span id="mod-command-massban"></span><h3>massban<a class="headerlink" href="#massban" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]massban &lt;user_ids...&gt; [days] [reason]
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Alias: <code class="docutils literal notranslate"><span class="pre">hackban</span></code></p>
+</div>
+<p><strong>Description</strong></p>
+<p>Mass bans user(s) from the server.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;user_ids...&gt;</span></code>: The users to ban. This must be a list of user IDs separated by spaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[days]</span></code>: The amount of days of messages to cleanup on massban.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason why these users were banned.</p></li>
+</ul>
+<p><strong>Example Usage</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]massban</span> <span class="pre">345628097929936898</span> <span class="pre">57287406247743488</span> <span class="pre">7</span> <span class="pre">they</span> <span class="pre">broke</span> <span class="pre">all</span> <span class="pre">rules.</span></code></dt><dd><p>This will ban all the added userids and delete 7 days worth of their messages.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="modset">
+<span id="mod-command-modset"></span><h3>modset<a class="headerlink" href="#modset" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Manage server administration settings.</p>
+<section id="modset-defaultdays">
+<span id="mod-command-modset-defaultdays"></span><h4>modset defaultdays<a class="headerlink" href="#modset-defaultdays" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset defaultdays [days=0]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the default number of days worth of messages to be deleted when a user is banned.</p>
+<p>The number of days must be between 0 and 7.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[days=0]</span></code>: The default number of days of messages to be deleted when a user is banned.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This value must be between 0 and 7.</p>
+</div>
+</section>
+<section id="modset-defaultduration">
+<span id="mod-command-modset-defaultduration"></span><h4>modset defaultduration<a class="headerlink" href="#modset-defaultduration" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset defaultduration &lt;duration&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the default time to be used when a user is tempbanned.</p>
+<p>Accepts: seconds, minutes, hours, days, weeks</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;duration&gt;</span></code>: The default duration for when a user is temporarily banned. Accepts seconds, minutes, hours, days or weeks.</p></li>
+</ul>
+<p><strong>Example Usage</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]modset</span> <span class="pre">defaultduration</span> <span class="pre">7d12h10m</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]modset</span> <span class="pre">defaultduration</span> <span class="pre">7</span> <span class="pre">days</span> <span class="pre">12</span> <span class="pre">hours</span> <span class="pre">10</span> <span class="pre">minutes</span></code></p></li>
+</ul>
+</section>
+<section id="modset-deletenames">
+<span id="mod-command-modset-deletenames"></span><h4>modset deletenames<a class="headerlink" href="#modset-deletenames" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset deletenames [confirmation=False]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Delete all stored usernames, global display names, and server nicknames.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;confirmation&gt;</span></code>: Whether to delete all stored usernames, global display names, and server nicknames. You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="modset-deleterepeats">
+<span id="mod-command-modset-deleterepeats"></span><h4>modset deleterepeats<a class="headerlink" href="#modset-deleterepeats" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset deleterepeats [repeats]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Enable auto-deletion of repeated messages.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[repeats]</span></code>: The number of repeated messages needed before further messages are deleted.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Must be between 2 and 20. Set to -1 to disable this feature.</p>
+</div>
+</section>
+<section id="modset-dm">
+<span id="mod-command-modset-dm"></span><h4>modset dm<a class="headerlink" href="#modset-dm" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset dm [enabled]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Toggle whether a message should be sent to a user when they are kicked/banned.</p>
+<p>If this option is enabled, the bot will attempt to DM the user with the guild name
+and reason as to why they were kicked/banned.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[enabled]</span></code>: Whether a message should be sent to a user when they are kicked/banned. You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="modset-hierarchy">
+<span id="mod-command-modset-hierarchy"></span><h4>modset hierarchy<a class="headerlink" href="#modset-hierarchy" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset hierarchy
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Toggle role hierarchy check for mods and admins.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Disabling this setting will allow mods to take actions on users above them in the role hierarchy!</p>
+</div>
+<p>This is enabled by default.</p>
+</section>
+<section id="modset-mentionspam">
+<span id="mod-command-modset-mentionspam"></span><h4>modset mentionspam<a class="headerlink" href="#modset-mentionspam" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset mentionspam
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Manage the automoderation settings for mentionspam.</p>
+</section>
+<section id="modset-mentionspam-ban">
+<span id="mod-command-modset-mentionspam-ban"></span><h4>modset mentionspam ban<a class="headerlink" href="#modset-mentionspam-ban" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset mentionspam ban &lt;max_mentions&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the autoban conditions for mention spam.</p>
+<p>Users will be banned if they send any message which contains more than
+<code class="docutils literal notranslate"><span class="pre">&lt;max_mentions&gt;</span></code> mentions.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;max_mentions&gt;</span></code>: Must be 0 or greater. Set to 0 to disable this feature.</p></li>
+</ul>
+</section>
+<section id="modset-mentionspam-kick">
+<span id="mod-command-modset-mentionspam-kick"></span><h4>modset mentionspam kick<a class="headerlink" href="#modset-mentionspam-kick" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset mentionspam kick &lt;max_mentions&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the autokick conditions for mention spam.</p>
+<p>Users will be kicked if they send any message which contains more than
+<code class="docutils literal notranslate"><span class="pre">&lt;max_mentions&gt;</span></code> mentions.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;max_mentions&gt;</span></code>: Must be 0 or greater. Set to 0 to disable this feature.</p></li>
+</ul>
+</section>
+<section id="modset-mentionspam-strict">
+<span id="mod-command-modset-mentionspam-strict"></span><h4>modset mentionspam strict<a class="headerlink" href="#modset-mentionspam-strict" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset mentionspam strict [enabled]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Setting to account for duplicate mentions.</p>
+<p>If enabled all mentions will count including duplicated mentions.
+If disabled only unique mentions will count.</p>
+<p>Use this command without any parameter to see the current setting.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[enabled]</span></code>: Whether all mentions will count, including duplicated mentions. You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="modset-mentionspam-warn">
+<span id="mod-command-modset-mentionspam-warn"></span><h4>modset mentionspam warn<a class="headerlink" href="#modset-mentionspam-warn" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset mentionspam warn &lt;max_mentions&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets the autowarn conditions for mention spam.</p>
+<p>Users will be warned if they send any messages which contain more than
+<code class="docutils literal notranslate"><span class="pre">&lt;max_mentions&gt;</span></code> mentions.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;max_mentions&gt;</span></code>: Must be 0 or greater. Set to 0 to disable this feature.</p></li>
+</ul>
+</section>
+<section id="modset-reinvite">
+<span id="mod-command-modset-reinvite"></span><h4>modset reinvite<a class="headerlink" href="#modset-reinvite" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset reinvite
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Toggle whether an invite will be sent to a user when unbanned.</p>
+<p>If this is True, the bot will attempt to create and send a single-use invite
+to the newly-unbanned user.</p>
+</section>
+<section id="modset-showsettings">
+<span id="mod-command-modset-showsettings"></span><h4>modset showsettings<a class="headerlink" href="#modset-showsettings" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset showsettings
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Show the current server administration settings.</p>
+</section>
+<section id="modset-trackallnames">
+<span id="mod-command-modset-trackallnames"></span><h4>modset trackallnames<a class="headerlink" href="#modset-trackallnames" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset trackallnames [enabled]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Toggle whether all name changes should be tracked.</p>
+<p>Toggling this off also overrides the tracknicknames setting.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[enabled]</span></code>: Whether all name changes should be tracked. You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+<section id="modset-tracknicknames">
+<span id="mod-command-modset-tracknicknames"></span><h4>modset tracknicknames<a class="headerlink" href="#modset-tracknicknames" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]modset tracknicknames [enabled]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Toggle whether server nickname changes should be tracked.</p>
+<p>This setting will be overridden if trackallnames is disabled.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[enabled]</span></code>: Whether all nickname changes should be tracked. You should provide either ‘true’ or ‘false’.</p></li>
+</ul>
+</section>
+</section>
+<section id="movedeletedelay">
+<span id="mod-command-movedeletedelay"></span><h3>movedeletedelay<a class="headerlink" href="#movedeletedelay" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]movedeletedelay
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Move deletedelay settings to core</p>
+</section>
+<section id="moveignoredchannels">
+<span id="mod-command-moveignoredchannels"></span><h3>moveignoredchannels<a class="headerlink" href="#moveignoredchannels" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]moveignoredchannels
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Move ignored channels and servers to core</p>
+</section>
+<section id="names">
+<span id="mod-command-names"></span><h3>names<a class="headerlink" href="#names" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]names &lt;member&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Show previous usernames, global display names, and server nicknames of a member.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+</ul>
+</section>
+<section id="rename">
+<span id="mod-command-rename"></span><h3>rename<a class="headerlink" href="#rename" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]rename &lt;member&gt; [nickname]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Change a member’s server nickname.</p>
+<p>Leaving the nickname argument empty will remove it.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[nickname]</span></code>: The new server nickname for the member.</p></li>
+</ul>
+</section>
+<section id="slowmode">
+<span id="mod-command-slowmode"></span><h3>slowmode<a class="headerlink" href="#slowmode" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]slowmode [interval=0:00:00]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Changes thread’s or channel’s slowmode setting.</p>
+<p>Interval can be anything from 0 seconds to 6 hours.
+Use without parameters to disable.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[interval=0:00:00]</span></code>: The time for the thread’s/channel’s slowmode settings.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Interval can be anything from 0 seconds to 6 hours.
+Use without parameters to disable.</p>
+</div>
+</section>
+<section id="softban">
+<span id="mod-command-softban"></span><h3>softban<a class="headerlink" href="#softban" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]softban &lt;member&gt; [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Kick a member and delete 1 day’s worth of their messages.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to softban. You can either mention the member, provide their ID, their exact
+name with the tag or not, or their nickname enclosed in quotes if there are spaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: Reason for the kick (optional).</p></li>
+</ul>
+</section>
+<section id="tempban">
+<span id="mod-command-tempban"></span><h3>tempban<a class="headerlink" href="#tempban" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]tempban &lt;member&gt; [duration] [days] [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Temporarily ban a user from this server.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to temporarily ban. You can either mention the member, provide their ID, their exact
+name with the tag or not, or their nickname enclosed in quotes if there are spaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[duration]</span></code>: The amount of time the user should be banned for.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[days]</span></code>: The amount of days of messages to cleanup on tempban.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason for the tempban (optional).</p></li>
+</ul>
+<p><strong>Example Usage</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]tempban</span> <span class="pre">&#64;Twentysix</span> <span class="pre">Because</span> <span class="pre">I</span> <span class="pre">say</span> <span class="pre">so</span></code></dt><dd><p>This will ban Twentysix for the default amount of time set by an administrator.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]tempban</span> <span class="pre">&#64;Twentysix</span> <span class="pre">15m</span> <span class="pre">You</span> <span class="pre">need</span> <span class="pre">a</span> <span class="pre">timeout</span></code></dt><dd><p>This will ban Twentysix for 15 minutes.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[p]tempban</span> <span class="pre">428675506947227648</span> <span class="pre">1d2h15m</span> <span class="pre">5</span> <span class="pre">Evil</span> <span class="pre">person</span></code></dt><dd><p>This will ban the user with ID 428675506947227648 for 1 day 2 hours 15 minutes and will delete the last 5 days of their messages.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="unban">
+<span id="mod-command-unban"></span><h3>unban<a class="headerlink" href="#unban" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]unban &lt;user_id&gt; [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Unban a user from this server.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;user_id&gt;</span></code>: You can either provide the member’s ID or their exact name with the tag or
+not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason for the unban (optional).</p></li>
+</ul>
+</section>
+<section id="userinfo">
+<span id="mod-command-userinfo"></span><h3>userinfo<a class="headerlink" href="#userinfo" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]userinfo [member]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Show information about a user.</p>
+<p>This includes fields for status, discord join date, server
+join date, voice state and previous usernames/global display names/nicknames.</p>
+<p>If the user has no roles, previous usernames, global display names, or server nicknames,
+these fields will be omitted.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[member]</span></code>: You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+</ul>
+</section>
+<section id="voiceban">
+<span id="mod-command-voiceban"></span><h3>voiceban<a class="headerlink" href="#voiceban" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]voiceban &lt;member&gt; [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Ban a user from speaking and listening in the server’s voice channels.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to ban from voice. You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason for the voiceban (optional).</p></li>
+</ul>
+</section>
+<section id="voicekick">
+<span id="mod-command-voicekick"></span><h3>voicekick<a class="headerlink" href="#voicekick" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]voicekick &lt;member&gt; [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Kick a member from a voice channel.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason for the voicekick (optional).</p></li>
+</ul>
+</section>
+<section id="voiceunban">
+<span id="mod-command-voiceunban"></span><h3>voiceunban<a class="headerlink" href="#voiceunban" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]voiceunban &lt;member&gt; [reason]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Unban a user from speaking and listening in the server’s voice channels.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;member&gt;</span></code>: The member to unban from voice. You can either mention the member, provide their ID, their exact
+name with the tag or not, or their nickname enclosed in quotes if there are spaces.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[reason]</span></code>: The reason for the voiceunban (optional).</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="permissions.html" class="btn btn-neutral float-left" title="Permissions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modlog.html" class="btn btn-neutral float-right" title="ModLog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

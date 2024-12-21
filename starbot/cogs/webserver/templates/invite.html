@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}Starfire Information{% endblock %}
+
+{% block extra_css %}
+<style>
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .header-content img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    .stats-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px 0;
+    }
+    .stat-card {
+        background: linear-gradient(135deg, #4e5d94, #2c3e50);
+        border-radius: 8px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        width: 180px;
+        color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .stat-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(139, 0, 0, 0.4);
+    }
+    .stat-number {
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+    .stat-label {
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+    .feature-item {
+        background-color: #2a2e35;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    .feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .feature-item strong {
+        font-size: 1.2em;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 10px;
+    }
+    .invite-links {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        margin: 10px;
+        display: inline-block;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="header-content">
+    <img id="bot-avatar" src="" alt="Starfire Avatar">
+    <h1>Starfire: Your Ultimate Discord Bot!</h1>
+</div>
+
+<p style="text-align: center" class="tagline">Unleash the Power of 1,100+ Commands</p>
+
+<div class="stats-container">
+    <div class="stat-card">
+        <div class="stat-label">Servers</div>
+        <div class="stat-number" id="server-count">...</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Users</div>
+        <div class="stat-number" id="user-count">...</div>
+    </div>
+</div>
+
+<p style="text-align: center;">Starfire is more than just a bot; it's your <strong>versatile Discord companion</strong>. With over <strong>1,100 commands</strong> at your fingertips, Starfire can handle virtually <strong>any task</strong>, making it an <strong>indispensable tool</strong> for your server.</p>
+
+<div class="feature-grid">
+    <div class="feature-item"><strong>AI Integration</strong>Experience the power of artificial intelligence in your server.</div>
+    <div class="feature-item"><strong>Anti-Nuke & Anti-Raid</strong>Keep your server safe and secure from malicious attacks.</div>
+    <div class="feature-item"><strong>Fun and Games</strong>Enjoy economy, slots, and exciting seasonal events.</div>
+    <div class="feature-item"><strong>Extensive Customization</strong>Tailor Starfire to your server's specific needs.</div>
+    <div class="feature-item"><strong>Comprehensive Docs</strong>Easy-to-follow <a href="https://docs.prismbot.icu" target="_blank" rel="noopener noreferrer">documentation</a> for all features.</div>
+    <div class="feature-item"><strong>Music Playback</strong>High-quality music streaming for voice channels.</div>
+    <div class="feature-item"><strong>Advanced Analytics</strong>Gain insights into your server's activity.</div>
+    <div class="feature-item"><strong>Multi-language Support</strong>Communicate with Starfire in various languages.</div>
+    <div class="feature-item"><strong>Custom Notifications</strong>Set up tailored alerts for your community.</div>
+</div>
+
+<p style="text-align: center; margin-top: 40px;">
+    Whether you're managing a small community or a large server, Starfire adapts to your needs, providing unparalleled functionality and ease of use. Join thousands of servers already benefiting from Starfire's capabilities!
+</p>
+
+<div class="invite-links">
+    {% for name, link in invite_links.items() %}
+        <a href="{{ link }}" class="btn" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<div id="loading">Loading...</div>
+<div id="stats" style="display: none;">
+    Servers: <span id="server-count"></span><br>
+    Users: <span id="user-count"></span>
+</div>
+<img id="bot-avatar" alt="Bot Avatar">
+
+<script>
+    function updateStats() {
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('stats').style.display = 'none';
+
+        fetch('/bot-stats')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('server-count').textContent = data.server_count.toLocaleString();
+                document.getElementById('user-count').textContent = data.user_count.toLocaleString();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('stats').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error fetching bot stats:', error);
+                document.getElementById('loading').textContent = 'Error loading stats. Please try again later.';
+            });
+    }
+
+    updateStats();
+    setInterval(updateStats, 300000);
+
+    fetch('/bot-info')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('bot-avatar').src = data.avatar;
+        })
+        .catch(error => {
+            console.error('Error fetching bot info:', error);
+        });
+</script>
+{% endblock %}

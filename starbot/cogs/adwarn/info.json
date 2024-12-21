@@ -1,0 +1,17 @@
+{
+    "author": ["Star"],
+    "name": "AdWarn",
+    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. This cog can only be ran by you, the bot owner. If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>).\nMake sure you set the proper channel up for adwarns to be posted in, optionally setup the automated voice channel that displays the most recently adwarned user.",
+    "short": "Adwarn users for their ads they sent",
+    "description": "Allows adwarning of advertisements users send in advertisement servers to allow better `open-moderation` and keep the rules in check too",
+    "tags": [
+        "adwarn",
+        "advertise_warn"
+    ],
+    "requirements": [
+        "git+https://github.com/LeDeathAmongst/Star_Utils.git"
+    ],
+    "min_bot_version": "3.5.11",
+    "end_user_data_statement": "",
+    "hidden": false
+}

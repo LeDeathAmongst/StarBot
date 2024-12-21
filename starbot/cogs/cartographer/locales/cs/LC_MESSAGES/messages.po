@@ -1,0 +1,666 @@
+# Czech translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:35+0100\n"
+"PO-Revision-Date: 2024-10-14 04:37+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: cs\n"
+"Language-Team: cs <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: main.py:155 main.py:203 main.py:230
+msgid "This server is in the ingored list!"
+msgstr "Tento server je v ingorovaném seznamu!"
+msgstr ""
+
+#: main.py:158 main.py:206 main.py:233
+msgid "This server is not in the allowed list!"
+msgstr "Tento server není na seznamu povolených!"
+msgstr ""
+
+#: main.py:185
+msgid "Please confirm this action by passing `True` as an argument"
+msgstr "Potvrďte prosím tuto akci zadáním „True“ jako argumentu"
+msgstr ""
+
+#: main.py:193
+msgid "All backups have been wiped!"
+msgstr "Všechny zálohy byly vymazány!"
+msgstr ""
+
+#: main.py:220
+msgid "A backup has been created!"
+msgstr "Byla vytvořena záloha!"
+msgstr ""
+
+#: main.py:239
+msgid "There are no backups for this guild!"
+msgstr "Pro tento cech neexistují žádné zálohy!"
+msgstr ""
+
+#: main.py:244
+msgid "Server restore is complete!"
+msgstr "Obnovení serveru je dokončeno!"
+msgstr ""
+
+#: common/views.py:286 main.py:246
+msgid "The following errors occurred while restoring the backup"
+msgstr "Při obnově zálohy došlo k následujícím chybám"
+msgstr ""
+
+#: main.py:260 main.py:261
+msgid "**None Set**"
+msgstr "**Žádná sada**"
+msgstr ""
+
+#: main.py:263
+msgid ""
+msgstr ""
+"### Global Settings\n"
+"- Global backups: {}\n"
+"- Max backups per server: {}\n"
+"- Allow auto-backups: {}\n"
+"- Message backup limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+"- Ignored servers: {}\n"
+"- Allowed servers: {}\n"
+msgstr ""
+
+#: main.py:295
+msgid "Auto backups have been **Disabled**"
+msgstr "Automatické zálohování bylo **Vypnuto**"
+msgstr ""
+
+#: main.py:298
+msgid "Auto backups have been **Enabled**"
+msgstr "Automatické zálohování bylo **Povoleno**"
+msgstr ""
+
+#: main.py:313
+msgid "Limit must be 0 or higher"
+msgstr "Limit musí být 0 nebo vyšší"
+msgstr ""
+
+#: main.py:316
+msgid "Message backup has been **Disabled**"
+msgstr "Zálohování zpráv bylo **Zakázáno**"
+msgstr ""
+
+#: main.py:318
+msgid "Message backup limit has been set"
+msgstr "Limit zálohování zpráv byl nastaven"
+msgstr ""
+
+#: main.py:330
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring the roles of all members can be slow for large servers."
+msgstr ""
+
+#: main.py:332
+msgid "Members will now be backed up"
+msgstr "Členové budou nyní zálohováni"
+msgstr ""
+
+#: main.py:334
+msgid "Members will no longer be backed up"
+msgstr "Členové již nebudou zálohováni"
+msgstr ""
+
+#: main.py:347
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Any roles above the bot's role will not be restored."
+msgstr ""
+
+#: main.py:349
+msgid "Roles will now be backed up"
+msgstr "Role budou nyní zálohovány"
+msgstr ""
+
+#: main.py:351
+msgid "Roles will no longer be backed up"
+msgstr "Role již nebudou zálohovány"
+msgstr ""
+
+#: main.py:364
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring emojis is EXTREMELY rate-limited and can take a long time (like"
+" hours) for servers with many emojis."
+msgstr ""
+
+#: main.py:368
+msgid "Emojis will now be backed up"
+msgstr "Emojis budou nyní zálohovány"
+msgstr ""
+
+#: main.py:370
+msgid "Emojis will no longer be backed up"
+msgstr "Emoji se již nebudou zálohovat"
+msgstr ""
+
+#: main.py:383
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring stickers is EXTREMELY rate-limited and can take a long time "
+"(like hours) for servers with many stickers."
+msgstr ""
+
+#: main.py:387
+msgid "Stickers will now be backed up"
+msgstr "Nálepky budou nyní zálohovány"
+msgstr ""
+
+#: main.py:389
+msgid "Stickers will no longer be backed up"
+msgstr "Nálepky se již nebudou zálohovat"
+msgstr ""
+
+#: main.py:399
+msgid "Max backups set to 0, Cartographer has been **Disabled**"
+msgstr "Maximální počet záloh nastaven na 0, Kartograf byl **Zakázán**"
+msgstr ""
+
+#: main.py:401
+msgid "Max backup count has been set"
+msgstr "Byl nastaven maximální počet záloh"
+msgstr ""
+
+#: main.py:411
+msgid "Server removed from the ignore list"
+msgstr "Server odstraněn ze seznamu ignorovaných"
+msgstr ""
+
+#: main.py:414
+msgid "Server added to the ignore list"
+msgstr "Server přidán do seznamu ignorovaných"
+msgstr ""
+
+#: main.py:424
+msgid "Server removed from the allow list"
+msgstr "Server odstraněn ze seznamu povolených"
+msgstr ""
+
+#: main.py:427
+msgid "Server added to the allow list"
+msgstr "Server přidán do seznamu povolených"
+msgstr ""
+
+#: common/formatting.py:17
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:           `{}\n"
+"`Created:        `{}\n"
+"`AFK Channel:    `{}\n"
+"`AFK Timeout:    `{}\n"
+"`Verification:   `{}\n"
+"`Notifications:  `{}\n"
+"`Locale:         `{}\n"
+"`Emojis:         `{}\n"
+"`Stickers:       `{}\n"
+"`Role Count:     `{}\n"
+"`Members Saved:  `{}\n"
+"`Bans:           `{}\n"
+"`Categories:     `{}\n"
+"`Text Channels:  `{} ({} messages)\n"
+"`Voice Channels: `{} ({} messages)\n"
+"`Forums:         `{}\n"
+msgstr ""
+
+#: common/serializers.py:121 common/serializers.py:132
+#: common/serializers.py:164 common/serializers.py:204
+#: common/serializers.py:211 common/serializers.py:342
+#: common/serializers.py:356 common/serializers.py:709
+#: common/serializers.py:809 common/serializers.py:826
+#: common/serializers.py:894 common/serializers.py:901
+#: common/serializers.py:945 common/serializers.py:954
+msgid "Restored from backup"
+msgstr "Obnoveno ze zálohy"
+msgstr ""
+
+#: common/serializers.py:207
+msgid "Failed to add the following roles to {}: {} - {}\n"
+msgstr "Do {} se nepodařilo přidat následující role: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:214
+msgid "Failed to remove the following roles from {}: {} - {}\n"
+msgstr "Odebrání následujících rolí z {} se nezdařilo: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:290
+msgid "Channel {} missing role or member overwrite: {} - {}\n"
+msgstr "V kanálu {} chybí role nebo je přepsán člen: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+#: common/serializers.py:1127
+msgid "Cartographer Restore"
+msgstr "Obnovení kartografu"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+msgid "Restoring messages from backup"
+msgstr "Obnovení zpráv ze zálohy"
+msgstr ""
+
+#: common/serializers.py:1088
+msgid "Restoring backup"
+msgstr "Obnovování zálohy"
+msgstr ""
+
+#: common/serializers.py:1092
+msgid "Restoring server settings"
+msgstr "Obnovení nastavení serveru"
+msgstr ""
+
+#: common/serializers.py:1093
+msgid "Step 1 of 9"
+msgstr "Krok 1 z 9"
+msgstr ""
+
+#: common/serializers.py:1095
+msgid "Restoring roles"
+msgstr "Obnovení rolí"
+msgstr ""
+
+#: common/serializers.py:1096
+msgid "Step 2 of 9"
+msgstr "Krok 2 z 9"
+msgstr ""
+
+#: common/serializers.py:1098
+msgid "Restoring emojis and stickers"
+msgstr "Obnovení emotikonů a nálepek"
+msgstr ""
+
+#: common/serializers.py:1099
+msgid "Step 3 of 9"
+msgstr "Krok 3 z 9"
+msgstr ""
+
+#: common/serializers.py:1101
+msgid "Restoring channels"
+msgstr "Obnovení kanálů"
+msgstr ""
+
+#: common/serializers.py:1102
+msgid "Step 4 of 9"
+msgstr "Krok 4 z 9"
+msgstr ""
+
+#: common/serializers.py:1104
+msgid "Restoring AFK settings"
+msgstr "Obnovení nastavení AFK"
+msgstr ""
+
+#: common/serializers.py:1105
+msgid "Step 5 of 9"
+msgstr "Krok 5 z 9"
+msgstr ""
+
+#: common/serializers.py:1107
+msgid "Restoring system channels"
+msgstr "Obnovení systémových kanálů"
+msgstr ""
+
+#: common/serializers.py:1108
+msgid "Step 6 of 9"
+msgstr "Krok 6 z 9"
+msgstr ""
+
+#: common/serializers.py:1110
+msgid "Restoring remainder of the server settings"
+msgstr "Obnovení zbývajících nastavení serveru"
+msgstr ""
+
+#: common/serializers.py:1111
+msgid "Step 7 of 9"
+msgstr "Krok 7 z 9"
+msgstr ""
+
+#: common/serializers.py:1113
+msgid "Restoring member roles"
+msgstr "Obnovení rolí členů"
+msgstr ""
+
+#: common/serializers.py:1114
+msgid "Step 8 of 9"
+msgstr "Krok 8 z 9"
+msgstr ""
+
+#: common/serializers.py:1116
+msgid "Restoring bans"
+msgstr "Obnovení zákazů"
+msgstr ""
+
+#: common/serializers.py:1117
+msgid "Step 9 of 9"
+msgstr "Krok 9 z 9"
+msgstr ""
+
+#: common/serializers.py:1119
+msgid "Restoration complete!"
+msgstr "Obnova dokončena!"
+msgstr ""
+
+#: common/serializers.py:1123
+msgid "Server restoration took {}"
+msgstr "Obnovení serveru trvalo {}"
+msgstr ""
+
+#: common/serializers.py:1146
+msgid "Banner too large to restore\n"
+msgstr "Banner je pro obnovení příliš velký\n"
+msgstr ""
+
+#: common/serializers.py:1149
+msgid "Icon too large to restore\n"
+msgstr "Ikona je pro obnovení příliš velká\n"
+msgstr ""
+
+#: common/serializers.py:1152
+msgid "Splash too large to restore\n"
+msgstr "Splash příliš velký pro obnovení\n"
+msgstr ""
+
+#: common/serializers.py:1155
+msgid "Discovery splash too large to restore\n"
+msgstr "Splash zjišťování je příliš velký na obnovení\n"
+msgstr ""
+
+#: common/serializers.py:1254
+msgid ""
+msgstr ""
+"Backup has more emojis than the target server can hold. Some emojis will "
+"not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1258
+msgid "Emoji '{}' not restored due to limit\n"
+msgstr "Emoji '{}' nebylo obnoveno kvůli limitu\n"
+msgstr ""
+
+#: common/serializers.py:1282
+msgid ""
+msgstr ""
+"Backup has more stickers than the target server can hold. Some stickers "
+"will not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1286
+msgid "Sticker '{}' not restored due to limit\n"
+msgstr "Nálepka '{}' nebyla obnovena kvůli limitu\n"
+msgstr ""
+
+#: common/serializers.py:1326
+msgid ""
+msgstr ""
+"This channel isn't part of the backup, it can be deleted after the "
+"restore is complete."
+msgstr ""
+
+#: common/views.py:43
+msgid "That is not a number!"
+msgstr "To není číslo!"
+msgstr ""
+
+#: common/views.py:54
+msgid "Confirmation"
+msgstr "Potvrzení"
+msgstr ""
+
+#: common/views.py:57
+msgid "THIS CANNOT BE UNDONE!"
+msgstr "TOTO NELZE VRÁTIT!"
+msgstr ""
+
+#: common/views.py:59
+msgid "Are you SURE?"
+msgstr "JSTE JISTÝ?"
+msgstr ""
+
+#: common/views.py:67
+msgid "How many messages to backup? (0 = None)"
+msgstr "Kolik zpráv zálohovat? (0 = žádné)"
+msgstr ""
+
+#: common/views.py:77
+msgid "response must be a string!"
+msgstr "odpověď musí být řetězec!"
+msgstr ""
+
+#: common/views.py:80
+msgid "Message backup limit must be a number!"
+msgstr "Limit zálohování zpráv musí být číslo!"
+msgstr ""
+
+#: common/views.py:101
+msgid "Close"
+msgstr "Blízko"
+msgstr ""
+
+#: common/views.py:104
+msgid "Cartographer Backups"
+msgstr "Zálohy kartografů"
+msgstr ""
+
+#: common/views.py:105
+msgid "Controls"
+msgstr "Ovládací prvky"
+msgstr ""
+
+#: common/views.py:106
+msgid ""
+msgstr ""
+"- Backup Current Server: 📥\n"
+"- Restore Here: 🔄\n"
+"- Switch Servers: 🔍\n"
+"- Set AutoBackup Interval: ⌛\n"
+"- Delete Backup: 🗑️\n"
+"- Print Details: ℹ️\n"
+msgstr ""
+
+#: common/views.py:114
+msgid "Settings"
+msgstr "Nastavení"
+msgstr ""
+
+#: common/views.py:115
+msgid ""
+msgstr ""
+"- Auto Backup Interval Hours: {}\n"
+"- Last Backup: {}\n"
+"## Global Settings\n"
+"-# The following settings are configured by the bot owner\n"
+"- Max Backups Per Guild: {}\n"
+"- Backup Message Limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+msgstr ""
+
+#: common/views.py:142
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:    `{}\n"
+"`Created: `{}\n"
+msgstr ""
+
+#: common/views.py:150
+msgid "Page {}"
+msgstr "strana {}"
+msgstr ""
+
+#: common/views.py:152
+msgid "There are no backups for this server yet!"
+msgstr "Pro tento server zatím nejsou žádné zálohy!"
+msgstr ""
+
+#: common/views.py:161
+msgid "This isn't your menu!"
+msgstr "Toto není vaše menu!"
+msgstr ""
+
+#: common/views.py:198 common/views.py:257
+msgid "I need administrator permissions to restore a backup in this server!"
+msgstr "K obnovení zálohy na tomto serveru potřebuji oprávnění správce!"
+msgstr ""
+
+#: common/views.py:208 common/views.py:271
+msgid "Restore has been cancelled!"
+msgstr "Obnovení bylo zrušeno!"
+msgstr ""
+
+#: common/views.py:212
+msgid "The maximum amount of messages that can be backed up per channel is {}!"
+msgstr "Maximální počet zpráv, které lze zálohovat na kanál, je {}!"
+msgstr ""
+
+#: common/views.py:221
+msgid ""
+msgstr ""
+"Warning! I need to have the highest role in the server to restore roles "
+"properly!"
+msgstr ""
+
+#: common/views.py:224
+msgid ""
+msgstr ""
+"Backing up {}!\n"
+"-# This may take a while..."
+msgstr ""
+
+#: common/views.py:226
+msgid "Backup in Progress"
+msgstr "Probíhá zálohování"
+msgstr ""
+
+#: common/views.py:243
+msgid ""
+msgstr ""
+"An error occurred while backing up the server!\n"
+"{}"
+msgstr ""
+
+#: common/views.py:247
+msgid "Backup created in {}!"
+msgstr "Záloha vytvořena v {}!"
+msgstr ""
+
+#: common/views.py:247
+msgid "0 seconds"
+msgstr "0 sekund"
+msgstr ""
+
+#: common/views.py:248
+msgid "Backup Created"
+msgstr "Záloha vytvořena"
+msgstr ""
+
+#: common/views.py:261
+msgid "No backups to restore!"
+msgstr "Žádné zálohy k obnovení!"
+msgstr ""
+
+#: common/views.py:280
+msgid "Your backup is being restored!"
+msgstr "Vaše záloha se obnovuje!"
+msgstr ""
+
+#: common/views.py:291
+msgid "Switch Servers"
+msgstr "Přepnout servery"
+msgstr ""
+
+#: common/views.py:291
+msgid "Server ID"
+msgstr "ID serveru"
+msgstr ""
+
+#: common/views.py:291
+msgid "Enter the ID of the server"
+msgstr "Zadejte ID serveru"
+msgstr ""
+
+#: common/views.py:298
+msgid "I am not in that server!"
+msgstr "Nejsem na tom serveru!"
+msgstr ""
+
+#: common/views.py:302
+msgid "You do not appear to be in that server!"
+msgstr "Zdá se, že nejste na tomto serveru!"
+msgstr ""
+
+#: common/views.py:305
+msgid "You can only switch to servers that you are an administrator of!"
+msgstr "Přepnout můžete pouze na servery, kterých jste správcem!"
+msgstr ""
+
+#: common/views.py:314
+msgid "Auto backups have been disabled by the bot owner!"
+msgstr "Automatické zálohování bylo zakázáno vlastníkem robota!"
+msgstr ""
+
+#: common/views.py:316
+msgid "Auto Backup Interval"
+msgstr "Interval automatického zálohování"
+msgstr ""
+
+#: common/views.py:316
+msgid "Interval Hours"
+msgstr "Intervalové hodiny"
+msgstr ""
+
+#: common/views.py:316
+msgid "Hours in-between backups"
+msgstr "Hodiny mezi zálohami"
+msgstr ""
+
+#: common/views.py:322
+msgid "Auto-backup interval hours has been set to {}"
+msgstr "Hodiny intervalu automatického zálohování byly nastaveny na {}"
+msgstr ""
+
+#: common/views.py:334
+msgid "No backups to delete!"
+msgstr "Žádné zálohy k odstranění!"
+msgstr ""
+
+#: common/views.py:341
+msgid "Backup deleted!"
+msgstr "Záloha smazána!"
+msgstr ""
+
+#: common/views.py:349
+msgid "No backups to get info for!"
+msgstr "Žádné zálohy pro získání informací!"
+msgstr ""
+

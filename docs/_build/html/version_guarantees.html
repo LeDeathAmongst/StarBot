@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versioning &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Utility Functions" href="framework_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#developer-guarantees">Developer Guarantees</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exclusions">Exclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Versioning</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developversion_guarantees.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="versioning">
+<span id="version-guarantees"></span><h1>Versioning<a class="headerlink" href="#versioning" title="Link to this heading"></a></h1>
+<p>Red is versioned as <code class="docutils literal notranslate"><span class="pre">major.minor.micro</span></code></p>
+<p>While this is very similar to SemVer, we have our own set of guarantees.</p>
+<p>Major versions are for project wide rewrites and are not expected in the foreseeable future.</p>
+</section>
+<section id="end-user-guarantees">
+<span id="id1"></span><h1>End-user Guarantees<a class="headerlink" href="#end-user-guarantees" title="Link to this heading"></a></h1>
+<p>Red <a class="reference internal" href="install_guides/index.html"><span class="doc">provides support for wide variety of operating systems</span></a>.</p>
+<p>Support for an entire operating system (including support for any single architecture on that system)
+may only be dropped in a minor or major version bump.</p>
+<p>Red will continue to, at the very least, support current latest stable version of
+each operating system + architecture that were supported by previous micro versions.</p>
+<p>In addition to that, we strive (but do not guarantee) to provide support for all versions that
+are currently supported by operating system’s developers per the table below.
+We generally drop support for no longer supported OS versions as soon as they reached
+their end-of-life date.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend to always use the latest OS version supported by Red.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The meaning of architecture names:</p>
+<ul class="simple">
+<li><p><strong>x86-64</strong> (also known as amd64) refers to computers running a 64-bit version of the operating system
+on standard Intel and AMD 64-bit processors supporting x86-64-v2 instruction set
+(post-2008 Intel processors and post-2011 AMD processors).</p></li>
+<li><p><strong>aarch64</strong> (also known as arm64) refers to computers running an ARM 64-bit version of the operating system
+on 64-bit ARM processors (ARMv8-A and ARMv9-A) such as Apple M1 devices or Raspberry Pi computers
+(Raspberry Pi 3B and above, excluding Pi Zero (W/WH) model).</p></li>
+<li><p><strong>armv7l</strong> (also known as armhf) refers to computers running an ARMv7 version of the operating system
+on 32-bit or 64-bit ARM processors (ARMv7-A, ARMv8-A, ARMv9-A) such as Raspberry Pi computers
+(2B and above, excluding Pi Zero (W/WH) model).</p></li>
+</ul>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operating system version</p></th>
+<th class="head"><p>Supported architectures</p></th>
+<th class="head"><p>Ideally supported until</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows 10</p></td>
+<td><p>x86-64</p></td>
+<td><p>2025-10-14 (<a class="reference external" href="https://docs.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro">End/Retirement Date</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows 11</p></td>
+<td><p>x86-64</p></td>
+<td><p><a class="reference external" href="https://docs.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro-version-21h2">Retirement Date</a></p></td>
+</tr>
+<tr class="row-even"><td><p>macOS 12 (Monterey)</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>~2024-10</p></td>
+</tr>
+<tr class="row-odd"><td><p>macOS 13 (Ventura)</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>~2025-10</p></td>
+</tr>
+<tr class="row-even"><td><p>macOS 14 (Sonoma)</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>~2026-10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alma Linux 8</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2029-05-31 (<a class="reference external" href="https://wiki.almalinux.org/FAQ.html#how-long-will-almalinux-be-supported">How long will CloudLinux support AlmaLinux?</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Alma Linux 9</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2032-05-31</p></td>
+</tr>
+<tr class="row-odd"><td><p>Amazon Linux 2023</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2028-03-15 (<a class="reference external" href="https://docs.aws.amazon.com/linux/al2023/release-notes/support-info-by-support-statement.html#support-info-by-support-statement-eol">end-of-life</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Arch Linux</p></td>
+<td><p>x86-64</p></td>
+<td><p>forever (support is only provided for an up-to-date system)</p></td>
+</tr>
+<tr class="row-odd"><td><p>CentOS Stream 9</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2027-05-31 (<a class="reference external" href="https://centos.org/stream9/#timeline">expected EOL</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Debian 11 Bullseye</p></td>
+<td><p>x86-64, aarch64, armv7l</p></td>
+<td><p>~2024-07 (<a class="reference external" href="https://wiki.debian.org/DebianReleases#Production_Releases">End of life</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debian 12 Bookworm</p></td>
+<td><p>x86-64, aarch64, armv7l</p></td>
+<td><p>~2026-09 (<a class="reference external" href="https://wiki.debian.org/DebianReleases#Production_Releases">End of life</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora Linux 39</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2024-11-12 (<a class="reference external" href="https://docs.fedoraproject.org/en-US/releases/lifecycle/#_maintenance_schedule">End of Life</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fedora Linux 40</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2025-05-13 (<a class="reference external" href="https://docs.fedoraproject.org/en-US/releases/lifecycle/#_maintenance_schedule">End of Life</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>openSUSE Leap 15.5</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2024-12-31 (<a class="reference external" href="https://en.opensuse.org/Lifetime#openSUSE_Leap">end of maintenance life cycle</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>openSUSE Tumbleweed</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>forever (support is only provided for an up-to-date system)</p></td>
+</tr>
+<tr class="row-even"><td><p>Oracle Linux 8</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2029-07-31 (<a class="reference external" href="https://www.oracle.com/us/support/library/elsp-lifetime-069338.pdf">End of Premier Support</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oracle Linux 9</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2032-06-31 (<a class="reference external" href="https://www.oracle.com/us/support/library/elsp-lifetime-069338.pdf">End of Premier Support</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Raspberry Pi OS (Legacy) 11</p></td>
+<td><p>armv7l</p></td>
+<td><p>~2025-10 (approximate date of release of Raspberry Pi OS 13)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Raspberry Pi OS 12</p></td>
+<td><p>aarch64, armv7l</p></td>
+<td><p>~2025-10 (approximate date of release of Raspberry Pi OS 13)</p></td>
+</tr>
+<tr class="row-even"><td><p>RHEL 8 (latest)</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2029-05-31 (<a class="reference external" href="https://access.redhat.com/support/policy/updates/errata#Life_Cycle_Dates">End of Maintenance Support</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>RHEL 8.8</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2025-05-31 (<a class="reference external" href="https://access.redhat.com/support/policy/updates/errata#Extended_Update_Support">End of Extended Update Support</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>RHEL 8.10</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2029-05-31 (<a class="reference external" href="https://access.redhat.com/support/policy/updates/errata#Extended_Update_Support">End of Extended Update Support</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>RHEL 9 (latest)</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2032-05-31 (<a class="reference external" href="https://access.redhat.com/support/policy/updates/errata#Life_Cycle_Dates">End of Maintenance Support</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>RHEL 9.2</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2025-05-31 (<a class="reference external" href="https://access.redhat.com/support/policy/updates/errata#Extended_Update_Support">End of Extended Update Support</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>RHEL 9.4</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2026-04-30 (<a class="reference external" href="https://access.redhat.com/support/policy/updates/errata#Extended_Update_Support">End of Extended Update Support</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Rocky Linux 8</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2029-05-31 (<a class="reference external" href="https://rockylinux.org/download/">end-of-life</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rocky Linux 9</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2032-05-31 (<a class="reference external" href="https://rockylinux.org/download/">end-of-life</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu 20.04 LTS</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2025-06-30 (<a class="reference external" href="https://wiki.ubuntu.com/Releases#Current">End of Standard Support</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu 22.04 LTS</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2027-06-30 (<a class="reference external" href="https://wiki.ubuntu.com/Releases#Current">End of Standard Support</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu 23.10</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2024-07-31 (<a class="reference external" href="https://wiki.ubuntu.com/Releases#Current">End of Standard Support</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu 24.04 LTS</p></td>
+<td><p>x86-64, aarch64</p></td>
+<td><p>2029-06-30 (<a class="reference external" href="https://wiki.ubuntu.com/Releases#Current">End of Standard Support</a>)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="developer-guarantees">
+<span id="id2"></span><h1>Developer Guarantees<a class="headerlink" href="#developer-guarantees" title="Link to this heading"></a></h1>
+<p>Any name (function, class, attribute) listed in the <code class="docutils literal notranslate"><span class="pre">__all__</span></code> attribute of
+the <code class="docutils literal notranslate"><span class="pre">starbot</span></code> module (excluding its submodules), <code class="docutils literal notranslate"><span class="pre">starbot.core</span></code> package,
+or any of its public submodules (modules that do not start with “_”)
+is considered a public API and should not break without notice.</p>
+<p>Methods of public classes are considered public if they do not start with “_”
+or are dunder methods (e.g. <code class="docutils literal notranslate"><span class="pre">method()</span></code> and <code class="docutils literal notranslate"><span class="pre">__getattr__()</span></code> are public but <code class="docutils literal notranslate"><span class="pre">_method()</span></code> isn’t).</p>
+<p>Any other name (function, class, attribute) in the <code class="docutils literal notranslate"><span class="pre">starbot</span></code> package is considered private,
+even if it doesn’t start with “_”.
+Lack of <code class="docutils literal notranslate"><span class="pre">__all__</span></code> in the module means that all of its names are considered private APIs.</p>
+<p>Anything in the <code class="docutils literal notranslate"><span class="pre">starbot.cogs</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.vendored</span></code> modules or any of their submodules is specifically
+excluded from being guaranteed.</p>
+<p>Method names and names of attributes of classes, functions, extensions, and modules
+provided by or provided to the bot should not begin with
+<code class="docutils literal notranslate"><span class="pre">red_</span></code> or be of the form <code class="docutils literal notranslate"><span class="pre">__red_*__</span></code> except as documented.
+This allows us to add certain optional features non-breakingly without a name conflict.</p>
+<p>Any RPC method exposed by Red may break without notice.</p>
+<p>If you would like something in here to be guaranteed,
+open an issue making a case for it to be moved.</p>
+<section id="exclusions">
+<span id="developer-guarantees-exclusions"></span><h2>Exclusions<a class="headerlink" href="#exclusions" title="Link to this heading"></a></h2>
+<p>Any exclusion from these guarantees should be noted in the documentation of
+the affected attribute, function, class, or method. The term “provisional”
+may be used in documentation to note such exclusions.</p>
+</section>
+</section>
+<section id="breaking-change-notices">
+<span id="id3"></span><h1>Breaking Change Notices<a class="headerlink" href="#breaking-change-notices" title="Link to this heading"></a></h1>
+<p>Breaking changes in Red will be noted in the changelog with a special section.</p>
+<p>Breaking changes may only occur on a minor or major version bump.</p>
+<p>A change not covered by our guarantees may not be considered breaking for these purposes,
+while still being documented as a breaking change in internal documentation
+for the purposes of other internal APIs.</p>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="framework_utils.html" class="btn btn-neutral float-left" title="Utility Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

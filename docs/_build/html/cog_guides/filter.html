@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filter &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General" href="general.html" />
+    <link rel="prev" title="Economy" href="economy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#filter-command-filter">filter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#filter-add">filter add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-channel">filter channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-channel-add">filter channel add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-channel-clear">filter channel clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-channel-list">filter channel list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-channel-remove">filter channel remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-clear">filter clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-delete">filter delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-list">filter list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter-names">filter names</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#filterset">filterset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#filterset-ban">filterset ban</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filterset-defaultname">filterset defaultname</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Filter</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/filter.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="filter">
+<span id="id1"></span><h1>Filter<a class="headerlink" href="#filter" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the filter cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="nb">filter</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="filter-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>This cog is designed for “filtering” unwanted words and phrases from a server.</p>
+<p>It provides tools to manage a list of words or sentences, and to customize automatic actions to be taken against users who use those words in channels or in their name/nickname.</p>
+<p>This can be used to prevent inappropriate language, off-topic discussions, invite links, and more.</p>
+</section>
+<section id="commands">
+<span id="filter-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<section id="filter-command-filter">
+<span id="id2"></span><h3>filter<a class="headerlink" href="#filter-command-filter" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Base command to add or remove words from the server filter.</p>
+<p>Use double quotes to add or remove sentences.</p>
+<section id="filter-add">
+<span id="filter-command-filter-add"></span><h4>filter add<a class="headerlink" href="#filter-add" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter add [words...]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add words to the filter.</p>
+<p>Use double quotes to add sentences.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">add</span> <span class="pre">word1</span> <span class="pre">word2</span> <span class="pre">word3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">add</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sentence&quot;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[words...]</span></code> The words or sentences to filter.</p></li>
+</ul>
+</section>
+<section id="filter-channel">
+<span id="filter-command-filter-channel"></span><h4>filter channel<a class="headerlink" href="#filter-channel" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter channel
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Base command to add or remove words from the channel filter.</p>
+<p>Use double quotes to add or remove sentences.</p>
+</section>
+<section id="filter-channel-add">
+<span id="filter-command-filter-channel-add"></span><h4>filter channel add<a class="headerlink" href="#filter-channel-add" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter channel add [words...]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add words to the filter.</p>
+<p>Use double quotes to add sentences.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">channel</span> <span class="pre">add</span> <span class="pre">#channel</span> <span class="pre">word1</span> <span class="pre">word2</span> <span class="pre">word3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">channel</span> <span class="pre">add</span> <span class="pre">#channel</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sentence&quot;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;channel&gt;</span></code> The text, voice, stage, or forum channel to add filtered words to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[words...]</span></code> The words or sentences to filter.</p></li>
+</ul>
+</section>
+<section id="filter-channel-clear">
+<span id="filter-command-filter-channel-clear"></span><h4>filter channel clear<a class="headerlink" href="#filter-channel-clear" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter channel clear
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Clears this channel’s filter list.</p>
+</section>
+<section id="filter-channel-list">
+<span id="filter-command-filter-channel-list"></span><h4>filter channel list<a class="headerlink" href="#filter-channel-list" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter channel list
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Send a list of the channel’s filtered words.</p>
+</section>
+<section id="filter-channel-remove">
+<span id="filter-command-filter-channel-remove"></span><h4>filter channel remove<a class="headerlink" href="#filter-channel-remove" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter channel remove &lt;channel&gt; [words...]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Remove words from the filter.</p>
+<p>Use double quotes to remove sentences.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">channel</span> <span class="pre">remove</span> <span class="pre">#channel</span> <span class="pre">word1</span> <span class="pre">word2</span> <span class="pre">word3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">channel</span> <span class="pre">remove</span> <span class="pre">#channel</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sentence&quot;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;channel&gt;</span></code> The text, voice, stage, or forum channel to add filtered words to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[words...]</span></code> The words or sentences to no longer filter.</p></li>
+</ul>
+</section>
+<section id="filter-clear">
+<span id="filter-command-filter-clear"></span><h4>filter clear<a class="headerlink" href="#filter-clear" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter clear
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Clears this server’s filter list.</p>
+</section>
+<section id="filter-delete">
+<span id="filter-command-filter-delete"></span><h4>filter delete<a class="headerlink" href="#filter-delete" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter delete [words...]
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Aliases: <code class="docutils literal notranslate"><span class="pre">filter</span> <span class="pre">remove</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span> <span class="pre">del</span></code></p>
+</div>
+<p><strong>Description</strong></p>
+<p>Remove words from the filter.</p>
+<p>Use double quotes to remove sentences.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">remove</span> <span class="pre">word1</span> <span class="pre">word2</span> <span class="pre">word3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">remove</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">sentence&quot;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[words...]</span></code> The words or sentences to no longer filter.</p></li>
+</ul>
+</section>
+<section id="filter-list">
+<span id="filter-command-filter-list"></span><h4>filter list<a class="headerlink" href="#filter-list" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter list
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Send a list of this server’s filtered words.</p>
+</section>
+<section id="filter-names">
+<span id="filter-command-filter-names"></span><h4>filter names<a class="headerlink" href="#filter-names" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filter names
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Toggle name and nickname filtering.</p>
+<p>This is disabled by default.</p>
+</section>
+</section>
+<section id="filterset">
+<span id="filter-command-filterset"></span><h3>filterset<a class="headerlink" href="#filterset" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filterset
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Base command to manage filter settings.</p>
+<section id="filterset-ban">
+<span id="filter-command-filterset-ban"></span><h4>filterset ban<a class="headerlink" href="#filterset-ban" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filterset ban &lt;count&gt; &lt;timeframe&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the filter’s autoban conditions.</p>
+<p>Users will be banned if they send <code class="docutils literal notranslate"><span class="pre">&lt;count&gt;</span></code> filtered words in
+<code class="docutils literal notranslate"><span class="pre">&lt;timeframe&gt;</span></code> seconds.</p>
+<p>Set both to zero to disable autoban.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filterset</span> <span class="pre">ban</span> <span class="pre">5</span> <span class="pre">5</span></code> - Ban users who say 5 filtered words in 5 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filterset</span> <span class="pre">ban</span> <span class="pre">2</span> <span class="pre">20</span></code> - Ban users who say 2 filtered words in 20 seconds.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;count&gt;</span></code> The amount of filtered words required to trigger a ban.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;timeframe&gt;</span></code> The period of time in which too many filtered words will trigger a ban.</p></li>
+</ul>
+</section>
+<section id="filterset-defaultname">
+<span id="filter-command-filterset-defaultname"></span><h4>filterset defaultname<a class="headerlink" href="#filterset-defaultname" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]filterset defaultname &lt;name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the nickname for users with a filtered name.</p>
+<p>Note that this has no effect if filtering names is disabled
+(to toggle, run <code class="docutils literal notranslate"><span class="pre">[p]filter</span> <span class="pre">names</span></code>).</p>
+<p>The default name used is <em>John Doe</em>.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]filterset</span> <span class="pre">defaultname</span> <span class="pre">Missingno</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> The new nickname to assign.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="economy.html" class="btn btn-neutral float-left" title="Economy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="general.html" class="btn btn-neutral float-right" title="General" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

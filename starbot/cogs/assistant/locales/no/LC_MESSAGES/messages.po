@@ -1,0 +1,1932 @@
+# Norwegian Bokmål (Norway) translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 05:57+0100\n"
+"PO-Revision-Date: 2024-10-14 06:35+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: nb_NO\n"
+"Language-Team: nb_NO <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: views.py:33
+msgid "Set API Key"
+msgstr "Angi API-nøkkel"
+msgstr ""
+
+#: views.py:35
+msgid "Enter your API Key below"
+msgstr "Skriv inn API-nøkkelen din nedenfor"
+msgstr ""
+
+#: views.py:56 views.py:142 views.py:474
+msgid "This isn't your menu!"
+msgstr "Dette er ikke din meny!"
+msgstr ""
+
+#: views.py:77
+msgid "Entry name"
+msgstr "Oppføringsnavn"
+msgstr ""
+
+#: views.py:85
+msgid "Training context"
+msgstr "Treningskontekst"
+msgstr ""
+
+#: views.py:104
+msgid "Search Query"
+msgstr "Søkeord"
+msgstr ""
+
+#: views.py:192
+msgid ""
+msgstr ""
+"Failed to process embedding `{}`\n"
+"Content: ```\n"
+"{}\n"
+"```"
+msgstr ""
+
+#: views.py:194
+msgid "An embedding with the name `{}` already exists!"
+msgstr "En innebygging med navnet «{}» eksisterer allerede!"
+msgstr ""
+
+#: views.py:199
+msgid "Your embedding labeled `{}` has been processed!"
+msgstr "Innbyggingen din merket «{}» har blitt behandlet!"
+msgstr ""
+
+#: views.py:211
+msgid "No embeddings to inspect!"
+msgstr "Ingen embeddings å inspisere!"
+msgstr ""
+
+#: views.py:232
+msgid "No embeddings to edit!"
+msgstr "Ingen innebygginger å redigere!"
+msgstr ""
+
+#: views.py:243
+msgid "Failed to edit that embedding, please try again later"
+msgstr "Kunne ikke redigere den innebyggingen. Prøv igjen senere"
+msgstr ""
+
+#: views.py:253
+msgid "Your embedding has been modified!"
+msgstr "Innbyggingen din har blitt endret!"
+msgstr ""
+
+#: views.py:294
+msgid "Add an embedding"
+msgstr "Legg til en innebygging"
+msgstr ""
+
+#: views.py:300
+msgid "Your embedding is processing and will appear when ready!"
+msgstr "Innbyggingen din behandles og vises når den er klar!"
+msgstr ""
+
+#: views.py:316
+msgid "No embeddings to delete!"
+msgstr "Ingen innebygginger å slette!"
+msgstr ""
+
+#: views.py:318
+msgid "Deleted `{}` embedding."
+msgstr "Slettet «{}»-innbygging."
+msgstr ""
+
+#: views.py:344
+msgid "No embeddings to search!"
+msgstr "Ingen innebygginger å søke i!"
+msgstr ""
+
+#: views.py:345
+msgid "Search for an embedding"
+msgstr "Søk etter en innebygging"
+msgstr ""
+
+#: views.py:370
+msgid "Search result: **{}**"
+msgstr "Søkeresultat: **{}**"
+msgstr ""
+
+#: views.py:400
+msgid "Function Edit"
+msgstr "Funksjon Rediger"
+msgstr ""
+
+#: views.py:407
+msgid "JSON Schema"
+msgstr "JSON-skjema"
+msgstr ""
+
+#: common/api.py:626 views.py:413
+msgid "Code"
+msgstr "Kode"
+msgstr ""
+
+#: common/api.py:624 views.py:419
+msgid "Permission Level"
+msgstr "Tillatelsesnivå"
+msgstr ""
+
+#: views.py:420
+msgid "User, Mod, Admin, or Owner"
+msgstr "Bruker, Mod, Admin eller Eier"
+msgstr ""
+
+#: views.py:431
+msgid ""
+msgstr ""
+"Invalid permission level, must be one of `User`, `Mod`, `Admin`, or "
+"`Owner`"
+msgstr ""
+
+#: views.py:582
+msgid "No code to inspect!"
+msgstr "Ingen kode å inspisere!"
+msgstr ""
+
+#: views.py:606
+msgid "Here are your custom functions"
+msgstr "Her er dine egendefinerte funksjoner"
+msgstr ""
+
+#: views.py:611
+msgid ""
+msgstr ""
+"Reply to this message with the json schema for your function\n"
+"- [Example Functions](https://github.com/vertyco/vrt-"
+"cogs/tree/main/assistant/example-funcs)"
+msgstr ""
+
+#: views.py:632 views.py:707
+msgid ""
+msgstr ""
+"SchemaError\n"
+"{}"
+msgstr ""
+
+#: views.py:634 views.py:709
+msgid "Empty schema!"
+msgstr "Tomt skjema!"
+msgstr ""
+
+#: views.py:637 views.py:712
+msgid ""
+msgstr ""
+"Invalid schema!\n"
+"**Missing**\n"
+"{}"
+msgstr ""
+
+#: views.py:641
+msgid "Reply to this message with the custom code"
+msgstr "Svar på denne meldingen med den egendefinerte koden"
+msgstr ""
+
+#: views.py:656 views.py:718
+msgid "Invalid function"
+msgstr "Ugyldig funksjon"
+msgstr ""
+
+#: views.py:660
+msgid "`{}` has been overwritten!"
+msgstr "`{}` har blitt overskrevet!"
+msgstr ""
+
+#: views.py:662
+msgid "`{}` has been created!"
+msgstr "`{}` er opprettet!"
+msgstr ""
+
+#: views.py:673
+msgid "No code to edit!"
+msgstr "Ingen kode å redigere!"
+msgstr ""
+
+#: views.py:681 views.py:742
+msgid "Could not find function!"
+msgstr "Fant ikke funksjon!"
+msgstr ""
+
+#: views.py:683
+msgid "This function is managed by the `{}` cog and cannot be edited"
+msgstr "Denne funksjonen administreres av tannhjulet `{}` og kan ikke redigeres"
+msgstr ""
+
+#: views.py:689
+msgid ""
+msgstr ""
+"The json schema for this function is too long, you'll need to re-upload "
+"it to modify"
+msgstr ""
+
+#: views.py:694
+msgid ""
+msgstr ""
+"The code for this function is too long, you'll need to re-upload it to "
+"modify"
+msgstr ""
+
+#: views.py:727
+msgid "`{}` function updated!"
+msgstr "`{}` funksjon oppdatert!"
+msgstr ""
+
+#: views.py:735
+msgid "No code to delete!"
+msgstr "Ingen kode å slette!"
+msgstr ""
+
+#: views.py:744
+msgid "This function is managed by the `{}` cog and cannot be deleted"
+msgstr "Denne funksjonen administreres av tannhjulet `{}` og kan ikke slettes"
+msgstr ""
+
+#: views.py:751
+msgid "`{}` has been deleted!"
+msgstr "`{}` er slettet!"
+msgstr ""
+
+#: views.py:758
+msgid "No code to toggle!"
+msgstr "Ingen kode å veksle!"
+msgstr ""
+
+#: views.py:771
+msgid "Search for a function"
+msgstr "Søk etter en funksjon"
+msgstr ""
+
+#: commands/admin.py:76
+msgid "`OpenAI Version:      `{}\n"
+msgstr "`OpenAI-versjon: `{}\n"
+msgstr ""
+
+#: commands/admin.py:77
+msgid "`OpenAI API Status:   `{}\n"
+msgstr "`OpenAI API Status: `{}\n"
+msgstr ""
+
+#: commands/admin.py:78
+msgid "`Draw Command:        `{}\n"
+msgstr "`Tegn kommando: `{}\n"
+msgstr ""
+
+#: commands/admin.py:78
+msgid "Enabled"
+msgstr "Aktivert"
+msgstr ""
+
+#: commands/admin.py:78
+msgid "Disabled"
+msgstr "Funksjonshemmet"
+msgstr ""
+
+#: commands/admin.py:79
+msgid "`Model:               `{}\n"
+msgstr "`Modell: `{}\n"
+msgstr ""
+
+#: commands/admin.py:80
+msgid "`Embed Model:         `{}\n"
+msgstr "`Bygg inn modell: `{}\n"
+msgstr ""
+
+#: commands/admin.py:81
+msgid "`Enabled:             `{}\n"
+msgstr "`Aktivert: `{}\n"
+msgstr ""
+
+#: commands/admin.py:82
+msgid "`Timezone:            `{}\n"
+msgstr "`Tidssone: `{}\n"
+msgstr ""
+
+#: commands/admin.py:83
+msgid "`Channel:             `{}\n"
+msgstr "`Kanal: `{}\n"
+msgstr ""
+
+#: commands/admin.py:83 commands/admin.py:178
+msgid "Not Set"
+msgstr "Ikke satt"
+msgstr ""
+
+#: commands/admin.py:84
+msgid "`? Required:          `{}\n"
+msgstr "`? Påkrevd: `{}\n"
+msgstr ""
+
+#: commands/admin.py:85
+msgid "`Question Mode:       `{}\n"
+msgstr "`Spørsmålsmodus: `{}\n"
+msgstr ""
+
+#: commands/admin.py:86
+msgid "`Mention on Reply:    `{}\n"
+msgstr "`Nevn ved svar: `{}\n"
+msgstr ""
+
+#: commands/admin.py:87
+msgid "`Respond to Mentions: `{}\n"
+msgstr "`Svar på omtaler: `{}\n"
+msgstr ""
+
+#: commands/admin.py:88
+msgid "`Collaborative Mode:  `{}\n"
+msgstr "`Samarbeidsmodus: `{}\n"
+msgstr ""
+
+#: commands/admin.py:89
+msgid "`Max Retention:       `{}\n"
+msgstr "`Maksimal oppbevaring: `{}\n"
+msgstr ""
+
+#: commands/admin.py:90
+msgid "`Retention Expire:    `{}s\n"
+msgstr "`Oppbevaring utløper: `{}s\n"
+msgstr ""
+
+#: commands/admin.py:91
+msgid "`Max Tokens:          `{}\n"
+msgstr "`Max Tokens: `{}\n"
+msgstr ""
+
+#: commands/admin.py:92
+msgid "`Max Response Tokens: `{}\n"
+msgstr "`Max Response Tokens: `{}\n"
+msgstr ""
+
+#: commands/admin.py:93
+msgid "`Min Length:          `{}\n"
+msgstr "`Min lengde: `{}\n"
+msgstr ""
+
+#: commands/admin.py:94
+msgid "`Temperature:         `{}\n"
+msgstr "`Temperatur: `{}\n"
+msgstr ""
+
+#: commands/admin.py:95
+msgid "`Frequency Penalty:   `{}\n"
+msgstr "`Frekvensstraff: `{}\n"
+msgstr ""
+
+#: commands/admin.py:96
+msgid "`Presence Penalty:    `{}\n"
+msgstr "`Nærværsstraff: `{}\n"
+msgstr ""
+
+#: commands/admin.py:97
+msgid "`Seed:                `{}\n"
+msgstr "`Frø: `{}\n"
+msgstr ""
+
+#: commands/admin.py:98
+msgid "`Vision Resolution:   `{}\n"
+msgstr "`Visjonsoppløsning: `{}\n"
+msgstr ""
+
+#: commands/admin.py:99
+msgid "`System Prompt:       `{} tokens\n"
+msgstr "`Systemmelding: `{} tokens\n"
+msgstr ""
+
+#: commands/admin.py:100
+msgid "`User Prompt:         `{} tokens\n"
+msgstr "`Brukermelding: `{} tokens\n"
+msgstr ""
+
+#: commands/admin.py:104
+msgid "Assistant Settings"
+msgstr "Assistentinnstillinger"
+msgstr ""
+
+#: commands/admin.py:110
+msgid ""
+msgstr ""
+"System prompt override is **Allowed**, users can set a personal system "
+"prompt per convo."
+msgstr ""
+
+#: commands/admin.py:112
+msgid ""
+msgstr ""
+"System prompt override is **Disabled**, users cannot set a personal "
+"system prompt per convo."
+msgstr ""
+
+#: commands/admin.py:113
+msgid ""
+msgstr ""
+"\n"
+"*This will be restricted to mods if collaborative conversations are "
+"enabled!*"
+msgstr ""
+
+#: commands/admin.py:114
+msgid "System Prompt Overriding"
+msgstr "Overstyring av systemmelding"
+msgstr ""
+
+#: commands/admin.py:122
+msgid "Channel Prompt Overrides"
+msgstr "Overstyrer kanalmeldinger"
+msgstr ""
+
+#: commands/admin.py:130
+msgid "Mixed (Please Refresh!)"
+msgstr "Blandet (Vennligst oppdater!)"
+msgstr ""
+
+#: commands/admin.py:132
+msgid "Synced!"
+msgstr "Synkronisert!"
+msgstr ""
+
+#: commands/admin.py:134
+msgid "N/A"
+msgstr "N/A"
+msgstr ""
+
+#: commands/admin.py:137
+msgid "`Top N Embeddings:  `{}\n"
+msgstr "`Topp N-innbygginger: `{}\n"
+msgstr ""
+
+#: commands/admin.py:138
+msgid "`Min Relatedness:   `{}\n"
+msgstr "`Min slektskap: `{}\n"
+msgstr ""
+
+#: commands/admin.py:139
+msgid "`Embedding Method:  `{}\n"
+msgstr "`Innbyggingsmetode: `{}\n"
+msgstr ""
+
+#: commands/admin.py:140
+msgid "`Encodings:         `{}"
+msgstr "`Kodinger: `{}"
+msgstr ""
+
+#: commands/admin.py:144
+msgid "Embeddings ({})"
+msgstr "Innebygginger ({})"
+msgstr ""
+
+#: commands/admin.py:150
+msgid ""
+msgstr ""
+"The following roles/users are considered tutors. If function calls are on"
+" and create_memory is enabled, the model can create its own embeddings: "
+msgstr ""
+
+#: commands/admin.py:159
+msgid "`Function Calling:  `{}\n"
+msgstr "`Funksjonsanrop: `{}\n"
+msgstr ""
+
+#: commands/admin.py:160
+msgid "`Maximum Recursion: `{}\n"
+msgstr "`Maksimal rekursjon: `{}\n"
+msgstr ""
+
+#: commands/admin.py:161
+msgid "`Function Tokens:   `{}\n"
+msgstr "`Funksjonssymboler: `{}\n"
+msgstr ""
+
+#: commands/admin.py:165
+msgid ""
+msgstr ""
+"The following cogs also have functions registered with the assistant\n"
+"{}"
+msgstr ""
+
+#: commands/admin.py:170
+msgid "Custom Functions ({})"
+msgstr "Egendefinerte funksjoner ({})"
+msgstr ""
+
+#: commands/admin.py:177
+msgid "OpenAI Key"
+msgstr "OpenAI-nøkkel"
+msgstr ""
+
+#: commands/admin.py:185
+msgid "Regex Blacklist"
+msgstr "Regex svarteliste"
+msgstr ""
+
+#: commands/admin.py:187
+msgid "Regex Failure Blocking"
+msgstr "Regex-feilblokkering"
+msgstr ""
+
+#: commands/admin.py:188
+msgid "Block reply if regex replacement fails: **{}**"
+msgstr "Blokker svar hvis regex-erstatning mislykkes: **{}**"
+msgstr ""
+
+#: commands/admin.py:193
+msgid "Conversations are stored persistently"
+msgstr "Samtaler lagres vedvarende"
+msgstr ""
+
+#: commands/admin.py:195
+msgid "conversations are stored in memory until reboot or reload"
+msgstr "samtaler lagres i minnet til omstart eller omlasting"
+msgstr ""
+
+#: commands/admin.py:197
+msgid "Persistent Conversations"
+msgstr "Vedvarende samtaler"
+msgstr ""
+
+#: commands/admin.py:211
+msgid "Blacklist"
+msgstr "Svarteliste"
+msgstr ""
+
+#: commands/admin.py:223
+msgid "Model Role Overrides"
+msgstr "Overstyring av modellroller"
+msgstr ""
+
+#: commands/admin.py:234
+msgid "Max Token Role Overrides"
+msgstr "Maks token-rolleoverstyringer"
+msgstr ""
+
+#: commands/admin.py:245
+msgid "Max Message Retention Role Overrides"
+msgstr "Maks. meldingsoppbevaringsrolleoverstyringer"
+msgstr ""
+
+#: commands/admin.py:257
+msgid "Max Message Retention Time Role Overrides"
+msgstr "Maks. meldingsoppbevaringstid Rolleoverstyringer"
+msgstr ""
+
+#: commands/admin.py:271
+msgid "Max Response Token Role Overrides"
+msgstr "Maks respons token-rolleoverstyringer"
+msgstr ""
+
+#: commands/admin.py:275
+msgid "Your Brave websearch API key is set!"
+msgstr "Din Brave websearch API-nøkkel er satt!"
+msgstr ""
+
+#: commands/admin.py:277
+msgid ""
+msgstr ""
+"Enables the use of the `search_internet` function\n"
+"Get your API key **[Here](https://brave.com/search/api/)**\n"
+msgstr ""
+
+#: commands/admin.py:281
+msgid "Brave Websearch API key"
+msgstr "Brave Websearch API-nøkkel"
+msgstr ""
+
+#: commands/admin.py:283
+msgid "Showing settings for {}"
+msgstr "Viser innstillinger for {}"
+msgstr ""
+
+#: commands/admin.py:289
+msgid "SystemPrompt"
+msgstr "SystemPrompt"
+msgstr ""
+
+#: commands/admin.py:295
+msgid "InitialPrompt"
+msgstr "Innledende melding"
+msgstr ""
+
+#: commands/admin.py:305
+msgid "Sent your current settings for this server in DMs!"
+msgstr "Sendte dine nåværende innstillinger for denne serveren i DM!"
+msgstr ""
+
+#: commands/admin.py:307
+msgid "You need to allow DMs so I can message you!"
+msgstr "Du må tillate DM så jeg kan sende deg meldinger!"
+msgstr ""
+
+#: commands/admin.py:317
+msgid "There is no usage data yet!"
+msgstr "Det er ingen bruksdata ennå!"
+msgstr ""
+
+#: commands/admin.py:348
+msgid "`Total:  `{} (${} @ ${}/1k tokens)"
+msgstr "`Totalt: `{} (${} @ ${}/1k tokens)"
+msgstr ""
+
+#: commands/admin.py:355
+msgid "Free/Self-Hosted"
+msgstr "Gratis/Selvvert"
+msgstr ""
+
+#: commands/admin.py:359
+msgid ""
+msgstr ""
+"`Input:  `{} (${} @ ${}/1k tokens)\n"
+"`Output: `{} (${} @ ${}/1k tokens)\n"
+"`Total:  `{} (${})"
+msgstr ""
+
+#: commands/admin.py:373
+msgid ""
+msgstr ""
+"**Overall Token Usage and Cost**\n"
+"`Input:      `{} (${})\n"
+"`Output:     `{} (${})\n"
+"`Total:      `{} (${})\n"
+"`Tool Calls: `{}\n"
+msgstr ""
+
+#: commands/admin.py:397
+msgid "Token usage stats have been reset!"
+msgstr "Tokenbruksstatistikk er tilbakestilt!"
+msgstr ""
+
+#: commands/admin.py:409
+msgid ""
+msgstr ""
+"Click to set your OpenAI key\n"
+"\n"
+"To remove your keys, enter `none`"
+msgstr ""
+
+#: commands/admin.py:417
+msgid "OpenAI key has been removed!"
+msgstr "OpenAI-nøkkelen er fjernet!"
+msgstr ""
+
+#: commands/admin.py:420 commands/admin.py:447
+msgid "No API key was entered!"
+msgstr "Ingen API-nøkkel ble angitt!"
+msgstr ""
+
+#: commands/admin.py:423
+msgid "OpenAI key has been set!"
+msgstr "OpenAI-nøkkelen er satt!"
+msgstr ""
+
+#: commands/admin.py:437
+msgid ""
+msgstr ""
+"Click to set your API key\n"
+"\n"
+"To remove your keys, enter `none`"
+msgstr ""
+
+#: commands/admin.py:445
+msgid "Brave API key has been removed!"
+msgstr "Brave API-nøkkel er fjernet!"
+msgstr ""
+
+#: commands/admin.py:450
+msgid "Brave API key has been set!"
+msgstr "Brave API-nøkkel er satt!"
+msgstr ""
+
+#: commands/admin.py:462
+msgid "Invalid Timezone, did you mean `{}`?"
+msgstr "Ugyldig tidssone, mente du «{}»?"
+msgstr ""
+
+#: commands/admin.py:464
+msgid "Timezone set to **{}** (`{}`)"
+msgstr "Tidssone satt til **{}** (`{}`)"
+msgstr ""
+
+#: commands/admin.py:509 commands/admin.py:574 commands/admin.py:648
+#: commands/base.py:349
+msgid "Failed to read `{}`, bot owner can use `{}` for more information"
+msgstr "Kunne ikke lese `{}`, boteier kan bruke `{}` for mer informasjon"
+msgstr ""
+
+#: commands/admin.py:525 commands/admin.py:596 commands/admin.py:665
+#, python-format
+msgid ""
+msgstr ""
+"Your system and initial prompt combined will use {} tokens!\n"
+"Write a prompt combination using {} tokens or less to leave 10% of your "
+"configured max tokens for your response."
+msgstr ""
+
+#: commands/admin.py:533
+msgid "The initial prompt has been removed!"
+msgstr "Den første forespørselen er fjernet!"
+msgstr ""
+
+#: commands/admin.py:536
+msgid ""
+msgstr ""
+"Please include an initial prompt or .txt file!\n"
+"Use `{}` to view details for this command"
+msgstr ""
+
+#: commands/admin.py:542
+msgid "The initial prompt has been overwritten!"
+msgstr "Den første ledeteksten er overskrevet!"
+msgstr ""
+
+#: commands/admin.py:545
+msgid "Initial prompt has been set!"
+msgstr "Innledende melding er satt!"
+msgstr ""
+
+#: commands/admin.py:555
+msgid "No channel prompt set for {}"
+msgstr "Ingen kanalforespørsel angitt for {}"
+msgstr ""
+
+#: commands/admin.py:584
+msgid "Channel prompt has been removed from {}!"
+msgstr "Kanalforespørsel er fjernet fra {}!"
+msgstr ""
+
+#: commands/admin.py:587
+msgid "No channel prompt set for {}!"
+msgstr "Ingen kanalforespørsel angitt for {}!"
+msgstr ""
+
+#: commands/admin.py:602
+msgid "Channel prompt has been overwritten for {}!"
+msgstr "Kanalforespørsel er overskrevet for {}!"
+msgstr ""
+
+#: commands/admin.py:604
+msgid "Channel prompt has been set for {}!"
+msgstr "Kanalforespørsel er satt til {}!"
+msgstr ""
+
+#: commands/admin.py:673
+msgid "The system prompt has been removed!"
+msgstr "Systemmeldingen er fjernet!"
+msgstr ""
+
+#: commands/admin.py:676
+msgid ""
+msgstr ""
+"Please include a system prompt or .txt file!\n"
+"Use `{}` to view details for this command"
+msgstr ""
+
+#: commands/admin.py:682
+msgid "The system prompt has been overwritten!"
+msgstr "Systemmeldingen er overskrevet!"
+msgstr ""
+
+#: commands/admin.py:685
+msgid "System prompt has been set!"
+msgstr "Systemmelding er satt!"
+msgstr ""
+
+#: commands/admin.py:700
+msgid "Assistant channel has been removed"
+msgstr "Assistent-kanalen er fjernet"
+msgstr ""
+
+#: commands/admin.py:703
+msgid "Assistant channel has been overwritten"
+msgstr "Assistent-kanalen er overskrevet"
+msgstr ""
+
+#: commands/admin.py:706
+msgid "Channel id has been set"
+msgstr "Kanal-ID er angitt"
+msgstr ""
+
+#: commands/admin.py:716
+msgid ""
+msgstr ""
+"System prompt overriding **Disabled**, users cannot set per-convo system "
+"prompts"
+msgstr ""
+
+#: commands/admin.py:719
+msgid ""
+msgstr ""
+"System prompt overriding **Enabled**, users can now set per-convo system "
+"prompts"
+msgstr ""
+
+#: commands/admin.py:728
+msgid "The assistant is now **Disabled**"
+msgstr "Assistenten er nå **deaktivert**"
+msgstr ""
+
+#: commands/admin.py:731
+msgid "The assistant is now **Enabled**"
+msgstr "Assistenten er nå **aktivert**"
+msgstr ""
+
+#: commands/admin.py:740
+msgid "The draw command is now **Disabled**"
+msgstr "The draw command is now **Disabled**"
+msgstr ""
+
+#: commands/admin.py:743
+msgid "The draw command is now **Enabled**"
+msgstr "Draw -kommandoen er nå ** aktivert **"
+msgstr ""
+
+#: commands/admin.py:752
+msgid "Vision resolution has been set to **Low**"
+msgstr "Synsoppløsningen er satt til **Lav**"
+msgstr ""
+
+#: commands/admin.py:755
+msgid "Vision resolution has been set to **High**"
+msgstr "Synsoppløsningen er satt til **Høy**"
+msgstr ""
+
+#: commands/admin.py:758
+msgid "Vision resolution has been set to **Auto**"
+msgstr "Synsoppløsning er satt til **Auto**"
+msgstr ""
+
+#: commands/admin.py:767
+msgid "Questions will be answered regardless of if they end with **?**"
+msgstr "Spørsmål vil bli besvart uavhengig av om de ender med **?**"
+msgstr ""
+
+#: commands/admin.py:770
+msgid "Questions must end in **?** to be answered"
+msgstr "Spørsmål må slutte på **?** for å bli besvart"
+msgstr ""
+
+#: commands/admin.py:779
+msgid "The bot will no longer respond to mentions"
+msgstr "Boten vil ikke lenger svare på omtaler"
+msgstr ""
+
+#: commands/admin.py:782
+msgid "The bot will now respond to mentions"
+msgstr "Boten vil nå svare på omtaler"
+msgstr ""
+
+#: commands/admin.py:791
+msgid "Mentions are now **Disabled**"
+msgstr "Omtaler er nå **deaktivert**"
+msgstr ""
+
+#: commands/admin.py:794
+msgid "Mentions are now **Enabled**"
+msgstr "Omtaler er nå **aktivert**"
+msgstr ""
+
+#: commands/admin.py:807
+msgid "Collaborative conversations are now **Disabled**"
+msgstr "Samarbeidssamtaler er nå **deaktivert**"
+msgstr ""
+
+#: commands/admin.py:810
+msgid "Collaborative conversations are now **Enabled**"
+msgstr "Samarbeidssamtaler er nå **aktivert**"
+msgstr ""
+
+#: commands/admin.py:828 commands/admin.py:1848
+msgid "Max retention needs to be at least 0 or higher"
+msgstr "Maksimal oppbevaring må være minst 0 eller høyere"
+msgstr ""
+
+#: commands/admin.py:832
+msgid "Conversation retention has been disabled"
+msgstr "Oppbevaring av samtaler er deaktivert"
+msgstr ""
+
+#: commands/admin.py:834
+msgid "Conversations can now retain up to **{}** messages"
+msgstr "Samtaler kan nå beholde opptil **{}** meldinger"
+msgstr ""
+
+#: commands/admin.py:848 commands/admin.py:1871
+msgid "Max retention time needs to be at least 0 or higher"
+msgstr "Maksimal oppbevaringstid må være minst 0 eller høyere"
+msgstr ""
+
+#: commands/admin.py:852
+msgid "Conversations will be stored until the bot restarts or the cog is reloaded"
+msgstr "Samtaler vil bli lagret til roboten starter på nytt eller tannhjulet er lastet inn på nytt"
+msgstr ""
+
+#: commands/admin.py:854
+msgid "Conversations will be considered active for **{}** seconds"
+msgstr "Samtaler vil bli ansett som aktive i **{}** sekunder"
+msgstr ""
+
+#: commands/admin.py:866
+msgid "Temperature must be between **0.0** and **2.0**"
+msgstr "Temperaturen må være mellom **0,0** og **2,0**"
+msgstr ""
+
+#: commands/admin.py:871
+msgid "Temperature has been set to **{}**"
+msgstr "Temperaturen er satt til **{}**"
+msgstr ""
+
+#: commands/admin.py:882
+msgid "Frequency penalty must be between **-2.0** and **2.0**"
+msgstr "Frekvensstraff må være mellom **-2,0** og **2,0**"
+msgstr ""
+
+#: commands/admin.py:887
+msgid "Frequency penalty has been set to **{}**"
+msgstr "Frekvensstraff er satt til **{}**"
+msgstr ""
+
+#: commands/admin.py:898
+msgid "Presence penalty must be between **-2.0** and **2.0**"
+msgstr "Tilstedeværelsesstraff må være mellom **-2,0** og **2,0**"
+msgstr ""
+
+#: commands/admin.py:903
+msgid "Presence penalty has been set to **{}**"
+msgstr "Tilstedeværelsesstraff er satt til **{}**"
+msgstr ""
+
+#: commands/admin.py:914
+msgid "Seed must be a positive integer"
+msgstr "Frø må være et positivt heltall"
+msgstr ""
+
+#: commands/admin.py:918
+msgid "The seed has been set to **{}**"
+msgstr "Frøet er satt til **{}**"
+msgstr ""
+
+#: commands/admin.py:935
+msgid "{} embeddings have been updated"
+msgstr "{} innebygginger har blitt oppdatert"
+msgstr ""
+
+#: commands/admin.py:937
+msgid "No embeddings needed to be refreshed"
+msgstr "Ingen innebygginger må oppdateres"
+msgstr ""
+
+#: commands/admin.py:945
+msgid "Assistant will not call functions"
+msgstr "Assistenten vil ikke kalle opp funksjoner"
+msgstr ""
+
+#: commands/admin.py:948
+msgid "Assistant will now call functions as needed"
+msgstr "Assistenten vil nå kalle opp funksjoner etter behov"
+msgstr ""
+
+#: commands/admin.py:965
+msgid "Function calls will not be used since recursion is 0"
+msgstr "Funksjonsanrop vil ikke bli brukt siden rekursjon er 0"
+msgstr ""
+
+#: commands/admin.py:967
+msgid ""
+msgstr ""
+"The model can now call various functions up to {} times before returning "
+"a response"
+msgstr ""
+
+#: commands/admin.py:979
+msgid "Minimum length needs to be at least 0 or higher"
+msgstr "Minimumslengden må være minst 0 eller høyere"
+msgstr ""
+
+#: commands/admin.py:983
+msgid "{} will respond regardless of message length"
+msgstr "{} vil svare uavhengig av meldingslengde"
+msgstr ""
+
+#: commands/admin.py:986
+msgid "{} will respond to messages with more than **{}** characters"
+msgstr "{} vil svare på meldinger med mer enn **{}** tegn"
+msgstr ""
+
+#: commands/admin.py:1007 commands/admin.py:1028 commands/admin.py:1825
+msgid "Cannot be a negative number!"
+msgstr "Kan ikke være et negativt tall!"
+msgstr ""
+
+#: commands/admin.py:1011
+msgid ""
+msgstr ""
+"The maximum amount of tokens sent in a payload will be {}.\n"
+"*Note that models with token limits lower than this will still be trimmed*"
+msgstr ""
+
+#: commands/admin.py:1016
+msgid "The maximum amount of tokens sent in a payload will be dynamic"
+msgstr "Det maksimale antallet tokens som sendes i en nyttelast vil være dynamisk"
+msgstr ""
+
+#: commands/admin.py:1032
+msgid "The maximum amount of tokens in the models responses will be {}."
+msgstr "Det maksimale antallet tokens i modellens svar vil være {}."
+msgstr ""
+
+#: commands/admin.py:1034
+msgid "Response tokens will now be dynamic"
+msgstr "Svartokens vil nå være dynamiske"
+msgstr ""
+
+#: commands/admin.py:1052 commands/admin.py:1080 commands/admin.py:1768
+msgid ""
+msgstr ""
+"Valid models are:\n"
+"{}"
+msgstr ""
+
+#: commands/admin.py:1059 commands/admin.py:1775
+msgid "Error: {}"
+msgstr "Feil: {}"
+msgstr ""
+
+#: commands/admin.py:1063
+msgid "The **{}** model will now be used"
+msgstr "**{}**-modellen vil nå bli brukt"
+msgstr ""
+
+#: commands/admin.py:1082
+msgid "The **{}** model will now be used for embeddings"
+msgstr "**{}**-modellen vil nå bli brukt for innebygging"
+msgstr ""
+
+#: commands/admin.py:1093 commands/admin.py:2003
+msgid "Not wiping embedding data"
+msgstr "Sletter ikke innebyggingsdata"
+msgstr ""
+
+#: commands/admin.py:1096
+msgid "All embedding data has been wiped!"
+msgstr "Alle innbyggingsdata er slettet!"
+msgstr ""
+
+#: commands/admin.py:1107 commands/admin.py:1976
+msgid "Not wiping conversations"
+msgstr "Ikke tørke samtaler"
+msgstr ""
+
+#: commands/admin.py:1111
+msgid "Conversations have been wiped in this server!"
+msgstr "Samtaler er slettet på denne serveren!"
+msgstr ""
+
+#: commands/admin.py:1122
+msgid "Top N must be between 0 and 10"
+msgstr "Topp N må være mellom 0 og 10"
+msgstr ""
+
+#: commands/admin.py:1126
+msgid "Embeddings will not be pulled during conversations"
+msgstr "Innebygginger vil ikke bli trukket under samtaler"
+msgstr ""
+
+#: commands/admin.py:1128
+msgid "Up to **{}** embeddings will be pulled for each interaction"
+msgstr "Opptil **{}** innbygginger vil bli trukket for hver interaksjon"
+msgstr ""
+
+#: commands/admin.py:1143
+msgid "Minimum relatedness must be between 0 and 1"
+msgstr "Minimum slektskap må være mellom 0 og 1"
+msgstr ""
+
+#: commands/admin.py:1146
+msgid "Minimum relatedness has been set to **{}**"
+msgstr "Minimum slektskap er satt til **{}**"
+msgstr ""
+
+#: commands/admin.py:1155
+msgid "That regex is invalid"
+msgstr "Det regulære uttrykket er ugyldig"
+msgstr ""
+
+#: commands/admin.py:1159
+msgid "`{}` has been **Removed** from the blacklist"
+msgstr "`{}` har blitt **fjernet** fra svartelisten"
+msgstr ""
+
+#: commands/admin.py:1162
+msgid "`{}` has been **Added** to the blacklist"
+msgstr "`{}` har blitt **Lagt** til svartelisten"
+msgstr ""
+
+#: commands/admin.py:1176
+msgid "If a regex blacklist fails, the bots reply will be blocked"
+msgstr "Hvis en regulær svarteliste mislykkes, vil botens svar bli blokkert"
+msgstr ""
+
+#: commands/admin.py:1179
+msgid "If a reges blacklist fails, the bot will still reply"
+msgstr "Hvis en reges svarteliste mislykkes, vil boten fortsatt svare"
+msgstr ""
+
+#: commands/admin.py:1192
+msgid "Question mode is now **Disabled**"
+msgstr "Spørsmålsmodus er nå **deaktivert**"
+msgstr ""
+
+#: commands/admin.py:1195
+msgid "Question mode is now **Enabled**"
+msgstr "Spørsmålsmodus er nå **aktivert**"
+msgstr ""
+
+#: commands/admin.py:1217
+msgid "Embedding method has been set to **Static**"
+msgstr "Innebyggingsmetode er satt til **Statisk**"
+msgstr ""
+
+#: commands/admin.py:1220
+msgid "Embedding method has been set to **Hybrid**"
+msgstr "Innebyggingsmetode er satt til **Hybrid**"
+msgstr ""
+
+#: commands/admin.py:1223
+msgid "Embedding method has been set to **User**"
+msgstr "Innebyggingsmetode er satt til **Bruker**"
+msgstr ""
+
+#: commands/admin.py:1226
+msgid "Embedding method has been set to **Dynamic**"
+msgstr "Innebyggingsmetode er satt til **Dynamisk**"
+msgstr ""
+
+#: commands/admin.py:1244
+msgid ""
+msgstr ""
+"You must attach **.csv** files to this command or reference a message "
+"that has them!"
+msgstr ""
+
+#: commands/admin.py:1257 commands/admin.py:1333 commands/admin.py:1381
+msgid "Error reading **{}**: {}"
+msgstr "Feil ved lesing av **{}**: {}"
+msgstr ""
+
+#: commands/admin.py:1262
+msgid "**{}** contains invalid formatting, columns must be "
+msgstr "**{}** inneholder ugyldig formatering, kolonner må være"
+msgstr ""
+
+#: commands/admin.py:1270
+msgid "There are no valid files to import!"
+msgstr "Det er ingen gyldige filer å importere!"
+msgstr ""
+
+#: commands/admin.py:1272 commands/admin.py:1398
+msgid ""
+msgstr ""
+"Processing the following files in the background\n"
+"{}"
+msgstr ""
+
+#: commands/admin.py:1286 commands/admin.py:1409
+msgid "processing"
+msgstr "behandling"
+msgstr ""
+
+#: commands/admin.py:1288 commands/admin.py:1411
+msgid "overwriting"
+msgstr "overskriving"
+msgstr ""
+
+#: commands/admin.py:1295 commands/admin.py:1419
+msgid ""
+msgstr ""
+"{}\n"
+"`Currently {}: `**{}** ({}/{})"
+msgstr ""
+
+#: commands/admin.py:1301 commands/admin.py:1426
+msgid "Failed to process embedding: `{}`"
+msgstr "Kunne ikke behandle innebygging: `{}`"
+msgstr ""
+
+#: commands/admin.py:1306 commands/admin.py:1439 commands/admin.py:1443
+msgid ""
+msgstr ""
+"{}\n"
+"**COMPLETE**"
+msgstr ""
+
+#: commands/admin.py:1307 commands/admin.py:1440
+msgid "Successfully imported {} embeddings!"
+msgstr "Vellykket importert {} innebygginger!"
+msgstr ""
+
+#: commands/admin.py:1321 commands/admin.py:1960
+msgid ""
+msgstr ""
+"You must attach **.json** files to this command or reference a message "
+"that has them!"
+msgstr ""
+
+#: commands/admin.py:1344
+msgid "Failed to import **{}** because it contains invalid formatting!"
+msgstr "Kunne ikke importere **{}** fordi den inneholder ugyldig formatering!"
+msgstr ""
+
+#: commands/admin.py:1349
+msgid ""
+msgstr ""
+"Imported the following files: `{}`\n"
+"{} embeddings imported"
+msgstr ""
+
+#: commands/admin.py:1367
+msgid ""
+msgstr ""
+"You must attach **.xlsx** files to this command or reference a message "
+"that has them!"
+msgstr ""
+
+#: commands/admin.py:1390
+msgid "{} is invalid! Must contain the following columns: {}"
+msgstr "{} er ugyldig! Må inneholde følgende kolonner: {}"
+msgstr ""
+
+#: commands/admin.py:1444
+msgid "No embeddings needed to be updated!"
+msgstr "Ingen innebygginger må oppdateres!"
+msgstr ""
+
+#: commands/admin.py:1456 commands/admin.py:1499 commands/admin.py:1543
+msgid "There are no embeddings to export!"
+msgstr "Det er ingen innbygginger å eksportere!"
+msgstr ""
+
+#: commands/admin.py:1512 commands/admin.py:1532 commands/admin.py:1551
+#: commands/admin.py:1571 commands/admin.py:1946
+msgid "Here is your embeddings export!"
+msgstr "Her er din embeddings eksport!"
+msgstr ""
+
+#: commands/admin.py:1515 commands/admin.py:1554 commands/admin.py:1928
+msgid "File too large, attempting to compress..."
+msgstr "Filen er for stor, prøver å komprimere..."
+msgstr ""
+
+#: commands/admin.py:1535 commands/admin.py:1574 commands/admin.py:1949
+msgid "File is still too large even with compression!"
+msgstr "Filen er fortsatt for stor selv med komprimering!"
+msgstr ""
+
+#: commands/admin.py:1714
+msgid "{} has been removed from the blacklist"
+msgstr "{} er fjernet fra svartelisten"
+msgstr ""
+
+#: commands/admin.py:1717
+msgid "{} has been added to the blacklist"
+msgstr "{} er lagt til svartelisten"
+msgstr ""
+
+#: commands/admin.py:1740
+msgid "{} has been removed from the tutor list"
+msgstr "{} er fjernet fra lærerlisten"
+msgstr ""
+
+#: commands/admin.py:1743
+msgid "{} has been added to the tutor list"
+msgstr "{} er lagt til i veilederlisten"
+msgstr ""
+
+#: commands/admin.py:1781
+msgid "Role override for {} removed!"
+msgstr "Rolleoverstyring for {} er fjernet!"
+msgstr ""
+
+#: commands/admin.py:1784
+msgid "Role override for {} overwritten!"
+msgstr "Rolleoverstyring for {} er overskrevet!"
+msgstr ""
+
+#: commands/admin.py:1787
+msgid "Role override for {} added!"
+msgstr "Rolleoverstyring for {} lagt til!"
+msgstr ""
+
+#: commands/admin.py:1799
+msgid "Use at least 100 tokens"
+msgstr "Bruk minst 100 tokens"
+msgstr ""
+
+#: commands/admin.py:1805
+msgid "Max token override for {} removed!"
+msgstr "Maks. tokenoverstyring for {} er fjernet!"
+msgstr ""
+
+#: commands/admin.py:1808
+msgid "Max token override for {} overwritten!"
+msgstr "Maks. tokenoverstyring for {} er overskrevet!"
+msgstr ""
+
+#: commands/admin.py:1811
+msgid "Max token override for {} added!"
+msgstr "Maks. tokenoverstyring for {} er lagt til!"
+msgstr ""
+
+#: commands/admin.py:1831
+msgid "Max response token override for {} removed!"
+msgstr "Maks overstyring av svartoken for {} er fjernet!"
+msgstr ""
+
+#: commands/admin.py:1834
+msgid "Max response token override for {} overwritten!"
+msgstr "Maks overstyring av svartoken for {} er overskrevet!"
+msgstr ""
+
+#: commands/admin.py:1837
+msgid "Max response token override for {} added!"
+msgstr "Maks overstyring av svartoken for {} lagt til!"
+msgstr ""
+
+#: commands/admin.py:1854
+msgid "Max retention override for {} removed!"
+msgstr "Overstyring av maksimal oppbevaring for {} er fjernet!"
+msgstr ""
+
+#: commands/admin.py:1857
+msgid "Max retention override for {} overwritten!"
+msgstr "Maks. oppbevaringsoverstyring for {} er overskrevet!"
+msgstr ""
+
+#: commands/admin.py:1860
+msgid "Max retention override for {} added!"
+msgstr "Overstyring av maksimal oppbevaring for {} er lagt til!"
+msgstr ""
+
+#: commands/admin.py:1877
+msgid "Max retention time override for {} removed!"
+msgstr "Overstyring av maksimal oppbevaringstid for {} er fjernet!"
+msgstr ""
+
+#: commands/admin.py:1880
+msgid "Max retention time override for {} overwritten!"
+msgstr "Overstyring av maksimal oppbevaringstid for {} er overskrevet!"
+msgstr ""
+
+#: commands/admin.py:1883
+msgid "Max retention time override for {} added!"
+msgstr "Overstyring av maksimal oppbevaringstid for {} lagt til!"
+msgstr ""
+
+#: commands/admin.py:1897
+msgid "Not wiping cog"
+msgstr "Tørker ikke tannhjul"
+msgstr ""
+
+#: commands/admin.py:1902
+msgid "Cog has been wiped!"
+msgstr "Tannhjul er tørket!"
+msgstr ""
+
+#: commands/admin.py:1925
+msgid "Here is your export!"
+msgstr "Her er eksporten din!"
+msgstr ""
+
+#: commands/admin.py:1964
+msgid "Cog has been restored!"
+msgstr "Tannhjul er restaurert!"
+msgstr ""
+
+#: commands/admin.py:1979
+msgid "Conversations have been wiped for all servers!"
+msgstr "Samtaler er slettet for alle servere!"
+msgstr ""
+
+#: commands/admin.py:1988
+msgid "Persistent conversations have been **Disabled**"
+msgstr "Vedvarende samtaler har blitt **deaktivert**"
+msgstr ""
+
+#: commands/admin.py:1991
+msgid "Persistent conversations have been **Enabled**"
+msgstr "Vedvarende samtaler har blitt **aktivert**"
+msgstr ""
+
+#: commands/admin.py:2006
+msgid "All embedding data has been wiped for all servers!"
+msgstr "Alle innbyggingsdata er slettet for alle servere!"
+msgstr ""
+
+#: commands/admin.py:2019
+msgid "Assistant will no longer listen to other bot messages"
+msgstr "Assistent vil ikke lenger lytte til andre bot-meldinger"
+msgstr ""
+
+#: commands/admin.py:2022
+msgid "Assistant will listen to other bot messages"
+msgstr "Assistant vil lytte til andre bot-meldinger"
+msgstr ""
+
+#: commands/base.py:36
+msgid ""
+msgstr ""
+"\n"
+"# How to Use\n"
+"\n"
+"### Commands\n"
+"`[p]convostats` - view your conversation message count/token usage for "
+"that convo.\n"
+"`[p]clearconvo` - reset your conversation for the current "
+"channel/thread/forum.\n"
+"`[p]showconvo` - get a json dump of your current conversation (this is "
+"mostly for debugging)\n"
+"`[p]chat` or `[p]ask` - command prefix for chatting with the bot outside "
+"of the live chat, or just @ it.\n"
+"\n"
+"### Chat Arguments\n"
+"`[p]chat --last` - resend the last message of the conversation.\n"
+"`[p]chat --extract` - extract all markdown text to be sent as a separate "
+"message.\n"
+"`[p]chat --outputfile <filename>` - sends the reply as a file instead.\n"
+"\n"
+"### Argument Use-Cases\n"
+"`[p]chat --last --outpufile test.py` - output the last message the bot "
+"sent as a file.\n"
+"`[p]chat write a python script to do X... --extract --outputfile test.py`"
+" - all code blocks from the output will be sent as a file in addition to "
+"the reply.\n"
+"`[p]chat --last --extract --outputfile test.py` - extract code blocks "
+"from the last message to send as a file.\n"
+"\n"
+"### File Comprehension\n"
+"Files may be uploaded with the chat command to be included with the "
+"question or query, so rather than pasting snippets, the entire file can "
+"be uploaded so that you can ask a question about it.\n"
+"At the moment the bot is capable of reading the following file "
+"extensions.\n"
+"```json\n"
+"{}\n"
+"```\n"
+"If a file has no extension it will still try to read it only if it can be"
+" decoded to utf-8.\n"
+"### Tips\n"
+"- Replying to someone else's message while using the `[p]chat` command "
+"will include their message in *your* conversation, useful if someone says"
+" something helpful and you want to include it in your current convo with "
+"GPT.\n"
+"- Replying to a message with a file attachment will have that file be "
+"read and included in your conversation. Useful if you upload a file and "
+"forget to use the chat command with it, or if someone else uploads a file"
+" you want to query the bot with.\n"
+"- Conversations are *Per* user *Per* channel, so each channel you "
+"interact with GPT in is a different convo.\n"
+"- Talking to the bot like a person rather than a search engine generally "
+"yields better results. The more verbose you can be, the better.\n"
+"- Conversations are persistent, if you want the bot to forget the convo "
+"so far, use the `[p]clearconvo` command\n"
+"        "
+msgstr ""
+
+#: commands/base.py:77
+msgid "Generate an image with Dalle-3"
+msgstr "Generer et bilde med Dalle-3"
+msgstr ""
+
+#: commands/base.py:78
+msgid "What would you like to draw?"
+msgstr "Hva vil du tegne?"
+msgstr ""
+
+#: commands/base.py:79
+msgid "The size of the image to generate"
+msgstr "Størrelsen på bildet som skal genereres"
+msgstr ""
+
+#: commands/base.py:80
+msgid "The quality of the image to generate"
+msgstr "Kvaliteten på bildet som skal genereres"
+msgstr ""
+
+#: commands/base.py:81
+msgid "The style of the image to generate"
+msgstr "Stilen til bildet som skal genereres"
+msgstr ""
+
+#: commands/base.py:93
+msgid "The API key is not set up!"
+msgstr "API-nøkkelen er ikke satt opp!"
+msgstr ""
+
+#: commands/base.py:95
+msgid "Image generation is disabled!"
+msgstr "Bildegenerering er deaktivert!"
+msgstr ""
+
+#: commands/base.py:97
+msgid "Generating image..."
+msgstr "Genererer bilde..."
+msgstr ""
+
+#: commands/base.py:100 common/functions.py:35
+msgid ""
+msgstr ""
+"-# Size: {}\n"
+"-# Quality: {}\n"
+"-# Style: {}"
+msgstr ""
+
+#: commands/base.py:105 common/functions.py:40
+msgid "Cost: ${}"
+msgstr "Kostnad: ${}"
+msgstr ""
+
+#: commands/base.py:107
+msgid "Revised Prompt"
+msgstr "Revidert ledetekst"
+msgstr ""
+
+#: commands/base.py:198
+msgid ""
+msgstr ""
+"`Messages:   `{}/{}\n"
+"`Tokens:     `{}/{}\n"
+"`Expired:    `{}\n"
+"`Model:      `{}"
+msgstr ""
+
+#: commands/base.py:207
+msgid ""
+msgstr ""
+"\n"
+"`Tool Calls: `{}"
+msgstr ""
+
+#: commands/base.py:209
+msgid "*Collabroative conversations are enabled*"
+msgstr "*Samarbeidssamtaler er aktivert*"
+msgstr ""
+
+#: commands/base.py:215
+msgid "Conversation stats for {}"
+msgstr "Samtalestatistikk for {}"
+msgstr ""
+
+#: commands/base.py:218
+msgid "Token limit is a soft cap and excess is trimmed before sending to the api"
+msgstr "Token-grensen er en myk hette og overskudd trimmes før sending til api"
+msgstr ""
+
+#: commands/base.py:223
+msgid "System prompt override for this conversation"
+msgstr "Overstyring av systemmeldingen for denne samtalen"
+msgstr ""
+
+#: commands/base.py:226
+msgid "System prompt override for this channel"
+msgstr "Overstyring av systemmelding for denne kanalen"
+msgstr ""
+
+#: commands/base.py:244
+msgid ""
+msgstr ""
+"Only moderators can clear channel conversations when collaborative "
+"conversations are enabled!"
+msgstr ""
+
+#: commands/base.py:248
+msgid "Your conversation in this channel has been reset!"
+msgstr "Samtalen din i denne kanalen er tilbakestilt!"
+msgstr ""
+
+#: commands/base.py:265
+msgid ""
+msgstr ""
+"Only moderators can pop messages from conversations when collaborative "
+"conversations are enabled!"
+msgstr ""
+
+#: commands/base.py:269 commands/base.py:301
+msgid "There are no messages in this conversation yet!"
+msgstr "Det er ingen meldinger i denne samtalen ennå!"
+msgstr ""
+
+#: commands/base.py:274
+msgid "Removed the last message from this conversation"
+msgstr "Fjernet den siste meldingen fra denne samtalen"
+msgstr ""
+
+#: commands/base.py:293
+msgid ""
+msgstr ""
+"Only moderators can copy conversations when collaborative conversations "
+"are enabled!"
+msgstr ""
+
+#: commands/base.py:304
+msgid "You cannot copy a conversation to a channel you can't see!"
+msgstr "Du kan ikke kopiere en samtale til en kanal du ikke kan se!"
+msgstr ""
+
+#: commands/base.py:310
+msgid "This conversation has been overwritten in {}"
+msgstr "Denne samtalen er overskrevet i {}"
+msgstr ""
+
+#: commands/base.py:312
+msgid "This conversation has been copied over to {}"
+msgstr "Denne samtalen har blitt kopiert over til {}"
+msgstr ""
+
+#: commands/base.py:331
+msgid "Conversation system prompt overriding is **Disabled**."
+msgstr "Overstyring av samtalesystemet er **deaktivert**."
+msgstr ""
+
+#: commands/base.py:341
+msgid ""
+msgstr ""
+"Only moderators can set conversation prompts when collaborative "
+"conversations are enabled!"
+msgstr ""
+
+#: commands/base.py:361
+#, python-format
+msgid ""
+msgstr ""
+"This prompt is uses {} tokens which is more than 90% of the maximum "
+"tokens allowed per conversation!\n"
+"Write a prompt using {} tokens or less to leave 10% of your token limit "
+"for responses"
+msgstr ""
+
+#: commands/base.py:370
+msgid "System prompt has been set for this conversation!"
+msgstr "Systemmelding er satt for denne samtalen!"
+msgstr ""
+
+#: commands/base.py:372
+msgid "System prompt has been **Removed** for this conversation!"
+msgstr "Systemmeldingen er **fjernet** for denne samtalen!"
+msgstr ""
+
+#: commands/base.py:396
+msgid "You have no conversation in this channel!"
+msgstr "Du har ingen samtale i denne kanalen!"
+msgstr ""
+
+#: commands/base.py:409
+msgid "Here is your conversation transcript!"
+msgstr "Her er samtaleutskriften din!"
+msgstr ""
+
+#: commands/base.py:421
+msgid "You do not have any embeddings configured!"
+msgstr "Du har ingen innebygginger konfigurert!"
+msgstr ""
+
+#: commands/base.py:423
+msgid "Top N is set to 0 so no embeddings will be returned"
+msgstr "Topp N er satt til 0, så ingen innbygging vil bli returnert"
+msgstr ""
+
+#: commands/base.py:429
+msgid "Failed to get embedding for your query"
+msgstr "Kunne ikke hente innbygging for søket ditt"
+msgstr ""
+
+#: commands/base.py:433
+msgid "No embeddings could be related to this query with the current settings"
+msgstr "Ingen innbygginger kunne relateres til denne spørringen med de gjeldende innstillingene"
+msgstr ""
+
+#: commands/base.py:437
+msgid "`Entry Name:  `{}\n"
+msgstr "`Oppføringsnavn: `{}\n"
+msgstr ""
+
+#: commands/base.py:438
+msgid "`Relatedness: `{}\n"
+msgstr "`Slektskap: `{}\n"
+msgstr ""
+
+#: commands/base.py:439
+msgid "`Dimensions:  `{}\n"
+msgstr "`Dimensjoner: `{}\n"
+msgstr ""
+
+#: common/api.py:39
+msgid "Failed to fetch: {}"
+msgstr "Kunne ikke hente: {}"
+msgstr ""
+
+#: common/api.py:219
+msgid "There are no API keys set!\n"
+msgstr "Det er ingen API-nøkler satt!\n"
+msgstr ""
+
+#: common/api.py:221
+msgid "- Set your OpenAI key with `{}`\n"
+msgstr "- Sett OpenAI-nøkkelen din med `{}`\n"
+msgstr ""
+
+#: common/api.py:588
+msgid "Custom Functions"
+msgstr "Egendefinerte funksjoner"
+msgstr ""
+
+#: common/api.py:594
+msgid "3rd Party"
+msgstr "Tredjepart"
+msgstr ""
+
+#: common/api.py:595
+msgid "This function is managed by the `{}` cog"
+msgstr "Denne funksjonen administreres av tannhjulet `{}`"
+msgstr ""
+
+#: common/api.py:600
+msgid "Internal Function"
+msgstr "Intern funksjon"
+msgstr ""
+
+#: common/api.py:601
+msgid ""
+msgstr ""
+"This is an internal command that can only be used when interacting with a"
+" tutor"
+msgstr ""
+
+#: common/api.py:607
+msgid "This function consumes `{}` input tokens each call\n"
+msgstr "Denne funksjonen bruker «{}»-inndatatokens for hvert anrop\n"
+msgstr ""
+
+#: common/api.py:622
+msgid "Hidden..."
+msgstr "Skjult..."
+msgstr ""
+
+#: common/api.py:625
+msgid "Schema"
+msgstr "Skjema"
+msgstr ""
+
+#: common/api.py:628 common/api.py:651
+msgid "Page {}/{}"
+msgstr "Side {}/{}"
+msgstr ""
+
+#: common/api.py:635
+msgid "No custom code has been added yet!"
+msgstr "Ingen egendefinert kode er lagt til ennå!"
+msgstr ""
+
+#: common/api.py:650
+msgid "Embeddings"
+msgstr "Innstøpinger"
+msgstr ""
+
+#: common/api.py:661
+msgid ""
+msgstr ""
+"`Created:    `{}\n"
+"`Modified:   `{}\n"
+"`Tokens:     `{}\n"
+"`Dimensions: `{}\n"
+"`AI Created: `{}\n"
+"`Model:      `{}\n"
+msgstr ""
+
+#: common/api.py:688
+msgid "No embeddings have been added!"
+msgstr "Ingen embeddings er lagt til!"
+msgstr ""
+
+#: common/chat.py:147
+msgid "No message history!"
+msgstr "Ingen meldingshistorikk!"
+msgstr ""
+
+#: common/chat.py:163 common/chat.py:166 common/chat.py:168
+msgid "Internal Server Error({}): {}"
+msgstr "Intern serverfeil ({}): {}"
+msgstr ""
+
+#: common/chat.py:170
+msgid "Failed to communicate with API!"
+msgstr "Kunne ikke kommunisere med API!"
+msgstr ""
+
+#: common/chat.py:174
+msgid "Invalid API key, please set a new valid key!"
+msgstr "Ugyldig API-nøkkel, vennligst angi en ny gyldig nøkkel!"
+msgstr ""
+
+#: common/chat.py:176
+msgid "Uh oh, looks like my API key is invalid!"
+msgstr "Åh, det ser ut til at API-nøkkelen min er ugyldig!"
+msgstr ""
+
+#: common/chat.py:178
+msgid "Rate limit error: {}"
+msgstr "Takstgrensefeil: {}"
+msgstr ""
+
+#: common/chat.py:180
+msgid "Read timeout error: {}"
+msgstr "Lesetidsavbruddsfeil: {}"
+msgstr ""
+
+#: common/chat.py:186
+msgid "Uh oh, something went wrong! Bot owner can use `{}` to view the error."
+msgstr "Åh, noe gikk galt! Boteier kan bruke «{}» for å se feilen."
+msgstr ""
+
+#: common/chat.py:189
+msgid "API Status: {}"
+msgstr "API-status: {}"
+msgstr ""
+
+#: common/chat.py:222
+msgid "No results found"
+msgstr "Ingen resultater funnet"
+msgstr ""
+
+#: common/chat.py:328
+msgid "None"
+msgstr "Ingen"
+msgstr ""
+
+#: common/chat.py:412
+msgid "Request timed out, please try again."
+msgstr "Forespørselen ble tidsavbrutt. Prøv igjen."
+msgstr ""
+
+#: common/chat.py:423 common/chat.py:426 common/chat.py:429 common/chat.py:431
+msgid "Bad Request Error({}): {}"
+msgstr "Feil forespørselsfeil ({}): {}"
+msgstr ""
+
+#: common/chat.py:550
+msgid "Result sent!"
+msgstr "Resultat sendt!"
+msgstr ""
+
+#: common/chat.py:641
+msgid "Response failed due to invalid regex, check logs for more info."
+msgstr "Svaret mislyktes på grunn av ugyldig regulært uttrykk, sjekk loggene for mer informasjon."
+msgstr ""
+
+#: common/chat.py:758
+msgid ""
+msgstr ""
+"\n"
+"Missing 'attach files' permissions!"
+msgstr ""
+
+#: common/utils.py:64
+msgid "Canceled"
+msgstr "Kansellert"
+msgstr ""
+
+#: common/utils.py:77
+msgid "You have been blacklisted from using this command!"
+msgstr "Du har blitt svartelistet fra å bruke denne kommandoen!"
+msgstr ""
+
+#: common/utils.py:81
+msgid "You have a blacklisted role and cannot use this command!"
+msgstr "Du har en svartelistet rolle og kan ikke bruke denne kommandoen!"
+msgstr ""
+
+#: common/utils.py:85
+msgid "You cannot use that command in this channel!"
+msgstr "Du kan ikke bruke den kommandoen i denne kanalen!"
+msgstr ""
+
+#: common/utils.py:89
+msgid "You cannot use that command in any channels under this category"
+msgstr "Du kan ikke bruke den kommandoen i noen kanaler under denne kategorien"
+msgstr ""
+
+#: common/utils.py:124 common/utils.py:125
+msgid "[Code Removed]"
+msgstr "[Kode fjernet]"
+msgstr ""
+

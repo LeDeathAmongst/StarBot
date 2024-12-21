@@ -1,0 +1,1300 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.utils.predicates &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../utils.html">starbot.core.utils</a></li>
+      <li class="breadcrumb-item active">starbot.core.utils.predicates</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.utils.predicates</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">ClassVar</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Pattern</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">discord.ext</span> <span class="kn">import</span> <span class="n">commands</span> <span class="k">as</span> <span class="n">dpy_commands</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;MessagePredicate&quot;</span><span class="p">,</span> <span class="s2">&quot;ReactionPredicate&quot;</span><span class="p">)</span>
+
+<span class="n">_ID_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;([0-9]{15,20})$&quot;</span><span class="p">)</span>
+<span class="n">_USER_MENTION_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;@!?([0-9]{15,20})&gt;$&quot;</span><span class="p">)</span>
+<span class="n">_CHAN_MENTION_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;#([0-9]{15,20})&gt;$&quot;</span><span class="p">)</span>
+<span class="n">_ROLE_MENTION_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;@&amp;([0-9]{15,20})&gt;$&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="MessagePredicate">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate">[docs]</a>
+<span class="k">class</span> <span class="nc">MessagePredicate</span><span class="p">(</span><span class="n">Callable</span><span class="p">[[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A simple collection of predicates for message events.</span>
+
+<span class="sd">    These predicates intend to help simplify checks in message events</span>
+<span class="sd">    and reduce boilerplate code.</span>
+
+<span class="sd">    This class should be created through the provided classmethods.</span>
+<span class="sd">    Instances of this class are callable message predicates, i.e. they</span>
+<span class="sd">    return ``True`` if a message matches the criteria.</span>
+
+<span class="sd">    All predicates are combined with :meth:`MessagePredicate.same_context`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Waiting for a response in the same channel and from the same</span>
+<span class="sd">    author::</span>
+
+<span class="sd">        await bot.wait_for(&quot;message&quot;, check=MessagePredicate.same_context(ctx))</span>
+
+<span class="sd">    Waiting for a response to a yes or no question::</span>
+
+<span class="sd">        pred = MessagePredicate.yes_or_no(ctx)</span>
+<span class="sd">        await bot.wait_for(&quot;message&quot;, check=pred)</span>
+<span class="sd">        if pred.result is True:</span>
+<span class="sd">            # User responded &quot;yes&quot;</span>
+<span class="sd">            ...</span>
+
+<span class="sd">    Getting a member object from a user&#39;s response::</span>
+
+<span class="sd">        pred = MessagePredicate.valid_member(ctx)</span>
+<span class="sd">        await bot.wait_for(&quot;message&quot;, check=pred)</span>
+<span class="sd">        member = pred.result</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    result : Any</span>
+<span class="sd">        The object which the message content matched with. This is</span>
+<span class="sd">        dependent on the predicate used - see each predicate&#39;s</span>
+<span class="sd">        documentation for details, not every method will assign this</span>
+<span class="sd">        attribute. Defaults to ``None``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;MessagePredicate&quot;</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">],</span> <span class="nb">bool</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pred</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;MessagePredicate&quot;</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">predicate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pred</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MessagePredicate.same_context">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.same_context">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">same_context</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the message fits the described context.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            The current invocation context.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            The messageable object we expect a message in. If unspecified,</span>
+<span class="sd">            defaults to ``ctx.channel``. If ``ctx`` is unspecified</span>
+<span class="sd">            too, the message&#39;s channel will be ignored.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            The user we expect a message from. If unspecified,</span>
+<span class="sd">            defaults to ``ctx.author``. If ``ctx`` is unspecified</span>
+<span class="sd">            too, the message&#39;s author will be ignored.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">check_dm_channel</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="c1"># using dpy_commands.Context to keep the Messageable contract in full</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+            <span class="n">channel</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">channel</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">)):</span>
+            <span class="n">check_dm_channel</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">if</span> <span class="n">ctx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">channel</span> <span class="o">=</span> <span class="n">channel</span> <span class="ow">or</span> <span class="n">ctx</span><span class="o">.</span><span class="n">channel</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">user</span> <span class="ow">or</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="p">(</span><span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">user</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">m</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="p">(</span>
+                <span class="n">channel</span> <span class="ow">is</span> <span class="kc">None</span>
+                <span class="ow">or</span> <span class="p">(</span>
+                    <span class="n">channel</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">m</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">id</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">DMChannel</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">check_dm_channel</span>
+                    <span class="k">else</span> <span class="n">channel</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">m</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">id</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.cancelled">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.cancelled">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">cancelled</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the message is ``[p]cancel``.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="p">(</span><span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ctx</span><span class="o">.</span><span class="n">prefix</span><span class="si">}</span><span class="s2">cancel&quot;</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.yes_or_no">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.yes_or_no">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">yes_or_no</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the message is &quot;yes&quot;/&quot;y&quot; or &quot;no&quot;/&quot;n&quot;.</span>
+
+<span class="sd">        This will assign ``True`` for *yes*, or ``False`` for *no* to</span>
+<span class="sd">        the `result` attribute.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">content</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="n">content</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;no&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.valid_int">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.valid_int">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">valid_int</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response is an integer.</span>
+
+<span class="sd">        Assigns the response to `result` as an `int`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.valid_float">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.valid_float">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">valid_float</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response is a float.</span>
+
+<span class="sd">        Assigns the response to `result` as a `float`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.positive">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.positive">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">positive</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response is a positive number.</span>
+
+<span class="sd">        Assigns the response to `result` as a `float`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">number</span>
+                    <span class="k">return</span> <span class="kc">True</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.valid_role">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.valid_role">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">valid_role</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
+            <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">]</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response refers to a role in the current guild.</span>
+
+<span class="sd">        Assigns the matching `discord.Role` object to `result`.</span>
+
+<span class="sd">        This predicate cannot be used in DM.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[Union[`discord.TextChannel`, `discord.VoiceChannel`, `discord.StageChannel`, `discord.Thread`]]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_guild</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">cast</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">user</span><span class="p">))</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="n">role</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_role</span><span class="p">(</span><span class="n">guild</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">role</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">role</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.valid_member">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.valid_member">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">valid_member</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
+            <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">]</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response refers to a member in the current guild.</span>
+
+<span class="sd">        Assigns the matching `discord.Member` object to `result`.</span>
+
+<span class="sd">        This predicate cannot be used in DM.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[Union[`discord.TextChannel`, `discord.VoiceChannel`, `discord.StageChannel`, `discord.Thread`]]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_guild</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">cast</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">user</span><span class="p">))</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="n">match</span> <span class="o">=</span> <span class="n">_ID_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="ow">or</span> <span class="n">_USER_MENTION_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">guild</span><span class="o">.</span><span class="n">get_member</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">guild</span><span class="o">.</span><span class="n">get_member_named</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">result</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.valid_text_channel">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.valid_text_channel">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">valid_text_channel</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
+            <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">]</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response refers to a text channel in the current guild.</span>
+
+<span class="sd">        Assigns the matching `discord.TextChannel` object to `result`.</span>
+
+<span class="sd">        This predicate cannot be used in DM.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[Union[`discord.TextChannel`, `discord.VoiceChannel`, `discord.StageChannel`, `discord.Thread`]]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_guild</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">cast</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">user</span><span class="p">))</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="n">match</span> <span class="o">=</span> <span class="n">_ID_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="ow">or</span> <span class="n">_CHAN_MENTION_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">guild</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">text_channels</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">result</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.has_role">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.has_role">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">has_role</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
+            <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">]</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response refers to a role which the author has.</span>
+
+<span class="sd">        Assigns the matching `discord.Role` object to `result`.</span>
+
+<span class="sd">        One of ``user`` or ``ctx`` must be supplied. This predicate</span>
+<span class="sd">        cannot be used in DM.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[Union[`discord.TextChannel`, `discord.VoiceChannel`, `discord.StageChannel`, `discord.Thread`]]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_guild</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">cast</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">user</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">ctx</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                    <span class="s2">&quot;One of `user` or `ctx` must be supplied to `MessagePredicate.has_role`.&quot;</span>
+                <span class="p">)</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="n">role</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_role</span><span class="p">(</span><span class="n">guild</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">role</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">user</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="n">role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">role</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.equal_to">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.equal_to">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">equal_to</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response is equal to the specified value.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : str</span>
+<span class="sd">            The value to compare the response with.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">content</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.lower_equal_to">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.lower_equal_to">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">lower_equal_to</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response *as lowercase* is equal to the specified value.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : str</span>
+<span class="sd">            The value to compare the response with.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.less">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.less">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">less</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response is less than the specified value.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : Union[int, float]</span>
+<span class="sd">            The value to compare the response with.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">valid_int</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">valid_int</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="n">valid_float</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">valid_float</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="p">(</span><span class="n">valid_int</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="ow">or</span> <span class="n">valid_float</span><span class="p">(</span><span class="n">m</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">float</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.greater">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.greater">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">greater</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response is greater than the specified value.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        value : Union[int, float]</span>
+<span class="sd">            The value to compare the response with.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">valid_int</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">valid_int</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="n">valid_float</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">valid_float</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="p">(</span><span class="n">valid_int</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="ow">or</span> <span class="n">valid_float</span><span class="p">(</span><span class="n">m</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">float</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.length_less">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.length_less">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">length_less</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">length</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response&#39;s length is less than the specified length.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        length : int</span>
+<span class="sd">            The value to compare the response&#39;s length with.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">length</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.length_greater">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.length_greater">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">length_greater</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">length</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response&#39;s length is greater than the specified length.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        length : int</span>
+<span class="sd">            The value to compare the response&#39;s length with.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">length</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.contained_in">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.contained_in">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">contained_in</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">collection</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response is contained in the specified collection.</span>
+
+<span class="sd">        The index of the response in the ``collection`` sequence is</span>
+<span class="sd">        assigned to the `result` attribute.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        collection : Sequence[str]</span>
+<span class="sd">            The collection containing valid responses.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.lower_contained_in">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.lower_contained_in">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">lower_contained_in</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">collection</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Same as :meth:`contained_in`, but the response is set to lowercase before matching.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        collection : Sequence[str]</span>
+<span class="sd">            The collection containing valid lowercase responses.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MessagePredicate.regex">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.MessagePredicate.regex">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">regex</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">pattern</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Pattern</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessagePredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the response matches the specified regex pattern.</span>
+
+<span class="sd">        This predicate will use `re.search` to find a match. The</span>
+<span class="sd">        resulting `match object &lt;match-objects&gt;` will be assigned</span>
+<span class="sd">        to `result`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pattern : Union[`pattern object &lt;re-objects&gt;`, str]</span>
+<span class="sd">            The pattern to search for in the response.</span>
+<span class="sd">        ctx : Optional[Context]</span>
+<span class="sd">            Same as ``ctx`` in :meth:`same_context`.</span>
+<span class="sd">        channel : Optional[discord.abc.Messageable]</span>
+<span class="sd">            Same as ``channel`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        MessagePredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">channel</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">MessagePredicate</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">pattern_obj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">pattern_obj</span> <span class="o">=</span> <span class="n">pattern</span>
+
+            <span class="n">match</span> <span class="o">=</span> <span class="n">pattern_obj</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">match</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_find_role</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span> <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Role</span><span class="p">]:</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">_ID_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span> <span class="ow">or</span> <span class="n">_ROLE_MENTION_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">guild</span><span class="o">.</span><span class="n">get_role</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">roles</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">argument</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_guild</span><span class="p">(</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">],</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
+            <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">]</span>
+        <span class="p">],</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ctx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span>
+        <span class="k">elif</span> <span class="n">channel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">channel</span><span class="o">.</span><span class="n">guild</span>
+        <span class="k">elif</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">guild</span></div>
+
+
+
+<div class="viewcode-block" id="ReactionPredicate">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.ReactionPredicate">[docs]</a>
+<span class="k">class</span> <span class="nc">ReactionPredicate</span><span class="p">(</span><span class="n">Callable</span><span class="p">[[</span><span class="n">discord</span><span class="o">.</span><span class="n">Reaction</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A collection of predicates for reaction events.</span>
+
+<span class="sd">    All checks are combined with :meth:`ReactionPredicate.same_context`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Confirming a yes/no question with a tick/cross reaction::</span>
+
+<span class="sd">        from starbot.core.utils.predicates import ReactionPredicate</span>
+<span class="sd">        from starbot.core.utils.menus import start_adding_reactions</span>
+
+<span class="sd">        msg = await ctx.send(&quot;Yes or no?&quot;)</span>
+<span class="sd">        start_adding_reactions(msg, ReactionPredicate.YES_OR_NO_EMOJIS)</span>
+
+<span class="sd">        pred = ReactionPredicate.yes_or_no(msg, ctx.author)</span>
+<span class="sd">        await ctx.bot.wait_for(&quot;reaction_add&quot;, check=pred)</span>
+<span class="sd">        if pred.result is True:</span>
+<span class="sd">            # User responded with tick</span>
+<span class="sd">            ...</span>
+<span class="sd">        else:</span>
+<span class="sd">            # User responded with cross</span>
+<span class="sd">            ...</span>
+
+<span class="sd">    Waiting for the first reaction from any user with one of the first</span>
+<span class="sd">    5 letters of the alphabet::</span>
+
+<span class="sd">        from starbot.core.utils.predicates import ReactionPredicate</span>
+<span class="sd">        from starbot.core.utils.menus import start_adding_reactions</span>
+
+<span class="sd">        msg = await ctx.send(&quot;React to me!&quot;)</span>
+<span class="sd">        emojis = ReactionPredicate.ALPHABET_EMOJIS[:5]</span>
+<span class="sd">        start_adding_reactions(msg, emojis)</span>
+
+<span class="sd">        pred = ReactionPredicate.with_emojis(emojis, msg)</span>
+<span class="sd">        await ctx.bot.wait_for(&quot;reaction_add&quot;, check=pred)</span>
+<span class="sd">        # pred.result is now the index of the letter in `emojis`</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    result : Any</span>
+<span class="sd">        The object which the reaction matched with. This is</span>
+<span class="sd">        dependent on the predicate used - see each predicate&#39;s</span>
+<span class="sd">        documentation for details, not every method will assign this</span>
+<span class="sd">        attribute. Defaults to ``None``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">YES_OR_NO_EMOJIS</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;</span><span class="se">\N{WHITE HEAVY CHECK MARK}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;</span><span class="se">\N{NEGATIVE SQUARED CROSS MARK}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tuple[str, str] : A tuple containing the tick emoji and cross emoji, in that order.&quot;&quot;&quot;</span>
+
+    <span class="n">ALPHABET_EMOJIS</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
+        <span class="nb">chr</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>
+            <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\N{REGIONAL INDICATOR SYMBOL LETTER A}</span><span class="s2">&quot;</span><span class="p">),</span>
+            <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\N{REGIONAL INDICATOR SYMBOL LETTER Z}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tuple[str, ...] : A tuple of all 26 alphabetical letter emojis.&quot;&quot;&quot;</span>
+
+    <span class="n">NUMBER_EMOJIS</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
+        <span class="nb">chr</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\N{COMBINING ENCLOSING KEYCAP}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">),</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;9&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tuple[str, ...] : A tuple of all single-digit number emojis, 0 through 9.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="s2">&quot;ReactionPredicate&quot;</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Reaction</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pred</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span>
+            <span class="p">[</span><span class="s2">&quot;ReactionPredicate&quot;</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Reaction</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">],</span> <span class="nb">bool</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="n">predicate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Reaction</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pred</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reaction</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+    <span class="c1"># noinspection PyUnusedLocal</span>
+<div class="viewcode-block" id="ReactionPredicate.same_context">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.ReactionPredicate.same_context">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">same_context</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ReactionPredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if a reaction fits the described context.</span>
+
+<span class="sd">        This will ignore reactions added by the bot user, regardless</span>
+<span class="sd">        of whether or not ``user`` is supplied.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        message : Optional[discord.Message]</span>
+<span class="sd">            The message which we expect a reaction to. If unspecified,</span>
+<span class="sd">            the reaction&#39;s message will be ignored.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            The user we expect to react. If unspecified, the user who</span>
+<span class="sd">            added the reaction will be ignored.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ReactionPredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># noinspection PyProtectedMember</span>
+        <span class="c1"># DEP-WARN</span>
+        <span class="n">me_id</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">self_id</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">u</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="n">me_id</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="n">message</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">message</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">u</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ReactionPredicate.with_emojis">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.ReactionPredicate.with_emojis">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">with_emojis</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">emojis</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Emoji</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">]],</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ReactionPredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the reaction is one of the specified emojis.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        emojis : Sequence[Union[str, discord.Emoji, discord.PartialEmoji]]</span>
+<span class="sd">            The emojis of which one we expect to be reacted.</span>
+<span class="sd">        message : discord.Message</span>
+<span class="sd">            Same as ``message`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ReactionPredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">ReactionPredicate</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Reaction</span><span class="p">,</span> <span class="n">u</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">emojis</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">emoji</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ReactionPredicate.yes_or_no">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.predicates.ReactionPredicate.yes_or_no">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">yes_or_no</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ReactionPredicate&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Match if the reaction is a tick or cross emoji.</span>
+
+<span class="sd">        The emojis used are in</span>
+<span class="sd">        `ReactionPredicate.YES_OR_NO_EMOJIS`.</span>
+
+<span class="sd">        This will assign ``True`` for *yes*, or ``False`` for *no* to</span>
+<span class="sd">        the `result` attribute.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        message : discord.Message</span>
+<span class="sd">            Same as ``message`` in :meth:`same_context`.</span>
+<span class="sd">        user : Optional[discord.abc.User]</span>
+<span class="sd">            Same as ``user`` in :meth:`same_context`.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ReactionPredicate</span>
+<span class="sd">            The event predicate.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">same_context</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">same_context</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">predicate</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">ReactionPredicate</span><span class="p">,</span> <span class="n">r</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Reaction</span><span class="p">,</span> <span class="n">u</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">same_context</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">YES_OR_NO_EMOJIS</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">emoji</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">predicate</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

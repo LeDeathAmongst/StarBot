@@ -1,0 +1,79 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-04-29 21:11+0500\n"
+"PO-Revision-Date: 2023-04-29 21:16+0500\n"
+"Last-Translator: NoPlagiarism\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Generated-By: redgettext 3.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: ryd\ext.py:25
+#, docstring
+msgid "'Return YouTube Dislikes' cog"
+msgstr "'Return YouTube Dislikes' cog"
+
+#: ryd\ext.py:108
+#, docstring
+msgid "Insert YouTube video url or id as argument to get dislikes count"
+msgstr "Вставьте видео с YouTube или id как аргумент, чтоб получить количество дизлайкой"
+
+#: ryd\ext.py:170
+#, docstring
+msgid "Change settings of RYD Cog"
+msgstr "Изменение настроек RYD Cog"
+
+#: ryd\ext.py:180
+#, docstring
+msgid "Disable/Enable message scanning for the bot"
+msgstr "Выключить/Включить автоскан сообщений"
+
+#: ryd\ext.py:184 ryd\ext.py:197 ryd\ext.py:211 ryd\ext.py:243
+msgid "Message scanning is {} now"
+msgstr "Автоскан сообщений {}"
+
+#: ryd\ext.py:184 ryd\ext.py:197 ryd\ext.py:211 ryd\ext.py:219 ryd\ext.py:236
+msgid "Enabled"
+msgstr "Включён"
+
+#: ryd\ext.py:184 ryd\ext.py:197 ryd\ext.py:211 ryd\ext.py:219 ryd\ext.py:230
+msgid "Disabled"
+msgstr "Выключен"
+
+#: ryd\ext.py:193
+#, docstring
+msgid "Disable/Enable message scanning for the specific person"
+msgstr "Выключить/Включить автоскан сообщений для определённого человека"
+
+#: ryd\ext.py:207
+#, docstring
+msgid "Disable/Enable message scanning for guild"
+msgstr "Выключить/Включить автоскан сообщений на сервере"
+
+#: ryd\ext.py:215
+#, docstring
+msgid "Enable/Disable whitelist mode for guild"
+msgstr "Выключить/Включить белый список на сервере"
+
+#: ryd\ext.py:219
+msgid "Whitelist mode is {} now"
+msgstr "Белый список {}"
+
+#: ryd\ext.py:223
+#, docstring
+msgid "Disable/Enable message scanning for channel. Even in whitelist mode"
+msgstr "Выключить/Включить автоскан сообщений для канала. Даже в режиме белого списка"
+
+#: ryd\ext.py:233
+msgid "not Whitelisted"
+msgstr "не в белом списке"
+
+#: ryd\ext.py:239
+msgid "Whitelisted"
+msgstr "в белом списке"

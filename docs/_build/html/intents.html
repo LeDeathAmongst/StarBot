@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About (privileged) intents and public bots &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Admin" href="cog_guides/admin.html" />
+    <link rel="prev" title="Getting started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About (privileged) intents and public bots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#intents-intents">Intents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#public-bots">Public bots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bot-verification-process">Bot verification process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#message-intent-and-slash-commands">Message intent and slash commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">About (privileged) intents and public bots</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developintents.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <span class="target" id="intents"></span><section id="about-privileged-intents-and-public-bots">
+<h1>About (privileged) intents and public bots<a class="headerlink" href="#about-privileged-intents-and-public-bots" title="Link to this heading"></a></h1>
+<p>This page aims to explain Red’s current intents requirements,
+our stance regarding “public bots” and the impact of some announced
+Discord changes coming in April 2022.</p>
+<p>To clarify:</p>
+<ul class="simple">
+<li><p><strong>Small bots</strong> are bots under 100 servers. They currently do not need to undergo Discord’s
+bot verification process</p></li>
+<li><p><strong>Public bots</strong> (or big bots) are bots that have reached 100 servers. They need to be
+<a class="reference external" href="https://support.discord.com/hc/en-us/articles/360040720412-Bot-Verification-and-Data-Whitelisting">verified</a>
+by Discord to join more than 100 servers and gain privileged intents</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is <strong>very</strong> important that you fully read this page if you’re the owner of a public bot or strive to scale your bot at that level.</p>
+</div>
+<section id="intents-intents">
+<span id="id1"></span><h2>Intents<a class="headerlink" href="#intents-intents" title="Link to this heading"></a></h2>
+<p>Red currently requires <strong>all intents</strong> to be active in order to function properly.</p>
+<p>The reason for this requirement is that there are some technical challenges that need
+to be overcome before we’re able to adapt Red to function with only <em>some</em> intents:
+these challenges are mainly due to the modular / extensible nature of Red and the fact
+that Red has a long history (dating back to 2016!), making big changes naturally slower
+to happen. In comparison, intents have been introduced fairly recently. <br />
+This is not a problem if you have a small bot: you can simply go to the
+<a class="reference external" href="https://discord.com/developers/applications/me">Discord development portal</a>
+and enable them. However, if you have a public bot Discord will want you to attain
+verified status: you should read <a class="reference internal" href="#intents-public-bots"><span class="std std-ref">our stance regarding public bots</span></a>
+and our guidelines for the <a class="reference internal" href="#intents-bot-verification-process"><span class="std std-ref">verification process</span></a>.</p>
+</section>
+<section id="public-bots">
+<span id="intents-public-bots"></span><h2>Public bots<a class="headerlink" href="#public-bots" title="Link to this heading"></a></h2>
+<p>Public bots, or big bots, are not our target audience and we <strong>do not</strong> offer support for them.</p>
+<p>Red was designed with one single goal in mind: a bot that you can host on your own hardware
+and customize to your needs, making it really <em>your</em> bot. <strong>The target audience of Red are server
+owners with a few servers</strong>, often with specific needs that can be covered by the vast cog ecosystem
+that the community has built over the years. <br /> Red was never built with big bots in mind,
+bots with thousands upon thousands of servers: these bots face unique challenges.
+Such Red instances <em>do exist</em>, it is not impossible to adapt Red and meet those criteria,
+but it requires work and bot owners with the technical knowledge to make it happen.
+It is <strong>not</strong> something that we support. <br />
+When your bot reaches the public bot scale and it is therefore required to be verified it
+is <em>expected</em> that you know what’s in your bot and how it works: that doesn’t just mean on the
+surface level, it means coding knowledge and the ability to maintain it on your own.</p>
+</section>
+<section id="bot-verification-process">
+<span id="intents-bot-verification-process"></span><h2>Bot verification process<a class="headerlink" href="#bot-verification-process" title="Link to this heading"></a></h2>
+<p>When your bot ceases to be a small bot Discord will require you to verify your bot before allowing
+it to join more servers and gain privileged intents. If you’ve read the previous section,
+you will know that we do <strong>not</strong> support public bots. Logically, we also do not provide help for
+the verification process.</p>
+<p>Regardless of our stance, we do feel the need to give some pointers: many bot owners reach this point
+and become fairly lost, as they’ve simply been <em>users</em> so far.
+They have installed their bot, some cogs, personalized it, yadda yadda. Again, they have been users,
+not developers. Unless they also have an interest in development, they will likely not have a clue about
+what’s going under the hood, much like you’re not expected to be a mechanic to drive your car. And there’s
+nothing wrong with that! Red has been designed to be as user friendly as possible. <br />
+The problem is this: Red is an outlier. Discord has built the bot verification process with the expectation
+that the owner knows <em>on a technical level</em> what their bot does and how it works. And this is because outside
+Red, the typical bot owner is also a developer who coded their own bot from scratch.</p>
+<p>While, again, we <em>cannot</em> support you going forward we want to give you some pointers to follow when filling
+out your application:</p>
+<ul class="simple">
+<li><p>Learn on a technical level what intents are and what’s going on, under the hood, in your bot. Knowing its
+features at a surface level is not enough. What features need intents to work and why?</p></li>
+<li><p>Forget that you’re hosting Red. You’re hosting <em>a bot</em> and Discord wants to know what <em>your bot</em> does and why
+you’re requesting privileged intents. <br /> A <strong>very bad</strong> answer is: <em>“Because Red needs them”</em>. <br />
+A <strong>good</strong> answer is: <em>“My bot has X features and it needs Y intents to work properly”</em>. <br /> We’ve had a fair share
+of people that in their naivety went with the bad answer and it seems that at this point merely mentioning Red
+is a guaranteed way to have your application rejected.</p></li>
+</ul>
+</section>
+<section id="message-intent-and-slash-commands">
+<span id="intents-slash-commands"></span><h2>Message intent and slash commands<a class="headerlink" href="#message-intent-and-slash-commands" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you own a public bot it is extremely important that you read this section.</p>
+</div>
+<p>Discord has announced that <strong>starting April 2022</strong> the content of users’ messages
+<a class="reference external" href="https://support-dev.discord.com/hc/en-us/articles/4404772028055">will be “locked” behind message intent</a> <br />
+If you’re the owner of a small bot, fear not, this is yet another box that you have to tick from the
+<a class="reference external" href="https://discord.com/developers/applications/me">Discord development portal</a>. <br />
+But if you’re the owner of a public bot, things might be a lot less pleasant.</p>
+<p>To recap, unless you have
+message intent, you will only receive message content for:</p>
+<ul class="simple">
+<li><p>Messages that your bot sends</p></li>
+<li><p>Messages that your bot receives in DM</p></li>
+<li><p>Messages in which your bot is mentioned</p></li>
+</ul>
+<p>In case it’s not clear by now, your bot needs message content to parse (see) the commands it receives. And if
+you don’t attain message intent, your bot will not be able to… well, do anything. <br />
+The <em>bandaid fix</em> is for you to change your bot’s prefix to a mention and a good portion of your commands will likely
+still work. You will however lose many functions, namely anything that relies on seeing message content to act. <br />
+The more <em>proper fix</em> is also not easy. You will need to justify your need for the message intent to Discord and
+they will only accept “compelling use cases”.
+<a class="reference external" href="https://gist.github.com/spiralw/091714718718379b6efcdbcaf807a024#q-what-usecases-will-be-valid">It is not known what those even entail</a> at this point, but they have already stated that “parsing commands” is not a valid justification. <br />
+To make the matter worse, Discord is making <a class="reference external" href="https://support.discord.com/hc/en-us/articles/1500000368501-Slash-Commands-FAQ">a huge push for all bot developers to implement slash commands</a>, which at the moment
+are rather lacking in features and cannot cover all the functionalities that standard commands offer. <br />
+Discord staff
+<a class="reference external" href="https://gist.github.com/spiralw/091714718718379b6efcdbcaf807a024#q-if-we-are-granted-this-intent-will-bots-be-sanctioned-if-they-use-it-for-their-own-use-case-but-also-to-continue-to-run-normal-non-slash-commands-or-do-we-assume-that-if-you-are-granted-the-intent-you-are-trusted-with-it-and-are-allowed-to-use-it-for-additional-uses">stated that they will want your bot to have slash commands when you ask for message intent</a>. <br />
+Slash commands might very well turn out to be a big undertaking for the Red team to implement, even more now that our
+underlying library, <a class="reference external" href="https://github.com/Rapptz/discord.py">discord.py</a>, has been discontinued. <br />
+The time window that Discord is giving us to adapt is very narrow: <strong>Red will likely not be able to support slash
+commands for April 2022</strong> and you should plan accordingly.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cog_guides/admin.html" class="btn btn-neutral float-right" title="Admin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

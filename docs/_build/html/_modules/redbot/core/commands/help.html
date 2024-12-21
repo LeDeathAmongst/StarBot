@@ -1,0 +1,1149 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.commands.help &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">starbot.core.commands.help</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.commands.help</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Warning: The implementation below touches several private attributes.</span>
+<span class="c1"># While this implementation will be updated, and public interfaces maintained,</span>
+<span class="c1"># derived classes should not assume these private attributes are version safe,</span>
+<span class="c1"># and use the provided HelpSettings class for these settings.</span>
+
+<span class="c1"># This is a full replacement of discord.py&#39;s help command</span>
+<span class="c1">#</span>
+<span class="c1"># This exists due to deficiencies in discord.py which conflict</span>
+<span class="c1"># with our needs for per-context help settings</span>
+<span class="c1"># see https://github.com/Rapptz/discord.py/issues/2123</span>
+<span class="c1">#</span>
+<span class="c1"># While the issue above discusses this as theoretical, merely interacting with config within</span>
+<span class="c1"># the help command preparation was enough to cause</span>
+<span class="c1"># demonstrable breakage in 150 help invokes in a 2 minute window.</span>
+<span class="c1"># This is not an unreasonable volume on some already existing Red instances,</span>
+<span class="c1"># especially since help is invoked for command groups</span>
+<span class="c1"># automatically when subcommands are not provided correctly as user feedback.</span>
+<span class="c1">#</span>
+<span class="c1"># The implemented fix is in</span>
+<span class="c1"># https://github.com/Rapptz/discord.py/commit/ad5beed8dd75c00bd87492cac17fe877033a3ea1</span>
+<span class="c1">#</span>
+<span class="c1"># While this fix would handle our immediate specific issues, it&#39;s less appropriate to use</span>
+<span class="c1"># Where we do not have a downstream consumer to consider.</span>
+<span class="c1"># Simply modifying the design to not be susceptible to the issue,</span>
+<span class="c1"># rather than adding copy and deepcopy use in multiple places is better for us</span>
+<span class="c1">#</span>
+<span class="c1"># Additionally, this gives our users a bit more customization options including by</span>
+<span class="c1"># 3rd party cogs down the road.</span>
+
+<span class="kn">import</span> <span class="nn">abc</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">asdict</span> <span class="k">as</span> <span class="n">dc_asdict</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">AsyncIterator</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">discord.ext</span> <span class="kn">import</span> <span class="n">commands</span> <span class="k">as</span> <span class="n">dpy_commands</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">commands</span>
+<span class="kn">from</span> <span class="nn">.context</span> <span class="kn">import</span> <span class="n">Context</span>
+<span class="kn">from</span> <span class="nn">..i18n</span> <span class="kn">import</span> <span class="n">Translator</span>
+<span class="kn">from</span> <span class="nn">..utils.views</span> <span class="kn">import</span> <span class="n">SimpleMenu</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">can_user_react_in</span><span class="p">,</span> <span class="n">menus</span>
+<span class="kn">from</span> <span class="nn">..utils.mod</span> <span class="kn">import</span> <span class="n">mass_purge</span>
+<span class="kn">from</span> <span class="nn">..utils._internal_utils</span> <span class="kn">import</span> <span class="n">fuzzy_command_search</span><span class="p">,</span> <span class="n">format_fuzzy_results</span>
+<span class="kn">from</span> <span class="nn">..utils.chat_formatting</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">bold</span><span class="p">,</span>
+    <span class="n">box</span><span class="p">,</span>
+    <span class="n">humanize_list</span><span class="p">,</span>
+    <span class="n">humanize_number</span><span class="p">,</span>
+    <span class="n">humanize_timedelta</span><span class="p">,</span>
+    <span class="n">pagify</span><span class="p">,</span>
+    <span class="n">underline</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red_help&quot;</span><span class="p">,</span> <span class="s2">&quot;RedHelpFormatter&quot;</span><span class="p">,</span> <span class="s2">&quot;HelpSettings&quot;</span><span class="p">,</span> <span class="s2">&quot;HelpFormatterABC&quot;</span><span class="p">]</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s2">&quot;Help&quot;</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
+
+<span class="n">HelpTarget</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Command</span><span class="p">,</span> <span class="n">commands</span><span class="o">.</span><span class="n">Group</span><span class="p">,</span> <span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">,</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">BotBase</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+
+<span class="c1"># The below could be a protocol if we pulled in typing_extensions from mypy.</span>
+<span class="n">SupportsCanSee</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Command</span><span class="p">,</span> <span class="n">commands</span><span class="o">.</span><span class="n">Group</span><span class="p">,</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">BotBase</span><span class="p">,</span> <span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">]</span>
+
+<span class="n">EmbedField</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;EmbedField&quot;</span><span class="p">,</span> <span class="s2">&quot;name value inline&quot;</span><span class="p">)</span>
+<span class="n">EMPTY_STRING</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\N{ZERO WIDTH SPACE}</span><span class="s2">&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">HelpMenuSetting</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">disabled</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">reactions</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">buttons</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">select</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">selectonly</span> <span class="o">=</span> <span class="mi">4</span>
+
+
+<div class="viewcode-block" id="HelpSettings">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.HelpSettings">[docs]</a>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">HelpSettings</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A representation of help settings.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        This class is `provisional &lt;developer-guarantees-exclusions&gt;`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">page_char_limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span>
+    <span class="n">max_pages_in_guild</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">use_menus</span><span class="p">:</span> <span class="n">HelpMenuSetting</span> <span class="o">=</span> <span class="n">HelpMenuSetting</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">show_hidden</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">show_aliases</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">verify_checks</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">verify_exists</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">tagline</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">delete_delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">use_tick</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">react_timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span>
+
+    <span class="c1"># Contrib Note: This is intentional to not accept the bot object</span>
+    <span class="c1"># There are plans to allow guild and user specific help settings</span>
+    <span class="c1"># Adding a non-context based method now would involve a breaking</span>
+    <span class="c1"># change later.</span>
+    <span class="c1"># At a later date, more methods should be exposed for</span>
+    <span class="c1"># non-context based creation.</span>
+    <span class="c1">#</span>
+    <span class="c1"># This is also why we aren&#39;t just caching the</span>
+    <span class="c1"># current state of these settings on the bot object.</span>
+<div class="viewcode-block" id="HelpSettings.from_context">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.HelpSettings.from_context">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_context</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Context</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the HelpSettings for the current context</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="k">await</span> <span class="n">context</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">help</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">menus</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;use_menus&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">settings</span><span class="p">,</span> <span class="n">use_menus</span><span class="o">=</span><span class="n">HelpMenuSetting</span><span class="p">(</span><span class="n">menus</span><span class="p">))</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pretty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a discord safe representation of the settings&quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">bool_transformer</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;No&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">val</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">bool_transformer</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dc_asdict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete_delay</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;delete_delay&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Disabled&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;delete_delay&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">humanize_timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">delete_delay</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">tag</span> <span class="o">:=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tagline&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">tagline_info</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Custom Tagline: </span><span class="si">{tag}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="n">tag</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tagline_info</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;tagline_info&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tagline_info</span>
+        <span class="n">menus_str</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">HelpMenuSetting</span><span class="o">.</span><span class="n">disabled</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;No&quot;</span><span class="p">),</span>
+            <span class="n">HelpMenuSetting</span><span class="o">.</span><span class="n">reactions</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Yes, reactions&quot;</span><span class="p">),</span>
+            <span class="n">HelpMenuSetting</span><span class="o">.</span><span class="n">buttons</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Yes, buttons&quot;</span><span class="p">),</span>
+            <span class="n">HelpMenuSetting</span><span class="o">.</span><span class="n">select</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Yes, buttons with select menu&quot;</span><span class="p">),</span>
+            <span class="n">HelpMenuSetting</span><span class="o">.</span><span class="n">selectonly</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Yes, select menu only&quot;</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;use_menus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">menus_str</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">use_menus</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;Maximum characters per page: </span><span class="si">{page_char_limit}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Maximum pages per guild (only used if menus are not used): </span><span class="si">{max_pages_in_guild}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Help is a menu: </span><span class="si">{use_menus}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Help shows hidden commands: </span><span class="si">{show_hidden}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Help shows commands aliases: </span><span class="si">{show_aliases}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Help only shows commands which can be used: </span><span class="si">{verify_checks}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Help shows unusable commands when asked directly: </span><span class="si">{verify_exists}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Delete delay: </span><span class="si">{delete_delay}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">React with a checkmark when help is sent via DM: </span><span class="si">{use_tick}</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Reaction timeout (only used if menus are used): </span><span class="si">{react_timeout}</span><span class="s2"> seconds&quot;</span>
+            <span class="s2">&quot;</span><span class="si">{tagline_info}</span><span class="s2">&quot;</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">format_map</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
+
+
+<span class="k">class</span> <span class="nc">NoCommand</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">class</span> <span class="nc">NoSubCommand</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">not_found</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last</span> <span class="o">=</span> <span class="n">last</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">not_found</span> <span class="o">=</span> <span class="n">not_found</span>
+
+
+<div class="viewcode-block" id="HelpFormatterABC">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.HelpFormatterABC">[docs]</a>
+<span class="k">class</span> <span class="nc">HelpFormatterABC</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Describes the required interface of a help formatter.</span>
+
+<span class="sd">    Additional notes for 3rd party developers are included in this class.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        You may define __init__ however you want</span>
+<span class="sd">        (such as to include config),</span>
+<span class="sd">        Red will not initialize a formatter for you,</span>
+<span class="sd">        and must be passed an initialized formatter.</span>
+
+<span class="sd">        If you want to use Red&#39;s existing settings, use ``HelpSettings.from_context``</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        This class is documented but `provisional &lt;developer-guarantees-exclusions&gt;` with expected changes.</span>
+
+<span class="sd">        In the future, this class will receive changes to support</span>
+<span class="sd">        invoking the help command without context.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="HelpFormatterABC.send_help">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.HelpFormatterABC.send_help">[docs]</a>
+    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">send_help</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">help_for</span><span class="p">:</span> <span class="n">HelpTarget</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">from_help_command</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is (currently) the only method you must implement.</span>
+
+<span class="sd">        This method should handle any and all errors which may arise.</span>
+
+<span class="sd">        The types subclasses must handle are defined as ``HelpTarget``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="RedHelpFormatter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.RedHelpFormatter">[docs]</a>
+<span class="k">class</span> <span class="nc">RedHelpFormatter</span><span class="p">(</span><span class="n">HelpFormatterABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Red&#39;s help implementation</span>
+
+<span class="sd">    This is intended to be overridable in parts to only change some behavior.</span>
+
+<span class="sd">    While this exists as a class for easy partial overriding,</span>
+<span class="sd">    most implementations should not need or want a shared state.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        This class is documented but may receive changes between</span>
+<span class="sd">        versions without warning as needed.</span>
+<span class="sd">        The supported way to modify help is to write a separate formatter.</span>
+
+<span class="sd">        The primary reason for this class being documented is to allow</span>
+<span class="sd">        the opaque use of the class as a fallback, as any method in base</span>
+<span class="sd">        class which is intended for use will be present and implemented here.</span>
+
+<span class="sd">    .. note::</span>
+
+<span class="sd">        This class may use various internal methods which are not safe to</span>
+<span class="sd">        use in third party code.</span>
+<span class="sd">        The internal methods used here may change,</span>
+<span class="sd">        with this class being updated at the same time.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="RedHelpFormatter.send_help">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.RedHelpFormatter.send_help">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">send_help</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">help_for</span><span class="p">:</span> <span class="n">HelpTarget</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">from_help_command</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This delegates to other functions.</span>
+
+<span class="sd">        For most cases, you should use this and only this directly.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">help_settings</span> <span class="o">=</span> <span class="k">await</span> <span class="n">HelpSettings</span><span class="o">.</span><span class="n">from_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">help_for</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">help_for</span><span class="p">,</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">BotBase</span><span class="p">):</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_bot_help</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">help_for</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">help_for</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_command</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_for</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">NoCommand</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">command_not_found</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_for</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="k">except</span> <span class="n">NoSubCommand</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">verify_exists</span><span class="p">:</span>
+                    <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">subcommand_not_found</span><span class="p">(</span>
+                        <span class="n">ctx</span><span class="p">,</span> <span class="n">exc</span><span class="o">.</span><span class="n">last</span><span class="p">,</span> <span class="n">exc</span><span class="o">.</span><span class="n">not_found</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span>
+                    <span class="p">)</span>
+                    <span class="k">return</span>
+                <span class="n">help_for</span> <span class="o">=</span> <span class="n">exc</span><span class="o">.</span><span class="n">last</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">help_for</span><span class="p">,</span> <span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_cog_help</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_for</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_command_help</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_for</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_cog_help_mapping</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span>
+    <span class="p">):</span>
+        <span class="n">iterator</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="n">c</span><span class="o">.</span><span class="n">parent</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">cog</span> <span class="ow">is</span> <span class="n">obj</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">commands</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">com</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">com</span>
+            <span class="k">async</span> <span class="k">for</span> <span class="n">com</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">help_filter_func</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_group_help_mapping</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Group</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span>
+    <span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">com</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">com</span>
+            <span class="k">async</span> <span class="k">for</span> <span class="n">com</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">help_filter_func</span><span class="p">(</span>
+                <span class="n">ctx</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">all_commands</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_bot_help_mapping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span><span class="p">):</span>
+        <span class="n">sorted_iterable</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">cogname</span><span class="p">,</span> <span class="n">cog</span> <span class="ow">in</span> <span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">cogs</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+            <span class="n">cm</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cog_help_mapping</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">cog</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cm</span><span class="p">:</span>
+                <span class="n">sorted_iterable</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">cogname</span><span class="p">,</span> <span class="n">cm</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">sorted_iterable</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_default_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;Type </span><span class="si">{command1}</span><span class="s2"> for more info on a command. &quot;</span>
+            <span class="s2">&quot;You can also type </span><span class="si">{command2}</span><span class="s2"> for more info on a category.&quot;</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">command1</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ctx</span><span class="o">.</span><span class="n">clean_prefix</span><span class="si">}</span><span class="s2">help &lt;command&gt;&quot;</span><span class="p">,</span>
+            <span class="n">command2</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ctx</span><span class="o">.</span><span class="n">clean_prefix</span><span class="si">}</span><span class="s2">help &lt;category&gt;&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">format_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">tagline</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">tagline</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">return</span> <span class="n">tagline</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;[p]&quot;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">clean_prefix</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_command_signature</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">command</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Command</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">parent</span>
+        <span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="n">parent</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">parent</span><span class="o">.</span><span class="n">signature</span> <span class="ow">or</span> <span class="n">parent</span><span class="o">.</span><span class="n">invoke_without_command</span><span class="p">:</span>
+                <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">parent</span><span class="o">.</span><span class="n">signature</span><span class="p">)</span>
+            <span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
+        <span class="n">parent_sig</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">entries</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">entries</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ctx</span><span class="o">.</span><span class="n">clean_prefix</span><span class="si">}{</span><span class="n">parent_sig</span><span class="si">}{</span><span class="n">command</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">command</span><span class="o">.</span><span class="n">signature</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">format_command_help</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Command</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span>
+    <span class="p">):</span>
+        <span class="n">send</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">verify_exists</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">send</span><span class="p">:</span>
+            <span class="k">async</span> <span class="k">for</span> <span class="n">__</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">help_filter_func</span><span class="p">(</span>
+                <span class="n">ctx</span><span class="p">,</span> <span class="p">(</span><span class="n">obj</span><span class="p">,),</span> <span class="n">bypass_hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span>
+            <span class="p">):</span>
+                <span class="c1"># This is a really lazy option for not</span>
+                <span class="c1"># creating a separate single case version.</span>
+                <span class="c1"># It is efficient though</span>
+                <span class="c1">#</span>
+                <span class="c1"># We do still want to bypass the hidden requirement on</span>
+                <span class="c1"># a specific command explicitly invoked here.</span>
+                <span class="n">send</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">send</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">command</span> <span class="o">=</span> <span class="n">obj</span>
+
+        <span class="n">description</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">description</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="n">tagline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">tagline</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_default_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="n">signature</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Syntax: </span><span class="si">{command_signature}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">command_signature</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_command_signature</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">command</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">aliases</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">aliases</span>
+        <span class="k">if</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">show_aliases</span> <span class="ow">and</span> <span class="n">aliases</span><span class="p">:</span>
+            <span class="n">alias_fmt</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Aliases&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">command</span><span class="o">.</span><span class="n">aliases</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Alias&quot;</span><span class="p">)</span>
+            <span class="n">aliases</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">aliases</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">)</span>
+
+            <span class="n">a_counter</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">valid_alias_list</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="n">aliases</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">a_counter</span> <span class="o">:=</span> <span class="n">a_counter</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">alias</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">:</span>
+                    <span class="n">valid_alias_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alias</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+            <span class="n">a_diff</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">aliases</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_alias_list</span><span class="p">)</span>
+            <span class="n">aliases_list</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ctx</span><span class="o">.</span><span class="n">clean_prefix</span><span class="si">}{</span><span class="n">command</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">qualified_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">command</span><span class="o">.</span><span class="n">parent</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}{</span><span class="n">alias</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="n">valid_alias_list</span>
+            <span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_alias_list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="n">aliases_content</span> <span class="o">=</span> <span class="n">humanize_list</span><span class="p">(</span><span class="n">aliases_list</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">aliases_formatted_list</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">aliases_list</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">a_diff</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">aliases_content</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{aliases}</span><span class="s2"> and </span><span class="si">{number}</span><span class="s2"> more aliases.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">aliases</span><span class="o">=</span><span class="n">aliases_formatted_list</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="n">humanize_number</span><span class="p">(</span><span class="n">a_diff</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">aliases_content</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{aliases}</span><span class="s2"> and one more alias.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">aliases</span><span class="o">=</span><span class="n">aliases_formatted_list</span>
+                    <span class="p">)</span>
+            <span class="n">signature</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">alias_fmt</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">aliases_content</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">subcommands</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="s2">&quot;all_commands&quot;</span><span class="p">):</span>
+            <span class="n">grp</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Group</span><span class="p">,</span> <span class="n">command</span><span class="p">)</span>
+            <span class="n">subcommands</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_group_help_mapping</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">grp</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+            <span class="n">emb</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;embed&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span> <span class="s2">&quot;footer&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span> <span class="s2">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+
+            <span class="k">if</span> <span class="n">description</span><span class="p">:</span>
+                <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;embed&quot;</span><span class="p">][</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;*</span><span class="si">{</span><span class="n">description</span><span class="p">[:</span><span class="mi">250</span><span class="p">]</span><span class="si">}</span><span class="s2">*&quot;</span>
+
+            <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;footer&quot;</span><span class="p">][</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tagline</span>
+            <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;embed&quot;</span><span class="p">][</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">box</span><span class="p">(</span><span class="n">signature</span><span class="p">)</span>
+
+            <span class="n">command_help</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">format_help_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">command_help</span><span class="p">:</span>
+                <span class="n">splitted</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">command_help</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">))</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">name</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+                    <span class="c1"># all parts are empty</span>
+                    <span class="k">pass</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="n">EMPTY_STRING</span>
+                    <span class="n">field</span> <span class="o">=</span> <span class="n">EmbedField</span><span class="p">(</span><span class="n">name</span><span class="p">[:</span><span class="mi">250</span><span class="p">],</span> <span class="n">value</span><span class="p">[:</span><span class="mi">1024</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
+                    <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">subcommands</span><span class="p">:</span>
+
+                <span class="k">def</span> <span class="nf">shorten_line</span><span class="p">(</span><span class="n">a_line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a_line</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span>  <span class="c1"># embed max width needs to be lower</span>
+                        <span class="k">return</span> <span class="n">a_line</span>
+                    <span class="k">return</span> <span class="n">a_line</span><span class="p">[:</span><span class="mi">67</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+
+                <span class="n">subtext</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="n">shorten_line</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">** </span><span class="si">{</span><span class="n">command</span><span class="o">.</span><span class="n">format_shortdoc_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">command</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">subcommands</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pagify</span><span class="p">(</span><span class="n">subtext</span><span class="p">,</span> <span class="n">page_length</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">shorten_by</span><span class="o">=</span><span class="mi">0</span><span class="p">)):</span>
+                    <span class="n">title</span> <span class="o">=</span> <span class="n">bold</span><span class="p">(</span><span class="n">underline</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Subcommands:&quot;</span><span class="p">)),</span> <span class="n">escape_formatting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                    <span class="n">field</span> <span class="o">=</span> <span class="n">EmbedField</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+                    <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_and_send_embeds</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">emb</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># Code blocks:</span>
+            <span class="n">subtext</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">subtext_header</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">subcommands</span><span class="p">:</span>
+                <span class="n">subtext_header</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Subcommands:&quot;</span><span class="p">)</span>
+                <span class="n">max_width</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">_string_width</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">subcommands</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+                <span class="k">def</span> <span class="nf">width_maker</span><span class="p">(</span><span class="n">cmds</span><span class="p">):</span>
+                    <span class="n">doc_max_width</span> <span class="o">=</span> <span class="mi">80</span> <span class="o">-</span> <span class="n">max_width</span>
+                    <span class="k">for</span> <span class="n">nm</span><span class="p">,</span> <span class="n">com</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cmds</span><span class="p">):</span>
+                        <span class="n">width_gap</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">_string_width</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+                        <span class="n">doc</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">format_shortdoc_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">doc_max_width</span><span class="p">:</span>
+                            <span class="n">doc</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[:</span> <span class="n">doc_max_width</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+                        <span class="k">yield</span> <span class="n">nm</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">max_width</span> <span class="o">-</span> <span class="n">width_gap</span>
+
+                <span class="n">subtext</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;</span><span class="si">{</span><span class="n">width</span><span class="si">}}</span><span class="s2"> </span><span class="si">{</span><span class="n">doc</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">width</span> <span class="ow">in</span> <span class="n">width_maker</span><span class="p">(</span><span class="n">subcommands</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+                <span class="p">)</span>
+
+            <span class="n">to_page</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="nb">filter</span><span class="p">(</span>
+                    <span class="kc">None</span><span class="p">,</span>
+                    <span class="p">(</span>
+                        <span class="n">description</span><span class="p">,</span>
+                        <span class="n">signature</span><span class="p">,</span>
+                        <span class="n">command</span><span class="o">.</span><span class="n">format_help_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">),</span>
+                        <span class="n">subtext_header</span><span class="p">,</span>
+                        <span class="n">subtext</span><span class="p">,</span>
+                    <span class="p">),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">pages</span> <span class="o">=</span> <span class="p">[</span><span class="n">box</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pagify</span><span class="p">(</span><span class="n">to_page</span><span class="p">)]</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_pages</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">embed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">group_embed_fields</span><span class="p">(</span><span class="n">fields</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">EmbedField</span><span class="p">],</span> <span class="n">max_chars</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">curr_group</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">current_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+            <span class="n">f_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+            <span class="c1"># Commands start at the 1st index of fields, i &lt; 2 is a hacky workaround for now</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">current_count</span> <span class="ow">or</span> <span class="n">f_len</span> <span class="o">+</span> <span class="n">current_count</span> <span class="o">&lt;</span> <span class="n">max_chars</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">current_count</span> <span class="o">+=</span> <span class="n">f_len</span>
+                <span class="n">curr_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">curr_group</span><span class="p">:</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">curr_group</span><span class="p">)</span>
+                <span class="n">current_count</span> <span class="o">=</span> <span class="n">f_len</span>
+                <span class="n">curr_group</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">curr_group</span><span class="p">:</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">curr_group</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">make_and_send_embeds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">embed_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span><span class="p">):</span>
+        <span class="n">pages</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">page_char_limit</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">page_char_limit</span>
+        <span class="n">page_char_limit</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">page_char_limit</span><span class="p">,</span> <span class="mi">5500</span><span class="p">)</span>  <span class="c1"># Just in case someone was manually...</span>
+
+        <span class="n">author_info</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{ctx.me.display_name}</span><span class="s2"> Help Menu&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">ctx</span><span class="p">),</span>
+            <span class="s2">&quot;icon_url&quot;</span><span class="p">:</span> <span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="o">.</span><span class="n">display_avatar</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Offset calculation here is for total embed size limit</span>
+        <span class="c1"># 20 accounts for# *Page {i} of {page_count}*</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">author_info</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span> <span class="o">+</span> <span class="mi">20</span>
+        <span class="n">foot_text</span> <span class="o">=</span> <span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;footer&quot;</span><span class="p">][</span><span class="s2">&quot;text&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">foot_text</span><span class="p">:</span>
+            <span class="n">offset</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">foot_text</span><span class="p">)</span>
+        <span class="n">offset</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;embed&quot;</span><span class="p">][</span><span class="s2">&quot;description&quot;</span><span class="p">])</span>
+        <span class="n">offset</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;embed&quot;</span><span class="p">][</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
+
+        <span class="c1"># In order to only change the size of embeds when necessary for this rather</span>
+        <span class="c1"># than change the existing behavior for people unaffected by this</span>
+        <span class="c1"># we&#39;re only modifying the page char limit should they be impacted.</span>
+        <span class="c1"># We could consider changing this to always just subtract the offset,</span>
+        <span class="c1"># But based on when this is being handled (very end of 3.2 release)</span>
+        <span class="c1"># I&#39;d rather not stick a major visual behavior change in at the last moment.</span>
+        <span class="k">if</span> <span class="n">page_char_limit</span> <span class="o">+</span> <span class="n">offset</span> <span class="o">&gt;</span> <span class="mi">5500</span><span class="p">:</span>
+            <span class="c1"># This is still necessary with the max interaction above</span>
+            <span class="c1"># While we could subtract 100% of the time the offset from page_char_limit</span>
+            <span class="c1"># the intent here is to shorten again</span>
+            <span class="c1"># *only* when necessary, by the exact necessary amount</span>
+            <span class="c1"># To retain a visual match with prior behavior.</span>
+            <span class="n">page_char_limit</span> <span class="o">=</span> <span class="mi">5500</span> <span class="o">-</span> <span class="n">offset</span>
+        <span class="k">elif</span> <span class="n">page_char_limit</span> <span class="o">&lt;</span> <span class="mi">250</span><span class="p">:</span>
+            <span class="c1"># Prevents an edge case where a combination of long cog help and low limit</span>
+            <span class="c1"># Could prevent anything from ever showing up.</span>
+            <span class="c1"># This lower bound is safe based on parts of embed in use.</span>
+            <span class="n">page_char_limit</span> <span class="o">=</span> <span class="mi">250</span>
+
+        <span class="n">field_groups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group_embed_fields</span><span class="p">(</span><span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">],</span> <span class="n">page_char_limit</span><span class="p">)</span>
+
+        <span class="n">color</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">embed_color</span><span class="p">()</span>
+        <span class="n">page_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">field_groups</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">field_groups</span><span class="p">:</span>  <span class="c1"># This can happen on single command without a docstring</span>
+            <span class="n">embed</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="o">**</span><span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;embed&quot;</span><span class="p">])</span>
+            <span class="n">embed</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span><span class="o">**</span><span class="n">author_info</span><span class="p">)</span>
+            <span class="n">embed</span><span class="o">.</span><span class="n">set_footer</span><span class="p">(</span><span class="o">**</span><span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;footer&quot;</span><span class="p">])</span>
+            <span class="n">pages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">embed</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">field_groups</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">embed</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="o">**</span><span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;embed&quot;</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">page_count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">description</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;*Page </span><span class="si">{page_num}</span><span class="s2"> of </span><span class="si">{page_count}</span><span class="s2">*</span><span class="se">\n</span><span class="si">{content_description}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">content_description</span><span class="o">=</span><span class="n">embed</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="n">page_num</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">page_count</span><span class="o">=</span><span class="n">page_count</span>
+                <span class="p">)</span>
+                <span class="n">embed</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span>
+
+            <span class="n">embed</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span><span class="o">**</span><span class="n">author_info</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">group</span><span class="p">:</span>
+                <span class="n">embed</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="o">**</span><span class="n">field</span><span class="o">.</span><span class="n">_asdict</span><span class="p">())</span>
+
+            <span class="n">embed</span><span class="o">.</span><span class="n">set_footer</span><span class="p">(</span><span class="o">**</span><span class="n">embed_dict</span><span class="p">[</span><span class="s2">&quot;footer&quot;</span><span class="p">])</span>
+
+            <span class="n">pages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">embed</span><span class="p">)</span>
+
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_pages</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">embed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">format_cog_help</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span><span class="p">):</span>
+        <span class="n">coms</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cog_help_mapping</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">coms</span> <span class="ow">or</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">verify_exists</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="n">description</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">format_help_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="n">tagline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">tagline</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_default_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+            <span class="n">emb</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;embed&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span> <span class="s2">&quot;footer&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span> <span class="s2">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+
+            <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;footer&quot;</span><span class="p">][</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tagline</span>
+            <span class="k">if</span> <span class="n">description</span><span class="p">:</span>
+                <span class="n">splitted</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">))</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">name</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+                    <span class="c1"># all parts are empty</span>
+                    <span class="k">pass</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">splitted</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">value</span><span class="p">:</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="n">EMPTY_STRING</span>
+                    <span class="n">field</span> <span class="o">=</span> <span class="n">EmbedField</span><span class="p">(</span><span class="n">name</span><span class="p">[:</span><span class="mi">252</span><span class="p">],</span> <span class="n">value</span><span class="p">[:</span><span class="mi">1024</span><span class="p">],</span> <span class="kc">False</span><span class="p">)</span>
+                    <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">coms</span><span class="p">:</span>
+
+                <span class="k">def</span> <span class="nf">shorten_line</span><span class="p">(</span><span class="n">a_line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a_line</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span>  <span class="c1"># embed max width needs to be lower</span>
+                        <span class="k">return</span> <span class="n">a_line</span>
+                    <span class="k">return</span> <span class="n">a_line</span><span class="p">[:</span><span class="mi">67</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+
+                <span class="n">command_text</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="n">shorten_line</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">command</span><span class="o">.</span><span class="n">format_shortdoc_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">command</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">coms</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pagify</span><span class="p">(</span><span class="n">command_text</span><span class="p">,</span> <span class="n">page_length</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">shorten_by</span><span class="o">=</span><span class="mi">0</span><span class="p">)):</span>
+                    <span class="n">title</span> <span class="o">=</span> <span class="n">underline</span><span class="p">(</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Commands:&quot;</span><span class="p">)),</span> <span class="n">escape_formatting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                    <span class="n">field</span> <span class="o">=</span> <span class="n">EmbedField</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+                    <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_and_send_embeds</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">emb</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">subtext</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">subtext_header</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">coms</span><span class="p">:</span>
+                <span class="n">subtext_header</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Commands:&quot;</span><span class="p">)</span>
+                <span class="n">max_width</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">_string_width</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">coms</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+                <span class="k">def</span> <span class="nf">width_maker</span><span class="p">(</span><span class="n">cmds</span><span class="p">):</span>
+                    <span class="n">doc_max_width</span> <span class="o">=</span> <span class="mi">80</span> <span class="o">-</span> <span class="n">max_width</span>
+                    <span class="k">for</span> <span class="n">nm</span><span class="p">,</span> <span class="n">com</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cmds</span><span class="p">):</span>
+                        <span class="n">width_gap</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">_string_width</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+                        <span class="n">doc</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">format_shortdoc_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">doc_max_width</span><span class="p">:</span>
+                            <span class="n">doc</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[:</span> <span class="n">doc_max_width</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+                        <span class="k">yield</span> <span class="n">nm</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">max_width</span> <span class="o">-</span> <span class="n">width_gap</span>
+
+                <span class="n">subtext</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;</span><span class="si">{</span><span class="n">width</span><span class="si">}}</span><span class="s2"> </span><span class="si">{</span><span class="n">doc</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">width</span> <span class="ow">in</span> <span class="n">width_maker</span><span class="p">(</span><span class="n">coms</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+                <span class="p">)</span>
+
+            <span class="n">to_page</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">subtext_header</span><span class="p">,</span> <span class="n">subtext</span><span class="p">)))</span>
+            <span class="n">pages</span> <span class="o">=</span> <span class="p">[</span><span class="n">box</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pagify</span><span class="p">(</span><span class="n">to_page</span><span class="p">)]</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_pages</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">embed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">format_bot_help</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span><span class="p">):</span>
+        <span class="n">coms</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_bot_help_mapping</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">coms</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">description</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">description</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">tagline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">tagline</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_default_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+            <span class="n">emb</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;embed&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span> <span class="s2">&quot;footer&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span> <span class="s2">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+
+            <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;footer&quot;</span><span class="p">][</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tagline</span>
+            <span class="k">if</span> <span class="n">description</span><span class="p">:</span>
+                <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;embed&quot;</span><span class="p">][</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;*</span><span class="si">{</span><span class="n">description</span><span class="p">[:</span><span class="mi">250</span><span class="p">]</span><span class="si">}</span><span class="s2">*&quot;</span>
+
+            <span class="k">for</span> <span class="n">cog_name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">coms</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">cog_name</span><span class="p">:</span>
+                    <span class="n">title</span> <span class="o">=</span> <span class="n">underline</span><span class="p">(</span><span class="n">bold</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cog_name</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">),</span> <span class="n">escape_formatting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">title</span> <span class="o">=</span> <span class="n">underline</span><span class="p">(</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;No Category:&quot;</span><span class="p">)),</span> <span class="n">escape_formatting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+                <span class="k">def</span> <span class="nf">shorten_line</span><span class="p">(</span><span class="n">a_line</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">a_line</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">:</span>  <span class="c1"># embed max width needs to be lower</span>
+                        <span class="k">return</span> <span class="n">a_line</span>
+                    <span class="k">return</span> <span class="n">a_line</span><span class="p">[:</span><span class="mi">67</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+
+                <span class="n">cog_text</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                    <span class="n">shorten_line</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;**</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">** </span><span class="si">{</span><span class="n">command</span><span class="o">.</span><span class="n">format_shortdoc_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">command</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+                <span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pagify</span><span class="p">(</span><span class="n">cog_text</span><span class="p">,</span> <span class="n">page_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">shorten_by</span><span class="o">=</span><span class="mi">0</span><span class="p">)):</span>
+                    <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{title}</span><span class="s2"> (continued)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
+                    <span class="n">field</span> <span class="o">=</span> <span class="n">EmbedField</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+                    <span class="n">emb</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">make_and_send_embeds</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">emb</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">to_join</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">if</span> <span class="n">description</span><span class="p">:</span>
+                <span class="n">to_join</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="n">names</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">coms</span><span class="p">:</span>
+                <span class="n">names</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+
+            <span class="n">max_width</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
+                <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">_string_width</span><span class="p">((</span><span class="n">name</span> <span class="ow">or</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;No Category:&quot;</span><span class="p">)))</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span>
+            <span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">width_maker</span><span class="p">(</span><span class="n">cmds</span><span class="p">):</span>
+                <span class="n">doc_max_width</span> <span class="o">=</span> <span class="mi">80</span> <span class="o">-</span> <span class="n">max_width</span>
+                <span class="k">for</span> <span class="n">nm</span><span class="p">,</span> <span class="n">com</span> <span class="ow">in</span> <span class="n">cmds</span><span class="p">:</span>
+                    <span class="n">width_gap</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">_string_width</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+                    <span class="n">doc</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">format_shortdoc_for_context</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">doc_max_width</span><span class="p">:</span>
+                        <span class="n">doc</span> <span class="o">=</span> <span class="n">doc</span><span class="p">[:</span> <span class="n">doc_max_width</span> <span class="o">-</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+                    <span class="k">yield</span> <span class="n">nm</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">max_width</span> <span class="o">-</span> <span class="n">width_gap</span>
+
+            <span class="k">for</span> <span class="n">cog_name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">coms</span><span class="p">:</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cog_name</span><span class="si">}</span><span class="s2">:&quot;</span> <span class="k">if</span> <span class="n">cog_name</span> <span class="k">else</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;No Category:&quot;</span><span class="p">)</span>
+                <span class="n">to_join</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">doc</span><span class="p">,</span> <span class="n">width</span> <span class="ow">in</span> <span class="n">width_maker</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">())):</span>
+                    <span class="n">to_join</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;</span><span class="si">{</span><span class="n">width</span><span class="si">}}</span><span class="s2"> </span><span class="si">{</span><span class="n">doc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="n">to_join</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">tagline</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">to_page</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">to_join</span><span class="p">)</span>
+            <span class="n">pages</span> <span class="o">=</span> <span class="p">[</span><span class="n">box</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pagify</span><span class="p">(</span><span class="n">to_page</span><span class="p">)]</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_pages</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">embed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RedHelpFormatter.help_filter_func">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.RedHelpFormatter.help_filter_func">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">help_filter_func</span><span class="p">(</span>
+        <span class="n">ctx</span><span class="p">,</span>
+        <span class="n">objects</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">SupportsCanSee</span><span class="p">],</span>
+        <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span><span class="p">,</span>
+        <span class="n">bypass_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">SupportsCanSee</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This does most of actual filtering.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">show_hidden</span> <span class="o">=</span> <span class="n">bypass_hidden</span> <span class="ow">or</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">show_hidden</span>
+        <span class="n">verify_checks</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">verify_checks</span>
+
+        <span class="c1"># TODO: Settings for this in core bot db</span>
+        <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">verify_checks</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">show_hidden</span><span class="p">:</span>
+                <span class="c1"># Default Red behavior, can_see includes a can_run check.</span>
+                <span class="k">if</span> <span class="k">await</span> <span class="n">obj</span><span class="o">.</span><span class="n">can_see</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;enabled&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+                    <span class="k">yield</span> <span class="n">obj</span>
+            <span class="k">elif</span> <span class="n">verify_checks</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">can_run</span> <span class="o">=</span> <span class="k">await</span> <span class="n">obj</span><span class="o">.</span><span class="n">can_run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">DiscordException</span><span class="p">:</span>
+                    <span class="n">can_run</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">if</span> <span class="n">can_run</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;enabled&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+                    <span class="k">yield</span> <span class="n">obj</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="n">show_hidden</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s2">&quot;hidden&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>  <span class="c1"># Cog compatibility</span>
+                    <span class="k">yield</span> <span class="n">obj</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">obj</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">embed_requested</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">channel</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">red_help</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RedHelpFormatter.command_not_found">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.RedHelpFormatter.command_not_found">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">command_not_found</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">help_for</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sends an error, fuzzy help, or stays quiet based on settings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fuzzy_commands</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fuzzy_command_search</span><span class="p">(</span>
+            <span class="n">ctx</span><span class="p">,</span>
+            <span class="n">help_for</span><span class="p">,</span>
+            <span class="n">commands</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">help_filter_func</span><span class="p">(</span>
+                <span class="n">ctx</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">walk_commands</span><span class="p">(),</span> <span class="n">help_settings</span><span class="o">=</span><span class="n">help_settings</span>
+            <span class="p">),</span>
+            <span class="n">min_score</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">use_embeds</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">fuzzy_commands</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="k">await</span> <span class="n">format_fuzzy_results</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">fuzzy_commands</span><span class="p">,</span> <span class="n">embed</span><span class="o">=</span><span class="n">use_embeds</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">use_embeds</span><span class="p">:</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{ctx.me.display_name}</span><span class="s2"> Help Menu&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">ctx</span><span class="p">),</span>
+                    <span class="n">icon_url</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="o">.</span><span class="n">display_avatar</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">tagline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_tagline</span><span class="p">(</span>
+                    <span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">tagline</span>
+                <span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_default_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">set_footer</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">tagline</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">ret</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">verify_exists</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Help topic for </span><span class="si">{command_name}</span><span class="s2"> not found.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">command_name</span><span class="o">=</span><span class="n">bold</span><span class="p">(</span><span class="n">help_for</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">use_embeds</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">embed_color</span><span class="p">()),</span> <span class="n">description</span><span class="o">=</span><span class="n">ret</span><span class="p">)</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{ctx.me.display_name}</span><span class="s2"> Help Menu&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">ctx</span><span class="p">),</span>
+                    <span class="n">icon_url</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="o">.</span><span class="n">display_avatar</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">tagline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_tagline</span><span class="p">(</span>
+                    <span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">tagline</span>
+                <span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_default_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">set_footer</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">tagline</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">ret</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RedHelpFormatter.subcommand_not_found">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.RedHelpFormatter.subcommand_not_found">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">subcommand_not_found</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">not_found</span><span class="p">,</span> <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sends an error</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Command </span><span class="si">{command_name}</span><span class="s2"> has no subcommand named </span><span class="si">{not_found}</span><span class="s2">.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">command_name</span><span class="o">=</span><span class="n">bold</span><span class="p">(</span><span class="n">command</span><span class="o">.</span><span class="n">qualified_name</span><span class="p">),</span> <span class="n">not_found</span><span class="o">=</span><span class="n">bold</span><span class="p">(</span><span class="n">not_found</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">embed_color</span><span class="p">()),</span> <span class="n">description</span><span class="o">=</span><span class="n">ret</span><span class="p">)</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{ctx.me.display_name}</span><span class="s2"> Help Menu&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">ctx</span><span class="p">),</span>
+                <span class="n">icon_url</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="o">.</span><span class="n">display_avatar</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">tagline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_tagline</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">tagline</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_default_tagline</span><span class="p">(</span>
+                <span class="n">ctx</span>
+            <span class="p">)</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">set_footer</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">tagline</span><span class="p">)</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">ret</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RedHelpFormatter.parse_command">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.RedHelpFormatter.parse_command">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">parse_command</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">help_for</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Handles parsing</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">maybe_cog</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_cog</span><span class="p">(</span><span class="n">help_for</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">maybe_cog</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">maybe_cog</span>
+
+        <span class="n">com</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span>
+        <span class="n">last</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">clist</span> <span class="o">=</span> <span class="n">help_for</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clist</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">com</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">all_commands</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+                <span class="c1"># TODO: This doesn&#39;t handle valid command aliases.</span>
+                <span class="c1"># swap parsing method to use get_command.</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">last</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">NoSubCommand</span><span class="p">(</span><span class="n">last</span><span class="o">=</span><span class="n">last</span><span class="p">,</span> <span class="n">not_found</span><span class="o">=</span><span class="n">clist</span><span class="p">[</span><span class="n">index</span><span class="p">:])</span> <span class="kn">from</span> <span class="kc">None</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">NoCommand</span><span class="p">()</span> <span class="kn">from</span> <span class="kc">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">last</span> <span class="o">=</span> <span class="n">com</span>
+
+        <span class="k">return</span> <span class="n">com</span></div>
+
+
+<div class="viewcode-block" id="RedHelpFormatter.send_pages">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.help.RedHelpFormatter.send_pages">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">send_pages</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span>
+        <span class="n">pages</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">]],</span>
+        <span class="n">embed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">help_settings</span><span class="p">:</span> <span class="n">HelpSettings</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sends pages based on settings.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">use_menus</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;=</span> <span class="n">HelpMenuSetting</span><span class="o">.</span><span class="n">buttons</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="n">use_select</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">use_menus</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">3</span>
+            <span class="n">select_only</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">use_menus</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">4</span>
+            <span class="n">menu</span> <span class="o">=</span> <span class="n">SimpleMenu</span><span class="p">(</span>
+                <span class="n">pages</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="n">help_settings</span><span class="o">.</span><span class="n">react_timeout</span><span class="p">,</span>
+                <span class="n">use_select_menu</span><span class="o">=</span><span class="n">use_select</span><span class="p">,</span>
+                <span class="n">use_select_only</span><span class="o">=</span><span class="n">select_only</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="c1"># Send menu to DMs if max pages is 0</span>
+            <span class="k">if</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">max_pages_in_guild</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">menu</span><span class="o">.</span><span class="n">start_dm</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">author</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">menu</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="p">(</span>
+            <span class="n">can_user_react_in</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">channel</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">use_menus</span> <span class="ow">is</span> <span class="n">HelpMenuSetting</span><span class="o">.</span><span class="n">reactions</span>
+        <span class="p">):</span>
+            <span class="n">use_DMs</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">max_pages_in_guild</span> <span class="o">==</span> <span class="mi">0</span>
+            <span class="n">destination</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span> <span class="k">if</span> <span class="n">use_DMs</span> <span class="k">else</span> <span class="n">ctx</span><span class="o">.</span><span class="n">channel</span>
+            <span class="c1"># Specifically ensuring the menu&#39;s message is sent prior to returning</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="k">await</span> <span class="p">(</span><span class="n">destination</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">pages</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">if</span> <span class="n">embed</span> <span class="k">else</span> <span class="n">destination</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">pages</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">menus</span><span class="o">.</span><span class="n">DEFAULT_CONTROLS</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">{</span><span class="s2">&quot;</span><span class="se">\N{CROSS MARK}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">menus</span><span class="o">.</span><span class="n">close_menu</span><span class="p">}</span>
+            <span class="c1"># Allow other things to happen during menu timeout/interaction.</span>
+            <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span>
+                <span class="n">menus</span><span class="o">.</span><span class="n">menu</span><span class="p">(</span>
+                    <span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">m</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">help_settings</span><span class="o">.</span><span class="n">react_timeout</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="c1"># menu needs reactions added manually since we fed it a message</span>
+            <span class="n">menus</span><span class="o">.</span><span class="n">start_adding_reactions</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">max_pages_in_guild</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">max_pages_in_guild</span>
+            <span class="n">use_DMs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_pages_in_guild</span>
+            <span class="n">destination</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span> <span class="k">if</span> <span class="n">use_DMs</span> <span class="k">else</span> <span class="n">ctx</span><span class="o">.</span><span class="n">channel</span>
+            <span class="n">delete_delay</span> <span class="o">=</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">delete_delay</span>
+
+            <span class="n">messages</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">pages</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">embed</span><span class="p">:</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">destination</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">page</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">destination</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+                        <span class="n">_</span><span class="p">(</span>
+                            <span class="s2">&quot;I couldn&#39;t send the help message to you in DM. &quot;</span>
+                            <span class="s2">&quot;Either you blocked me or you disabled DMs in this server.&quot;</span>
+                        <span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">messages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">use_DMs</span> <span class="ow">and</span> <span class="n">help_settings</span><span class="o">.</span><span class="n">use_tick</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span>
+            <span class="c1"># The if statement takes into account that &#39;destination&#39; will be</span>
+            <span class="c1"># the context channel in non-DM context.</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">use_DMs</span>  <span class="c1"># we&#39;re not in DMs</span>
+                <span class="ow">and</span> <span class="n">delete_delay</span> <span class="o">&gt;</span> <span class="mi">0</span>  <span class="c1"># delete delay is enabled</span>
+                <span class="ow">and</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot_permissions</span><span class="o">.</span><span class="n">manage_messages</span>  <span class="c1"># we can manage messages</span>
+            <span class="p">):</span>
+                <span class="c1"># We need to wrap this in a task to not block after-sending-help interactions.</span>
+                <span class="c1"># The channel has to be TextChannel or Thread as we can&#39;t bulk-delete from DMs</span>
+                <span class="k">async</span> <span class="k">def</span> <span class="nf">_delete_delay_help</span><span class="p">(</span>
+                    <span class="n">channel</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
+                        <span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span>
+                        <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span>
+                        <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span>
+                        <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">,</span>
+                    <span class="p">],</span>
+                    <span class="n">messages</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">],</span>
+                    <span class="n">delay</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+                <span class="p">):</span>
+                    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+                    <span class="k">await</span> <span class="n">mass_purge</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="n">channel</span><span class="p">)</span>
+
+                <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">_delete_delay_help</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="n">delete_delay</span><span class="p">))</span></div>
+</div>
+
+
+
+<span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">i18n</span><span class="o">=</span><span class="n">_</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">red_help</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">thing_to_get_help_for</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    I need somebody</span>
+<span class="sd">    (Help) not just anybody</span>
+<span class="sd">    (Help) you know I need someone</span>
+<span class="sd">    (Help!)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">send_help_for</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">thing_to_get_help_for</span><span class="p">,</span> <span class="n">from_help_command</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

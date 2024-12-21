@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Alias" href="alias.html" />
+    <link rel="prev" title="About (privileged) intents and public bots" href="../intents.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Admin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#selfrole">selfrole</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selfrole-add">selfrole add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selfrole-remove">selfrole remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selfrole-list">selfrole list</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#selfroleset">selfroleset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selfroleset-add">selfroleset add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selfroleset-clear">selfroleset clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selfroleset-remove">selfroleset remove</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#addrole">addrole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removerole">removerole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editrole">editrole</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#editrole-name">editrole name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editrole-color">editrole color</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#announce">announce</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#announce-cancel">announce cancel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#announceset">announceset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#announceset-channel">announceset channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#announceset-clearchannel">announceset clearchannel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#serverlock">serverlock</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Admin</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/admin.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="admin">
+<span id="id1"></span><h1>Admin<a class="headerlink" href="#admin" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the admin cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">admin</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="admin-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>This cog will provide tools for server admins and bot owners.</p>
+<p>It can add or remove a role to a member, edit one or make some available
+for members so they can self-assign them as they wish.</p>
+<p>It also provides tools for the bot owner such as server locking (once enabled,
+the bot will instantly leave new servers it joins) and announcements, which
+can send something in all the servers of the bot.</p>
+</section>
+<section id="commands">
+<span id="admin-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<p>Here’s a list of all commands available for this cog.</p>
+<section id="selfrole">
+<span id="admin-command-selfrole"></span><h3>selfrole<a class="headerlink" href="#selfrole" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfrole &lt;selfrole&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add or remove a role from yourself. It must have been configured as user settable
+by admins using the <a class="reference internal" href="#admin-command-selfroleset"><span class="std std-ref">selfroleset command</span></a>.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;selfrole&gt;</span></code>: The role you want to attribute or remove from yourself. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.</p></li>
+</ul>
+<section id="selfrole-add">
+<span id="admin-command-selfrole-add"></span><h4>selfrole add<a class="headerlink" href="#selfrole-add" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfrole add &lt;selfrole&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add a role to yourself. It must have been configured as user settable
+by admins using the <a class="reference internal" href="#admin-command-selfroleset"><span class="std std-ref">selfroleset command</span></a>.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;selfrole&gt;</span></code>: The role you want to attribute to yourself. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.</p></li>
+</ul>
+</section>
+<section id="selfrole-remove">
+<span id="admin-command-selfrole-remove"></span><h4>selfrole remove<a class="headerlink" href="#selfrole-remove" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfrole remove &lt;selfrole&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Remove a role from yourself. It must have been configured as user settable
+by admins using the <a class="reference internal" href="#admin-command-selfroleset"><span class="std std-ref">selfroleset command</span></a>.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;selfrole&gt;</span></code>: The role you want to remove from yourself. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.</p></li>
+</ul>
+</section>
+<section id="selfrole-list">
+<span id="admin-command-selfrole-list"></span><h4>selfrole list<a class="headerlink" href="#selfrole-list" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfrole list
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>List all of the available roles you can assign to yourself.</p>
+</section>
+</section>
+<section id="selfroleset">
+<span id="admin-command-selfroleset"></span><h3>selfroleset<a class="headerlink" href="#selfroleset" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>. This is also usable by the members with the
+<code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">roles</span></code> permission.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfroleset
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Define the list of user settable roles. Those roles will be available to any
+member using the <a class="reference internal" href="#admin-command-selfrole"><span class="std std-ref">selfrole command</span></a>.</p>
+<section id="selfroleset-add">
+<span id="admin-command-selfroleset-add"></span><h4>selfroleset add<a class="headerlink" href="#selfroleset-add" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfroleset add &lt;role&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add a role, or a selection of roles, to the list of available selfroles.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Members will be able to assign themselves the role.
+Make sure it doesn’t give extra perms or anything that can break
+your server’s security.</p>
+</div>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code>: The role to add to the list. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.</p></li>
+</ul>
+</section>
+<section id="selfroleset-clear">
+<span id="admin-command-selfroleset-clear"></span><h4>selfroleset clear<a class="headerlink" href="#selfroleset-clear" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfroleset clear
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Clear the list of available selfroles for this server.</p>
+</section>
+<section id="selfroleset-remove">
+<span id="admin-command-selfroleset-remove"></span><h4>selfroleset remove<a class="headerlink" href="#selfroleset-remove" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]selfroleset remove &lt;role&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Remove a role, or a selection of roles, from the list of available selfroles.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code>: The role to remove from the list. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.</p></li>
+</ul>
+</section>
+</section>
+<section id="addrole">
+<span id="admin-command-addrole"></span><h3>addrole<a class="headerlink" href="#addrole" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>. This is also usable by the members with the <code class="docutils literal notranslate"><span class="pre">Manage</span>
+<span class="pre">roles</span></code> permission.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]addrole &lt;rolename&gt; [user]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Adds a role to a member. If <code class="docutils literal notranslate"><span class="pre">user</span></code> is not given, it will be considered
+as yourself, the command author.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code>: The role to add to the member. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.
+If the role name has spaces, provide it enclosed in quotes like this: <code class="docutils literal notranslate"><span class="pre">&quot;my</span> <span class="pre">role</span> <span class="pre">with</span> <span class="pre">spaces&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[user]</span></code>: The member you want to add the role to. Defaults to the
+command author. You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname.</p></li>
+</ul>
+</section>
+<section id="removerole">
+<span id="admin-command-removerole"></span><h3>removerole<a class="headerlink" href="#removerole" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>. This is also usable by the members with the
+<code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">roles</span></code> permission.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]removerole &lt;rolename&gt; [user]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Removes a role from a member. If <code class="docutils literal notranslate"><span class="pre">user</span></code> is not given, it will be considered
+as yourself, the command author.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code>: The role to remove. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.
+If the role name has spaces, provide it enclosed in quotes like this: <code class="docutils literal notranslate"><span class="pre">&quot;my</span> <span class="pre">role</span> <span class="pre">with</span> <span class="pre">spaces&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[user]</span></code>: The member to remove the role from. You can either mention the member, provide their ID, their exact name with
+the tag or not, or their nickname. Defaults
+to the command author.</p></li>
+</ul>
+</section>
+<section id="editrole">
+<span id="admin-command-editrole"></span><h3>editrole<a class="headerlink" href="#editrole" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]editrole
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Edits the settings of a role.</p>
+<section id="editrole-name">
+<span id="admin-command-editrole-name"></span><h4>editrole name<a class="headerlink" href="#editrole-name" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]editrole name &lt;role&gt; &lt;name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Edits the name of a role.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code>: The role name to edit. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.
+If the role name has spaces, provide it enclosed in quotes like this: <code class="docutils literal notranslate"><span class="pre">&quot;my</span> <span class="pre">role</span> <span class="pre">with</span> <span class="pre">spaces&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code>: The new role name. If it has spaces, you must use quotes.</p></li>
+</ul>
+</section>
+<section id="editrole-color">
+<span id="admin-command-editrole-color"></span><h4>editrole color<a class="headerlink" href="#editrole-color" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]editrole color &lt;role&gt; &lt;color&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Edits the color of a role.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code>: The role name to edit. Please give <strong>the exact role name or ID</strong>, or it won’t be detected.
+If the role name has spaces, provide it enclosed in quotes like this: <code class="docutils literal notranslate"><span class="pre">&quot;my</span> <span class="pre">role</span> <span class="pre">with</span> <span class="pre">spaces&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;color&gt;</span></code>: The new color to assign. You can either provide the hexadecimal code of the color, or one of the
+colors listed here: <code class="xref py py-class docutils literal notranslate"><span class="pre">discord.Color</span></code>.</p></li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]editrole</span> <span class="pre">color</span> <span class="pre">&quot;My</span> <span class="pre">role&quot;</span> <span class="pre">#ff0000</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]editrole</span> <span class="pre">color</span> <span class="pre">&quot;My</span> <span class="pre">role&quot;</span> <span class="pre">dark_blue</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="announce">
+<span id="admin-command-announce"></span><h3>announce<a class="headerlink" href="#announce" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]announce &lt;message&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Announce your message to all of the servers the bot is in.</p>
+<p>The bot will announce the message in the guild’s announcements channel.
+If this channel is not set, the message won’t be announced.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;message&gt;</span></code>: The message to send.</p></li>
+</ul>
+<section id="announce-cancel">
+<span id="admin-command-announce-cancel"></span><h4>announce cancel<a class="headerlink" href="#announce-cancel" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]announce cancel
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Cancels an active announcement.</p>
+</section>
+</section>
+<section id="announceset">
+<span id="admin-command-announceset"></span><h3>announceset<a class="headerlink" href="#announceset" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">server owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]announceset
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Change how announcements are received in this guild.</p>
+<section id="announceset-channel">
+<span id="admin-command-announceset-channel"></span><h4>announceset channel<a class="headerlink" href="#announceset-channel" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]announceset channel &lt;channel&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets the channel where the bot owner announcements will be sent.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;channel&gt;</span></code>: The channel that will be used for bot announcements.
+You can either mention the channel, provide its exact name or its ID.</p></li>
+</ul>
+</section>
+<section id="announceset-clearchannel">
+<span id="admin-command-announceset-clearchannel"></span><h4>announceset clearchannel<a class="headerlink" href="#announceset-clearchannel" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]announceset clearchannel
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Disables announcements on your server. To enable them again, you will have to
+re-enter your announcements channel with the <a class="reference internal" href="#admin-command-announceset-channel"><span class="std std-ref">announceset channel</span></a> command.</p>
+</section>
+</section>
+<section id="serverlock">
+<span id="admin-command-serverlock"></span><h3>serverlock<a class="headerlink" href="#serverlock" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>. This is also usable by the members with the
+<code class="docutils literal notranslate"><span class="pre">Administrator</span></code> permission.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]serverlock
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Lock a bot to its current servers only.</p>
+<p>This means that, once you enable this, if someone invites the bot to a new
+server, the bot will automatically leave the server.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Another way to prevent your bot from being invited on more servers is
+making it private directly from the developer portal.</p>
+<p>Once a bot is private, it can only be invited by its owner (or team
+owners). Other users will get an error on Discord’s webpage explaining that
+the bot is private.</p>
+<p>To do this, go to the <a class="reference external" href="https://discord.com/developers">Discord developer portal</a>, select your application, click “Bot” in
+the sidebar, then untick “Public bot”.</p>
+<img alt="../_images/public_bot.png" src="../_images/public_bot.png" />
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../intents.html" class="btn btn-neutral float-left" title="About (privileged) intents and public bots" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="alias.html" class="btn btn-neutral float-right" title="Alias" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

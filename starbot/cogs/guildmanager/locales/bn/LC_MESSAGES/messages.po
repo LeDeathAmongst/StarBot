@@ -1,0 +1,289 @@
+# Bangla translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:00+0100\n"
+"PO-Revision-Date: 2024-10-14 04:00+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: guildmanager.py:41
+msgid "Whitelisted Guilds"
+msgstr "সাদা তালিকাভুক্ত গিল্ড"
+msgstr ""
+
+#: guildmanager.py:64
+msgid "The following guilds have been whitelisted: {}"
+msgstr "নিম্নলিখিত গিল্ডগুলিকে সাদা তালিকাভুক্ত করা হয়েছে: {}"
+msgstr ""
+
+#: guildmanager.py:68
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already whitelisted: {}"
+msgstr ""
+
+#: guildmanager.py:87
+msgid "The following guilds have been removed from whitelist: {}"
+msgstr "নিম্নলিখিত গিল্ডগুলিকে হোয়াইটলিস্ট থেকে সরিয়ে দেওয়া হয়েছে: {}"
+msgstr ""
+
+#: guildmanager.py:92
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were in the whitelist: {}"
+msgstr ""
+
+#: guildmanager.py:101
+msgid "The whitelist has been cleared."
+msgstr "সাদা তালিকা সাফ করা হয়েছে।"
+msgstr ""
+
+#: guildmanager.py:110
+msgid "Blacklisted Guilds"
+msgstr "কালো তালিকাভুক্ত গিল্ড"
+msgstr ""
+
+#: guildmanager.py:133 guildmanager.py:156
+msgid "The following guilds have been blacklisted: {}"
+msgstr "নিম্নলিখিত গিল্ডগুলিকে কালো তালিকাভুক্ত করা হয়েছে: {}"
+msgstr ""
+
+#: guildmanager.py:137 guildmanager.py:160
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already blacklisted: {}"
+msgstr ""
+
+#: guildmanager.py:169
+msgid "The blacklist has been cleared."
+msgstr "কালো তালিকা সাফ করা হয়েছে।"
+msgstr ""
+
+#: guildmanager.py:177
+msgid "The bot is no longer serverlocked."
+msgstr "বটটি আর সার্ভারলক করা নেই।"
+msgstr ""
+
+#: guildmanager.py:179
+msgid "The bot is now serverlocked."
+msgstr "বটটি এখন সার্ভারলক করা আছে।"
+msgstr ""
+
+#: guildmanager.py:187
+msgid "All guilds are already chunked."
+msgstr "সমস্ত গিল্ড ইতিমধ্যে খণ্ডিত হয়."
+msgstr ""
+
+#: guildmanager.py:192
+msgid "The following guilds have been chunked: {}"
+msgstr "নিম্নলিখিত গিল্ডগুলিকে খণ্ডিত করা হয়েছে: {}"
+msgstr ""
+
+#: guildmanager.py:195
+msgid ""
+msgstr ""
+"\n"
+"The following guilds were already chunked: {}"
+msgstr ""
+
+#: guildmanager.py:219
+msgid "The minimum member limit has been set to {}."
+msgstr "ন্যূনতম সদস্য সীমা {} এ সেট করা হয়েছে৷"
+msgstr ""
+
+#: guildmanager.py:220
+msgid "The minimum member limit has been removed."
+msgstr "ন্যূনতম সদস্য সীমা সরানো হয়েছে."
+msgstr ""
+
+#: guildmanager.py:231
+msgid "The ratio must be between 0 and 100."
+msgstr "অনুপাত 0 এবং 100 এর মধ্যে হতে হবে।"
+msgstr ""
+
+#: guildmanager.py:235
+msgid "The bot ratio has been set to {}%."
+msgstr "বট অনুপাত {}% সেট করা হয়েছে৷"
+msgstr ""
+
+#: guildmanager.py:236
+msgid "The bot ratio has been removed."
+msgstr "বট অনুপাত সরানো হয়েছে."
+msgstr ""
+
+#: guildmanager.py:248
+msgid "Guild Manager Settings"
+msgstr "গিল্ড ম্যানেজার সেটিংস"
+msgstr ""
+
+#: guildmanager.py:269 guildmanager.py:384
+msgid "No bot farms found."
+msgstr "কোন বট খামার পাওয়া যায়নি."
+msgstr ""
+
+#: guildmanager.py:275 guildmanager.py:303
+msgid "(Whitelisted)"
+msgstr "(সাদা তালিকাভুক্ত)"
+msgstr ""
+
+#: guildmanager.py:278
+msgid "Bot Ratio: {}"
+msgstr "বট অনুপাত: {}"
+msgstr ""
+
+#: guildmanager.py:281
+msgid "Bot Farms ({}% Bots)"
+msgstr "বট খামার ({}% বট)"
+msgstr ""
+
+#: guildmanager.py:296 guildmanager.py:410
+msgid "No servers with less members than minimum found."
+msgstr "ন্যূনতম থেকে কম সদস্যের কোনো সার্ভার পাওয়া যায়নি।"
+msgstr ""
+
+#: guildmanager.py:304 guildmanager.py:322
+msgid "Members: {}"
+msgstr "সদস্যরা: {}"
+msgstr ""
+
+#: guildmanager.py:307
+msgid "Servers With Less Than {} Members)"
+msgstr "{} এর কম সদস্যের সার্ভার)"
+msgstr ""
+
+#: guildmanager.py:317
+msgid "No unchunked guilds found."
+msgstr "কোন অখণ্ডিত গিল্ড পাওয়া যায়নি."
+msgstr ""
+
+#: guildmanager.py:323
+msgid "Cached: {}"
+msgstr "ক্যাশে: {}"
+msgstr ""
+
+#: guildmanager.py:327
+msgid "Unchunked Guilds"
+msgstr "Unchunked Guilds"
+msgstr ""
+
+#: guildmanager.py:341
+msgid "Page {}/{}"
+msgstr "পৃষ্ঠা {}/{}"
+msgstr ""
+
+#: guildmanager.py:355
+msgid "No blacklisted guilds found."
+msgstr "কোন কালো তালিকাভুক্ত গিল্ড পাওয়া যায়নি."
+msgstr ""
+
+#: guildmanager.py:358
+msgid "Do you want me to leave {} blacklisted guilds?"
+msgstr "আপনি কি চান যে আমি {} কালো তালিকাভুক্ত গিল্ড ত্যাগ করি?"
+msgstr ""
+
+#: guildmanager.py:364
+msgid "Done. I have left {} blacklisted guilds."
+msgstr "সম্পন্ন আমি {} কালো তালিকাভুক্ত গিল্ডগুলি রেখেছি৷"
+msgstr ""
+
+#: guildmanager.py:368
+msgid "Ok, I won't leave any blacklisted guilds."
+msgstr "ঠিক আছে, আমি কোনো কালো তালিকাভুক্ত গিল্ড ছাড়ব না।"
+msgstr ""
+
+#: guildmanager.py:387
+msgid "Do you want me to leave {} bot farms?"
+msgstr "আপনি কি চান যে আমি {} বট খামার ছেড়ে যাই?"
+msgstr ""
+
+#: guildmanager.py:393
+msgid "Done. I have left {} bot farms."
+msgstr "সম্পন্ন আমি {} বট খামার ছেড়ে দিয়েছি।"
+msgstr ""
+
+#: guildmanager.py:396
+msgid "Ok, I won't leave any bot farms."
+msgstr "ঠিক আছে, আমি কোনো বট খামার ছাড়ব না।"
+msgstr ""
+
+#: guildmanager.py:414
+msgid "Do you want me to leave {} servers?"
+msgstr "আপনি কি চান যে আমি {} সার্ভার ছেড়ে যাই?"
+msgstr ""
+
+#: guildmanager.py:420
+msgid "Done. I have left {} servers."
+msgstr "সম্পন্ন আমি {} সার্ভার রেখেছি।"
+msgstr ""
+
+#: guildmanager.py:423
+msgid "Ok, I won't leave any servers."
+msgstr "ঠিক আছে, আমি কোনো সার্ভার ছাড়ব না।"
+msgstr ""
+
+#: guildmanager.py:454
+msgid "I'm leaving because this server is blacklisted."
+msgstr "আমি চলে যাচ্ছি কারণ এই সার্ভারটি কালো তালিকাভুক্ত।"
+msgstr ""
+
+#: guildmanager.py:458
+msgid "Blacklisted"
+msgstr "কালো তালিকাভুক্ত"
+msgstr ""
+
+#: guildmanager.py:463
+msgid "I'm leaving because this server has less than {} members."
+msgstr "আমি চলে যাচ্ছি কারণ এই সার্ভারে {} এর কম সদস্য রয়েছে৷"
+msgstr ""
+
+#: guildmanager.py:469
+msgid "Not Enough Members"
+msgstr "যথেষ্ট সদস্য নয়"
+msgstr ""
+
+#: guildmanager.py:476
+msgid "I'm leaving this server since it has a high bot to member ratio."
+msgstr "আমি এই সার্ভারটি ছেড়ে যাচ্ছি কারণ এটির সদস্য অনুপাতের সাথে একটি উচ্চ বট রয়েছে৷"
+msgstr ""
+
+#: guildmanager.py:482
+msgid "Bot Farm"
+msgstr "বট খামার"
+msgstr ""
+
+#: guildmanager.py:491
+msgid "I'm leaving since I was serverlocked by my owner."
+msgstr "আমার মালিকের দ্বারা আমি সার্ভারলক করে রেখেছিলাম বলে আমি চলে যাচ্ছি।"
+msgstr ""
+
+#: guildmanager.py:495
+msgid "Server Locked"
+msgstr "সার্ভার লক করা হয়েছে"
+msgstr ""
+
+#: guildmanager.py:526
+msgid "I have joined a server!"
+msgstr "আমি একটি সার্ভারে যোগদান করেছি!"
+msgstr ""
+
+#: guildmanager.py:538
+msgid "I have left a server!"
+msgstr "আমি একটি সার্ভার রেখেছি!"
+msgstr ""
+

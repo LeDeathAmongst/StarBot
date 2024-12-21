@@ -1,0 +1,12 @@
+{
+  "author" : ["coffeebank"],
+  "install_msg" : "Thanks for installing, I hope you enjoy :) To stay up to date with breaking changes, you might want to join my Support Discord. To find documentation, Discord, and more, drop by my site at https://coffeebank.github.io/coffee-cogs/jsonrequest/",
+  "name" : "jsonrequest",
+  "short" : "Send and receive a json request from Discord",
+  "requirements" : [],
+  "description" : "Send and receive a json request from Discord. Includes domain whitelisting by server.",
+  "permissions" : [],
+  "end_user_data_statement" : "This cog does not store any End User Data.",
+  "tags" : ["json"],
+  "min_bot_version": "3.5.0"
+}

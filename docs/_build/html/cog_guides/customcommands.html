@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CustomCommands &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dev" href="dev.html" />
+    <link rel="prev" title="Core" href="core.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CustomCommands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#customcom">customcom</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-cooldown">customcom cooldown</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-create">customcom create</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-create-random">customcom create random</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-create-simple">customcom create simple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-delete">customcom delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-edit">customcom edit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-list">customcom list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-raw">customcom raw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-search">customcom search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customcom-show">customcom show</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CustomCommands</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/customcommands.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="customcommands">
+<span id="id1"></span><h1>CustomCommands<a class="headerlink" href="#customcommands" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the customcommands cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">customcom</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="customcommands-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>This cog contains commands for creating and managing custom commands that display text.</p>
+<p>These are useful for storing information members might need, like FAQ answers or invite links.
+Custom commands can be used by anyone by default, so be careful with pings.
+Commands can only be lowercase, and will not respond to any uppercase letters.</p>
+</section>
+<section id="commands">
+<span id="customcommands-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<section id="customcom">
+<span id="customcommands-command-customcom"></span><h3>customcom<a class="headerlink" href="#customcom" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Alias: <code class="docutils literal notranslate"><span class="pre">cc</span></code></p>
+</div>
+<p><strong>Description</strong></p>
+<p>Base command for Custom Commands management.</p>
+<section id="customcom-cooldown">
+<span id="customcommands-command-customcom-cooldown"></span><h4>customcom cooldown<a class="headerlink" href="#customcom-cooldown" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom cooldown &lt;command&gt; [cooldown] [per=member]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set, edit, or view the cooldown for a custom command.</p>
+<p>You may set cooldowns per member, thread/channel, or guild. Multiple
+cooldowns may be set. All cooldowns must be cooled to call the
+custom command.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]customcom</span> <span class="pre">cooldown</span> <span class="pre">pingrole</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]customcom</span> <span class="pre">cooldown</span> <span class="pre">yourcommand</span> <span class="pre">30</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]cc</span> <span class="pre">cooldown</span> <span class="pre">mycommand</span> <span class="pre">30</span> <span class="pre">guild</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code> The custom command to check or set the cooldown.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[cooldown]</span></code> The number of seconds to wait before allowing the command to be invoked again. If omitted, will instead return the current cooldown settings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[per]</span></code> The group to apply the cooldown on. Defaults to per member. Valid choices are server / guild, user / member, and channel.</p></li>
+</ul>
+</section>
+<section id="customcom-create">
+<span id="customcommands-command-customcom-create"></span><h4>customcom create<a class="headerlink" href="#customcom-create" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom create &lt;command&gt; &lt;text&gt;
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Alias: <code class="docutils literal notranslate"><span class="pre">customcom</span> <span class="pre">add</span></code></p>
+</div>
+<p><strong>Description</strong></p>
+<p>Create custom commands.</p>
+<p>If a type is not specified, a simple CC will be created.
+CCs can be enhanced with arguments, see the guide
+<a class="reference internal" href="../cog_customcom.html#cog-customcom"><span class="std std-ref">here</span></a>.</p>
+</section>
+<section id="customcom-create-random">
+<span id="customcommands-command-customcom-create-random"></span><h4>customcom create random<a class="headerlink" href="#customcom-create-random" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom create random &lt;command&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Create a CC where it will randomly choose a response!</p>
+<p>Note: This command is interactive.</p>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code> The command executed to return the text. Cast to lowercase.</p></li>
+</ul>
+</section>
+<section id="customcom-create-simple">
+<span id="customcommands-command-customcom-create-simple"></span><h4>customcom create simple<a class="headerlink" href="#customcom-create-simple" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom create simple &lt;command&gt; &lt;text&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Add a simple custom command.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]customcom</span> <span class="pre">create</span> <span class="pre">simple</span> <span class="pre">yourcommand</span> <span class="pre">Text</span> <span class="pre">you</span> <span class="pre">want</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code> The command executed to return the text. Cast to lowercase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;text&gt;</span></code> The text to return when executing the command. See guide for enhanced usage.</p></li>
+</ul>
+</section>
+<section id="customcom-delete">
+<span id="customcommands-command-customcom-delete"></span><h4>customcom delete<a class="headerlink" href="#customcom-delete" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom delete &lt;command&gt;
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Aliases: <code class="docutils literal notranslate"><span class="pre">customcom</span> <span class="pre">del</span></code>, <code class="docutils literal notranslate"><span class="pre">customcom</span> <span class="pre">remove</span></code></p>
+</div>
+<p><strong>Description</strong></p>
+<p>Delete a custom command.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]customcom</span> <span class="pre">delete</span> <span class="pre">yourcommand</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code> The custom command to delete.</p></li>
+</ul>
+</section>
+<section id="customcom-edit">
+<span id="customcommands-command-customcom-edit"></span><h4>customcom edit<a class="headerlink" href="#customcom-edit" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom edit &lt;command&gt; [text]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Edit a custom command.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]customcom</span> <span class="pre">edit</span> <span class="pre">yourcommand</span> <span class="pre">Text</span> <span class="pre">you</span> <span class="pre">want</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code> The custom command to edit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;text&gt;</span></code> The new text to return when executing the command.</p></li>
+</ul>
+</section>
+<section id="customcom-list">
+<span id="customcommands-command-customcom-list"></span><h4>customcom list<a class="headerlink" href="#customcom-list" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom list
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>List all available custom commands.</p>
+<p>The list displays a preview of each command’s response, with
+markdown escaped and newlines replaced with spaces.</p>
+</section>
+<section id="customcom-raw">
+<span id="customcommands-command-customcom-raw"></span><h4>customcom raw<a class="headerlink" href="#customcom-raw" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom raw &lt;command&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Get the raw response of a custom command, to get the proper markdown.</p>
+<p>This is helpful for copy and pasting.</p>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span></code> The custom command to get the raw response of.</p></li>
+</ul>
+</section>
+<section id="customcom-search">
+<span id="customcommands-command-customcom-search"></span><h4>customcom search<a class="headerlink" href="#customcom-search" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom search &lt;query&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Searches through custom commands, according to the query.</p>
+<p>Uses fuzzy searching to find close matches.</p>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;query&gt;</span></code> The query to search for. Can be multiple words.</p></li>
+</ul>
+</section>
+<section id="customcom-show">
+<span id="customcommands-command-customcom-show"></span><h4>customcom show<a class="headerlink" href="#customcom-show" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]customcom show &lt;command_name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows a custom command’s responses and its settings.</p>
+<p><strong>Arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command_name&gt;</span></code> The custom command to show.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="core.html" class="btn btn-neutral float-left" title="Core" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dev.html" class="btn btn-neutral float-right" title="Dev" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

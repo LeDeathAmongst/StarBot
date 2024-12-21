@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<style>
+    .bot-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px auto;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        max-width: 600px;
+    }
+    .bot-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .bot-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    .bot-name {
+        font-size: 24px;
+        margin: 0;
+        color: #333;
+    }
+    .bot-description {
+        margin-bottom: 15px;
+    }
+    .bot-tags {
+        margin-bottom: 15px;
+    }
+    .tag {
+        background-color: #7289da;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    .bot-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #666;
+    }
+    .bot-links {
+        display: flex;
+        justify-content: space-between;
+    }
+    .bot-links a {
+        color: #7289da;
+        text-decoration: none;
+    }
+    .invite-button {
+        display: inline-block;
+        background-color: #7289da;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bot-card">
+    {% for bot in bots %}
+    <div class="bot-header">
+        <img src="{{ bot.avatar }}" alt="{{ bot.name }} avatar" class="bot-avatar">
+        <h2 class="bot-name">{{ bot.name }}</h2>
+    </div>
+    <p class="bot-description">{{ bot.description }}</p>
+    <div class="bot-tags">
+        {% for tag in bot.tags %}
+            <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    <div class="bot-stats">
+        <span>Servers: {{ bot.servers }}</span>
+        <span>Shards: {{ bot.shards }}</span>
+        <span>Votes: {{ bot.votes }}</span>
+    </div>
+    <div class="bot-links">
+        <a href="{{ bot.website }}" target="_blank">Website</a>
+        <a href="{{ bot.support_server }}" target="_blank">Support Server</a>
+        <a href="{{ bot.invite_link }}" target="_blank" class="invite-button">Invite Bot</a>
+    </div>
+    <p>Prefix: {{ bot.prefix }} | Library: {{ bot.library }}</p>
+    {% endfor %}
+</div>
+{% endblock %}

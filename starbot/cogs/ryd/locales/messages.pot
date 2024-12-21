@@ -1,0 +1,76 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-05-05 00:11+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+
+#: ryd\ext.py:25
+#, docstring
+msgid "'Return YouTube Dislikes' cog"
+msgstr ""
+
+#: ryd\ext.py:108
+#, docstring
+msgid "Insert YouTube video url or id as argument to get dislikes count"
+msgstr ""
+
+#: ryd\ext.py:170
+#, docstring
+msgid "Change settings of RYD Cog"
+msgstr ""
+
+#: ryd\ext.py:180
+#, docstring
+msgid "Disable/Enable message scanning for the bot"
+msgstr ""
+
+#: ryd\ext.py:184 ryd\ext.py:197 ryd\ext.py:211 ryd\ext.py:243
+msgid "Message scanning is {} now"
+msgstr ""
+
+#: ryd\ext.py:184 ryd\ext.py:197 ryd\ext.py:211 ryd\ext.py:219 ryd\ext.py:236
+msgid "Enabled"
+msgstr ""
+
+#: ryd\ext.py:184 ryd\ext.py:197 ryd\ext.py:211 ryd\ext.py:219 ryd\ext.py:230
+msgid "Disabled"
+msgstr ""
+
+#: ryd\ext.py:193
+#, docstring
+msgid "Disable/Enable message scanning for the specific person"
+msgstr ""
+
+#: ryd\ext.py:207
+#, docstring
+msgid "Disable/Enable message scanning for guild"
+msgstr ""
+
+#: ryd\ext.py:215
+#, docstring
+msgid "Enable/Disable whitelist mode for guild"
+msgstr ""
+
+#: ryd\ext.py:219
+msgid "Whitelist mode is {} now"
+msgstr ""
+
+#: ryd\ext.py:223
+#, docstring
+msgid "Disable/Enable message scanning for channel. Even in whitelist mode"
+msgstr ""
+
+#: ryd\ext.py:233
+msgid "not Whitelisted"
+msgstr ""
+
+#: ryd\ext.py:239
+msgid "Whitelisted"
+msgstr ""

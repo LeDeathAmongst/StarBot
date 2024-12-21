@@ -1,0 +1,86 @@
+# Bangla translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 03:56+0100\n"
+"PO-Revision-Date: 2024-10-14 03:57+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: bn\n"
+"Language-Team: bn <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: devutils.py:38
+msgid "No valid log level provided."
+msgstr "কোনো বৈধ লগ লেভেল দেওয়া নেই।"
+msgstr ""
+
+#: devutils.py:59
+msgid "No valid discord object provided."
+msgstr "কোন বৈধ বিরোধ বস্তু প্রদান করা হয়েছে."
+msgstr ""
+
+#: devutils.py:112 devutils.py:171 devutils.py:182
+msgid "You have not specified a correct command."
+msgstr "আপনি একটি সঠিক কমান্ড নির্দিষ্ট করেন নি।"
+msgstr ""
+
+#: devutils.py:116 devutils.py:186
+msgid "You can't execute yourself this command."
+msgstr "আপনি নিজেকে এই আদেশ কার্যকর করতে পারবেন না."
+msgstr ""
+
+#: devutils.py:138 devutils.py:153
+msgid "`{command}` isn't a valid command."
+msgstr "`{command}` একটি বৈধ কমান্ড নয়।"
+msgstr ""
+
+#: devutils.py:143 devutils.py:158
+msgid "You can't execute yourself `{command}`."
+msgstr "আপনি নিজেকে `{command}` চালাতে পারবেন না।"
+msgstr ""
+
+#: devutils.py:191
+msgid "Command `{command}` finished in `{timing}`s."
+msgstr "কমান্ড `{command}` `{time}`s-এ শেষ হয়েছে।"
+msgstr ""
+
+#: devutils.py:213
+msgid "The command isn't valid."
+msgstr "আদেশটি বৈধ নয়।"
+msgstr ""
+
+#: devutils.py:217
+msgid "This command can't be executed."
+msgstr "এই কমান্ড কার্যকর করা যাবে না."
+msgstr ""
+
+#: devutils.py:236
+msgid "Logger `{logger_name}` level set to `{level}`."
+msgstr "লগার `{logger_name}` লেভেল `{level}`-এ সেট করা হয়েছে।"
+msgstr ""
+
+#: devutils.py:268
+msgid "I couldn't find any module with this name."
+msgstr "আমি এই নামের কোন মডিউল খুঁজে পাইনি."
+msgstr ""
+
+#: devutils.py:272
+msgid "Module(s) {modules} reloaded."
+msgstr "মডিউল(গুলি) {মডিউল} পুনরায় লোড করা হয়েছে৷"
+msgstr ""
+
+#: devutils.py:277
+msgid "Modules [...] reloaded."
+msgstr "মডিউল [...] পুনরায় লোড করা হয়েছে।"
+msgstr ""
+

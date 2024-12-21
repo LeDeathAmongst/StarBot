@@ -1,0 +1,482 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red-discordbot\n"
+"POT-Creation-Date: 2024-08-07 20:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: red-discordbot\n"
+"X-Crowdin-Project-ID: 289505\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File-ID: 688\n"
+"Language: it_IT\n"
+
+#: starbot/cogs/audio/core/utilities/formatting.py:74
+msgid "tracks"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:84
+#: starbot/cogs/audio/core/utilities/formatting.py:272
+msgid "Page {page_num}/{total_pages}"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:95
+#: starbot/cogs/audio/core/utilities/playlists.py:526
+msgid "Connection to Lavalink node has failed"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:98
+#: starbot/cogs/audio/core/utilities/player.py:591
+#: starbot/cogs/audio/core/utilities/playlists.py:529
+msgid "Please check your console or logs for details."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:106
+#: starbot/cogs/audio/core/utilities/playlists.py:561
+msgid "Connect to a voice channel first."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:109
+#: starbot/cogs/audio/core/utilities/playlists.py:554
+msgid "Connection to Lavalink node has not yet been established."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:116
+#: starbot/cogs/audio/core/utilities/player.py:442
+#: starbot/cogs/audio/core/utilities/player.py:524
+msgid "Queue size limit reached."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:116
+msgid "Unable To Play Tracks"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:154
+#: starbot/cogs/audio/core/utilities/player.py:599
+msgid "Track Enqueued"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:168
+#: starbot/cogs/audio/core/utilities/player.py:548
+msgid "This track is not allowed in this server."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:185
+#: starbot/cogs/audio/core/utilities/player.py:570
+msgid "Track exceeds maximum length."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:200
+#: starbot/cogs/audio/core/utilities/player.py:602
+msgid "{time} until track playback: #{position} in queue"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:260
+msgid "Tracks Found:"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:261
+msgid "search results"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:263
+msgid "Folders Found:"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:264
+msgid "local folders"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:266
+msgid "Files Found:"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:267
+msgid "local tracks"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:379
+#: starbot/cogs/audio/core/utilities/playlists.py:240
+msgid "Unknown"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/formatting.py:380
+msgid " - Name:   <{pname}>\n"
+" - Scope:  < {scope} >\n"
+" - ID:     < {pid} >\n"
+" - Tracks: < {ptracks} >\n"
+" - Author: < {author} >\n\n"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/local_tracks.py:109
+#: starbot/cogs/audio/core/utilities/player.py:234
+#: starbot/cogs/audio/core/utilities/player.py:244
+#: starbot/cogs/audio/core/utilities/player.py:326
+#: starbot/cogs/audio/core/utilities/player.py:650
+msgid "Invalid Environment"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/local_tracks.py:109
+msgid "No localtracks folder."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/miscellaneous.py:50
+msgid "Not enough {currency}"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/miscellaneous.py:51
+msgid "{required_credits} {currency} required, but you have {bal}."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:78
+msgid "music in {} servers"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:135
+#: starbot/cogs/audio/core/utilities/player.py:139
+#: starbot/cogs/audio/core/utilities/player.py:144
+msgid "There's nothing in the queue."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:141
+msgid "Currently livestreaming {track}"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:146
+msgid "{time} left on {track}"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:154
+#: starbot/cogs/audio/core/utilities/player.py:189
+msgid "Track Skipped"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:167
+msgid "Track number must be equal to or greater than 1."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:173
+msgid "There are only {queuelen} songs currently queued."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:179
+msgid "{skip_to_track} Tracks Skipped"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:235
+msgid "The owner needs to set the Spotify client ID and Spotify client secret, before Spotify URLs or codes can be used. \n"
+"See `{prefix}audioset spotifyapi` for instructions."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:245
+msgid "The owner needs to set the YouTube API key before Spotify URLs or codes can be used.\n"
+"See `{prefix}audioset youtubeapi` for instructions."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:254
+#: starbot/cogs/audio/core/utilities/player.py:363
+#: starbot/cogs/audio/core/utilities/playlists.py:594
+msgid "Unable To Get Tracks"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:255
+#: starbot/cogs/audio/core/utilities/player.py:364
+#: starbot/cogs/audio/core/utilities/playlists.py:595
+msgid "Wait until the playlist has finished loading."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:266
+#: starbot/cogs/audio/core/utilities/player.py:308
+#: starbot/cogs/audio/core/utilities/player.py:408
+#: starbot/cogs/audio/core/utilities/playlists.py:605
+#: starbot/cogs/audio/core/utilities/playlists.py:638
+msgid "Nothing found."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:269
+#: starbot/cogs/audio/core/utilities/player.py:310
+#: starbot/cogs/audio/core/utilities/player.py:423
+#: starbot/cogs/audio/core/utilities/playlists.py:607
+#: starbot/cogs/audio/core/utilities/playlists.py:640
+msgid "Track is not playable."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:270
+#: starbot/cogs/audio/core/utilities/player.py:311
+#: starbot/cogs/audio/core/utilities/player.py:425
+#: starbot/cogs/audio/core/utilities/playlists.py:608
+#: starbot/cogs/audio/core/utilities/playlists.py:641
+msgid "**{suffix}** is not a fully supported format and some tracks may not play."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:300
+#: starbot/cogs/audio/core/utilities/player.py:393
+#: starbot/cogs/audio/core/utilities/player.py:657
+#: starbot/cogs/audio/core/utilities/playlists.py:425
+#: starbot/cogs/audio/core/utilities/playlists.py:626
+#: starbot/cogs/audio/core/utilities/playlists.py:655
+msgid "Unable to Get Track"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:301
+#: starbot/cogs/audio/core/utilities/playlists.py:426
+msgid "I'm unable to get a track from the Lavalink node at the moment, try again in a few minutes."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:327
+msgid "The Spotify API key or client secret has not been set properly. \n"
+"Use `{prefix}audioset spotifyapi` for instructions."
+msgstr "La chiave API o il client secret di Spotify non sono stati impostati correttamente. \n"
+"Usa `{prefix}audioset spotifyapi` per le istruzioni."
+
+#: starbot/cogs/audio/core/utilities/player.py:351
+msgid "Unable To Find Tracks"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:352
+msgid "This doesn't seem to be a supported Spotify URL or code."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:378
+msgid "{query} is not an allowed query."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:394
+#: starbot/cogs/audio/core/utilities/playlists.py:627
+#: starbot/cogs/audio/core/utilities/playlists.py:656
+msgid "I'm unable to get a track from Lavalink node at the moment, try again in a few minutes."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:416
+msgid "Local tracks will not work if the `Lavalink.jar` cannot see the track.\n"
+"This may be due to permissions or because Lavalink.jar is being run in a different machine than the local tracks."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:486
+msgid " {bad_tracks} tracks cannot be queued."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:492
+msgid "No Title"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:494
+msgid "Playlist Enqueued"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:494
+msgid "Album Enqueued"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:502
+msgid "Added {num} tracks to the queue.{maxlength_msg}"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:508
+msgid "{time} until start of playlist playback: starts at #{position} in queue"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:588
+msgid "Nothing found"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:623
+msgid "Please wait, finding tracks..."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:629
+msgid "Getting track {num}/{total}..."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:630
+msgid "Matching track {num}/{total}..."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:631
+#: starbot/cogs/audio/core/utilities/playlists.py:341
+#: starbot/cogs/audio/core/utilities/playlists.py:414
+msgid "Loading track {num}/{total}..."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:632
+msgid "Approximate time remaining: {seconds}"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:658
+msgid "I'm unable to get a track from Lavalink at the moment, try again in a few minutes."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/player.py:667
+msgid "The connection was reset while loading the playlist."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:83
+msgid "You do not have the permissions to manage {name} (`{id}`) [**{scope}**]."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:101
+msgid "You do not have the permissions to manage that playlist in {guild}."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:108
+msgid "You do not have the permissions to manage playlist owned by {user}."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:112
+msgid "You do not have the permissions to manage playlists in {scope} scope."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:116
+msgid "No access to playlist."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:224
+msgid "{match_count} playlists match {original_input}: Please try to be more specific, or use the playlist ID."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:241
+msgid "{number}.    <{playlist.name}>\n"
+" - Scope:  < {scope} >\n"
+" - ID:     < {playlist.id} >\n"
+" - Tracks: < {tracks} >\n"
+" - Author: < {author} >\n\n"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:258
+msgid "{playlists} playlists found, which one would you like?"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:277
+#: starbot/cogs/audio/core/utilities/playlists.py:283
+msgid "Too many matches found and you did not select which one you wanted."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:308
+msgid "Playlists you can access in this server:"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:314
+msgid "Playlists for {scope}:"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:318
+msgid "Page {page_num}/{total_pages} | {num} playlists."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:334
+#: starbot/cogs/audio/core/utilities/playlists.py:412
+msgid "Please wait, adding tracks..."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:361
+#: starbot/cogs/audio/core/utilities/playlists.py:464
+msgid "Empty playlist {name} (`{id}`) [**{scope}**] created."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:366
+#: starbot/cogs/audio/core/utilities/playlists.py:469
+msgid "Added {num} tracks from the {playlist_name} playlist. {num_bad} track(s) could not be loaded."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:371
+#: starbot/cogs/audio/core/utilities/playlists.py:474
+msgid "Added {num} tracks from the {playlist_name} playlist."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:375
+#: starbot/cogs/audio/core/utilities/playlists.py:478
+msgid "Playlist Saved"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:540
+#: starbot/cogs/audio/core/utilities/playlists.py:553
+#: starbot/cogs/audio/core/utilities/playlists.py:560
+#: starbot/cogs/audio/core/utilities/playlists.py:571
+msgid "Unable To Get Playlists"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:541
+msgid "I don't have permission to connect and speak in your channel."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:572
+msgid "You must be in the voice channel to use the playlist command."
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:680
+msgid "the Global"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:680
+msgid "Global"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:682
+msgid "the Server"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:682
+msgid "Server"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:684
+msgid "the User"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/playlists.py:684
+msgid "User"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:40
+msgid "__Too many songs in the queue, only showing the first 500__.\n\n"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:57
+msgid "**Currently livestreaming:**\n"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:59
+#: starbot/cogs/audio/core/utilities/queue.py:64
+msgid "Requested by: **{user}**"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:62
+msgid "Playing: "
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:76
+msgid "requested by **{user}**\n"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:80
+msgid "Queue for __{guild_name}__"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:88
+msgid "Page {page_num}/{total_pages} | {num_tracks} tracks, {num_remaining} remaining\n"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:97
+msgid "Auto-Play"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:103
+msgid "Shuffle"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:109
+msgid "Repeat"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:161
+msgid "Matching Tracks:"
+msgstr ""
+
+#: starbot/cogs/audio/core/utilities/queue.py:164
+msgid "Page {page_num}/{total_pages} | {num_tracks} tracks"
+msgstr ""
+

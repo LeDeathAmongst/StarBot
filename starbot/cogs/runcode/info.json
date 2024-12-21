@@ -1,0 +1,15 @@
+{
+    "author": ["AAA3A"],
+    "name": "RunCode",
+    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. If you enjoy my work, please consider donating on [Buy Me a Coffee](<https://www.buymeacoffee.com/aaa3a>) or [Ko-Fi](<https://ko-fi.com/aaa3a>)!",
+    "short": "A cog to compile and run codes in some languages!",
+    "description": "A cog to compile and run codes in some languages! Use `[p]setruncode listlanguages` to get a list of all the available languages.",
+    "tags": [
+        "dev",
+        "code",
+        "compiler"
+    ],
+    "requirements": ["git+https://github.com/AAA3A-AAA3A/AAA3A_utils.git", "humanfriendly", "fuzzywuzzy"],
+    "min_bot_version": "3.5.0",
+    "end_user_data_statement": "This cog does not persistently store data or metadata about users. Please note: all the code you run is stored on the wandbox.org server, even if you need a code to access it. To my knowledge, there is no way to request a deletion."
+}

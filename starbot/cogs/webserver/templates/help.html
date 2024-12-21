@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+
+{% block title %}Starfire Bot Commands{% endblock %}
+
+{% block extra_css %}
+<style>
+    :root {
+        --primary-color: #2a2e35;
+        --secondary-color: #3a3f48;
+        --accent-color: #ffaa00;
+        --text-color: #ffffff;
+        --text-secondary: #a0a0a0;
+    }
+    body {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        font-family: 'Arial', sans-serif;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .header h1 {
+        color: var(--accent-color);
+        font-size: 2.5em;
+    }
+    .header p {
+        color: var(--text-secondary);
+    }
+    .search-container {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #searchInput {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+    }
+    #searchResults {
+        display: none;
+        margin-top: 20px;
+    }
+    .search-result-item {
+        background-color: var(--secondary-color);
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .search-result-category {
+        font-weight: bold;
+        color: var(--accent-color);
+    }
+    .alphabet-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .letter-item {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .letter-item:hover, .letter-item.active {
+        background-color: var(--accent-color);
+    }
+    .category-menu {
+        display: none;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .category-menu.active {
+        display: flex;
+    }
+    .category-item {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .category-item:hover, .category-item.active {
+        background-color: var(--accent-color);
+    }
+    .category-section {
+        display: none;
+    }
+    .category-section.active {
+        display: block;
+    }
+    .command-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .command-card {
+        background-color: var(--secondary-color);
+        border-radius: 10px;
+        padding: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .command-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .command-name {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        color: var(--accent-color);
+    }
+    .command-description {
+        font-size: 0.9em;
+        color: var(--text-secondary);
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="header">
+        <h1>Starfire Bot Commands</h1>
+        <p>Explore our extensive list of powerful commands</p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a command...">
+    </div>
+
+    <div id="searchResults"></div>
+
+    <div class="alphabet-menu" id="alphabetMenu"></div>
+    <div class="category-menu" id="categoryMenu"></div>
+
+    {% for category, cmds in commands.items()|sort %}
+    <section id="{{ category }}" class="category-section" style="display: none;">
+        <div class="command-grid">
+            {% for cmd, description in cmds.items() %}
+            <div class="command-card">
+                <div class="command-name">{{ cmd }}</div>
+                <div class="command-description">{{ description }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endfor %}
+</div>
+
+<script>
+let categories = [];
+let commandsData = {};
+
+fetch('/commands_data.json')
+    .then(response => response.json())
+    .then(data => {
+        commandsData = data;
+        categories = Object.keys(data).sort();
+        createAlphabetMenu();
+        // You might want to call other initialization functions here
+    });
+let activeCategory = null;
+let activeLetter = null;
+
+function groupCategoriesByLetter() {
+    let grouped = {};
+    categories.forEach(category => {
+        let letter = category[0].toUpperCase();
+        if (!grouped[letter]) {
+            grouped[letter] = [];
+        }
+        grouped[letter].push(category);
+    });
+    console.log('Grouped categories:', grouped);
+    return grouped;
+}
+
+function createAlphabetMenu() {
+    const menu = document.getElementById('alphabetMenu');
+    const groupedCategories = groupCategoriesByLetter();
+    const letters = Object.keys(groupedCategories).sort();
+    letters.forEach(letter => {
+        const letterItem = document.createElement('div');
+        letterItem.className = 'letter-item';
+        letterItem.textContent = letter;
+        letterItem.setAttribute('data-letter', letter);
+        letterItem.onclick = () => selectLetter(letter);
+        menu.appendChild(letterItem);
+    });
+}
+
+function selectLetter(letter) {
+    console.log('Selected letter:', letter);
+    if (activeLetter) {
+        document.querySelector(`.letter-item[data-letter="${activeLetter}"]`).classList.remove('active');
+    }
+    document.querySelector(`.letter-item[data-letter="${letter}"]`).classList.add('active');
+    activeLetter = letter;
+
+    const categoryMenu = document.getElementById('categoryMenu');
+    categoryMenu.innerHTML = '';
+    categoryMenu.classList.add('active');
+
+    groupCategoriesByLetter()[letter].forEach(category => {
+        const categoryItem = document.createElement('div');
+        categoryItem.className = 'category-item';
+        categoryItem.textContent = category;
+        categoryItem.setAttribute('data-category', category);
+        categoryItem.onclick = () => selectCategory(category);
+        categoryMenu.appendChild(categoryItem);
+    });
+
+    // Hide all category sections when changing letter
+    document.querySelectorAll('.category-section').forEach(section => {
+        section.style.display = 'none';
+    });
+    activeCategory = null;
+}
+
+function selectCategory(category) {
+    console.log('Selected category:', category);
+    if (activeCategory) {
+        document.getElementById(activeCategory).classList.remove('active');
+        const activeCategoryItem = document.querySelector(`.category-item[data-category="${activeCategory}"]`);
+        if (activeCategoryItem) {
+            activeCategoryItem.classList.remove('active');
+        }
+    }
+    document.getElementById(category).classList.add('active');
+    const categoryItem = document.querySelector(`.category-item[data-category="${category}"]`);
+    if (categoryItem) {
+        categoryItem.classList.add('active');
+    }
+    activeCategory = category;
+
+    // Hide all category sections
+    document.querySelectorAll('.category-section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected category section
+    const selectedSection = document.getElementById(category);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+function searchCommands() {
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const query = searchInput.value.toLowerCase().trim();
+
+    if (query.length < 1) {
+        searchResults.style.display = 'none';
+        return;
+    }
+
+    let results = [];
+    for (let category in commandsData) {
+        for (let command in commandsData[category]) {
+            if (command.toLowerCase() === query) {
+                results.push({ category, command, description: commandsData[category][command] });
+            }
+        }
+    }
+
+    if (results.length > 0) {
+        searchResults.innerHTML = results.map(result => `
+            <div class="search-result-item">
+                <div class="search-result-category">${result.category}</div>
+                <div class="command-name">${result.command}</div>
+                <div class="command-description">${result.description}</div>
+            </div>
+        `).join('');
+        searchResults.style.display = 'block';
+    } else {
+        searchResults.innerHTML = '<p>Sorry, that command doesn\'t exist. Did you spell it right?</p>';
+        searchResults.style.display = 'block';
+    }
+}
+
+window.onload = function() {
+    createAlphabetMenu();
+    document.getElementById('searchInput').addEventListener('input', searchCommands);
+};
+</script>
+{% endblock %}

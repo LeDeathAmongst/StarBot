@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red-discordbot\n"
+"POT-Creation-Date: 2024-07-18 21:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: Slovenian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+"X-Crowdin-Project: red-discordbot\n"
+"X-Crowdin-Project-ID: 289505\n"
+"X-Crowdin-Language: sl\n"
+"X-Crowdin-File-ID: 197\n"
+"Language: sl_SI\n"
+
+#: starbot/core/utils/chat_formatting.py:586
+msgid "year"
+msgstr "leto"
+
+#: starbot/core/utils/chat_formatting.py:586
+msgid "years"
+msgstr "let"
+
+#: starbot/core/utils/chat_formatting.py:587
+msgid "month"
+msgstr "mesec"
+
+#: starbot/core/utils/chat_formatting.py:587
+msgid "months"
+msgstr "mesecev"
+
+#: starbot/core/utils/chat_formatting.py:588
+msgid "day"
+msgstr "dan"
+
+#: starbot/core/utils/chat_formatting.py:588
+msgid "days"
+msgstr "dnevi"
+
+#: starbot/core/utils/chat_formatting.py:589
+msgid "hour"
+msgstr "ura"
+
+#: starbot/core/utils/chat_formatting.py:589
+msgid "hours"
+msgstr "ure"
+
+#: starbot/core/utils/chat_formatting.py:590
+msgid "minute"
+msgstr "minuta"
+
+#: starbot/core/utils/chat_formatting.py:590
+msgid "minutes"
+msgstr "minute"
+
+#: starbot/core/utils/chat_formatting.py:591
+msgid "second"
+msgstr "sekunda"
+
+#: starbot/core/utils/chat_formatting.py:591
+msgid "seconds"
+msgstr "sekund"
+
+#: starbot/core/utils/chat_formatting.py:599
+msgid "negative"
+msgstr ""
+
+#: starbot/core/utils/views.py:34
+msgid "Select a Page"
+msgstr ""
+
+#: starbot/core/utils/views.py:172
+msgid "Page {num}"
+msgstr ""
+
+#: starbot/core/utils/views.py:317 starbot/core/utils/views.py:673
+msgid "You are not authorized to interact with this."
+msgstr ""
+
+#: starbot/core/utils/views.py:359
+msgid "Set API Keys"
+msgstr ""
+
+#: starbot/core/utils/views.py:360
+msgid "Keys and tokens"
+msgstr ""
+
+#: starbot/core/utils/views.py:362
+msgid "Set API Keys for {service}"
+msgstr ""
+
+#: starbot/core/utils/views.py:363
+msgid "Keys and tokens for {service}"
+msgstr ""
+
+#: starbot/core/utils/views.py:372
+msgid "Service"
+msgstr ""
+
+#: starbot/core/utils/views.py:409
+msgid "This modal is for bot owners only. Whoops!"
+msgstr ""
+
+#: starbot/core/utils/views.py:422
+msgid "{error_message}\n"
+"Please try again."
+msgstr ""
+
+#: starbot/core/utils/views.py:429 starbot/core/utils/views.py:436
+msgid "`{service}` API tokens have been set."
+msgstr ""
+
+#: starbot/core/utils/views.py:472
+msgid "This button is for bot owners only, oh well."
+msgstr ""
+

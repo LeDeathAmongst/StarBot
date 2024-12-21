@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bot" href="framework_bot.html" />
+    <link rel="prev" title="Shared API Keys" href="framework_apikeys.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bank</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-reference">API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Bank</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.cost"><code class="docutils literal notranslate"><span class="pre">cost()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.AbortPurchase"><code class="docutils literal notranslate"><span class="pre">AbortPurchase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.Account"><code class="docutils literal notranslate"><span class="pre">Account</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.bank_prune"><code class="docutils literal notranslate"><span class="pre">bank_prune()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.can_spend"><code class="docutils literal notranslate"><span class="pre">can_spend()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.deposit_credits"><code class="docutils literal notranslate"><span class="pre">deposit_credits()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_account"><code class="docutils literal notranslate"><span class="pre">get_account()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_balance"><code class="docutils literal notranslate"><span class="pre">get_balance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_bank_name"><code class="docutils literal notranslate"><span class="pre">get_bank_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_currency_name"><code class="docutils literal notranslate"><span class="pre">get_currency_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_default_balance"><code class="docutils literal notranslate"><span class="pre">get_default_balance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_leaderboard"><code class="docutils literal notranslate"><span class="pre">get_leaderboard()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_leaderboard_position"><code class="docutils literal notranslate"><span class="pre">get_leaderboard_position()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.get_max_balance"><code class="docutils literal notranslate"><span class="pre">get_max_balance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.is_global"><code class="docutils literal notranslate"><span class="pre">is_global()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.is_owner_if_bank_global"><code class="docutils literal notranslate"><span class="pre">is_owner_if_bank_global()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.set_balance"><code class="docutils literal notranslate"><span class="pre">set_balance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.set_bank_name"><code class="docutils literal notranslate"><span class="pre">set_bank_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.set_currency_name"><code class="docutils literal notranslate"><span class="pre">set_currency_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.set_default_balance"><code class="docutils literal notranslate"><span class="pre">set_default_balance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.set_global"><code class="docutils literal notranslate"><span class="pre">set_global()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.set_max_balance"><code class="docutils literal notranslate"><span class="pre">set_max_balance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.transfer_credits"><code class="docutils literal notranslate"><span class="pre">transfer_credits()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.wipe_bank"><code class="docutils literal notranslate"><span class="pre">wipe_bank()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.bank.withdraw_credits"><code class="docutils literal notranslate"><span class="pre">withdraw_credits()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Bank</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developframework_bank.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="bank">
+<h1>Bank<a class="headerlink" href="#bank" title="Link to this heading"></a></h1>
+<p>Bank has now been separated from Economy for V3. New to bank is support for
+having a global bank.</p>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">bank</span><span class="p">,</span> <span class="n">commands</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">balance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span> <span class="o">=</span> <span class="n">commands</span><span class="o">.</span><span class="n">Author</span><span class="p">):</span>
+        <span class="n">bal</span> <span class="o">=</span> <span class="k">await</span> <span class="n">bank</span><span class="o">.</span><span class="n">get_balance</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+        <span class="n">currency</span> <span class="o">=</span> <span class="k">await</span> <span class="n">bank</span><span class="o">.</span><span class="n">get_currency_name</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+            <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&#39;s balance is </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">user</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="n">bal</span><span class="p">,</span> <span class="n">currency</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Bank<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="py function" id="module-starbot.core.bank">
+<dt class="sig sig-object py" id="starbot.core.bank.cost">
+<span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">cost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#cost"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.cost" title="Link to this definition"></a></dt>
+<dd><p>Decorates a coroutine-function or command to have a cost.</p>
+<p>If the command raises an exception, the cost will be refunded.</p>
+<p>You can intentionally refund by raising <a class="reference internal" href="#starbot.core.bank.AbortPurchase" title="starbot.core.bank.AbortPurchase"><code class="xref any py py-exc docutils literal notranslate"><span class="pre">AbortPurchase</span></code></a>
+(this error will be consumed and not show to users)</p>
+<p>Other exceptions will propagate and will be handled by Red’s (and/or
+any other configured) error handling.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="starbot.core.bank.AbortPurchase">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">AbortPurchase</span></span><a class="reference internal" href="_modules/starbot/core/bank.html#AbortPurchase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.AbortPurchase" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="starbot.core.bank.Account">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">Account</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">balance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#Account"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.Account" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A single account.</p>
+<p>This class should ONLY be instantiated by the bank itself.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.bank_prune">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">bank_prune</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#bank_prune"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.bank_prune" title="Link to this definition"></a></dt>
+<dd><p>Prune bank accounts from the bank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><em>Red</em></a>) – The bot.</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a>) – The guild to prune. This is required if the bank is set to local.</p></li>
+<li><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The id of the user whose account will be pruned.
+If supplied this will prune only this user’s bank account
+otherwise it will prune all invalid users from the bank.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>BankPruneError</strong> – If guild is <code class="code docutils literal notranslate"><span class="pre">None</span></code> and the bank is Local.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.can_spend">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">can_spend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#can_spend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.can_spend" title="Link to this definition"></a></dt>
+<dd><p>Determine if a member can spend the given amount.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>member</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a>) – The member wanting to spend.</p></li>
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The amount the member wants to spend.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the amount is not an <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">True</span></code> if the member has a sufficient balance to spend the
+amount, else <code class="code docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.deposit_credits">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">deposit_credits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#deposit_credits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.deposit_credits" title="Link to this definition"></a></dt>
+<dd><p>Add a given amount of credits to an account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>member</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a>) – The member to deposit credits to.</p></li>
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The amount to deposit.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new balance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the deposit amount is invalid.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the deposit amount is not an <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_account">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_account</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_account"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_account" title="Link to this definition"></a></dt>
+<dd><p>Get the appropriate account for the given user or member.</p>
+<p>A member is required if the bank is currently guild specific.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>member</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.User</span></code></a> or <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Member</span></code></a>) – The user whose account to get.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The user’s account.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#starbot.core.bank.Account" title="starbot.core.bank.Account">Account</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_balance">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_balance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_balance" title="Link to this definition"></a></dt>
+<dd><p>Get the current balance of a member.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>member</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a>) – The member whose balance to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The member’s balance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_bank_name">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_bank_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_bank_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_bank_name" title="Link to this definition"></a></dt>
+<dd><p>Get the current bank name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to get the bank name for (required if bank is
+guild-specific).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The bank’s name.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_currency_name">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_currency_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_currency_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_currency_name" title="Link to this definition"></a></dt>
+<dd><p>Get the currency name of the bank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to get the currency name for (required if bank is
+guild-specific).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The currency name.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_default_balance">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_default_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_default_balance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_default_balance" title="Link to this definition"></a></dt>
+<dd><p>Get the current default balance amount.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to get the default balance for (required if bank is
+guild-specific).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The bank’s default balance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_leaderboard">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_leaderboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_leaderboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_leaderboard" title="Link to this definition"></a></dt>
+<dd><p>Gets the bank’s leaderboard</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>positions</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>) – The number of positions to get</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a>) – The guild to get the leaderboard of. If the bank is global and this
+is provided, get only guild members on the leaderboard</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sorted leaderboard in the form of <code class="code docutils literal notranslate"><span class="pre">(user_id,</span> <span class="pre">raw_account)</span></code></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the bank is guild-specific and no guild was specified</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_leaderboard_position">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_leaderboard_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_leaderboard_position"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_leaderboard_position" title="Link to this definition"></a></dt>
+<dd><p>Get the leaderboard position for the specified user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>member</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.User</span></code></a> or <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Member</span></code></a>) – The user to get the leaderboard position of</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The position of the user on the leaderboard</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the bank is currently guild-specific and a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.User</span></code></a> object was passed in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.get_max_balance">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">get_max_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#get_max_balance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.get_max_balance" title="Link to this definition"></a></dt>
+<dd><p>Get the max balance for the bank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to get the max balance for (required if bank is
+guild-specific).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The maximum allowed balance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.is_global">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">is_global</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#is_global"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.is_global" title="Link to this definition"></a></dt>
+<dd><p>Determine if the bank is currently global.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">True</span></code> if the bank is global, otherwise <code class="code docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.is_owner_if_bank_global">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">is_owner_if_bank_global</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#is_owner_if_bank_global"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.is_owner_if_bank_global" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to the bot owner if the bank is global,
+otherwise ensure it’s used in guild (WITHOUT checking any user permissions).</p>
+<p>When used on the command, this should be combined
+with permissions check like <a class="reference internal" href="framework_checks.html#starbot.core.commands.guildowner_or_permissions" title="starbot.core.commands.guildowner_or_permissions"><code class="xref any py py-func docutils literal notranslate"><span class="pre">guildowner_or_permissions()</span></code></a>.</p>
+<p>This is a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/ext/commands/api.html#discord.ext.commands.check" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">command</span> <span class="pre">check</span></code></a>.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@bank</span><span class="o">.</span><span class="n">is_owner_if_bank_global</span><span class="p">()</span>
+<span class="nd">@commands</span><span class="o">.</span><span class="n">guildowner</span><span class="p">()</span>
+<span class="nd">@commands</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">bankset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base command for bank settings.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>If the bank is global, the <code class="docutils literal notranslate"><span class="pre">[p]bankset</span></code> command can only be used by
+the bot owners in both guilds and DMs.
+If the bank is local, the command can only be used in guilds by guild and bot owners.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.set_balance">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">set_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#set_balance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.set_balance" title="Link to this definition"></a></dt>
+<dd><p>Set an account balance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>member</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em>) – The member whose balance to set.</p></li>
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The amount to set the balance to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>New account balance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If attempting to set the balance to a negative number.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and a discord.User object is provided.</p></li>
+<li><p><strong>BalanceTooHigh</strong> – If attempting to set the balance to a value greater than
+    <code class="docutils literal notranslate"><span class="pre">bank._MAX_BALANCE</span></code>.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the amount is not an <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.set_bank_name">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">set_bank_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#set_bank_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.set_bank_name" title="Link to this definition"></a></dt>
+<dd><p>Set the bank name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The new name for the bank.</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to set the bank name for (required if bank is
+guild-specific).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new name for the bank.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.set_currency_name">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">set_currency_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#set_currency_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.set_currency_name" title="Link to this definition"></a></dt>
+<dd><p>Set the currency name for the bank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The new name for the currency.</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to set the currency name for (required if bank is
+guild-specific).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new name for the currency.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.set_default_balance">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">set_default_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#set_default_balance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.set_default_balance" title="Link to this definition"></a></dt>
+<dd><p>Set the default balance amount.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The new default balance.</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to set the default balance for (required if bank is
+guild-specific).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new default balance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the amount is less than 0 or higher than the max allowed balance.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the amount is not an <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.set_global">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">set_global</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#set_global"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.set_global" title="Link to this definition"></a></dt>
+<dd><p>Set global status of the bank.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>All accounts are reset when you switch!</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>global</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – <code class="code docutils literal notranslate"><span class="pre">True</span></code> will set bank to global mode.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>New bank mode, <code class="code docutils literal notranslate"><span class="pre">True</span></code> is global.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If bank is becoming global and a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Member</span></code></a> was not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.set_max_balance">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">set_max_balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#set_max_balance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.set_max_balance" title="Link to this definition"></a></dt>
+<dd><p>Set the maximum balance for the bank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The new maximum balance.</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>, optional) – The guild to set the max balance for (required if bank is
+guild-specific).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new maximum balance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and guild was not provided.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the amount is less than 0 or higher than 2 ** 63 - 1.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the amount is not an <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.transfer_credits">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">transfer_credits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#transfer_credits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.transfer_credits" title="Link to this definition"></a></dt>
+<dd><p>Transfer a given amount of credits from one account to another.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em>) – The member to transfer from.</p></li>
+<li><p><strong>to</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.User" title="(in discord.py v2.4.0)"><em>discord.User</em></a><em>]</em>) – The member to transfer to.</p></li>
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The amount to transfer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new balance of the member gaining credits.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the amount is invalid or if <code class="docutils literal notranslate"><span class="pre">from_</span></code> has insufficient funds.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the amount is not an <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the bank is guild-specific and a discord.User object is provided.</p></li>
+<li><p><strong>BalanceTooHigh</strong> – If the balance after the transfer would be greater than
+    <code class="docutils literal notranslate"><span class="pre">bank._MAX_BALANCE</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.wipe_bank">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">wipe_bank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#wipe_bank"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.wipe_bank" title="Link to this definition"></a></dt>
+<dd><p>Delete all accounts from the bank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a>) – The guild to clear accounts for. If unsupplied and the bank is
+per-server, all accounts in every guild will be wiped.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.bank.withdraw_credits">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.bank.</span></span><span class="sig-name descname"><span class="pre">withdraw_credits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">member</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/bank.html#withdraw_credits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.bank.withdraw_credits" title="Link to this definition"></a></dt>
+<dd><p>Remove a certain amount of credits from an account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>member</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><em>discord.Member</em></a>) – The member to withdraw credits from.</p></li>
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The amount to withdraw.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>New account balance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the withdrawal amount is invalid or if the account has insufficient
+    funds.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If the withdrawal amount is not an <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="framework_apikeys.html" class="btn btn-neutral float-left" title="Shared API Keys" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="framework_bot.html" class="btn btn-neutral float-right" title="Bot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

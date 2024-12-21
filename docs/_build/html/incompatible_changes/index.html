@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backward incompatible changes &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Future changes (currently deprecated functionality)" href="future.html" />
+    <link rel="prev" title="Changelog" href="../changelog.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Backward incompatible changes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="future.html">Future changes (currently deprecated functionality)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5.html">Backward incompatible changes in Red 3.5</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Backward incompatible changes</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developincompatible_changes/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="backward-incompatible-changes">
+<h1>Backward incompatible changes<a class="headerlink" href="#backward-incompatible-changes" title="Link to this heading"></a></h1>
+<p>This page lists all functionalities that are currently deprecated, features that have been removed in past minor releases, and any other backward incompatible changes that are planned or have been removed in past minor releases. The objective is to give users a clear rationale why a certain change has been made, and what alternatives (if any) should be used instead.</p>
+<p>These changes are sorted (in their respective sections) in a reverse chronological order.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="future.html">Future changes (currently deprecated functionality)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="future.html#for-developers">For Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="future.html#removals">Removals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="future.html#downloader-s-shared-libraries">Downloader’s shared libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3.5.html">Backward incompatible changes in Red 3.5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.5.html#for-users">For Users</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.5.html#removals">Removals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#starbot-launcher">starbot-launcher</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.5.html#behavior-changes">Behavior changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#x86-64-cpus-are-now-only-supported-if-they-support-x86-64-v2-instruction-set">x86-64 CPUs are now only supported if they support x86-64-v2 instruction set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#thread-related-changes">Thread-related changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#commands-for-changing-bank-and-modlog-settings-are-now-core-commands">Commands for changing Bank and Modlog settings are now core commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#commands-in-the-p-set-group-have-been-reorganized">Commands in the <code class="docutils literal notranslate"><span class="pre">[p]set</span></code> group have been reorganized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#red-requires-to-have-at-least-one-owner">Red requires to have at least one owner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.5.html#for-developers">For Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.5.html#id1">Removals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#config-driver-and-starbot-core-drivers-package"><code class="docutils literal notranslate"><span class="pre">Config.driver</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.core.drivers</span></code> package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#starbot-core-data-manager-load-bundled-data-function"><code class="docutils literal notranslate"><span class="pre">starbot.core.data_manager.load_bundled_data()</span></code> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#is-mod-or-superior-is-admin-or-superior-and-check-permissions-functions-in-starbot-core-checks"><code class="docutils literal notranslate"><span class="pre">is_mod_or_superior()</span></code>, <code class="docutils literal notranslate"><span class="pre">is_admin_or_superior()</span></code>, and <code class="docutils literal notranslate"><span class="pre">check_permissions()</span></code> functions in <code class="docutils literal notranslate"><span class="pre">starbot.core.checks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#bordered-function"><code class="docutils literal notranslate"><span class="pre">bordered()</span></code> function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#commands-dm-perms-constant"><code class="docutils literal notranslate"><span class="pre">commands.DM_PERMS</span></code> constant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#starbot-core-utils-caching-and-starbot-core-utils-safety-modules"><code class="docutils literal notranslate"><span class="pre">starbot.core.utils.caching</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.core.utils.safety</span></code> modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#guild-id-parameter-to-red-allowed-by-whitelist-blacklist"><code class="docutils literal notranslate"><span class="pre">guild_id</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">Red.allowed_by_whitelist_blacklist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#starbot-core-commands-converter-guildconverter"><code class="docutils literal notranslate"><span class="pre">starbot.core.commands.converter.GuildConverter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#starbot-core-utils-mod-is-allowed-by-hierarchy"><code class="docutils literal notranslate"><span class="pre">starbot.core.utils.mod.is_allowed_by_hierarchy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.5.html#id2">Behavior changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#update-to-version-guarantees-and-privatization-of-many-apis">Update to version guarantees and privatization of many APIs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#starbot-core-data-manager-storage-details-returns-a-deep-copy-of-underlying-dict-now"><code class="docutils literal notranslate"><span class="pre">starbot.core.data_manager.storage_details()</span></code> returns a deep copy of underlying dict now</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#changed-the-version-order-of-final-dev-releases-and-dev-pre-releases">Changed the version order of final dev releases and dev pre-releases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#red-get-owner-notification-destinations-may-now-return-instances-of-discord-voice-stagechannel"><code class="docutils literal notranslate"><span class="pre">Red.get_owner_notification_destinations()</span></code> may now return instances of <code class="docutils literal notranslate"><span class="pre">discord.Voice/StageChannel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#modlog-get-modlog-channel-may-now-return-instances-of-discord-voice-stagechannel"><code class="docutils literal notranslate"><span class="pre">modlog.get_modlog_channel()</span></code> may now return instances of <code class="docutils literal notranslate"><span class="pre">discord.Voice/StageChannel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#menus-default-controls-and-reactionpredicate-emojis-use-immutable-types-now"><code class="docutils literal notranslate"><span class="pre">menus.DEFAULT_CONTROLS</span></code> and <code class="docutils literal notranslate"><span class="pre">ReactionPredicate.*_EMOJIS</span></code> use immutable types now</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#permissions-defined-in-commands-permissions-decorators-are-always-merged-now">Permissions defined in <code class="docutils literal notranslate"><span class="pre">&#64;commands.*_permissions()</span></code> decorators are always merged now</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#some-of-the-primary-dependencies-have-been-removed-or-replaced">Some of the primary dependencies have been removed or replaced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#discord-py-version-has-been-updated-to-2-2-3">discord.py version has been updated to 2.2.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#case-channel-can-now-be-a-discord-thread"><code class="docutils literal notranslate"><span class="pre">Case.channel</span></code> can now be a <code class="docutils literal notranslate"><span class="pre">discord.Thread</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#commands-badargument-is-no-longer-wrapped-in-commands-conversionfailure-containing-parameter-and-its-value"><code class="docutils literal notranslate"><span class="pre">commands.BadArgument</span></code> is no longer wrapped in <code class="docutils literal notranslate"><span class="pre">commands.ConversionFailure</span></code> containing parameter and its value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#some-of-the-method-arguments-in-the-bot-class-and-commands-package-have-been-made-positional-only">Some of the method arguments in the bot class and <code class="docutils literal notranslate"><span class="pre">commands</span></code> package have been made positional-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#bot-add-cog-will-now-raise-discord-clientexception-instead-of-runtimeerror-when-cog-is-already-loaded"><code class="docutils literal notranslate"><span class="pre">bot.add_cog()</span></code> will now raise <code class="docutils literal notranslate"><span class="pre">discord.ClientException</span></code> instead of <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> when cog is already loaded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#many-functions-and-methods-do-not-support-discord-partialmessageable-objects">Many functions and methods do not support <code class="docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code> objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#cog-package-extension-and-cog-loading-unloading-is-now-asynchronous">Cog package (extension) and cog loading / unloading is now asynchronous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#red-embed-requested-s-parameters-and-their-default-values-have-changed"><code class="docutils literal notranslate"><span class="pre">Red.embed_requested()</span></code>’s parameters and their default values have changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#modlog-create-case-now-raises-instead-of-silently-returning-on-error"><code class="docutils literal notranslate"><span class="pre">modlog.create_case()</span></code> now raises instead of silently returning on error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#config-s-register-methods-now-only-accept-json-castable-types"><code class="docutils literal notranslate"><span class="pre">Config</span></code>’s register methods now only accept JSON-castable types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#config-now-always-returns-base-json-types-never-subclasses"><code class="docutils literal notranslate"><span class="pre">Config</span></code> now always returns base JSON types, never subclasses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#config-from-id-from-ids-methods-now-raise-when-int-is-not-passed"><code class="docutils literal notranslate"><span class="pre">Config.*_from_id/*_from_ids()</span></code> methods now raise when <code class="docutils literal notranslate"><span class="pre">int</span></code> is not passed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#case-message-can-now-be-discord-partialmessage"><code class="docutils literal notranslate"><span class="pre">Case.message</span></code> can now be <code class="docutils literal notranslate"><span class="pre">discord.PartialMessage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#starbot-core-bot-redbase-has-been-merged-into-starbot-core-bot-red"><code class="docutils literal notranslate"><span class="pre">starbot.core.bot.RedBase</span></code> has been merged into <code class="docutils literal notranslate"><span class="pre">starbot.core.bot.Red</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#context-maybe-send-embed-requires-content-with-length-of-1-2000-characters"><code class="docutils literal notranslate"><span class="pre">Context.maybe_send_embed()</span></code> requires content with length of 1-2000 characters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5.html#menu-listens-to-both-reaction-add-and-remove"><code class="docutils literal notranslate"><span class="pre">menu()</span></code> listens to both reaction add and remove</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../changelog.html" class="btn btn-neutral float-left" title="Changelog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="future.html" class="btn btn-neutral float-right" title="Future changes (currently deprecated functionality)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

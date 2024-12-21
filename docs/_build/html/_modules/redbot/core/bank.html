@@ -1,0 +1,1342 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.bank &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">starbot.core.bank</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.bank</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timezone</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Literal</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core.utils</span> <span class="kn">import</span> <span class="n">AsyncIter</span>
+<span class="kn">from</span> <span class="nn">starbot.core.utils.chat_formatting</span> <span class="kn">import</span> <span class="n">humanize_number</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">Config</span><span class="p">,</span> <span class="n">errors</span><span class="p">,</span> <span class="n">commands</span>
+<span class="kn">from</span> <span class="nn">.i18n</span> <span class="kn">import</span> <span class="n">Translator</span>
+
+<span class="kn">from</span> <span class="nn">.errors</span> <span class="kn">import</span> <span class="n">BankPruneError</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.bot</span> <span class="kn">import</span> <span class="n">Red</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s2">&quot;Bank API&quot;</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;is_owner_if_bank_global&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Account&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_balance&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;can_spend&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;set_balance&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;withdraw_credits&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;deposit_credits&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;transfer_credits&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wipe_bank&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bank_prune&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_leaderboard&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_leaderboard_position&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_account&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;is_global&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;set_global&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_bank_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;set_bank_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_currency_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;set_currency_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_max_balance&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;set_max_balance&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_default_balance&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;set_default_balance&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;AbortPurchase&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cost&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">_MAX_BALANCE</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">63</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="n">_SCHEMA_VERSION</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">_DEFAULT_GLOBAL</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;schema_version&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;is_global&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;bank_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Starlight Bank&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;Stardust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;default_balance&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">&quot;max_balance&quot;</span><span class="p">:</span> <span class="n">_MAX_BALANCE</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">_DEFAULT_GUILD</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;bank_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Starlight Bank&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;Stardust&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;default_balance&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">&quot;max_balance&quot;</span><span class="p">:</span> <span class="n">_MAX_BALANCE</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">_DEFAULT_MEMBER</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;balance&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+<span class="n">_DEFAULT_USER</span> <span class="o">=</span> <span class="n">_DEFAULT_MEMBER</span>
+
+<span class="n">_config</span><span class="p">:</span> <span class="n">Config</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;starbot.core.bank&quot;</span><span class="p">)</span>
+
+<span class="n">_data_deletion_lock</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+<span class="n">_cache_is_global</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">_cache</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;bank_name&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;default_balance&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;max_balance&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_init</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">_config</span>
+    <span class="n">_config</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">get_conf</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">384734293238749</span><span class="p">,</span> <span class="n">cog_name</span><span class="o">=</span><span class="s2">&quot;Bank&quot;</span><span class="p">,</span> <span class="n">force_registration</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_global</span><span class="p">(</span><span class="o">**</span><span class="n">_DEFAULT_GLOBAL</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_guild</span><span class="p">(</span><span class="o">**</span><span class="n">_DEFAULT_GUILD</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_member</span><span class="p">(</span><span class="o">**</span><span class="n">_DEFAULT_MEMBER</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_user</span><span class="p">(</span><span class="o">**</span><span class="n">_DEFAULT_USER</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">_migrate_config</span><span class="p">()</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_migrate_config</span><span class="p">():</span>
+    <span class="n">schema_version</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">schema_version</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">schema_version</span> <span class="o">==</span> <span class="n">_SCHEMA_VERSION</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="k">if</span> <span class="n">schema_version</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_schema_0_to_1</span><span class="p">()</span>
+        <span class="n">schema_version</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">schema_version</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">schema_version</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_schema_0_to_1</span><span class="p">():</span>
+    <span class="c1"># convert floats in bank balances to ints</span>
+
+    <span class="c1"># don&#39;t use anything seen below in extensions, it&#39;s optimized and controlled for here,</span>
+    <span class="c1"># but can&#39;t be safe in 3rd party use</span>
+
+    <span class="c1"># this CANNOT use ctx manager, because ctx managers compare before and after,</span>
+    <span class="c1"># and floats can be equal to ints: (1.0 == 1) is True</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">_config</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="n">_config</span><span class="o">.</span><span class="n">USER</span><span class="p">)</span>
+    <span class="n">bank_user_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">user_config</span> <span class="ow">in</span> <span class="n">bank_user_data</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="s2">&quot;balance&quot;</span> <span class="ow">in</span> <span class="n">user_config</span><span class="p">:</span>
+            <span class="n">user_config</span><span class="p">[</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_config</span><span class="p">[</span><span class="s2">&quot;balance&quot;</span><span class="p">])</span>
+    <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">bank_user_data</span><span class="p">)</span>
+
+    <span class="n">group</span> <span class="o">=</span> <span class="n">_config</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="n">_config</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">)</span>
+    <span class="n">bank_member_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">guild_data</span> <span class="ow">in</span> <span class="n">bank_member_data</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">member_config</span> <span class="ow">in</span> <span class="n">guild_data</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">if</span> <span class="s2">&quot;balance&quot;</span> <span class="ow">in</span> <span class="n">member_config</span><span class="p">:</span>
+                <span class="n">member_config</span><span class="p">[</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">member_config</span><span class="p">[</span><span class="s2">&quot;balance&quot;</span><span class="p">])</span>
+    <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">bank_member_data</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_process_data_deletion</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span> <span class="n">requester</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;discord_deleted_user&quot;</span><span class="p">,</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;user_strict&quot;</span><span class="p">],</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Bank has no reason to keep any of this data</span>
+<span class="sd">    if the user doesn&#39;t want it kept,</span>
+<span class="sd">    we won&#39;t special case any request type</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">requester</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;discord_deleted_user&quot;</span><span class="p">,</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;user_strict&quot;</span><span class="p">):</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s2">&quot;Got unknown data request type `</span><span class="si">{req_type}</span><span class="s2">` for user, deleting anyway&quot;</span><span class="p">,</span>
+            <span class="n">req_type</span><span class="o">=</span><span class="n">requester</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">with</span> <span class="n">_data_deletion_lock</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">user_from_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">all_members</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">all_members</span><span class="p">()</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">guild_id</span><span class="p">,</span> <span class="n">member_dict</span> <span class="ow">in</span> <span class="n">AsyncIter</span><span class="p">(</span><span class="n">all_members</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">user_id</span> <span class="ow">in</span> <span class="n">member_dict</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">member_from_ids</span><span class="p">(</span><span class="n">guild_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="is_owner_if_bank_global">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.is_owner_if_bank_global">[docs]</a>
+<span class="k">def</span> <span class="nf">is_owner_if_bank_global</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Restrict the command to the bot owner if the bank is global,</span>
+<span class="sd">    otherwise ensure it&#39;s used in guild (WITHOUT checking any user permissions).</span>
+
+<span class="sd">    When used on the command, this should be combined</span>
+<span class="sd">    with permissions check like `guildowner_or_permissions()`.</span>
+
+<span class="sd">    This is a `command check &lt;discord.ext.commands.check&gt;`.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        @bank.is_owner_if_bank_global()</span>
+<span class="sd">        @commands.guildowner()</span>
+<span class="sd">        @commands.group()</span>
+<span class="sd">        async def bankset(self, ctx: commands.Context):</span>
+<span class="sd">            \&quot;&quot;&quot;</span><span class="n">Base</span> <span class="n">command</span> <span class="k">for</span> <span class="n">bank</span> <span class="n">settings</span><span class="o">.</span>\<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">    If the bank is global, the ``[p]bankset`` command can only be used by</span>
+<span class="s2">    the bot owners in both guilds and DMs.</span>
+<span class="s2">    If the bank is local, the command can only be used in guilds by guild and bot owners.</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">pred</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+        <span class="n">author</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">is_owner</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">commands</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">pred</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Account">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.Account">[docs]</a>
+<span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A single account.</span>
+
+<span class="sd">    This class should ONLY be instantiated by the bank itself.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">balance</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">created_at</span> <span class="o">=</span> <span class="n">created_at</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">_encoded_current_time</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the current UTC time as a timestamp.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The current UTC timestamp.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_encode_time</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_encode_time</span><span class="p">(</span><span class="n">time</span><span class="p">:</span> <span class="n">datetime</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a datetime object to a serializable int.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : datetime.datetime</span>
+<span class="sd">        The datetime to convert.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The timestamp of the datetime object.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">timestamp</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">ret</span>
+
+
+<span class="k">def</span> <span class="nf">_decode_time</span><span class="p">(</span><span class="n">time</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert a timestamp to a datetime object.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    time : int</span>
+<span class="sd">        The timestamp to decode.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    datetime.datetime</span>
+<span class="sd">        The datetime object from the timestamp.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="get_balance">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_balance">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="n">member</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the current balance of a member.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    member : discord.Member</span>
+<span class="sd">        The member whose balance to check.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The member&#39;s balance</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">acc</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_account</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">acc</span><span class="o">.</span><span class="n">balance</span></div>
+
+
+
+<div class="viewcode-block" id="can_spend">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.can_spend">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">can_spend</span><span class="p">(</span><span class="n">member</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Determine if a member can spend the given amount.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    member : discord.Member</span>
+<span class="sd">        The member wanting to spend.</span>
+<span class="sd">    amount : int</span>
+<span class="sd">        The amount the member wants to spend.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the amount is not an `int`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        :code:`True` if the member has a sufficient balance to spend the</span>
+<span class="sd">        amount, else :code:`False`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Amount must be of type int, not </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">amount</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">_invalid_amount</span><span class="p">(</span><span class="n">amount</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">get_balance</span><span class="p">(</span><span class="n">member</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">amount</span></div>
+
+
+
+<div class="viewcode-block" id="set_balance">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.set_balance">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">set_balance</span><span class="p">(</span><span class="n">member</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">],</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set an account balance.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    member : Union[discord.Member, discord.User]</span>
+<span class="sd">        The member whose balance to set.</span>
+<span class="sd">    amount : int</span>
+<span class="sd">        The amount to set the balance to.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        New account balance.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If attempting to set the balance to a negative number.</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and a discord.User object is provided.</span>
+<span class="sd">    BalanceTooHigh</span>
+<span class="sd">        If attempting to set the balance to a value greater than</span>
+<span class="sd">        ``bank._MAX_BALANCE``.</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the amount is not an `int`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Amount must be of type int, not </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">amount</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">amount</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Not allowed to have negative balance.&quot;</span><span class="p">)</span>
+    <span class="n">guild</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="s2">&quot;guild&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">max_bal</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_max_balance</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="n">max_bal</span><span class="p">:</span>
+        <span class="n">currency</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_currency_name</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">BalanceTooHigh</span><span class="p">(</span>
+            <span class="n">user</span><span class="o">=</span><span class="n">member</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="n">max_balance</span><span class="o">=</span><span class="n">max_bal</span><span class="p">,</span> <span class="n">currency_name</span><span class="o">=</span><span class="n">currency</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">_config</span><span class="o">.</span><span class="n">user</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">_config</span><span class="o">.</span><span class="n">member</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">balance</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">created_at</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="n">_encoded_current_time</span><span class="p">()</span>
+        <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">created_at</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">amount</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">_invalid_amount</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">amount</span> <span class="o">&lt;</span> <span class="mi">0</span>
+
+
+<div class="viewcode-block" id="withdraw_credits">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.withdraw_credits">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">withdraw_credits</span><span class="p">(</span><span class="n">member</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove a certain amount of credits from an account.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    member : discord.Member</span>
+<span class="sd">        The member to withdraw credits from.</span>
+<span class="sd">    amount : int</span>
+<span class="sd">        The amount to withdraw.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        New account balance.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the withdrawal amount is invalid or if the account has insufficient</span>
+<span class="sd">        funds.</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the withdrawal amount is not an `int`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Withdrawal amount must be of type int, not </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">amount</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">_invalid_amount</span><span class="p">(</span><span class="n">amount</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Invalid withdrawal amount </span><span class="si">{}</span><span class="s2"> &lt; 0&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">humanize_number</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">override_locale</span><span class="o">=</span><span class="s2">&quot;en_US&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="n">bal</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_balance</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="n">bal</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Insufficient funds </span><span class="si">{}</span><span class="s2"> &gt; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">humanize_number</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">override_locale</span><span class="o">=</span><span class="s2">&quot;en_US&quot;</span><span class="p">),</span>
+                <span class="n">humanize_number</span><span class="p">(</span><span class="n">bal</span><span class="p">,</span> <span class="n">override_locale</span><span class="o">=</span><span class="s2">&quot;en_US&quot;</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="k">await</span> <span class="n">set_balance</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">bal</span> <span class="o">-</span> <span class="n">amount</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="deposit_credits">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.deposit_credits">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">deposit_credits</span><span class="p">(</span><span class="n">member</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a given amount of credits to an account.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    member : discord.Member</span>
+<span class="sd">        The member to deposit credits to.</span>
+<span class="sd">    amount : int</span>
+<span class="sd">        The amount to deposit.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The new balance.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the deposit amount is invalid.</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the deposit amount is not an `int`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Deposit amount must be of type int, not </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">amount</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">_invalid_amount</span><span class="p">(</span><span class="n">amount</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Invalid deposit amount </span><span class="si">{}</span><span class="s2"> &lt;= 0&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">humanize_number</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">override_locale</span><span class="o">=</span><span class="s2">&quot;en_US&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="n">bal</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_balance</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">set_balance</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="n">amount</span> <span class="o">+</span> <span class="n">bal</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="transfer_credits">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.transfer_credits">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">transfer_credits</span><span class="p">(</span>
+    <span class="n">from_</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">],</span>
+    <span class="n">to</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">],</span>
+    <span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transfer a given amount of credits from one account to another.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    from_: Union[discord.Member, discord.User]</span>
+<span class="sd">        The member to transfer from.</span>
+<span class="sd">    to : Union[discord.Member, discord.User]</span>
+<span class="sd">        The member to transfer to.</span>
+<span class="sd">    amount : int</span>
+<span class="sd">        The amount to transfer.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The new balance of the member gaining credits.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the amount is invalid or if ``from_`` has insufficient funds.</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the amount is not an `int`.</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and a discord.User object is provided.</span>
+<span class="sd">    BalanceTooHigh</span>
+<span class="sd">        If the balance after the transfer would be greater than</span>
+<span class="sd">        ``bank._MAX_BALANCE``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Transfer amount must be of type int, not </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">amount</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="n">_invalid_amount</span><span class="p">(</span><span class="n">amount</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Invalid transfer amount </span><span class="si">{}</span><span class="s2"> &lt;= 0&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">humanize_number</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">override_locale</span><span class="o">=</span><span class="s2">&quot;en_US&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="n">guild</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">to</span><span class="p">,</span> <span class="s2">&quot;guild&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">max_bal</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_max_balance</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">await</span> <span class="n">get_balance</span><span class="p">(</span><span class="n">to</span><span class="p">)</span> <span class="o">+</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="n">max_bal</span><span class="p">:</span>
+        <span class="n">currency</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_currency_name</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">BalanceTooHigh</span><span class="p">(</span>
+            <span class="n">user</span><span class="o">=</span><span class="n">to</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="n">max_balance</span><span class="o">=</span><span class="n">max_bal</span><span class="p">,</span> <span class="n">currency_name</span><span class="o">=</span><span class="n">currency</span>
+        <span class="p">)</span>
+
+    <span class="k">await</span> <span class="n">withdraw_credits</span><span class="p">(</span><span class="n">from_</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">deposit_credits</span><span class="p">(</span><span class="n">to</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="wipe_bank">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.wipe_bank">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">wipe_bank</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Delete all accounts from the bank.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild : discord.Guild</span>
+<span class="sd">        The guild to clear accounts for. If unsupplied and the bank is</span>
+<span class="sd">        per-server, all accounts in every guild will be wiped.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">clear_all_users</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">clear_all_members</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="bank_prune">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.bank_prune">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">bank_prune</span><span class="p">(</span><span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Prune bank accounts from the bank.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    bot : Red</span>
+<span class="sd">        The bot.</span>
+<span class="sd">    guild : discord.Guild</span>
+<span class="sd">        The guild to prune. This is required if the bank is set to local.</span>
+<span class="sd">    user_id : int</span>
+<span class="sd">        The id of the user whose account will be pruned.</span>
+<span class="sd">        If supplied this will prune only this user&#39;s bank account</span>
+<span class="sd">        otherwise it will prune all invalid users from the bank.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    BankPruneError</span>
+<span class="sd">        If guild is :code:`None` and the bank is Local.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">global_bank</span> <span class="o">=</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">global_bank</span><span class="p">:</span>
+        <span class="n">_guilds</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">_uguilds</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">user_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">async</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">AsyncIter</span><span class="p">(</span><span class="n">bot</span><span class="o">.</span><span class="n">guilds</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">g</span><span class="o">.</span><span class="n">unavailable</span> <span class="ow">and</span> <span class="n">g</span><span class="o">.</span><span class="n">large</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">g</span><span class="o">.</span><span class="n">chunked</span><span class="p">:</span>
+                    <span class="n">_guilds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">g</span><span class="o">.</span><span class="n">unavailable</span><span class="p">:</span>
+                    <span class="n">_uguilds</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">_config</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="n">_config</span><span class="o">.</span><span class="n">USER</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">guild</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BankPruneError</span><span class="p">(</span><span class="s2">&quot;&#39;guild&#39; can&#39;t be None when pruning a local bank&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">user_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_guilds</span> <span class="o">=</span> <span class="p">{</span><span class="n">guild</span><span class="p">}</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">guild</span><span class="o">.</span><span class="n">unavailable</span> <span class="ow">and</span> <span class="n">guild</span><span class="o">.</span><span class="n">large</span> <span class="k">else</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="n">_uguilds</span> <span class="o">=</span> <span class="p">{</span><span class="n">guild</span><span class="p">}</span> <span class="k">if</span> <span class="n">guild</span><span class="o">.</span><span class="n">unavailable</span> <span class="k">else</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">_config</span><span class="o">.</span><span class="n">_get_base_group</span><span class="p">(</span><span class="n">_config</span><span class="o">.</span><span class="n">MEMBER</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">user_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">_guild</span> <span class="ow">in</span> <span class="n">_guilds</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">_guild</span><span class="o">.</span><span class="n">chunk</span><span class="p">()</span>
+        <span class="n">accounts</span> <span class="o">=</span> <span class="k">await</span> <span class="n">group</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">accounts</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">members</span> <span class="o">=</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_all_members</span><span class="p">()</span> <span class="k">if</span> <span class="n">global_bank</span> <span class="k">else</span> <span class="n">guild</span><span class="o">.</span><span class="n">members</span>
+        <span class="n">user_list</span> <span class="o">=</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">members</span> <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">guild</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_uguilds</span><span class="p">}</span>
+
+    <span class="k">async</span> <span class="k">with</span> <span class="n">group</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="k">as</span> <span class="n">bank_data</span><span class="p">:</span>  <span class="c1"># FIXME: use-config-bulk-update</span>
+        <span class="k">if</span> <span class="n">user_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">tmp</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">acc</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">user_list</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">bank_data</span><span class="p">[</span><span class="n">acc</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">user_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">user_id</span> <span class="ow">in</span> <span class="n">bank_data</span><span class="p">:</span>
+                <span class="k">del</span> <span class="n">bank_data</span><span class="p">[</span><span class="n">user_id</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="get_leaderboard">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_leaderboard">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_leaderboard</span><span class="p">(</span><span class="n">positions</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">tuple</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the bank&#39;s leaderboard</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    positions : `int`</span>
+<span class="sd">        The number of positions to get</span>
+<span class="sd">    guild : discord.Guild</span>
+<span class="sd">        The guild to get the leaderboard of. If the bank is global and this</span>
+<span class="sd">        is provided, get only guild members on the leaderboard</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    `list` of `tuple`</span>
+<span class="sd">        The sorted leaderboard in the form of :code:`(user_id, raw_account)`</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the bank is guild-specific and no guild was specified</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="n">raw_accounts</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">all_users</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">raw_accounts</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">tmp</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">guild</span><span class="o">.</span><span class="n">get_member</span><span class="p">(</span><span class="n">acc</span><span class="p">):</span>
+                    <span class="k">del</span> <span class="n">raw_accounts</span><span class="p">[</span><span class="n">acc</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">guild</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Expected a guild, got NoneType object instead!&quot;</span><span class="p">)</span>
+        <span class="n">raw_accounts</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">all_members</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+    <span class="n">sorted_acc</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">raw_accounts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;balance&quot;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">positions</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sorted_acc</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sorted_acc</span><span class="p">[:</span><span class="n">positions</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="get_leaderboard_position">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_leaderboard_position">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_leaderboard_position</span><span class="p">(</span>
+    <span class="n">member</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the leaderboard position for the specified user</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    member : `discord.User` or `discord.Member`</span>
+<span class="sd">        The user to get the leaderboard position of</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    `int`</span>
+<span class="sd">        The position of the user on the leaderboard</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the bank is currently guild-specific and a `discord.User` object was passed in</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="n">guild</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">member</span><span class="p">,</span> <span class="s2">&quot;guild&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">leaderboard</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_leaderboard</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">guild</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">raise</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">member</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">leaderboard</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">pos</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="get_account">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_account">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_account</span><span class="p">(</span><span class="n">member</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Account</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the appropriate account for the given user or member.</span>
+
+<span class="sd">    A member is required if the bank is currently guild specific.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    member : `discord.User` or `discord.Member`</span>
+<span class="sd">        The user whose account to get.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Account</span>
+<span class="sd">        The user&#39;s account.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="n">all_accounts</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">all_users</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">all_accounts</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">all_members</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">member</span><span class="o">.</span><span class="n">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">all_accounts</span><span class="p">:</span>
+        <span class="n">acc_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">member</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="n">_DEFAULT_MEMBER</span><span class="p">[</span><span class="s2">&quot;created_at&quot;</span><span class="p">]}</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">acc_data</span><span class="p">[</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_default_balance</span><span class="p">(</span><span class="n">member</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">acc_data</span><span class="p">[</span><span class="s2">&quot;balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_default_balance</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">acc_data</span> <span class="o">=</span> <span class="n">all_accounts</span><span class="p">[</span><span class="n">member</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+
+    <span class="n">acc_data</span><span class="p">[</span><span class="s2">&quot;created_at&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_decode_time</span><span class="p">(</span><span class="n">acc_data</span><span class="p">[</span><span class="s2">&quot;created_at&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">Account</span><span class="p">(</span><span class="o">**</span><span class="n">acc_data</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="is_global">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.is_global">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">is_global</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Determine if the bank is currently global.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        :code:`True` if the bank is global, otherwise :code:`False`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">_cache_is_global</span>
+
+    <span class="k">if</span> <span class="n">_cache_is_global</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">_cache_is_global</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">is_global</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">_cache_is_global</span></div>
+
+
+
+<div class="viewcode-block" id="set_global">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.set_global">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">set_global</span><span class="p">(</span><span class="n">global_</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set global status of the bank.</span>
+
+<span class="sd">    .. important::</span>
+
+<span class="sd">        All accounts are reset when you switch!</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    global_ : bool</span>
+<span class="sd">        :code:`True` will set bank to global mode.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        New bank mode, :code:`True` is global.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If bank is becoming global and a `discord.Member` was not provided.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">await</span> <span class="n">is_global</span><span class="p">())</span> <span class="ow">is</span> <span class="n">global_</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">global_</span>
+
+    <span class="k">global</span> <span class="n">_cache_is_global</span>
+
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">clear_all_users</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">clear_all_members</span><span class="p">()</span>
+
+    <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">is_global</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">global_</span><span class="p">)</span>
+    <span class="n">_cache_is_global</span> <span class="o">=</span> <span class="n">global_</span>
+    <span class="k">return</span> <span class="n">global_</span></div>
+
+
+
+<div class="viewcode-block" id="get_bank_name">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_bank_name">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_bank_name</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the current bank name.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to get the bank name for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The bank&#39;s name.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">global</span> <span class="n">_cache</span>
+        <span class="k">if</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;bank_name&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;bank_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">bank_name</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;bank_name&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">bank_name</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Guild parameter is required and missing.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="set_bank_name">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.set_bank_name">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">set_bank_name</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the bank name.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        The new name for the bank.</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to set the bank name for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new name for the bank.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">bank_name</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">global</span> <span class="n">_cache</span>
+        <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;bank_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">bank_name</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Guild must be provided if setting the name of a guild-specific bank.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">name</span></div>
+
+
+
+<div class="viewcode-block" id="get_currency_name">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_currency_name">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_currency_name</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the currency name of the bank.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to get the currency name for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The currency name.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">global</span> <span class="n">_cache</span>
+        <span class="k">if</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;currency&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;currency&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">currency</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;currency&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">currency</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Guild must be provided.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="set_currency_name">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.set_currency_name">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">set_currency_name</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the currency name for the bank.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        The new name for the currency.</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to set the currency name for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The new name for the currency.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">currency</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">global</span> <span class="n">_cache</span>
+        <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;currency&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">currency</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="s2">&quot;Guild must be provided if setting the currency name of a guild-specific bank.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">name</span></div>
+
+
+
+<div class="viewcode-block" id="get_max_balance">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_max_balance">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_max_balance</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the max balance for the bank.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to get the max balance for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The maximum allowed balance.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;max_balance&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;max_balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">max_balance</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;max_balance&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">max_balance</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Guild must be provided.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="set_max_balance">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.set_max_balance">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">set_max_balance</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the maximum balance for the bank.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    amount : int</span>
+<span class="sd">        The new maximum balance.</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to set the max balance for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The new maximum balance.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the amount is less than 0 or higher than 2 ** 63 - 1.</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the amount is not an `int`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Amount must be of type int, not </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">amount</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="n">_MAX_BALANCE</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Amount must be greater than zero and less than </span><span class="si">{max}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="nb">max</span><span class="o">=</span><span class="n">humanize_number</span><span class="p">(</span><span class="n">_MAX_BALANCE</span><span class="p">,</span> <span class="n">override_locale</span><span class="o">=</span><span class="s2">&quot;en_US&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">max_balance</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+        <span class="k">global</span> <span class="n">_cache</span>
+        <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;max_balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">amount</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">max_balance</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="s2">&quot;Guild must be provided if setting the maximum balance of a guild-specific bank.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">amount</span></div>
+
+
+
+<div class="viewcode-block" id="get_default_balance">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.get_default_balance">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_default_balance</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the current default balance amount.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to get the default balance for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The bank&#39;s default balance.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;default_balance&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;default_balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">default_balance</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;default_balance&quot;</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">default_balance</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Guild is missing and required!&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="set_default_balance">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.set_default_balance">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">set_default_balance</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the default balance amount.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    amount : int</span>
+<span class="sd">        The new default balance.</span>
+<span class="sd">    guild : `discord.Guild`, optional</span>
+<span class="sd">        The guild to set the default balance for (required if bank is</span>
+<span class="sd">        guild-specific).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        The new default balance.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the bank is guild-specific and guild was not provided.</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the amount is less than 0 or higher than the max allowed balance.</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If the amount is not an `int`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Amount must be of type int, not </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">amount</span><span class="p">)))</span>
+    <span class="n">max_bal</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_max_balance</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="n">max_bal</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Amount must be greater than or equal zero and less than or equal </span><span class="si">{max}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="nb">max</span><span class="o">=</span><span class="n">humanize_number</span><span class="p">(</span><span class="n">max_bal</span><span class="p">,</span> <span class="n">override_locale</span><span class="o">=</span><span class="s2">&quot;en_US&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">default_balance</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+        <span class="k">global</span> <span class="n">_cache</span>
+        <span class="n">_cache</span><span class="p">[</span><span class="s2">&quot;default_balance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">amount</span>
+    <span class="k">elif</span> <span class="n">guild</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">default_balance</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">amount</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Guild is missing and required.&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">amount</span></div>
+
+
+
+<div class="viewcode-block" id="AbortPurchase">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.AbortPurchase">[docs]</a>
+<span class="k">class</span> <span class="nc">AbortPurchase</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="cost">
+<a class="viewcode-back" href="../../../framework_bank.html#starbot.core.bank.cost">[docs]</a>
+<span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Decorates a coroutine-function or command to have a cost.</span>
+
+<span class="sd">    If the command raises an exception, the cost will be refunded.</span>
+
+<span class="sd">    You can intentionally refund by raising `AbortPurchase`</span>
+<span class="sd">    (this error will be consumed and not show to users)</span>
+
+<span class="sd">    Other exceptions will propagate and will be handled by Red&#39;s (and/or</span>
+<span class="sd">    any other configured) error handling.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># TODO: Add documentation for input/output/exceptions</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">amount</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This decorator requires an integer cost greater than or equal to zero&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">deco</span><span class="p">(</span><span class="n">coro_or_command</span><span class="p">):</span>
+        <span class="n">is_command</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coro_or_command</span><span class="p">,</span> <span class="n">commands</span><span class="o">.</span><span class="n">Command</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_command</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">coro_or_command</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;@bank.cost() can only be used on commands or `async def` functions&quot;</span><span class="p">)</span>
+
+        <span class="n">coro</span> <span class="o">=</span> <span class="n">coro_or_command</span><span class="o">.</span><span class="n">callback</span> <span class="k">if</span> <span class="n">is_command</span> <span class="k">else</span> <span class="n">coro_or_command</span>
+
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">coro</span><span class="p">)</span>
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">context</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">):</span>
+                    <span class="n">context</span> <span class="o">=</span> <span class="n">arg</span>
+                    <span class="k">break</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">context</span><span class="o">.</span><span class="n">guild</span> <span class="ow">and</span> <span class="ow">not</span> <span class="k">await</span> <span class="n">is_global</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="n">commands</span><span class="o">.</span><span class="n">UserFeedbackCheckFailure</span><span class="p">(</span>
+                    <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Can&#39;t pay for this command in DM without a global bank.&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">withdraw_credits</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">credits_name</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_currency_name</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="n">commands</span><span class="o">.</span><span class="n">UserFeedbackCheckFailure</span><span class="p">(</span>
+                    <span class="n">_</span><span class="p">(</span><span class="s2">&quot;You need at least </span><span class="si">{cost}</span><span class="s2"> </span><span class="si">{currency}</span><span class="s2"> to use this command.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">cost</span><span class="o">=</span><span class="n">humanize_number</span><span class="p">(</span><span class="n">amount</span><span class="p">),</span> <span class="n">currency</span><span class="o">=</span><span class="n">credits_name</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="k">await</span> <span class="n">coro</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="k">except</span> <span class="n">AbortPurchase</span><span class="p">:</span>
+                    <span class="k">await</span> <span class="n">deposit_credits</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                    <span class="k">await</span> <span class="n">deposit_credits</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+                    <span class="k">raise</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_command</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">wrapped</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">wrapped</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">=</span> <span class="n">coro_or_command</span><span class="o">.</span><span class="n">callback</span><span class="o">.</span><span class="vm">__module__</span>
+            <span class="n">coro_or_command</span><span class="o">.</span><span class="n">callback</span> <span class="o">=</span> <span class="n">wrapped</span>
+            <span class="k">return</span> <span class="n">coro_or_command</span>
+
+    <span class="k">return</span> <span class="n">deco</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

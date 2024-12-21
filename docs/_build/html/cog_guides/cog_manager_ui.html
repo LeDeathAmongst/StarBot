@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cog Manager UI &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Core" href="core.html" />
+    <link rel="prev" title="Cleanup" href="cleanup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cog Manager UI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-install-a-local-package-without-using-downloader">How to install a local package without using downloader</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cogs">cogs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#paths">paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#addpath">addpath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removepath">removepath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reorderpath">reorderpath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installpath">installpath</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Cog Manager UI</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/cog_manager_ui.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="cog-manager-ui">
+<span id="cogmanagerui"></span><h1>Cog Manager UI<a class="headerlink" href="#cog-manager-ui" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the core cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This cog is not like the other cogs. It is loaded by default, not
+included in the cogs paths and it cannot be unloaded. It contains needed
+commands for cog management.</p>
+</div>
+<section id="usage">
+<span id="cogmanagerui-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>This cog allows you to manage your cogs and where you can install them. Unlike
+V2, which had a <code class="docutils literal notranslate"><span class="pre">cogs</span></code> folder where everything was installed, you can
+install V3 cogs everywhere, and also make them cross-compatible with other
+instances!</p>
+<p>If you want to install your cogs using a Github repo (usually what you will
+always be looking for), you need to use the downloader cog. However, if you
+have the files of a cog or want to code one, this cog is what you should be
+looking for.</p>
+<p>The most basic command is <a class="reference internal" href="#cogmanagerui-command-paths"><span class="std std-ref">paths</span></a>, which
+will list you all of the currently set paths.</p>
+<p>You can add a path by using the <a class="reference internal" href="#cogmanagerui-command-addpath"><span class="std std-ref">addpath</span></a>
+command. All cogs in that path will be available for the bot and listed in
+the <a class="reference internal" href="#cogmanagerui-command-cogs"><span class="std std-ref">cogs</span></a>. You can then load
+or unload them.</p>
+<section id="how-to-install-a-local-package-without-using-downloader">
+<span id="cogmanagerui-usage-installation"></span><h3>How to install a local package without using downloader<a class="headerlink" href="#how-to-install-a-local-package-without-using-downloader" title="Link to this heading"></a></h3>
+<p>Let’s suppose you made a cog request on the <a class="reference external" href="https://cogboard.discord.red">cog board</a>
+and now you want to add your own cog to Red. You should have a folder that
+looks like this:</p>
+<img alt="../_images/custom-cog-example.png" src="../_images/custom-cog-example.png" />
+<p>You will first need to add a cog path to your instance. For that, use the
+<a class="reference internal" href="#cogmanagerui-command-addpath"><span class="std std-ref">addpath</span></a> command with a new directory.</p>
+<p>Create a folder somewhere (should stay accessible) and copy its path. A path
+looks like this:</p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">C:\Users\username\Documents\MyCogs</span></code></p></li>
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">/Users/username/Documents/MyCogs</span></code></p></li>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">/home/username/Documents/MyCogs</span></code></p></li>
+</ul>
+<p>You can now use the command we talked about before: type <code class="docutils literal notranslate"><span class="pre">[p]addpath</span>
+<span class="pre">&lt;your_path&gt;</span></code>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>A path shouldn’t have spaces in it. If it does, add quotation
+marks around the path, or a backslash before the space.</p>
+</div>
+<p>In that <code class="docutils literal notranslate"><span class="pre">MyCogs</span></code> folder, you can drop your cog folder. You should now have
+something that looks like this:</p>
+<img alt="../_images/cog-path.png" src="../_images/cog-path.png" />
+<p>Now if you type <code class="docutils literal notranslate"><span class="pre">[p]cogs</span></code>, your new cog should be listed, and you will be
+able to load it!</p>
+</section>
+</section>
+<section id="commands">
+<span id="cogmanagerui-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The whole cog is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>. If you are not the owner
+of the instance, you can ignore this.</p>
+</div>
+<section id="cogs">
+<span id="cogmanagerui-command-cogs"></span><h3>cogs<a class="headerlink" href="#cogs" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]cogs
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Returns a list of loaded and unloaded cogs on the bot.</p>
+<p>Cogs are unloaded by default. This is where you can find your cogs if you
+installed some recently.</p>
+<p>All of the cogs located inside a cog path will be listed here. You can see a
+list of the paths with the <a class="reference internal" href="#cogmanagerui-command-paths"><span class="std std-ref">paths</span></a> command.</p>
+</section>
+<section id="paths">
+<span id="cogmanagerui-command-paths"></span><h3>paths<a class="headerlink" href="#paths" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]paths
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Lists the registered cog paths, with the install path for the downloader and
+the core path for the core cogs.</p>
+<p>You can use the <a class="reference internal" href="#cogmanagerui-command-reorderpath"><span class="std std-ref">reorderpath</span></a> command
+to reorder the listed paths.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The number before a cog path can be used for the
+<a class="reference internal" href="#cogmanagerui-command-removepath"><span class="std std-ref">removepath</span></a> command.</p>
+</div>
+</section>
+<section id="addpath">
+<span id="cogmanagerui-command-addpath"></span><h3>addpath<a class="headerlink" href="#addpath" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]addpath &lt;path&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Adds a path to the list of available cog paths. This means that all valid cogs
+under the path will be added to the list of available cogs, listed in
+<a class="reference internal" href="#cogmanagerui-command-cogs"><span class="std std-ref">cogs</span></a>.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;path&gt;</span></code>: A path that should look like this and point to a folder:</p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">C:\Users\username\Documents\MyCogs</span></code></p></li>
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">/Users/username/Documents/MyCogs</span></code></p></li>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">/home/username/Documents/MyCogs</span></code></p></li>
+</ul>
+<p>Try to avoid paths with spaces. If there are spaces, add a backslash before
+the space on Linux. Add quotation marks around the path if needed.</p>
+</li>
+</ul>
+</section>
+<section id="removepath">
+<span id="cogmanagerui-command-removepath"></span><h3>removepath<a class="headerlink" href="#removepath" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]removepath &lt;path_numbers...&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Removes one or more paths from the list of available paths. Its cogs won’t be
+accessible anymore.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;path_numbers&gt;</span></code>: The number of the path(s) to remove. You can get it with
+the <a class="reference internal" href="#cogmanagerui-command-paths"><span class="std std-ref">paths</span></a> command.</p></li>
+</ul>
+</section>
+<section id="reorderpath">
+<span id="cogmanagerui-command-reorderpath"></span><h3>reorderpath<a class="headerlink" href="#reorderpath" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]reorderpath &lt;from&gt; &lt;to&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Reorders the paths listed with the <a class="reference internal" href="#cogmanagerui-command-paths"><span class="std std-ref">paths</span></a>
+command. The goal of this command is to allow the discovery of different cogs.
+If there are multiple packages with the same names, the one that is inside the
+highest folder in the list will be kept and the other ones will be ignored.</p>
+<p>For example, let’s suppose this is the output of
+<a class="reference internal" href="#cogmanagerui-command-paths"><span class="std std-ref">paths</span></a>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/usr/local/lib/python3.7/site-packages/starbot/cogs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/laggron/custom_cogs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/mnt/not_suspicious_usb_drive/not_suspicious_cogs</span></code></p></li>
+</ol>
+</div></blockquote>
+<p>The folders 2 and 3 both have a package named <code class="docutils literal notranslate"><span class="pre">leveler</span></code> while being different
+cogs, and you want to load the one located in the 3rd folder. To do that, you
+have to put the 3rd path higher than the 2nd path, let’s swap them! Type
+<code class="docutils literal notranslate"><span class="pre">[p]reorderpath</span> <span class="pre">2</span> <span class="pre">3</span></code> and the output of
+<a class="reference internal" href="#cogmanagerui-command-paths"><span class="std std-ref">paths</span></a> will then be the following:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/usr/local/lib/python3.7/site-packages/starbot/cogs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/mnt/not_suspicious_usb_drive/not_suspicious_cogs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/laggron/custom_cogs</span></code></p></li>
+</ol>
+</div></blockquote>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;from&gt;</span></code>: The index of the path you want to move.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;to&gt;</span></code>: The location where you want to insert the path.</p></li>
+</ul>
+</section>
+<section id="installpath">
+<span id="cogmanagerui-command-installpath"></span><h3>installpath<a class="headerlink" href="#installpath" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]installpath [path]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows the install path, or sets a new one.</p>
+<p>If you want to set a new path, the same rules as for
+<a class="reference internal" href="#cogmanagerui-command-addpath"><span class="std std-ref">addpath</span></a> apply</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you edit the install path, the cogs won’t be transferred.</p>
+</div>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[path]</span></code>: The absolute path to set. If omitted, the current path will
+be returned instead.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cleanup.html" class="btn btn-neutral float-left" title="Cleanup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="core.html" class="btn btn-neutral float-right" title="Core" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Check Decorators &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Commands Package" href="framework_commands.html" />
+    <link rel="prev" title="Bot" href="framework_bot.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Check Decorators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.admin"><code class="docutils literal notranslate"><span class="pre">admin()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.admin_or_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">admin_or_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.admin_or_permissions"><code class="docutils literal notranslate"><span class="pre">admin_or_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.bot_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">bot_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.bot_can_react"><code class="docutils literal notranslate"><span class="pre">bot_can_react()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.bot_has_permissions"><code class="docutils literal notranslate"><span class="pre">bot_has_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.bot_in_a_guild"><code class="docutils literal notranslate"><span class="pre">bot_in_a_guild()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.can_manage_channel"><code class="docutils literal notranslate"><span class="pre">can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.guildowner"><code class="docutils literal notranslate"><span class="pre">guildowner()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.guildowner_or_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">guildowner_or_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.guildowner_or_permissions"><code class="docutils literal notranslate"><span class="pre">guildowner_or_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.has_guild_permissions"><code class="docutils literal notranslate"><span class="pre">has_guild_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.has_permissions"><code class="docutils literal notranslate"><span class="pre">has_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.is_owner"><code class="docutils literal notranslate"><span class="pre">is_owner()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.mod"><code class="docutils literal notranslate"><span class="pre">mod()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.mod_or_can_manage_channel"><code class="docutils literal notranslate"><span class="pre">mod_or_can_manage_channel()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.mod_or_permissions"><code class="docutils literal notranslate"><span class="pre">mod_or_permissions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starbot.core.commands.permissions_check"><code class="docutils literal notranslate"><span class="pre">permissions_check()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command Check Decorators</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developframework_checks.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="command-check-decorators">
+<span id="checks"></span><h1>Command Check Decorators<a class="headerlink" href="#command-check-decorators" title="Link to this heading"></a></h1>
+<p>The following are all decorators for commands, which add restrictions to where and when they can be
+run.</p>
+<dl class="py function" id="module-starbot.core.commands">
+<dt class="sig sig-object py" id="starbot.core.commands.admin">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">admin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#admin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.admin" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with the admin role.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.admin_or_can_manage_channel">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">admin_or_can_manage_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_thread_owner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#admin_or_can_manage_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.admin_or_can_manage_channel" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with the admin role or permissions to manage channel.</p>
+<p>This check properly resolves the permissions for <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a> as well.</p>
+<p>This check can be overridden by rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>allow_thread_owner</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the command will also be allowed to run if the author is a thread owner.
+This can, for example, be useful to check if the author can edit a channel/thread’s name
+as that, in addition to members with manage channel/threads permission,
+can also be done by the thread owner.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.admin_or_permissions">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">admin_or_permissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">perms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#admin_or_permissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.admin_or_permissions" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with the admin role or these permissions.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.bot_can_manage_channel">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">bot_can_manage_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_thread_owner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#bot_can_manage_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.bot_can_manage_channel" title="Link to this definition"></a></dt>
+<dd><p>Complain if the bot is missing permissions to manage channel.</p>
+<p>This check properly resolves the permissions for <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a> as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>allow_thread_owner</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the command will also be allowed to run if the bot is a thread owner.
+This can, for example, be useful to check if the bot can edit a channel/thread’s name
+as that, in addition to members with manage channel/threads permission,
+can also be done by the thread owner.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.bot_can_react">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">bot_can_react</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#bot_can_react"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.bot_can_react" title="Link to this definition"></a></dt>
+<dd><p>Complain if the bot is missing permissions to react.</p>
+<p>This check properly resolves the permissions for <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a> as well.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.bot_has_permissions">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">bot_has_permissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">perms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#bot_has_permissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.bot_has_permissions" title="Link to this definition"></a></dt>
+<dd><p>Complain if the bot is missing permissions.</p>
+<p>If the user tries to run the command, but the bot is missing the
+permissions, it will send a message describing which permissions
+are missing.</p>
+<p>This check cannot be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.bot_in_a_guild">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">bot_in_a_guild</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#bot_in_a_guild"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.bot_in_a_guild" title="Link to this definition"></a></dt>
+<dd><p>Deny the command if the bot is not in a guild.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.can_manage_channel">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">can_manage_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_thread_owner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#can_manage_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.can_manage_channel" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with permissions to manage channel.</p>
+<p>This check properly resolves the permissions for <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a> as well.</p>
+<p>This check can be overridden by rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>allow_thread_owner</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the command will also be allowed to run if the author is a thread owner.
+This can, for example, be useful to check if the author can edit a channel/thread’s name
+as that, in addition to members with manage channel/threads permission,
+can also be done by the thread owner.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.guildowner">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">guildowner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#guildowner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.guildowner" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to the guild owner.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.guildowner_or_can_manage_channel">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">guildowner_or_can_manage_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_thread_owner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#guildowner_or_can_manage_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.guildowner_or_can_manage_channel" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to the guild owner or user with permissions to manage channel.</p>
+<p>This check properly resolves the permissions for <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a> as well.</p>
+<p>This check can be overridden by rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>allow_thread_owner</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the command will also be allowed to run if the author is a thread owner.
+This can, for example, be useful to check if the author can edit a channel/thread’s name
+as that, in addition to members with manage channel/threads permission,
+can also be done by the thread owner.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.guildowner_or_permissions">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">guildowner_or_permissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">perms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#guildowner_or_permissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.guildowner_or_permissions" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to the guild owner or users with these permissions.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.has_guild_permissions">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">has_guild_permissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">perms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#has_guild_permissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.has_guild_permissions" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with these guild permissions.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.has_permissions">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">has_permissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">perms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#has_permissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.has_permissions" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with these permissions.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.is_owner">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">is_owner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#is_owner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.is_owner" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to bot owners.</p>
+<p>This check cannot be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.mod">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">mod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#mod"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.mod" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with the mod role.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.mod_or_can_manage_channel">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">mod_or_can_manage_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_thread_owner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#mod_or_can_manage_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.mod_or_can_manage_channel" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with the mod role or permissions to manage channel.</p>
+<p>This check properly resolves the permissions for <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a> as well.</p>
+<p>This check can be overridden by rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>allow_thread_owner</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the command will also be allowed to run if the author is a thread owner.
+This can, for example, be useful to check if the author can edit a channel/thread’s name
+as that, in addition to members with manage channel/threads permission,
+can also be done by the thread owner.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.mod_or_permissions">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">mod_or_permissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">perms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#mod_or_permissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.mod_or_permissions" title="Link to this definition"></a></dt>
+<dd><p>Restrict the command to users with the mod role or these permissions.</p>
+<p>This check can be overridden by rules.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.commands.permissions_check">
+<span class="sig-prename descclassname"><span class="pre">starbot.core.commands.</span></span><span class="sig-name descname"><span class="pre">permissions_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/commands/requires.html#permissions_check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.commands.permissions_check" title="Link to this definition"></a></dt>
+<dd><p>An overwriteable version of <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/ext/commands/api.html#discord.ext.commands.check" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.ext.commands.check</span></code></a>.</p>
+<p>This has the same behaviour as <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/ext/commands/api.html#discord.ext.commands.check" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.ext.commands.check</span></code></a>,
+however this check can be ignored if the command is allowed
+through a permissions cog.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="framework_bot.html" class="btn btn-neutral float-left" title="Bot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="framework_commands.html" class="btn btn-neutral float-right" title="Commands Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

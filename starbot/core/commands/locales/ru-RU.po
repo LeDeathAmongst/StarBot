@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red-discordbot\n"
+"POT-Creation-Date: 2024-04-20 22:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: red-discordbot\n"
+"X-Crowdin-Project-ID: 289505\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File-ID: 188\n"
+"Language: ru_RU\n"
+
+#: starbot/core/commands/converter.py:87
+msgid "`{unit}` is not a valid unit of time for this command"
+msgstr "`{unit}` не является допустимой единицей времени для этой команды"
+
+#: starbot/core/commands/converter.py:148 starbot/core/commands/converter.py:216
+msgid "The time set is way too high, consider setting something reasonable."
+msgstr "Установленное время слишком велико, подумайте о том, чтобы установить что-то разумное."
+
+#: starbot/core/commands/converter.py:152
+msgid "This amount of time is too large for this command. (Maximum: {maximum})"
+msgstr "Данное количество времени слишком длинное для этой команды. (Максимум: {maximum})"
+
+#: starbot/core/commands/converter.py:156 starbot/core/commands/converter.py:165
+msgid "0 seconds"
+msgstr ""
+
+#: starbot/core/commands/converter.py:161
+msgid "This amount of time is too small for this command. (Minimum: {minimum})"
+msgstr "Количество времени слишком маленькое для этой команды. (Минимум: {minimum})"
+
+#: starbot/core/commands/converter.py:245
+msgid "'{input}' doesn't look like a valid user ID."
+msgstr "'{input}' не похож на допустимый ID пользователя."
+
+#: starbot/core/commands/converter.py:268
+msgid "`{arg}` is not a number."
+msgstr "`{arg}` не является числом."
+
+#: starbot/core/commands/converter.py:270
+msgid "`{arg}` is not a finite number."
+msgstr "`{arg}` не является конечным числом."
+
+#: starbot/core/commands/converter.py:293
+msgid "Missing a key or value."
+msgstr "Отсутствует ключ или значение."
+
+#: starbot/core/commands/converter.py:299
+msgid "Unexpected key `{key}`."
+msgstr "Неожиданный ключ `{key}`."
+
+#: starbot/core/commands/converter.py:533
+msgid "Command \"{arg}\" not found."
+msgstr "Команда \"{arg}\" не найдена."
+
+#: starbot/core/commands/converter.py:543
+msgid "Cog \"{arg}\" not found."
+msgstr "Cog \"{arg}\" не найден."
+
+#: starbot/core/commands/help.py:125 starbot/core/commands/help.py:144
+msgid "No"
+msgstr "Нет"
+
+#: starbot/core/commands/help.py:127
+msgid "Yes"
+msgstr "Да"
+
+#: starbot/core/commands/help.py:133
+msgid "Disabled"
+msgstr "Отключено"
+
+#: starbot/core/commands/help.py:138
+msgid "\n"
+"Custom Tagline: {tag}"
+msgstr "\n"
+"Пользовательский Теглайн: {tag}"
+
+#: starbot/core/commands/help.py:145
+msgid "Yes, reactions"
+msgstr "Да, реакции"
+
+#: starbot/core/commands/help.py:146
+msgid "Yes, buttons"
+msgstr "Да, кнопки"
+
+#: starbot/core/commands/help.py:147
+msgid "Yes, buttons with select menu"
+msgstr "Да, кнопки с меню выбора"
+
+#: starbot/core/commands/help.py:148
+msgid "Yes, select menu only"
+msgstr "Да, только меню выбора"
+
+#: starbot/core/commands/help.py:152
+msgid "Maximum characters per page: {page_char_limit}\n"
+"Maximum pages per guild (only used if menus are not used): {max_pages_in_guild}\n"
+"Help is a menu: {use_menus}\n"
+"Help shows hidden commands: {show_hidden}\n"
+"Help shows commands aliases: {show_aliases}\n"
+"Help only shows commands which can be used: {verify_checks}\n"
+"Help shows unusable commands when asked directly: {verify_exists}\n"
+"Delete delay: {delete_delay}\n"
+"React with a checkmark when help is sent via DM: {use_tick}\n"
+"Reaction timeout (only used if menus are used): {react_timeout} seconds{tagline_info}"
+msgstr "Максимальное количество символов на странице: {page_char_limit}\n"
+"Максимальное количество страниц на один сервер: (только если меню не используется): {max_pages_in_guild}\n"
+"Помощь - меню: {use_menus}\n"
+"Помощь показывает скрытые команды: {show_hidden}\n"
+"Помощь показывает алиасы команд: {show_aliases}\n"
+"Справка показывает только команды, которые могут быть использованы: {verify_checks}\n"
+"Справка показывает неиспользуемые команды при запросе напрямую: {verify_exists}\n"
+"Удалить задержку: {delete_delay}\n"
+"Ставить реакцию галочки, когда помощь отправляется в ЛС: {use_tick}\n"
+"Тайм-аут реакции (только если меню используется): {react_timeout} секунд{tagline_info}"
+
+#: starbot/core/commands/help.py:303
+msgid "Type {command1} for more info on a command. You can also type {command2} for more info on a category."
+msgstr "Напишите {command1} для большей информации о команде. Вы также можете написать {command2} для большей информации о категории."
+
+#: starbot/core/commands/help.py:355
+msgid "Syntax: {command_signature}"
+msgstr "Синтаксис: {command_signature}"
+
+#: starbot/core/commands/help.py:361
+msgid "Aliases"
+msgstr "Псевдонимы"
+
+#: starbot/core/commands/help.py:361
+msgid "Alias"
+msgstr "Псевдоним"
+
+#: starbot/core/commands/help.py:382
+msgid "{aliases} and {number} more aliases."
+msgstr "{aliases} и {number} псевдонимов."
+
+#: starbot/core/commands/help.py:386
+msgid "{aliases} and one more alias."
+msgstr "{aliases} и еще один псевдоним."
+
+#: starbot/core/commands/help.py:433 starbot/core/commands/help.py:435
+#: starbot/core/commands/help.py:447
+msgid "Subcommands:"
+msgstr "Подкоманды:"
+
+#: starbot/core/commands/help.py:435 starbot/core/commands/help.py:613
+msgid " (continued)"
+msgstr " (Продолжение)"
+
+#: starbot/core/commands/help.py:509 starbot/core/commands/help.py:769
+#: starbot/core/commands/help.py:784 starbot/core/commands/help.py:805
+msgid "{ctx.me.display_name} Help Menu"
+msgstr "Меню помощи {ctx.me.display_name}"
+
+#: starbot/core/commands/help.py:556
+msgid "*Page {page_num} of {page_count}*\n"
+"{content_description}"
+msgstr "*Страница {page_num} из {page_count}*\n"
+"{content_description}"
+
+#: starbot/core/commands/help.py:611 starbot/core/commands/help.py:613
+#: starbot/core/commands/help.py:625
+msgid "Commands:"
+msgstr "Команды:"
+
+#: starbot/core/commands/help.py:664 starbot/core/commands/help.py:693
+#: starbot/core/commands/help.py:706
+msgid "No Category:"
+msgstr "Без Категории:"
+
+#: starbot/core/commands/help.py:677
+msgid "{title} (continued)"
+msgstr "{title} (продолжение)"
+
+#: starbot/core/commands/help.py:780
+msgid "Help topic for {command_name} not found."
+msgstr "Помощь для {command_name} не найдено."
+
+#: starbot/core/commands/help.py:799
+msgid "Command {command_name} has no subcommand named {not_found}."
+msgstr "У команды {command_name} нету субкоманды с названием {not_found}."
+
+#: starbot/core/commands/help.py:904
+msgid "I couldn't send the help message to you in DM. Either you blocked me or you disabled DMs in this server."
+msgstr "Я не смог отправить вам сообщение справки в личные сообщения. Либо вы заблокировали меня, либо вы отключили ЛС на этом сервере."
+
+#: starbot/core/commands/help.py:940
+#, docstring
+msgid "\n"
+"    I need somebody\n"
+"    (Help) not just anybody\n"
+"    (Help) you know I need someone\n"
+"    (Help!)\n"
+"    "
+msgstr "\n"
+"    I need somebody\n"
+"    (Help) not just anybody\n"
+"    (Help) you know I need someone\n"
+"    (Help!)\n"
+"    "
+

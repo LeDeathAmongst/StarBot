@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tree &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utility Functions" href="framework_utils.html" />
+    <link rel="prev" title="RPC" href="framework_rpc.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#redtree">RedTree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#starbot.core.tree.RedTree"><code class="docutils literal notranslate"><span class="pre">RedTree</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.tree.RedTree.add_command"><code class="docutils literal notranslate"><span class="pre">RedTree.add_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.tree.RedTree.clear_commands"><code class="docutils literal notranslate"><span class="pre">RedTree.clear_commands()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.tree.RedTree.interaction_check"><code class="docutils literal notranslate"><span class="pre">RedTree.interaction_check()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.tree.RedTree.on_error"><code class="docutils literal notranslate"><span class="pre">RedTree.on_error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.tree.RedTree.red_check_enabled"><code class="docutils literal notranslate"><span class="pre">RedTree.red_check_enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.tree.RedTree.remove_command"><code class="docutils literal notranslate"><span class="pre">RedTree.remove_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.tree.RedTree.sync"><code class="docutils literal notranslate"><span class="pre">RedTree.sync()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tree</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developframework_tree.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="tree">
+<h1>Tree<a class="headerlink" href="#tree" title="Link to this heading"></a></h1>
+<p>Red uses a subclass of discord.py’s <code class="docutils literal notranslate"><span class="pre">CommandTree</span></code> object in order to allow Cog Creators to add application commands to their cogs without worrying about the command count limit and to support caching <code class="docutils literal notranslate"><span class="pre">AppCommand</span></code> objects. When an app command is added to the bot’s tree, it will not show up in <code class="docutils literal notranslate"><span class="pre">tree.get_commands</span></code> or other similar methods unless the command is “enabled” with <code class="docutils literal notranslate"><span class="pre">[p]slash</span> <span class="pre">enable</span></code> (similar to “load”ing a cog) and <code class="docutils literal notranslate"><span class="pre">tree.red_check_enabled</span></code> has been run since the command was added to the tree.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are adding app commands to the tree during load time, the loading process will call <code class="docutils literal notranslate"><span class="pre">tree.red_check_enabled</span></code> for your cog and its app commands. If you are adding app commands to the bot <strong>outside of load time</strong>, a call to <code class="docutils literal notranslate"><span class="pre">tree.red_check_enabled</span></code> after adding the commands is required to ensure the commands will appear properly.</p>
+<p>If application commands from your cog show up in <code class="docutils literal notranslate"><span class="pre">[p]slash</span> <span class="pre">list</span></code> as enabled from an <code class="docutils literal notranslate"><span class="pre">(unknown)</span></code> cog and disabled from your cog at the same time, you did not follow the instructions above. You must manually call <code class="docutils literal notranslate"><span class="pre">tree.red_check_enabled</span></code> <strong>after</strong> adding the commands to the tree.</p>
+</div>
+<section id="redtree">
+<span id="module-starbot.core.tree"></span><h2>RedTree<a class="headerlink" href="#redtree" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">starbot.core.tree.</span></span><span class="sig-name descname"><span class="pre">RedTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#discord.app_commands.CommandTree" title="(in discord.py v2.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommandTree</span></code></a></p>
+<p>A container that holds application command information.</p>
+<p>Internally does not actually add commands to the tree unless they are
+enabled with <code class="docutils literal notranslate"><span class="pre">[p]slash</span> <span class="pre">enable</span></code>, to support Red’s modularity.
+See <code class="docutils literal notranslate"><span class="pre">discord.app_commands.CommandTree</span></code> for more information.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree.add_command">
+<span class="sig-name descname"><span class="pre">add_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guilds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree.add_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree.add_command" title="Link to this definition"></a></dt>
+<dd><p>Adds an application command to the tree.</p>
+<p>Commands will be internally stored until enabled by <code class="docutils literal notranslate"><span class="pre">[p]slash</span> <span class="pre">enable</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree.clear_commands">
+<span class="sig-name descname"><span class="pre">clear_commands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree.clear_commands"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree.clear_commands" title="Link to this definition"></a></dt>
+<dd><p>Clears all application commands from the tree.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree.interaction_check">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">interaction_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interaction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree.interaction_check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree.interaction_check" title="Link to this definition"></a></dt>
+<dd><p>Global checks for app commands.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree.on_error">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">on_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interaction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree.on_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree.on_error" title="Link to this definition"></a></dt>
+<dd><p>Fallback error handler for app commands.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree.red_check_enabled">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">red_check_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree.red_check_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree.red_check_enabled" title="Link to this definition"></a></dt>
+<dd><p>Restructures the commands in this tree, enabling commands that are enabled and disabling commands that are disabled.</p>
+<p>After running this function, the tree will be populated with enabled commands only.
+If commands are manually added to the tree outside of the standard cog loading process, this must be run
+for them to be usable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree.remove_command">
+<span class="sig-name descname"><span class="pre">remove_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('chat_input',</span> <span class="pre">1)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree.remove_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree.remove_command" title="Link to this definition"></a></dt>
+<dd><p>Removes an application command from this tree.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.tree.RedTree.sync">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/tree.html#RedTree.sync"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.tree.RedTree.sync" title="Link to this definition"></a></dt>
+<dd><p>Wrapper to store command IDs when commands are synced.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="framework_rpc.html" class="btn btn-neutral float-left" title="RPC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="framework_utils.html" class="btn btn-neutral float-right" title="Utility Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

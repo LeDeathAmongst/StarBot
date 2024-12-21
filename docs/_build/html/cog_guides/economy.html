@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Economy &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Filter" href="filter.html" />
+    <link rel="prev" title="Downloader" href="downloader.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bank">bank</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bank-balance">bank balance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bank-set">bank set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bank-transfer">bank transfer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#economyset">economyset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#economyset-paydayamount">economyset paydayamount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#economyset-paydaytime">economyset paydaytime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#economyset-rolepaydayamount">economyset rolepaydayamount</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#economyset-showsettings">economyset showsettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#economyset-slotmax">economyset slotmax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#economyset-slotmin">economyset slotmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#economyset-slottime">economyset slottime</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#leaderboard">leaderboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#payday">payday</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#payouts">payouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot">slot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Economy</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/economy.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="economy">
+<span id="id1"></span><h1>Economy<a class="headerlink" href="#economy" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the economy cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">economy</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="economy-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Get rich and have fun with imaginary currency!</p>
+</section>
+<section id="commands">
+<span id="economy-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<section id="bank">
+<span id="economy-command-bank"></span><h3>bank<a class="headerlink" href="#bank" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]bank
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Base command to manage the bank.</p>
+<section id="bank-balance">
+<span id="economy-command-bank-balance"></span><h4>bank balance<a class="headerlink" href="#bank-balance" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]bank balance [user]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Show the user’s account balance.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">balance</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">balance</span> <span class="pre">&#64;Twentysix</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;user&gt;</span></code> The user to check the balance of. If omitted, defaults to your own balance.</p></li>
+</ul>
+</section>
+<section id="bank-set">
+<span id="economy-command-bank-set"></span><h4>bank set<a class="headerlink" href="#bank-set" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]bank set &lt;to&gt; &lt;creds&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the balance of a user’s bank account.</p>
+<p>Putting + or - signs before the amount will add/remove currency on the user’s bank account instead.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">set</span> <span class="pre">&#64;Twentysix</span> <span class="pre">26</span></code> - Sets balance to 26</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">set</span> <span class="pre">&#64;Twentysix</span> <span class="pre">+2</span></code> - Increases balance by 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">set</span> <span class="pre">&#64;Twentysix</span> <span class="pre">-6</span></code> - Decreases balance by 6</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;to&gt;</span></code> The user to set the currency of.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;creds&gt;</span></code> The amount of currency to set their balance to.</p></li>
+</ul>
+</section>
+<section id="bank-transfer">
+<span id="economy-command-bank-transfer"></span><h4>bank transfer<a class="headerlink" href="#bank-transfer" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]bank transfer &lt;to&gt; &lt;amount&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Transfer currency to other users.</p>
+<p>This will come out of your balance, so make sure you have enough.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">transfer</span> <span class="pre">&#64;Twentysix</span> <span class="pre">500</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;to&gt;</span></code> The user to give currency to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;amount&gt;</span></code> The amount of currency to give.</p></li>
+</ul>
+</section>
+</section>
+<section id="economyset">
+<span id="economy-command-economyset"></span><h3>economyset<a class="headerlink" href="#economyset" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">admin role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Base command to manage Economy settings.</p>
+<section id="economyset-paydayamount">
+<span id="economy-command-economyset-paydayamount"></span><h4>economyset paydayamount<a class="headerlink" href="#economyset-paydayamount" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset paydayamount &lt;creds&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the amount earned each payday.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">paydayamount</span> <span class="pre">400</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;creds&gt;</span></code> The new amount to give when using the payday command. Default is 120.</p></li>
+</ul>
+</section>
+<section id="economyset-paydaytime">
+<span id="economy-command-economyset-paydaytime"></span><h4>economyset paydaytime<a class="headerlink" href="#economyset-paydaytime" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset paydaytime &lt;duration&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the cooldown for the payday command.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">paydaytime</span> <span class="pre">86400</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">paydaytime</span> <span class="pre">1d</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;duration&gt;</span></code> The new duration to wait in between uses of payday. Default is 5 minutes.</div>
+<div class="line">Accepts: seconds, minutes, hours, days, weeks (if no unit is specified, the duration is assumed to be given in seconds)</div>
+</div>
+</li>
+</ul>
+</section>
+<section id="economyset-rolepaydayamount">
+<span id="economy-command-economyset-rolepaydayamount"></span><h4>economyset rolepaydayamount<a class="headerlink" href="#economyset-rolepaydayamount" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset rolepaydayamount &lt;role&gt; &lt;creds&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the amount earned each payday for a role.</p>
+<p>Set to 0 will remove the custom payday for that role instead.</p>
+<p>Only available when not using a global bank.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">rolepaydayamount</span> <span class="pre">&#64;Members</span> <span class="pre">400</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;role&gt;</span></code> The role to assign a custom payday amount to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;creds&gt;</span></code> The new amount to give when using the payday command.</p></li>
+</ul>
+</section>
+<section id="economyset-showsettings">
+<span id="economy-command-economyset-showsettings"></span><h4>economyset showsettings<a class="headerlink" href="#economyset-showsettings" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset showsettings
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows the current economy settings</p>
+</section>
+<section id="economyset-slotmax">
+<span id="economy-command-economyset-slotmax"></span><h4>economyset slotmax<a class="headerlink" href="#economyset-slotmax" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset slotmax &lt;bid&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the maximum slot machine bid.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">slotmax</span> <span class="pre">50</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;bid&gt;</span></code> The new maximum bid for using the slot machine. Default is 100.</p></li>
+</ul>
+</section>
+<section id="economyset-slotmin">
+<span id="economy-command-economyset-slotmin"></span><h4>economyset slotmin<a class="headerlink" href="#economyset-slotmin" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset slotmin &lt;bid&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the minimum slot machine bid.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">slotmin</span> <span class="pre">10</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;bid&gt;</span></code> The new minimum bid for using the slot machine. Default is 5.</p></li>
+</ul>
+</section>
+<section id="economyset-slottime">
+<span id="economy-command-economyset-slottime"></span><h4>economyset slottime<a class="headerlink" href="#economyset-slottime" title="Link to this heading"></a></h4>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]economyset slottime &lt;duration&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Set the cooldown for the slot machine.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">slottime</span> <span class="pre">10</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">slottime</span> <span class="pre">10m</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;duration&gt;</span></code> The new duration to wait in between uses of the slot machine. Default is 5 seconds.</div>
+<div class="line">Accepts: seconds, minutes, hours, days, weeks (if no unit is specified, the duration is assumed to be given in seconds)</div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="leaderboard">
+<span id="economy-command-leaderboard"></span><h3>leaderboard<a class="headerlink" href="#leaderboard" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]leaderboard [top=10] [show_global=False]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Print the leaderboard.</p>
+<p>Defaults to top 10.</p>
+<dl class="simple">
+<dt>Examples:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]leaderboard</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]leaderboard</span> <span class="pre">50</span></code> - Shows the top 50 instead of top 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]leaderboard</span> <span class="pre">100</span> <span class="pre">yes</span></code> - Shows the top 100 from all servers.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;top&gt;</span></code> How many positions on the leaderboard to show. Defaults to 10 if omitted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;show_global&gt;</span></code> Whether to include results from all servers. This will default to false unless specified.</p></li>
+</ul>
+</section>
+<section id="payday">
+<span id="economy-command-payday"></span><h3>payday<a class="headerlink" href="#payday" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]payday
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Get some free currency.</p>
+<p>The amount awarded and frequency can be configured.</p>
+</section>
+<section id="payouts">
+<span id="economy-command-payouts"></span><h3>payouts<a class="headerlink" href="#payouts" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]payouts
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Show the payouts for the slot machine.</p>
+</section>
+<section id="slot">
+<span id="economy-command-slot"></span><h3>slot<a class="headerlink" href="#slot" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]slot &lt;bid&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Use the slot machine.</p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]slot</span> <span class="pre">50</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;bid&gt;</span></code> The amount to bet on the slot machine. Winning payouts are higher when you bet more.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="downloader.html" class="btn btn-neutral float-left" title="Downloader" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="filter.html" class="btn btn-neutral float-right" title="Filter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

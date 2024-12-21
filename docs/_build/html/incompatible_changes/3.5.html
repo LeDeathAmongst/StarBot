@@ -1,0 +1,1017 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backward incompatible changes in Red 3.5 &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hosting Information" href="../host-list.html" />
+    <link rel="prev" title="Future changes (currently deprecated functionality)" href="future.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Backward incompatible changes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="future.html">Future changes (currently deprecated functionality)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Backward incompatible changes in Red 3.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-users">For Users</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#removals">Removals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#behavior-changes">Behavior changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#for-developers">For Developers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Removals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Behavior changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Backward incompatible changes</a></li>
+      <li class="breadcrumb-item active">Backward incompatible changes in Red 3.5</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developincompatible_changes/3.5.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="backward-incompatible-changes-in-red-3-5">
+<span id="incompatible-changes-3-5"></span><h1>Backward incompatible changes in Red 3.5<a class="headerlink" href="#backward-incompatible-changes-in-red-3-5" title="Link to this heading"></a></h1>
+<p>This page lists all functionalities that are currently deprecated, features that have been removed in past minor releases, and any other backward incompatible changes that are planned or have been removed in past minor releases. The objective is to give users a clear rationale why a certain change has been made, and what alternatives (if any) should be used instead.</p>
+<p>These changes are sorted (in their respective sections) in a reverse chronological order.</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#for-users" id="id3">For Users</a></p>
+<ul>
+<li><p><a class="reference internal" href="#removals" id="id4">Removals</a></p>
+<ul>
+<li><p><a class="reference internal" href="#starbot-launcher" id="id5">starbot-launcher</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#behavior-changes" id="id6">Behavior changes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#x86-64-cpus-are-now-only-supported-if-they-support-x86-64-v2-instruction-set" id="id7">x86-64 CPUs are now only supported if they support x86-64-v2 instruction set</a></p></li>
+<li><p><a class="reference internal" href="#thread-related-changes" id="id8">Thread-related changes</a></p></li>
+<li><p><a class="reference internal" href="#commands-for-changing-bank-and-modlog-settings-are-now-core-commands" id="id9">Commands for changing Bank and Modlog settings are now core commands</a></p></li>
+<li><p><a class="reference internal" href="#commands-in-the-p-set-group-have-been-reorganized" id="id10">Commands in the <code class="docutils literal notranslate"><span class="pre">[p]set</span></code> group have been reorganized</a></p></li>
+<li><p><a class="reference internal" href="#red-requires-to-have-at-least-one-owner" id="id11">Red requires to have at least one owner</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#for-developers" id="id12">For Developers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id13">Removals</a></p>
+<ul>
+<li><p><a class="reference internal" href="#config-driver-and-starbot-core-drivers-package" id="id14"><code class="docutils literal notranslate"><span class="pre">Config.driver</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.core.drivers</span></code> package</a></p></li>
+<li><p><a class="reference internal" href="#starbot-core-data-manager-load-bundled-data-function" id="id15"><code class="docutils literal notranslate"><span class="pre">starbot.core.data_manager.load_bundled_data()</span></code> function</a></p></li>
+<li><p><a class="reference internal" href="#is-mod-or-superior-is-admin-or-superior-and-check-permissions-functions-in-starbot-core-checks" id="id16"><code class="docutils literal notranslate"><span class="pre">is_mod_or_superior()</span></code>, <code class="docutils literal notranslate"><span class="pre">is_admin_or_superior()</span></code>, and <code class="docutils literal notranslate"><span class="pre">check_permissions()</span></code> functions in <code class="docutils literal notranslate"><span class="pre">starbot.core.checks</span></code></a></p></li>
+<li><p><a class="reference internal" href="#bordered-function" id="id17"><code class="docutils literal notranslate"><span class="pre">bordered()</span></code> function</a></p></li>
+<li><p><a class="reference internal" href="#commands-dm-perms-constant" id="id18"><code class="docutils literal notranslate"><span class="pre">commands.DM_PERMS</span></code> constant</a></p></li>
+<li><p><a class="reference internal" href="#starbot-core-utils-caching-and-starbot-core-utils-safety-modules" id="id19"><code class="docutils literal notranslate"><span class="pre">starbot.core.utils.caching</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.core.utils.safety</span></code> modules</a></p></li>
+<li><p><a class="reference internal" href="#guild-id-parameter-to-red-allowed-by-whitelist-blacklist" id="id20"><code class="docutils literal notranslate"><span class="pre">guild_id</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">Red.allowed_by_whitelist_blacklist()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#starbot-core-commands-converter-guildconverter" id="id21"><code class="docutils literal notranslate"><span class="pre">starbot.core.commands.converter.GuildConverter</span></code></a></p></li>
+<li><p><a class="reference internal" href="#starbot-core-utils-mod-is-allowed-by-hierarchy" id="id22"><code class="docutils literal notranslate"><span class="pre">starbot.core.utils.mod.is_allowed_by_hierarchy()</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id2" id="id23">Behavior changes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#update-to-version-guarantees-and-privatization-of-many-apis" id="id24">Update to version guarantees and privatization of many APIs</a></p></li>
+<li><p><a class="reference internal" href="#starbot-core-data-manager-storage-details-returns-a-deep-copy-of-underlying-dict-now" id="id25"><code class="docutils literal notranslate"><span class="pre">starbot.core.data_manager.storage_details()</span></code> returns a deep copy of underlying dict now</a></p></li>
+<li><p><a class="reference internal" href="#changed-the-version-order-of-final-dev-releases-and-dev-pre-releases" id="id26">Changed the version order of final dev releases and dev pre-releases</a></p></li>
+<li><p><a class="reference internal" href="#red-get-owner-notification-destinations-may-now-return-instances-of-discord-voice-stagechannel" id="id27"><code class="docutils literal notranslate"><span class="pre">Red.get_owner_notification_destinations()</span></code> may now return instances of <code class="docutils literal notranslate"><span class="pre">discord.Voice/StageChannel</span></code></a></p></li>
+<li><p><a class="reference internal" href="#modlog-get-modlog-channel-may-now-return-instances-of-discord-voice-stagechannel" id="id28"><code class="docutils literal notranslate"><span class="pre">modlog.get_modlog_channel()</span></code> may now return instances of <code class="docutils literal notranslate"><span class="pre">discord.Voice/StageChannel</span></code></a></p></li>
+<li><p><a class="reference internal" href="#menus-default-controls-and-reactionpredicate-emojis-use-immutable-types-now" id="id29"><code class="docutils literal notranslate"><span class="pre">menus.DEFAULT_CONTROLS</span></code> and <code class="docutils literal notranslate"><span class="pre">ReactionPredicate.*_EMOJIS</span></code> use immutable types now</a></p></li>
+<li><p><a class="reference internal" href="#permissions-defined-in-commands-permissions-decorators-are-always-merged-now" id="id30">Permissions defined in <code class="docutils literal notranslate"><span class="pre">&#64;commands.*_permissions()</span></code> decorators are always merged now</a></p></li>
+<li><p><a class="reference internal" href="#some-of-the-primary-dependencies-have-been-removed-or-replaced" id="id31">Some of the primary dependencies have been removed or replaced</a></p></li>
+<li><p><a class="reference internal" href="#discord-py-version-has-been-updated-to-2-2-3" id="id32">discord.py version has been updated to 2.2.3</a></p></li>
+<li><p><a class="reference internal" href="#case-channel-can-now-be-a-discord-thread" id="id33"><code class="docutils literal notranslate"><span class="pre">Case.channel</span></code> can now be a <code class="docutils literal notranslate"><span class="pre">discord.Thread</span></code></a></p></li>
+<li><p><a class="reference internal" href="#commands-badargument-is-no-longer-wrapped-in-commands-conversionfailure-containing-parameter-and-its-value" id="id34"><code class="docutils literal notranslate"><span class="pre">commands.BadArgument</span></code> is no longer wrapped in <code class="docutils literal notranslate"><span class="pre">commands.ConversionFailure</span></code> containing parameter and its value</a></p></li>
+<li><p><a class="reference internal" href="#some-of-the-method-arguments-in-the-bot-class-and-commands-package-have-been-made-positional-only" id="id35">Some of the method arguments in the bot class and <code class="docutils literal notranslate"><span class="pre">commands</span></code> package have been made positional-only</a></p></li>
+<li><p><a class="reference internal" href="#bot-add-cog-will-now-raise-discord-clientexception-instead-of-runtimeerror-when-cog-is-already-loaded" id="id36"><code class="docutils literal notranslate"><span class="pre">bot.add_cog()</span></code> will now raise <code class="docutils literal notranslate"><span class="pre">discord.ClientException</span></code> instead of <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> when cog is already loaded</a></p></li>
+<li><p><a class="reference internal" href="#many-functions-and-methods-do-not-support-discord-partialmessageable-objects" id="id37">Many functions and methods do not support <code class="docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code> objects</a></p></li>
+<li><p><a class="reference internal" href="#cog-package-extension-and-cog-loading-unloading-is-now-asynchronous" id="id38">Cog package (extension) and cog loading / unloading is now asynchronous</a></p></li>
+<li><p><a class="reference internal" href="#red-embed-requested-s-parameters-and-their-default-values-have-changed" id="id39"><code class="docutils literal notranslate"><span class="pre">Red.embed_requested()</span></code>’s parameters and their default values have changed</a></p></li>
+<li><p><a class="reference internal" href="#modlog-create-case-now-raises-instead-of-silently-returning-on-error" id="id40"><code class="docutils literal notranslate"><span class="pre">modlog.create_case()</span></code> now raises instead of silently returning on error</a></p></li>
+<li><p><a class="reference internal" href="#config-s-register-methods-now-only-accept-json-castable-types" id="id41"><code class="docutils literal notranslate"><span class="pre">Config</span></code>’s register methods now only accept JSON-castable types</a></p></li>
+<li><p><a class="reference internal" href="#config-now-always-returns-base-json-types-never-subclasses" id="id42"><code class="docutils literal notranslate"><span class="pre">Config</span></code> now always returns base JSON types, never subclasses</a></p></li>
+<li><p><a class="reference internal" href="#config-from-id-from-ids-methods-now-raise-when-int-is-not-passed" id="id43"><code class="docutils literal notranslate"><span class="pre">Config.*_from_id/*_from_ids()</span></code> methods now raise when <code class="docutils literal notranslate"><span class="pre">int</span></code> is not passed</a></p></li>
+<li><p><a class="reference internal" href="#case-message-can-now-be-discord-partialmessage" id="id44"><code class="docutils literal notranslate"><span class="pre">Case.message</span></code> can now be <code class="docutils literal notranslate"><span class="pre">discord.PartialMessage</span></code></a></p></li>
+<li><p><a class="reference internal" href="#starbot-core-bot-redbase-has-been-merged-into-starbot-core-bot-red" id="id45"><code class="docutils literal notranslate"><span class="pre">starbot.core.bot.RedBase</span></code> has been merged into <code class="docutils literal notranslate"><span class="pre">starbot.core.bot.Red</span></code></a></p></li>
+<li><p><a class="reference internal" href="#context-maybe-send-embed-requires-content-with-length-of-1-2000-characters" id="id46"><code class="docutils literal notranslate"><span class="pre">Context.maybe_send_embed()</span></code> requires content with length of 1-2000 characters</a></p></li>
+<li><p><a class="reference internal" href="#menu-listens-to-both-reaction-add-and-remove" id="id47"><code class="docutils literal notranslate"><span class="pre">menu()</span></code> listens to both reaction add and remove</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="for-users">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">For Users</a><a class="headerlink" href="#for-users" title="Link to this heading"></a></h2>
+<section id="removals">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Removals</a><a class="headerlink" href="#removals" title="Link to this heading"></a></h3>
+<section id="starbot-launcher">
+<h4><a class="toc-backref" href="#id5" role="doc-backlink">starbot-launcher</a><a class="headerlink" href="#starbot-launcher" title="Link to this heading"></a></h4>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.2.0.</span></p>
+</div>
+<p>The vast majority of functionality provided by <code class="docutils literal notranslate"><span class="pre">starbot-launcher</span></code> can already be
+achieved through other means.</p>
+<p>In Red 3.2.0, <code class="docutils literal notranslate"><span class="pre">starbot-launcher</span></code> has been stripped most of its functionality
+as it can already be done through other (better supported) means:</p>
+<ul class="simple">
+<li><p>Updating Red (a proper way to update Red is now documented in <a class="reference internal" href="../update_red.html"><span class="doc">Updating Red</span></a>)</p></li>
+<li><p>Creating instances (as documented in install guides, it should be done through <code class="docutils literal notranslate"><span class="pre">starbot-setup</span></code>)</p></li>
+<li><p>Removing instances (available under <code class="docutils literal notranslate"><span class="pre">starbot-setup</span> <span class="pre">delete</span></code>)</p></li>
+<li><p>Removing all instances (no direct alternative, can be done through <code class="docutils literal notranslate"><span class="pre">starbot-setup</span> <span class="pre">delete</span></code>)</p></li>
+<li><p>Debug information (available under <code class="docutils literal notranslate"><span class="pre">starbot</span> <span class="pre">--debuginfo</span></code> and <code class="docutils literal notranslate"><span class="pre">[p]debuginfo</span></code> bot command)</p></li>
+</ul>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">starbot-launcher</span></code> only provides auto-restart functionality
+which we now document how to do properly on each of the supported systems.</p>
+<p>If you wish to continue using auto-restart functionality, we recommend following the instructions for setting up a service dedicated to your operating system:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../autostart_windows.html"><span class="doc">Setting up auto-restart using batch on Windows</span></a></p></li>
+<li><p><a class="reference internal" href="../autostart_mac.html"><span class="doc">Setting up auto-restart on Mac</span></a></p></li>
+<li><p><a class="reference internal" href="../autostart_systemd.html"><span class="doc">Setting up auto-restart using systemd on Linux</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="behavior-changes">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Behavior changes</a><a class="headerlink" href="#behavior-changes" title="Link to this heading"></a></h3>
+<section id="x86-64-cpus-are-now-only-supported-if-they-support-x86-64-v2-instruction-set">
+<h4><a class="toc-backref" href="#id7" role="doc-backlink">x86-64 CPUs are now only supported if they support x86-64-v2 instruction set</a><a class="headerlink" href="#x86-64-cpus-are-now-only-supported-if-they-support-x86-64-v2-instruction-set" title="Link to this heading"></a></h4>
+<p>On x86-64 systems, we now require that your CPU supports x86-64-v2 instruction set.
+This roughly translates to us dropping support for Intel CPUs that have been released before 2009
+and AMD CPUs that have been releasesd before 2012.</p>
+<p>This has been mostly dictated by one of our dependencies but some Linux distributions
+are already dropping support for it in their latest versions as well.</p>
+</section>
+<section id="thread-related-changes">
+<h4><a class="toc-backref" href="#id8" role="doc-backlink">Thread-related changes</a><a class="headerlink" href="#thread-related-changes" title="Link to this heading"></a></h4>
+<p>While many of these aren’t breaking, we thought it is important to make it clear
+how Red approaches its features in regard to threads:</p>
+<ul>
+<li><p>Red’s command permission system doesn’t have dedicated rules for threads and instead uses
+that thread’s parent channel rules</p></li>
+<li><p>Channel embed settings (<code class="docutils literal notranslate"><span class="pre">[p]embedset</span></code>) cannot be set for threads and usage of embeds is based
+on that thread’s parent channel embed settings</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This also means that a forum channel can have its own embed settings</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Using channel mute/unmute commands (e.g. <code class="docutils literal notranslate"><span class="pre">[p]mutechannel</span></code> from Mutes cog) in a thread
+will mute that user in the thread’s parent channel</p></li>
+<li><p>Filter cog doesn’t have a dedicated word list for threads and uses server’s and parent channel’s word lists</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This also means that a word list can now also be added for a forum channel</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>CustomCom’s <code class="docutils literal notranslate"><span class="pre">{channel}</span></code> substitution parameter will now be a thread when the command is used in a thread</p></li>
+<li><p>CustomCom’s channel cooldowns are applied per thread</p></li>
+<li><p>When used in a thread, <code class="docutils literal notranslate"><span class="pre">[p]slowmode</span></code> command from Mod cog will apply the slowmode to that thread</p></li>
+<li><p>The logic for the <code class="docutils literal notranslate"><span class="pre">[p]ignore</span></code>-related checks has changed for threads:</p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]ignore</span> <span class="pre">channel</span></code> accepts ignoring command in a specific thread</p></li>
+<li><p>When the command is sent in a thread, it first checks server-wide ignore settings and then runs if:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the user has Manage Channel permission in the parent channel, or</p></li>
+<li><p>the parent channel is not ignored <em>and</em> the user has Manage Threads permission in the parent channel, or</p></li>
+<li><p>the thread channel and its parent aren’t ignored</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>This also means that a forum channel can now also be ignored</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>The Mutes cog now denies Send Messages in Threads, Create Public Threads,
+and Create Private Threads permissions</p></li>
+</ul>
+</section>
+<section id="commands-for-changing-bank-and-modlog-settings-are-now-core-commands">
+<h4><a class="toc-backref" href="#id9" role="doc-backlink">Commands for changing Bank and Modlog settings are now core commands</a><a class="headerlink" href="#commands-for-changing-bank-and-modlog-settings-are-now-core-commands" title="Link to this heading"></a></h4>
+<p>These commands allow users to change settings of core APIs that are always available
+(similarly to <code class="docutils literal notranslate"><span class="pre">[p]autoimmune</span></code>, <code class="docutils literal notranslate"><span class="pre">[p]allowlist</span></code>, or <code class="docutils literal notranslate"><span class="pre">[p]blocklist</span></code>)
+so it makes sense to allow using them without having to load anything.</p>
+<p>The following commands have been moved to Core:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]modlogset</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bankset</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]economyset</span> <span class="pre">registeramount</span></code> (now named <code class="docutils literal notranslate"><span class="pre">[p]bankset</span> <span class="pre">registeramount</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">reset</span></code> (now named <code class="docutils literal notranslate"><span class="pre">[p]bankset</span> <span class="pre">reset</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]bank</span> <span class="pre">prune</span></code> (now named <code class="docutils literal notranslate"><span class="pre">[p]bankset</span> <span class="pre">prune</span></code>)</p></li>
+</ul>
+<p>This has also resulted in the removal of the <code class="docutils literal notranslate"><span class="pre">bank</span></code> cog
+as it no longer contained any commands.</p>
+<p>If you have any custom settings for this cog or these commands,
+you may need to readd them with the new command names.</p>
+</section>
+<section id="commands-in-the-p-set-group-have-been-reorganized">
+<h4><a class="toc-backref" href="#id10" role="doc-backlink">Commands in the <code class="docutils literal notranslate"><span class="pre">[p]set</span></code> group have been reorganized</a><a class="headerlink" href="#commands-in-the-p-set-group-have-been-reorganized" title="Link to this heading"></a></h4>
+<p>The list of commands in the <code class="docutils literal notranslate"><span class="pre">[p]set</span></code> group has gotten quite long over the years
+so we decided to reorganize it.</p>
+<p>The following changes have been made:</p>
+<ul>
+<li><p>Commands related to metadata about the bot have been moved to the <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">bot</span></code> subgroup:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">avatar</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">bot</span> <span class="pre">avatar</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">custominfo</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">bot</span> <span class="pre">custominfo</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">description</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">bot</span> <span class="pre">description</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">nickname</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">bot</span> <span class="pre">nickname</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">username</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">bot</span> <span class="pre">username</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Commands related to server’s admin and mod roles have been moved to the <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span></code> subgroup:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">addadminrole</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">addadminrole</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">removeadminrole</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">removeadminrole</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">addmodrole</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">addmodrole</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">removemodrole</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">roles</span> <span class="pre">removemodrole</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Commands related to bot user’s activity and status have been moved to the <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span></code> subgroup:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span></code> has been split into <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span> <span class="pre">online/idle/dnd/invisible</span></code> subcommands</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">competing</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span> <span class="pre">competing</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">listening</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span> <span class="pre">listening</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">playing</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span> <span class="pre">playing</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">streaming</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span> <span class="pre">streaming</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">watching</span></code> is now <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">status</span> <span class="pre">watching</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">globallocale</span></code> has been renamed to <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">locale</span> <span class="pre">global</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">locale</span></code> is now also available under <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">locale</span> <span class="pre">server</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">globalregionalformat</span></code> has been renamed to <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">regionalformat</span> <span class="pre">global</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">regionalformat</span></code> is now also available under <code class="docutils literal notranslate"><span class="pre">[p]set</span> <span class="pre">regionalformat</span> <span class="pre">server</span></code></p></li>
+</ul>
+<p>If you have any custom settings for these commands,
+you may need to readd them with the new command names.</p>
+</section>
+<section id="red-requires-to-have-at-least-one-owner">
+<h4><a class="toc-backref" href="#id11" role="doc-backlink">Red requires to have at least one owner</a><a class="headerlink" href="#red-requires-to-have-at-least-one-owner" title="Link to this heading"></a></h4>
+<p>There was never a reason to allow users to run the bot without having an owner set
+and it had been a point of confusion for new users that are trying to set up Red
+using a team application which, by default, doesn’t have any owners set.</p>
+<p>If your instance does not have any owner set, Red will print an error message on startup
+and exit before connecting to Discord. This error message contains all
+the needed information on how to set a bot owner and the security implications of it.</p>
+<p>If, for some reason, you intentionally are running Red without any owner set,
+please make a feature request with your use case on
+<a class="reference external" href="https://github.com/Cog-Creators/Red-DiscordBot/issues/new/choose">our issue tracker</a>.</p>
+</section>
+</section>
+</section>
+<section id="for-developers">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">For Developers</a><a class="headerlink" href="#for-developers" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Removals</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<section id="config-driver-and-starbot-core-drivers-package">
+<h4><a class="toc-backref" href="#id14" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Config.driver</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.core.drivers</span></code> package</a><a class="headerlink" href="#config-driver-and-starbot-core-drivers-package" title="Link to this heading"></a></h4>
+<p>These are Red’s internal implementation details and as such they have been privatized.</p>
+</section>
+<section id="starbot-core-data-manager-load-bundled-data-function">
+<h4><a class="toc-backref" href="#id15" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">starbot.core.data_manager.load_bundled_data()</span></code> function</a><a class="headerlink" href="#starbot-core-data-manager-load-bundled-data-function" title="Link to this heading"></a></h4>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.0.0rc3.</span></p>
+</div>
+<p>This function has been deprecated basically forever and we have somehow never removed it.</p>
+<p>Use the <a class="reference internal" href="../framework_datamanager.html#starbot.core.data_manager.bundled_data_path" title="starbot.core.data_manager.bundled_data_path"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.data_manager.bundled_data_path()</span></code></a> function directly instead.</p>
+</section>
+<section id="is-mod-or-superior-is-admin-or-superior-and-check-permissions-functions-in-starbot-core-checks">
+<h4><a class="toc-backref" href="#id16" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">is_mod_or_superior()</span></code>, <code class="docutils literal notranslate"><span class="pre">is_admin_or_superior()</span></code>, and <code class="docutils literal notranslate"><span class="pre">check_permissions()</span></code> functions in <code class="docutils literal notranslate"><span class="pre">starbot.core.checks</span></code></a><a class="headerlink" href="#is-mod-or-superior-is-admin-or-superior-and-check-permissions-functions-in-starbot-core-checks" title="Link to this heading"></a></h4>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.0.0rc1.</span></p>
+</div>
+<p>These functions have been deprecated basically forever and we have somehow never removed them.</p>
+<p>Use the <a class="reference internal" href="../framework_utils.html#starbot.core.utils.mod.is_mod_or_superior" title="starbot.core.utils.mod.is_mod_or_superior"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.utils.mod.is_mod_or_superior()</span></code></a>, <a class="reference internal" href="../framework_utils.html#starbot.core.utils.mod.is_admin_or_superior" title="starbot.core.utils.mod.is_admin_or_superior"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.utils.mod.is_admin_or_superior()</span></code></a>,
+and <a class="reference internal" href="../framework_utils.html#starbot.core.utils.mod.check_permissions" title="starbot.core.utils.mod.check_permissions"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.utils.mod.check_permissions()</span></code></a> functions instead.</p>
+</section>
+<section id="bordered-function">
+<h4><a class="toc-backref" href="#id17" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">bordered()</span></code> function</a><a class="headerlink" href="#bordered-function" title="Link to this heading"></a></h4>
+<p>This function was primarily used in Red’s command-line code and had very limited use
+for 3rd-party cogs. Since we no longer use this function, it has been removed.</p>
+</section>
+<section id="commands-dm-perms-constant">
+<h4><a class="toc-backref" href="#id18" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">commands.DM_PERMS</span></code> constant</a><a class="headerlink" href="#commands-dm-perms-constant" title="Link to this heading"></a></h4>
+<p>This was mostly used by the internal implementation and it isn’t anymore now. Since this constant
+was a maintenance burden and hasn’t really seen any usage in 3rd-party code, we decided to just
+remove it.</p>
+</section>
+<section id="starbot-core-utils-caching-and-starbot-core-utils-safety-modules">
+<h4><a class="toc-backref" href="#id19" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">starbot.core.utils.caching</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.core.utils.safety</span></code> modules</a><a class="headerlink" href="#starbot-core-utils-caching-and-starbot-core-utils-safety-modules" title="Link to this heading"></a></h4>
+<p>These modules contain utilities that were only really useful in Red’s own code.
+We no longer use them for anything and have not seen any 3rd-party usage
+and as such we have removed these modules.</p>
+</section>
+<section id="guild-id-parameter-to-red-allowed-by-whitelist-blacklist">
+<h4><a class="toc-backref" href="#id20" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">guild_id</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">Red.allowed_by_whitelist_blacklist()</span></code></a><a class="headerlink" href="#guild-id-parameter-to-red-allowed-by-whitelist-blacklist" title="Link to this heading"></a></h4>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.4.8.</span></p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">guild_id</span></code> parameter to <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.allowed_by_whitelist_blacklist" title="starbot.core.bot.Red.allowed_by_whitelist_blacklist"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.allowed_by_whitelist_blacklist()</span></code></a> has been removed as
+it is not possible to properly handle the local allowlist/blocklist logic with just
+the guild ID. Part of the local allowlist/blocklist handling is to check
+whether the provided user is a guild owner.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">guild</span></code> parameter instead.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">allowed_by_whitelist</span><span class="p">(</span><span class="n">who_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="n">guild_id</span><span class="o">=</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">role_ids</span><span class="o">=</span><span class="n">role_ids</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Becomes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">allowed_by_whitelist</span><span class="p">(</span><span class="n">who_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="n">guild</span><span class="o">=</span><span class="n">guild</span><span class="p">,</span> <span class="n">role_ids</span><span class="o">=</span><span class="n">role_ids</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="starbot-core-commands-converter-guildconverter">
+<h4><a class="toc-backref" href="#id21" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">starbot.core.commands.converter.GuildConverter</span></code></a><a class="headerlink" href="#starbot-core-commands-converter-guildconverter" title="Link to this heading"></a></h4>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.4.8.</span></p>
+</div>
+<p>This is now included in the upstream discord.py library.</p>
+<p>Use <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>/<code class="docutils literal notranslate"><span class="pre">starbot.core.commands.GuildConverter</span></code> instead.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+<span class="kn">from</span> <span class="nn">starbot.core.commands.converter</span> <span class="kn">import</span> <span class="n">GuildConverter</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">server</span><span class="p">:</span> <span class="n">GuildConverter</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You chose </span><span class="si">{</span><span class="n">server</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Becomes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">server</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You chose </span><span class="si">{</span><span class="n">server</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="starbot-core-utils-mod-is-allowed-by-hierarchy">
+<h4><a class="toc-backref" href="#id22" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">starbot.core.utils.mod.is_allowed_by_hierarchy()</span></code></a><a class="headerlink" href="#starbot-core-utils-mod-is-allowed-by-hierarchy" title="Link to this heading"></a></h4>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 3.4.1.</span></p>
+</div>
+<p>This was an internal function that was never meant to be part of the public API.
+It was also not really possible to use it in a supported way as it required
+internal objects to be passed as parameters.</p>
+<p>If you have a use case for this function, you should be able to achieve the same result
+with this code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">is_allowed_by_hierarchy</span><span class="p">(</span><span class="n">guild</span><span class="p">,</span> <span class="n">moderator</span><span class="p">,</span> <span class="n">member</span><span class="p">):</span>
+    <span class="n">is_special</span> <span class="o">=</span> <span class="n">moderator</span> <span class="o">==</span> <span class="n">guild</span><span class="o">.</span><span class="n">owner</span> <span class="ow">or</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">is_owner</span><span class="p">(</span><span class="n">moderator</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">moderator</span><span class="o">.</span><span class="n">top_role</span> <span class="o">&gt;</span> <span class="n">member</span><span class="o">.</span><span class="n">top_role</span> <span class="ow">or</span> <span class="n">is_special</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id2">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Behavior changes</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<section id="update-to-version-guarantees-and-privatization-of-many-apis">
+<h4><a class="toc-backref" href="#id24" role="doc-backlink">Update to version guarantees and privatization of many APIs</a><a class="headerlink" href="#update-to-version-guarantees-and-privatization-of-many-apis" title="Link to this heading"></a></h4>
+<p>With this release, we’re limiting what changes we will consider breaking.
+<a class="reference internal" href="../version_guarantees.html#developer-guarantees"><span class="std std-ref">The new Developer Guarantees</span></a> describe this in detail
+but the gist of it is that we will now only consider names included in <code class="docutils literal notranslate"><span class="pre">__all__</span></code>
+of <code class="docutils literal notranslate"><span class="pre">starbot</span></code> and <code class="docutils literal notranslate"><span class="pre">starbot.core</span></code> modules and <code class="docutils literal notranslate"><span class="pre">__all__</span></code> of public submodules
+of <code class="docutils literal notranslate"><span class="pre">starbot.core</span></code> to be part of the public API that shouldn’t be broken without notice.</p>
+<p>With this change, we introduced or updated <code class="docutils literal notranslate"><span class="pre">__all__</span></code> in all of those modules
+and added <code class="docutils literal notranslate"><span class="pre">_</span></code> prefix to private modules to specify what is actually part of the public API.
+This has resulted in the following being removed/privatized:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">create_temp_config()</span></code>, <code class="docutils literal notranslate"><span class="pre">load_basic_configuration()</span></code>, and <code class="docutils literal notranslate"><span class="pre">core_data_path()</span></code> in the <code class="docutils literal notranslate"><span class="pre">starbot.core.data_manager</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_locale()</span></code> and <code class="docutils literal notranslate"><span class="pre">reload_locales()</span></code> in the <code class="docutils literal notranslate"><span class="pre">starbot.core.i18n</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MIN_PYTHON_VERSION</span></code> in the <code class="docutils literal notranslate"><span class="pre">starbot</span></code> module</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">starbot.core.cog_manager</span></code>, <code class="docutils literal notranslate"><span class="pre">starbot.core.settings_caches</span></code>, <code class="docutils literal notranslate"><span class="pre">starbot.core.global_checks</span></code>, <code class="docutils literal notranslate"><span class="pre">starbot.core.events</span></code>, <code class="docutils literal notranslate"><span class="pre">starbot.core.cli</span></code>, and <code class="docutils literal notranslate"><span class="pre">starbot.core.rpc</span></code> modules</p></li>
+</ul>
+</section>
+<section id="starbot-core-data-manager-storage-details-returns-a-deep-copy-of-underlying-dict-now">
+<h4><a class="toc-backref" href="#id25" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">starbot.core.data_manager.storage_details()</span></code> returns a deep copy of underlying dict now</a><a class="headerlink" href="#starbot-core-data-manager-storage-details-returns-a-deep-copy-of-underlying-dict-now" title="Link to this heading"></a></h4>
+<p>Changing storage details during Red’s runtime is not supported and as such,
+this function now returns a deep copy of the underlying dictionary to prevent changes.</p>
+</section>
+<section id="changed-the-version-order-of-final-dev-releases-and-dev-pre-releases">
+<h4><a class="toc-backref" href="#id26" role="doc-backlink">Changed the version order of final dev releases and dev pre-releases</a><a class="headerlink" href="#changed-the-version-order-of-final-dev-releases-and-dev-pre-releases" title="Link to this heading"></a></h4>
+<p>To be consistent with <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0440/"><strong>PEP 440</strong></a>, we’ve changed the order between final dev releases (e.g.
+<code class="docutils literal notranslate"><span class="pre">3.5.0.dev1</span></code>) and dev pre-releases (e.g. <code class="docutils literal notranslate"><span class="pre">3.5.0a1.dev1</span></code>, <code class="docutils literal notranslate"><span class="pre">3.5.0b1.dev1</span></code>, <code class="docutils literal notranslate"><span class="pre">3.5.0rc1.dev1</span></code>).</p>
+<p>Here’s an example of a list of versions sorted using the new order (oldest version first):</p>
+<ul class="simple">
+<li><p>3.5.0.dev1</p></li>
+<li><p>3.5.0.dev2</p></li>
+<li><p>3.5.0a1.dev1</p></li>
+<li><p>3.5.0a1</p></li>
+<li><p>3.5.0a2.dev1</p></li>
+<li><p>3.5.0b1.dev1</p></li>
+<li><p>3.5.0</p></li>
+<li><p>3.5.0.post1.dev1</p></li>
+<li><p>3.5.0.post1</p></li>
+<li><p>3.5.1</p></li>
+</ul>
+</section>
+<section id="red-get-owner-notification-destinations-may-now-return-instances-of-discord-voice-stagechannel">
+<h4><a class="toc-backref" href="#id27" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Red.get_owner_notification_destinations()</span></code> may now return instances of <code class="docutils literal notranslate"><span class="pre">discord.Voice/StageChannel</span></code></a><a class="headerlink" href="#red-get-owner-notification-destinations-may-now-return-instances-of-discord-voice-stagechannel" title="Link to this heading"></a></h4>
+<p>With the introduction of Text in Voice feature, we added the ability to add a voice/stage channel
+as an owner notifications destination. This means that <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.get_modlog_channel" title="starbot.core.modlog.get_modlog_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.modlog.get_modlog_channel()</span></code></a>
+may now return instances of <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.VoiceChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.VoiceChannel</span></code></a> and <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.StageChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.StageChannel</span></code></a>.</p>
+</section>
+<section id="modlog-get-modlog-channel-may-now-return-instances-of-discord-voice-stagechannel">
+<h4><a class="toc-backref" href="#id28" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">modlog.get_modlog_channel()</span></code> may now return instances of <code class="docutils literal notranslate"><span class="pre">discord.Voice/StageChannel</span></code></a><a class="headerlink" href="#modlog-get-modlog-channel-may-now-return-instances-of-discord-voice-stagechannel" title="Link to this heading"></a></h4>
+<p>With the introduction of Text in Voice feature, we added the ability to set a modlog
+channel to a voice/stage channel. This means that <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.get_modlog_channel" title="starbot.core.modlog.get_modlog_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.modlog.get_modlog_channel()</span></code></a>
+may now return instances of <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.VoiceChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.VoiceChannel</span></code></a> and <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.StageChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.StageChannel</span></code></a>.</p>
+</section>
+<section id="menus-default-controls-and-reactionpredicate-emojis-use-immutable-types-now">
+<h4><a class="toc-backref" href="#id29" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">menus.DEFAULT_CONTROLS</span></code> and <code class="docutils literal notranslate"><span class="pre">ReactionPredicate.*_EMOJIS</span></code> use immutable types now</a><a class="headerlink" href="#menus-default-controls-and-reactionpredicate-emojis-use-immutable-types-now" title="Link to this heading"></a></h4>
+<p>The type of <a class="reference internal" href="../framework_utils.html#starbot.core.utils.menus.DEFAULT_CONTROLS" title="starbot.core.utils.menus.DEFAULT_CONTROLS"><code class="xref any py py-data docutils literal notranslate"><span class="pre">starbot.core.utils.menus.DEFAULT_CONTROLS</span></code></a> has been changed from <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">dict</span></code></a>
+to a <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">collections.abc.Mapping</span></code></a> while the type of <a class="reference internal" href="../framework_utils.html#starbot.core.utils.predicates.ReactionPredicate.ALPHABET_EMOJIS" title="starbot.core.utils.predicates.ReactionPredicate.ALPHABET_EMOJIS"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">ReactionPredicate.ALPHABET_EMOJIS</span></code></a>
+and <a class="reference internal" href="../framework_utils.html#starbot.core.utils.predicates.ReactionPredicate.NUMBER_EMOJIS" title="starbot.core.utils.predicates.ReactionPredicate.NUMBER_EMOJIS"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">ReactionPredicate.NUMBER_EMOJIS</span></code></a> has been changed from <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">list</span></code></a> to a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">tuple</span></code></a>.</p>
+<p>This should prevent the developers from accidentally changing the provided constants
+instead of making a copy and changing that copy.</p>
+<p>This should be a transparent change in most cases but here is an example usage that is affected:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">from</span> <span class="nn">starbot.core.utils</span> <span class="kn">import</span> <span class="n">menus</span>
+
+<span class="c1"># somewhere in your code...</span>
+
+<span class="n">controls</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">menus</span><span class="o">.</span><span class="n">DEFAULT_CONTROLS</span><span class="p">)</span>
+<span class="n">controls</span><span class="p">[</span><span class="s2">&quot;</span><span class="se">\N{SMILING FACE WITH OPEN MOUTH}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">custom_function</span>
+<span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;page 1&quot;</span><span class="p">,</span> <span class="s2">&quot;page 2&quot;</span><span class="p">],</span> <span class="n">controls</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To make this code work on Red 3.5 and higher, you can replace it with any of the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core.utils</span> <span class="kn">import</span> <span class="n">menus</span>
+
+<span class="c1"># example 1</span>
+
+<span class="n">controls</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">**</span><span class="n">menus</span><span class="o">.</span><span class="n">DEFAULT_CONTROLS</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\N{SMILING FACE WITH OPEN MOUTH}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">custom_function</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;page 1&quot;</span><span class="p">,</span> <span class="s2">&quot;page 2&quot;</span><span class="p">],</span> <span class="n">controls</span><span class="p">)</span>
+
+<span class="c1"># example 2</span>
+
+<span class="n">controls</span> <span class="o">=</span> <span class="n">menus</span><span class="o">.</span><span class="n">DEFAULT_CONTROLS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">controls</span><span class="p">[</span><span class="s2">&quot;</span><span class="se">\N{SMILING FACE WITH OPEN MOUTH}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">custom_function</span>
+<span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;page 1&quot;</span><span class="p">,</span> <span class="s2">&quot;page 2&quot;</span><span class="p">],</span> <span class="n">controls</span><span class="p">)</span>
+
+<span class="c1"># example 3</span>
+
+<span class="n">controls</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">menus</span><span class="o">.</span><span class="n">DEFAULT_CONTROLS</span><span class="p">)</span>
+<span class="n">controls</span><span class="p">[</span><span class="s2">&quot;</span><span class="se">\N{SMILING FACE WITH OPEN MOUTH}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">custom_function</span>
+<span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;page 1&quot;</span><span class="p">,</span> <span class="s2">&quot;page 2&quot;</span><span class="p">],</span> <span class="n">controls</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Similarly, if you copied lists before:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">emojis</span> <span class="o">=</span> <span class="n">ReactionPredicate</span><span class="o">.</span><span class="n">NUMBER_EMOJIS</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">emojis</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\N{DOG}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">emojis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\N{CAT}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You could use sequence unpacking instead:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">emojis</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="se">\N{DOG}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">ReactionPredicate</span><span class="o">.</span><span class="n">NUMBER_EMOJIS</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\N{CAT}</span><span class="s2">&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="permissions-defined-in-commands-permissions-decorators-are-always-merged-now">
+<h4><a class="toc-backref" href="#id30" role="doc-backlink">Permissions defined in <code class="docutils literal notranslate"><span class="pre">&#64;commands.*_permissions()</span></code> decorators are always merged now</a><a class="headerlink" href="#permissions-defined-in-commands-permissions-decorators-are-always-merged-now" title="Link to this heading"></a></h4>
+<p>This is mostly a bugfix but it means that the permissions in stacked decorators are now
+always merged instead of being <em>sometimes</em> overridden and <em>sometimes</em> merged.</p>
+<p>For example, this code has only checked for <code class="docutils literal notranslate"><span class="pre">embed_links</span></code> permission on 3.4
+but now checks for both <code class="docutils literal notranslate"><span class="pre">add_reactions</span></code> and <code class="docutils literal notranslate"><span class="pre">embed_links</span></code> permissions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">bot_has_permissions</span><span class="p">(</span><span class="n">embed_links</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">bot_has_permissions</span><span class="p">(</span><span class="n">add_reactions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Hello!&quot;</span><span class="p">))</span>
+        <span class="k">await</span> <span class="n">msg</span><span class="o">.</span><span class="n">add_reaction</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\N{SMILING FACE WITH OPEN MOUTH}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that stacking <a class="reference internal" href="../framework_checks.html#starbot.core.commands.has_permissions" title="starbot.core.commands.has_permissions"><code class="xref any py py-func docutils literal notranslate"><span class="pre">&#64;commands.has_permissions()</span></code></a>
+with <code class="docutils literal notranslate"><span class="pre">&#64;commands.*_or_permissions()</span></code> decorators still behaves differently depending on
+the decorator order.</p>
+</section>
+<section id="some-of-the-primary-dependencies-have-been-removed-or-replaced">
+<h4><a class="toc-backref" href="#id31" role="doc-backlink">Some of the primary dependencies have been removed or replaced</a><a class="headerlink" href="#some-of-the-primary-dependencies-have-been-removed-or-replaced" title="Link to this heading"></a></h4>
+<p>While this may not technically fall under <a class="reference internal" href="../version_guarantees.html"><span class="doc">our version guarantees</span></a>,
+we recognize that this may affect some people.
+As such, below we list the noteworthy dependency replacements and removals (package names
+are PyPI distribution names):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">appdirs</span></code> package has been replaced with <code class="docutils literal notranslate"><span class="pre">platformdirs</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chardet</span></code> package has been replaced with <code class="docutils literal notranslate"><span class="pre">charset-normalizer</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fuzzywuzzy</span></code> package has been replaced with <code class="docutils literal notranslate"><span class="pre">rapidfuzz</span></code></p></li>
+<li><p>Red no longers depends on <code class="docutils literal notranslate"><span class="pre">aiosqlite</span></code>, <code class="docutils literal notranslate"><span class="pre">PyNaCl</span></code>, and <code class="docutils literal notranslate"><span class="pre">python-Levenshtein-wheels</span></code></p></li>
+</ul>
+</section>
+<section id="discord-py-version-has-been-updated-to-2-2-3">
+<h4><a class="toc-backref" href="#id32" role="doc-backlink">discord.py version has been updated to 2.2.3</a><a class="headerlink" href="#discord-py-version-has-been-updated-to-2-2-3" title="Link to this heading"></a></h4>
+<p>To allow Red to continue operating <em>and</em> use the newer features (threads, text in voice/stage channels,
+buttons, application commands, and AutoMod, to name a few), we’ve updated discord.py from version
+1.7.3 to 2.2.3. Since this is a major upgrade, it will require you to update your code accordingly.
+discord.py’s documentation has <a class="extlink-dpy_docs reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/migrating.html">a migration guide</a> that you can follow in order to
+update your cogs.</p>
+<p>Red itself has already been updated to support all of these changes that happened over the years.
+In order to do so, we’ve also had to make a few breaking changes of our own. Those changes are
+normal sections in the current document so be sure to follow it in full and you should be able to
+perform all the necessary changes.</p>
+<p>To help support some of the newer features, we’ve also added a few things:</p>
+<ul>
+<li><p>Utilities that allow to <strong>properly</strong> check whether a member can do something in threads (or channels)
+for cases where it isn’t as simple as checking permissions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Command check decorators: <a class="reference internal" href="../framework_checks.html#starbot.core.commands.bot_can_manage_channel" title="starbot.core.commands.bot_can_manage_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">bot_can_manage_channel()</span></code></a>, <a class="reference internal" href="../framework_checks.html#starbot.core.commands.bot_can_react" title="starbot.core.commands.bot_can_react"><code class="xref any py py-func docutils literal notranslate"><span class="pre">bot_can_react()</span></code></a></p></li>
+<li><p>Permission check decorators: <a class="reference internal" href="../framework_checks.html#starbot.core.commands.can_manage_channel" title="starbot.core.commands.can_manage_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">can_manage_channel()</span></code></a>, <a class="reference internal" href="../framework_checks.html#starbot.core.commands.guildowner_or_can_manage_channel" title="starbot.core.commands.guildowner_or_can_manage_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">guildowner_or_can_manage_channel()</span></code></a>,
+<a class="reference internal" href="../framework_checks.html#starbot.core.commands.admin_or_can_manage_channel" title="starbot.core.commands.admin_or_can_manage_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">admin_or_can_manage_channel()</span></code></a>, <a class="reference internal" href="../framework_checks.html#starbot.core.commands.mod_or_can_manage_channel" title="starbot.core.commands.mod_or_can_manage_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">mod_or_can_manage_channel()</span></code></a></p></li>
+<li><p>Functions: <a class="reference internal" href="../framework_utils.html#starbot.core.utils.can_user_send_messages_in" title="starbot.core.utils.can_user_send_messages_in"><code class="xref any py py-func docutils literal notranslate"><span class="pre">can_user_send_messages_in()</span></code></a>, <a class="reference internal" href="../framework_utils.html#starbot.core.utils.can_user_manage_channel" title="starbot.core.utils.can_user_manage_channel"><code class="xref any py py-func docutils literal notranslate"><span class="pre">can_user_manage_channel()</span></code></a>, <a class="reference internal" href="../framework_utils.html#starbot.core.utils.can_user_react_in" title="starbot.core.utils.can_user_react_in"><code class="xref any py py-func docutils literal notranslate"><span class="pre">can_user_react_in()</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>New module (<a class="reference internal" href="../framework_utils.html#module-starbot.core.utils.views" title="starbot.core.utils.views"><code class="xref any py py-mod docutils literal notranslate"><span class="pre">starbot.core.utils.views</span></code></a>) with useful <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/interactions/api.html#discord.ui.View" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.ui.View</span></code></a> subclasses</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../framework_utils.html#starbot.core.utils.views.SetApiModal" title="starbot.core.utils.views.SetApiModal"><code class="xref any py py-class docutils literal notranslate"><span class="pre">SetApiModal</span></code></a>, <a class="reference internal" href="../framework_utils.html#starbot.core.utils.views.SetApiView" title="starbot.core.utils.views.SetApiView"><code class="xref any py py-class docutils literal notranslate"><span class="pre">SetApiView</span></code></a>, <a class="reference internal" href="../framework_utils.html#starbot.core.utils.views.SimpleMenu" title="starbot.core.utils.views.SimpleMenu"><code class="xref any py py-class docutils literal notranslate"><span class="pre">SimpleMenu</span></code></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="case-channel-can-now-be-a-discord-thread">
+<h4><a class="toc-backref" href="#id33" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Case.channel</span></code> can now be a <code class="docutils literal notranslate"><span class="pre">discord.Thread</span></code></a><a class="headerlink" href="#case-channel-can-now-be-a-discord-thread" title="Link to this heading"></a></h4>
+<p>In order to properly support threads, <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.Case.channel" title="starbot.core.modlog.Case.channel"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">Case.channel</span></code></a> can now also be an instance of <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Thread</span></code></a>.
+New <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.Case.parent_channel" title="starbot.core.modlog.Case.parent_channel"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">Case.parent_channel</span></code></a> attribute will be set to the thread’s parent text or forum channel,
+if the case’s channel is a thread.</p>
+</section>
+<section id="commands-badargument-is-no-longer-wrapped-in-commands-conversionfailure-containing-parameter-and-its-value">
+<h4><a class="toc-backref" href="#id34" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">commands.BadArgument</span></code> is no longer wrapped in <code class="docutils literal notranslate"><span class="pre">commands.ConversionFailure</span></code> containing parameter and its value</a><a class="headerlink" href="#commands-badargument-is-no-longer-wrapped-in-commands-conversionfailure-containing-parameter-and-its-value" title="Link to this heading"></a></h4>
+<p>We used to wrap <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/ext/commands/api.html#discord.ext.commands.BadArgument" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">commands.BadArgument</span></code></a> exceptions
+in a <code class="docutils literal notranslate"><span class="pre">commands.ConversionFailure</span></code> containing, in addition to the actual exception,
+the <a class="reference external" href="https://docs.python.org/3/library/inspect.html#inspect.Parameter" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">inspect.Parameter</span></code></a> instance and the passed value for the argument
+that failed the conversion.</p>
+<p>With discord.py 2.x, these are now exposed through the
+<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/ext/commands/api.html#discord.ext.commands.Context.current_parameter" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">commands.Context.current_parameter</span></code></a>
+and <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/ext/commands/api.html#discord.ext.commands.Context.current_argument" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">commands.Context.current_argument</span></code></a>
+making this wrapping no longer necessary.</p>
+</section>
+<section id="some-of-the-method-arguments-in-the-bot-class-and-commands-package-have-been-made-positional-only">
+<h4><a class="toc-backref" href="#id35" role="doc-backlink">Some of the method arguments in the bot class and <code class="docutils literal notranslate"><span class="pre">commands</span></code> package have been made positional-only</a><a class="headerlink" href="#some-of-the-method-arguments-in-the-bot-class-and-commands-package-have-been-made-positional-only" title="Link to this heading"></a></h4>
+<p>The following arguments have been positional-only to be consistent with the upstream discord.py package:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.get_command" title="starbot.core.bot.Red.get_command"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.get_command()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.get_cog" title="starbot.core.bot.Red.get_cog"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.get_cog()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coro</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.before_invoke" title="starbot.core.bot.Red.before_invoke"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.before_invoke()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.is_owner" title="starbot.core.bot.Red.is_owner"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.is_owner()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> in <code class="docutils literal notranslate"><span class="pre">Red.get_context()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.process_commands" title="starbot.core.bot.Red.process_commands"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.process_commands()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cogname</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.remove_cog" title="starbot.core.bot.Red.remove_cog"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.remove_cog()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cog</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.add_cog" title="starbot.core.bot.Red.add_cog"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.add_cog()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">command</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.add_command" title="starbot.core.bot.Red.add_command"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.add_command()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">command</span></code> in <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.remove_command" title="starbot.core.bot.Red.remove_command"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.remove_command()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctx</span></code> in <a class="reference internal" href="../framework_commands.html#starbot.core.commands.Command.can_run" title="starbot.core.commands.Command.can_run"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">starbot.core.commands.Command.can_run()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctx</span></code> in <code class="docutils literal notranslate"><span class="pre">starbot.core.commands.CogMixin.can_run()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ctx</span></code> in <code class="docutils literal notranslate"><span class="pre">starbot.core.commands.CogMixin.can_see()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error</span></code> in <a class="reference internal" href="../framework_commands.html#starbot.core.commands.Command.error" title="starbot.core.commands.Command.error"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">starbot.core.commands.Command.error()</span></code></a></p></li>
+</ul>
+</section>
+<section id="bot-add-cog-will-now-raise-discord-clientexception-instead-of-runtimeerror-when-cog-is-already-loaded">
+<h4><a class="toc-backref" href="#id36" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">bot.add_cog()</span></code> will now raise <code class="docutils literal notranslate"><span class="pre">discord.ClientException</span></code> instead of <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> when cog is already loaded</a><a class="headerlink" href="#bot-add-cog-will-now-raise-discord-clientexception-instead-of-runtimeerror-when-cog-is-already-loaded" title="Link to this heading"></a></h4>
+<p>To make Red’s bot class more consistent with the discord.py implementation that it overrides,
+the <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.ClientException" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.ClientException</span></code></a> is now being raised instead of <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> when a cog
+with the same name is already loaded.</p>
+</section>
+<section id="many-functions-and-methods-do-not-support-discord-partialmessageable-objects">
+<h4><a class="toc-backref" href="#id37" role="doc-backlink">Many functions and methods do not support <code class="docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code> objects</a><a class="headerlink" href="#many-functions-and-methods-do-not-support-discord-partialmessageable-objects" title="Link to this heading"></a></h4>
+<p>This isn’t technically breaking since they never did <em>but</em> since those objects may appear now,
+we think it is important to mention that due to the limited information that <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessageable" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code></a>
+objects provide, they cannot be passed to the following methods directly:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.ignored_channel_or_guild" title="starbot.core.bot.Red.ignored_channel_or_guild"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.ignored_channel_or_guild()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.embed_requested" title="starbot.core.bot.Red.embed_requested"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.embed_requested()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.create_case" title="starbot.core.modlog.create_case"><code class="xref any py py-func docutils literal notranslate"><span class="pre">starbot.core.modlog.create_case()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.Case.edit" title="starbot.core.modlog.Case.edit"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">starbot.core.modlog.Case.edit()</span></code></a></p></li>
+</ul>
+<p>Additionally, the <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.message_eligible_as_command" title="starbot.core.bot.Red.message_eligible_as_command"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.message_eligible_as_command()</span></code></a> will return <code class="docutils literal notranslate"><span class="pre">False</span></code>
+if a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessageable" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code></a> object for a channel that isn’t a DM is passed.</p>
+<p>If you <em>have to</em> use these, you should try fetching the full messageable object first
+or looking at the documentation to see whether there are any alternative solutions.</p>
+</section>
+<section id="cog-package-extension-and-cog-loading-unloading-is-now-asynchronous">
+<h4><a class="toc-backref" href="#id38" role="doc-backlink">Cog package (extension) and cog loading / unloading is now asynchronous</a><a class="headerlink" href="#cog-package-extension-and-cog-loading-unloading-is-now-asynchronous" title="Link to this heading"></a></h4>
+<p>This follows the changes that discord.py 2.x has introduced - we now <strong>require</strong> for
+the <code class="docutils literal notranslate"><span class="pre">setup()</span></code> and <code class="docutils literal notranslate"><span class="pre">teardown()</span></code> functions to be asynchronous and have made
+the <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.add_cog" title="starbot.core.bot.Red.add_cog"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.add_cog()</span></code></a> and <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.remove_cog" title="starbot.core.bot.Red.remove_cog"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.remove_cog()</span></code></a> methods asynchronous as well.</p>
+</section>
+<section id="red-embed-requested-s-parameters-and-their-default-values-have-changed">
+<h4><a class="toc-backref" href="#id39" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Red.embed_requested()</span></code>’s parameters and their default values have changed</a><a class="headerlink" href="#red-embed-requested-s-parameters-and-their-default-values-have-changed" title="Link to this heading"></a></h4>
+<p>We have made a bunch of changes to the signature of <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red.embed_requested" title="starbot.core.bot.Red.embed_requested"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Red.embed_requested()</span></code></a>. This method now
+accepts only a single <strong>positional</strong> argument called <code class="docutils literal notranslate"><span class="pre">channel</span></code>, making the <code class="docutils literal notranslate"><span class="pre">command</span></code>
+keyword-only. The <code class="docutils literal notranslate"><span class="pre">user</span></code> argument has been removed as the <code class="docutils literal notranslate"><span class="pre">channel</span></code> argument now supports
+the <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.abc.User</span></code></a> objects directly, dropping the support for <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.DMChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.DMChannel</span></code></a>
+in the process.</p>
+<p>These changes together allowed us to support checking whether an embed should be sent in a DM
+using only the <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.abc.User</span></code></a> object - without the <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.DMChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.DMChannel</span></code></a> which is often
+not present in the cache. Furthermore, it means that a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.abc.User</span></code></a> object no longer needs
+to be passed unnecessarily when the method is used with a guild channel.</p>
+<p>We’ve also changed the default value of <code class="docutils literal notranslate"><span class="pre">check_permissions</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>
+as it makes the typical usage of this method more ergonomic.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">guild_only</span><span class="p">()</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sayhello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">recipient</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">):</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;Hello world!&quot;</span>
+        <span class="n">embed</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Message for you!&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># try sending the message in DMs</span>
+            <span class="k">if</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span>
+                <span class="k">await</span> <span class="n">recipient</span><span class="o">.</span><span class="n">create_dm</span><span class="p">(),</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">command</span><span class="p">,</span> <span class="n">check_permissions</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">):</span>
+                <span class="k">await</span> <span class="n">recipient</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">embed</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">recipient</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">:</span>
+            <span class="c1"># DMs are closed, send a message in a moderator or current channel</span>
+            <span class="n">channel</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">public_updates_channel</span> <span class="ow">or</span> <span class="n">ctx</span>
+            <span class="k">if</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span>
+                <span class="n">channel</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">command</span><span class="p">,</span> <span class="n">check_permissions</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">):</span>
+                <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">embed</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">guild_only</span><span class="p">()</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">sayhello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">recipient</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">):</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;Hello world!&quot;</span>
+        <span class="n">embed</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Message for you!&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># try sending the message in DMs</span>
+            <span class="k">if</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">recipient</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">command</span><span class="p">):</span>
+                <span class="k">await</span> <span class="n">recipient</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">embed</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">recipient</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">:</span>
+            <span class="c1"># DMs are closed, send a message in a moderator or current channel</span>
+            <span class="n">channel</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">public_updates_channel</span> <span class="ow">or</span> <span class="n">ctx</span>
+            <span class="k">if</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">command</span><span class="p">):</span>
+                <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">embed</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="modlog-create-case-now-raises-instead-of-silently-returning-on-error">
+<h4><a class="toc-backref" href="#id40" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">modlog.create_case()</span></code> now raises instead of silently returning on error</a><a class="headerlink" href="#modlog-create-case-now-raises-instead-of-silently-returning-on-error" title="Link to this heading"></a></h4>
+<p>To help avoid passing invalid arguments, <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.create_case" title="starbot.core.modlog.create_case"><code class="xref any py py-func docutils literal notranslate"><span class="pre">modlog.create_case()</span></code></a> now raises:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">ValueError</span></code></a> when the <code class="docutils literal notranslate"><span class="pre">action_type</span></code> argument is not a valid action type</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> when the <code class="docutils literal notranslate"><span class="pre">user</span></code> argument is passed with the bot’s user object/ID</p></li>
+</ul>
+<p>Proper usage of these methods is unlikely to be affected
+and this should mostly just help detect bugs earlier.</p>
+</section>
+<section id="config-s-register-methods-now-only-accept-json-castable-types">
+<span id="config-register-1"></span><h4><a class="toc-backref" href="#id41" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Config</span></code>’s register methods now only accept JSON-castable types</a><a class="headerlink" href="#config-s-register-methods-now-only-accept-json-castable-types" title="Link to this heading"></a></h4>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#config-register-2"><span class="std std-ref">Config now always returns base JSON types, never subclasses</span></a></p>
+</div>
+<p>This change has fixed the inconsistencies between what can be registered as a default value
+and what can be set through <a class="reference internal" href="../framework_config.html#starbot.core.config.Value.set" title="starbot.core.config.Value.set"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Value.set()</span></code></a>. It mostly resulted in confusion when it was not
+possible to use the registered type in <a class="reference internal" href="../framework_config.html#starbot.core.config.Value.set" title="starbot.core.config.Value.set"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Value.set()</span></code></a>.</p>
+<p>If you need to use custom types, you’ll have to manually construct them <em>after</em> getting the
+“raw” value from <a class="reference internal" href="../framework_config.html#starbot.core.config.Config" title="starbot.core.config.Config"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Config</span></code></a>.</p>
+</section>
+<section id="config-now-always-returns-base-json-types-never-subclasses">
+<span id="config-register-2"></span><h4><a class="toc-backref" href="#id42" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Config</span></code> now always returns base JSON types, never subclasses</a><a class="headerlink" href="#config-now-always-returns-base-json-types-never-subclasses" title="Link to this heading"></a></h4>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#config-register-1"><span class="std std-ref">Config’s register methods now only accept JSON-castable types</span></a></p>
+</div>
+<p>It used to be possible to register an instance of a subclass of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">dict</span></code></a> such as
+<a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.Counter" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">collections.Counter</span></code></a> and have the <a class="reference internal" href="../framework_config.html#starbot.core.config.Group" title="starbot.core.config.Group"><code class="xref any py py-class docutils literal notranslate"><span class="pre">starbot.core.config.Group</span></code></a> cast the returned value to that type
+before returning it. With this change, <a class="reference internal" href="../framework_config.html#starbot.core.config.Group" title="starbot.core.config.Group"><code class="xref any py py-class docutils literal notranslate"><span class="pre">starbot.core.config.Group</span></code></a> will now always return an instance of
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">dict</span></code></a> containing only base JSON types, without subclasses.</p>
+</section>
+<section id="config-from-id-from-ids-methods-now-raise-when-int-is-not-passed">
+<h4><a class="toc-backref" href="#id43" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Config.*_from_id/*_from_ids()</span></code> methods now raise when <code class="docutils literal notranslate"><span class="pre">int</span></code> is not passed</a><a class="headerlink" href="#config-from-id-from-ids-methods-now-raise-when-int-is-not-passed" title="Link to this heading"></a></h4>
+<p>To help avoid setting values under non-integer keys, we now raise an error
+when the passed argument is not an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<p>We’re not expecting any <strong>proper</strong> usage of these methods to be affected
+and this should only help detect bugs earlier.</p>
+</section>
+<section id="case-message-can-now-be-discord-partialmessage">
+<h4><a class="toc-backref" href="#id44" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Case.message</span></code> can now be <code class="docutils literal notranslate"><span class="pre">discord.PartialMessage</span></code></a><a class="headerlink" href="#case-message-can-now-be-discord-partialmessage" title="Link to this heading"></a></h4>
+<p>This change allowed to us to make enormous performance improvements (subsecond durations
+compared to many minutes) to <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.get_all_cases" title="starbot.core.modlog.get_all_cases"><code class="xref any py py-func docutils literal notranslate"><span class="pre">modlog.get_all_cases()</span></code></a> and commands that use it
+such as the commonly used <code class="docutils literal notranslate"><span class="pre">[p]casesfor</span></code> command.</p>
+<p>With this change, we no longer fetch the whole <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Message" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Message</span></code></a> object for case’s message
+and instead only construct a <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessage" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.PartialMessage</span></code></a> object for it. This object is rarely if ever needed so it is unlikely to affect a lot of code. Additionally, this change doesn’t apply to <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.create_case" title="starbot.core.modlog.create_case"><code class="xref any py py-func docutils literal notranslate"><span class="pre">modlog.create_case()</span></code></a> which will still return a <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.Case" title="starbot.core.modlog.Case"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Case</span></code></a> object with <a class="reference internal" href="../framework_modlog.html#starbot.core.modlog.Case.message" title="starbot.core.modlog.Case.message"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">message</span></code></a> attribute set to an instance of <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Message" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Message</span></code></a> or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>If you have a reason to use a full message object, you can use <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessage.fetch" title="(in discord.py v2.4.0)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">discord.PartialMessage.fetch()</span></code></a>
+to fetch it.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">guild_only</span><span class="p">()</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">case_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="n">case</span> <span class="o">=</span> <span class="k">await</span> <span class="n">modlog</span><span class="o">.</span><span class="n">get_case</span><span class="p">(</span><span class="n">case_number</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">case</span><span class="o">.</span><span class="n">message</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;No message is available for this case.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+            <span class="s2">&quot;People reacted to this modlog case with: &quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">case</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reactions</span><span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>After:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">guild_only</span><span class="p">()</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">case_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="n">case</span> <span class="o">=</span> <span class="k">await</span> <span class="n">modlog</span><span class="o">.</span><span class="n">get_case</span><span class="p">(</span><span class="n">case_number</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">case</span><span class="o">.</span><span class="n">message</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;No message is available for this case.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">case</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">NotFound</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;No message is available for this case.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+                <span class="s2">&quot;People reacted to this modlog case with: &quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">reactions</span><span class="p">)</span>
+            <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="starbot-core-bot-redbase-has-been-merged-into-starbot-core-bot-red">
+<h4><a class="toc-backref" href="#id45" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">starbot.core.bot.RedBase</span></code> has been merged into <code class="docutils literal notranslate"><span class="pre">starbot.core.bot.Red</span></code></a><a class="headerlink" href="#starbot-core-bot-redbase-has-been-merged-into-starbot-core-bot-red" title="Link to this heading"></a></h4>
+<p>Historically, <code class="docutils literal notranslate"><span class="pre">RedBase</span></code> existed to allow using Red for self/user bots back when
+it was not against Discord’s Terms of Service. Since this is no longer a concern,
+everything from <code class="docutils literal notranslate"><span class="pre">RedBase</span></code> have been moved directly to <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Red</span></code></a> and <code class="docutils literal notranslate"><span class="pre">RedBase</span></code> class
+has been removed.</p>
+<p>If you were using <code class="docutils literal notranslate"><span class="pre">RedBase</span></code> for runtime type checking or type annotations,
+you should now use <a class="reference internal" href="../framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><code class="xref any py py-class docutils literal notranslate"><span class="pre">Red</span></code></a> instead. Since both of these classes resided in the same
+module, it should be a matter of simple find&amp;replace.</p>
+</section>
+<section id="context-maybe-send-embed-requires-content-with-length-of-1-2000-characters">
+<h4><a class="toc-backref" href="#id46" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">Context.maybe_send_embed()</span></code> requires content with length of 1-2000 characters</a><a class="headerlink" href="#context-maybe-send-embed-requires-content-with-length-of-1-2000-characters" title="Link to this heading"></a></h4>
+<p><a class="reference internal" href="../framework_commands.html#starbot.core.commands.Context.maybe_send_embed" title="starbot.core.commands.Context.maybe_send_embed"><code class="xref any py py-meth docutils literal notranslate"><span class="pre">Context.maybe_send_embed()</span></code></a> now requires the message’s length to be
+between 1 and 2000 characters.</p>
+<p>Since the length limits for regular message content and embed’s description are
+different, it is easy to miss an issue with inappropriate handling of length limits
+during development. This change should aid with early detection of such issue by
+consistently rejecting messages with length that can’t be used with
+both embed and non-embed messages.</p>
+<p>This change only affects code that is already not guaranteed to work.
+You should make sure that your code properly handles message length limits.</p>
+</section>
+<section id="menu-listens-to-both-reaction-add-and-remove">
+<h4><a class="toc-backref" href="#id47" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">menu()</span></code> listens to both reaction add and remove</a><a class="headerlink" href="#menu-listens-to-both-reaction-add-and-remove" title="Link to this heading"></a></h4>
+<p>Listening only to reaction add results in bad user experience.
+If the bot had Manage Messages permission, it removed the user’s reaction
+so that they don’t have to click twice but this comes with a noticeable delay.
+This issue is even more noticeable under load, when the bot ended up hitting
+Discord-imposed rate limits.</p>
+<p>If your calls to <a class="reference internal" href="../framework_utils.html#starbot.core.utils.menus.menu" title="starbot.core.utils.menus.menu"><code class="xref any py py-func docutils literal notranslate"><span class="pre">menu()</span></code></a> are using the default controls (<code class="docutils literal notranslate"><span class="pre">starbot.core.utils.menus.DEFAULT_CONTROLS</span></code>),
+you don’t have to do anything.</p>
+<p>Otherwise, you should ensure that your custom functions used for the menu controls
+do not depend on this behavior in some way. In particular, you should make sure that
+your functions do not automatically remove the author’s reaction.</p>
+<p>Here’s an example code that needs to be updated:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">contextlib</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">starbot.core.utils.menus</span> <span class="kn">import</span> <span class="n">close_menu</span><span class="p">,</span> <span class="n">menu</span>
+
+<span class="n">CUSTOM_CONTROLS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;</span><span class="se">\N{CROSS MARK}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">close_menu</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\N{WAVING HAND SIGN}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">custom_control</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">custom_control</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">emoji</span><span class="p">):</span>
+    <span class="n">perms</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">permissions_for</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">me</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">perms</span><span class="o">.</span><span class="n">manage_messages</span><span class="p">:</span>  <span class="c1"># Can manage messages, so remove react</span>
+        <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">NotFound</span><span class="p">):</span>
+            <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">remove_reaction</span><span class="p">(</span><span class="n">emoji</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span><span class="p">)</span>
+
+    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">show_menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Click :wave: to say hi!&quot;</span><span class="p">],</span> <span class="n">CUSTOM_CONTROLS</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To make this code work on Red 3.5 and higher, you need to update <code class="docutils literal notranslate"><span class="pre">custom_control()</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">custom_control</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">emoji</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">menu</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">pages</span><span class="p">,</span> <span class="n">controls</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="future.html" class="btn btn-neutral float-left" title="Future changes (currently deprecated functionality)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../host-list.html" class="btn btn-neutral float-right" title="Hosting Information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

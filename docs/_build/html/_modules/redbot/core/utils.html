@@ -1,0 +1,1087 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.utils &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">starbot.core.utils</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.utils</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">asyncio</span> <span class="kn">import</span> <span class="n">as_completed</span><span class="p">,</span> <span class="n">Semaphore</span>
+<span class="kn">from</span> <span class="nn">asyncio.futures</span> <span class="kn">import</span> <span class="n">isfuture</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TYPE_CHECKING</span><span class="p">,</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">AsyncIterator</span><span class="p">,</span>
+    <span class="n">AsyncIterable</span><span class="p">,</span>
+    <span class="n">Awaitable</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">Iterable</span><span class="p">,</span>
+    <span class="n">Iterator</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Literal</span><span class="p">,</span>
+    <span class="n">NoReturn</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">TypeVar</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+    <span class="n">Generator</span><span class="p">,</span>
+    <span class="n">Coroutine</span><span class="p">,</span>
+    <span class="n">overload</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">discord.ext</span> <span class="kn">import</span> <span class="n">commands</span> <span class="k">as</span> <span class="n">dpy_commands</span>
+<span class="kn">from</span> <span class="nn">discord.utils</span> <span class="kn">import</span> <span class="n">maybe_coroutine</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="n">GuildMessageable</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span>
+        <span class="n">commands</span><span class="o">.</span><span class="n">GuildContext</span><span class="p">,</span>
+        <span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span>
+        <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span>
+        <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span>
+        <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">DMMessageable</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">DMContext</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">DMChannel</span><span class="p">]</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;async_filter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;async_enumerate&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bounded_gather&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bounded_gather_iter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;deduplicate_iterables&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;AsyncIter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_end_user_data_statement&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_end_user_data_statement_or_raise&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;can_user_send_messages_in&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;can_user_manage_channel&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;can_user_react_in&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;red.core.utils&quot;</span><span class="p">)</span>
+
+<span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_T&quot;</span><span class="p">)</span>
+<span class="n">_S</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_S&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Benchmarked to be the fastest method.</span>
+<div class="viewcode-block" id="deduplicate_iterables">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.deduplicate_iterables">[docs]</a>
+<span class="k">def</span> <span class="nf">deduplicate_iterables</span><span class="p">(</span><span class="o">*</span><span class="n">iterables</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a list of all unique items in ``iterables``, in the order they</span>
+<span class="sd">    were first encountered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># dict insertion order is guaranteed to be preserved in 3.6+</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">iterables</span><span class="p">)))</span></div>
+
+
+
+<span class="c1"># https://github.com/PyCQA/pylint/issues/2717</span>
+<span class="k">class</span> <span class="nc">AsyncFilter</span><span class="p">(</span><span class="n">AsyncIterator</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Awaitable</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">_T</span><span class="p">]]):</span>  <span class="c1"># pylint: disable=duplicate-bases</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class returned by `async_filter`. See that function for details.</span>
+
+<span class="sd">    We don&#39;t recommend instantiating this class directly.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Awaitable</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]],</span>
+        <span class="n">iterable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">AsyncIterable</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">_T</span><span class="p">]],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Awaitable</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]]</span> <span class="o">=</span> <span class="n">func</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">AsyncIterable</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">_T</span><span class="p">]]</span> <span class="o">=</span> <span class="n">iterable</span>
+
+        <span class="c1"># We assign the generator strategy based on the arguments&#39; types</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">AsyncIterable</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__generator_instance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__async_generator_async_pred</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__generator_instance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__async_generator_sync_pred</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__generator_instance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__sync_generator_async_pred</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Must be either an async predicate, an async iterable, or both.&quot;</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">__sync_generator_async_pred</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span><span class="p">:</span>
+            <span class="k">if</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">__func</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+                <span class="k">yield</span> <span class="n">item</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">__async_generator_sync_pred</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__func</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+                <span class="k">yield</span> <span class="n">item</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">__async_generator_async_pred</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__iterable</span><span class="p">:</span>
+            <span class="k">if</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">__func</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+                <span class="k">yield</span> <span class="n">item</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">__flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">item</span> <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__aiter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Simply return the generator filled into a list</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__flatten</span><span class="p">()</span><span class="o">.</span><span class="fm">__await__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__anext__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Awaitable</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+        <span class="c1"># This will use the generator strategy set in __init__</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__generator_instance</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">async_filter</span><span class="p">(</span>
+    <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Awaitable</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]],</span>
+    <span class="n">iterable</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">AsyncIterable</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">_T</span><span class="p">]],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncFilter</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Filter an (optionally async) iterable with an (optionally async) predicate.</span>
+
+<span class="sd">    At least one of the arguments must be async.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    func : Callable[[T], Union[bool, Awaitable[bool]]]</span>
+<span class="sd">        A function or coroutine function which takes one item of ``iterable``</span>
+<span class="sd">        as an argument, and returns ``True`` or ``False``.</span>
+<span class="sd">    iterable : Union[AsyncIterable[_T], Iterable[_T]]</span>
+<span class="sd">        An iterable or async iterable which is to be filtered.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If neither of the arguments are async.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    AsyncFilter[T]</span>
+<span class="sd">        An object which can either be awaited to yield a list of the filtered</span>
+<span class="sd">        items, or can also act as an async iterator to yield items one by one.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">AsyncFilter</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">iterable</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">async_enumerate</span><span class="p">(</span>
+    <span class="n">async_iterable</span><span class="p">:</span> <span class="n">AsyncIterable</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">_T</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Async iterable version of `enumerate`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    async_iterable : AsyncIterable[T]</span>
+<span class="sd">        The iterable to enumerate.</span>
+<span class="sd">    start : int</span>
+<span class="sd">        The index to start from. Defaults to 0.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    AsyncIterator[Tuple[int, T]]</span>
+<span class="sd">        An async iterator of tuples in the form of ``(index, item)``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">async_iterable</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">start</span><span class="p">,</span> <span class="n">item</span>
+        <span class="n">start</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_sem_wrapper</span><span class="p">(</span><span class="n">sem</span><span class="p">,</span> <span class="n">task</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">sem</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">task</span>
+
+
+<div class="viewcode-block" id="bounded_gather_iter">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.bounded_gather_iter">[docs]</a>
+<span class="k">def</span> <span class="nf">bounded_gather_iter</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">coros_or_futures</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">semaphore</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Semaphore</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Awaitable</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An iterator that returns tasks as they are ready, but limits the</span>
+<span class="sd">    number of tasks running at a time.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    *coros_or_futures</span>
+<span class="sd">        The awaitables to run in a bounded concurrent fashion.</span>
+<span class="sd">    limit : Optional[`int`]</span>
+<span class="sd">        The maximum number of concurrent tasks. Used when no ``semaphore``</span>
+<span class="sd">        is passed.</span>
+<span class="sd">    semaphore : Optional[:class:`asyncio.Semaphore`]</span>
+<span class="sd">        The semaphore to use for bounding tasks. If `None`, create one</span>
+<span class="sd">        using ``loop`` and ``limit``.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        When invalid parameters are passed</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_running_loop</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">semaphore</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">limit</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;limit must be an int &gt; 0&quot;</span><span class="p">)</span>
+
+        <span class="n">semaphore</span> <span class="o">=</span> <span class="n">Semaphore</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">pending</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">cof</span> <span class="ow">in</span> <span class="n">coros_or_futures</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">isfuture</span><span class="p">(</span><span class="n">cof</span><span class="p">)</span> <span class="ow">and</span> <span class="n">cof</span><span class="o">.</span><span class="n">_loop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">loop</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;futures are tied to different event loops&quot;</span><span class="p">)</span>
+
+        <span class="n">cof</span> <span class="o">=</span> <span class="n">_sem_wrapper</span><span class="p">(</span><span class="n">semaphore</span><span class="p">,</span> <span class="n">cof</span><span class="p">)</span>
+        <span class="n">pending</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cof</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">pending</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="bounded_gather">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.bounded_gather">[docs]</a>
+<span class="k">def</span> <span class="nf">bounded_gather</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">coros_or_futures</span><span class="p">,</span>
+    <span class="n">return_exceptions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="n">semaphore</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Semaphore</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Awaitable</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A semaphore-bounded wrapper to :meth:`asyncio.gather`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    *coros_or_futures</span>
+<span class="sd">        The awaitables to run in a bounded concurrent fashion.</span>
+<span class="sd">    return_exceptions : bool</span>
+<span class="sd">        If true, gather exceptions in the result list instead of raising.</span>
+<span class="sd">    limit : Optional[`int`]</span>
+<span class="sd">        The maximum number of concurrent tasks. Used when no ``semaphore``</span>
+<span class="sd">        is passed.</span>
+<span class="sd">    semaphore : Optional[:class:`asyncio.Semaphore`]</span>
+<span class="sd">        The semaphore to use for bounding tasks. If `None`, create one</span>
+<span class="sd">        using ``loop`` and ``limit``.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        When invalid parameters are passed</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_running_loop</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">semaphore</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">limit</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;limit must be an int &gt; 0&quot;</span><span class="p">)</span>
+
+        <span class="n">semaphore</span> <span class="o">=</span> <span class="n">Semaphore</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">tasks</span> <span class="o">=</span> <span class="p">(</span><span class="n">_sem_wrapper</span><span class="p">(</span><span class="n">semaphore</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span> <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">coros_or_futures</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">,</span> <span class="n">return_exceptions</span><span class="o">=</span><span class="n">return_exceptions</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="AsyncIter">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter">[docs]</a>
+<span class="k">class</span> <span class="nc">AsyncIter</span><span class="p">(</span><span class="n">AsyncIterator</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Awaitable</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">_T</span><span class="p">]]):</span>  <span class="c1"># pylint: disable=duplicate-bases</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Asynchronous iterator yielding items from ``iterable``</span>
+<span class="sd">    that sleeps for ``delay`` seconds every ``steps`` items.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    iterable: Iterable</span>
+<span class="sd">        The iterable to make async.</span>
+<span class="sd">    delay: Union[float, int]</span>
+<span class="sd">        The amount of time in seconds to sleep.</span>
+<span class="sd">    steps: int</span>
+<span class="sd">        The number of iterations between sleeps.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        When ``steps`` is lower than 1.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">    &gt;&gt;&gt; async for value in AsyncIter(range(3)):</span>
+<span class="sd">    ...     print(value)</span>
+<span class="sd">    0</span>
+<span class="sd">    1</span>
+<span class="sd">    2</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">delay</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">steps</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Steps must be higher than or equals to 1&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_delay</span> <span class="o">=</span> <span class="n">delay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_steps</span> <span class="o">=</span> <span class="n">steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_map</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__aiter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIter</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="fm">__anext__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_iterator</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopAsyncIteration</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_steps</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_delay</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">maybe_coroutine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_map</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_map</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">item</span>
+
+<div class="viewcode-block" id="AsyncIter.__await__">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.__await__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">_T</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a list of the iterable.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; iterator = AsyncIter(range(5))</span>
+<span class="sd">        &gt;&gt;&gt; await iterator</span>
+<span class="sd">        [0, 1, 2, 3, 4]</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span><span class="o">.</span><span class="fm">__await__</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="AsyncIter.next">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.next">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a next entry of the iterable.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        default: Optional[Any]</span>
+<span class="sd">            The value to return if the iterator is exhausted.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        StopAsyncIteration</span>
+<span class="sd">            When ``default`` is not specified and the iterator has been exhausted.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; iterator = AsyncIter(range(5))</span>
+<span class="sd">        &gt;&gt;&gt; await iterator.next()</span>
+<span class="sd">        0</span>
+<span class="sd">        &gt;&gt;&gt; await iterator.next()</span>
+<span class="sd">        1</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">StopAsyncIteration</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="o">...</span><span class="p">:</span>
+                <span class="k">raise</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">default</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="AsyncIter.flatten">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.flatten">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a list of the iterable.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; iterator = AsyncIter(range(5))</span>
+<span class="sd">        &gt;&gt;&gt; await iterator.flatten()</span>
+<span class="sd">        [0, 1, 2, 3, 4]</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">item</span> <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="AsyncIter.filter">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.filter">[docs]</a>
+    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Awaitable</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="n">AsyncFilter</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Filter the iterable with an (optionally async) predicate.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        function: Callable[[T], Union[bool, Awaitable[bool]]]</span>
+<span class="sd">            A function or coroutine function which takes one item of ``iterable``</span>
+<span class="sd">            as an argument, and returns ``True`` or ``False``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        AsyncFilter[T]</span>
+<span class="sd">            An object which can either be awaited to yield a list of the filtered</span>
+<span class="sd">            items, or can also act as an async iterator to yield items one by one.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; def predicate(value):</span>
+<span class="sd">        ...     return value &lt;= 5</span>
+<span class="sd">        &gt;&gt;&gt; iterator = AsyncIter([1, 10, 5, 100])</span>
+<span class="sd">        &gt;&gt;&gt; async for i in iterator.filter(predicate):</span>
+<span class="sd">        ...     print(i)</span>
+<span class="sd">        1</span>
+<span class="sd">        5</span>
+
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; def predicate(value):</span>
+<span class="sd">        ...     return value &lt;= 5</span>
+<span class="sd">        &gt;&gt;&gt; iterator = AsyncIter([1, 10, 5, 100])</span>
+<span class="sd">        &gt;&gt;&gt; await iterator.filter(predicate)</span>
+<span class="sd">        [1, 5]</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">async_filter</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="AsyncIter.enumerate">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.enumerate">[docs]</a>
+    <span class="k">def</span> <span class="nf">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">_T</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Async iterable version of `enumerate`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        start: int</span>
+<span class="sd">            The index to start from. Defaults to 0.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        AsyncIterator[Tuple[int, T]]</span>
+<span class="sd">            An async iterator of tuples in the form of ``(index, item)``.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; iterator = AsyncIter([&#39;one&#39;, &#39;two&#39;, &#39;three&#39;])</span>
+<span class="sd">        &gt;&gt;&gt; async for i in iterator.enumerate(start=10):</span>
+<span class="sd">        ...     print(i)</span>
+<span class="sd">        (10, &#39;one&#39;)</span>
+<span class="sd">        (11, &#39;two&#39;)</span>
+<span class="sd">        (12, &#39;three&#39;)</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">async_enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="AsyncIter.without_duplicates">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.without_duplicates">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">without_duplicates</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Iterates while omitting duplicated entries.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; iterator = AsyncIter([1,2,3,3,4,4,5])</span>
+<span class="sd">        &gt;&gt;&gt; async for i in iterator.without_duplicates():</span>
+<span class="sd">        ...     print(i)</span>
+<span class="sd">        1</span>
+<span class="sd">        2</span>
+<span class="sd">        3</span>
+<span class="sd">        4</span>
+<span class="sd">        5</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_temp</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">_temp</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">item</span>
+                <span class="n">_temp</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">_temp</span></div>
+
+
+<div class="viewcode-block" id="AsyncIter.find">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.find">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">find</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Awaitable</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]],</span>
+        <span class="n">default</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calls ``predicate`` over items in iterable and return first value to match.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        predicate: Union[Callable, Coroutine]</span>
+<span class="sd">            A function that returns a boolean-like result. The predicate provided can be a coroutine.</span>
+<span class="sd">        default: Optional[Any]</span>
+<span class="sd">            The value to return if there are no matches.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            When ``predicate`` is not a callable.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; await AsyncIter(range(3)).find(lambda x: x == 1)</span>
+<span class="sd">        1</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">elem</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">StopAsyncIteration</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">default</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="k">await</span> <span class="n">maybe_coroutine</span><span class="p">(</span><span class="n">predicate</span><span class="p">,</span> <span class="n">elem</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">elem</span></div>
+
+
+<div class="viewcode-block" id="AsyncIter.map">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.AsyncIter.map">[docs]</a>
+    <span class="k">def</span> <span class="nf">map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">_T</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">_S</span><span class="p">,</span> <span class="n">Awaitable</span><span class="p">[</span><span class="n">_S</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="n">AsyncIter</span><span class="p">[</span><span class="n">_S</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the mapping callable for this instance of `AsyncIter`.</span>
+
+<span class="sd">        .. important::</span>
+<span class="sd">            This should be called after AsyncIter initialization and before any other of its methods.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        func: Union[Callable, Coroutine]</span>
+<span class="sd">            The function to map values to. The function provided can be a coroutine.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            When ``func`` is not a callable.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from starbot.core.utils import AsyncIter</span>
+<span class="sd">        &gt;&gt;&gt; async for value in AsyncIter(range(3)).map(bool):</span>
+<span class="sd">        ...     print(value)</span>
+<span class="sd">        False</span>
+<span class="sd">        True</span>
+<span class="sd">        True</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Mapping must be a callable.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_map</span> <span class="o">=</span> <span class="n">func</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="get_end_user_data_statement">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.get_end_user_data_statement">[docs]</a>
+<span class="k">def</span> <span class="nf">get_end_user_data_statement</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function attempts to get the ``end_user_data_statement`` key from cog&#39;s ``info.json``.</span>
+<span class="sd">    This will log the reason if ``None`` is returned.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    You can use this function in cog package&#39;s top-level ``__init__.py``</span>
+<span class="sd">    to conveniently reuse end user data statement from ``info.json`` file</span>
+<span class="sd">    placed in the same directory:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from starbot.core.utils import get_end_user_data_statement</span>
+
+<span class="sd">        __red_end_user_data_statement__ = get_end_user_data_statement(__file__)</span>
+
+
+<span class="sd">        async def setup(bot):</span>
+<span class="sd">            ...</span>
+
+<span class="sd">    To help detect issues with the ``info.json`` file while still allowing the cog to load,</span>
+<span class="sd">    this function logs an error if ``info.json`` file doesn&#39;t exist, can&#39;t be parsed,</span>
+<span class="sd">    or doesn&#39;t have an ``end_user_data_statement`` key.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    file: Union[pathlib.Path, str]</span>
+<span class="sd">        The ``__file__`` variable for the cog&#39;s ``__init__.py`` file.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Optional[str]</span>
+<span class="sd">        The end user data statement found in the info.json</span>
+<span class="sd">        or ``None`` if there was an issue finding one.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">file</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span>
+        <span class="n">info_json</span> <span class="o">=</span> <span class="n">file</span> <span class="o">/</span> <span class="s2">&quot;info.json&quot;</span>
+        <span class="n">statement</span> <span class="o">=</span> <span class="n">get_end_user_data_statement_or_raise</span><span class="p">(</span><span class="n">info_json</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; does not exist.&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">info_json</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; is missing an entry for &#39;end_user_data_statement&#39;&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">info_json</span><span class="p">))</span>
+    <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; is not a valid JSON file.&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">info_json</span><span class="p">),</span> <span class="n">exc_info</span><span class="o">=</span><span class="n">exc</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">UnicodeError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; has a bad encoding.&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">info_json</span><span class="p">),</span> <span class="n">exc_info</span><span class="o">=</span><span class="n">exc</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span>
+            <span class="s2">&quot;There was an error when trying to load the end user data statement from &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span><span class="p">,</span>
+            <span class="nb">str</span><span class="p">(</span><span class="n">info_json</span><span class="p">),</span>
+            <span class="n">exc_info</span><span class="o">=</span><span class="n">exc</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">statement</span>
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="get_end_user_data_statement_or_raise">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.get_end_user_data_statement_or_raise">[docs]</a>
+<span class="k">def</span> <span class="nf">get_end_user_data_statement_or_raise</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function attempts to get the ``end_user_data_statement`` key from cog&#39;s ``info.json``.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    You can use this function in cog package&#39;s top-level ``__init__.py``</span>
+<span class="sd">    to conveniently reuse end user data statement from ``info.json`` file</span>
+<span class="sd">    placed in the same directory:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from starbot.core.utils import get_end_user_data_statement_or_raise</span>
+
+<span class="sd">        __red_end_user_data_statement__ = get_end_user_data_statement_or_raise(__file__)</span>
+
+
+<span class="sd">        async def setup(bot):</span>
+<span class="sd">            ...</span>
+
+<span class="sd">    In order to ensure that you won&#39;t end up with no end user data statement,</span>
+<span class="sd">    this function raises if ``info.json`` file doesn&#39;t exist, can&#39;t be parsed,</span>
+<span class="sd">    or doesn&#39;t have an ``end_user_data_statement`` key.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    file: Union[pathlib.Path, str]</span>
+<span class="sd">        The ``__file__`` variable for the cog&#39;s ``__init__.py`` file.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The end user data statement found in the info.json.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    FileNotFoundError</span>
+<span class="sd">        When ``info.json`` does not exist.</span>
+<span class="sd">    KeyError</span>
+<span class="sd">        When ``info.json`` does not have the ``end_user_data_statement`` key.</span>
+<span class="sd">    json.JSONDecodeError</span>
+<span class="sd">        When ``info.json`` can&#39;t be decoded with ``json.load()``</span>
+<span class="sd">    UnicodeError</span>
+<span class="sd">        When ``info.json`` can&#39;t be decoded due to bad encoding.</span>
+<span class="sd">    Exception</span>
+<span class="sd">        Any other exception raised from ``pathlib`` and ``json`` modules</span>
+<span class="sd">        when attempting to parse the ``info.json`` for the ``end_user_data_statement`` key.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">file</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">absolute</span><span class="p">()</span>
+    <span class="n">info_json</span> <span class="o">=</span> <span class="n">file</span> <span class="o">/</span> <span class="s2">&quot;info.json&quot;</span>
+    <span class="k">with</span> <span class="n">info_json</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">)[</span><span class="s2">&quot;end_user_data_statement&quot;</span><span class="p">]</span></div>
+
+
+
+<span class="nd">@overload</span>
+<span class="k">def</span> <span class="nf">can_user_send_messages_in</span><span class="p">(</span>
+    <span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialMessageable</span><span class="p">,</span> <span class="o">/</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+    <span class="o">...</span>
+
+
+<span class="nd">@overload</span>
+<span class="k">def</span> <span class="nf">can_user_send_messages_in</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">GuildMessageable</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="o">...</span>
+
+
+<span class="nd">@overload</span>
+<span class="k">def</span> <span class="nf">can_user_send_messages_in</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">DMMessageable</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Literal</span><span class="p">[</span><span class="kc">True</span><span class="p">]:</span>
+    <span class="o">...</span>
+
+
+<div class="viewcode-block" id="can_user_send_messages_in">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.can_user_send_messages_in">[docs]</a>
+<span class="k">def</span> <span class="nf">can_user_send_messages_in</span><span class="p">(</span>
+    <span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">,</span> <span class="o">/</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a user/member can send messages in the given messageable.</span>
+
+<span class="sd">    This function properly resolves the permissions for `discord.Thread` as well.</span>
+
+<span class="sd">    .. note::</span>
+
+<span class="sd">        Without making an API request, it is not possible to reliably detect</span>
+<span class="sd">        whether a guild member (who is NOT current bot user) can send messages in a private thread.</span>
+
+<span class="sd">        If it&#39;s essential for you to reliably detect this, you will need to</span>
+<span class="sd">        try fetching the thread member:</span>
+
+<span class="sd">        .. code::</span>
+
+<span class="sd">            can_send_messages = can_user_send_messages_in(member, thread)</span>
+<span class="sd">            if thread.is_private() and not thread.permissions_for(member).manage_threads:</span>
+<span class="sd">                try:</span>
+<span class="sd">                    await thread.fetch_member(member.id)</span>
+<span class="sd">                except discord.NotFound:</span>
+<span class="sd">                    can_send_messages = False</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    obj: discord.abc.User</span>
+<span class="sd">        The user or member to check permissions for.</span>
+<span class="sd">        If passed ``messageable`` resolves to a guild channel/thread,</span>
+<span class="sd">        this needs to be an instance of `discord.Member`.</span>
+<span class="sd">    messageable: discord.abc.Messageable</span>
+<span class="sd">        The messageable object to check permissions for.</span>
+<span class="sd">        If this resolves to a DM/group channel, this function will return ``True``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        Whether the user can send messages in the given messageable.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        When the passed channel is of type `discord.PartialMessageable`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">messageable</span><span class="o">.</span><span class="n">channel</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">messageable</span><span class="p">,</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">Context</span><span class="p">)</span> <span class="k">else</span> <span class="n">messageable</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialMessageable</span><span class="p">):</span>
+        <span class="c1"># If we have a partial messageable, we sadly can&#39;t do much...</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t check permissions for PartialMessageable.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+        <span class="c1"># Unlike DMChannel, abc.User subclasses do not have `permissions_for()`.</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="n">perms</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">permissions_for</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">perms</span><span class="o">.</span><span class="n">send_messages_in_threads</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">channel</span><span class="o">.</span><span class="n">locked</span> <span class="ow">or</span> <span class="n">perms</span><span class="o">.</span><span class="n">manage_threads</span><span class="p">)</span>
+            <span class="c1"># For private threads, the only way to know if user can send messages would be to check</span>
+            <span class="c1"># if they&#39;re a member of it which we cannot reliably do without an API request.</span>
+            <span class="c1">#</span>
+            <span class="c1"># and (not channel.is_private() or &quot;obj is thread member&quot; or perms.manage_threads)</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">perms</span><span class="o">.</span><span class="n">send_messages</span></div>
+
+
+
+<div class="viewcode-block" id="can_user_manage_channel">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.can_user_manage_channel">[docs]</a>
+<span class="k">def</span> <span class="nf">can_user_manage_channel</span><span class="p">(</span>
+    <span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span>
+    <span class="n">channel</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">GuildChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">],</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="n">allow_thread_owner</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a guild member can manage the given channel.</span>
+
+<span class="sd">    This function properly resolves the permissions for `discord.Thread` as well.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    obj: discord.Member</span>
+<span class="sd">        The guild member to check permissions for.</span>
+<span class="sd">        If passed ``messageable`` resolves to a guild channel/thread,</span>
+<span class="sd">        this needs to be an instance of `discord.Member`.</span>
+<span class="sd">    channel: Union[discord.abc.GuildChannel, discord.Thread]</span>
+<span class="sd">        The messageable object to check permissions for.</span>
+<span class="sd">        If this resolves to a DM/group channel, this function will return ``True``.</span>
+<span class="sd">    allow_thread_owner: bool</span>
+<span class="sd">        If ``True``, the function will also return ``True`` if the given member is a thread owner.</span>
+<span class="sd">        This can, for example, be useful to check if the member can edit a channel/thread&#39;s name</span>
+<span class="sd">        as that, in addition to members with manage channel/threads permission,</span>
+<span class="sd">        can also be done by the thread owner.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        Whether the user can manage the given channel.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">perms</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">permissions_for</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">perms</span><span class="o">.</span><span class="n">manage_threads</span> <span class="ow">or</span> <span class="p">(</span><span class="n">allow_thread_owner</span> <span class="ow">and</span> <span class="n">channel</span><span class="o">.</span><span class="n">owner_id</span> <span class="o">==</span> <span class="n">obj</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">perms</span><span class="o">.</span><span class="n">manage_channels</span></div>
+
+
+
+<span class="nd">@overload</span>
+<span class="k">def</span> <span class="nf">can_user_react_in</span><span class="p">(</span>
+    <span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialMessageable</span><span class="p">,</span> <span class="o">/</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+    <span class="o">...</span>
+
+
+<span class="nd">@overload</span>
+<span class="k">def</span> <span class="nf">can_user_react_in</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">GuildMessageable</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="o">...</span>
+
+
+<span class="nd">@overload</span>
+<span class="k">def</span> <span class="nf">can_user_react_in</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">DMMessageable</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Literal</span><span class="p">[</span><span class="kc">True</span><span class="p">]:</span>
+    <span class="o">...</span>
+
+
+<div class="viewcode-block" id="can_user_react_in">
+<a class="viewcode-back" href="../../../framework_utils.html#starbot.core.utils.can_user_react_in">[docs]</a>
+<span class="k">def</span> <span class="nf">can_user_react_in</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">messageable</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Messageable</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a user/guild member can react in the given messageable.</span>
+
+<span class="sd">    This function properly resolves the permissions for `discord.Thread` as well.</span>
+
+<span class="sd">    .. note::</span>
+
+<span class="sd">        Without making an API request, it is not possible to reliably detect</span>
+<span class="sd">        whether a guild member (who is NOT current bot user) can react in a private thread.</span>
+
+<span class="sd">        If it&#39;s essential for you to reliably detect this, you will need to</span>
+<span class="sd">        try fetching the thread member:</span>
+
+<span class="sd">        .. code::</span>
+
+<span class="sd">            can_react = can_user_react_in(member, thread)</span>
+<span class="sd">            if thread.is_private() and not thread.permissions_for(member).manage_threads:</span>
+<span class="sd">                try:</span>
+<span class="sd">                    await thread.fetch_member(member.id)</span>
+<span class="sd">                except discord.NotFound:</span>
+<span class="sd">                    can_react = False</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    obj: discord.abc.User</span>
+<span class="sd">        The user or member to check permissions for.</span>
+<span class="sd">        If passed ``messageable`` resolves to a guild channel/thread,</span>
+<span class="sd">        this needs to be an instance of `discord.Member`.</span>
+<span class="sd">    messageable: discord.abc.Messageable</span>
+<span class="sd">        The messageable object to check permissions for.</span>
+<span class="sd">        If this resolves to a DM/group channel, this function will return ``True``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        Whether the user can send messages in the given messageable.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        When the passed channel is of type `discord.PartialMessageable`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">messageable</span><span class="o">.</span><span class="n">channel</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">messageable</span><span class="p">,</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">Context</span><span class="p">)</span> <span class="k">else</span> <span class="n">messageable</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialMessageable</span><span class="p">):</span>
+        <span class="c1"># If we have a partial messageable, we sadly can&#39;t do much...</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t check permissions for PartialMessageable.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+        <span class="c1"># Unlike DMChannel, abc.User subclasses do not have `permissions_for()`.</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="n">perms</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">permissions_for</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">perms</span><span class="o">.</span><span class="n">read_message_history</span> <span class="ow">and</span> <span class="n">perms</span><span class="o">.</span><span class="n">add_reactions</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="ow">not</span> <span class="n">channel</span><span class="o">.</span><span class="n">archived</span>
+            <span class="c1"># For private threads, the only way to know if user can send messages would be to check</span>
+            <span class="c1"># if they&#39;re a member of it which we cannot reliably do without an API request.</span>
+            <span class="c1">#</span>
+            <span class="c1"># and (not channel.is_private() or perms.manage_threads or &quot;obj is thread member&quot;)</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">perms</span><span class="o">.</span><span class="n">read_message_history</span> <span class="ow">and</span> <span class="n">perms</span><span class="o">.</span><span class="n">add_reactions</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

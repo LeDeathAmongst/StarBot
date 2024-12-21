@@ -1,0 +1,87 @@
+# Polish translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 03:56+0100\n"
+"PO-Revision-Date: 2024-10-14 03:58+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pl\n"
+"Language-Team: pl <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: devutils.py:38
+msgid "No valid log level provided."
+msgstr "Nie podano prawidłowego poziomu dziennika."
+msgstr ""
+
+#: devutils.py:59
+msgid "No valid discord object provided."
+msgstr "Nie podano prawidłowego obiektu niezgody."
+msgstr ""
+
+#: devutils.py:112 devutils.py:171 devutils.py:182
+msgid "You have not specified a correct command."
+msgstr "Nie podano prawidłowego polecenia."
+msgstr ""
+
+#: devutils.py:116 devutils.py:186
+msgid "You can't execute yourself this command."
+msgstr "Nie możesz sam wykonać tego polecenia."
+msgstr ""
+
+#: devutils.py:138 devutils.py:153
+msgid "`{command}` isn't a valid command."
+msgstr "`{polecenie}` nie jest prawidłowym poleceniem."
+msgstr ""
+
+#: devutils.py:143 devutils.py:158
+msgid "You can't execute yourself `{command}`."
+msgstr "Nie możesz sam wykonać `{polecenie}`."
+msgstr ""
+
+#: devutils.py:191
+msgid "Command `{command}` finished in `{timing}`s."
+msgstr "Polecenie `{polecenie}` zostało zakończone za `{timing}`s."
+msgstr ""
+
+#: devutils.py:213
+msgid "The command isn't valid."
+msgstr "Polecenie jest nieprawidłowe."
+msgstr ""
+
+#: devutils.py:217
+msgid "This command can't be executed."
+msgstr "To polecenie nie może zostać wykonane."
+msgstr ""
+
+#: devutils.py:236
+msgid "Logger `{logger_name}` level set to `{level}`."
+msgstr "Poziom rejestratora `{logger_name}` ustawiony na `{level}`."
+msgstr ""
+
+#: devutils.py:268
+msgid "I couldn't find any module with this name."
+msgstr "Nie mogłem znaleźć żadnego modułu o tej nazwie."
+msgstr ""
+
+#: devutils.py:272
+msgid "Module(s) {modules} reloaded."
+msgstr "Moduł(y) {moduły} zostały ponownie załadowane."
+msgstr ""
+
+#: devutils.py:277
+msgid "Modules [...] reloaded."
+msgstr "Moduły [...] załadowane ponownie."
+msgstr ""
+

@@ -1,0 +1,9 @@
+{
+    "author": ["Star"],
+    "name": "SMC",
+    "install_msg": "Thank you for installing this cog!\nUse `[p]help SMC` to get the list of commands and their description. If you want to help translate, visit my [crowdin project](<https://crowdin.com/project/Star-Cogs>)\nIf you appreciate my work, consider [donating](<https://ko-fi.com/starcogs>)\n\nThis cog allows you to designate a channel where only one message is allowed at a time. When a new message is sent, the previous message is automatically deleted.",
+    "requirements": [],
+    "min_bot_version": "3.5.9",
+    "end_user_data_statement": "This cog does not store any user data persistently.",
+    "hidden": false
+}

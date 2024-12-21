@@ -1,0 +1,1106 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.utils.views &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+          <li class="breadcrumb-item"><a href="../utils.html">starbot.core.utils</a></li>
+      <li class="breadcrumb-item active">starbot.core.utils.views</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.utils.views</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+<span class="kn">from</span> <span class="nn">starbot.core.commands</span> <span class="kn">import</span> <span class="n">get_dict_converter</span>
+<span class="kn">from</span> <span class="nn">starbot.core.i18n</span> <span class="kn">import</span> <span class="n">Translator</span>
+<span class="kn">from</span> <span class="nn">starbot.vendored.discord.ext</span> <span class="kn">import</span> <span class="n">menus</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">starbot.core.bot</span> <span class="kn">import</span> <span class="n">Red</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;red.core.utils.views&quot;</span><span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;SimpleMenu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SetApiModal&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SetApiView&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ContactDmReplyModal&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ContactDmView&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InviteView&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;View&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ConfirmView&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s2">&quot;UtilsViews&quot;</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
+
+<span class="n">_ACCEPTABLE_PAGE_TYPES</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">]],</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">_SimplePageSource</span><span class="p">(</span><span class="n">menus</span><span class="o">.</span><span class="n">ListPageSource</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">_ACCEPTABLE_PAGE_TYPES</span><span class="p">]):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">per_page</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">format_page</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">View</span><span class="p">,</span> <span class="n">page</span><span class="p">:</span> <span class="n">_ACCEPTABLE_PAGE_TYPES</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">page</span>
+
+
+<span class="k">class</span> <span class="nc">_SelectMenu</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Select</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">SelectOption</span><span class="p">]):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">placeholder</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Select a Page&quot;</span><span class="p">),</span> <span class="n">min_values</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_values</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">options</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">get_page</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;files&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;attachments&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;files&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">))</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">edit_message</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">_NavigateButton</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="p">,</span> <span class="n">emoji</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">],</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span> <span class="n">emoji</span><span class="o">=</span><span class="n">emoji</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">get_max_pages</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">get_max_pages</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">current_page</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">direction</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">get_page</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;files&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">):</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;attachments&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;files&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">))</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">edit_message</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">_StopButton</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">style</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">red</span><span class="p">,</span>
+        <span class="n">emoji</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;✖️&quot;</span><span class="p">,</span>
+        <span class="n">row</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span> <span class="n">emoji</span><span class="o">=</span><span class="n">emoji</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">interaction</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">ephemeral</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">edit_message</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="SimpleMenu">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SimpleMenu">[docs]</a>
+<span class="k">class</span> <span class="nc">SimpleMenu</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">View</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A simple Button Menu.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    pages: `list` of `str`, `discord.Embed`, or `dict`.</span>
+<span class="sd">        The pages of the menu.</span>
+<span class="sd">        if the page is a `dict` its keys must be valid messageable args.</span>
+<span class="sd">        e,g. &quot;content&quot;, &quot;embed&quot;, etc.</span>
+<span class="sd">    page_start: int</span>
+<span class="sd">        The page to start the menu at.</span>
+<span class="sd">    timeout: float</span>
+<span class="sd">        The time (in seconds) to wait for a reaction</span>
+<span class="sd">        defaults to 180 seconds.</span>
+<span class="sd">    delete_after_timeout: bool</span>
+<span class="sd">        Whether or not to delete the message after</span>
+<span class="sd">        the timeout has expired.</span>
+<span class="sd">        Defaults to False.</span>
+<span class="sd">    disable_after_timeout: bool</span>
+<span class="sd">        Whether to disable all components on the</span>
+<span class="sd">        menu after timeout has expired. By default</span>
+<span class="sd">        the view is removed from the message on timeout.</span>
+<span class="sd">        Defaults to False.</span>
+<span class="sd">    use_select_menu: bool</span>
+<span class="sd">        Whether or not to include a select menu</span>
+<span class="sd">        to jump specifically between pages.</span>
+<span class="sd">        Defaults to False.</span>
+<span class="sd">    use_select_only: bool</span>
+<span class="sd">        Whether the menu will only display the select</span>
+<span class="sd">        menu for paginating instead of the buttons.</span>
+<span class="sd">        The stop button will remain but is positioned</span>
+<span class="sd">        under the select menu in this instance.</span>
+<span class="sd">        Defaults to False.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">        You can provide a list of strings::</span>
+
+<span class="sd">            from starbot.core.utils.views import SimpleMenu</span>
+<span class="sd">            pages = [&quot;Hello&quot;, &quot;Hi&quot;, &quot;Bonjour&quot;, &quot;Salut&quot;]</span>
+<span class="sd">            await SimpleMenu(pages).start(ctx)</span>
+
+<span class="sd">        You can provide a list of dicts::</span>
+
+<span class="sd">            from starbot.core.utils.views import SimpleMenu</span>
+<span class="sd">            pages = [{&quot;content&quot;: &quot;My content&quot;, &quot;embed&quot;: discord.Embed(description=&quot;hello&quot;)}]</span>
+<span class="sd">            await SimpleMenu(pages).start(ctx)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">pages</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">_ACCEPTABLE_PAGE_TYPES</span><span class="p">],</span>
+        <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">180.0</span><span class="p">,</span>
+        <span class="n">page_start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">delete_after_timeout</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">disable_after_timeout</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">use_select_menu</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">use_select_only</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_author_to_ctx</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_source</span> <span class="o">=</span> <span class="n">_SimplePageSource</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="n">pages</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="n">page_start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delete_after_timeout</span> <span class="o">=</span> <span class="n">delete_after_timeout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disable_after_timeout</span> <span class="o">=</span> <span class="n">disable_after_timeout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_select_menu</span> <span class="o">=</span> <span class="n">use_select_menu</span> <span class="ow">or</span> <span class="n">use_select_only</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_select_only</span> <span class="o">=</span> <span class="n">use_select_only</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_button</span> <span class="o">=</span> <span class="n">_StopButton</span><span class="p">(</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">red</span><span class="p">,</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Cross&quot;</span><span class="p">,</span> <span class="n">animated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">984377347958538262</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_button</span> <span class="o">=</span> <span class="n">_NavigateButton</span><span class="p">(</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;First&quot;</span><span class="p">,</span> <span class="n">animated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">984377537855623178</span><span class="p">),</span>
+            <span class="n">direction</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backward_button</span> <span class="o">=</span> <span class="n">_NavigateButton</span><span class="p">(</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Left&quot;</span><span class="p">,</span> <span class="n">animated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">984377515999109190</span><span class="p">),</span>
+            <span class="n">direction</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">forward_button</span> <span class="o">=</span> <span class="n">_NavigateButton</span><span class="p">(</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Right&quot;</span><span class="p">,</span> <span class="n">animated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">984377456301596692</span><span class="p">),</span>
+            <span class="n">direction</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_button</span> <span class="o">=</span> <span class="n">_NavigateButton</span><span class="p">(</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">PartialEmoji</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Last&quot;</span><span class="p">,</span> <span class="n">animated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">984377411749707796</span><span class="p">),</span>
+            <span class="n">direction</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">get_max_pages</span><span class="p">(),</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">select_options</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">SelectOption</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Page </span><span class="si">{num}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">value</span><span class="o">=</span><span class="n">num</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">select_menu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_select_menu</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_select_menu</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">is_paginating</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_menu</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_button</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">is_paginating</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_select_only</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_button</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">first_button</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">backward_button</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_button</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">forward_button</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">last_button</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">first_button</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">last_button</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">author</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_author</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_author</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_author_to_ctx</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ctx</span><span class="p">,</span> <span class="s2">&quot;author&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="nd">@author</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">author</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_author_to_ctx</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_author</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="SimpleMenu.on_timeout">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SimpleMenu.on_timeout">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete_after_timeout</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">ephemeral</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_after_timeout</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                    <span class="n">child</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">:</span>
+            <span class="c1"># message could no longer be there or we may not be able to edit/delete it anymore</span>
+            <span class="k">pass</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_get_select_menu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># handles modifying the select menu if more than 25 pages are provided</span>
+        <span class="c1"># this will show the previous 12 and next 13 pages in the select menu</span>
+        <span class="c1"># based on the currently displayed page. Once you reach close to the max</span>
+        <span class="c1"># pages it will display the last 25 pages.</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_options</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+            <span class="n">minus_diff</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">plus_diff</span> <span class="o">=</span> <span class="mi">25</span>
+            <span class="k">if</span> <span class="mi">12</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_options</span><span class="p">)</span> <span class="o">-</span> <span class="mi">25</span><span class="p">:</span>
+                <span class="n">minus_diff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">-</span> <span class="mi">12</span>
+                <span class="n">plus_diff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">+</span> <span class="mi">13</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_options</span><span class="p">)</span> <span class="o">-</span> <span class="mi">25</span><span class="p">:</span>
+                <span class="n">minus_diff</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_options</span><span class="p">)</span> <span class="o">-</span> <span class="mi">25</span>
+                <span class="n">plus_diff</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_options</span><span class="p">[</span><span class="n">minus_diff</span><span class="p">:</span><span class="n">plus_diff</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_options</span><span class="p">[:</span><span class="mi">25</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">_SelectMenu</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SimpleMenu.start">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SimpleMenu.start">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">start</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">ephemeral</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Used to start the menu displaying the first page requested.</span>
+
+<span class="sd">        .. warning::</span>
+<span class="sd">            The ``user`` parameter is considered `provisional &lt;developer-guarantees-exclusions&gt;`.</span>
+<span class="sd">            If no issues arise, we plan on including it under developer guarantees</span>
+<span class="sd">            in the first release made after 2024-05-24.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            ctx: `commands.Context`</span>
+<span class="sd">                The context to start the menu in.</span>
+<span class="sd">            user: discord.User</span>
+<span class="sd">                The user allowed to interact with the menu.</span>
+<span class="sd">                If this is ``None``, ``ctx.author`` will be able to interact with the menu.</span>
+<span class="sd">                .. warning::</span>
+<span class="sd">                    This parameter is `provisional &lt;developer-guarantees-exclusions&gt;`.</span>
+<span class="sd">                    If no issues arise, we plan on including it under developer guarantees</span>
+<span class="sd">                    in the first release made after 2024-05-24.</span>
+<span class="sd">            ephemeral: `bool`</span>
+<span class="sd">                Send the message ephemerally. This only works</span>
+<span class="sd">                if the context is from a slash command interaction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_author_to_ctx</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctx</span> <span class="o">=</span> <span class="n">ctx</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_page</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="n">ephemeral</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="SimpleMenu.start_dm">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SimpleMenu.start_dm">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">start_dm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Used to start displaying the menu in a direct message.</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">            user: `discord.User`</span>
+<span class="sd">                The user that will be direct messaged by the bot.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_page</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page_num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">page</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">get_page</span><span class="p">(</span><span class="n">page_num</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_page</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">page</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">get_page</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_page</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">format_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_select_menu</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_options</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">25</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">is_paginating</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">remove_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_menu</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">select_menu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_select_menu</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_menu</span><span class="p">)</span>
+        <span class="n">ret</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;view&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="p">}</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;embed&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">):</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;embed&quot;</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+<div class="viewcode-block" id="SimpleMenu.interaction_check">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SimpleMenu.interaction_check">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">interaction_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Ensure only the author is allowed to interact with the menu.&quot;&quot;&quot;</span>
+        <span class="n">allowed_ids</span> <span class="o">=</span> <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),)</span>
+        <span class="k">if</span> <span class="n">interaction</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_ids</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="n">content</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;You are not authorized to interact with this menu.&quot;</span><span class="p">),</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="SetApiModal">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SetApiModal">[docs]</a>
+<span class="k">class</span> <span class="nc">SetApiModal</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Modal</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A secure ``discord.ui.Modal`` used to set API keys.</span>
+
+<span class="sd">    This Modal can either be used standalone with its own ``discord.ui.View``</span>
+<span class="sd">    for custom implementations, or created via ``SetApiView``</span>
+<span class="sd">    to have an easy to implemement secure way of setting API keys.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    default_service: Optional[str]</span>
+<span class="sd">        The service to add the API keys to.</span>
+<span class="sd">        If this is omitted the bot owner is allowed to set his own service.</span>
+<span class="sd">        Defaults to ``None``.</span>
+<span class="sd">    default_keys: Optional[Dict[str, str]]</span>
+<span class="sd">        The API keys the service is expecting.</span>
+<span class="sd">        This will only allow the bot owner to set keys the Modal is expecting.</span>
+<span class="sd">        Defaults to ``None``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">default_service</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">default_keys</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span> <span class="o">=</span> <span class="n">default_service</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_keys</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">default_keys</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">default_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">default_keys</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_keys_fmt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format_keys</span><span class="p">(</span><span class="n">default_keys</span><span class="p">)</span>
+
+        <span class="n">_placeholder_token</span> <span class="o">=</span> <span class="s2">&quot;client_id YOUR_CLIENT_ID</span><span class="se">\n</span><span class="s2">client_secret YOUR_CLIENT_SECRET&quot;</span>
+        <span class="n">_placeholder_service</span> <span class="o">=</span> <span class="s2">&quot;service&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_placeholder_service</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Set API Key&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keys_label</span> <span class="o">=</span> <span class="s2">&quot;Keys and tokens&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Set API Keys for </span><span class="si">{service}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">default_service</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">keys_label</span> <span class="o">=</span> <span class="s2">&quot;Keys and tokens for </span><span class="si">{service}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">default_service</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="c1"># Lower here to prevent someone from capitalizing a service name for the sake of UX.</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_input</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span>
+            <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+            <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">placeholder</span><span class="o">=</span><span class="n">_placeholder_service</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">default_service</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">token_input</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span>
+            <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">keys_label</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">TextStyle</span><span class="o">.</span><span class="n">long</span><span class="p">,</span>
+            <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">placeholder</span><span class="o">=</span><span class="n">_placeholder_token</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">default_keys_fmt</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">service_input</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">token_input</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_format_keys</span><span class="p">(</span><span class="n">keys</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Format the keys to be used on a long discord.TextInput format&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">keys</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">keys</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">v</span><span class="p">:</span>
+                    <span class="n">ret</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">ret</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> YOUR_</span><span class="si">{</span><span class="n">k</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">return</span> <span class="n">ret</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="SetApiModal.on_submit">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SetApiModal.on_submit">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">is_owner</span><span class="p">(</span>
+            <span class="n">interaction</span><span class="o">.</span><span class="n">user</span>
+        <span class="p">):</span>  <span class="c1"># Prevent non-bot owners from somehow acquiring and saving the modal.</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="s2">&quot;This modal is for bot owners only. Whoops!&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_keys</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">converter</span> <span class="o">=</span> <span class="n">get_dict_converter</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">default_keys</span><span class="p">,</span> <span class="n">delims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">converter</span> <span class="o">=</span> <span class="n">get_dict_converter</span><span class="p">(</span><span class="n">delims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">])</span>
+        <span class="n">tokens</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">token_input</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">tokens</span> <span class="o">=</span> <span class="k">await</span> <span class="n">converter</span><span class="p">()</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">commands</span><span class="o">.</span><span class="n">BadArgument</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="s2">&quot;</span><span class="si">{error_message}</span><span class="se">\n</span><span class="s2">Please try again.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_message</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">)),</span>
+                <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># Check is there is a service set.</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">set_shared_api_tokens</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default_service</span><span class="p">,</span> <span class="o">**</span><span class="n">tokens</span><span class="p">)</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="s2">&quot;`</span><span class="si">{service}</span><span class="s2">` API tokens have been set.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">default_service</span><span class="p">),</span>
+                <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">service</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">service_input</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">set_shared_api_tokens</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="o">**</span><span class="n">tokens</span><span class="p">)</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="s2">&quot;`</span><span class="si">{service}</span><span class="s2">` API tokens have been set.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="n">service</span><span class="p">),</span>
+                <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="SetApiView">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SetApiView">[docs]</a>
+<span class="k">class</span> <span class="nc">SetApiView</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">View</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A secure ``discord.ui.View`` used to set API keys.</span>
+
+<span class="sd">    This view is an standalone, easy to implement ``discord.ui.View``</span>
+<span class="sd">    to allow an bot owner to securely set API keys in a public environment.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    default_service: Optional[str]</span>
+<span class="sd">        The service to add the API keys to.</span>
+<span class="sd">        If this is omitted the bot owner is allowed to set his own service.</span>
+<span class="sd">        Defaults to ``None``.</span>
+<span class="sd">    default_keys: Optional[Dict[str, str]]</span>
+<span class="sd">        The API keys the service is expecting.</span>
+<span class="sd">        This will only allow the bot owner to set keys the Modal is expecting.</span>
+<span class="sd">        Defaults to ``None``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">default_service</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">default_keys</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_service</span> <span class="o">=</span> <span class="n">default_service</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_keys</span> <span class="o">=</span> <span class="n">default_keys</span>
+
+<div class="viewcode-block" id="SetApiView.interaction_check">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.SetApiView.interaction_check">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">interaction_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">is_owner</span><span class="p">(</span><span class="n">interaction</span><span class="o">.</span><span class="n">user</span><span class="p">):</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span><span class="s2">&quot;This button is for bot owners only, oh well.&quot;</span><span class="p">),</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+    <span class="nd">@discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Set API Token&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">auth_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">button</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_modal</span><span class="p">(</span>
+            <span class="n">SetApiModal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default_service</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_keys</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ConfirmView">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ConfirmView">[docs]</a>
+<span class="k">class</span> <span class="nc">ConfirmView</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">View</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A simple `discord.ui.View` used for confirming something.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    author: Optional[discord.abc.User]</span>
+<span class="sd">        The user who you want to be interacting with the confirmation.</span>
+<span class="sd">        If this is omitted anyone can click yes or no.</span>
+<span class="sd">    timeout: float</span>
+<span class="sd">        The timeout of the view in seconds. Defaults to ``180`` seconds.</span>
+<span class="sd">    disable_buttons: bool</span>
+<span class="sd">        Whether to disable the buttons instead of removing them from the message after the timeout.</span>
+<span class="sd">        Defaults to ``False``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Using the view::</span>
+
+<span class="sd">        view = ConfirmView(ctx.author)</span>
+<span class="sd">        # attach the message to the view after sending it.</span>
+<span class="sd">        # This way, the view will be automatically removed</span>
+<span class="sd">        # from the message after the timeout.</span>
+<span class="sd">        view.message = await ctx.send(&quot;Are you sure you about that?&quot;, view=view)</span>
+<span class="sd">        await view.wait()</span>
+<span class="sd">        if view.result:</span>
+<span class="sd">            await ctx.send(&quot;Okay I will do that.&quot;)</span>
+<span class="sd">        else:</span>
+<span class="sd">            await ctx.send(&quot;I will not be doing that then.&quot;)</span>
+
+<span class="sd">    Auto-disable the buttons after timeout if nothing is pressed::</span>
+
+<span class="sd">        view = ConfirmView(ctx.author, disable_buttons=True)</span>
+<span class="sd">        view.message = await ctx.send(&quot;Are you sure you about that?&quot;, view=view)</span>
+<span class="sd">        await view.wait()</span>
+<span class="sd">        if view.result:</span>
+<span class="sd">            await ctx.send(&quot;Okay I will do that.&quot;)</span>
+<span class="sd">        else:</span>
+<span class="sd">            await ctx.send(&quot;I will not be doing that then.&quot;)</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    result: Optional[bool]</span>
+<span class="sd">        The result of the confirm view.</span>
+<span class="sd">    author: Optional[discord.abc.User]</span>
+<span class="sd">        The author of the message who is allowed to press the buttons.</span>
+<span class="sd">    message: Optional[discord.Message]</span>
+<span class="sd">        The message the confirm view is sent on. This can be set while</span>
+<span class="sd">        sending the message. This can also be left as ``None`` in which case</span>
+<span class="sd">        nothing will happen in `on_timeout()`, if the view is never interacted with.</span>
+<span class="sd">    disable_buttons: bool</span>
+<span class="sd">        Whether to disable the buttons isntead of removing them on timeout</span>
+<span class="sd">        (if the `message` attribute has been set on the view).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">author</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">180.0</span><span class="p">,</span>
+        <span class="n">disable_buttons</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;This view should not be used as a persistent view.&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">]</span> <span class="o">=</span> <span class="n">author</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disable_buttons</span> <span class="o">=</span> <span class="n">disable_buttons</span>
+
+<div class="viewcode-block" id="ConfirmView.on_timeout">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ConfirmView.on_timeout">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A callback that is called by the provided (default) callbacks for `confirm_button`</span>
+<span class="sd">        and `dismiss_button` as well as when a view&#39;s timeout elapses without being</span>
+<span class="sd">        explicitly stopped.</span>
+
+<span class="sd">        The default implementation will either disable the buttons</span>
+<span class="sd">        when `disable_buttons` is ``True``, or remove the view from the message otherwise.</span>
+
+<span class="sd">        .. note::</span>
+
+<span class="sd">            This will not do anything if `message` is ``None``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># we can&#39;t do anything here if message is none</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_buttons</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">confirm_button</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dismiss_button</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">view</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">view</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="n">view</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">:</span>
+            <span class="c1"># message could no longer be there or we may not be able to edit it anymore</span>
+            <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="ConfirmView.confirm_button">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ConfirmView.confirm_button">[docs]</a>
+    <span class="nd">@discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">green</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">confirm_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">button</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+        <span class="c1"># Warning: The Sphinx documentation for this method/attribute does not use this docstring.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A `discord.ui.Button` to confirm the message.</span>
+
+<span class="sd">        The button&#39;s callback will set `result` to ``True``, defer the response,</span>
+<span class="sd">        and call `on_timeout()` to clean up the view.</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        Changing the style and label of this `discord.ui.Button`::</span>
+
+<span class="sd">            view = ConfirmView(ctx.author)</span>
+<span class="sd">            view.confirm_button.style = discord.ButtonStyle.red</span>
+<span class="sd">            view.confirm_button.label = &quot;Delete&quot;</span>
+<span class="sd">            view.dismiss_button.label = &quot;Cancel&quot;</span>
+<span class="sd">            view.message = await ctx.send(</span>
+<span class="sd">                &quot;Are you sure you want to remove #very-important-channel?&quot;, view=view</span>
+<span class="sd">            )</span>
+<span class="sd">            await view.wait()</span>
+<span class="sd">            if view.result:</span>
+<span class="sd">                await ctx.send(&quot;Channel #very-important-channel deleted.&quot;)</span>
+<span class="sd">            else:</span>
+<span class="sd">                await ctx.send(&quot;Canceled.&quot;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="c1"># respond to the interaction so the user does not see &quot;interaction failed&quot;.</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">defer</span><span class="p">()</span>
+        <span class="c1"># call `on_timeout` explicitly here since it&#39;s not called when `stop()` is called.</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_timeout</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="ConfirmView.dismiss_button">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ConfirmView.dismiss_button">[docs]</a>
+    <span class="nd">@discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;No&quot;</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">dismiss_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">button</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+        <span class="c1"># Warning: The Sphinx documentation for this method/attribute does not use this docstring.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A `discord.ui.Button` to dismiss the message.</span>
+
+<span class="sd">        The button&#39;s callback will set `result` to ``False``, defer the response,</span>
+<span class="sd">        and call `on_timeout()` to clean up the view.</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        Changing the style and label of this `discord.ui.Button`::</span>
+
+<span class="sd">            view = ConfirmView(ctx.author)</span>
+<span class="sd">            view.confirm_button.style = discord.ButtonStyle.red</span>
+<span class="sd">            view.confirm_button.label = &quot;Delete&quot;</span>
+<span class="sd">            view.dismiss_button.label = &quot;Cancel&quot;</span>
+<span class="sd">            view.message = await ctx.send(</span>
+<span class="sd">                &quot;Are you sure you want to remove #very-important-channel?&quot;, view=view</span>
+<span class="sd">            )</span>
+<span class="sd">            await view.wait()</span>
+<span class="sd">            if view.result:</span>
+<span class="sd">                await ctx.send(&quot;Channel #very-important-channel deleted.&quot;)</span>
+<span class="sd">            else:</span>
+<span class="sd">                await ctx.send(&quot;Canceled.&quot;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="c1"># respond to the interaction so the user does not see &quot;interaction failed&quot;.</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">defer</span><span class="p">()</span>
+        <span class="c1"># call `on_timeout` explicitly here since it&#39;s not called when `stop()` is called.</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_timeout</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="ConfirmView.interaction_check">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ConfirmView.interaction_check">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">interaction_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A callback that is called when an interaction happens within the view</span>
+<span class="sd">        that checks whether the view should process item callbacks for the interaction.</span>
+
+<span class="sd">        The default implementation of this will assign value of `discord.Interaction.message`</span>
+<span class="sd">        to the `message` attribute and either:</span>
+
+<span class="sd">        - send an ephemeral failure message and return ``False``,</span>
+<span class="sd">          if `author` is set and isn&#39;t the same as the interaction user, or</span>
+<span class="sd">        - return ``True``</span>
+
+<span class="sd">        .. seealso::</span>
+
+<span class="sd">            The documentation of the callback in the base class:</span>
+<span class="sd">            :meth:`discord.ui.View.interaction_check()`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">message</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="ow">and</span> <span class="n">interaction</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="n">content</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;You are not authorized to interact with this.&quot;</span><span class="p">),</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="ContactDmReplyModal">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ContactDmReplyModal">[docs]</a>
+<span class="k">class</span> <span class="nc">ContactDmReplyModal</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Modal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Command</span><span class="p">,</span> <span class="n">destination</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Reply to </span><span class="si">{</span><span class="n">destination</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_input</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">TextInput</span><span class="p">(</span>
+            <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Message&quot;</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">TextStyle</span><span class="o">.</span><span class="n">long</span><span class="p">,</span>
+            <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message_input</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ContactDmReplyModal.on_submit">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ContactDmReplyModal.on_submit">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="n">bot</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">client</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_input</span><span class="o">.</span><span class="n">value</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_command</span><span class="p">(</span><span class="s2">&quot;contact&quot;</span><span class="p">):</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">contact</span><span class="p">(</span><span class="n">interaction</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">==</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_command</span><span class="p">(</span><span class="s2">&quot;dm&quot;</span><span class="p">):</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">dm</span><span class="p">(</span><span class="n">interaction</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">contact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">author</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">user</span>
+        <span class="n">bot</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">client</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">destination</span>
+
+        <span class="n">guild</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">guild</span>
+        <span class="n">footer</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;User ID: </span><span class="si">{</span><span class="n">author</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot; | Server ID: </span><span class="si">{</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">guild</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">source</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;from </span><span class="si">{</span><span class="n">guild</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">guild</span> <span class="k">else</span> <span class="s2">&quot;through DM&quot;</span>
+        <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Sent by </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">author</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+
+        <span class="n">embed</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_embed_color</span><span class="p">(</span><span class="n">user</span><span class="p">),</span> <span class="n">description</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">embed</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">icon_url</span><span class="o">=</span><span class="n">author</span><span class="o">.</span><span class="n">display_avatar</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">embed</span><span class="o">.</span><span class="n">set_footer</span><span class="p">(</span>
+            <span class="n">text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">footer</span><span class="si">}</span><span class="se">\n</span><span class="s2">You can reply to this message with the button below or /dm.&quot;</span>
+        <span class="p">)</span>
+        <span class="n">view</span> <span class="o">=</span> <span class="n">ContactDmView</span><span class="p">(</span><span class="n">bot</span><span class="o">.</span><span class="n">get_command</span><span class="p">(</span><span class="s2">&quot;dm&quot;</span><span class="p">),</span> <span class="n">author</span><span class="p">)</span>
+        <span class="n">successful</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">embed</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="n">view</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">):</span>
+            <span class="n">successful</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">successful</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="kc">True</span> <span class="ow">in</span> <span class="n">successful</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Your message has been sent.&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+            <span class="s2">&quot;Sorry, I&#39;m unable to send your message.&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">dm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">author</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">user</span>
+        <span class="n">bot</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">client</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">destination</span>
+
+        <span class="n">embed</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_embed_color</span><span class="p">(</span><span class="n">user</span><span class="p">),</span> <span class="n">description</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+        <span class="n">embed</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">author</span><span class="si">}</span><span class="s2"> (Owner of </span><span class="si">{</span><span class="n">bot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">display_name</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">icon_url</span><span class="o">=</span><span class="n">author</span><span class="o">.</span><span class="n">display_avatar</span><span class="o">.</span><span class="n">url</span>
+        <span class="p">)</span>
+        <span class="n">embed</span><span class="o">.</span><span class="n">set_footer</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;You can reply to this message with the button below or /contact.&quot;</span><span class="p">)</span>
+        <span class="n">view</span> <span class="o">=</span> <span class="n">ContactDmView</span><span class="p">(</span><span class="n">bot</span><span class="o">.</span><span class="n">get_command</span><span class="p">(</span><span class="s2">&quot;contact&quot;</span><span class="p">),</span> <span class="n">author</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">user</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">embed</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="n">view</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Sorry, I couldn&#39;t deliver your message to </span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Your message has been sent to </span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ContactDmView">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.ContactDmView">[docs]</a>
+<span class="k">class</span> <span class="nc">ContactDmView</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">View</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Command</span><span class="p">,</span> <span class="n">destination</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="n">command</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span>
+
+    <span class="nd">@discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Reply&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">reply_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">,</span> <span class="n">button</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Button</span><span class="p">):</span>
+        <span class="n">modal</span> <span class="o">=</span> <span class="n">ContactDmReplyModal</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">destination</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_modal</span><span class="p">(</span><span class="n">modal</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="InviteView">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.InviteView">[docs]</a>
+<span class="k">class</span> <span class="nc">InviteView</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">View</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctx</span> <span class="o">=</span> <span class="n">ctx</span>
+        <span class="n">bot_install</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_install_url</span><span class="p">()</span>
+        <span class="n">server_invite</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_support_server_url</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span>
+            <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+                <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">link</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Install </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">url</span><span class="o">=</span><span class="n">bot_install</span><span class="p">,</span>
+                <span class="n">emoji</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_emoji</span><span class="p">(</span><span class="mi">1220931219169087508</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">server_invite</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span>
+                <span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+                    <span class="n">style</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">link</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Support Server&quot;</span><span class="p">,</span>
+                    <span class="n">url</span><span class="o">=</span><span class="n">server_invite</span><span class="p">,</span>
+                    <span class="n">emoji</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_emoji</span><span class="p">(</span><span class="mi">1220931046871273604</span><span class="p">),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;reference&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">to_reference</span><span class="p">(</span><span class="n">fail_if_not_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mention_author&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;view&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="View">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.View">[docs]</a>
+<span class="k">class</span> <span class="nc">View</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">View</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A subclass of ``discord.ui.View``</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    -----------</span>
+<span class="sd">    timeout: Optional[:class:`float`]</span>
+<span class="sd">        Timeout in seconds from last interaction with the UI before no longer accepting input.</span>
+<span class="sd">        If ``None`` then there is no timeout.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">        from starbot.core.utils.views import _StopButton, View</span>
+
+<span class="sd">        view = View()</span>
+<span class="sd">        view.add_item(_StopButton())</span>
+<span class="sd">        await view.start(ctx, &quot;Hello&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mf">180.0</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="n">commands</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">author</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctx</span> <span class="o">=</span> <span class="n">ctx</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;reference&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">to_reference</span><span class="p">(</span><span class="n">fail_if_not_exists</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mention_author&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;view&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="View.interaction_check">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.View.interaction_check">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">interaction_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">interaction</span><span class="o">.</span><span class="n">user</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span><span class="s2">&quot;You are not authorized to interact with this menu.&quot;</span><span class="p">),</span> <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">disable_items</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interaction</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Interaction</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="s2">&quot;style&quot;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">style</span> <span class="o">==</span> <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">link</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">ButtonStyle</span><span class="o">.</span><span class="n">gray</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="c1"># Interaction is optional here, since interaction can only be called once.</span>
+        <span class="k">if</span> <span class="n">interaction</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">interaction</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">edit_message</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="View.on_timeout">
+<a class="viewcode-back" href="../../../../framework_utils.html#starbot.core.utils.views.View.on_timeout">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">disable_items</span><span class="p">()</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

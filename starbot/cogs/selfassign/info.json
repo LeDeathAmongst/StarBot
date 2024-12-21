@@ -1,0 +1,18 @@
+{
+    "author": [
+        "Star"
+    ],
+    "description": "Allows users to self-assign chosen roles without the help of a moderator",
+    "disabled": false,
+    "hidden": false,
+    "install_msg": "Thanks for installing this cog! Please report any issues here: https://github.com/dualmoon/Cogs.v3/issues",
+    "min_python_version": [
+        3,
+        7,
+        0
+    ],
+    "name": "selfassign",
+    "requirements": [],
+    "short": "Allows users to self-assign roles",
+    "tags": []
+}

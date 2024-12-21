@@ -1,0 +1,8 @@
+{
+    "author": ["Star"],
+    "description": "A cog to generate dashboard integrations for other cogs",
+    "short": "Dashboard Integration Generator",
+    "end_user_data_statement": "",
+    "tags": ["dashboard", "integration", "generator"],
+    "type": "COG"
+}

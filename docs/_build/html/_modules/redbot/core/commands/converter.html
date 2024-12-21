@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.commands.converter &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">starbot.core.commands.converter</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.commands.converter</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">commands.converter</span>
+<span class="sd">==================</span>
+<span class="sd">This module contains useful functions and classes for command argument conversion.</span>
+
+<span class="sd">Some of the converters within are included `provisionally &lt;developer-guarantees-exclusions&gt;`</span>
+<span class="sd">and are marked as such.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">dateutil.relativedelta</span> <span class="kn">import</span> <span class="n">relativedelta</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TYPE_CHECKING</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Optional</span> <span class="k">as</span> <span class="n">NoParseOptional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Type</span><span class="p">,</span>
+    <span class="n">TypeVar</span><span class="p">,</span>
+    <span class="n">Union</span> <span class="k">as</span> <span class="n">UserInputOptional</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">discord.ext</span> <span class="kn">import</span> <span class="n">commands</span> <span class="k">as</span> <span class="n">dpy_commands</span>
+<span class="kn">from</span> <span class="nn">discord.ext.commands</span> <span class="kn">import</span> <span class="n">BadArgument</span>
+
+<span class="kn">from</span> <span class="nn">..i18n</span> <span class="kn">import</span> <span class="n">Translator</span>
+<span class="kn">from</span> <span class="nn">..utils.chat_formatting</span> <span class="kn">import</span> <span class="n">humanize_timedelta</span><span class="p">,</span> <span class="n">humanize_list</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.context</span> <span class="kn">import</span> <span class="n">Context</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;RawUserIdConverter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DictConverter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;UserInputOptional&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NoParseOptional&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RelativedeltaConverter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TimedeltaConverter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;finite_float&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_dict_converter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_timedelta_converter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;parse_relativedelta&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;parse_timedelta&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;positive_int&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CommandConverter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CogConverter&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s2">&quot;commands.converter&quot;</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
+
+<span class="n">ID_REGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;([0-9]{15,20})&quot;</span><span class="p">)</span>
+<span class="n">USER_MENTION_REGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;@!?([0-9]{15,21})&gt;$&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Taken with permission from</span>
+<span class="c1"># https://github.com/mikeshardmind/SinbadCogs/blob/816f3bc2ba860243f75112904b82009a8a9e1f99/scheduler/time_utils.py#L9-L19</span>
+<span class="c1"># with modifications</span>
+<span class="n">TIME_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        (\s?(  # match deliminators here to make word border below unambiguous</span>
+<span class="sd">            (?P&lt;years&gt;[\+-]?\d+)\s?(years?|y)</span>
+<span class="sd">          | (?P&lt;months&gt;[\+-]?\d+)\s?(months?|mo)</span>
+<span class="sd">          | (?P&lt;weeks&gt;[\+-]?\d+)\s?(weeks?|w)</span>
+<span class="sd">          | (?P&lt;days&gt;[\+-]?\d+)\s?(days?|d)</span>
+<span class="sd">          | (?P&lt;hours&gt;[\+-]?\d+)\s?(hours?|hrs|hr?)</span>
+<span class="sd">          | (?P&lt;minutes&gt;[\+-]?\d+)\s?(minutes?|mins?|m)</span>
+<span class="sd">          | (?P&lt;seconds&gt;[\+-]?\d+)\s?(seconds?|secs?|s)</span>
+<span class="sd">        ))+\b</span>
+<span class="sd">    &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_parse_and_match</span><span class="p">(</span><span class="n">string_to_match</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">allowed_units</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Local utility function to match TIME_RE string above to user input for both parse_timedelta and parse_relativedelta</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">matches</span> <span class="o">=</span> <span class="n">TIME_RE</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">string_to_match</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">matches</span><span class="p">:</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">matches</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_units</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span>
+                    <span class="n">_</span><span class="p">(</span><span class="s2">&quot;`</span><span class="si">{unit}</span><span class="s2">` is not a valid unit of time for this command&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="n">params</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="parse_timedelta">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.parse_timedelta">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_timedelta</span><span class="p">(</span>
+    <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">maximum</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">minimum</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+    <span class="n">allowed_units</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This converts a user provided string into a timedelta</span>
+
+<span class="sd">    If a unit is specified multiple times, only the last is considered.</span>
+<span class="sd">    This works with or without whitespace.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    argument : str</span>
+<span class="sd">        The user provided input</span>
+<span class="sd">    maximum : Optional[datetime.timedelta]</span>
+<span class="sd">        If provided, any parsed value higher than this will raise an exception</span>
+<span class="sd">    minimum : Optional[datetime.timedelta]</span>
+<span class="sd">        If provided, any parsed value lower than this will raise an exception</span>
+<span class="sd">        Defaults to 0 seconds, pass `datetime.timedelta.min` explicitly to allow negative values</span>
+<span class="sd">    allowed_units : Optional[List[str]]</span>
+<span class="sd">        If provided, you can constrain a user to expressing the amount of time</span>
+<span class="sd">        in specific units. The units you can chose to provide are the same as the</span>
+<span class="sd">        parser understands. (``weeks``, ``days``, ``hours``, ``minutes``, ``seconds``)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Optional[datetime.timedelta]</span>
+<span class="sd">        If matched, the timedelta which was parsed. This can return `None`</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    BadArgument</span>
+<span class="sd">        If the argument passed uses a unit not allowed, but understood</span>
+<span class="sd">        or if the value is out of bounds.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">allowed_units</span> <span class="o">=</span> <span class="n">allowed_units</span> <span class="ow">or</span> <span class="p">[</span>
+        <span class="s2">&quot;weeks&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hours&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minutes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;seconds&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">if</span> <span class="n">minimum</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">minimum</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">maximum</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">maximum</span> <span class="o">=</span> <span class="n">timedelta</span><span class="o">.</span><span class="n">max</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">_parse_and_match</span><span class="p">(</span><span class="n">argument</span><span class="p">,</span> <span class="n">allowed_units</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">params</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">delta</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">OverflowError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span><span class="s2">&quot;The time set is way too high, consider setting something reasonable.&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">maximum</span> <span class="o">&lt;</span> <span class="n">delta</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span>
+                    <span class="s2">&quot;This amount of time is too large for this command. (Maximum: </span><span class="si">{maximum}</span><span class="s2">)&quot;</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">maximum</span><span class="o">=</span><span class="n">humanize_timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">maximum</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+                    <span class="ow">or</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;0 seconds&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">delta</span> <span class="o">&lt;</span> <span class="n">minimum</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span>
+                    <span class="s2">&quot;This amount of time is too small for this command. (Minimum: </span><span class="si">{minimum}</span><span class="s2">)&quot;</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">minimum</span><span class="o">=</span><span class="n">humanize_timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">minimum</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()))</span>
+                    <span class="ow">or</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;0 seconds&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">delta</span>
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="parse_relativedelta">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.parse_relativedelta">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_relativedelta</span><span class="p">(</span>
+    <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">allowed_units</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">relativedelta</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This converts a user provided string into a datetime with offset from NOW</span>
+
+<span class="sd">    If a unit is specified multiple times, only the last is considered.</span>
+<span class="sd">    This works with or without whitespace.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    argument : str</span>
+<span class="sd">        The user provided input</span>
+<span class="sd">    allowed_units : Optional[List[str]]</span>
+<span class="sd">        If provided, you can constrain a user to expressing the amount of time</span>
+<span class="sd">        in specific units. The units you can chose to provide are the same as the</span>
+<span class="sd">        parser understands. (``years``, ``months``, ``weeks``, ``days``, ``hours``, ``minutes``, ``seconds``)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Optional[dateutil.relativedelta.relativedelta]</span>
+<span class="sd">        If matched, the relativedelta which was parsed. This can return `None`</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    BadArgument</span>
+<span class="sd">        If the argument passed uses a unit not allowed, but understood</span>
+<span class="sd">        or if the value is out of bounds.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">allowed_units</span> <span class="o">=</span> <span class="n">allowed_units</span> <span class="ow">or</span> <span class="p">[</span>
+        <span class="s2">&quot;years&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;months&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;weeks&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hours&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minutes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;seconds&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">_parse_and_match</span><span class="p">(</span><span class="n">argument</span><span class="p">,</span> <span class="n">allowed_units</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">params</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">delta</span> <span class="o">=</span> <span class="n">relativedelta</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">OverflowError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span>
+                <span class="n">_</span><span class="p">(</span><span class="s2">&quot;The time set is way too high, consider setting something reasonable.&quot;</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">delta</span>
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="RawUserIdConverter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.RawUserIdConverter">[docs]</a>
+<span class="k">class</span> <span class="nc">RawUserIdConverter</span><span class="p">(</span><span class="n">dpy_commands</span><span class="o">.</span><span class="n">Converter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts ID or user mention to an `int`.</span>
+
+<span class="sd">    Useful for commands like ``[p]ban`` or ``[p]unban`` where the bot is not necessarily</span>
+<span class="sd">    going to share any servers with the user that a moderator wants to ban/unban.</span>
+
+<span class="sd">    This converter doesn&#39;t check if the ID/mention points to an actual user</span>
+<span class="sd">    but it won&#39;t match IDs and mentions that couldn&#39;t possibly be valid.</span>
+
+<span class="sd">    For example, the converter will not match on &quot;123&quot; because the number doesn&#39;t have</span>
+<span class="sd">    enough digits to be valid ID but, it will match on &quot;12345678901234567&quot; even though</span>
+<span class="sd">    there is no user with such ID.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="c1"># This is for the hackban and unban commands, where we receive IDs that</span>
+        <span class="c1"># are most likely not in the guild.</span>
+        <span class="c1"># Mentions are supported, but most likely won&#39;t ever be in cache.</span>
+
+        <span class="k">if</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">ID_REGEX</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span> <span class="ow">or</span> <span class="n">USER_MENTION_REGEX</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">argument</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+        <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">{input}</span><span class="s2">&#39; doesn&#39;t look like a valid user ID.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="n">argument</span><span class="p">))</span></div>
+
+
+
+<span class="c1"># Below this line are a lot of lies for mypy about things that *end up* correct when</span>
+<span class="c1"># These are used for command conversion purposes. Please refer to the portion</span>
+<span class="c1"># which is *not* for type checking for the actual implementation</span>
+<span class="c1"># and ensure the lies stay correct for how the object should look as a typehint</span>
+
+<span class="c1">#: This converts a user provided string into a positive (&gt;=0) integer.</span>
+<span class="n">positive_int</span> <span class="o">=</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">Range</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="n">finite_float</span> <span class="o">=</span> <span class="nb">float</span>
+<span class="k">else</span><span class="p">:</span>
+
+<div class="viewcode-block" id="finite_float">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.finite_float">[docs]</a>
+    <span class="k">def</span> <span class="nf">finite_float</span><span class="p">(</span><span class="n">arg</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This converts a user provided string into a finite float.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;`</span><span class="si">{arg}</span><span class="s2">` is not a number.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">arg</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">ret</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;`</span><span class="si">{arg}</span><span class="s2">` is not a finite number.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">ret</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="n">DictConverter</span> <span class="o">=</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+
+<div class="viewcode-block" id="DictConverter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.DictConverter">[docs]</a>
+    <span class="k">class</span> <span class="nc">DictConverter</span><span class="p">(</span><span class="n">dpy_commands</span><span class="o">.</span><span class="n">Converter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Converts pairs of space separated values to a dict</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">expected_keys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">delims</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">expected_keys</span> <span class="o">=</span> <span class="n">expected_keys</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delims</span> <span class="o">=</span> <span class="n">delims</span> <span class="ow">or</span> <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;|&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">delims</span><span class="p">))</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+            <span class="n">ret</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Missing a key or value.&quot;</span><span class="p">))</span>
+
+            <span class="n">iterator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">iterator</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">expected_keys</span> <span class="ow">and</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">expected_keys</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Unexpected key `</span><span class="si">{key}</span><span class="s2">`.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">))</span>
+
+                <span class="n">ret</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">iterator</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">ret</span></div>
+
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">get_dict_converter</span><span class="p">(</span><span class="o">*</span><span class="n">expected_keys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">delims</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+        <span class="o">...</span>
+
+<span class="k">else</span><span class="p">:</span>
+
+<div class="viewcode-block" id="get_dict_converter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.get_dict_converter">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_dict_converter</span><span class="p">(</span><span class="o">*</span><span class="n">expected_keys</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">delims</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a typechecking safe `DictConverter` suitable for use with discord.py</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PartialMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">DictConverter</span><span class="p">)):</span>
+            <span class="fm">__call__</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partialmethod</span><span class="p">(</span>
+                <span class="nb">type</span><span class="p">(</span><span class="n">DictConverter</span><span class="p">)</span><span class="o">.</span><span class="fm">__call__</span><span class="p">,</span> <span class="o">*</span><span class="n">expected_keys</span><span class="p">,</span> <span class="n">delims</span><span class="o">=</span><span class="n">delims</span>
+            <span class="p">)</span>
+
+        <span class="k">class</span> <span class="nc">ValidatedConverter</span><span class="p">(</span><span class="n">DictConverter</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">PartialMeta</span><span class="p">):</span>
+            <span class="k">pass</span>
+
+        <span class="k">return</span> <span class="n">ValidatedConverter</span></div>
+
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="n">TimedeltaConverter</span> <span class="o">=</span> <span class="n">timedelta</span>
+<span class="k">else</span><span class="p">:</span>
+
+<div class="viewcode-block" id="TimedeltaConverter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.TimedeltaConverter">[docs]</a>
+    <span class="k">class</span> <span class="nc">TimedeltaConverter</span><span class="p">(</span><span class="n">dpy_commands</span><span class="o">.</span><span class="n">Converter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is a converter for timedeltas.</span>
+<span class="sd">        The units should be in order from largest to smallest.</span>
+<span class="sd">        This works with or without whitespace.</span>
+
+<span class="sd">        See `parse_timedelta` for more information about how this functions.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        maximum : Optional[datetime.timedelta]</span>
+<span class="sd">            If provided, any parsed value higher than this will raise an exception</span>
+<span class="sd">        minimum : Optional[datetime.timedelta]</span>
+<span class="sd">            If provided, any parsed value lower than this will raise an exception</span>
+<span class="sd">            Defaults to 0 seconds, pass `datetime.timedelta.min` explicitly to allow negative values</span>
+<span class="sd">        allowed_units : Optional[List[str]]</span>
+<span class="sd">            If provided, you can constrain a user to expressing the amount of time</span>
+<span class="sd">            in specific units. The units you can choose to provide are the same as the</span>
+<span class="sd">            parser understands: (``weeks``, ``days``, ``hours``, ``minutes``, ``seconds``)</span>
+<span class="sd">        default_unit : Optional[str]</span>
+<span class="sd">            If provided, it will additionally try to match integer-only input into</span>
+<span class="sd">            a timedelta, using the unit specified. Same units as in ``allowed_units``</span>
+<span class="sd">            apply.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">,</span>
+            <span class="n">minimum</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+            <span class="n">maximum</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">allowed_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">default_unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allowed_units</span> <span class="o">=</span> <span class="n">allowed_units</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">default_unit</span> <span class="o">=</span> <span class="n">default_unit</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">minimum</span> <span class="o">=</span> <span class="n">minimum</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">maximum</span> <span class="o">=</span> <span class="n">maximum</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">timedelta</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_unit</span> <span class="ow">and</span> <span class="n">argument</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">():</span>
+                <span class="n">argument</span> <span class="o">=</span> <span class="n">argument</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_unit</span>
+
+            <span class="n">delta</span> <span class="o">=</span> <span class="n">parse_timedelta</span><span class="p">(</span>
+                <span class="n">argument</span><span class="p">,</span>
+                <span class="n">minimum</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">minimum</span><span class="p">,</span>
+                <span class="n">maximum</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">maximum</span><span class="p">,</span>
+                <span class="n">allowed_units</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">allowed_units</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">delta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">delta</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">()</span>  <span class="c1"># This allows this to be a required argument.</span></div>
+
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">get_timedelta_converter</span><span class="p">(</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">default_unit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">maximum</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">minimum</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+        <span class="n">allowed_units</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]:</span>
+        <span class="o">...</span>
+
+<span class="k">else</span><span class="p">:</span>
+
+<div class="viewcode-block" id="get_timedelta_converter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.get_timedelta_converter">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_timedelta_converter</span><span class="p">(</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">default_unit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">maximum</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">minimum</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+        <span class="n">allowed_units</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">timedelta</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This creates a type suitable for typechecking which works with discord.py&#39;s</span>
+<span class="sd">        commands.</span>
+
+<span class="sd">        See `parse_timedelta` for more information about how this functions.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        maximum : Optional[datetime.timedelta]</span>
+<span class="sd">            If provided, any parsed value higher than this will raise an exception</span>
+<span class="sd">        minimum : Optional[datetime.timedelta]</span>
+<span class="sd">            If provided, any parsed value lower than this will raise an exception</span>
+<span class="sd">            Defaults to 0 seconds, pass `datetime.timedelta.min` explicitly to allow negative values</span>
+<span class="sd">        allowed_units : Optional[List[str]]</span>
+<span class="sd">            If provided, you can constrain a user to expressing the amount of time</span>
+<span class="sd">            in specific units. The units you can choose to provide are the same as the</span>
+<span class="sd">            parser understands: (``weeks``, ``days``, ``hours``, ``minutes``, ``seconds``)</span>
+<span class="sd">        default_unit : Optional[str]</span>
+<span class="sd">            If provided, it will additionally try to match integer-only input into</span>
+<span class="sd">            a timedelta, using the unit specified. Same units as in ``allowed_units``</span>
+<span class="sd">            apply.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        type</span>
+<span class="sd">            The converter class, which will be a subclass of `TimedeltaConverter`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PartialMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">DictConverter</span><span class="p">)):</span>
+            <span class="fm">__call__</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partialmethod</span><span class="p">(</span>
+                <span class="nb">type</span><span class="p">(</span><span class="n">DictConverter</span><span class="p">)</span><span class="o">.</span><span class="fm">__call__</span><span class="p">,</span>
+                <span class="n">allowed_units</span><span class="o">=</span><span class="n">allowed_units</span><span class="p">,</span>
+                <span class="n">default_unit</span><span class="o">=</span><span class="n">default_unit</span><span class="p">,</span>
+                <span class="n">minimum</span><span class="o">=</span><span class="n">minimum</span><span class="p">,</span>
+                <span class="n">maximum</span><span class="o">=</span><span class="n">maximum</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="k">class</span> <span class="nc">ValidatedConverter</span><span class="p">(</span><span class="n">TimedeltaConverter</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">PartialMeta</span><span class="p">):</span>
+            <span class="k">pass</span>
+
+        <span class="k">return</span> <span class="n">ValidatedConverter</span></div>
+
+
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="n">RelativedeltaConverter</span> <span class="o">=</span> <span class="n">relativedelta</span>
+<span class="k">else</span><span class="p">:</span>
+
+<div class="viewcode-block" id="RelativedeltaConverter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.RelativedeltaConverter">[docs]</a>
+    <span class="k">class</span> <span class="nc">RelativedeltaConverter</span><span class="p">(</span><span class="n">dpy_commands</span><span class="o">.</span><span class="n">Converter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is a converter for relative deltas.</span>
+
+<span class="sd">        The units should be in order from largest to smallest.</span>
+<span class="sd">        This works with or without whitespace.</span>
+
+<span class="sd">        See `parse_relativedelta` for more information about how this functions.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        allowed_units : Optional[List[str]]</span>
+<span class="sd">            If provided, you can constrain a user to expressing the amount of time</span>
+<span class="sd">            in specific units. The units you can choose to provide are the same as the</span>
+<span class="sd">            parser understands: (``years``, ``months``, ``weeks``, ``days``, ``hours``, ``minutes``, ``seconds``)</span>
+<span class="sd">        default_unit : Optional[str]</span>
+<span class="sd">            If provided, it will additionally try to match integer-only input into</span>
+<span class="sd">            a timedelta, using the unit specified. Same units as in ``allowed_units``</span>
+<span class="sd">            apply.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">allowed_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_unit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allowed_units</span> <span class="o">=</span> <span class="n">allowed_units</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">default_unit</span> <span class="o">=</span> <span class="n">default_unit</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">relativedelta</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_unit</span> <span class="ow">and</span> <span class="n">argument</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">():</span>
+                <span class="n">argument</span> <span class="o">=</span> <span class="n">argument</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_unit</span>
+
+            <span class="n">delta</span> <span class="o">=</span> <span class="n">parse_relativedelta</span><span class="p">(</span><span class="n">argument</span><span class="p">,</span> <span class="n">allowed_units</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">allowed_units</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">delta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">delta</span>
+            <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">()</span>  <span class="c1"># This allows this to be a required argument.</span></div>
+
+
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+
+<div class="viewcode-block" id="NoParseOptional">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.NoParseOptional">[docs]</a>
+    <span class="k">class</span> <span class="nc">NoParseOptional</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This can be used instead of `typing.Optional`</span>
+<span class="sd">        to avoid discord.py special casing the conversion behavior.</span>
+
+<span class="sd">        .. seealso::</span>
+<span class="sd">            The `ignore_optional_for_conversion` option of commands.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">__class_getitem__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Must only provide a single type to Optional&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">key</span></div>
+
+
+
+<span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;_T&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="c1">#: This can be used when user input should be converted as discord.py</span>
+    <span class="c1">#: treats `typing.Optional`, but the type should not be equivalent to</span>
+    <span class="c1">#: ``typing.Union[DesiredType, None]`` for type checking.</span>
+    <span class="c1">#:</span>
+    <span class="c1">#: Note: In type checking context, this type hint can be passed</span>
+    <span class="c1">#: multiple types, but such usage is not supported and will fail at runtime</span>
+    <span class="c1">#:</span>
+    <span class="c1">#: .. warning::</span>
+    <span class="c1">#:    This converter class is still `provisional &lt;developer-guarantees-exclusions&gt;`.</span>
+    <span class="n">UserInputOptional</span> <span class="o">=</span> <span class="n">Optional</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="n">CommandConverter</span> <span class="o">=</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">Command</span>
+    <span class="n">CogConverter</span> <span class="o">=</span> <span class="n">dpy_commands</span><span class="o">.</span><span class="n">Cog</span>
+<span class="k">else</span><span class="p">:</span>
+
+<div class="viewcode-block" id="CommandConverter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.CommandConverter">[docs]</a>
+    <span class="k">class</span> <span class="nc">CommandConverter</span><span class="p">(</span><span class="n">dpy_commands</span><span class="o">.</span><span class="n">Converter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Converts a command name to the matching `starbot.core.commands.Command` object.&quot;&quot;&quot;</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">argument</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">command</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_command</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">command</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Command &quot;</span><span class="si">{arg}</span><span class="s1">&quot; not found.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">arg</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">command</span></div>
+
+
+<div class="viewcode-block" id="CogConverter">
+<a class="viewcode-back" href="../../../../framework_commands.html#starbot.core.commands.converter.CogConverter">[docs]</a>
+    <span class="k">class</span> <span class="nc">CogConverter</span><span class="p">(</span><span class="n">dpy_commands</span><span class="o">.</span><span class="n">Converter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Converts a cog name to the matching `starbot.core.commands.Cog` object.&quot;&quot;&quot;</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="s2">&quot;Context&quot;</span><span class="p">,</span> <span class="n">argument</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">arg</span> <span class="o">=</span> <span class="n">argument</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">cog</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">get_cog</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cog</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">BadArgument</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Cog &quot;</span><span class="si">{arg}</span><span class="s1">&quot; not found.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">arg</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">cog</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

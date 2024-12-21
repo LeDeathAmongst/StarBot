@@ -1,0 +1,593 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red-discordbot\n"
+"POT-Creation-Date: 2024-04-01 01:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: red-discordbot\n"
+"X-Crowdin-Project-ID: 289505\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File-ID: 45\n"
+"Language: zh_CN\n"
+
+#: starbot/cogs/trivia/checks.py:13 starbot/cogs/trivia/trivia.py:385
+msgid "There is no ongoing trivia session in this channel."
+msgstr ""
+
+#: starbot/cogs/trivia/converters.py:18
+msgid "`{arg}` is not a number."
+msgstr ""
+
+#: starbot/cogs/trivia/converters.py:20
+msgid "`{arg}` is not a finite number."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:34
+msgid "The trivia list does not contain any questions."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:39
+msgid "{key} key must be a text value."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:43
+msgid "{key} key must be a text value not longer than 1000 characters."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:48
+msgid "{key} key must be a text value not longer than 200 characters."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:55
+msgid "{key} key in {parent_key} must be a positive integer."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:60
+msgid "{key} key in {parent_key} must be a positive number."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:65
+msgid "{key} key in {parent_key} must be a positive number greater than or equal to 4."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:71 starbot/cogs/trivia/schema.py:74
+#: starbot/cogs/trivia/schema.py:82
+msgid "{key} key in {parent_key} must be either true or false."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:79
+msgid "{key} key in {parent_key} must be a non-negative number."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:88
+msgid "{key} is not a key that can be specified in {parent_key}."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:91
+msgid "{key} should be a 'key: value' mapping."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:95
+msgid "Value of question {key} is not a list of text values (answers)."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:101
+msgid "A key of question {key} is not a text value."
+msgstr ""
+
+#: starbot/cogs/trivia/schema.py:104
+msgid "A trivia list should be a 'key: value' mapping."
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:21
+msgid "I know this one! {answer}!"
+msgstr "我知道这个！ {answer}！"
+
+#: starbot/cogs/trivia/session.py:22
+msgid "Easy: {answer}."
+msgstr "简单：{answer}"
+
+#: starbot/cogs/trivia/session.py:23
+msgid "Oh really? It's {answer} of course."
+msgstr "真的？当然是 {answer}"
+
+#: starbot/cogs/trivia/session.py:27
+msgid "I know this one! ||{answer}!||"
+msgstr "我知道这个! ||{answer}!||"
+
+#: starbot/cogs/trivia/session.py:28
+msgid "Easy: ||{answer}.||"
+msgstr "简单：||{answer}.||"
+
+#: starbot/cogs/trivia/session.py:29
+msgid "Oh really? It's ||{answer}|| of course."
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:33
+msgid "To the next one I guess..."
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:34
+msgid "Moving on..."
+msgstr "继续。。。"
+
+#: starbot/cogs/trivia/session.py:35
+msgid "I'm sure you'll know the answer of the next one."
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:36
+msgid "😔 Next one."
+msgstr "😔 下一个"
+
+#: starbot/cogs/trivia/session.py:122
+msgid "An unexpected error occurred in the trivia session."
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:124
+msgid "An unexpected error occurred in the trivia session.\n"
+"Check your console or logs for details."
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:144
+msgid "Question number {num}!"
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:153
+msgid "There are no more questions!"
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:161
+msgid "{trivia_list} (by {author})"
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:166
+msgid "Starting Trivia: {list_names}"
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:212
+msgid "Guys...? Well, I guess I'll stop then."
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:223
+msgid " **+1** for me!"
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:228
+msgid "You got it {user}! **+1** to you!"
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:334
+msgid "Congratulations {users}! You have each received {num} {currency} for winning!"
+msgstr ""
+
+#: starbot/cogs/trivia/session.py:342
+msgid "Congratulations {user}! You have received {num} {currency} for winning!"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:43
+msgid "Yes"
+msgstr "是"
+
+#: starbot/cogs/trivia/trivia.py:45
+msgid "No"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:49
+msgid "{seconds} seconds"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:55
+msgid "Bot gains points"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:56
+msgid "Answer time limit"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:57
+msgid "Lack of response timeout"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:58
+msgid "Points to win"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:59
+msgid "Answers are revealed on timeout"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:60
+msgid "Payout multiplier"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:61
+msgid "Lists are allowed to override settings"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:62
+msgid "Answers use spoilers"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:74
+#, docstring
+msgid "Play trivia with friends!"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:114
+#, docstring
+msgid "Manage Trivia settings."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:118
+#, docstring
+msgid "Show the current trivia settings."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:120
+msgid "Current settings:\n\n"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:125
+#, docstring
+msgid "Set the total points required to win."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:127
+msgid "Score must be greater than 0."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:131
+msgid "Done. Points required to win set to {num}."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:135
+#, docstring
+msgid "Set the maximum seconds permitted to answer a question."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:137
+msgid "Must be at least 4 seconds."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:141
+msgid "Done. Maximum seconds to answer set to {num}."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:145
+#, docstring
+msgid "Set how long until trivia stops due to no response."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:148
+msgid "Must be larger than the answer time limit."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:152
+msgid "Done. Trivia sessions will now time out after {num} seconds of no responses."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:159
+#, docstring
+msgid "Allow/disallow trivia lists to override settings."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:164
+msgid "Done. Trivia lists can now override the trivia settings for this server."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:168
+msgid "Done. Trivia lists can no longer override the trivia settings for this server."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:176
+#, docstring
+msgid "Set if bot will display the answers in spoilers.\n\n"
+"        If enabled, the bot will use spoilers to hide answers.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:183
+msgid "Done. I'll put the answers in spoilers next time."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:185
+msgid "Alright, I won't use spoilers to hide answers anymore."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:189
+#, docstring
+msgid "Set whether or not the bot gains points.\n\n"
+"        If enabled, the bot will gain a point if no one guesses correctly.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:196
+msgid "Done. I'll now gain a point if users don't answer in time."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:198
+msgid "Alright, I won't embarrass you at trivia anymore."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:202
+#, docstring
+msgid "Set whether or not the answer is revealed.\n\n"
+"        If enabled, the bot will reveal the answer if no one guesses correctly\n"
+"        in time.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:210
+msgid "Done. I'll reveal the answer if no one knows it."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:212
+msgid "Alright, I won't reveal the answer to the questions anymore."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:218
+#, docstring
+msgid "Set the payout multiplier.\n\n"
+"        This can be any positive decimal number. If a user wins trivia when at\n"
+"        least 3 members are playing, they will receive credits. Set to 0 to\n"
+"        disable.\n\n"
+"        The number of credits is determined by multiplying their total score by\n"
+"        this multiplier.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:229
+msgid "Multiplier must be at least 0."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:233
+msgid "Done. Payout multiplier set to {num}."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:235
+msgid "Done. I will no longer reward the winner with a payout."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:240
+#, docstring
+msgid "Manage Custom Trivia lists."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:245
+#, docstring
+msgid "List uploaded custom trivia."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:247
+msgid "No custom Trivia lists uploaded."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:263 starbot/cogs/trivia/trivia.py:270
+msgid "Uploaded trivia lists"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:280
+#, docstring
+msgid "Upload a trivia file."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:282
+msgid "Supply a file with next message or type anything to cancel."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:288
+msgid "You took too long to upload a list."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:291
+msgid "You have cancelled the upload process."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:299
+msgid "Invalid syntax:\n"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:302
+msgid "There was an error parsing the trivia list. See logs for more info."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:307
+msgid "The custom trivia list was not saved. The file does not follow the proper data format.\n"
+"{schema_error}"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:316
+#, docstring
+msgid "Delete a trivia file."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:320
+msgid "Trivia {filename} was deleted."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:322
+msgid "Trivia file was not found."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:327
+#, docstring
+msgid "Start trivia session on the specified category.\n\n"
+"        You may list multiple categories, in which case the trivia will involve\n"
+"        questions from all of them.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:335
+msgid "There is already an ongoing trivia session in this channel."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:346
+msgid "Invalid category `{name}`. See `{prefix}trivia list` for a list of trivia categories."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:353
+msgid "There was an error parsing the trivia list for the `{name}` category. It may be formatted incorrectly."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:368
+msgid "The trivia list was parsed successfully, however it appears to be empty!"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:382
+#, docstring
+msgid "Stop an ongoing trivia session."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:389
+msgid "Trivia stopped."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:393
+#, docstring
+msgid "List available trivia categories."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:398 starbot/cogs/trivia/trivia.py:404
+msgid "Available trivia lists"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:412
+#, docstring
+msgid "Get information about a trivia category."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:417
+msgid "Category {name} does not exist. See {command} for the list of available trivia categories."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:424
+msgid "There was an error parsing the trivia list for the {name} category. It may be formatted incorrectly."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:433
+msgid "\"{category}\" Category Details"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:437
+msgid "Authors"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:437
+msgid "Not provided."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:439
+msgid "Question count"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:441
+msgid "Custom"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:447
+msgid "Description"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:450
+msgid "No description provided for this category."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:457
+msgid "Config"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:467
+#, docstring
+msgid "Leaderboard for trivia.\n\n"
+"        Defaults to the top 10 of this server, sorted by total wins. Use\n"
+"        subcommands for a more customised leaderboard.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:482
+#, docstring
+msgid "Leaderboard for this server.\n\n"
+"        `<sort_by>` can be any of the following fields:\n"
+"         - `wins`  : total wins\n"
+"         - `avg`   : average score\n"
+"         - `total` : total correct answers\n"
+"         - `games` : total games played\n\n"
+"        `<top>` is the number of ranks to show on the leaderboard.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:495 starbot/cogs/trivia/trivia.py:524
+msgid "Unknown field `{field_name}`, see `{prefix}help trivia leaderboard server` for valid fields to sort by."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:511
+#, docstring
+msgid "Global trivia leaderboard.\n\n"
+"        `<sort_by>` can be any of the following fields:\n"
+"         - `wins`  : total wins\n"
+"         - `avg`   : average score\n"
+"         - `total` : total correct answers from all sessions\n"
+"         - `games` : total games played\n\n"
+"        `<top>` is the number of ranks to show on the leaderboard.\n"
+"        "
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:579
+msgid "There are no scores on record!"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:609
+msgid "Rank"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:610
+msgid "Member"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:611
+msgid "Wins"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:612
+msgid "Games Played"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:613
+msgid "Total Score"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:614
+msgid "Average Score"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:723
+msgid "{filename} is a reserved trivia name and cannot be replaced.\n"
+"Choose another name."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:732
+msgid "{filename} already exists. Do you wish to overwrite?"
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:754
+msgid "You took too long answering."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:758
+msgid "I am not replacing the existing file."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:771
+msgid "There was an error saving the file.\n"
+"Please check the filename and try again, as it could be longer than your system supports."
+msgstr ""
+
+#: starbot/cogs/trivia/trivia.py:778
+msgid "Saved Trivia list as {filename}."
+msgstr ""
+

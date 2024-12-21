@@ -1,0 +1,7 @@
+<ul>
+    {% for log in logs %}
+    <li>
+        <strong>{{ log.timestamp }}:</strong> {{ log.message }}
+    </li>
+    {% endfor %}
+</ul>

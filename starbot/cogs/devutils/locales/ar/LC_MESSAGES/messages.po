@@ -1,0 +1,87 @@
+# Arabic translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 03:56+0100\n"
+"PO-Revision-Date: 2024-10-14 03:57+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: devutils.py:38
+msgid "No valid log level provided."
+msgstr "لم يتم توفير مستوى سجل صالح."
+msgstr ""
+
+#: devutils.py:59
+msgid "No valid discord object provided."
+msgstr "لم يتم توفير كائن خلاف صالح."
+msgstr ""
+
+#: devutils.py:112 devutils.py:171 devutils.py:182
+msgid "You have not specified a correct command."
+msgstr "لم تقم بتحديد الأمر الصحيح."
+msgstr ""
+
+#: devutils.py:116 devutils.py:186
+msgid "You can't execute yourself this command."
+msgstr "لا يمكنك تنفيذ هذا الأمر بنفسك."
+msgstr ""
+
+#: devutils.py:138 devutils.py:153
+msgid "`{command}` isn't a valid command."
+msgstr "`{command}` ليس أمرًا صالحًا."
+msgstr ""
+
+#: devutils.py:143 devutils.py:158
+msgid "You can't execute yourself `{command}`."
+msgstr "لا يمكنك تنفيذ `{command}` بنفسك."
+msgstr ""
+
+#: devutils.py:191
+msgid "Command `{command}` finished in `{timing}`s."
+msgstr "انتهى الأمر `{command}` خلال `{timeing}`s."
+msgstr ""
+
+#: devutils.py:213
+msgid "The command isn't valid."
+msgstr "الأمر غير صالح."
+msgstr ""
+
+#: devutils.py:217
+msgid "This command can't be executed."
+msgstr "لا يمكن تنفيذ هذا الأمر."
+msgstr ""
+
+#: devutils.py:236
+msgid "Logger `{logger_name}` level set to `{level}`."
+msgstr "تم ضبط مستوى المسجل `{logger_name}` على `{level}`."
+msgstr ""
+
+#: devutils.py:268
+msgid "I couldn't find any module with this name."
+msgstr "لم أتمكن من العثور على أي وحدة بهذا الاسم."
+msgstr ""
+
+#: devutils.py:272
+msgid "Module(s) {modules} reloaded."
+msgstr "تم إعادة تحميل الوحدة (الوحدات) {modules}."
+msgstr ""
+
+#: devutils.py:277
+msgid "Modules [...] reloaded."
+msgstr "الوحدات [...] تم إعادة تحميلها."
+msgstr ""
+

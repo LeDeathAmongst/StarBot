@@ -1,0 +1,1535 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>starbot.core.modlog &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">starbot.core.modlog</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <h1>Source code for starbot.core.modlog</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">,</span> <span class="n">timezone</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span>
+
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">AsyncIter</span>
+<span class="kn">from</span> <span class="nn">.utils.common_filters</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">filter_invites</span><span class="p">,</span>
+    <span class="n">filter_mass_mentions</span><span class="p">,</span>
+    <span class="n">filter_urls</span><span class="p">,</span>
+    <span class="n">escape_spoilers</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.utils.chat_formatting</span> <span class="kn">import</span> <span class="n">bold</span><span class="p">,</span> <span class="n">pagify</span>
+<span class="kn">from</span> <span class="nn">.i18n</span> <span class="kn">import</span> <span class="n">Translator</span><span class="p">,</span> <span class="n">set_contextual_locales_from_guild</span>
+
+<span class="kn">from</span> <span class="nn">.generic_casetypes</span> <span class="kn">import</span> <span class="n">all_generics</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">starbot.core.bot</span> <span class="kn">import</span> <span class="n">Red</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;red.core.modlog&quot;</span><span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Case&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CaseType&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_case&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_latest_case&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_all_cases&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_cases_for_member&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;create_case&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_casetype&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_all_casetypes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;register_casetype&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;register_casetypes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;get_modlog_channel&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;set_modlog_channel&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;reset_cases&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Config</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">_bot_ref</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Red</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">_CASETYPES</span> <span class="o">=</span> <span class="s2">&quot;CASETYPES&quot;</span>
+<span class="n">_CASES</span> <span class="o">=</span> <span class="s2">&quot;CASES&quot;</span>
+<span class="n">_SCHEMA_VERSION</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">_data_deletion_lock</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">Translator</span><span class="p">(</span><span class="s2">&quot;ModLog&quot;</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_process_data_deletion</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span> <span class="n">requester</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;discord_deleted_user&quot;</span><span class="p">,</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;user_strict&quot;</span><span class="p">],</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="n">requester</span> <span class="o">!=</span> <span class="s2">&quot;discord_deleted_user&quot;</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="c1"># Oh, how I wish it was as simple as I wanted...</span>
+
+    <span class="n">key_paths</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">async</span> <span class="k">with</span> <span class="n">_data_deletion_lock</span><span class="p">:</span>
+        <span class="n">all_cases</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">guild_id_str</span><span class="p">,</span> <span class="n">guild_cases</span> <span class="ow">in</span> <span class="n">AsyncIter</span><span class="p">(</span><span class="n">all_cases</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+            <span class="k">async</span> <span class="k">for</span> <span class="n">case_num_str</span><span class="p">,</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">AsyncIter</span><span class="p">(</span><span class="n">guild_cases</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">steps</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">keyname</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;moderator&quot;</span><span class="p">,</span> <span class="s2">&quot;amended_by&quot;</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">case</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">keyname</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">:</span>  <span class="c1"># this could be None...</span>
+                        <span class="n">key_paths</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">guild_id_str</span><span class="p">,</span> <span class="n">case_num_str</span><span class="p">))</span>
+
+        <span class="k">async</span> <span class="k">with</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="k">as</span> <span class="n">all_cases</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">guild_id_str</span><span class="p">,</span> <span class="n">case_num_str</span> <span class="ow">in</span> <span class="n">key_paths</span><span class="p">:</span>
+                <span class="n">case</span> <span class="o">=</span> <span class="n">all_cases</span><span class="p">[</span><span class="n">guild_id_str</span><span class="p">][</span><span class="n">case_num_str</span><span class="p">]</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">case</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">:</span>
+                    <span class="k">case</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xDE1</span>
+                    <span class="k">case</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;last_known_username&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">case</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moderator&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">:</span>
+                    <span class="k">case</span><span class="p">[</span><span class="s2">&quot;moderator&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xDE1</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">case</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;amended_by&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">:</span>
+                    <span class="k">case</span><span class="p">[</span><span class="s2">&quot;amended_by&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0xDE1</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_init</span><span class="p">(</span><span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">_config</span>
+    <span class="k">global</span> <span class="n">_bot_ref</span>
+    <span class="n">_bot_ref</span> <span class="o">=</span> <span class="n">bot</span>
+    <span class="n">_config</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">get_conf</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1354799444</span><span class="p">,</span> <span class="n">cog_name</span><span class="o">=</span><span class="s2">&quot;ModLog&quot;</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_global</span><span class="p">(</span><span class="n">schema_version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_guild</span><span class="p">(</span><span class="n">mod_log</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">casetypes</span><span class="o">=</span><span class="p">{},</span> <span class="n">latest_case_number</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">init_custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">init_custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">)</span>
+    <span class="n">_config</span><span class="o">.</span><span class="n">register_custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">_migrate_config</span><span class="p">(</span><span class="n">from_version</span><span class="o">=</span><span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">schema_version</span><span class="p">(),</span> <span class="n">to_version</span><span class="o">=</span><span class="n">_SCHEMA_VERSION</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">register_casetypes</span><span class="p">(</span><span class="n">all_generics</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_audit_log_entry_create</span><span class="p">(</span><span class="n">entry</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">AuditLogEntry</span><span class="p">):</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">guild</span>
+        <span class="k">if</span> <span class="n">guild</span><span class="o">.</span><span class="n">unavailable</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">action</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">AuditLogAction</span><span class="o">.</span><span class="n">ban</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">AuditLogAction</span><span class="o">.</span><span class="n">unban</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">get_modlog_channel</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="k">return</span>  <span class="c1"># No modlog channel so no point in continuing</span>
+
+        <span class="c1"># Don&#39;t create modlog entires for the bot&#39;s own bans, cogs do this.</span>
+        <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">user_id</span> <span class="o">==</span> <span class="n">guild</span><span class="o">.</span><span class="n">me</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">mod</span><span class="p">,</span> <span class="n">reason</span><span class="p">,</span> <span class="n">date</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="n">entry</span><span class="o">.</span><span class="n">reason</span><span class="p">,</span> <span class="n">entry</span><span class="o">.</span><span class="n">created_at</span>
+        <span class="k">await</span> <span class="n">create_case</span><span class="p">(</span><span class="n">_bot_ref</span><span class="p">,</span> <span class="n">guild</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">entry</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">entry</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">mod</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span>
+
+    <span class="n">bot</span><span class="o">.</span><span class="n">add_listener</span><span class="p">(</span><span class="n">on_audit_log_entry_create</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">handle_auditype_key</span><span class="p">():</span>
+    <span class="n">all_casetypes</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">casetype_name</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">inner_key</span><span class="p">:</span> <span class="n">inner_value</span>
+            <span class="k">for</span> <span class="n">inner_key</span><span class="p">,</span> <span class="n">inner_value</span> <span class="ow">in</span> <span class="n">casetype_data</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">inner_key</span> <span class="o">!=</span> <span class="s2">&quot;audit_type&quot;</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">casetype_name</span><span class="p">,</span> <span class="n">casetype_data</span> <span class="ow">in</span> <span class="p">(</span><span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">all_casetypes</span><span class="p">)</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">_migrate_config</span><span class="p">(</span><span class="n">from_version</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">to_version</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">from_version</span> <span class="o">==</span> <span class="n">to_version</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="k">if</span> <span class="n">from_version</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="n">to_version</span><span class="p">:</span>
+        <span class="c1"># casetypes go from GLOBAL -&gt; casetypes to CASETYPES</span>
+        <span class="n">all_casetypes</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">get_raw</span><span class="p">(</span><span class="s2">&quot;casetypes&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">{})</span>
+        <span class="k">if</span> <span class="n">all_casetypes</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">all_casetypes</span><span class="p">)</span>
+
+        <span class="c1"># cases go from GUILD -&gt; guild_id -&gt; cases to CASES -&gt; guild_id -&gt; cases</span>
+        <span class="n">all_guild_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">all_guilds</span><span class="p">()</span>
+        <span class="n">all_cases</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">guild_id</span><span class="p">,</span> <span class="n">guild_data</span> <span class="ow">in</span> <span class="n">all_guild_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">guild_cases</span> <span class="o">=</span> <span class="n">guild_data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;cases&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">guild_cases</span><span class="p">:</span>
+                <span class="n">all_cases</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">guild_id</span><span class="p">)]</span> <span class="o">=</span> <span class="n">guild_cases</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">all_cases</span><span class="p">)</span>
+
+        <span class="c1"># new schema is now in place</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">schema_version</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="c1"># migration done, now let&#39;s delete all the old stuff</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">clear_raw</span><span class="p">(</span><span class="s2">&quot;casetypes&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">guild_id</span> <span class="ow">in</span> <span class="n">all_guild_data</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">)))</span><span class="o">.</span><span class="n">clear_raw</span><span class="p">(</span>
+                <span class="s2">&quot;cases&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">from_version</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">&lt;=</span> <span class="n">to_version</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">handle_auditype_key</span><span class="p">()</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">schema_version</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">from_version</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="o">&lt;=</span> <span class="n">to_version</span><span class="p">:</span>
+        <span class="c1"># set latest_case_number</span>
+        <span class="k">for</span> <span class="n">guild_id</span><span class="p">,</span> <span class="n">cases</span> <span class="ow">in</span> <span class="p">(</span><span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">cases</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span>
+                    <span class="n">cast</span><span class="p">(</span><span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">guild_id</span><span class="p">))</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">latest_case_number</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">cases</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
+
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">schema_version</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Case">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.Case">[docs]</a>
+<span class="k">class</span> <span class="nc">Case</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Case()</span>
+
+<span class="sd">    A single mod log case</span>
+
+<span class="sd">    This class should ONLY be instantiated by the modlog itself.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    bot: Red</span>
+<span class="sd">        The bot object.</span>
+<span class="sd">    guild: discord.Guild</span>
+<span class="sd">        The guild the action was taken in.</span>
+<span class="sd">    created_at: int</span>
+<span class="sd">        The UNIX time the action occurred at.</span>
+<span class="sd">    action_type: str</span>
+<span class="sd">        The type of action that was taken.</span>
+<span class="sd">    user: Union[discord.abc.User, int]</span>
+<span class="sd">        The user target by the action.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            This attribute will be of type `int`</span>
+<span class="sd">            if the Discord user can no longer be found.</span>
+<span class="sd">    moderator: Optional[Union[discord.abc.User, int]]</span>
+<span class="sd">        The moderator who took the action.</span>
+<span class="sd">        `None` if the moderator is unknown.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            This attribute will be of type `int`</span>
+<span class="sd">            if the Discord user can no longer be found.</span>
+<span class="sd">    case_number: int</span>
+<span class="sd">        The case&#39;s number.</span>
+<span class="sd">    reason: Optional[str]</span>
+<span class="sd">        The reason the action was taken.</span>
+<span class="sd">        `None` if the reason was not specified.</span>
+<span class="sd">    until: Optional[int]</span>
+<span class="sd">        The UNIX time the action is in effect until.</span>
+<span class="sd">        `None` if the action is permanent.</span>
+<span class="sd">    channel: Optional[Union[discord.abc.GuildChannel, discord.Thread, int]]</span>
+<span class="sd">        The channel the action was taken in.</span>
+<span class="sd">        `None` if the action was not related to a channel.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            This attribute will be of type `int`</span>
+<span class="sd">            if the channel seems to no longer exist.</span>
+<span class="sd">    parent_channel_id: Optional[int]</span>
+<span class="sd">        The parent channel ID of the thread in ``channel``.</span>
+<span class="sd">        `None` if the action was not done in a thread.</span>
+<span class="sd">    amended_by: Optional[Union[discord.abc.User, int]]</span>
+<span class="sd">        The moderator who made the last change to the case.</span>
+<span class="sd">        `None` if the case was never edited.</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            This attribute will be of type `int`</span>
+<span class="sd">            if the Discord user can no longer be found.</span>
+<span class="sd">    modified_at: Optional[float]</span>
+<span class="sd">        The UNIX time of the last change to the case.</span>
+<span class="sd">        `None` if the case was never edited.</span>
+<span class="sd">    message: Optional[Union[discord.PartialMessage, discord.Message]]</span>
+<span class="sd">        The message created by Modlog for this case.</span>
+<span class="sd">        Instance of `discord.Message` *if* the Case object was returned from</span>
+<span class="sd">        `modlog.create_case()`, otherwise `discord.PartialMessage`.</span>
+
+<span class="sd">        `None` if we know that the message no longer exists</span>
+<span class="sd">        (note: it might not exist regardless of whether this attribute is `None`)</span>
+<span class="sd">        or if it has never been created.</span>
+<span class="sd">    last_known_username: Optional[str]</span>
+<span class="sd">        The last known user handle (``username`` / ``username#1234``) of the user.</span>
+<span class="sd">        `None` if the handle of the user was never saved</span>
+<span class="sd">        or if their data had to be anonymized.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">,</span>
+        <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span>
+        <span class="n">created_at</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">action_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">user</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+        <span class="n">moderator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+        <span class="n">case_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">reason</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">until</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">GuildChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">parent_channel_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">amended_by</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">modified_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">PartialMessage</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">last_known_username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">guild</span> <span class="o">=</span> <span class="n">guild</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">created_at</span> <span class="o">=</span> <span class="n">created_at</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_type</span> <span class="o">=</span> <span class="n">action_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">user</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span> <span class="o">=</span> <span class="n">last_known_username</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">moderator</span> <span class="o">=</span> <span class="n">moderator</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">moderator</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">moderator</span> <span class="o">=</span> <span class="n">moderator</span><span class="o">.</span><span class="n">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reason</span> <span class="o">=</span> <span class="n">reason</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">until</span> <span class="o">=</span> <span class="n">until</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel</span> <span class="o">=</span> <span class="n">channel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span> <span class="o">=</span> <span class="n">parent_channel_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span> <span class="o">=</span> <span class="n">amended_by</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">amended_by</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span> <span class="o">=</span> <span class="n">amended_by</span><span class="o">.</span><span class="n">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modified_at</span> <span class="o">=</span> <span class="n">modified_at</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_number</span> <span class="o">=</span> <span class="n">case_number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">parent_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">ForumChannel</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The parent text/forum channel of the thread in `channel`.</span>
+
+<span class="sd">        This will be `None` if `channel` is not a thread</span>
+<span class="sd">        and when the parent text/forum channel is not in cache (probably due to removal).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span><span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">_set_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Message</span><span class="p">,</span> <span class="o">/</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># This should only be used for setting the message right after case creation</span>
+        <span class="c1"># in order to avoid making an API request to &quot;edit&quot; the message with changes.</span>
+        <span class="c1"># In all other cases, edit() is correct method.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">case_number</span><span class="p">))</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
+
+<div class="viewcode-block" id="Case.edit">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.Case.edit">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">edit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Edits a case</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        data: dict</span>
+<span class="sd">            The attributes to change</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># We don&#39;t want case_number to be changed</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;case_number&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="c1"># last username is set based on passed user object</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;last_known_username&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">&quot;channel&quot;</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialMessageable</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t use PartialMessageable as the channel for a modlog case.&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">):</span>
+                <span class="c1"># probably expensive to call but meh should capture all cases</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">value</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+        <span class="c1"># update last known user handle</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">parent_id</span>
+
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">case_number</span><span class="p">))</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="s2">&quot;modlog_case_edit&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">use_embed</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">channel</span><span class="p">)</span>
+            <span class="n">case_content</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_content</span><span class="p">(</span><span class="n">use_embed</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">use_embed</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">case_content</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="n">case_content</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Modlog failed to edit the Discord message for&quot;</span>
+                <span class="s2">&quot; the case #</span><span class="si">%s</span><span class="s2"> from guild with ID </span><span class="si">%s</span><span class="s2"> due to missing permissions.&quot;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">case_number</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">NotFound</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;Modlog failed to edit the Discord message for&quot;</span>
+                <span class="s2">&quot; the case #</span><span class="si">%s</span><span class="s2"> from guild with ID </span><span class="si">%s</span><span class="s2"> as it no longer exists.&quot;</span>
+                <span class="s2">&quot; Clearing the message ID from case data...&quot;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">case_number</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">edit</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span>
+                <span class="s2">&quot;Modlog failed to edit the Discord message for&quot;</span>
+                <span class="s2">&quot; the case #</span><span class="si">%s</span><span class="s2"> from guild with ID </span><span class="si">%s</span><span class="s2"> due to unexpected error.&quot;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">case_number</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Case.message_content">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.Case.message_content">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">message_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format a case message</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        embed: bool</span>
+<span class="sd">            Whether or not to get an embed</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        discord.Embed or `str`</span>
+<span class="sd">            A rich embed or string representing a case message</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">casetype</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_casetype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">action_type</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Case #</span><span class="si">{}</span><span class="s2"> | </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">case_number</span><span class="p">,</span> <span class="n">casetype</span><span class="o">.</span><span class="n">case_str</span><span class="p">,</span> <span class="n">casetype</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">reason</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;**Reason:** Use the `reason` command to add it&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">moderator</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">moderator</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Unknown&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">moderator</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="c1"># can&#39;t use _() inside f-string expressions, see bpo-36310 and red#3818</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">moderator</span> <span class="o">==</span> <span class="mh">0xDE1</span><span class="p">:</span>
+                <span class="n">moderator</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Deleted User.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">translated</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Unknown or Deleted User&quot;</span><span class="p">)</span>
+                <span class="n">moderator</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">translated</span><span class="si">}</span><span class="s2">] (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">moderator</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">moderator</span> <span class="o">=</span> <span class="n">escape_spoilers</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">moderator</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">moderator</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="n">until</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">duration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">until</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">created_at</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">until</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+            <span class="n">end_fmt</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_dt</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+            <span class="n">duration</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
+            <span class="n">dur_fmt</span> <span class="o">=</span> <span class="n">_strfdelta</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
+            <span class="n">until</span> <span class="o">=</span> <span class="n">end_fmt</span>
+            <span class="n">duration</span> <span class="o">=</span> <span class="n">dur_fmt</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">amended_by</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="c1"># can&#39;t use _() inside f-string expressions, see bpo-36310 and red#3818</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span> <span class="o">==</span> <span class="mh">0xDE1</span><span class="p">:</span>
+                <span class="n">amended_by</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Deleted User.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">translated</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Unknown or Deleted User&quot;</span><span class="p">)</span>
+                <span class="n">amended_by</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">translated</span><span class="si">}</span><span class="s2">] (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">amended_by</span> <span class="o">=</span> <span class="n">escape_spoilers</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+        <span class="n">last_modified</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">modified_at</span><span class="p">:</span>
+            <span class="n">last_modified</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">format_dt</span><span class="p">(</span>
+                <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span> <span class="o">==</span> <span class="mh">0xDE1</span><span class="p">:</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Deleted User.&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># can&#39;t use _() inside f-string expressions, see bpo-36310 and red#3818</span>
+                <span class="n">translated</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Unknown or Deleted User&quot;</span><span class="p">)</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">translated</span><span class="si">}</span><span class="s2">] (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="c1"># Handle pomelo usernames stored before we updated our implementation</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;#0&quot;</span><span class="p">):</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="c1"># New usernames can&#39;t contain `#` and old usernames couldn&#39;t either.</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">5</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;#&quot;</span><span class="p">:</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="c1"># Last known user handle is a legacy username with a discriminator</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># isolate the name so that the direction of the discriminator and ID aren&#39;t changed</span>
+                <span class="c1"># See usage explanation here: https://www.unicode.org/reports/tr9/#Formatting</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="p">[:</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+                <span class="n">discriminator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\N{FIRST STRONG ISOLATE}</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\N{POP DIRECTIONAL ISOLATE}</span><span class="s2">#</span><span class="si">{</span><span class="n">discriminator</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="si">}</span><span class="s2">)&quot;</span>
+                <span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">:</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">)&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># isolate the name so that the direction of the discriminator and ID aren&#39;t changed</span>
+            <span class="c1"># See usage explanation here: https://www.unicode.org/reports/tr9/#Formatting</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">escape_spoilers</span><span class="p">(</span>
+                <span class="n">filter_invites</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\N{FIRST STRONG ISOLATE}</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\N{POP DIRECTIONAL ISOLATE}</span><span class="s2">#</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">discriminator</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">)&quot;</span>
+                <span class="p">)</span>
+            <span class="p">)</span>  <span class="c1"># Invites and spoilers get rendered even in embeds.</span>
+
+        <span class="n">channel_value</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">parent_channel</span> <span class="o">:=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">channel_value</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span>
+                        <span class="s2">&quot;Deleted or archived thread (</span><span class="si">{thread_id}</span><span class="s2">) in </span><span class="si">{channel_name}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">thread_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="n">channel_name</span><span class="o">=</span><span class="n">parent_channel</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">channel_value</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Thread </span><span class="si">{thread_id}</span><span class="s2"> in </span><span class="si">{channel_id}</span><span class="s2"> (deleted)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">thread_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="n">channel_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span>
+                    <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">channel_value</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{channel_id}</span><span class="s2"> (deleted)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">channel_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">name</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">parent_channel</span> <span class="o">:=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">channel_value</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Thread </span><span class="si">{thread_name}</span><span class="s2"> in </span><span class="si">{channel_name}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">thread_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="n">channel_name</span><span class="o">=</span><span class="n">parent_channel</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">channel_value</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Thread </span><span class="si">{thread_name}</span><span class="s2"> in </span><span class="si">{channel_id}</span><span class="s2"> (deleted)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">thread_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="n">channel_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span>
+                    <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">embed</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reason</span><span class="p">:</span>
+                <span class="n">reason</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Reason:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">reason</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">reason</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2048</span><span class="p">:</span>
+                    <span class="n">reason</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="nb">next</span><span class="p">(</span>
+                            <span class="n">pagify</span><span class="p">(</span>
+                                <span class="n">reason</span><span class="p">,</span>
+                                <span class="n">delims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">],</span>
+                                <span class="n">page_length</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
+                            <span class="p">)</span>
+                        <span class="p">)</span>
+                        <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+                    <span class="p">)</span>
+            <span class="n">emb</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Embed</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">reason</span><span class="p">)</span>
+            <span class="n">emb</span><span class="o">.</span><span class="n">set_author</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+            <span class="n">emb</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Moderator&quot;</span><span class="p">),</span> <span class="n">value</span><span class="o">=</span><span class="n">moderator</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">until</span> <span class="ow">and</span> <span class="n">duration</span><span class="p">:</span>
+                <span class="n">emb</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Until&quot;</span><span class="p">),</span> <span class="n">value</span><span class="o">=</span><span class="n">until</span><span class="p">)</span>
+                <span class="n">emb</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Duration&quot;</span><span class="p">),</span> <span class="n">value</span><span class="o">=</span><span class="n">duration</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">channel_value</span><span class="p">:</span>
+                <span class="n">emb</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Channel&quot;</span><span class="p">),</span> <span class="n">value</span><span class="o">=</span><span class="n">channel_value</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">amended_by</span><span class="p">:</span>
+                <span class="n">emb</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Amended by&quot;</span><span class="p">),</span> <span class="n">value</span><span class="o">=</span><span class="n">amended_by</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">last_modified</span><span class="p">:</span>
+                <span class="n">emb</span><span class="o">.</span><span class="n">add_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Last modified at&quot;</span><span class="p">),</span> <span class="n">value</span><span class="o">=</span><span class="n">last_modified</span><span class="p">)</span>
+            <span class="n">emb</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">created_at</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">emb</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">reason</span><span class="p">:</span>
+                <span class="n">reason</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Reason:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">reason</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">reason</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">:</span>
+                    <span class="n">reason</span> <span class="o">=</span> <span class="p">(</span>
+                        <span class="nb">next</span><span class="p">(</span>
+                            <span class="n">pagify</span><span class="p">(</span>
+                                <span class="n">reason</span><span class="p">,</span>
+                                <span class="n">delims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">],</span>
+                                <span class="n">page_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+                            <span class="p">)</span>
+                        <span class="p">)</span>
+                        <span class="o">+</span> <span class="s2">&quot;...&quot;</span>
+                    <span class="p">)</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">filter_mass_mentions</span><span class="p">(</span><span class="n">filter_urls</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>  <span class="c1"># Further sanitization outside embeds</span>
+            <span class="n">case_text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">case_text</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="n">case_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;User:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">user</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">case_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Moderator:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">moderator</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">case_text</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reason</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">until</span> <span class="ow">and</span> <span class="n">duration</span><span class="p">:</span>
+                <span class="n">case_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Until:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">until</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Duration:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">duration</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                    <span class="n">case_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Channel:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">channel_value</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">case_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Channel:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">channel_value</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="n">amended_by</span><span class="p">:</span>
+                <span class="n">case_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Amended by:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">amended_by</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="n">last_modified</span><span class="p">:</span>
+                <span class="n">case_text</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bold</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Last modified at:&#39;</span><span class="p">))</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_modified</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="k">return</span> <span class="n">case_text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Case.to_json">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.Case.to_json">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform the object to a dict</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            The case in the form of a dict</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">moderator</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">moderator</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">mod</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">moderator</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mod</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">moderator</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">amended_by</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">amended_by</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amended_by</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">user_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">user_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;case_number&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">case_number</span><span class="p">,</span>
+            <span class="s2">&quot;action_type&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">action_type</span><span class="p">,</span>
+            <span class="s2">&quot;guild&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">created_at</span><span class="p">,</span>
+            <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">user_id</span><span class="p">,</span>
+            <span class="s2">&quot;last_known_username&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_known_username</span><span class="p">,</span>
+            <span class="s2">&quot;moderator&quot;</span><span class="p">:</span> <span class="n">mod</span><span class="p">,</span>
+            <span class="s2">&quot;reason&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">reason</span><span class="p">,</span>
+            <span class="s2">&quot;until&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">until</span><span class="p">,</span>
+            <span class="s2">&quot;channel&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">channel</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;parent_channel&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent_channel_id</span><span class="p">,</span>
+            <span class="s2">&quot;amended_by&quot;</span><span class="p">:</span> <span class="n">amended_by</span><span class="p">,</span>
+            <span class="s2">&quot;modified_at&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">modified_at</span><span class="p">,</span>
+            <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="Case.from_json">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.Case.from_json">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">mod_channel</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">],</span>
+        <span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">,</span>
+        <span class="n">case_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a Case object from the provided information</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        mod_channel: `discord.TextChannel` or `discord.VoiceChannel`, `discord.StageChannel`</span>
+<span class="sd">            The mod log channel for the guild</span>
+<span class="sd">        bot: Red</span>
+<span class="sd">            The bot&#39;s instance. Needed to get the target user</span>
+<span class="sd">        case_number: int</span>
+<span class="sd">            The case&#39;s number.</span>
+<span class="sd">        data: dict</span>
+<span class="sd">            The JSON representation of the case to be gotten</span>
+<span class="sd">        **kwargs</span>
+<span class="sd">            Extra attributes for the Case instance which override values</span>
+<span class="sd">            in the data dict. These should be complete objects and not</span>
+<span class="sd">            IDs, where possible.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Case</span>
+<span class="sd">            The case object for the requested case</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        `discord.NotFound`</span>
+<span class="sd">            The user the case is for no longer exists</span>
+<span class="sd">        `discord.Forbidden`</span>
+<span class="sd">            Cannot read message history to fetch the original message.</span>
+<span class="sd">        `discord.HTTPException`</span>
+<span class="sd">            A generic API issue</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">guild</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;guild&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">mod_channel</span><span class="o">.</span><span class="n">guild</span>
+
+        <span class="n">message</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">message</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">message_id</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">message_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">mod_channel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">message</span> <span class="o">=</span> <span class="n">mod_channel</span><span class="o">.</span><span class="n">get_partial_message</span><span class="p">(</span><span class="n">message_id</span><span class="p">)</span>
+
+        <span class="n">user_objects</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;moderator&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;amended_by&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">user_key</span> <span class="ow">in</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">user_objects</span><span class="p">):</span>
+            <span class="n">user_object</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_key</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">user_object</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">user_id</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_key</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">user_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">user_object</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">user_object</span> <span class="o">=</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span> <span class="ow">or</span> <span class="n">user_id</span>
+            <span class="n">user_objects</span><span class="p">[</span><span class="n">user_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_object</span>
+
+        <span class="n">channel</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">)</span>
+            <span class="ow">or</span> <span class="n">guild</span><span class="o">.</span><span class="n">get_channel_or_thread</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">])</span>
+            <span class="ow">or</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">case_guild</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;guild&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_guild</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;guild&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
+            <span class="n">guild</span><span class="o">=</span><span class="n">case_guild</span><span class="p">,</span>
+            <span class="n">created_at</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;created_at&quot;</span><span class="p">],</span>
+            <span class="n">action_type</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;action_type&quot;</span><span class="p">],</span>
+            <span class="n">case_number</span><span class="o">=</span><span class="n">case_number</span><span class="p">,</span>
+            <span class="n">reason</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;reason&quot;</span><span class="p">],</span>
+            <span class="n">until</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;until&quot;</span><span class="p">],</span>
+            <span class="n">channel</span><span class="o">=</span><span class="n">channel</span><span class="p">,</span>
+            <span class="n">parent_channel_id</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;parent_channel_id&quot;</span><span class="p">),</span>
+            <span class="n">modified_at</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;modified_at&quot;</span><span class="p">],</span>
+            <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
+            <span class="n">last_known_username</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;last_known_username&quot;</span><span class="p">),</span>
+            <span class="o">**</span><span class="n">user_objects</span><span class="p">,</span>
+        <span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="CaseType">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.CaseType">[docs]</a>
+<span class="k">class</span> <span class="nc">CaseType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A single case type</span>
+
+<span class="sd">    This class should ONLY be instantiated by the modlog itself.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name: str</span>
+<span class="sd">        The name of the case</span>
+<span class="sd">    default_setting: bool</span>
+<span class="sd">        Whether the case type should be on (if `True`)</span>
+<span class="sd">        or off (if `False`) by default</span>
+<span class="sd">    image: str</span>
+<span class="sd">        The emoji to use for the case type (for example, :boot:)</span>
+<span class="sd">    case_str: str</span>
+<span class="sd">        The string representation of the case (example: Ban)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">default_setting</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">image</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">case_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">guild</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_setting</span> <span class="o">=</span> <span class="n">default_setting</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">image</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_str</span> <span class="o">=</span> <span class="n">case_str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">guild</span> <span class="o">=</span> <span class="n">guild</span>
+
+        <span class="k">if</span> <span class="s2">&quot;audit_type&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;audit_type&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;Fix this using the hidden command: `modlogset fixcasetypes` in Discord: &quot;</span>
+                <span class="s2">&quot;Got outdated key in casetype: audit_type&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Got unexpected key(s) in casetype: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+
+<div class="viewcode-block" id="CaseType.to_json">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.CaseType.to_json">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Transforms the case type into a dict and saves it&quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;default_setting&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_setting</span><span class="p">,</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="p">,</span>
+            <span class="s2">&quot;case_str&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">case_str</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CaseType.is_enabled">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.CaseType.is_enabled">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">is_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines if the case is enabled.</span>
+<span class="sd">        If the guild is not set, this will always return False</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool:</span>
+<span class="sd">            True if the guild is set and the casetype is enabled for the guild</span>
+
+<span class="sd">            False if the guild is not set or if the guild is set and the type</span>
+<span class="sd">            is disabled</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">casetypes</span><span class="o">.</span><span class="n">get_raw</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">default_setting</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CaseType.set_enabled">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.CaseType.set_enabled">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">set_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the case as enabled or disabled</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        enabled: bool</span>
+<span class="sd">            True if the case should be enabled, otherwise False&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">casetypes</span><span class="o">.</span><span class="n">set_raw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">enabled</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CaseType.from_json">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.CaseType.from_json">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        name : str</span>
+<span class="sd">            The casetype&#39;s name.</span>
+<span class="sd">        data : dict</span>
+<span class="sd">            The JSON data to create an instance from</span>
+<span class="sd">        **kwargs</span>
+<span class="sd">            Values for other attributes of the instance</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        CaseType</span>
+<span class="sd">            The case type object created from given data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data_copy</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">data_copy</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">data_copy</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="get_case">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.get_case">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_case</span><span class="p">(</span><span class="n">case_number</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Case</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the case with the associated case number</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    case_number: int</span>
+<span class="sd">        The case number for the case to get</span>
+<span class="sd">    guild: discord.Guild</span>
+<span class="sd">        The guild to get the case from</span>
+<span class="sd">    bot: Red</span>
+<span class="sd">        The bot&#39;s instance</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Case</span>
+<span class="sd">        The case associated with the case number</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If there is no case for the specified number</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">case</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">case_number</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">case</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;That case does not exist for guild </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">mod_channel</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_modlog_channel</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+        <span class="n">mod_channel</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">Case</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">mod_channel</span><span class="p">,</span> <span class="n">bot</span><span class="p">,</span> <span class="n">case_number</span><span class="p">,</span> <span class="n">case</span><span class="p">,</span> <span class="n">guild</span><span class="o">=</span><span class="n">guild</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_latest_case">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.get_latest_case">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_latest_case</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Case</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the latest case for the specified guild.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild : discord.Guild</span>
+<span class="sd">        The guild to get the latest case for.</span>
+<span class="sd">    bot : Red</span>
+<span class="sd">        The bot object.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Optional[Case]</span>
+<span class="sd">        The latest case object. `None` if it the guild has no cases.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">case_number</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">latest_case_number</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">case_number</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">get_case</span><span class="p">(</span><span class="n">case_number</span><span class="p">,</span> <span class="n">guild</span><span class="p">,</span> <span class="n">bot</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_all_cases">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.get_all_cases">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_all_cases</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Case</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets all cases for the specified guild</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild: `discord.Guild`</span>
+<span class="sd">        The guild to get the cases from</span>
+<span class="sd">    bot: Red</span>
+<span class="sd">        The bot&#39;s instance</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list</span>
+<span class="sd">        A list of all cases for the guild</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">cases</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">mod_channel</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_modlog_channel</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+        <span class="n">mod_channel</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="k">await</span> <span class="n">Case</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">mod_channel</span><span class="p">,</span> <span class="n">bot</span><span class="p">,</span> <span class="n">case_number</span><span class="p">,</span> <span class="n">case_data</span><span class="p">,</span> <span class="n">guild</span><span class="o">=</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">case_number</span><span class="p">,</span> <span class="n">case_data</span> <span class="ow">in</span> <span class="n">cases</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="get_cases_for_member">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.get_cases_for_member">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_cases_for_member</span><span class="p">(</span>
+    <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">member</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">member_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Case</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets all cases for the specified member or member id in a guild.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild: `discord.Guild`</span>
+<span class="sd">        The guild to get the cases from</span>
+<span class="sd">    bot: Red</span>
+<span class="sd">        The bot&#39;s instance</span>
+<span class="sd">    member: `discord.Member`</span>
+<span class="sd">        The member to get cases about</span>
+<span class="sd">    member_id: int</span>
+<span class="sd">        The id of the member to get cases about</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list</span>
+<span class="sd">        A list of all matching cases.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If at least one of member or member_id is not provided</span>
+<span class="sd">    `discord.Forbidden`</span>
+<span class="sd">        The bot does not have permission to fetch the modlog message which was sent.</span>
+<span class="sd">    `discord.HTTPException`</span>
+<span class="sd">        Fetching the user failed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">cases</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">member_id</span> <span class="ow">or</span> <span class="n">member</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Expected a member or a member id to be provided.&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">member_id</span><span class="p">:</span>
+        <span class="n">member_id</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="n">id</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">member</span><span class="p">:</span>
+        <span class="n">member</span> <span class="o">=</span> <span class="n">bot</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">member_id</span><span class="p">)</span> <span class="ow">or</span> <span class="n">member_id</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">modlog_channel</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_modlog_channel</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+        <span class="n">modlog_channel</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">cases</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="k">await</span> <span class="n">Case</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">modlog_channel</span><span class="p">,</span> <span class="n">bot</span><span class="p">,</span> <span class="n">case_number</span><span class="p">,</span> <span class="n">case_data</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">member</span><span class="p">,</span> <span class="n">guild</span><span class="o">=</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">case_number</span><span class="p">,</span> <span class="n">case_data</span> <span class="ow">in</span> <span class="n">cases</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">case_data</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">member_id</span>
+    <span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">cases</span></div>
+
+
+
+<div class="viewcode-block" id="create_case">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.create_case">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_case</span><span class="p">(</span>
+    <span class="n">bot</span><span class="p">:</span> <span class="n">Red</span><span class="p">,</span>
+    <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span>
+    <span class="n">action_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">user</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+    <span class="n">moderator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Object</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">reason</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">until</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">channel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">GuildChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">last_known_username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Case</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a new case.</span>
+
+<span class="sd">    This fires an event :code:`on_modlog_case_create`</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    bot: Red</span>
+<span class="sd">        The bot object</span>
+<span class="sd">    guild: discord.Guild</span>
+<span class="sd">        The guild the action was taken in</span>
+<span class="sd">    created_at: datetime</span>
+<span class="sd">        The time the action occurred at.</span>
+<span class="sd">        If naive `datetime` object is passed, it&#39;s treated as a local time</span>
+<span class="sd">        (similarly to how Python treats naive `datetime` objects).</span>
+<span class="sd">    action_type: str</span>
+<span class="sd">        The type of action that was taken</span>
+<span class="sd">    user: Union[discord.Object, discord.abc.User, int]</span>
+<span class="sd">        The user target by the action</span>
+<span class="sd">    moderator: Optional[Union[discord.Object, discord.abc.User, int]]</span>
+<span class="sd">        The moderator who took the action</span>
+<span class="sd">    reason: Optional[str]</span>
+<span class="sd">        The reason the action was taken</span>
+<span class="sd">    until: Optional[datetime]</span>
+<span class="sd">        The time the action is in effect until.</span>
+<span class="sd">        If naive `datetime` object is passed, it&#39;s treated as a local time</span>
+<span class="sd">        (similarly to how Python treats naive `datetime` objects).</span>
+<span class="sd">    channel: Optional[Union[discord.abc.GuildChannel, discord.Thread]]</span>
+<span class="sd">        The channel the action was taken in</span>
+<span class="sd">    last_known_username: Optional[str]</span>
+<span class="sd">        The last known user handle (``username`` / ``username#1234``) of the user</span>
+<span class="sd">        Note: This is ignored if a Member or User object is provided</span>
+<span class="sd">        in the user field</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the action type is not a valid action type.</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If user is the bot itself.</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If ``channel`` is of type `discord.PartialMessageable`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">case_type</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_casetype</span><span class="p">(</span><span class="n">action_type</span><span class="p">,</span> <span class="n">guild</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">case_type</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">action_type</span><span class="si">}</span><span class="s2"> is not a valid action type.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="n">case_type</span><span class="o">.</span><span class="n">is_enabled</span><span class="p">():</span>
+        <span class="k">return</span>
+
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">user</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">else</span> <span class="n">user</span><span class="o">.</span><span class="n">id</span>
+    <span class="k">if</span> <span class="n">user_id</span> <span class="o">==</span> <span class="n">bot</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;The bot itself can not be the target of a modlog entry.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">PartialMessageable</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Can&#39;t use PartialMessageable as the channel for a modlog case.&quot;</span><span class="p">)</span>
+
+    <span class="n">parent_channel_id</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">parent_id</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">Thread</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">async</span> <span class="k">with</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">latest_case_number</span><span class="o">.</span><span class="n">get_lock</span><span class="p">():</span>
+        <span class="c1"># We&#39;re getting the case number from config, incrementing it, awaiting something, then</span>
+        <span class="c1"># setting it again. This warrants acquiring the lock.</span>
+        <span class="n">next_case_number</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">latest_case_number</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="n">case</span> <span class="o">=</span> <span class="n">Case</span><span class="p">(</span>
+            <span class="n">bot</span><span class="p">,</span>
+            <span class="n">guild</span><span class="p">,</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">created_at</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()),</span>
+            <span class="n">action_type</span><span class="p">,</span>
+            <span class="n">user</span><span class="p">,</span>
+            <span class="n">moderator</span><span class="p">,</span>
+            <span class="n">next_case_number</span><span class="p">,</span>
+            <span class="n">reason</span><span class="p">,</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">until</span><span class="o">.</span><span class="n">timestamp</span><span class="p">())</span> <span class="k">if</span> <span class="n">until</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">channel</span><span class="p">,</span>
+            <span class="n">parent_channel_id</span><span class="p">,</span>
+            <span class="n">amended_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">last_known_username</span><span class="o">=</span><span class="n">last_known_username</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">next_case_number</span><span class="p">))</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">case</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
+        <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">latest_case_number</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">next_case_number</span><span class="p">)</span>
+
+    <span class="k">await</span> <span class="n">set_contextual_locales_from_guild</span><span class="p">(</span><span class="n">bot</span><span class="p">,</span> <span class="n">guild</span><span class="p">)</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="s2">&quot;modlog_case_create&quot;</span><span class="p">,</span> <span class="n">case</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">mod_channel</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_modlog_channel</span><span class="p">(</span><span class="n">case</span><span class="o">.</span><span class="n">guild</span><span class="p">)</span>
+        <span class="n">use_embeds</span> <span class="o">=</span> <span class="k">await</span> <span class="n">case</span><span class="o">.</span><span class="n">bot</span><span class="o">.</span><span class="n">embed_requested</span><span class="p">(</span><span class="n">mod_channel</span><span class="p">)</span>
+        <span class="n">case_content</span> <span class="o">=</span> <span class="k">await</span> <span class="n">case</span><span class="o">.</span><span class="n">message_content</span><span class="p">(</span><span class="n">use_embeds</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">use_embeds</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mod_channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">embed</span><span class="o">=</span><span class="n">case_content</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="k">await</span> <span class="n">mod_channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">case_content</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">case</span><span class="o">.</span><span class="n">_set_message</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>  <span class="c1"># modlog channel isn&#39;t set</span>
+        <span class="k">pass</span>
+    <span class="k">except</span> <span class="n">discord</span><span class="o">.</span><span class="n">Forbidden</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Modlog failed to edit the Discord message for&quot;</span>
+            <span class="s2">&quot; the case #</span><span class="si">%s</span><span class="s2"> from guild with ID due to missing permissions.&quot;</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span>
+            <span class="s2">&quot;Modlog failed to send the Discord message for&quot;</span>
+            <span class="s2">&quot; the case #</span><span class="si">%s</span><span class="s2"> from guild with ID </span><span class="si">%s</span><span class="s2"> due to unexpected error.&quot;</span><span class="p">,</span>
+            <span class="k">case</span><span class="o">.</span><span class="n">case_number</span><span class="p">,</span>
+            <span class="k">case</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">case</span></div>
+
+
+
+<div class="viewcode-block" id="get_casetype">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.get_casetype">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_casetype</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">guild</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">CaseType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the case type</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name: str</span>
+<span class="sd">        The name of the case type to get</span>
+<span class="sd">    guild: Optional[discord.Guild]</span>
+<span class="sd">        If provided, sets the case type&#39;s guild attribute to this guild</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Optional[CaseType]</span>
+<span class="sd">        Case type with provided name. If such case type doesn&#39;t exist this will be `None`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">casetype</span> <span class="o">=</span> <span class="n">CaseType</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">casetype</span><span class="o">.</span><span class="n">guild</span> <span class="o">=</span> <span class="n">guild</span>
+    <span class="k">return</span> <span class="n">casetype</span></div>
+
+
+
+<div class="viewcode-block" id="get_all_casetypes">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.get_all_casetypes">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_all_casetypes</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">CaseType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get all currently registered case types</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list</span>
+<span class="sd">        A list of case types</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="n">CaseType</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">guild</span><span class="o">=</span><span class="n">guild</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="p">(</span><span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASETYPES</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="register_casetype">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.register_casetype">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">register_casetype</span><span class="p">(</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default_setting</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">image</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">case_str</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CaseType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Registers a case type. If the case type exists and</span>
+<span class="sd">    there are differences between the values passed and</span>
+<span class="sd">    what is stored already, the case type will be updated</span>
+<span class="sd">    with the new values</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name: str</span>
+<span class="sd">        The name of the case</span>
+<span class="sd">    default_setting: bool</span>
+<span class="sd">        Whether the case type should be on (if `True`)</span>
+<span class="sd">        or off (if `False`) by default</span>
+<span class="sd">    image: str</span>
+<span class="sd">        The emoji to use for the case type (for example, :boot:)</span>
+<span class="sd">    case_str: str</span>
+<span class="sd">        The string representation of the case (example: Ban)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    CaseType</span>
+<span class="sd">        The case type that was registered</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the case type is already registered</span>
+<span class="sd">    TypeError</span>
+<span class="sd">        If a parameter is missing</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If a parameter&#39;s value is not valid</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The &#39;name&#39; is not a string! Check the value!&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">default_setting</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;default_setting&#39; needs to be a bool!&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The &#39;image&#39; is not a string!&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">case_str</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The &#39;case_str&#39; is not a string!&quot;</span><span class="p">)</span>
+
+    <span class="n">ct</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_casetype</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ct</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">casetype</span> <span class="o">=</span> <span class="n">CaseType</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">default_setting</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">case_str</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">casetype</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">casetype</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Case type exists, so check for differences</span>
+        <span class="c1"># If no differences, raise RuntimeError</span>
+        <span class="n">changed</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">ct</span><span class="o">.</span><span class="n">default_setting</span> <span class="o">!=</span> <span class="n">default_setting</span><span class="p">:</span>
+            <span class="n">ct</span><span class="o">.</span><span class="n">default_setting</span> <span class="o">=</span> <span class="n">default_setting</span>
+            <span class="n">changed</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">ct</span><span class="o">.</span><span class="n">image</span> <span class="o">!=</span> <span class="n">image</span><span class="p">:</span>
+            <span class="n">ct</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">image</span>
+            <span class="n">changed</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">ct</span><span class="o">.</span><span class="n">case_str</span> <span class="o">!=</span> <span class="n">case_str</span><span class="p">:</span>
+            <span class="n">ct</span><span class="o">.</span><span class="n">case_str</span> <span class="o">=</span> <span class="n">case_str</span>
+            <span class="n">changed</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">changed</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">ct</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">ct</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;That case type is already registered!&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="register_casetypes">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.register_casetypes">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">register_casetypes</span><span class="p">(</span><span class="n">new_types</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">CaseType</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Registers multiple case types</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    new_types: list</span>
+<span class="sd">        The new types to register</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        `True` if all were registered successfully</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    KeyError</span>
+<span class="sd">    ValueError</span>
+<span class="sd">    AttributeError</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    starbot.core.modlog.register_casetype</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">type_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">new_type</span> <span class="ow">in</span> <span class="n">new_types</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ct</span> <span class="o">=</span> <span class="k">await</span> <span class="n">register_casetype</span><span class="p">(</span><span class="o">**</span><span class="n">new_type</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="c1"># We pass here because RuntimeError signifies the case was</span>
+            <span class="c1"># already registered.</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">type_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ct</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">type_list</span></div>
+
+
+
+<div class="viewcode-block" id="get_modlog_channel">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.get_modlog_channel">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_modlog_channel</span><span class="p">(</span>
+    <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the current modlog channel.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild: `discord.Guild`</span>
+<span class="sd">        The guild to get the modlog channel for.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    `discord.TextChannel`, `discord.VoiceChannel`, or `discord.StageChannel`</span>
+<span class="sd">        The channel object representing the modlog channel.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    RuntimeError</span>
+<span class="sd">        If the modlog channel is not found.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">guild</span><span class="p">,</span> <span class="s2">&quot;get_channel&quot;</span><span class="p">):</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="n">guild</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">mod_log</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># For unit tests only</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">mod_log</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">channel</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Failed to get the mod log channel!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">channel</span></div>
+
+
+
+<div class="viewcode-block" id="set_modlog_channel">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.set_modlog_channel">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">set_modlog_channel</span><span class="p">(</span>
+    <span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">,</span>
+    <span class="n">channel</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">discord</span><span class="o">.</span><span class="n">TextChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">VoiceChannel</span><span class="p">,</span> <span class="n">discord</span><span class="o">.</span><span class="n">StageChannel</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Changes the modlog channel</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild: `discord.Guild`</span>
+<span class="sd">        The guild to set a mod log channel for</span>
+<span class="sd">    channel: `discord.TextChannel`, `discord.VoiceChannel`, `discord.StageChannel`, or `None`</span>
+<span class="sd">        The channel to be set as modlog channel</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    bool</span>
+<span class="sd">        `True` if successful</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">mod_log</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+
+<div class="viewcode-block" id="reset_cases">
+<a class="viewcode-back" href="../../../framework_modlog.html#starbot.core.modlog.reset_cases">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">reset_cases</span><span class="p">(</span><span class="n">guild</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Guild</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wipes all modlog cases for the specified guild.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    guild: `discord.Guild`</span>
+<span class="sd">        The guild to reset cases for</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">custom</span><span class="p">(</span><span class="n">_CASES</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">guild</span><span class="o">.</span><span class="n">id</span><span class="p">))</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">_config</span><span class="o">.</span><span class="n">guild</span><span class="p">(</span><span class="n">guild</span><span class="p">)</span><span class="o">.</span><span class="n">latest_case_number</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">_strfdelta</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">delta</span><span class="o">.</span><span class="n">days</span><span class="p">:</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%i</span><span class="s2"> day&quot;</span> <span class="o">%</span> <span class="n">delta</span><span class="o">.</span><span class="n">days</span>
+        <span class="k">if</span> <span class="n">delta</span><span class="o">.</span><span class="n">days</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">ds</span> <span class="o">+=</span> <span class="s2">&quot;s&quot;</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+    <span class="n">hrs</span><span class="p">,</span> <span class="n">rem</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">delta</span><span class="o">.</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">hrs</span><span class="p">:</span>
+        <span class="n">hs</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%i</span><span class="s2"> hr&quot;</span> <span class="o">%</span> <span class="n">hrs</span>
+        <span class="k">if</span> <span class="n">hrs</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">hs</span> <span class="o">+=</span> <span class="s2">&quot;s&quot;</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hs</span><span class="p">)</span>
+    <span class="n">mins</span><span class="p">,</span> <span class="n">secs</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">rem</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">mins</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2"> min&quot;</span> <span class="o">%</span> <span class="n">mins</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">secs</span><span class="p">:</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2"> sec&quot;</span> <span class="o">%</span> <span class="n">secs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "author": [
+        "Star"
+    ],
+    "description": "Punish the users who ping others with a certain role",
+    "disabled": false,
+    "end_user_data_statement": "This cog does not persistently store any data or metadata about users.",
+    "hidden": false,
+    "install_msg": "Thank you for installing. Run `[p]load dps` to load the cog.",
+    "max_bot_version": "0.0.0",
+    "min_bot_version": "3.3.10",
+    "name": "DontPingStaff",
+    "permissions": [],
+    "required_cogs": {},
+    "requirements": [],
+    "short": "Take actions on users who ping",
+    "tags": [
+        "moderation",
+        "utility"
+    ],
+    "type": "COG"
+}

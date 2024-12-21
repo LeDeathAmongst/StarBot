@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=629867fc"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Warnings" href="warnings.html" />
+    <link rel="prev" title="Streams" href="streams.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streams.html">Streams</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Trivia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset">triviaset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-botplays">triviaset botplays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-maxscore">triviaset maxscore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-override">triviaset override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-payout">triviaset payout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-revealanswer">triviaset revealanswer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-showsettings">triviaset showsettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-stopafter">triviaset stopafter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-timelimit">triviaset timelimit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-custom">triviaset custom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-custom-upload">triviaset custom upload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-custom-list">triviaset custom list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triviaset-custom-delete">triviaset custom delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trivia-command-trivia">trivia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trivia-info">trivia info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trivia-leaderboard">trivia leaderboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trivia-leaderboard-global">trivia leaderboard global</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trivia-leaderboard-server">trivia leaderboard server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trivia-list">trivia list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trivia-stop">trivia stop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Trivia</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developcog_guides/trivia.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="trivia">
+<span id="id1"></span><h1>Trivia<a class="headerlink" href="#trivia" title="Link to this heading"></a></h1>
+<p>This is the cog guide for the trivia cog. You will
+find detailed docs about usage and commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">[p]</span></code> is considered as your prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this cog, load it by typing this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="n">load</span> <span class="n">trivia</span>
+</pre></div>
+</div>
+</div>
+<section id="usage">
+<span id="trivia-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>This cog allows for playing trivia with others. You may
+choose to play just one category at a time or choose
+multiple to add variety to your game. You can even create
+your own lists!</p>
+</section>
+<section id="commands">
+<span id="trivia-commands"></span><h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<p>Here is a list of all of the commands for this cog:</p>
+<section id="triviaset">
+<span id="trivia-command-triviaset"></span><h3>triviaset<a class="headerlink" href="#triviaset" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Commands for managing trivia settings.</p>
+</section>
+<section id="triviaset-botplays">
+<span id="trivia-command-triviaset-botplays"></span><h3>triviaset botplays<a class="headerlink" href="#triviaset-botplays" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset botplays &lt;true_or_false&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets whether the bot gains a point if nobody guesses correctly.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;true_or_false&gt;</span></code> If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bot will gain a point if nobody
+guesses correctly, otherwise it will not.</p></li>
+</ul>
+</section>
+<section id="triviaset-maxscore">
+<span id="trivia-command-triviaset-maxscore"></span><h3>triviaset maxscore<a class="headerlink" href="#triviaset-maxscore" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset maxscore &lt;score&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets the total points required to win.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;score&gt;</span></code> The amount of points required to win.</p></li>
+</ul>
+</section>
+<section id="triviaset-override">
+<span id="trivia-command-triviaset-override"></span><h3>triviaset override<a class="headerlink" href="#triviaset-override" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset override &lt;enabled&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Allow/disallow trivia lists to override the settings.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;enabled&gt;</span></code> Whether trivia lists should be able to override settings.</p></li>
+</ul>
+</section>
+<section id="triviaset-payout">
+<span id="trivia-command-triviaset-payout"></span><h3>triviaset payout<a class="headerlink" href="#triviaset-payout" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset payout &lt;multiplier&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets the payout multiplier.</p>
+<p>If a user wins trivia when at least 3 users are playing, they will receive credits;
+the amount received is determined by multiplying their total score by this multiplier.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;multiplier&gt;</span></code> The amount to multiply the winner’s score by to determine payout.
+This can be any positive decimal number. Setting this to 0 will disable.</p></li>
+</ul>
+</section>
+<section id="triviaset-revealanswer">
+<span id="trivia-command-triviaset-revealanswer"></span><h3>triviaset revealanswer<a class="headerlink" href="#triviaset-revealanswer" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset revealanswer &lt;true_or_false&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets whether or not the answer is revealed if the time limit for answering runs out.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;true_or_false&gt;</span></code> If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bot will reveal the answer if there is no
+correct guess within the time limit.</p></li>
+</ul>
+</section>
+<section id="triviaset-showsettings">
+<span id="trivia-command-triviaset-showsettings"></span><h3>triviaset showsettings<a class="headerlink" href="#triviaset-showsettings" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset showsettings
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows the current trivia settings.</p>
+</section>
+<section id="triviaset-stopafter">
+<span id="trivia-command-triviaset-stopafter"></span><h3>triviaset stopafter<a class="headerlink" href="#triviaset-stopafter" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset stopafter &lt;seconds&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets how long the bot should wait before stopping the trivia
+session due to lack of response.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;seconds&gt;</span></code> The number of seconds to wait before stopping the session.</p></li>
+</ul>
+</section>
+<section id="triviaset-timelimit">
+<span id="trivia-command-triviaset-timelimit"></span><h3>triviaset timelimit<a class="headerlink" href="#triviaset-timelimit" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">mod role</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset timelimit &lt;seconds&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Sets the maximum time permitted to answer a question.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;seconds&gt;</span></code> The number of seconds to wait for an answer.</p></li>
+</ul>
+</section>
+<section id="triviaset-custom">
+<span id="trivia-command-triviaset-custom"></span><h3>triviaset custom<a class="headerlink" href="#triviaset-custom" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset custom
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Manage custom trivia lists.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Looking to learn how to create your own trivia lists?
+See <a class="reference internal" href="../guide_trivia_list_creation.html#guide-trivia-list-creation"><span class="std std-ref">here</span></a> for more information.</p>
+</div>
+</section>
+<section id="triviaset-custom-upload">
+<span id="trivia-command-triviaset-custom-upload"></span><h3>triviaset custom upload<a class="headerlink" href="#triviaset-custom-upload" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset custom upload
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Upload a custom trivia list. The bot will prompt you to upload
+your list as an attachment in Discord.</p>
+</section>
+<section id="triviaset-custom-list">
+<span id="trivia-command-triviaset-custom-list"></span><h3>triviaset custom list<a class="headerlink" href="#triviaset-custom-list" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset custom list
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>List all uploaded custom trivia lists.</p>
+</section>
+<section id="triviaset-custom-delete">
+<span id="trivia-command-triviaset-custom-delete"></span><h3>triviaset custom delete<a class="headerlink" href="#triviaset-custom-delete" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command is locked to the
+<a class="reference internal" href="../getting_started.html#getting-started-permissions"><span class="std std-ref">bot owner</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]triviaset custom delete &lt;name&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Delete a custom trivia list.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> The name of the custom list to be deleted.</p></li>
+</ul>
+</section>
+<section id="trivia-command-trivia">
+<span id="id2"></span><h3>trivia<a class="headerlink" href="#trivia-command-trivia" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]trivia &lt;categories...&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Start a trivia session on the specified category.</p>
+<p>Multiple categories can be listed, in which case the trivia session
+will use all of the specified lists to select questions from.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;categories...&gt;</span></code> The category to play. Can be multiple.</p></li>
+</ul>
+</section>
+<section id="trivia-info">
+<span id="trivia-command-trivia-info"></span><h3>trivia info<a class="headerlink" href="#trivia-info" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]trivia info &lt;category&gt;
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Get information about a trivia category.</p>
+<p><strong>Arguments</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;category&gt;</span></code>: The category to get the information for.</p></li>
+</ul>
+</section>
+<section id="trivia-leaderboard">
+<span id="trivia-command-trivia-leaderboard"></span><h3>trivia leaderboard<a class="headerlink" href="#trivia-leaderboard" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]trivia leaderboard
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Shows the trivia leaderboard. Defaults to the top ten in the
+current server, sorted by total wins. The subcommands provide
+more customized leaderboards.</p>
+</section>
+<section id="trivia-leaderboard-global">
+<span id="trivia-command-trivia-leaderboard-global"></span><h3>trivia leaderboard global<a class="headerlink" href="#trivia-leaderboard-global" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]trivia leaderboard global [sort_by=wins] [top=10]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The global trivia leaderboard.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[sort_by=wins]</span></code> The method by which to sort the leaderboard (defaults to wins). Can be one of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">wins</span></code> Total wins</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">avg</span></code> Average score</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">total</span></code> Total correct answers from all sessions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">games</span></code> Total games played.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[top=10]</span></code> The number of ranks to show on the leaderboard. Defaults to 10</p></li>
+</ul>
+</section>
+<section id="trivia-leaderboard-server">
+<span id="trivia-command-trivia-leaderboard-server"></span><h3>trivia leaderboard server<a class="headerlink" href="#trivia-leaderboard-server" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]trivia leaderboard server [sort_by=wins] [top=10]
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>The trivia leaderboard for this server.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[sort_by=wins]</span></code> The method by which to sort the leaderboard (defaults to wins). Can be one of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">wins</span></code> Total wins</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">avg</span></code> Average score</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">total</span></code> Total correct answers from all sessions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">games</span></code> Total games played.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[top=10]</span></code> The number of ranks to show on the leaderboard. Defaults to 10</p></li>
+</ul>
+</section>
+<section id="trivia-list">
+<span id="trivia-command-trivia-list"></span><h3>trivia list<a class="headerlink" href="#trivia-list" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]trivia list
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Lists the available trivia categories</p>
+</section>
+<section id="trivia-stop">
+<span id="trivia-command-trivia-stop"></span><h3>trivia stop<a class="headerlink" href="#trivia-stop" title="Link to this heading"></a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[p]trivia stop
+</pre></div>
+</div>
+<p><strong>Description</strong></p>
+<p>Stops an ongoing trivia session.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="streams.html" class="btn btn-neutral float-left" title="Streams" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="warnings.html" class="btn btn-neutral float-right" title="Warnings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "author": [
+        "Star"
+    ],
+    "description": "Search the internet for useful info. Currently only wikipedia supported.",
+    "name": "Search",
+    "requirements": [
+        "aiohttp"
+    ],
+    "short": "Search the internet!",
+    "ready": true
+}

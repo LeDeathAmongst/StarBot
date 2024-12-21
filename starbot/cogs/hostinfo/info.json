@@ -1,0 +1,10 @@
+{
+    "author": [
+        "Star"
+    ],
+    "description": "Information on bot server",
+    "name": "Host Info",
+    "short": "Host Info",
+    "hidden": false,
+    "ready": true
+}

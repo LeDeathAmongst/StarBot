@@ -1,0 +1,33 @@
+# include license files
+include LICENSE
+recursive-include starbot *.LICENSE
+
+# include requirements files
+include requirements/base.in
+include requirements/base.txt
+include requirements/extra-*.in
+include requirements/extra-*.txt
+
+# include locale files
+recursive-include starbot locales/*.po
+
+# include data folders for cogs
+recursive-include starbot/**/data *
+
+# include *.export files from the test fixtures
+recursive-include starbot *.export
+
+# include the py.typed file informing about Red being typed
+recursive-include starbot py.typed
+
+# include *.sql files from postgres driver
+recursive-include starbot/core/_drivers/postgres *.sql
+
+# include tests
+graft tests
+
+# include tox configuration
+include tox.ini
+
+# exclude files containing byte-code and compiled libs
+global-exclude *.py[cod]

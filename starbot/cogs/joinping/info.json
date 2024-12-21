@@ -1,0 +1,22 @@
+{
+    "name": "JoinPing",
+    "short": "Ping members on join in specific channels.",
+    "description": "Ghost ping users in channels to alert them when they join.",
+    "end_user_data_statement": "This cog does not store any end user data.",
+    "install_msg": "Thanks for installing JoinPing. Load the cog with `[p]load joinping` and see all its commands with `[p]help JoinPing`",
+    "author": [
+        "Star"
+    ],
+    "required_cogs": {},
+    "requirements": [
+        "git+https://github.com/phenom4n4n/TagScript.git@dpy2"
+    ],
+    "tags": [
+        "joinping",
+        "member join",
+        "join",
+        "welcome",
+        "mentions"
+    ],
+    "type": "COG"
+}

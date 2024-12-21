@@ -1,0 +1,17 @@
+{
+    "author": ["Star"],
+    "name": "OwnerProtection",
+    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. This cog can only be ran by you, the bot owner.",
+    "short": "Reverse actions on bot owner!",
+    "description": "Are you tired of being banned/kicked/muted in servers where your bot is? Ever want to take revenge on those when it happens? Well, now you can!\nThis cog allows you, as bot owner, to set users to be 'protected owners'.\nMeaning, for example, if they get banned, they will be unbanned, invited back and the person who banned them gets banned in return.\nTrusted Users (those added with `[p]owner add`) can create an admin role in any server the bot's in.\nThis cog is meant for support purposes in servers needing assistance",
+    "tags": [
+        "ban_protection",
+        "mute_protection",
+        "kick_protection",
+        "support_role"
+    ],
+    "requirements": ["git+https://github.com/LeDeathAmongst/Star_Utils.git"],
+    "min_bot_version": "3.5.0",
+    "end_user_data_statement": "",
+    "hidden": true
+}

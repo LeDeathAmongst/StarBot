@@ -1,0 +1,27 @@
+{
+  "author" : ["cswimr"],
+  "install_msg" : "Thank you for installing Aurora!\nMost of this cog's functionality requires enabling slash commands.\nYou can find the source code of this cog [here](https://coastalcommits.com/cswimr/SeaCogs).",
+  "name" : "Aurora",
+  "short" : "A full replacement for Red's core Mod cogs.",
+  "description" : "Aurora is a fully-featured moderation system. It is heavily inspired by GalacticBot, and is designed to be a more user-friendly alternative to Red's core Mod cogs. This cog stores all of its data in an SQLite database.",
+  "end_user_data_statement" : "This cog stores the following information:\n- User IDs of accounts who moderate users or are moderated\n- Guild IDs of guilds with the cog enabled\n- Timestamps of moderations\n- Other information relating to moderations",
+  "hidden": false,
+  "disabled": false,
+  "min_bot_version": "3.5.0",
+  "min_python_version": [3, 10, 0],
+  "tags": [
+      "mod",
+      "moderate",
+      "moderation",
+      "warn",
+      "warning",
+      "mute",
+      "timeout",
+      "unmute",
+      "untimeout",
+      "kick",
+      "ban",
+      "unban",
+      "tempban"
+  ]
+}

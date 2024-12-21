@@ -1,0 +1,666 @@
+# Hungarian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-14 04:35+0100\n"
+"PO-Revision-Date: 2024-10-14 04:43+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: hu\n"
+"Language-Team: hu <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: main.py:155 main.py:203 main.py:230
+msgid "This server is in the ingored list!"
+msgstr "Ez a szerver szerepel a listán!"
+msgstr ""
+
+#: main.py:158 main.py:206 main.py:233
+msgid "This server is not in the allowed list!"
+msgstr "Ez a szerver nem szerepel az engedélyezett listán!"
+msgstr ""
+
+#: main.py:185
+msgid "Please confirm this action by passing `True` as an argument"
+msgstr "Kérjük, erősítse meg ezt a műveletet az "Igaz" argumentumként való átadásával"
+msgstr ""
+
+#: main.py:193
+msgid "All backups have been wiped!"
+msgstr "Az összes biztonsági másolatot töröltük!"
+msgstr ""
+
+#: main.py:220
+msgid "A backup has been created!"
+msgstr "Biztonsági másolat készült!"
+msgstr ""
+
+#: main.py:239
+msgid "There are no backups for this guild!"
+msgstr "Ehhez a céhhez nincs biztonsági másolat!"
+msgstr ""
+
+#: main.py:244
+msgid "Server restore is complete!"
+msgstr "A szerver-visszaállítás befejeződött!"
+msgstr ""
+
+#: common/views.py:286 main.py:246
+msgid "The following errors occurred while restoring the backup"
+msgstr "A biztonsági mentés visszaállítása során a következő hibák történtek"
+msgstr ""
+
+#: main.py:260 main.py:261
+msgid "**None Set**"
+msgstr "**Nincs beállítva**"
+msgstr ""
+
+#: main.py:263
+msgid ""
+msgstr ""
+"### Global Settings\n"
+"- Global backups: {}\n"
+"- Max backups per server: {}\n"
+"- Allow auto-backups: {}\n"
+"- Message backup limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+"- Ignored servers: {}\n"
+"- Allowed servers: {}\n"
+msgstr ""
+
+#: main.py:295
+msgid "Auto backups have been **Disabled**"
+msgstr "Az automatikus biztonsági mentések **letiltva**"
+msgstr ""
+
+#: main.py:298
+msgid "Auto backups have been **Enabled**"
+msgstr "Az automatikus biztonsági mentések **engedélyezve**"
+msgstr ""
+
+#: main.py:313
+msgid "Limit must be 0 or higher"
+msgstr "A korlátnak 0-nak vagy magasabbnak kell lennie"
+msgstr ""
+
+#: main.py:316
+msgid "Message backup has been **Disabled**"
+msgstr "Az üzenetek biztonsági mentése **letiltva**"
+msgstr ""
+
+#: main.py:318
+msgid "Message backup limit has been set"
+msgstr "Üzenetmentési korlát beállítva"
+msgstr ""
+
+#: main.py:330
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring the roles of all members can be slow for large servers."
+msgstr ""
+
+#: main.py:332
+msgid "Members will now be backed up"
+msgstr "A tagokról most biztonsági másolat készül"
+msgstr ""
+
+#: main.py:334
+msgid "Members will no longer be backed up"
+msgstr "A tagokról a továbbiakban nem készül biztonsági másolat"
+msgstr ""
+
+#: main.py:347
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Any roles above the bot's role will not be restored."
+msgstr ""
+
+#: main.py:349
+msgid "Roles will now be backed up"
+msgstr "A szerepek most biztonsági mentésre kerülnek"
+msgstr ""
+
+#: main.py:351
+msgid "Roles will no longer be backed up"
+msgstr "A szerepkörökről a továbbiakban nem lesz biztonsági másolat"
+msgstr ""
+
+#: main.py:364
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring emojis is EXTREMELY rate-limited and can take a long time (like"
+" hours) for servers with many emojis."
+msgstr ""
+
+#: main.py:368
+msgid "Emojis will now be backed up"
+msgstr "A hangulatjelekről most biztonsági másolat készül"
+msgstr ""
+
+#: main.py:370
+msgid "Emojis will no longer be backed up"
+msgstr "A hangulatjelekről a továbbiakban nem készül biztonsági másolat"
+msgstr ""
+
+#: main.py:383
+msgid ""
+msgstr ""
+"\n"
+"⚠️**Warning**⚠️\n"
+"Restoring stickers is EXTREMELY rate-limited and can take a long time "
+"(like hours) for servers with many stickers."
+msgstr ""
+
+#: main.py:387
+msgid "Stickers will now be backed up"
+msgstr "A matricákról most biztonsági másolat készül"
+msgstr ""
+
+#: main.py:389
+msgid "Stickers will no longer be backed up"
+msgstr "A matricákról a továbbiakban nem készül biztonsági másolat"
+msgstr ""
+
+#: main.py:399
+msgid "Max backups set to 0, Cartographer has been **Disabled**"
+msgstr "A biztonsági mentések maximális száma 0, a térképész **letiltva**"
+msgstr ""
+
+#: main.py:401
+msgid "Max backup count has been set"
+msgstr "A biztonsági mentések maximális száma beállítva"
+msgstr ""
+
+#: main.py:411
+msgid "Server removed from the ignore list"
+msgstr "A szerver eltávolítva a figyelmen kívül hagyó listáról"
+msgstr ""
+
+#: main.py:414
+msgid "Server added to the ignore list"
+msgstr "A szerver hozzáadva a figyelmen kívül hagyó listához"
+msgstr ""
+
+#: main.py:424
+msgid "Server removed from the allow list"
+msgstr "A szerver eltávolítva az engedélyezési listáról"
+msgstr ""
+
+#: main.py:427
+msgid "Server added to the allow list"
+msgstr "A szerver hozzáadva az engedélyezési listához"
+msgstr ""
+
+#: common/formatting.py:17
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:           `{}\n"
+"`Created:        `{}\n"
+"`AFK Channel:    `{}\n"
+"`AFK Timeout:    `{}\n"
+"`Verification:   `{}\n"
+"`Notifications:  `{}\n"
+"`Locale:         `{}\n"
+"`Emojis:         `{}\n"
+"`Stickers:       `{}\n"
+"`Role Count:     `{}\n"
+"`Members Saved:  `{}\n"
+"`Bans:           `{}\n"
+"`Categories:     `{}\n"
+"`Text Channels:  `{} ({} messages)\n"
+"`Voice Channels: `{} ({} messages)\n"
+"`Forums:         `{}\n"
+msgstr ""
+
+#: common/serializers.py:121 common/serializers.py:132
+#: common/serializers.py:164 common/serializers.py:204
+#: common/serializers.py:211 common/serializers.py:342
+#: common/serializers.py:356 common/serializers.py:709
+#: common/serializers.py:809 common/serializers.py:826
+#: common/serializers.py:894 common/serializers.py:901
+#: common/serializers.py:945 common/serializers.py:954
+msgid "Restored from backup"
+msgstr "Biztonsági mentésből visszaállítva"
+msgstr ""
+
+#: common/serializers.py:207
+msgid "Failed to add the following roles to {}: {} - {}\n"
+msgstr "Nem sikerült hozzáadni a következő szerepeket a(z) {} csoporthoz: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:214
+msgid "Failed to remove the following roles from {}: {} - {}\n"
+msgstr "Nem sikerült eltávolítani a következő szerepeket innen: {}: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:290
+msgid "Channel {} missing role or member overwrite: {} - {}\n"
+msgstr "A(z) {} csatornából hiányzik a szerepkör vagy a tag felülírása: {} - {}\n"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+#: common/serializers.py:1127
+msgid "Cartographer Restore"
+msgstr "Térképész Restore"
+msgstr ""
+
+#: common/serializers.py:516 common/serializers.py:836
+msgid "Restoring messages from backup"
+msgstr "Üzenetek visszaállítása biztonsági másolatból"
+msgstr ""
+
+#: common/serializers.py:1088
+msgid "Restoring backup"
+msgstr "Biztonsági mentés visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1092
+msgid "Restoring server settings"
+msgstr "Szerverbeállítások visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1093
+msgid "Step 1 of 9"
+msgstr "9/1. lépés"
+msgstr ""
+
+#: common/serializers.py:1095
+msgid "Restoring roles"
+msgstr "Szerepek visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1096
+msgid "Step 2 of 9"
+msgstr "9/2. lépés"
+msgstr ""
+
+#: common/serializers.py:1098
+msgid "Restoring emojis and stickers"
+msgstr "Emojik és matricák helyreállítása"
+msgstr ""
+
+#: common/serializers.py:1099
+msgid "Step 3 of 9"
+msgstr "9/3. lépés"
+msgstr ""
+
+#: common/serializers.py:1101
+msgid "Restoring channels"
+msgstr "Csatornák visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1102
+msgid "Step 4 of 9"
+msgstr "9/4. lépés"
+msgstr ""
+
+#: common/serializers.py:1104
+msgid "Restoring AFK settings"
+msgstr "Az AFK beállítások visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1105
+msgid "Step 5 of 9"
+msgstr "9/5. lépés"
+msgstr ""
+
+#: common/serializers.py:1107
+msgid "Restoring system channels"
+msgstr "A rendszer csatornáinak visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1108
+msgid "Step 6 of 9"
+msgstr "6/9. lépés"
+msgstr ""
+
+#: common/serializers.py:1110
+msgid "Restoring remainder of the server settings"
+msgstr "A kiszolgáló többi beállításának visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1111
+msgid "Step 7 of 9"
+msgstr "7/9. lépés"
+msgstr ""
+
+#: common/serializers.py:1113
+msgid "Restoring member roles"
+msgstr "Tagi szerepkörök visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1114
+msgid "Step 8 of 9"
+msgstr "9/8. lépés"
+msgstr ""
+
+#: common/serializers.py:1116
+msgid "Restoring bans"
+msgstr "A tiltások visszaállítása"
+msgstr ""
+
+#: common/serializers.py:1117
+msgid "Step 9 of 9"
+msgstr "9/9. lépés"
+msgstr ""
+
+#: common/serializers.py:1119
+msgid "Restoration complete!"
+msgstr "A helyreállítás kész!"
+msgstr ""
+
+#: common/serializers.py:1123
+msgid "Server restoration took {}"
+msgstr "A szerver helyreállítása {} ideig tartott"
+msgstr ""
+
+#: common/serializers.py:1146
+msgid "Banner too large to restore\n"
+msgstr "A szalaghirdetés túl nagy a visszaállításhoz\n"
+msgstr ""
+
+#: common/serializers.py:1149
+msgid "Icon too large to restore\n"
+msgstr "Az ikon túl nagy a visszaállításhoz\n"
+msgstr ""
+
+#: common/serializers.py:1152
+msgid "Splash too large to restore\n"
+msgstr "A splash túl nagy a visszaállításhoz\n"
+msgstr ""
+
+#: common/serializers.py:1155
+msgid "Discovery splash too large to restore\n"
+msgstr "A Discovery splash túl nagy a visszaállításhoz\n"
+msgstr ""
+
+#: common/serializers.py:1254
+msgid ""
+msgstr ""
+"Backup has more emojis than the target server can hold. Some emojis will "
+"not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1258
+msgid "Emoji '{}' not restored due to limit\n"
+msgstr "A(z) „{}” hangulatjel a korlátozás miatt nem lett visszaállítva\n"
+msgstr ""
+
+#: common/serializers.py:1282
+msgid ""
+msgstr ""
+"Backup has more stickers than the target server can hold. Some stickers "
+"will not be restored.\n"
+msgstr ""
+
+#: common/serializers.py:1286
+msgid "Sticker '{}' not restored due to limit\n"
+msgstr "A(z) „{}” matrica a korlátozás miatt nem lett visszaállítva\n"
+msgstr ""
+
+#: common/serializers.py:1326
+msgid ""
+msgstr ""
+"This channel isn't part of the backup, it can be deleted after the "
+"restore is complete."
+msgstr ""
+
+#: common/views.py:43
+msgid "That is not a number!"
+msgstr "Ez nem szám!"
+msgstr ""
+
+#: common/views.py:54
+msgid "Confirmation"
+msgstr "Megerősítés"
+msgstr ""
+
+#: common/views.py:57
+msgid "THIS CANNOT BE UNDONE!"
+msgstr "EZ NEM VISSZAVONHATÓ!"
+msgstr ""
+
+#: common/views.py:59
+msgid "Are you SURE?"
+msgstr "BIZTOS?"
+msgstr ""
+
+#: common/views.py:67
+msgid "How many messages to backup? (0 = None)"
+msgstr "Hány üzenetről kell biztonsági másolatot készíteni? (0 = nincs)"
+msgstr ""
+
+#: common/views.py:77
+msgid "response must be a string!"
+msgstr "a válasznak karakterláncnak kell lennie!"
+msgstr ""
+
+#: common/views.py:80
+msgid "Message backup limit must be a number!"
+msgstr "Az üzenet biztonsági mentési korlátja szám lehet!"
+msgstr ""
+
+#: common/views.py:101
+msgid "Close"
+msgstr "Közeli"
+msgstr ""
+
+#: common/views.py:104
+msgid "Cartographer Backups"
+msgstr "Kartográfus biztonsági másolatok"
+msgstr ""
+
+#: common/views.py:105
+msgid "Controls"
+msgstr "Vezérlők"
+msgstr ""
+
+#: common/views.py:106
+msgid ""
+msgstr ""
+"- Backup Current Server: 📥\n"
+"- Restore Here: 🔄\n"
+"- Switch Servers: 🔍\n"
+"- Set AutoBackup Interval: ⌛\n"
+"- Delete Backup: 🗑️\n"
+"- Print Details: ℹ️\n"
+msgstr ""
+
+#: common/views.py:114
+msgid "Settings"
+msgstr "Beállítások elemre"
+msgstr ""
+
+#: common/views.py:115
+msgid ""
+msgstr ""
+"- Auto Backup Interval Hours: {}\n"
+"- Last Backup: {}\n"
+"## Global Settings\n"
+"-# The following settings are configured by the bot owner\n"
+"- Max Backups Per Guild: {}\n"
+"- Backup Message Limit: {}\n"
+"- Backup Members: {}\n"
+"- Backup Roles: {}\n"
+"- Backup Emojis: {}\n"
+"- Backup Stickers: {}\n"
+msgstr ""
+
+#: common/views.py:142
+msgid ""
+msgstr ""
+"## {}\n"
+"`Size:    `{}\n"
+"`Created: `{}\n"
+msgstr ""
+
+#: common/views.py:150
+msgid "Page {}"
+msgstr "{}. oldal"
+msgstr ""
+
+#: common/views.py:152
+msgid "There are no backups for this server yet!"
+msgstr "Még nincsenek biztonsági mentések ehhez a szerverhez!"
+msgstr ""
+
+#: common/views.py:161
+msgid "This isn't your menu!"
+msgstr "Ez nem a te menüd!"
+msgstr ""
+
+#: common/views.py:198 common/views.py:257
+msgid "I need administrator permissions to restore a backup in this server!"
+msgstr "Rendszergazdai engedélyekre van szükségem a biztonsági másolat visszaállításához ezen a szerveren!"
+msgstr ""
+
+#: common/views.py:208 common/views.py:271
+msgid "Restore has been cancelled!"
+msgstr "A visszaállítás megszakadt!"
+msgstr ""
+
+#: common/views.py:212
+msgid "The maximum amount of messages that can be backed up per channel is {}!"
+msgstr "Az üzenetek maximális száma csatornánként {}!"
+msgstr ""
+
+#: common/views.py:221
+msgid ""
+msgstr ""
+"Warning! I need to have the highest role in the server to restore roles "
+"properly!"
+msgstr ""
+
+#: common/views.py:224
+msgid ""
+msgstr ""
+"Backing up {}!\n"
+"-# This may take a while..."
+msgstr ""
+
+#: common/views.py:226
+msgid "Backup in Progress"
+msgstr "Biztonsági mentés folyamatban"
+msgstr ""
+
+#: common/views.py:243
+msgid ""
+msgstr ""
+"An error occurred while backing up the server!\n"
+"{}"
+msgstr ""
+
+#: common/views.py:247
+msgid "Backup created in {}!"
+msgstr "Biztonsági másolat készült itt: {}!"
+msgstr ""
+
+#: common/views.py:247
+msgid "0 seconds"
+msgstr "0 másodperc"
+msgstr ""
+
+#: common/views.py:248
+msgid "Backup Created"
+msgstr "Biztonsági másolat létrehozva"
+msgstr ""
+
+#: common/views.py:261
+msgid "No backups to restore!"
+msgstr "Nincs visszaállítandó biztonsági másolat!"
+msgstr ""
+
+#: common/views.py:280
+msgid "Your backup is being restored!"
+msgstr "A biztonsági másolat visszaállítása folyamatban van!"
+msgstr ""
+
+#: common/views.py:291
+msgid "Switch Servers"
+msgstr "Szerver váltás"
+msgstr ""
+
+#: common/views.py:291
+msgid "Server ID"
+msgstr "Szerverazonosító"
+msgstr ""
+
+#: common/views.py:291
+msgid "Enter the ID of the server"
+msgstr "Adja meg a szerver azonosítóját"
+msgstr ""
+
+#: common/views.py:298
+msgid "I am not in that server!"
+msgstr "Nem vagyok a szerveren!"
+msgstr ""
+
+#: common/views.py:302
+msgid "You do not appear to be in that server!"
+msgstr "Úgy tűnik, nem vagy azon a szerveren!"
+msgstr ""
+
+#: common/views.py:305
+msgid "You can only switch to servers that you are an administrator of!"
+msgstr "Csak olyan szerverekre válthat, amelyeknek rendszergazdája!"
+msgstr ""
+
+#: common/views.py:314
+msgid "Auto backups have been disabled by the bot owner!"
+msgstr "Az automatikus biztonsági mentést letiltotta a bot tulajdonosa!"
+msgstr ""
+
+#: common/views.py:316
+msgid "Auto Backup Interval"
+msgstr "Automatikus mentési időköz"
+msgstr ""
+
+#: common/views.py:316
+msgid "Interval Hours"
+msgstr "Időköz Óra"
+msgstr ""
+
+#: common/views.py:316
+msgid "Hours in-between backups"
+msgstr "Órák a biztonsági mentések között"
+msgstr ""
+
+#: common/views.py:322
+msgid "Auto-backup interval hours has been set to {}"
+msgstr "Az automatikus biztonsági mentés óráinak időtartama a következőre lett állítva: {}"
+msgstr ""
+
+#: common/views.py:334
+msgid "No backups to delete!"
+msgstr "Nincsenek törlendő biztonsági másolatok!"
+msgstr ""
+
+#: common/views.py:341
+msgid "Backup deleted!"
+msgstr "Biztonsági másolat törölve!"
+msgstr ""
+
+#: common/views.py:349
+msgid "No backups to get info for!"
+msgstr "Nincs biztonsági másolat, amelyről információt szerezhetne!"
+msgstr ""
+

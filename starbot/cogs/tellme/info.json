@@ -1,0 +1,19 @@
+{
+    "author": [
+        "Star"
+    ],
+    "install_msg": "Thanks for installing TellMe. See `[p]tellme` for more.",
+    "name": "TellMe",
+    "short": "Create custom commands with DMs and server messages.",
+    "requirements": [],
+    "description": "Create custom commands that will DM members and post messages in servers.",
+    "tags": [
+        "utility"
+    ],
+    "min_bot_version": "3.5.0.dev1",
+    "min_python_version": [
+        3,
+        6,
+        0
+    ]
+}

@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mod log &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RPC" href="framework_rpc.html" />
+    <link rel="prev" title="Internationalization Framework" href="framework_i18n.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creation.html">Creating cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mod log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registering-case-types">Registering Case types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-reference">API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Mod log</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.Case"><code class="docutils literal notranslate"><span class="pre">Case</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.CaseType"><code class="docutils literal notranslate"><span class="pre">CaseType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.create_case"><code class="docutils literal notranslate"><span class="pre">create_case()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.get_all_cases"><code class="docutils literal notranslate"><span class="pre">get_all_cases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.get_all_casetypes"><code class="docutils literal notranslate"><span class="pre">get_all_casetypes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.get_case"><code class="docutils literal notranslate"><span class="pre">get_case()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.get_cases_for_member"><code class="docutils literal notranslate"><span class="pre">get_cases_for_member()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.get_casetype"><code class="docutils literal notranslate"><span class="pre">get_casetype()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.get_latest_case"><code class="docutils literal notranslate"><span class="pre">get_latest_case()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.get_modlog_channel"><code class="docutils literal notranslate"><span class="pre">get_modlog_channel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.register_casetype"><code class="docutils literal notranslate"><span class="pre">register_casetype()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.register_casetypes"><code class="docutils literal notranslate"><span class="pre">register_casetypes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.reset_cases"><code class="docutils literal notranslate"><span class="pre">reset_cases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starbot.core.modlog.set_modlog_channel"><code class="docutils literal notranslate"><span class="pre">set_modlog_channel()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mod log</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developframework_modlog.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="mod-log">
+<h1>Mod log<a class="headerlink" href="#mod-log" title="Link to this heading"></a></h1>
+<p>Mod log has now been separated from Mod for V3.</p>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span><span class="p">,</span> <span class="n">modlog</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">admin_or_permissions</span><span class="p">(</span><span class="n">ban_members</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">ban</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">discord</span><span class="o">.</span><span class="n">Member</span><span class="p">,</span> <span class="n">reason</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="o">.</span><span class="n">ban</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+        <span class="n">case</span> <span class="o">=</span> <span class="k">await</span> <span class="n">modlog</span><span class="o">.</span><span class="n">create_case</span><span class="p">(</span>
+            <span class="n">ctx</span><span class="o">.</span><span class="n">bot</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">guild</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">created_at</span><span class="p">,</span> <span class="n">action_type</span><span class="o">=</span><span class="s2">&quot;ban&quot;</span><span class="p">,</span>
+            <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span> <span class="n">moderator</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">author</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="n">reason</span>
+        <span class="p">)</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;Done. It was about time.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="registering-case-types">
+<h2>Registering Case types<a class="headerlink" href="#registering-case-types" title="Link to this heading"></a></h2>
+<p>To register case types, use a special <code class="docutils literal notranslate"><span class="pre">cog_load()</span></code> method which is called when you add a cog:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mycog/mycog.py</span>
+<span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">modlog</span><span class="p">,</span> <span class="n">commands</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">cog_load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">register_casetypes</span><span class="p">()</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">register_casetypes</span><span class="p">():</span>
+        <span class="c1"># Registering a single casetype</span>
+        <span class="n">ban_case</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ban&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;default_setting&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\N{HAMMER}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;case_str&quot;</span><span class="p">:</span> <span class="s2">&quot;Ban&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">modlog</span><span class="o">.</span><span class="n">register_casetype</span><span class="p">(</span><span class="o">**</span><span class="n">ban_case</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="c1"># Registering multiple casetypes</span>
+        <span class="n">new_types</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;hackban&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;default_setting&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\N{BUST IN SILHOUETTE}\N{HAMMER}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;case_str&quot;</span><span class="p">:</span> <span class="s2">&quot;Hackban&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;kick&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;default_setting&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\N{WOMANS BOOTS}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;case_str&quot;</span><span class="p">:</span> <span class="s2">&quot;Kick&quot;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+        <span class="k">await</span> <span class="n">modlog</span><span class="o">.</span><span class="n">register_casetypes</span><span class="p">(</span><span class="n">new_types</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># mycog/__init__.py</span>
+<span class="kn">from</span> <span class="nn">.mycog</span> <span class="kn">import</span> <span class="n">MyCog</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">bot</span><span class="p">):</span>
+    <span class="n">cog</span> <span class="o">=</span> <span class="n">MyCog</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">add_cog</span><span class="p">(</span><span class="n">cog</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Image should be the emoji you want to represent your case type with.</p>
+</div>
+</section>
+<section id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Mod log<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="py class" id="module-starbot.core.modlog">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">Case</span></span><a class="reference internal" href="_modules/starbot/core/modlog.html#Case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.Case" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A single mod log case</p>
+<p>This class should ONLY be instantiated by the modlog itself.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.bot">
+<span class="sig-name descname"><span class="pre">bot</span></span><a class="headerlink" href="#starbot.core.modlog.Case.bot" title="Link to this definition"></a></dt>
+<dd><p>The bot object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red">Red</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.guild">
+<span class="sig-name descname"><span class="pre">guild</span></span><a class="headerlink" href="#starbot.core.modlog.Case.guild" title="Link to this definition"></a></dt>
+<dd><p>The guild the action was taken in.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)">discord.Guild</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#starbot.core.modlog.Case.created_at" title="Link to this definition"></a></dt>
+<dd><p>The UNIX time the action occurred at.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.action_type">
+<span class="sig-name descname"><span class="pre">action_type</span></span><a class="headerlink" href="#starbot.core.modlog.Case.action_type" title="Link to this definition"></a></dt>
+<dd><p>The type of action that was taken.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#starbot.core.modlog.Case.user" title="Link to this definition"></a></dt>
+<dd><p>The user target by the action.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This attribute will be of type <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>
+if the Discord user can no longer be found.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)">discord.abc.User</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.moderator">
+<span class="sig-name descname"><span class="pre">moderator</span></span><a class="headerlink" href="#starbot.core.modlog.Case.moderator" title="Link to this definition"></a></dt>
+<dd><p>The moderator who took the action.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the moderator is unknown.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This attribute will be of type <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>
+if the Discord user can no longer be found.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[Union[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)">discord.abc.User</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.case_number">
+<span class="sig-name descname"><span class="pre">case_number</span></span><a class="headerlink" href="#starbot.core.modlog.Case.case_number" title="Link to this definition"></a></dt>
+<dd><p>The case’s number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.reason">
+<span class="sig-name descname"><span class="pre">reason</span></span><a class="headerlink" href="#starbot.core.modlog.Case.reason" title="Link to this definition"></a></dt>
+<dd><p>The reason the action was taken.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the reason was not specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.until">
+<span class="sig-name descname"><span class="pre">until</span></span><a class="headerlink" href="#starbot.core.modlog.Case.until" title="Link to this definition"></a></dt>
+<dd><p>The UNIX time the action is in effect until.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the action is permanent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.channel">
+<span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#starbot.core.modlog.Case.channel" title="Link to this definition"></a></dt>
+<dd><p>The channel the action was taken in.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the action was not related to a channel.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This attribute will be of type <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>
+if the channel seems to no longer exist.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[Union[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.GuildChannel" title="(in discord.py v2.4.0)">discord.abc.GuildChannel</a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)">discord.Thread</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.parent_channel_id">
+<span class="sig-name descname"><span class="pre">parent_channel_id</span></span><a class="headerlink" href="#starbot.core.modlog.Case.parent_channel_id" title="Link to this definition"></a></dt>
+<dd><p>The parent channel ID of the thread in <code class="docutils literal notranslate"><span class="pre">channel</span></code>.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the action was not done in a thread.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.amended_by">
+<span class="sig-name descname"><span class="pre">amended_by</span></span><a class="headerlink" href="#starbot.core.modlog.Case.amended_by" title="Link to this definition"></a></dt>
+<dd><p>The moderator who made the last change to the case.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the case was never edited.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This attribute will be of type <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">int</span></code></a>
+if the Discord user can no longer be found.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[Union[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)">discord.abc.User</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.modified_at">
+<span class="sig-name descname"><span class="pre">modified_at</span></span><a class="headerlink" href="#starbot.core.modlog.Case.modified_at" title="Link to this definition"></a></dt>
+<dd><p>The UNIX time of the last change to the case.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the case was never edited.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#starbot.core.modlog.Case.message" title="Link to this definition"></a></dt>
+<dd><p>The message created by Modlog for this case.
+Instance of <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Message" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Message</span></code></a> <em>if</em> the Case object was returned from
+<a class="reference internal" href="#starbot.core.modlog.create_case" title="starbot.core.modlog.create_case"><code class="xref any py py-func docutils literal notranslate"><span class="pre">modlog.create_case()</span></code></a>, otherwise <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessage" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.PartialMessage</span></code></a>.</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if we know that the message no longer exists
+(note: it might not exist regardless of whether this attribute is <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a>)
+or if it has never been created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[Union[<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessage" title="(in discord.py v2.4.0)">discord.PartialMessage</a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Message" title="(in discord.py v2.4.0)">discord.Message</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.last_known_username">
+<span class="sig-name descname"><span class="pre">last_known_username</span></span><a class="headerlink" href="#starbot.core.modlog.Case.last_known_username" title="Link to this definition"></a></dt>
+<dd><p>The last known user handle (<code class="docutils literal notranslate"><span class="pre">username</span></code> / <code class="docutils literal notranslate"><span class="pre">username#1234</span></code>) of the user.
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if the handle of the user was never saved
+or if their data had to be anonymized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.edit">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#Case.edit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.Case.edit" title="Link to this definition"></a></dt>
+<dd><p>Edits a case</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – The attributes to change</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.from_json">
+<em class="property"><span class="pre">classmethod</span> <span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mod_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#Case.from_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.Case.from_json" title="Link to this definition"></a></dt>
+<dd><p>Get a Case object from the provided information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mod_channel</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.TextChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.TextChannel</span></code></a> or <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.VoiceChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.VoiceChannel</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.StageChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.StageChannel</span></code></a>) – The mod log channel for the guild</p></li>
+<li><p><strong>bot</strong> (<a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><em>Red</em></a>) – The bot’s instance. Needed to get the target user</p></li>
+<li><p><strong>case_number</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The case’s number.</p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – The JSON representation of the case to be gotten</p></li>
+<li><p><strong>**kwargs</strong> – Extra attributes for the Case instance which override values
+in the data dict. These should be complete objects and not
+IDs, where possible.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The case object for the requested case</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#starbot.core.modlog.Case" title="starbot.core.modlog.Case">Case</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.NotFound" title="(in discord.py v2.4.0)"><strong>discord.NotFound</strong></a> – The user the case is for no longer exists</p></li>
+<li><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Forbidden" title="(in discord.py v2.4.0)"><strong>discord.Forbidden</strong></a> – Cannot read message history to fetch the original message.</p></li>
+<li><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.HTTPException" title="(in discord.py v2.4.0)"><strong>discord.HTTPException</strong></a> – A generic API issue</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.message_content">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">message_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#Case.message_content"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.Case.message_content" title="Link to this definition"></a></dt>
+<dd><p>Format a case message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>embed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether or not to get an embed</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A rich embed or string representing a case message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>discord.Embed or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.parent_channel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent_channel</span></span><a class="headerlink" href="#starbot.core.modlog.Case.parent_channel" title="Link to this definition"></a></dt>
+<dd><p>The parent text/forum channel of the thread in <a class="reference internal" href="#starbot.core.modlog.Case.channel" title="starbot.core.modlog.Case.channel"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">channel</span></code></a>.</p>
+<p>This will be <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if <a class="reference internal" href="#starbot.core.modlog.Case.channel" title="starbot.core.modlog.Case.channel"><code class="xref any py py-attr docutils literal notranslate"><span class="pre">channel</span></code></a> is not a thread
+and when the parent text/forum channel is not in cache (probably due to removal).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.Case.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#Case.to_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.Case.to_json" title="Link to this definition"></a></dt>
+<dd><p>Transform the object to a dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The case in the form of a dict</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">CaseType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#CaseType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.CaseType" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A single case type</p>
+<p>This class should ONLY be instantiated by the modlog itself.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#starbot.core.modlog.CaseType.name" title="Link to this definition"></a></dt>
+<dd><p>The name of the case</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.default_setting">
+<span class="sig-name descname"><span class="pre">default_setting</span></span><a class="headerlink" href="#starbot.core.modlog.CaseType.default_setting" title="Link to this definition"></a></dt>
+<dd><p>Whether the case type should be on (if <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a>)
+or off (if <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">False</span></code></a>) by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#starbot.core.modlog.CaseType.image" title="Link to this definition"></a></dt>
+<dd><p>The emoji to use for the case type (for example, :boot:)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.case_str">
+<span class="sig-name descname"><span class="pre">case_str</span></span><a class="headerlink" href="#starbot.core.modlog.CaseType.case_str" title="Link to this definition"></a></dt>
+<dd><p>The string representation of the case (example: Ban)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.from_json">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#CaseType.from_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.CaseType.from_json" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The casetype’s name.</p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – The JSON data to create an instance from</p></li>
+<li><p><strong>**kwargs</strong> – Values for other attributes of the instance</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The case type object created from given data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#starbot.core.modlog.CaseType" title="starbot.core.modlog.CaseType">CaseType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.is_enabled">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#CaseType.is_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.CaseType.is_enabled" title="Link to this definition"></a></dt>
+<dd><p>Determines if the case is enabled.
+If the guild is not set, this will always return False</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><p>True if the guild is set and the casetype is enabled for the guild</p>
+<p>False if the guild is not set or if the guild is set and the type
+is disabled</p>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.set_enabled">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">set_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#CaseType.set_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.CaseType.set_enabled" title="Link to this definition"></a></dt>
+<dd><p>Sets the case as enabled or disabled</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – True if the case should be enabled, otherwise False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="starbot.core.modlog.CaseType.to_json">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#CaseType.to_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.CaseType.to_json" title="Link to this definition"></a></dt>
+<dd><p>Transforms the case type into a dict and saves it</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.create_case">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">create_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moderator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_known_username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#create_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.create_case" title="Link to this definition"></a></dt>
+<dd><p>Creates a new case.</p>
+<p>This fires an event <code class="code docutils literal notranslate"><span class="pre">on_modlog_case_create</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><em>Red</em></a>) – The bot object</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a>) – The guild the action was taken in</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – The time the action occurred at.
+If naive <a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">datetime</span></code></a> object is passed, it’s treated as a local time
+(similarly to how Python treats naive <a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">datetime</span></code></a> objects).</p></li>
+<li><p><strong>action_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The type of action that was taken</p></li>
+<li><p><strong>user</strong> (<em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Object" title="(in discord.py v2.4.0)"><em>discord.Object</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)"><em>discord.abc.User</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The user target by the action</p></li>
+<li><p><strong>moderator</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Object" title="(in discord.py v2.4.0)"><em>discord.Object</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.User" title="(in discord.py v2.4.0)"><em>discord.abc.User</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – The moderator who took the action</p></li>
+<li><p><strong>reason</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – The reason the action was taken</p></li>
+<li><p><strong>until</strong> (<em>Optional</em><em>[</em><em>datetime</em><em>]</em>) – The time the action is in effect until.
+If naive <a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">datetime</span></code></a> object is passed, it’s treated as a local time
+(similarly to how Python treats naive <a class="reference external" href="https://docs.python.org/3/library/datetime.html#module-datetime" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">datetime</span></code></a> objects).</p></li>
+<li><p><strong>channel</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.abc.GuildChannel" title="(in discord.py v2.4.0)"><em>discord.abc.GuildChannel</em></a><em>, </em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Thread" title="(in discord.py v2.4.0)"><em>discord.Thread</em></a><em>]</em><em>]</em>) – The channel the action was taken in</p></li>
+<li><p><strong>last_known_username</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – The last known user handle (<code class="docutils literal notranslate"><span class="pre">username</span></code> / <code class="docutils literal notranslate"><span class="pre">username#1234</span></code>) of the user
+Note: This is ignored if a Member or User object is provided
+in the user field</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the action type is not a valid action type.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If user is the bot itself.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">channel</span></code> is of type <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.PartialMessageable" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.PartialMessageable</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.get_all_cases">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">get_all_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#get_all_cases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.get_all_cases" title="Link to this definition"></a></dt>
+<dd><p>Gets all cases for the specified guild</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>) – The guild to get the cases from</p></li>
+<li><p><strong>bot</strong> (<a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><em>Red</em></a>) – The bot’s instance</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of all cases for the guild</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.get_all_casetypes">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">get_all_casetypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#get_all_casetypes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.get_all_casetypes" title="Link to this definition"></a></dt>
+<dd><p>Get all currently registered case types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of case types</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.get_case">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">get_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">case_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#get_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.get_case" title="Link to this definition"></a></dt>
+<dd><p>Gets the case with the associated case number</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>case_number</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The case number for the case to get</p></li>
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a>) – The guild to get the case from</p></li>
+<li><p><strong>bot</strong> (<a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><em>Red</em></a>) – The bot’s instance</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The case associated with the case number</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#starbot.core.modlog.Case" title="starbot.core.modlog.Case">Case</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If there is no case for the specified number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.get_cases_for_member">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">get_cases_for_member</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">member</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">member_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#get_cases_for_member"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.get_cases_for_member" title="Link to this definition"></a></dt>
+<dd><p>Gets all cases for the specified member or member id in a guild.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>) – The guild to get the cases from</p></li>
+<li><p><strong>bot</strong> (<a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><em>Red</em></a>) – The bot’s instance</p></li>
+<li><p><strong>member</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Member" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Member</span></code></a>) – The member to get cases about</p></li>
+<li><p><strong>member_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – The id of the member to get cases about</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of all matching cases.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If at least one of member or member_id is not provided</p></li>
+<li><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Forbidden" title="(in discord.py v2.4.0)"><strong>discord.Forbidden</strong></a> – The bot does not have permission to fetch the modlog message which was sent.</p></li>
+<li><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.HTTPException" title="(in discord.py v2.4.0)"><strong>discord.HTTPException</strong></a> – Fetching the user failed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.get_casetype">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">get_casetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#get_casetype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.get_casetype" title="Link to this definition"></a></dt>
+<dd><p>Gets the case type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the case type to get</p></li>
+<li><p><strong>guild</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a><em>]</em>) – If provided, sets the case type’s guild attribute to this guild</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Case type with provided name. If such case type doesn’t exist this will be <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#starbot.core.modlog.CaseType" title="starbot.core.modlog.CaseType">CaseType</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.get_latest_case">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">get_latest_case</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#get_latest_case"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.get_latest_case" title="Link to this definition"></a></dt>
+<dd><p>Get the latest case for the specified guild.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><em>discord.Guild</em></a>) – The guild to get the latest case for.</p></li>
+<li><p><strong>bot</strong> (<a class="reference internal" href="framework_bot.html#starbot.core.bot.Red" title="starbot.core.bot.Red"><em>Red</em></a>) – The bot object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The latest case object. <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a> if it the guild has no cases.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#starbot.core.modlog.Case" title="starbot.core.modlog.Case">Case</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.get_modlog_channel">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">get_modlog_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#get_modlog_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.get_modlog_channel" title="Link to this definition"></a></dt>
+<dd><p>Get the current modlog channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>) – The guild to get the modlog channel for.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The channel object representing the modlog channel.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.TextChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.TextChannel</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.VoiceChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.VoiceChannel</span></code></a>, or <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.StageChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.StageChannel</span></code></a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the modlog channel is not found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.register_casetype">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">register_casetype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_setting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case_str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#register_casetype"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.register_casetype" title="Link to this definition"></a></dt>
+<dd><p>Registers a case type. If the case type exists and
+there are differences between the values passed and
+what is stored already, the case type will be updated
+with the new values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the case</p></li>
+<li><p><strong>default_setting</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether the case type should be on (if <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a>)
+or off (if <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">False</span></code></a>) by default</p></li>
+<li><p><strong>image</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The emoji to use for the case type (for example, :boot:)</p></li>
+<li><p><strong>case_str</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The string representation of the case (example: Ban)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The case type that was registered</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#starbot.core.modlog.CaseType" title="starbot.core.modlog.CaseType">CaseType</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.13)"><strong>RuntimeError</strong></a> – If the case type is already registered</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><strong>TypeError</strong></a> – If a parameter is missing</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If a parameter’s value is not valid</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.register_casetypes">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">register_casetypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_types</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#register_casetypes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.register_casetypes" title="Link to this definition"></a></dt>
+<dd><p>Registers multiple case types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>new_types</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a>) – The new types to register</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a> if all were registered successfully</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#KeyError" title="(in Python v3.13)"><strong>KeyError</strong></a> – </p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – </p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AttributeError" title="(in Python v3.13)"><strong>AttributeError</strong></a> – </p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#starbot.core.modlog.register_casetype" title="starbot.core.modlog.register_casetype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">starbot.core.modlog.register_casetype</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.reset_cases">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">reset_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#reset_cases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.reset_cases" title="Link to this definition"></a></dt>
+<dd><p>Wipes all modlog cases for the specified guild.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>) – The guild to reset cases for</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="starbot.core.modlog.set_modlog_channel">
+<em class="property"><span class="pre">await</span> </em><span class="sig-prename descclassname"><span class="pre">starbot.core.modlog.</span></span><span class="sig-name descname"><span class="pre">set_modlog_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guild</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/starbot/core/modlog.html#set_modlog_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#starbot.core.modlog.set_modlog_channel" title="Link to this definition"></a></dt>
+<dd><p>Changes the modlog channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>guild</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.Guild" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.Guild</span></code></a>) – The guild to set a mod log channel for</p></li>
+<li><p><strong>channel</strong> (<a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.TextChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.TextChannel</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.VoiceChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.VoiceChannel</span></code></a>, <a class="reference external" href="https://discordpy.readthedocs.io/en/v2.4.0/api.html#discord.StageChannel" title="(in discord.py v2.4.0)"><code class="xref any docutils literal notranslate"><span class="pre">discord.StageChannel</span></code></a>, or <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">None</span></code></a>) – The channel to be set as modlog channel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref any docutils literal notranslate"><span class="pre">True</span></code></a> if successful</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="framework_i18n.html" class="btn btn-neutral float-left" title="Internationalization Framework" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="framework_rpc.html" class="btn btn-neutral float-right" title="RPC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating cogs for Red V3 &mdash; Red - Discord Bot 3.5.14.dev2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=629867fc"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Slash Commands and Interactions" href="guide_slash_and_interactions.html" />
+    <link rel="prev" title="Migrating cogs from Red V2" href="guide_migration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Red - Discord Bot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_guides/index.html">Installing Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_application_guide.html">Creating a bot account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_red.html">Updating Red</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_venv.html">About Virtual Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_windows.html">Setting up auto-restart using batch on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_mac.html">Setting up auto-restart on Mac</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart_systemd.html">Setting up auto-restart using systemd on Linux</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cog Reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cog_customcom.html">CustomCommands Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_permissions.html">Permissions Cog Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_trivia_list_creation.html">Trivia List Creation Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User guides:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intents.html">About (privileged) intents and public bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/admin.html">Admin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/alias.html">Alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cleanup.html">Cleanup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/cog_manager_ui.html">Cog Manager UI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/customcommands.html">CustomCommands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/dev.html">Dev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/downloader.html">Downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/filter.html">Filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/general.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/image.html">Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/permissions.html">Permissions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mod.html">Mod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/modlog.html">ModLog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/mutes.html">Mutes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/streams.html">Streams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/trivia.html">Trivia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog_guides/warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="red_core_data_statement.html">Red and End User Data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Red Development Framework Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guide_migration.html">Migrating cogs from Red V2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating cogs for Red V3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-package">Setting up a package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-cog">Creating a cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-your-cog">Testing your cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publishing-your-cog">Publishing your cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#becoming-an-approved-cog-creator">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-resources">Additional resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide_slash_and_interactions.html">Slash Commands and Interactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_publish_cogs.html">Publishing cogs for Red V3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide_cog_creators.html">Becoming an Approved Cog Creator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_apikeys.html">Shared API Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bank.html">Bank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_bot.html">Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_checks.html">Command Check Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_commands.html">Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_app_commands.html">App Commands Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_config.html">Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_datamanager.html">Data Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_events.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_i18n.html">Internationalization Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_modlog.html">Mod log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_rpc.html">RPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_tree.html">Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework_utils.html">Utility Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html">Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#end-user-guarantees">End-user Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#developer-guarantees">Developer Guarantees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_guarantees.html#breaking-change-notices">Breaking Change Notices</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompatible_changes/index.html">Backward incompatible changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="host-list.html">Hosting Information</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Red - Discord Bot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Creating cogs for Red V3</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/developguide_cog_creation.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+
+           <div itemprop="articleBody">
+             
+  <section id="creating-cogs-for-red-v3">
+<h1>Creating cogs for Red V3<a class="headerlink" href="#creating-cogs-for-red-v3" title="Link to this heading"></a></h1>
+<p>This guide serves as a tutorial on creating cogs for Red V3.
+It will cover the basics of setting up a package for your
+cog and the basics of setting up the file structure. We will
+also point you towards some further resources that may assist
+you in the process.</p>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p>To start off, be sure that you have installed Python 3.8.
+Next, you need to decide if you want to develop against the Stable or Develop version of Red.
+Depending on what your goal is should help determine which version you need.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The Develop version may have changes on it which break compatibility with the Stable version and other cogs.
+If your goal is to support both versions, make sure you build compatibility layers or use separate branches to keep compatibility until the next Red release</p>
+</div>
+<dl class="simple">
+<dt>Open a terminal or command prompt and type one of the following</dt><dd><p>Stable Version: <code class="code docutils literal notranslate"><span class="pre">python3.8</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">Red-DiscordBot</span></code></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To install the development version, replace <code class="docutils literal notranslate"><span class="pre">Red-DiscordBot</span></code> in the above commands with the
+value below. <strong>The development version of the bot contains experimental changes. It is not
+intended for normal users.</strong> We will not support anyone using the development version in any
+support channels. Using the development version may break third party cogs and not all core
+commands may work. Downgrading to stable after installing the development version may cause
+data loss, crashes or worse. Please keep this in mind when using the development version
+while working on cog creation.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Red-DiscordBot @ https://github.com/Cog-Creators/Red-DiscordBot/tarball/V3/develop
+</pre></div>
+</div>
+</div>
+<p>(Windows users may need to use <code class="code docutils literal notranslate"><span class="pre">py</span> <span class="pre">-3.8</span></code> or <code class="code docutils literal notranslate"><span class="pre">python</span></code> instead of <code class="code docutils literal notranslate"><span class="pre">python3.8</span></code>)</p>
+</section>
+<section id="setting-up-a-package">
+<h2>Setting up a package<a class="headerlink" href="#setting-up-a-package" title="Link to this heading"></a></h2>
+<p>To set up a package, we would just need to create a new folder.
+This should be named whatever you want the cog to be named (for
+the purposes of this example, we’ll call this <code class="code docutils literal notranslate"><span class="pre">mycog</span></code>).
+In this folder, create three files: <code class="code docutils literal notranslate"><span class="pre">__init__.py</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">mycog.py</span></code>, and <code class="code docutils literal notranslate"><span class="pre">info.json</span></code>. Open the folder in
+a text editor or IDE (examples include <a class="reference external" href="https://www.sublimetext.com/">Sublime Text 3</a>,
+<a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a>, and
+<a class="reference external" href="http://www.jetbrains.com/pycharm/">PyCharm</a>).</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>While you can intentionally override Red’s cogs/extensions, this may break things.
+We would prefer if people wanted custom behavior
+for any core cog/extension, an issue and/or PR is made
+Overriding Permissions specifically is dangerous.</p>
+<p>Subclassing to make changes to Red’s cogs/extensions
+may not be a safe way to stay up to date either,
+as changes to cogs and their interactions with red
+are not guaranteed to not be breaking.</p>
+<p>Any cogs doing this are doing so at their own risk,
+and should also inform users of associated risks.</p>
+</div>
+</section>
+<section id="creating-a-cog">
+<h2>Creating a cog<a class="headerlink" href="#creating-a-cog" title="Link to this heading"></a></h2>
+<p>With your package opened in a text editor or IDE, open <code class="code docutils literal notranslate"><span class="pre">mycog.py</span></code>.
+In that file, place the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">starbot.core</span> <span class="kn">import</span> <span class="n">commands</span>
+
+<span class="k">class</span> <span class="nc">MyCog</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Cog</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;My custom cog&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@commands</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">mycom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This does stuff!&quot;&quot;&quot;</span>
+        <span class="c1"># Your code will go here</span>
+        <span class="k">await</span> <span class="n">ctx</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;I can do stuff!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Open <code class="code docutils literal notranslate"><span class="pre">__init__.py</span></code>. In that file, place the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.mycog</span> <span class="kn">import</span> <span class="n">MyCog</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">bot</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">add_cog</span><span class="p">(</span><span class="n">MyCog</span><span class="p">(</span><span class="n">bot</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Make sure that both files are saved.</p>
+</section>
+<section id="testing-your-cog">
+<h2>Testing your cog<a class="headerlink" href="#testing-your-cog" title="Link to this heading"></a></h2>
+<p>To test your cog, you will need a running instance of V3.
+Assuming you installed V3 as outlined above, run <code class="code docutils literal notranslate"><span class="pre">starbot-setup</span></code>
+and provide the requested information. Once that’s done, run Red
+by doing <code class="code docutils literal notranslate"><span class="pre">starbot</span> <span class="pre">&lt;instance</span> <span class="pre">name&gt;</span> <span class="pre">--dev</span></code> to start Red.
+Complete the initial setup by providing a valid token and setting a
+prefix. Once the bot has started up, use the link provided in the
+console to add it to a server (note that you must have the
+<code class="code docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Server</span></code> (or <code class="code docutils literal notranslate"><span class="pre">Administrator</span></code>) permission to add bots
+to a server). Once it’s been added to a server, find the full path
+to the directory where your cog package is located. In Discord, do
+<code class="code docutils literal notranslate"><span class="pre">[p]addpath</span> <span class="pre">&lt;path_to_folder_containing_package&gt;</span></code>, then do
+<code class="code docutils literal notranslate"><span class="pre">[p]load</span> <span class="pre">mycog</span></code>. Once the cog is loaded, do <code class="code docutils literal notranslate"><span class="pre">[p]mycom</span></code>
+The bot should respond with <code class="code docutils literal notranslate"><span class="pre">I</span> <span class="pre">can</span> <span class="pre">do</span> <span class="pre">stuff!</span></code>. If it did, you
+have successfully created a cog!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Package/Folder layout</strong></p>
+<p>You must make sure you structure your local path correctly or
+you get an error about missing the setup function. As cogs are
+considered packages, they are each contained within separate folders.
+The folder you need to add using <code class="code docutils literal notranslate"><span class="pre">[p]addpath</span></code> is the parent
+folder of these package folders. Below is an example</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- D:\
+-- red-env
+-- red-data
+-- red-cogs
+---- mycog
+------ __init__.py
+------ mycog.py
+---- coolcog
+------ __init__.py
+------ coolcog.py
+</pre></div>
+</div>
+<p>You would then use <code class="code docutils literal notranslate"><span class="pre">[p]addpath</span> <span class="pre">D:\red-cogs</span></code> to add the path
+and then you can use <code class="code docutils literal notranslate"><span class="pre">[p]load</span> <span class="pre">mycog</span></code> or <code class="code docutils literal notranslate"><span class="pre">[p]load</span> <span class="pre">coolcog</span></code>
+to load them</p>
+<p>You can also take a look at <a class="reference external" href="https://github.com/Cog-Creators/cog-cookiecutter">our cookiecutter</a>, for help creating the right structure.</p>
+</div>
+</section>
+<section id="publishing-your-cog">
+<h2>Publishing your cog<a class="headerlink" href="#publishing-your-cog" title="Link to this heading"></a></h2>
+<p>Go to <a class="reference internal" href="guide_publish_cogs.html"><span class="doc">Publishing cogs for Red V3</span></a></p>
+</section>
+<section id="becoming-an-approved-cog-creator">
+<h2>Becoming an Approved Cog Creator<a class="headerlink" href="#becoming-an-approved-cog-creator" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="guide_cog_creators.html"><span class="doc">Becoming an Approved Cog Creator</span></a> explains the Cog Creator Application process and lists requirements and good practices for Cog Creators.  This information is worth following for anyone creating cogs for Red, regardless of if you plan to publish your cogs or not.</p>
+</section>
+<section id="additional-resources">
+<h2>Additional resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h2>
+<p>Be sure to check out the <a class="reference internal" href="guide_migration.html"><span class="doc">Migrating cogs from Red V2</span></a> for some resources
+on developing cogs for V3. This will also cover differences between V2 and V3 for
+those who developed cogs for V2.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+<a href="https://github.com/Cog-Creators/Red-DiscordBot">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+    src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149"
+    class="attachment-full size-full" alt="Fork me on GitHub">
+</a>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="guide_migration.html" class="btn btn-neutral float-left" title="Migrating cogs from Red V2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="guide_slash_and_interactions.html" class="btn btn-neutral float-right" title="Slash Commands and Interactions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018-2024, Cog Creators.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

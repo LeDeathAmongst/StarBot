@@ -1,0 +1,19 @@
+{
+    "author": ["Star"],
+    "name": "Perform",
+    "install_msg": "Thank you for installing this cog!\nDo `[p]help CogName` to get the list of commands and their description. If you want to help translate, go to my [crowdin](<https://crowdin.com/project/Star-Cogs>)\nIf you like my work, [donate me!](<https://ko-fi.com/starcogs>)\n\nThere's multiple roleplay-like actions you can perform onto others! Feel free to run `[p]help Perform` to view the commands!",
+    "end_user_data_statement" : "This cog does not persistently store data or metadata about users.",
+    "hidden" : false,
+    "max_bot_version" : "0.0.0",
+    "min_bot_version" : "3.5.0",
+    "name" : "Perform",
+    "permissions" : [],
+    "required_cogs" : {},
+    "requirements" : [
+        "tabulate",
+        "git+https://github.com/LeDeathAmongst/Star_Utils"
+    ],
+    "short" : "Perform Actions like kiss, cuddle etc.",
+    "tags" : ["fun", "roleplay", "actions"],
+    "type" : "COG"
+}

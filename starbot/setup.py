@@ -1,6 +1,6 @@
 from starbot import _early_init
 
-# this needs to be called as early as possible
+# This needs to be called as early as possible
 _early_init()
 
 import asyncio
@@ -12,10 +12,10 @@ import os
 import requests
 import subprocess
 import time
+import platform
 from copy import deepcopy
 from pathlib import Path
 from typing import Dict, Any, Optional, Union
-import platform
 
 import click
 
@@ -32,16 +32,31 @@ from starbot.core._drivers import BackendType, IdentifierData
 
 conversion_log = logging.getLogger("starbot.converter")
 
+def get_hwid():
+    """Get the hardware identifier (HWID) depending on the OS."""
+    if platform.system() == "Windows":
+        # Windows platform
+        return str(subprocess.check_output(["wmic", "csproduct", "get", "uuid"])).split("\\r\\n")[1].strip("\\r").strip()
+    elif platform.system() == "Linux":
+        # Linux platform
+        return subprocess.check_output(["cat", "/var/lib/dbus/machine-id"]).decode().strip()
+    else:
+        raise OSError("Unsupported operating system")
+
 def licenseCheck(key, product, userId, version, authKey):
+    """Check the license key with the server."""
+    hwid = get_hwid()
+
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Token {authKey}"  # Authorization key received from the prompt
+        "Authorization": f"Token {authKey}",  # Authorization key received from the prompt
     }
     data = {
         "licenseKey": key,
-        "product": product, 
-        "userId": userId, 
-        "version": version
+        "product": product,
+        "userId": userId,
+        "version": version,
+        "hwid": hwid,
     }
 
     response = requests.post("http://195.58.58.45:8888/api/v1/key", headers=headers, json=data)
@@ -49,45 +64,47 @@ def licenseCheck(key, product, userId, version, authKey):
     parsed = json.loads(data)
 
     if parsed["statusCode"] in [400, 403, 404]:
-        print(f"\033[0mValidation failed ⟶  \033[0m( \033[31m{key}\033[0m )")
+        print(f"\033[0mValidation failed ⟶ \033[0m( \033[31m{key}\033[0m )")
         print(f"Reason: \033[0m( \033[31m❌ {parsed['message']}\033[0m )")
         time.sleep(5)
         os._exit(1)
     elif parsed["statusCode"] == 200:
-        print(f"License validated ⟶  \033[0m( \033[38;5;36m{key}\033[0m )")
+        print(f"License validated ⟶ \033[0m( \033[38;5;36m{key}\033[0m )")
         print(f"Message: \033[0m( \033[38;5;36m✅ {parsed['message']}\033[0m )")
         time.sleep(5)
     else:
-        print(f"\033[0mValidation failed ⟶  \033[0m( \033[31m{key}\033[0m )")
+        print(f"\033[0mValidation failed ⟶ \033[0m( \033[31m{key}\033[0m )")
         print(f"Reason: \033[0m( \033[31m❌ {parsed['message']}\033[0m )")
         time.sleep(5)
         os._exit(1)
 
-# Prompt for the license key and authorization key
-def prompt_for_license_key() -> str:
-    print("Please enter the license key:")
-    return input("> ")
+def run_initial_setup():
+    """Run the initial setup process, including license check."""
+    # Prompt for the license key and authorization key
+    def prompt_for_license_key() -> str:
+        print("Please enter the license key:")
+        return input("> ")
 
-def prompt_for_auth_key() -> str:
-    print("Please enter the authorization key (authkey):")
-    return input("> ")
+    def prompt_for_auth_key() -> str:
+        print("Please enter the authorization key (authkey):")
+        return input("> ")
 
-# Example values, replace these with actual values
-licenseKey = prompt_for_license_key()
-authKey = prompt_for_auth_key()
+    # Example values, replace these with actual values
+    licenseKey = prompt_for_license_key()
+    authKey = prompt_for_auth_key()
 
-# Define the fixed parameters
-productName = "StarBot"
-userId = "1269563963994280038"
-version = "0.0.1"
+    # Define the fixed parameters
+    productName = "StarBot"
+    userId = "1269563963994280038"
+    version = "0.0.1"
 
-# Call the license check function before proceeding with the setup
-licenseCheck(licenseKey, productName, userId, version, authKey)
+    # Call the license check function before proceeding with the setup
+    licenseCheck(licenseKey, productName, userId, version, authKey)
 
 try:
     config_dir.mkdir(parents=True, exist_ok=True)
 except PermissionError:
-    print("You don't have permission to write to '{}'\nExiting...".format(config_dir))
+    print(f"You don't have permission to write to '{config_dir}'\nExiting...")
     sys.exit(ExitCodes.CONFIGURATION_ERROR)
 
 instance_data = data_manager.load_existing_config()

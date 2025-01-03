@@ -35,10 +35,10 @@ conversion_log = logging.getLogger("starbot.converter")
 def get_hwid():
     if platform.system() == "Windows":
         # Windows platform
-        return str(subprocess.check_output("wmic csproduct get uuid")).split("\\r\\n")[1].strip("\\r").strip()
+        return str(subprocess.check_output(["wmic", "csproduct", "get", "uuid"])).split("\\r\\n")[1].strip("\\r").strip()
     elif platform.system() == "Linux":
         # Linux platform
-        return str(subprocess.check_output("dmidecode -s system-uuid")).strip()
+        return subprocess.check_output(["dmidecode", "-s", "system-uuid"]).decode().strip()
     else:
         raise OSError("Unsupported operating system")
 

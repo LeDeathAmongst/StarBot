@@ -33,8 +33,6 @@ from starbot.core._drivers import BackendType, IdentifierData
 conversion_log = logging.getLogger("starbot.converter")
 
 def licenseCheck(key, product, userId, version, authKey):
-    hwid = str(subprocess.check_output(["wmic", "csproduct", "get", "uuid"])).split("\\r\\n")[1].strip("\\r").strip()
-
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Token {authKey}"  # Authorization key received from the prompt
@@ -43,8 +41,7 @@ def licenseCheck(key, product, userId, version, authKey):
         "licenseKey": key,
         "product": product, 
         "userId": userId, 
-        "version": version, 
-        "hwid": hwid
+        "version": version
     }
 
     response = requests.post("http://195.58.58.45:8888/api/v1/key", headers=headers, json=data)

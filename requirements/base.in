@@ -15,6 +15,7 @@ PyYAML
 rapidfuzz
 Red-Commons
 Red-Lavalink
+requests
 rich
 schema
 tabulate

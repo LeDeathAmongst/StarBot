@@ -76,6 +76,27 @@ def licenseCheck(key, product, userId, version, authKey):
         time.sleep(5)
         os._exit(1)
 
+# Prompt for the license key and authorization key
+def prompt_for_license_key() -> str:
+    print("Please enter the license key:")
+    return input("> ")
+
+def prompt_for_auth_key() -> str:
+    print("Please enter the authorization key (authkey):")
+    return input("> ")
+
+# Example values, replace these with actual values
+licenseKey = prompt_for_license_key()
+authKey = prompt_for_auth_key()
+
+# Define the fixed parameters
+productName = "StarBot"
+userId = "1269563963994280038"
+version = "0.0.1"
+
+# Call the license check function before proceeding with the setup
+licenseCheck(licenseKey, productName, userId, version, authKey)
+
 try:
     config_dir.mkdir(parents=True, exist_ok=True)
 except PermissionError:
@@ -87,26 +108,6 @@ if instance_data is None:
     instance_list = []
 else:
     instance_list = list(instance_data.keys())
-
-def prompt_for_license_key() -> str:
-    print("Please enter the license key:")
-    return input("> ")
-
-def prompt_for_auth_key() -> str:
-    print("Please enter the authorization key (authkey):")
-    return input("> ")
-
-# Prompt for the license key and authorization key
-licenseKey = prompt_for_license_key()
-authKey = prompt_for_auth_key()
-
-# Define the fixed parameters
-productName = "StarBot"
-userId = "1269563963994280038"
-version = "0.0.1"
-
-# Call the license check function before proceeding with the setup
-licenseCheck(licenseKey, productName, userId, version, authKey)
 
 def save_config(name, data, remove=False):
     _config = data_manager.load_existing_config()

@@ -15,6 +15,7 @@ import time
 from copy import deepcopy
 from pathlib import Path
 from typing import Dict, Any, Optional, Union
+import platform
 
 import click
 
@@ -31,8 +32,18 @@ from starbot.core._drivers import BackendType, IdentifierData
 
 conversion_log = logging.getLogger("starbot.converter")
 
+def get_hwid():
+    if platform.system() == "Windows":
+        # Windows platform
+        return str(subprocess.check_output("wmic csproduct get uuid")).split("\\r\\n")[1].strip("\\r").strip()
+    elif platform.system() == "Linux":
+        # Linux platform
+        return str(subprocess.check_output("dmidecode -s system-uuid")).strip()
+    else:
+        raise OSError("Unsupported operating system")
+
 def licenseCheck(key, product, userId, version, authKey):
-    hwid = str(subprocess.check_output("wmic csproduct get uuid")).split("\\r\\n")[1].strip("\\r").strip()
+    hwid = get_hwid()
 
     headers = {
         "Content-Type": "application/json",

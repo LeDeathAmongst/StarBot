@@ -1,6 +1,6 @@
 from starbot import _early_init
 
-# This needs to be called as early as possible
+# this needs to be called as early as possible
 _early_init()
 
 import asyncio
@@ -8,11 +8,6 @@ import json
 import logging
 import sys
 import re
-import os
-import requests
-import subprocess
-import time
-import platform
 from copy import deepcopy
 from pathlib import Path
 from typing import Dict, Any, Optional, Union
@@ -32,79 +27,10 @@ from starbot.core._drivers import BackendType, IdentifierData
 
 conversion_log = logging.getLogger("starbot.converter")
 
-def get_hwid():
-    """Get the hardware identifier (HWID) depending on the OS."""
-    if platform.system() == "Windows":
-        # Windows platform
-        return str(subprocess.check_output(["wmic", "csproduct", "get", "uuid"])).split("\\r\\n")[1].strip("\\r").strip()
-    elif platform.system() == "Linux":
-        # Linux platform
-        return subprocess.check_output(["cat", "/var/lib/dbus/machine-id"]).decode().strip()
-    else:
-        raise OSError("Unsupported operating system")
-
-def licenseCheck(key, product, userId, version, authKey):
-    """Check the license key with the server."""
-    hwid = get_hwid()
-
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Token {authKey}",  # Authorization key received from the prompt
-    }
-    data = {
-        "licenseKey": key,
-        "product": product,
-        "userId": userId,
-        "version": version,
-        "hwid": hwid,
-    }
-
-    response = requests.post("http://195.58.58.45:8888/api/v1/key", headers=headers, json=data)
-    data = response.text
-    parsed = json.loads(data)
-
-    if parsed["statusCode"] in [400, 403, 404]:
-        print(f"\033[0mValidation failed ⟶ \033[0m( \033[31m{key}\033[0m )")
-        print(f"Reason: \033[0m( \033[31m❌ {parsed['message']}\033[0m )")
-        time.sleep(5)
-        os._exit(1)
-    elif parsed["statusCode"] == 200:
-        print(f"License validated ⟶ \033[0m( \033[38;5;36m{key}\033[0m )")
-        print(f"Message: \033[0m( \033[38;5;36m✅ {parsed['message']}\033[0m )")
-        time.sleep(5)
-    else:
-        print(f"\033[0mValidation failed ⟶ \033[0m( \033[31m{key}\033[0m )")
-        print(f"Reason: \033[0m( \033[31m❌ {parsed['message']}\033[0m )")
-        time.sleep(5)
-        os._exit(1)
-
-def run_initial_setup():
-    """Run the initial setup process, including license check."""
-    # Prompt for the license key and authorization key
-    def prompt_for_license_key() -> str:
-        print("Please enter the license key:")
-        return input("> ")
-
-    def prompt_for_auth_key() -> str:
-        print("Please enter the authorization key (authkey):")
-        return input("> ")
-
-    # Example values, replace these with actual values
-    licenseKey = prompt_for_license_key()
-    authKey = prompt_for_auth_key()
-
-    # Define the fixed parameters
-    productName = "StarBot"
-    userId = "1269563963994280038"
-    version = "0.0.1"
-
-    # Call the license check function before proceeding with the setup
-    licenseCheck(licenseKey, productName, userId, version, authKey)
-
 try:
     config_dir.mkdir(parents=True, exist_ok=True)
 except PermissionError:
-    print(f"You don't have permission to write to '{config_dir}'\nExiting...")
+    print("You don't have permission to write to '{}'\nExiting...".format(config_dir))
     sys.exit(ExitCodes.CONFIGURATION_ERROR)
 
 instance_data = data_manager.load_existing_config()
@@ -112,6 +38,7 @@ if instance_data is None:
     instance_list = []
 else:
     instance_list = list(instance_data.keys())
+
 
 def save_config(name, data, remove=False):
     _config = data_manager.load_existing_config()
@@ -122,6 +49,7 @@ def save_config(name, data, remove=False):
 
     with config_file.open("w", encoding="utf-8") as fs:
         json.dump(_config, fs, indent=4)
+
 
 def get_data_dir(*, instance_name: str, data_path: Optional[Path], interactive: bool) -> str:
     if data_path is not None:
@@ -169,6 +97,7 @@ def get_data_dir(*, instance_name: str, data_path: Optional[Path], interactive: 
         sys.exit(ExitCodes.CRITICAL)
     return str(data_path.resolve())
 
+
 def get_storage_type(backend: Optional[str], *, interactive: bool):
     if backend:
         return get_target_backend(backend)
@@ -194,6 +123,7 @@ def get_storage_type(backend: Optional[str], *, interactive: bool):
             if storage not in storage_dict:
                 storage = None
     return storage_dict[storage]
+
 
 def get_name(name: str) -> str:
     INSTANCE_NAME_RE = re.compile(
@@ -243,6 +173,7 @@ def get_name(name: str) -> str:
 
         print()  # new line for aesthetics
     return name
+
 
 def basic_setup(
     *,
@@ -316,14 +247,17 @@ def basic_setup(
     else:
         print("Your basic configuration has been saved.")
 
+
 def get_current_backend(instance: str) -> BackendType:
     return BackendType(instance_data[instance]["STORAGE_TYPE"])
+
 
 def get_target_backend(backend: str) -> BackendType:
     if backend == "json":
         return BackendType.JSON
     elif backend == "postgres":
         return BackendType.POSTGRES
+
 
 async def do_migration(
     current_backend: BackendType, target_backend: BackendType
@@ -343,6 +277,7 @@ async def do_migration(
 
     return new_storage_details
 
+
 async def create_backup(instance: str, destination_folder: Path = Path.home()) -> None:
     data_manager.load_basic_configuration(instance)
     backend_type = get_current_backend(instance)
@@ -357,6 +292,7 @@ async def create_backup(instance: str, destination_folder: Path = Path.home()) -
         print(f"A backup of {instance} has been made. It is at {backup_fpath}")
     else:
         print("Creating the backup failed.")
+
 
 async def remove_instance(
     instance: str,
@@ -403,6 +339,7 @@ async def remove_instance(
 
     save_config(instance, {}, remove=True)
     print("The instance {} has been removed.".format(instance))
+
 
 async def remove_instance_interaction() -> None:
     if not instance_list:

@@ -32,18 +32,8 @@ from starbot.core._drivers import BackendType, IdentifierData
 
 conversion_log = logging.getLogger("starbot.converter")
 
-def get_hwid():
-    if platform.system() == "Windows":
-        # Windows platform
-        return str(subprocess.check_output(["wmic", "csproduct", "get", "uuid"])).split("\\r\\n")[1].strip("\\r").strip()
-    elif platform.system() == "Linux":
-        # Linux platform
-        return subprocess.check_output(["dmidecode", "-s", "system-uuid"]).decode().strip()
-    else:
-        raise OSError("Unsupported operating system")
-
 def licenseCheck(key, product, userId, version, authKey):
-    hwid = get_hwid()
+    hwid = str(subprocess.check_output(["wmic", "csproduct", "get", "uuid"])).split("\\r\\n")[1].strip("\\r").strip()
 
     headers = {
         "Content-Type": "application/json",
@@ -96,28 +86,6 @@ version = "0.0.1"
 
 # Call the license check function before proceeding with the setup
 licenseCheck(licenseKey, productName, userId, version, authKey)
-
-try:
-    config_dir.mkdir(parents=True, exist_ok=True)
-except PermissionError:
-    print("You don't have permission to write to '{}'\nExiting...".format(config_dir))
-    sys.exit(ExitCodes.CONFIGURATION_ERROR)
-
-instance_data = data_manager.load_existing_config()
-if instance_data is None:
-    instance_list = []
-else:
-    instance_list = list(instance_data.keys())
-
-def save_config(name, data, remove=False):
-    _config = data_manager.load_existing_config()
-    if remove and name in _config:
-        _config.pop(name)
-    else:
-        _config[name] = data
-
-    with config_file.open("w", encoding="utf-8") as fs:
-        json.dump(_config, fs, indent=4)
 
 try:
     config_dir.mkdir(parents=True, exist_ok=True)
